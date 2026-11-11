@@ -1,0 +1,194 @@
+{
+  "schema": "FOUNDATION-0/GRAVITY-WAVE3-EMPIRICAL/1.0",
+  "datasets": {
+    "sparc_rar_url": "https://astroweb.cwru.edu/SPARC/RARbins.mrt",
+    "kids_weak_lensing_url": "https://arxiv.org/html/2406.09685v1"
+  },
+  "fit_1_sparc_rar_2630_points": {
+    "n_rotation_points": 2630,
+    "n_bins": 14,
+    "newtonian_no_dm_chi2": 31125.1,
+    "fixed_ds1_best_a0_1e10_m_s2": 1.1793,
+    "fixed_ds1_chi2": 30.486,
+    "constitutive_ds075_chi2": 104.323,
+    "delta_chi2_ds075_vs_ds1": 73.837,
+    "joint_best_ds": 0.94,
+    "joint_ds_1sigma_interval": [
+      0.92,
+      0.96
+    ],
+    "joint_best_a0_1e10_m_s2": 1.2525,
+    "joint_min_chi2": 25.892,
+    "profile_scan": [
+      {
+        "d_s": 0.4,
+        "implied_btfr_slope": 2.8,
+        "profiled_a0_1e10_m_s2": 2.6,
+        "chi2_14bins": 1421.386
+      },
+      {
+        "d_s": 0.55,
+        "implied_btfr_slope": 3.1,
+        "profiled_a0_1e10_m_s2": 2.424,
+        "chi2_14bins": 472.451
+      },
+      {
+        "d_s": 0.7,
+        "implied_btfr_slope": 3.4,
+        "profiled_a0_1e10_m_s2": 1.742,
+        "chi2_14bins": 159.878
+      },
+      {
+        "d_s": 0.75,
+        "implied_btfr_slope": 3.5,
+        "profiled_a0_1e10_m_s2": 1.6045,
+        "chi2_14bins": 104.323
+      },
+      {
+        "d_s": 0.85,
+        "implied_btfr_slope": 3.7,
+        "profiled_a0_1e10_m_s2": 1.39,
+        "chi2_14bins": 41.78
+      },
+      {
+        "d_s": 0.94,
+        "implied_btfr_slope": 3.88,
+        "profiled_a0_1e10_m_s2": 1.2525,
+        "chi2_14bins": 25.892
+      },
+      {
+        "d_s": 1.0,
+        "implied_btfr_slope": 4.0,
+        "profiled_a0_1e10_m_s2": 1.181,
+        "chi2_14bins": 30.495
+      },
+      {
+        "d_s": 1.15,
+        "implied_btfr_slope": 4.3,
+        "profiled_a0_1e10_m_s2": 1.038,
+        "chi2_14bins": 77.712
+      },
+      {
+        "d_s": 1.3,
+        "implied_btfr_slope": 4.6,
+        "profiled_a0_1e10_m_s2": 0.9335,
+        "chi2_14bins": 156.316
+      },
+      {
+        "d_s": 1.45,
+        "implied_btfr_slope": 4.9,
+        "profiled_a0_1e10_m_s2": 0.862,
+        "chi2_14bins": 250.749
+      },
+      {
+        "d_s": 1.6,
+        "implied_btfr_slope": 5.2,
+        "profiled_a0_1e10_m_s2": 0.8015,
+        "chi2_14bins": 352.035
+      },
+      {
+        "d_s": 1.75,
+        "implied_btfr_slope": 5.5,
+        "profiled_a0_1e10_m_s2": 0.7575,
+        "chi2_14bins": 455.056
+      }
+    ]
+  },
+  "fit_2_scale_flow_and_btfr": {
+    "regime_progression_inner_to_1Mpc": {
+      "inner_SPARC_kinematic_10_30kpc": {
+        "beta_slope": 3.83,
+        "implied_effective_ds": 0.915,
+        "intercept_A": 2.0378,
+        "chi2": 5.12,
+        "dof": 6,
+        "BIC": 9.279
+      },
+      "outer_KiDS_weak_lensing_50_1000kpc": {
+        "beta_slope": 4.0,
+        "implied_effective_ds": 1.0,
+        "intercept_A": 1.6437,
+        "chi2": 0.634,
+        "dof": 2,
+        "BIC": 3.407
+      }
+    },
+    "combined_12bin_model_comparison": {
+      "free_powerlaw": {
+        "beta_slope": 3.83,
+        "implied_effective_ds": 0.915,
+        "intercept_A": 2.0377,
+        "chi2": 5.596,
+        "dof": 10,
+        "BIC": 10.565
+      },
+      "ds1_condensate_beta_4_0": {
+        "beta_slope": 4.0,
+        "implied_effective_ds": 1.0,
+        "intercept_A": 1.6788,
+        "chi2": 8.516,
+        "dof": 11,
+        "BIC": 11.001
+      },
+      "constitutive_ds075_beta_3_5": {
+        "beta_slope": 3.5,
+        "implied_effective_ds": 0.75,
+        "intercept_A": 2.7336,
+        "chi2": 17.613,
+        "dof": 11,
+        "BIC": 20.098
+      },
+      "coord_fractal_Df2_beta_2_0": {
+        "beta_slope": 2.0,
+        "implied_effective_ds": 0.0,
+        "intercept_A": 5.8864,
+        "chi2": 411.11,
+        "dof": 11,
+        "BIC": 413.594
+      }
+    },
+    "delta_BIC_coord_fractal_vs_ds1": 402.59,
+    "delta_BIC_beta35_vs_ds1": 9.1,
+    "delta_BIC_free_vs_ds1": -0.44
+  },
+  "fit_3_cosmic_efe_bound": {
+    "kids_300_vs_1000kpc_bins": [
+      {
+        "log10_Mb": 10.11,
+        "r_M_kpc": 3.9,
+        "Vflat_300kpc_kms": 137.3,
+        "Vflat_1000kpc_kms": 135.8,
+        "ratio_V1000_over_V300": 0.9891,
+        "sigma_ratio_conservative": 0.1084
+      },
+      {
+        "log10_Mb": 10.66,
+        "r_M_kpc": 7.35,
+        "Vflat_300kpc_kms": 182.1,
+        "Vflat_1000kpc_kms": 175.3,
+        "ratio_V1000_over_V300": 0.9627,
+        "sigma_ratio_conservative": 0.0766
+      },
+      {
+        "log10_Mb": 10.96,
+        "r_M_kpc": 10.38,
+        "Vflat_300kpc_kms": 204.7,
+        "Vflat_1000kpc_kms": 211.0,
+        "ratio_V1000_over_V300": 1.0308,
+        "sigma_ratio_conservative": 0.0524
+      },
+      {
+        "log10_Mb": 11.29,
+        "r_M_kpc": 15.18,
+        "Vflat_300kpc_kms": 260.2,
+        "Vflat_1000kpc_kms": 259.4,
+        "ratio_V1000_over_V300": 0.9969,
+        "sigma_ratio_conservative": 0.0308
+      }
+    ],
+    "chi2_at_e0_indefinite_flatness": 0.6028,
+    "cosmic_efe_95CL_upper_bound_gext_over_a0": 0.016,
+    "min_EFE_horizon_for_Lstar_kpc": 521.8
+  },
+  "sha256_canonical": "99c2440716205af3613eeb28ba09965d2c47f512ca9a65389d628fdcfc76e48f"
+}

@@ -87,3 +87,17 @@ Every mathematical and numerical claim in this repository carries an explicit `F
 
 - **Statement:** Batygin (2018) Secular Astrophysical Disk Schrödinger Evolution ($\lambda_{\text{epi}} = \sigma_R/\kappa = 0.860\text{ kpc}$) vs. Newton's 3rd-Law Virial Quadrupole Falloff ($1.32\times 10^{-5}\,g_N$ at $1\text{ Mpc}$ vs. $119.8\times$ RAR boost), proving outer halo flatness still requires the space-filling $d_s=1$ condensate.
 - **Verification:** Verified in `formal/Wave5StochasticForces.lean` and `results/wave5_forces_stochastic_certificates.json` (SHA-256: `923d85f100f34ef2f320724af5264243d29018f8981c7cfdc537393bc3ed013b`).
+## C-18: Horizon-Pixel Vortex Percolation (`PROVEN` / `NEW-COMPUTATION`)
+
+- **Statement:** Horizon-pixel vortex percolation ($a_{\text{dS}} = c H_0 / 2\pi = 1.0422\times 10^{-10}\text{ m/s}^2$, $l^*_{\text{percolation\_radius}} = 8.958\text{ kpc}$, Kelvin vortex mode spectral dimension $d_s = 1.0$, max $\hbar$-cancellation identity relative error $1.815\times 10^{-16}$).
+- **Verification:** Verified in `formal/Wave6Convergence.lean`.
+
+## C-19: Potential-Depth Roton-Dust Unification (`PROVEN` / `NEW-COMPUTATION`)
+
+- **Statement:** Potential-depth roton-dust unification resolving C-04 (thermal phase-space density re-scoped to potential-depth) and C-11 (early universe $T=0$ condensate with $\Delta N_{\text{eff}} = 0$), galactic roton contamination $0.0\%$, cluster-to-$L^*$ gap ratio up to $238.67$, with falsifiable group/cluster onset prediction $\sigma_{1\text{D}} \sim 388.1\text{ km/s}$ ($|\Phi|/c^2 = 8.0\times 10^{-6}$ threshold).
+- **Verification:** Verified in `formal/Wave6Convergence.lean`.
+
+## C-20: 1/N_fil Centroid Diffusion & Mass Invariance (`PROVEN` / `NEW-COMPUTATION`)
+
+- **Statement:** $1/N_{\text{fil}}$ centroid diffusion resolving C-14 (WEP mass scaling relative error $2.341\times 10^{-16}$) and $d\hbar/dt = 0$ redshift constancy ($\text{centroid\_filament\_hbar\_over\_hbar0} = 1.0$ across $z = 0, 3, 1100, 10^9$).
+- **Verification:** Verified in `formal/Wave6Convergence.lean`.

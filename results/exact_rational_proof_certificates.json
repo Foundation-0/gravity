@@ -1,0 +1,28 @@
+{
+  "schema": "FOUNDATION-0/GRAVITY-EXACT-RATIONAL-PROOFS/1.0",
+  "theorem_c01_c02": {
+    "status": "PROVEN_EXACT_RATIONAL",
+    "coord_fractal_Df": "2",
+    "coord_fractal_btfr_beta": "2",
+    "condensate_unique_ds": "1",
+    "condensate_lagrangian_q": "3/2",
+    "condensate_p_laplacian": "3",
+    "condensate_btfr_beta": "4"
+  },
+  "theorem_c04": {
+    "status": "PROVEN_EXACT_RATIONAL_INTERVAL",
+    "algebraic_identity": "(Q_gal_iso / Q_Bullet)^4 = 4 * (R_cl / R_gal)^8 * sigma_cl^4 / (G * M_b * a0)",
+    "Q_ratio_fourth_power_lo_decimal": 0.049942,
+    "Q_ratio_fourth_power_hi_decimal": 0.081021,
+    "strictly_less_than_1_certified": true
+  },
+  "theorem_c09": {
+    "status": "PROVEN_EXACT_RATIONAL_JENSEN",
+    "jensen_inequality": "eta_WB >= 1 / [ mu(e_MW) * sqrt(1 + (2/3) L_e) ]",
+    "eta_WB_squared_exact_lower_bound": "9375/6859",
+    "eta_WB_squared_lower_decimal": 1.366817,
+    "two_pct_velocity_ceiling_fourth_power": "6765201/6250000",
+    "strictly_exceeds_2pct_bound": true
+  },
+  "sha256_canonical": "2d58555197467b3e870b72379ed919ff19536700af531ed40bc53fb25570c5d6"
+}

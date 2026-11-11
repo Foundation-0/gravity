@@ -1,0 +1,52 @@
+{
+  "schema": "FOUNDATION-0/GRAVITY-WAVE4-UNIFIED/1.0",
+  "claim_c09_sparc_gaia_local_nogo": {
+    "g_MW_solar_circle_1e10_m_s2": 2.1721,
+    "sparc_bins_bracketing_gMW": [
+      {"bin_index": 8, "n_points": 229, "g_obs_1e10_m_s2": 1.259, "empirical_mu_gbar_over_gobs": 0.5129, "sigma_mu": 0.0101},
+      {"bin_index": 9, "n_points": 204, "g_obs_1e10_m_s2": 1.738, "empirical_mu_gbar_over_gobs": 0.6026, "sigma_mu": 0.0136},
+      {"bin_index": 10, "n_points": 177, "g_obs_1e10_m_s2": 2.512, "empirical_mu_gbar_over_gobs": 0.6918, "sigma_mu": 0.0168},
+      {"bin_index": 11, "n_points": 137, "g_obs_1e10_m_s2": 3.631, "empirical_mu_gbar_over_gobs": 0.7762, "sigma_mu": 0.0214},
+      {"bin_index": 12, "n_points": 104, "g_obs_1e10_m_s2": 5.129, "empirical_mu_gbar_over_gobs": 0.8913, "sigma_mu": 0.0221}
+    ],
+    "min_sparc_chi2": 20.381,
+    "min_wb_velocity_boost_pct_within_5sigma_SPARC": 12.91,
+    "min_sparc_delta_chi2_if_wb_boost_le_2pct": 311.37,
+    "alpha_tradeoff_table": [
+      {"alpha_sharpness": 0.5, "profiled_a0_1e10_m_s2": 0.85, "sparc_rar_chi2": 33.72, "delta_chi2_from_min": 13.34, "e_MW_at_profiled_a0": 2.5554, "wide_binary_velocity_boost_pct": 18.28},
+      {"alpha_sharpness": 0.65, "profiled_a0_1e10_m_s2": 1.0908, "sparc_rar_chi2": 39.42, "delta_chi2_from_min": 19.03, "e_MW_at_profiled_a0": 1.9912, "wide_binary_velocity_boost_pct": 12.91},
+      {"alpha_sharpness": 0.8, "profiled_a0_1e10_m_s2": 1.3033, "sparc_rar_chi2": 87.74, "delta_chi2_from_min": 67.36, "e_MW_at_profiled_a0": 1.6666, "wide_binary_velocity_boost_pct": 10.07},
+      {"alpha_sharpness": 1.0, "profiled_a0_1e10_m_s2": 1.4875, "sparc_rar_chi2": 159.8, "delta_chi2_from_min": 139.42, "e_MW_at_profiled_a0": 1.4602, "wide_binary_velocity_boost_pct": 7.22},
+      {"alpha_sharpness": 1.25, "profiled_a0_1e10_m_s2": 1.615, "sparc_rar_chi2": 241.37, "delta_chi2_from_min": 220.99, "e_MW_at_profiled_a0": 1.3449, "wide_binary_velocity_boost_pct": 4.53},
+      {"alpha_sharpness": 1.5, "profiled_a0_1e10_m_s2": 1.7, "sparc_rar_chi2": 308.28, "delta_chi2_from_min": 287.89, "e_MW_at_profiled_a0": 1.2777, "wide_binary_velocity_boost_pct": 2.71},
+      {"alpha_sharpness": 2.0, "profiled_a0_1e10_m_s2": 1.7, "sparc_rar_chi2": 414.25, "delta_chi2_from_min": 393.87, "e_MW_at_profiled_a0": 1.2777, "wide_binary_velocity_boost_pct": -0.25},
+      {"alpha_sharpness": 2.5, "profiled_a0_1e10_m_s2": 1.7, "sparc_rar_chi2": 488.01, "delta_chi2_from_min": 467.63, "e_MW_at_profiled_a0": 1.2777, "wide_binary_velocity_boost_pct": -1.6},
+      {"alpha_sharpness": 3.0, "profiled_a0_1e10_m_s2": 1.7, "sparc_rar_chi2": 537.12, "delta_chi2_from_min": 516.74, "e_MW_at_profiled_a0": 1.2777, "wide_binary_velocity_boost_pct": -2.16}
+    ]
+  },
+  "claim_c10_bogoliubov_bose_fermi_unification": {
+    "coherence_length_xi_kpc": 0.2,
+    "implied_ultralight_boson_mass_eV": 3.8556e-23,
+    "boson_dm_fraction_f_B": 0.025,
+    "passes_kobayashi2017_lyman_alpha_f_lt_0_20": true,
+    "stellar_wide_binary_ode_audit": {
+      "max_relative_ode_residual": 8.111e-14,
+      "saturn_9_58AU_gph_over_gN": 2.668e-14,
+      "wide_binary_10kAU_gph_over_gN": 2.938e-08,
+      "wide_binary_20kAU_gph_over_gN": 1.175e-07,
+      "wide_binary_20kAU_velocity_shift_pct": 5.877e-06
+    },
+    "lstar_galaxy_ode_audit": {
+      "max_relative_ode_residual": 2.828e-16,
+      "recovery_of_exact_ds1_MOND_at_100kpc_pct": 99.99416,
+      "v_circ_100kpc_kms": 180.15,
+      "v_circ_1Mpc_kms": 176.29
+    },
+    "fermionic_cluster_partner_candidates": [
+      {"m_F_eV": 3.0, "T_F_over_T_nu": 1.5419, "Delta_N_eff": 5.6527, "dwarf_1kpc_max_halo_frac_pct": 4e-05, "spiral_10kpc_max_halo_frac_pct": 0.0447, "bullet_250kpc_capacity_ratio": 2.21},
+      {"m_F_eV": 11.0, "T_F_over_T_nu": 0.9999, "Delta_N_eff": 0.9998, "dwarf_1kpc_max_halo_frac_pct": 0.0069, "spiral_10kpc_max_halo_frac_pct": 8.0796, "bullet_250kpc_capacity_ratio": 399.53},
+      {"m_F_eV": 35.0, "T_F_over_T_nu": 0.6799, "Delta_N_eff": 0.2136, "dwarf_1kpc_max_halo_frac_pct": 0.7076, "spiral_10kpc_max_halo_frac_pct": 828.1115, "bullet_250kpc_capacity_ratio": 40949.31}
+    ]
+  },
+  "sha256_canonical": "1184c304b46eabfd6e0eba8a47455a531aaf3e7f99c016fcd7d3ea16b034446a"
+}

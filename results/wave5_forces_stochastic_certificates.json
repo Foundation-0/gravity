@@ -1,0 +1,37 @@
+{
+  "schema": "FOUNDATION-0/GRAVITY-WAVE5-FORCES-STOCHASTIC-QM/1.0",
+  "claims_c12_c13": {
+    "qcd_cornell_string_tension_N": 146149.2,
+    "qcd_force_log_slope_at_0_05fm": -1.9129,
+    "qcd_force_log_slope_at_2_0fm": -0.047,
+    "electroweak_a_crit_m_s2": 3.6609e34,
+    "qcd_a_crit_m_s2": 1.9324e32,
+    "desitter_a_crit_m_s2": 1.0422e-10,
+    "desitter_to_empirical_a0_ratio": 0.8685,
+    "qcd_to_desitter_acceleration_ratio": 1.8541e42,
+    "alpha_UV_QCD_for_sqrt_sigma": 0.02003,
+    "alpha_UV_SU2_dark_for_desitter_gap": 0.00603,
+    "uv_coupling_ratio_only_O1": 3.323
+  },
+  "claim_c14": {
+    "oligoporphyrin_WEP_discrepancy_factor": 45572000.0,
+    "oligoporphyrin_Calogero_from_me_discrepancy": 307650000000.0,
+    "oligoporphyrin_Calogero_from_mn_discrepancy": 3902000.0
+  },
+  "claim_c15": {
+    "secular_heating_factor_T5": 6.263,
+    "nelson_stationary_var_x": 0.4961,
+    "nelson_heisenberg_product_Dx_Dpu": 0.4961,
+    "implied_path_hausdorff_dimension_DH": 2.0
+  },
+  "claims_c16_c17": {
+    "local_3D_perturbation_ceiling_S": 2.0,
+    "quantum_tsirelson_bound_S": 2.828427,
+    "hensen_2015_loophole_free_S": 2.42,
+    "epicyclic_dispersion_wavelength_kpc": 0.8604,
+    "disk_quadrupole_perturbation_over_gN_at_100kpc": 0.0013231,
+    "disk_quadrupole_perturbation_over_gN_at_1Mpc": 1.3231e-5,
+    "observed_RAR_boost_gobs_over_gN_at_1Mpc": 119.79
+  },
+  "sha256_canonical": "923d85f100f34ef2f320724af5264243d29018f8981c7cfdc537393bc3ed013b"
+}

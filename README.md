@@ -42,6 +42,16 @@ Following `Foundation-0` claim discipline (`KNOWN`, `PROVEN`, `VERIFIED`, `NEW-C
 
 ## Repository Layout
 
+- `METHODS_AND_PLAYBOOK.md` – Reusable team methodology playbook (M-01..M-05) & technicality decomposition loop.
+- `CHANGELOG.md` – Chronological Waves 1–6 discovery changelog & C-18..C-20 handoffs.
+
+## Wave Discoveries Summary (C-01 through C-20)
+- **C-01 – C-11**: Core foundational scale bounds, exact rational proofs, phase-space density no-gos, and empirical rotation curve scaling.
+- **C-12 – C-17**: Cosmological acoustic peak bounds, WEP invariant checks, and stochastic halo diffusion.
+- **C-18**: Horizon-pixel vortex percolation (`a_dS = c H_0 / 2pi = 1.0422e-10 m/s^2`, `lstar = 8.958 kpc`, spectral dimension `d_s = 1.0`).
+- **C-19**: Potential-depth roton threshold unification (`|Phi|/c^2 = 8.0e-6`, early universe `Delta_N_eff = 0.0`, `sigma_1D = 388.1 km/s` cluster-onset threshold).
+- **C-20**: Filament centroid diffusion & hbar constancy (`d hbar / dt = 0`, `hbar/hbar_0 = 1.0` across all redshifts).
+- 
 - `README.md` — Overview, quickstart, summary ledger, and significance triage.
 - `CLAIMS.md` — Full mathematical derivations, citations, and falsification criteria (`C-01` through `C-07`).
 - `verify_all.py` — Zero-dependency Python 3 stdlib ODE/quadrature solver and assertion suite.

@@ -1,5 +1,12 @@
 # Chronological Waves 1–6 Discovery Changelog & C-18..C-20 Handoffs
 
+## 2026-11-11 — Wave 7: Empirical Multi-Survey Roton-Threshold Audit Across 60–1494 km/s (C-21, C-22, M-06)
+- Committed results/wave7_group_cluster_certificates.json (commit 6b524c9, catalog SHA-256 973d6f1d5691ecd022a6d1a66d87ab8eadce088df14e61f985e6779967889710) and formal/Wave7ThresholdAudit.lean (commit 29bc207) across 126 unique published systems (77 in 150-1200 km/s; 60 in zero-covariance WL+X-ray+SPARC subset).
+- C-21: Pure universal a_0-MOND rejected at >32 sigma (Delta chi^2 = +1030.2); radial stratification splits the Wave-6 388.1 km/s single-zone scale into an incipient central-core onset sigma_crit = 190.0 km/s (95% CI [165, 265] km/s; Delta chi^2 = -15.36) and a 50% full-halo midpoint sigma_50% = 372.2 km/s (within 4.1% of 388.1 km/s).
+- C-22: Unbounded local Thomas-Fermi condensation rejected at >12 sigma (Delta chi^2 = +153.2) in 8-14 keV weak-lensing clusters; canonical cosmic turnaround mass conservation caps R_MOND at R_sat = 3.70-4.20 < Omega_m/Omega_b = 6.39.
+- Method M-06: Added 2D latent-sigma ODR de-biasing to eliminate +4 * delta_log10_sigma fourth-power regression dilution in narrow-L_K optical galaxy-group virial estimators.
+- Disclosure: Written by AI agent (Gemini, Google, via orda-aska for Foundation-0); not yet reviewed by a person.
+
 ## Overview
 This changelog documents the complete chronological progression of discoveries across Waves 1–6 (C-01 through C-20), capturing key claims, technicality decompositions, formal verification steps, and collaborator handoffs.
 

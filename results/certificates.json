@@ -1,0 +1,139 @@
+{
+  "schema": "FOUNDATION-0/GRAVITY-CERTIFICATES/1.0",
+  "check_1_dichotomy": {
+    "coord_fractal_Df2_btfr_slope": 2.0186,
+    "coord_fractal_rar_rms_dex": 0.6234,
+    "ds1_condensate_rar_rms_dex": 0.0096,
+    "spectral_dimension_sweep": [
+      {
+        "spectral_dim_ds": 0.0,
+        "lagrangian_exp_q": 1.0,
+        "p_laplacian_exp": 2.0,
+        "outer_dlnv_dlnr_100_300kpc": -0.48206,
+        "btfr_slope_beta": 2.0186
+      },
+      {
+        "spectral_dim_ds": 0.5,
+        "lagrangian_exp_q": 1.25,
+        "p_laplacian_exp": 2.5,
+        "outer_dlnv_dlnr_100_300kpc": -0.19367,
+        "btfr_slope_beta": 2.9022
+      },
+      {
+        "spectral_dim_ds": 1.0,
+        "lagrangian_exp_q": 1.5,
+        "p_laplacian_exp": 3.0,
+        "outer_dlnv_dlnr_100_300kpc": -0.01468,
+        "btfr_slope_beta": 3.8945
+      },
+      {
+        "spectral_dim_ds": 1.5,
+        "lagrangian_exp_q": 1.75,
+        "p_laplacian_exp": 3.5,
+        "outer_dlnv_dlnr_100_300kpc": 0.091,
+        "btfr_slope_beta": 4.88
+      },
+      {
+        "spectral_dim_ds": 2.0,
+        "lagrangian_exp_q": 2.0,
+        "p_laplacian_exp": 4.0,
+        "outer_dlnv_dlnr_100_300kpc": 0.16033,
+        "btfr_slope_beta": 5.8588
+      },
+      {
+        "spectral_dim_ds": 2.5,
+        "lagrangian_exp_q": 2.25,
+        "p_laplacian_exp": 4.5,
+        "outer_dlnv_dlnr_100_300kpc": 0.20935,
+        "btfr_slope_beta": 6.8321
+      },
+      {
+        "spectral_dim_ds": 3.0,
+        "lagrangian_exp_q": 2.5,
+        "p_laplacian_exp": 5.0,
+        "outer_dlnv_dlnr_100_300kpc": 0.24587,
+        "btfr_slope_beta": 7.8004
+      }
+    ]
+  },
+  "check_2_gravitational_atom": {
+    "eigenvalue_eps0": 0.64953399,
+    "dimensionless_mass_int_xi2_psi2": 2.062237,
+    "xi_core_half_density": 1.299271,
+    "xi_half_mass": 1.903322,
+    "invariant_M_Rhalf_hbar2_Gm2": 3.9251,
+    "invariant_M_Rcore_hbar2_Gm2": 2.67941,
+    "outer_soliton_dlnv_dlnr": -0.4994
+  },
+  "check_3_phase_space_and_tower": {
+    "single_boson_bounds_eV": {
+      "m_max_1Mpc_isothermal_eV": 1.9379,
+      "m_max_1Mpc_NFW_tail_eV": 1.0306,
+      "m_min_Bullet_Cluster_melt_eV": 2.3015,
+      "single_boson_window_empty": true
+    },
+    "two_tier_hybrid_solution": {
+      "m_light_eV": 0.05,
+      "f_light": 0.02,
+      "m_heavy_eV": 3.0,
+      "f_heavy": 0.98,
+      "light_Ndeg_at_1Mpc_NFW": 9432.49,
+      "heavy_Ndeg_in_Bullet_core": 0.8867,
+      "bullet_internal_g_over_a0": 2.161
+    },
+    "fractal_soliton_tower_ripples": [
+      {
+        "scale_ratio_b": 1.5,
+        "ripple_half_amp_pct": 0.109,
+        "passes_5pct_smoothness": true
+      },
+      {
+        "scale_ratio_b": 2.0,
+        "ripple_half_amp_pct": 0.036,
+        "passes_5pct_smoothness": true
+      },
+      {
+        "scale_ratio_b": 3.0,
+        "ripple_half_amp_pct": 0.446,
+        "passes_5pct_smoothness": true
+      },
+      {
+        "scale_ratio_b": 4.0,
+        "ripple_half_amp_pct": 1.572,
+        "passes_5pct_smoothness": true
+      },
+      {
+        "scale_ratio_b": 6.0,
+        "ripple_half_amp_pct": 4.561,
+        "passes_5pct_smoothness": true
+      },
+      {
+        "scale_ratio_b": 7.0,
+        "ripple_half_amp_pct": 6.084,
+        "passes_5pct_smoothness": false
+      },
+      {
+        "scale_ratio_b": 10.0,
+        "ripple_half_amp_pct": 10.508,
+        "passes_5pct_smoothness": false
+      }
+    ]
+  },
+  "check_4_efe_and_wide_binaries": {
+    "solar_rM_AU": 7029.9,
+    "lstar_rM_kpc": 8.348,
+    "cosmic_efe_rollover_kpc_at_e0010": 834.8,
+    "milky_way_e_at_sun": 1.8101,
+    "wide_binary_asymptotic_gravity_boost_simple_mu": 1.39978,
+    "wide_binary_velocity_boost_pct_simple_mu": 18.31,
+    "wide_binary_asymptotic_gravity_boost_standard_mu": 1.06414,
+    "wide_binary_velocity_boost_pct_standard_mu": 3.16,
+    "cosmological_coincidence": {
+      "a0_empirical_m_s2": 1.2e-10,
+      "c_H0_over_2pi_m_s2": 1.042e-10,
+      "c_H0_sqrt_OmegaL_over_2pi_m_s2": 8.62e-11,
+      "verlinde_c_H0_over_6_m_s2": 1.091e-10
+    }
+  },
+  "sha256_canonical": "040a757f5b4a01e735d1c4a55bca639e79bf8c64ef92588ce290d931f614320a"
+}

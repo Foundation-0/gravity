@@ -1,0 +1,26 @@
+{
+  "schema": "FOUNDATION-0/GRAVITY-WAVE6-CONVERGENCE-UNIFICATION/1.0",
+  "claim_c18_horizon_pixel_vortex_percolation": {
+    "a_dS_cH0_over_2pi_m_s2": 1.0422e-10,
+    "max_hbar_cancellation_identity_rel_err": 1.815e-16,
+    "lstar_percolation_radius_kpc": 8.958,
+    "kelvin_vortex_mode_spectral_dimension_ds": 1.0
+  },
+  "claim_c19_potential_depth_roton_unification": {
+    "Lstar_spiral_1Mpc": 2.8712e-7,
+    "Lstar_spiral_10kpc": 1.8658e-6,
+    "massive_300kms_spiral_10kpc": 6.4938e-6,
+    "Bullet_Cluster_250kpc": 6.8527e-5,
+    "cluster_to_Lstar_10kpc_gap_ratio": 36.73,
+    "cluster_to_Lstar_1Mpc_gap_ratio": 238.67,
+    "roton_threshold_Phi_crit_over_c2": 8.0e-6,
+    "early_universe_T0_condensate_Delta_N_eff": 0.0,
+    "galactic_roton_contamination_pct_Lstar_and_300kms": 0.0,
+    "falsifiable_group_cluster_onset_sigma1D_kms": 388.1
+  },
+  "claim_c20_filament_centroid_diffusion_hbar_constancy": {
+    "max_mass_scaling_rel_error_electron_to_25kDa": 2.341e-16,
+    "centroid_filament_hbar_over_hbar0": 1.0
+  },
+  "sha256_canonical": "6b905845aaca043a95ab04effa73e19030d4924130a18cc22f80eb117ba105b0"
+}

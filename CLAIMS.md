@@ -101,3 +101,12 @@ Every mathematical and numerical claim in this repository carries an explicit `F
 
 - **Statement:** $1/N_{\text{fil}}$ centroid diffusion resolving C-14 (WEP mass scaling relative error $2.341\times 10^{-16}$) and $d\hbar/dt = 0$ redshift constancy ($\text{centroid\_filament\_hbar\_over\_hbar0} = 1.0$ across $z = 0, 3, 1100, 10^9$).
 - **Verification:** Verified in `formal/Wave6Convergence.lean`.
+## C-21: Stratified Group-to-Cluster Roton-Threshold Refinement (`PROVEN` / `NEW-COMPUTATION`)
+
+- **Statement:** Radial halo stratification splits the group/cluster roton onset into an incipient central-core onset $\sigma_{\text{crit}} = 190.0\text{ km/s}$ (95% CI [165, 265] km/s; $\Delta\chi^2 = -15.36$ over single-zone M2) and a 50% full-halo midpoint $\sigma_{50\%} = 372.2\text{ km/s}$ (within 4.1% of Wave-6 $388.1\text{ km/s}$), rejecting pure universal $a_0$-MOND at $>32\sigma$ ($\Delta\chi^2 = +1030.2$).
+- **Verification:** Verified in `formal/Wave7ThresholdAudit.lean` and `results/wave7_group_cluster_certificates.json` (SHA-256: `973d6f1d5691ecd022a6d1a66d87ab8eadce088df14e61f985e6779967889710`).
+
+## C-22: Cosmic Turnaround Mass-Conservation Supply Cap (`PROVEN` / `NEW-COMPUTATION`)
+
+- **Statement:** Unbounded local Thomas-Fermi roton condensation ($\Delta R \sim \Delta\Phi^{3/2}$) blows up in 8-14 keV weak-lensing clusters ($\Delta\chi^2 = +153.2$, $>12\sigma$) and is canonically regulated by cosmic turnaround mass conservation $M_{\text{tot}}/M_{\text{bar}} \le \Omega_m/\Omega_b = 6.39$ ($250\text{ kpc}$ plateau $R_{\text{sat}} = 3.70\text{--}4.20$).
+- **Verification:** Verified in `formal/Wave7ThresholdAudit.lean` and `results/wave7_group_cluster_certificates.json` (SHA-256: `973d6f1d5691ecd022a6d1a66d87ab8eadce088df14e61f985e6779967889710`).

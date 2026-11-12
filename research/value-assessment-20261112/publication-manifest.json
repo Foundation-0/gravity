@@ -113,11 +113,11 @@
     },
     {
       "path": "VALIDATION.md",
-      "sha256": "acb791f2ca6d01a939528715e982b08493c34fa5b37430e9bafd4465f9e29ea0"
+      "sha256": "df9c1f2dbd5f9c617218415b975b06143e5ae4ef236bb4374172d8f082738bcd"
     },
     {
       "path": "check.py",
-      "sha256": "2e7c7243c932422c3eddaf5f361c977eff03ada4cb4a59318329d86442b75319"
+      "sha256": "d9a15b7b8e60b2ee85e30d78bc41c6dac8259e3f2259a561293b3e4a83647921"
     },
     {
       "path": "closure/caustic_control.py",
@@ -245,7 +245,7 @@
     },
     {
       "path": "test_check.py",
-      "sha256": "646c887b47dee0da77be9fe0801d67d9c817a29aa4570dc01d1e22c0fb2f2bc4"
+      "sha256": "c80b17036151b27c9c576ecccdffa7c6fe3b59f19afdaa21bbee4abe70e81500"
     },
     {
       "path": "wave12/evidence.json",

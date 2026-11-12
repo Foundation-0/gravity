@@ -3,7 +3,7 @@ from pathlib import Path
 import shutil
 import tempfile
 import unittest
-from check import compare, verify_inputs, HERE
+from check import compare, verify_inputs, HERE, mismatches
 
 
 class ComparisonTests(unittest.TestCase):
@@ -28,6 +28,16 @@ class ComparisonTests(unittest.TestCase):
     def test_large_roundoff_diagnostic_is_rejected(self):
         with self.assertRaises(AssertionError):
             compare(1e-4, 1e-12, 'closure.momentum_relative_residual')
+
+    def test_all_mismatches_are_collected(self):
+        errors = mismatches({"x": 0., "y": False}, {"x": 4.19e-11, "y": True}, "probe")
+        self.assertEqual(len(errors), 2)
+
+    def test_native_finite_length_diagnostic_boundary(self):
+        path = "convergences.mechanics.finite_length_checks[0].relative_energy_hessian_error"
+        compare(3.1972696962664237e-7, 3.197457694573648e-7, path)
+        with self.assertRaises(AssertionError):
+            compare(1e-3, 3.197457694573648e-7, path)
 
     def test_changed_input_is_rejected_before_execution(self):
         with tempfile.TemporaryDirectory() as directory:

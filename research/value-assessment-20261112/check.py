@@ -44,6 +44,11 @@ def compare(actual, expected, location='root'):
     if location.startswith('closure.') and key in {'momentum_mean', 'mean_velocity', 'central_velocity'}:
         assert all(math.isfinite(v) and abs(v) < 2e-12 for v in (actual, expected)), location
         return
+    # Native finite-length verification differentiates nearly equal energies.
+    # Its analytic acceptance criterion is 1e-4 in the author probe.
+    if re.fullmatch(r'convergences.mechanics.finite_length_checks\[[0-2]\].relative_energy_hessian_error', location):
+        assert all(math.isfinite(v) and 0 <= v < 1e-4 for v in (actual, expected)), location
+        return
     if key in DIAGNOSTIC_LIMITS:
         for value in (actual, expected):
             assert isinstance(value, (float, int)) and not isinstance(value, bool), location
@@ -69,6 +74,22 @@ def compare(actual, expected, location='root'):
         assert actual == expected, (location, actual, expected)
 
 
+
+def mismatches(actual, expected, location):
+    """Collect every leaf mismatch so a hosted run reports all portability gaps."""
+    if isinstance(expected, dict) and isinstance(actual, dict) and actual.keys() == expected.keys():
+        return [error for key in expected if key not in ENVIRONMENT_KEYS
+                for error in mismatches(actual[key], expected[key], f'{location}.{key}')]
+    if isinstance(expected, list) and isinstance(actual, list) and len(actual) == len(expected):
+        return [error for i, (a, e) in enumerate(zip(actual, expected))
+                for error in mismatches(a, e, f'{location}[{i}]')]
+    try:
+        compare(actual, expected, location)
+        return []
+    except AssertionError as error:
+        return [str(error)]
+
+
 def verify_inputs(root=HERE):
     manifest = json.loads((root / 'inputs/manifest.json').read_text())
     for item in manifest['files']:
@@ -87,14 +108,17 @@ def main():
             ('convergences', 'probe.py', 'evidence.json', []),
             ('observations', 'probe.py', 'results.json', ['--output', 'results.json']),
         ]
+        failures = []
         for name, script, output, arguments in probes:
             work = temporary / name
             (work / output).unlink()
             result = subprocess.run([sys.executable, '-B', script, *arguments], cwd=work, capture_output=True, text=True)
             if result.returncode:
                 raise RuntimeError(f'{name}: {result.stdout}\n{result.stderr}')
-            compare(json.loads((work / output).read_text()), json.loads((HERE / name / output).read_text()), name)
-            print(f'PASS {name}: regenerated {output}')
+            errors = mismatches(json.loads((work / output).read_text()), json.loads((HERE / name / output).read_text()), name)
+            failures.extend(errors)
+            print(f'{"FAIL" if errors else "PASS"} {name}: regenerated {output}')
+        assert not failures, '\n'.join(failures)
     print('PASS four probes and six immutable source hashes')
 
 

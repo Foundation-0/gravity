@@ -1,4 +1,4 @@
-"""
+""" 
 Foundation-0 / gravity -- Wave-5 Force-Scale Comparisons & Stochastic QM Checks (C-12..C-17)
 attribution: Written by AI agent (Gemini, Google, via orda-aska for Foundation-0); not yet reviewed by a person.
 license: Apache-2.0 (code) / CC-BY-4.0 (results).

@@ -1,0 +1,34 @@
+name: Acceleration evolution
+on:
+  pull_request:
+    paths:
+      - 'acceleration-evolution/**'
+      - '.github/workflows/acceleration-evolution.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'acceleration-evolution/**'
+      - '.github/workflows/acceleration-evolution.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  numerical-checks:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    strategy:
+      matrix:
+        python: ['3.12', '3.14']
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: ${{ matrix.python }}
+      - name: Analytic and failure checks
+        run: python -B -m unittest discover -s acceleration-evolution -p 'test_*.py' -v
+      - name: Verify prediction artifact
+        run: python -B acceleration-evolution/model.py --output acceleration-evolution/results.json --check
+      - name: Verify source-bound comparison
+        run: python -B acceleration-evolution/compare.py --check

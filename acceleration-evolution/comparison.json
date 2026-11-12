@@ -1,0 +1,149 @@
+{
+  "schema_version": 1,
+  "kind": "published_central_curve_diagnostic",
+  "evidence_sha256": "37bfad5f6944e3a59a31a80b2ee2403639bd8234aa58aae96a2c4466977d1770",
+  "parameters": {
+    "omega_m": 0.315,
+    "benchmark_A_m_s2": 1.2e-10
+  },
+  "interval": [
+    0.33,
+    1.44
+  ],
+  "interpretation": [
+    "Endpoints evaluate published fitted curves at sample boundaries, not measured endpoint galaxies.",
+    "The equivalent q reproduces only endpoint growth; it is not a best fit or posterior estimate.",
+    "Both reconstructions use the same galaxies and are not independent observations.",
+    "No covariance, confidence band, chi-squared, p-value, Bayes factor or discovery significance is computed.",
+    "Summary intervals are preserved in evidence.json without converting 95 percent coverage to 1 sigma."
+  ],
+  "constant_interval_growth": 1.0,
+  "H_tracking_interval_growth": 1.9206998594100706,
+  "published_curves": [
+    {
+      "id": "muse_dc14_eq4",
+      "independence_group": "MUSE_MHUDF_79",
+      "interval_growth": 2.1575391880369907,
+      "growth_relative_to_H_tracking": 1.123308869663615,
+      "endpoint_equivalent_q_NOT_a_fit": 1.178153095153886,
+      "values": [
+        {
+          "z": 0.33,
+          "a0_m_s2": 1.5247e-10,
+          "ratio_to_low_boundary": 1.0
+        },
+        {
+          "z": 0.5,
+          "a0_m_s2": 1.795e-10,
+          "ratio_to_low_boundary": 1.1772807765462059
+        },
+        {
+          "z": 0.75,
+          "a0_m_s2": 2.1925e-10,
+          "ratio_to_low_boundary": 1.4379878008788614
+        },
+        {
+          "z": 1.0,
+          "a0_m_s2": 2.59e-10,
+          "ratio_to_low_boundary": 1.698694825211517
+        },
+        {
+          "z": 1.44,
+          "a0_m_s2": 3.2895999999999997e-10,
+          "ratio_to_low_boundary": 2.1575391880369907
+        }
+      ]
+    },
+    {
+      "id": "muse_mond_eq14",
+      "independence_group": "MUSE_MHUDF_79",
+      "interval_growth": 1.9340813464235624,
+      "growth_relative_to_H_tracking": 1.0069669849497473,
+      "endpoint_equivalent_q_NOT_a_fit": 1.010637257482444,
+      "values": [
+        {
+          "z": 0.33,
+          "a0_m_s2": 1.426e-10,
+          "ratio_to_low_boundary": 1.0
+        },
+        {
+          "z": 0.5,
+          "a0_m_s2": 1.63e-10,
+          "ratio_to_low_boundary": 1.1430575035063113
+        },
+        {
+          "z": 0.75,
+          "a0_m_s2": 1.93e-10,
+          "ratio_to_low_boundary": 1.35343618513324
+        },
+        {
+          "z": 1.0,
+          "a0_m_s2": 2.23e-10,
+          "ratio_to_low_boundary": 1.5638148667601683
+        },
+        {
+          "z": 1.44,
+          "a0_m_s2": 2.758e-10,
+          "ratio_to_low_boundary": 1.9340813464235624
+        }
+      ]
+    }
+  ],
+  "benchmark_predictions": [
+    {
+      "z": 0.33,
+      "E": 1.1941861894193888,
+      "a0_m_s2": 1.4330234273032666e-10,
+      "a0_ratio_to_z0": 1.1941861894193888,
+      "btfr_mass_intercept_shift_dex": -0.07707204432555226,
+      "velocity_at_fixed_baryonic_mass_shift_dex": 0.019268011081388065
+    },
+    {
+      "z": 0.5,
+      "E": 1.3221667822177354,
+      "a0_m_s2": 1.5866001386612826e-10,
+      "a0_ratio_to_z0": 1.3221667822177354,
+      "btfr_mass_intercept_shift_dex": -0.1212862418578013,
+      "velocity_at_fixed_baryonic_mass_shift_dex": 0.030321560464450326
+    },
+    {
+      "z": 0.75,
+      "E": 1.5405204072001124,
+      "a0_m_s2": 1.8486244886401348e-10,
+      "a0_ratio_to_z0": 1.5405204072001124,
+      "btfr_mass_intercept_shift_dex": -0.1876674557692837,
+      "velocity_at_fixed_baryonic_mass_shift_dex": 0.046916863942320926
+    },
+    {
+      "z": 1.0,
+      "E": 1.7902513789968157,
+      "a0_m_s2": 2.1483016547961789e-10,
+      "a0_ratio_to_z0": 1.7902513789968157,
+      "btfr_mass_intercept_shift_dex": -0.25291401692741816,
+      "velocity_at_fixed_baryonic_mass_shift_dex": 0.06322850423185454
+    },
+    {
+      "z": 1.44,
+      "E": 2.293673246127268,
+      "a0_m_s2": 2.752407895352722e-10,
+      "a0_ratio_to_z0": 2.293673246127268,
+      "btfr_mass_intercept_shift_dex": -0.36053154891338957,
+      "velocity_at_fixed_baryonic_mass_shift_dex": 0.09013288722834739
+    }
+  ],
+  "H_shape_background_sensitivity": [
+    {
+      "omega_m": 0.3,
+      "interval_growth": 1.8968392557567781
+    },
+    {
+      "omega_m": 0.315,
+      "interval_growth": 1.9206998594100706
+    },
+    {
+      "omega_m": 0.33,
+      "interval_growth": 1.9436103432980922
+    }
+  ],
+  "inference_status": "Raw-data and covariance inference not performed; publication-summary comparison only"
+}

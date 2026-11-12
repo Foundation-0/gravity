@@ -1,0 +1,83 @@
+{
+  "access_date": "2026-11-12",
+  "sources": [
+    {
+      "title": "Onorato et al. 2026",
+      "url": "https://arxiv.org/html/2609.31835v1",
+      "role": "Observed system, systemic velocity uncertainties, virial and luminosity systematics, lensing ambiguity, small-scale clustering extrapolation.",
+      "type": "primary_research"
+    },
+    {
+      "title": "Visbal, Haiman, Bryan 2014",
+      "url": "https://arxiv.org/abs/1406.7020",
+      "role": "Primary direct-collapse atomic-cooling halo scenario and required gas conditions.",
+      "type": "primary_research"
+    },
+    {
+      "title": "Effects of the Hubble parameter on the cosmic growth of the first quasars (2020)",
+      "url": "https://academic.oup.com/mnras/article/496/1/888/5851753",
+      "role": "Growth equation, spin-dependent radiative efficiency, duty assumptions.",
+      "type": "primary_research"
+    },
+    {
+      "title": "Peters 1964 dissertation",
+      "url": "https://thesis.caltech.edu/4296/",
+      "role": "Primary point-mass gravitational-radiation inspiral framework.",
+      "type": "primary_research"
+    },
+    {
+      "title": "DESI DR2 Results II",
+      "url": "https://arxiv.org/html/2503.14738v2",
+      "role": "Past-expansion inference using specified dark-energy parametrizations.",
+      "type": "primary_research"
+    },
+    {
+      "title": "Scherrer 2004",
+      "url": "https://arxiv.org/html/astro-ph/0402316v3",
+      "role": "Known purely kinetic k-essence dust-like limit, field equations, stability-relevant derivatives.",
+      "type": "primary_research"
+    },
+    {
+      "title": "Arkani-Hamed et al. 2004",
+      "url": "https://arxiv.org/abs/hep-th/0312099",
+      "role": "Existing ghost-condensate effective theory and nonzero field-velocity background.",
+      "type": "primary_research"
+    },
+    {
+      "title": "Boyle, Finn, Turok 2018",
+      "url": "https://arxiv.org/abs/1803.08928",
+      "role": "Existing CPT cosmology, distinct mechanism and particle abundance calculation.",
+      "type": "primary_research"
+    },
+    {
+      "title": "Bataki, Skordis, Zlosnik 2024",
+      "url": "https://arxiv.org/abs/2307.15126",
+      "role": "Hamiltonian constraints of AeST, not universe-creation dynamics.",
+      "type": "primary_research"
+    },
+    {
+      "title": "Urueña Palomo 2026",
+      "url": "https://arxiv.org/abs/2610.09987",
+      "role": "Actual author/title behind identifier misattributed as Braun in Wave11.",
+      "type": "primary_research"
+    },
+    {
+      "title": "Milgrom 1999",
+      "url": "https://arxiv.org/abs/astro-ph/9805346",
+      "role": "Existing vacuum/inertia and cosmological acceleration-scale proposal.",
+      "type": "primary_research"
+    },
+    {
+      "title": "Ciocan et al. 2026 MUSE-DARK III",
+      "url": "https://doi.org/10.1051/0004-6361/202659230",
+      "role": "Existing individual-survey redshift evolution analysis, 79 galaxies.",
+      "type": "primary_research"
+    },
+    {
+      "title": "Alcock 2026",
+      "url": "https://doi.org/10.1093/mnras/stag1485",
+      "role": "Existing binned tests of constant, Hubble-tracking, matter-density scalings. Novelty constraint.",
+      "type": "primary_research"
+    }
+  ]
+}

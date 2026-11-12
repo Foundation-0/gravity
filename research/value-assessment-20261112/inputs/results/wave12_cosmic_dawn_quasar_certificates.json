@@ -1,0 +1,123 @@
+{
+  "schema": "FOUNDATION-0/GRAVITY-WAVE12-COSMIC-DAWN-QUASAR-PAIR/1.0",
+  "claim_c31_salpeter_seed_and_clustering_wall": {
+    "epistemic_status": "COMPUTED (KNOWN-FRAMEWORK COSMOLOGICAL & SALPETER IDENTITIES; LENSING & VIRIAL MASS CAVEATS NOTED)",
+    "observed_system": {
+      "designation": "J1602+4228AB (Napowawa'enakaulua)",
+      "z_sys_A": 6.0781,
+      "z_sys_B": 6.0785,
+      "cosmic_age_at_z_Myr": 911.72,
+      "angular_diameter_distance_kpc": 1194860.2,
+      "computed_projected_sep_pkpc": 5.68,
+      "reported_projected_sep_pkpc": 5.56,
+      "M_BH_A_Msun": 1500000000.0,
+      "M_BH_B_Msun": 400000000.0,
+      "lambda_Edd_A": 1.23,
+      "lambda_Edd_B": 1.07,
+      "reported_clustering_excess_orders_of_magnitude": "2 to 3 (100x to 1000x over extrapolated high-z quasar clustering in 199 JWST Aether fields)"
+    },
+    "salpeter_timescales_Myr": {
+      "pure_H_eps_0p10": 50.05,
+      "primordial_H_He_eps_0p10": 43.92,
+      "spinning_Kerr_pure_H_eps_0p20": 112.62
+    },
+    "growth_windows_Myr": {
+      "from_z20_to_z6p08": 734.1,
+      "from_z30_to_z6p08": 813.05
+    },
+    "seed_duty_cycle_audit_for_J1602A_1p5e9_Msun": {
+      "popIII_100Msun_efoldings": 16.524,
+      "popIII_100Msun_req_time_Edd1_eps0p10_Myr": 827.08,
+      "popIII_100Msun_duty_from_z20_Edd1_eps0p10": 1.127,
+      "popIII_100Msun_duty_from_z20_obsEdd1p23_eps0p10": 0.916,
+      "popIII_100Msun_duty_from_z20_Edd1_Kerr_eps0p20": 2.535,
+      "dcbh_1e5Msun_efoldings": 9.616,
+      "dcbh_1e5Msun_duty_from_z20_Edd1_eps0p10": 0.656,
+      "dcbh_1e5Msun_duty_from_z20_obsEdd1p23_eps0p10": 0.533
+    },
+    "seed_duty_cycle_audit_for_J1602B_4p0e8_Msun": {
+      "popIII_100Msun_efoldings": 15.202,
+      "popIII_100Msun_duty_from_z20_Edd1_eps0p10": 1.037,
+      "dcbh_1e5Msun_efoldings": 8.294,
+      "dcbh_1e5Msun_duty_from_z20_obsEdd1p07_eps0p10": 0.529
+    },
+    "scientific_caveats": [
+      "Single-epoch broad-line virial BH masses carry ~2x (0.3 dex) systematic uncertainty.",
+      "Spectral slopes, dust attenuation, and [O III] outflow shapes differ between A and B (favoring a physical pair), but archival HST imaging shows a candidate foreground galaxy near B; a full lens model is pending (Onorato et al. 2026)."
+    ]
+  },
+  "claim_c32_two_branch_condensate_and_phonon_collapse": {
+    "epistemic_status": "COMPUTED (WAVE-10 SIGMA_*(Z) EXTENSION & MOND FREE-FALL) & CONJECTURE (COSMIC-DAWN DCBH SEEDING)",
+    "planck_nonlinear_collapse_at_z6p08": {
+      "R_star_comoving_Mpc": 0.00796,
+      "M_star_Msun": 83914.0,
+      "sigma_star_z6p08_kms": 0.97,
+      "sigma_star_z0_kms": 185.59,
+      "host_177kms_trapping_at_z6p08": 0.99997,
+      "host_177kms_trapping_at_z0": 0.0
+    },
+    "lcdm_gaussian_halo_rarity_at_z6p08": [
+      {
+        "halo_mass_Msun": 1000000000000.0,
+        "comoving_lagrangian_radius_Mpc": 1.819,
+        "sigma_lin_z6p08": 0.3987,
+        "gaussian_peak_height_nu": 4.23
+      },
+      {
+        "halo_mass_Msun": 5000000000000.0,
+        "comoving_lagrangian_radius_Mpc": 3.11,
+        "sigma_lin_z6p08": 0.3133,
+        "gaussian_peak_height_nu": 5.38
+      }
+    ],
+    "feeder_filament_30pkpc_5e10Msun_infall": {
+      "g_baryon_m_s2": 7.7437e-12,
+      "a0_const_m_s2": 1.2e-10,
+      "a0_hubble_cHz_over_2pi_m_s2": 1.1057e-09,
+      "free_fall_time_pure_baryon_Newton_Myr": 384.82,
+      "free_fall_time_MOND_const_a0_Myr": 182.27,
+      "free_fall_time_MOND_Hubble_a0_Myr": 109.04,
+      "free_fall_time_two_branch_trapped_condensate_Myr": 122.79
+    },
+    "dynamical_friction_audit_note": "Pure baryon-only MOND slows kpc-scale galaxy mergers due to absent dark-halo dynamical friction (Nipoti et al. 2008), whereas in the two-branch condensate sigma_*(z=6.08) = 0.97 km/s << sigma_halo keeps f_trap = 0.99997, supplying both deep central DCBH potentials and Chandrasekhar dynamical friction at z = 6.08 before late-time cosmic-web shocks heat the condensate to 185.59 km/s by z = 0."
+  },
+  "claim_c33_slim_disk_and_binary_gw_budget": {
+    "epistemic_status": "COMPUTED (SLIM-DISK ADVECTION & PETERS 1964 GW INSPIRAL IDENTITIES)",
+    "slim_disk_photon_trapping_benchmarks": [
+      {
+        "dimensionless_mass_inflow_mdot": 1.0,
+        "radiated_lambda_Edd_slim_disk": 1.0,
+        "popIII_100Msun_to_1p5e9Msun_time_Myr": 827.08
+      },
+      {
+        "dimensionless_mass_inflow_mdot": 2.0,
+        "radiated_lambda_Edd_slim_disk": 2.0,
+        "popIII_100Msun_to_1p5e9Msun_time_Myr": 413.54
+      },
+      {
+        "dimensionless_mass_inflow_mdot": 3.0,
+        "radiated_lambda_Edd_slim_disk": 2.811,
+        "popIII_100Msun_to_1p5e9Msun_time_Myr": 275.69
+      },
+      {
+        "dimensionless_mass_inflow_mdot": 5.0,
+        "radiated_lambda_Edd_slim_disk": 3.833,
+        "popIII_100Msun_to_1p5e9Msun_time_Myr": 165.42
+      }
+    ],
+    "kinematic_projection_at_5p56_pkpc": {
+      "v_circ_BHs_only_kms": 38.34,
+      "v_circ_with_1p5e11Msun_host_kms": 342.79,
+      "observed_delta_v_los_kms": 15.0,
+      "required_abs_sin_i_cos_psi": 0.0438
+    },
+    "gravitational_wave_inspiral_budget": {
+      "chirp_mass_Msun": 647350000.0,
+      "t_GW_at_5p56_pkpc_Myr": 4.872e+20,
+      "t_GW_at_0p10_pc_Myr": 50.99,
+      "t_GW_at_0p05_pc_Myr": 3.19,
+      "nanograv_relevance": "At 5.56 pkpc, pure GW emission is negligible (t_GW = 4.87e+20 Myr); Chandrasekhar dynamical friction and stellar/condensate loss-cone scattering must harden the pair to 0.05-0.10 pc, after which GW inspiral merges the M_c = 6.47e+08 M_sun binary in 3.19-50.99 Myr, feeding the nHz GW background."
+    }
+  },
+  "sha256_canonical": "f46cc3be82489f450d1a3ce8c583fad15970050f938bd4c8b5510fe704ba48b6"
+}

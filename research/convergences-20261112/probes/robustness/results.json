@@ -1,0 +1,357 @@
+{
+  "status": "Independent mathematical probes; no observational discovery or validated dark-field mechanism.",
+  "mechanics": {
+    "scope": "Fixed-cell Bloch k=0 central-force model, equal unit masses and spring constants, no prestress; only original bars, including at the fcc endpoint.",
+    "bonds_per_cell": 15,
+    "physical_coordinates_per_cell": 18,
+    "analytic_sum_omega_fourth": "96 - 12 t^2",
+    "rows": [
+      {
+        "s": 0.0,
+        "t": 0.0,
+        "squared_frequencies": [
+          -4.096321557456769e-16,
+          -2.3258395818994736e-16,
+          -1.750725770655428e-17,
+          2.9481179952006597e-16,
+          6.669311965846762e-16,
+          8.563735839713576e-16,
+          0.9999999999999994,
+          1.0000000000000007,
+          1.0000000000000009,
+          1.9999999999999982,
+          1.9999999999999993,
+          2.0000000000000004,
+          2.9999999999999982,
+          2.999999999999999,
+          2.9999999999999996,
+          2.9999999999999996,
+          3.0000000000000004,
+          5.999999999999998
+        ],
+        "sum_omega_squared": 29.999999999999993,
+        "sum_omega_fourth": 95.99999999999997,
+        "zero_modes": 6,
+        "self_stress_states": 3,
+        "energy_hessian_discrepancy": 7.645866162420134e-10
+      },
+      {
+        "s": 0.25,
+        "t": 0.47058823529411764,
+        "squared_frequencies": [
+          -5.26819907986573e-16,
+          -1.5775851506269436e-17,
+          2.0678324095653123e-16,
+          9.145742287537451e-16,
+          0.11764705882352916,
+          0.21191161698167063,
+          0.9999999999999997,
+          1.0000000000000004,
+          1.0000000000000007,
+          1.6968207371890252,
+          1.8823529411764701,
+          2.074808713771113,
+          2.999999999999999,
+          2.999999999999999,
+          2.999999999999999,
+          3.0000000000000027,
+          3.3023557278262317,
+          5.714103204231963
+        ],
+        "sum_omega_squared": 30.0,
+        "sum_omega_fourth": 93.34256055363322,
+        "zero_modes": 4,
+        "self_stress_states": 1,
+        "energy_hessian_discrepancy": 7.438554217031879e-10
+      },
+      {
+        "s": 0.5,
+        "t": 0.8,
+        "squared_frequencies": [
+          -4.207096298989494e-16,
+          -3.6339703505730275e-16,
+          7.41058306963119e-16,
+          1.2517461745827448e-15,
+          0.4000000000000002,
+          0.6177775030364073,
+          0.9999999999999989,
+          0.9999999999999997,
+          0.9999999999999999,
+          1.3165631466106562,
+          1.5999999999999999,
+          2.338928089460743,
+          2.9999999999999982,
+          2.9999999999999982,
+          2.9999999999999996,
+          3.0,
+          3.679074544670553,
+          5.0476567162216375
+        ],
+        "sum_omega_squared": 30.0,
+        "sum_omega_fourth": 88.32,
+        "zero_modes": 4,
+        "self_stress_states": 1,
+        "energy_hessian_discrepancy": 6.276847930308804e-10
+      },
+      {
+        "s": 0.75,
+        "t": 0.96,
+        "squared_frequencies": [
+          -8.542717946718508e-16,
+          -6.897278598912165e-16,
+          -6.738864302054607e-16,
+          1.0721073979034539e-15,
+          0.7200000000000002,
+          0.8837596876514139,
+          0.9999999999999998,
+          0.9999999999999998,
+          1.0000000000000004,
+          1.1035985285023362,
+          1.2799999999999991,
+          2.7614823982885746,
+          2.999999999999999,
+          3.0,
+          3.0,
+          3.0000000000000018,
+          3.882229673902862,
+          4.368929711654813
+        ],
+        "sum_omega_squared": 29.999999999999993,
+        "sum_omega_fourth": 84.94079999999997,
+        "zero_modes": 4,
+        "self_stress_states": 1,
+        "energy_hessian_discrepancy": 4.66136018673069e-10
+      },
+      {
+        "s": 1.0,
+        "t": 1.0,
+        "squared_frequencies": [
+          -4.861870655424675e-16,
+          7.787282422000734e-16,
+          9.135421199494564e-16,
+          1.0359929580492692e-15,
+          0.999999999999999,
+          0.9999999999999997,
+          0.9999999999999999,
+          1.0000000000000002,
+          1.0000000000000002,
+          1.0000000000000007,
+          1.000000000000001,
+          2.9999999999999973,
+          2.9999999999999982,
+          2.999999999999999,
+          3.0000000000000004,
+          3.000000000000001,
+          3.9999999999999973,
+          3.999999999999999
+        ],
+        "sum_omega_squared": 29.999999999999996,
+        "sum_omega_fourth": 83.99999999999999,
+        "zero_modes": 4,
+        "self_stress_states": 1,
+        "energy_hessian_discrepancy": 3.7923952866947275e-10
+      }
+    ],
+    "limits": "Not a full Brillouin-zone stability study, material Hamiltonian, or proof of topological protection."
+  },
+  "records": {
+    "channel_error_on_all_four_matrix_units": 2.220446049250313e-16,
+    "examples": {
+      "repeated_Z_records": [
+        {
+          "environment_qubits": [
+            0
+          ],
+          "Z_pointer_information_bits": 1.0,
+          "Z_distinguishability": 1.0,
+          "total_mutual_information_bits": 1.0
+        },
+        {
+          "environment_qubits": [
+            1
+          ],
+          "Z_pointer_information_bits": 1.0,
+          "Z_distinguishability": 1.0,
+          "total_mutual_information_bits": 1.0
+        },
+        {
+          "environment_qubits": [
+            0,
+            1
+          ],
+          "Z_pointer_information_bits": 1.0,
+          "Z_distinguishability": 1.0,
+          "total_mutual_information_bits": 1.9999999999999998
+        }
+      ],
+      "Bell_encoded_Z_records": [
+        {
+          "environment_qubits": [
+            0
+          ],
+          "Z_pointer_information_bits": 0.0,
+          "Z_distinguishability": 0.0,
+          "total_mutual_information_bits": 0.9999999999999998
+        },
+        {
+          "environment_qubits": [
+            1
+          ],
+          "Z_pointer_information_bits": 0.0,
+          "Z_distinguishability": 0.0,
+          "total_mutual_information_bits": 0.9999999999999998
+        },
+        {
+          "environment_qubits": [
+            0,
+            1
+          ],
+          "Z_pointer_information_bits": 0.9999999999999997,
+          "Z_distinguishability": 0.9999999999999998,
+          "total_mutual_information_bits": 1.9999999999999996
+        }
+      ]
+    },
+    "limits": "Engineered three-qubit example, not a natural environment. The Bell construction has local records about a different system basis for the equal-amplitude input; the claimed absence concerns Z information."
+  },
+  "inference": {
+    "known_design_noise_variance": 0.01,
+    "one_view_rank": 1,
+    "one_hundred_repeated_view_rank": 1,
+    "target_plus_reference_rank": 2,
+    "Fisher_eigenvalues_original_coordinates": [
+      38.19660112501051,
+      261.8033988749895
+    ],
+    "Fisher_eigenvalues_after_coordinate_rescaling": [
+      0.004999999987500001,
+      2000000.005
+    ],
+    "distinguishability_quadratic_form_both_coordinates": [
+      0.049999999999999996,
+      0.05
+    ],
+    "unknown_gain": {
+      "parameters_q_b_gain": [
+        0.8,
+        0.3,
+        1.7
+      ],
+      "observations": [
+        1.87,
+        0.51
+      ],
+      "equivalent_rescaled_parameters": [
+        1.8399999999999999,
+        0.69,
+        0.7391304347826088
+      ],
+      "unanchored_rank_out_of_three": 2,
+      "anchored_rank_out_of_three": 3
+    },
+    "shared_offset_information": [
+      {
+        "readouts": 1,
+        "correct_information_about_q": 0.9900990099009901,
+        "information_if_offset_mistakenly_independent": 0.9900990099009901
+      },
+      {
+        "readouts": 10,
+        "correct_information_about_q": 0.999000999000999,
+        "information_if_offset_mistakenly_independent": 9.900990099009901
+      },
+      {
+        "readouts": 100,
+        "correct_information_about_q": 0.9999000099990001,
+        "information_if_offset_mistakenly_independent": 99.00990099009901
+      },
+      {
+        "readouts": 1000,
+        "correct_information_about_q": 0.999990000099999,
+        "information_if_offset_mistakenly_independent": 990.09900990099
+      }
+    ],
+    "limits": "Linear known observation functions and specified noise. Rank is local in the gain model. Nonlinear global identifiability and blind source recovery are separate problems."
+  },
+  "gravity": {
+    "Jeans_constant_sigma_spherical_relation": "Vc^2 = (gamma - 2 beta) sigma_r^2",
+    "conversion_examples_not_LOS_aperture_models": [
+      {
+        "tracer_density_slope": 2,
+        "anisotropy_beta": 0,
+        "Vc_over_sigma_r": 1.4142135623730951
+      },
+      {
+        "tracer_density_slope": 3,
+        "anisotropy_beta": 0,
+        "Vc_over_sigma_r": 1.7320508075688772
+      },
+      {
+        "tracer_density_slope": 3,
+        "anisotropy_beta": 0.5,
+        "Vc_over_sigma_r": 1.4142135623730951
+      }
+    ],
+    "cooling": {
+      "ne_cm_minus3": 0.0006991585597844737,
+      "temperature_K": 2314016.0960888085,
+      "sigma_kms": 178.4227839552902,
+      "coefficient_erg_cm3_s_minus1_K_minus_half": 1.7106680296277504e-27,
+      "density_sensitivity_Hubble_clock": "sigma_ff proportional to Delta H",
+      "density_sensitivity_freefall_clock": "sigma_ff proportional to sqrt(Delta) H",
+      "freefall_over_Hubble_at_Delta_1000": 0.04967294132898051
+    },
+    "redshift_sensitivity": [
+      {
+        "z": 0.0,
+        "H_over_H0": 1.0,
+        "cooling_sigma_fixed_Delta_Hubble_clock_kms": 178.4227839552902,
+        "repository_sigma_star_kms_not_independently_recomputed": 185.59
+      },
+      {
+        "z": 0.5,
+        "H_over_H0": 1.3223307840253968,
+        "cooling_sigma_fixed_Delta_Hubble_clock_kms": 235.9339397955929,
+        "repository_sigma_star_kms_not_independently_recomputed": 114.36
+      },
+      {
+        "z": 1.0,
+        "H_over_H0": 1.7906083549181118,
+        "cooling_sigma_fixed_Delta_Hubble_clock_kms": 319.4853276580919,
+        "repository_sigma_star_kms_not_independently_recomputed": 69.92
+      }
+    ],
+    "hydrostatic_crossing": [
+      {
+        "sigma_h_over_sigma_star": 0.99,
+        "density_slope": 1.9602,
+        "inner_mass_fraction_x_0_05": 0.04438017501004581,
+        "separately_imposed_trapped_fraction": 0.0
+      },
+      {
+        "sigma_h_over_sigma_star": 1.0,
+        "density_slope": 2.0,
+        "inner_mass_fraction_x_0_05": 0.05,
+        "separately_imposed_trapped_fraction": 0.0
+      },
+      {
+        "sigma_h_over_sigma_star": 1.01,
+        "density_slope": 2.0402,
+        "inner_mass_fraction_x_0_05": 0.05639900084455497,
+        "separately_imposed_trapped_fraction": 0.019703950593079167
+      }
+    ],
+    "repository_trajectory_source": {
+      "path": "inputs/wave10_covariant_jeans_certificates.json",
+      "sha256": "dd37a45adcb3c815d1a2d44bbbb58ac0235b9ea30d58d6b5a3438a46d91c874e"
+    },
+    "limits": "Free-free ionized-gas approximation with fixed composition/Gaunt factor and specified density and clock. Redshift curves change physical environments, not errors on one object. The Jeans slope does not constitute a stability analysis."
+  },
+  "aest_current": {
+    "points_tested": 16,
+    "maximum_absolute_component_error": 5.410445425013677e-10,
+    "current": "P^mu = 2(2-KB)J^mu - 2[(2-KB)+F_Y] q^(mu nu) d_nu(phi) - F_Q A^mu",
+    "conservation": "nabla_mu P^mu = 0 follows from shift symmetry for this action",
+    "limits": "Derivative check only. No entropy, heat trapping, energy flux, nonlinear fluid closure, or astrophysical parameter viability follows."
+  }
+}

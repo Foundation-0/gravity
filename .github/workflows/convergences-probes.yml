@@ -1,0 +1,25 @@
+name: Convergence research probes
+on:
+  pull_request:
+    paths:
+      - 'research/convergences-20261112/**'
+      - '.github/workflows/convergences-probes.yml'
+  push:
+    paths:
+      - 'research/convergences-20261112/**'
+      - '.github/workflows/convergences-probes.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  regenerate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.14'
+          cache: pip
+          cache-dependency-path: research/convergences-20261112/requirements.txt
+      - run: python -m pip install -r research/convergences-20261112/requirements.txt
+      - run: python research/convergences-20261112/check.py

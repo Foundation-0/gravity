@@ -1,0 +1,211 @@
+{
+  "status": "reproducible model calculations; no new observational evidence",
+  "source_dependency": {
+    "path": "inputs/wave10_covariant_jeans_unification.py",
+    "sha256": "af8a2459aa8f5885250ab6b5914c50cc852bcc691982c8ef5cf692603bece927",
+    "limitations": "Reuses wave10 approximate EH no-wiggle power spectrum and fixed cosmology. Not an independent Boltzmann-code verification."
+  },
+  "rate_responses": {
+    "KZ_nu": 0.6717,
+    "KZ_z_dynamic": 1.5,
+    "KZ_length_exponent": 0.3345869343229309,
+    "KZ_quench_100x_slower_length_factor": 4.668462435641381,
+    "viscosity_100x_at_fixed_epsilon_eta_factor": 31.622776601683793,
+    "sonic_Mach_10x_at_fixed_L_cs_p_half_length_factor": 0.01,
+    "pressure_100x_W_equal_1_length_factor": 0.31622776601683794,
+    "pressure_100x_fixed_time_visibility_length_factor": 0.1,
+    "assumptions": "KZ linear quench in scaling regime; Kolmogorov ordinary-fluid estimate; sonic p=1/2 illustrative; Gamma=Lambda*dx^2 with Lambda proportional to pressure and negligible other decoherence."
+  },
+  "homogeneity_toy": {
+    "gamma": 1.8,
+    "tolerance_scan": [
+      {
+        "fractional_tolerance": 0.1,
+        "rH_over_r0": 4.06812652484231
+      },
+      {
+        "fractional_tolerance": 0.01,
+        "rH_over_r0": 16.0281890316679
+      },
+      {
+        "fractional_tolerance": 0.001,
+        "rH_over_r0": 58.088837320328956
+      }
+    ],
+    "bias_scan_at_1percent": [
+      {
+        "bias": 1,
+        "rH_over_r0": 16.0281890316679
+      },
+      {
+        "bias": 1.5,
+        "rH_over_r0": 25.150198101934926
+      },
+      {
+        "bias": 2,
+        "rH_over_r0": 34.622803320919516
+      }
+    ],
+    "interpretation": "Threshold and tracer change the reported scale in an unchanged smooth model. These are not revised WiggleZ measurements."
+  },
+  "galaxy_convergence": {
+    "baseline_repository_four_scales": {
+      "empirical_wave9_group_onset_clean60_full126": [
+        180.0,
+        190.0
+      ],
+      "planck2018_press_schechter_Mstar_z0": 185.58809666617304,
+      "milgrom_btfr_Lstar_vflat": 175.82,
+      "bremsstrahlung_hubble_cooling_Delta1000": 178.42
+    },
+    "baseline_recomputed": {
+      "z": 0.0,
+      "halo_Delta_relative_to_critical": 200.0,
+      "sigma8_factor": 1.0,
+      "Rstar_Mpc": 3.348258287597056,
+      "Mstar_Msun": 6240495103799.016,
+      "Vc_kms": 262.4612033203109,
+      "sigma1D_isothermal_kms": 185.58809666617304
+    },
+    "vflat_converted_with_same_isothermal_rule_kms": 124.32351426821877,
+    "conversion_note": "Conditional comparison only: galaxy Vflat, halo V200 and observed group line-of-sight dispersion do not have one universal conversion.",
+    "cooling_density_scan": [
+      {
+        "Delta": 200,
+        "sigma_ff_kms": 35.684
+      },
+      {
+        "Delta": 500,
+        "sigma_ff_kms": 89.21
+      },
+      {
+        "Delta": 1000,
+        "sigma_ff_kms": 178.42
+      },
+      {
+        "Delta": 2500,
+        "sigma_ff_kms": 446.04999999999995
+      }
+    ],
+    "cooling_time_scan_Delta1000": [
+      {
+        "t_available_in_Hubble_times": 0.1,
+        "sigma_ff_kms": 17.842
+      },
+      {
+        "t_available_in_Hubble_times": 0.5,
+        "sigma_ff_kms": 89.21
+      },
+      {
+        "t_available_in_Hubble_times": 1,
+        "sigma_ff_kms": 178.42
+      }
+    ],
+    "cooling_note": "Same free-free-only local formula. Delta variation changes the gas environment; time variation changes the physical criterion. Neither is a statistical error bar or same-halo convention conversion. Low-T endpoints may invalidate free-free-only cooling.",
+    "halo_convention_scan_fixed_Mstar": [
+      {
+        "z": 0.0,
+        "halo_Delta_relative_to_critical": 100,
+        "sigma8_factor": 1.0,
+        "Rstar_Mpc": 3.348258287597056,
+        "Mstar_Msun": 6240495103799.016,
+        "Vc_kms": 233.82634959963596,
+        "sigma1D_isothermal_kms": 165.34019742199894
+      },
+      {
+        "z": 0.0,
+        "halo_Delta_relative_to_critical": 200,
+        "sigma8_factor": 1.0,
+        "Rstar_Mpc": 3.348258287597056,
+        "Mstar_Msun": 6240495103799.016,
+        "Vc_kms": 262.4612033203109,
+        "sigma1D_isothermal_kms": 185.58809666617304
+      },
+      {
+        "z": 0.0,
+        "halo_Delta_relative_to_critical": 500,
+        "sigma8_factor": 1.0,
+        "Rstar_Mpc": 3.348258287597056,
+        "Mstar_Msun": 6240495103799.016,
+        "Vc_kms": 305.7654779598322,
+        "sigma1D_isothermal_kms": 216.20884291814318
+      },
+      {
+        "z": 0.0,
+        "halo_Delta_relative_to_critical": 2500,
+        "sigma8_factor": 1.0,
+        "Rstar_Mpc": 3.348258287597056,
+        "Mstar_Msun": 6240495103799.016,
+        "Vc_kms": 399.8374335145938,
+        "sigma1D_isothermal_kms": 282.72776061039457
+      }
+    ],
+    "amplitude_stress_test": [
+      {
+        "z": 0.0,
+        "halo_Delta_relative_to_critical": 200.0,
+        "sigma8_factor": 0.95,
+        "Rstar_Mpc": 3.009529252330152,
+        "Mstar_Msun": 4531666031266.755,
+        "Vc_kms": 235.90912084656523,
+        "sigma1D_isothermal_kms": 166.81293909436297
+      },
+      {
+        "z": 0.0,
+        "halo_Delta_relative_to_critical": 200.0,
+        "sigma8_factor": 1,
+        "Rstar_Mpc": 3.348258287597056,
+        "Mstar_Msun": 6240495103799.016,
+        "Vc_kms": 262.4612033203109,
+        "sigma1D_isothermal_kms": 185.58809666617304
+      },
+      {
+        "z": 0.0,
+        "halo_Delta_relative_to_critical": 200.0,
+        "sigma8_factor": 1.05,
+        "Rstar_Mpc": 3.6964597916926376,
+        "Mstar_Msun": 8396922578379.905,
+        "Vc_kms": 289.75580783197654,
+        "sigma1D_isothermal_kms": 204.88829660617674
+      }
+    ],
+    "redshift_trajectory": [
+      {
+        "z": 0,
+        "halo_Delta_relative_to_critical": 200.0,
+        "sigma8_factor": 1.0,
+        "Rstar_Mpc": 3.348258287597056,
+        "Mstar_Msun": 6240495103799.016,
+        "Vc_kms": 262.4612033203109,
+        "sigma1D_isothermal_kms": 185.58809666617304
+      },
+      {
+        "z": 0.5,
+        "halo_Delta_relative_to_critical": 200.0,
+        "sigma8_factor": 1.0,
+        "Rstar_Mpc": 1.8798156664459702,
+        "Mstar_Msun": 1104353173415.9067,
+        "Vc_kms": 161.736533519577,
+        "sigma1D_isothermal_kms": 114.36499961729822
+      },
+      {
+        "z": 1,
+        "halo_Delta_relative_to_critical": 200.0,
+        "sigma8_factor": 1.0,
+        "Rstar_Mpc": 1.0387541635342963,
+        "Mstar_Msun": 186337610481.2747,
+        "Vc_kms": 98.87636139831538,
+        "sigma1D_isothermal_kms": 69.91614564380059
+      },
+      {
+        "z": 3,
+        "halo_Delta_relative_to_critical": 200.0,
+        "sigma8_factor": 1.0,
+        "Rstar_Mpc": 0.12353583996062095,
+        "Mstar_Msun": 313430392.70742536,
+        "Vc_kms": 16.066183501118733,
+        "sigma1D_isothermal_kms": 11.360507301428482
+      }
+    ]
+  }
+}

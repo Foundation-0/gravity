@@ -16,9 +16,15 @@ This repository is **not** a derivation of a new fundamental theory of gravity, 
 3. **Phenomenological hypotheses & algebraic re-parameterizations (`CONJECTURE`)**: Wave-6 (`wave6_convergence_unification.py`) evaluates algebraic identities where `hbar`, `m`, and `R_H(z)` cancel by definition of `N_fil = 2*pi*m*c*R_H/hbar` (so `8.9580 kpc` is simply the ordinary MOND radius `r_M` of a `6e10 M_sun` galaxy at `a_dS`) and places a handwritten potential threshold `Phi_crit/c^2 = 8.0e-6` (`sigma_1D = 388.1 km/s`) between logarithmic MOND galaxy potentials and the Bullet Cluster.
 4. **Elementary Lean 4 arithmetic checks (`PROVEN (ARITHMETIC-LEMMA)`)**: Stock Lean 4 (`Init`, zero Mathlib dependencies) files in `formal/` check the exact integer/rational exponent equations, interval inequalities, and commutative-ring product rearrangements referenced in `CLAIMS.md`. They do **not** prove physical force laws, Bell's theorem, or Weak Equivalence Principle bounds.
 
+## Cross-repository convergence research
+
+The [convergence research collection](research/convergences-20261112/README.md) connects this repository with fractals, physics0 and astr0. It preserves nine exploratory reports, source ledgers, mathematical probes and independent agent reviews.
+
+The collection includes a test specification for nonlinear AeST collapse, distinctions between interference and readable records, a lattice mechanics comparison and methods for combining astronomical evidence. Its scope and next tests are explicit. No nonlinear AeST simulation or new galaxy-data fit is claimed.
+
 ## Repository Layout & Verification Commands
 
-All Python scripts use only the Python 3 standard library. Each certificate file in `results/*.json` embeds a `sha256_canonical` field equal to the `sha256` checksum of `json.dumps(payload_without_sha_field, sort_keys=True, separators=(",", ":"))` computed by the generator script that writes it (this is a deterministic content checksum for reproducibility, not a cryptographic signature). Raw file digests are recorded in `SHA256SUMS`.
+The root audit scripts use only the Python 3 standard library. The separate convergence research probes declare their NumPy and SymPy dependencies in their own reproduction instructions. Each certificate file in `results/*.json` embeds a `sha256_canonical` field equal to the `sha256` checksum of `json.dumps(payload_without_sha_field, sort_keys=True, separators=(",", ":"))` computed by the generator script that writes it (this is a deterministic content checksum for reproducibility, not a cryptographic signature). Raw file digests are recorded in `SHA256SUMS`.
 
 | Script / Config | Output / Target | Verification Command |
 |---|---|---|

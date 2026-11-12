@@ -2,7 +2,7 @@
 
 This benchmark constructs physical scalar perturbations of one specified AeST action. On an expanding background, states with the same initial density, momentum and metric produce different pressure and later gravitational potentials. A flat-space control explains why the same field freedom has no linear gravitational response at zero background density.
 
-**Status:** action-derived calculation with executable internal checks. Independent review of the expanding-background action and canonical reduction is pending. This is not a nonlinear collapse, thermalization or observational result.
+**Status:** action-derived calculation checked by a separate Astra agent using an independently reduced ADM action. [The review](independent-review/REVIEW.md) found no blocking error. This is internal project review, not external peer review or a nonlinear collapse, thermalization or observational result.
 
 The complete action, conventions, constraints and equations are in [derivation.md](derivation.md). The test choices and the approximation threshold are in [protocol.md](protocol.md). The equations build on published AeST work listed in [sources.json](sources.json). No new propagating mode or new Minkowski stability bound is claimed.
 
@@ -44,7 +44,9 @@ Thus density and momentum do not predict every allowed preparation. Adding insta
 | Flat-space exact matrix exponential versus ODE | Relative error below \(1.6\times10^{-10}\) over ten periods |
 | Flat-space quadratic energy | Relative drift below \(1.3\times10^{-12}\) |
 
-The exact expanding solution for \(a(t)\) is checked independently. The scalar kinetic Hessian and short-wavelength characteristic have the required positive signs in the author derivation. Their derivation still requires independent review. The test does not prove nonlinear stability or stability of an observationally fitted cosmology.
+The exact expanding solution for \(a(t)\) is checked independently. The scalar kinetic Hessian and short-wavelength characteristic have the required positive signs in the author derivation. 
+
+The separate review reproduces the scalar kinetic Hessian and integrates the ADM equations, matching eight reconstructed observables to 1.06e-12 normalized error. The test does not prove nonlinear stability or stability of an observationally fitted cosmology.
 
 For \(q_i=0\), the compensated field mode oscillates but its linear density, momentum, pressure and metric response vanish identically. The scalar shift current remains nonzero. It must not be identified with stress-energy momentum.
 
@@ -84,4 +86,6 @@ python response.py --output results.json
 
 The [script](response.py) includes assertions. The [results](results.json) retain all preparation values, residuals, amplitude controls and approximation errors. No network request, downloaded dataset, fitting stage or graphical dependency is needed.
 
-The bounded result supports retaining the additional scalar/vector response data before a nonlinear solver is attempted. The next gate is independent review of the action expansion and canonical map. A three-dimensional collapse experiment remains unstarted.
+The bounded result supports retaining the additional scalar/vector response data before a nonlinear solver is attempted. The next bounded test selects a slow initial mode and measures sensitivity to fast-mode contamination. A three-dimensional collapse experiment remains unstarted.
+
+The derivation is retained byte-for-byte at its reviewed hash, including its original pre-review status. The review linked above supersedes that status. Run `python independent-review/adm_check.py` for the separate action reduction and comparison.

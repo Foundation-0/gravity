@@ -21,7 +21,7 @@
       "title": "Aether scalar tensor theory: Hamiltonian Formalism",
       "url": "https://arxiv.org/html/2307.15126v3",
       "used_for": "Exact action, ADM momentum constraint, auxiliary variables, chosen function (84), and Minkowski canonical map (106-115).",
-      "boundary": "The finite-density quadratic expansion and response in this repository are author derivations awaiting independent review."
+      "boundary": "The finite-density quadratic expansion and response are author derivations checked by a separate Astra agent. See independent-review/REVIEW.md. No external peer review is claimed."
     },
     {
       "id": "domenech_ganz_2025",

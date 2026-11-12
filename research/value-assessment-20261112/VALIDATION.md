@@ -12,3 +12,7 @@ The focused CI workflow reproduces this bundle. The separate broad Lean build ha
 The historical Wave 12 proof is retained under `inputs/` as evidence of the audit. The corrected direct Lean check and its build limits are recorded in [the scoped correction](https://github.com/Foundation-0/gravity/pull/10). The immutable historical inputs do not incorporate that correction.
 
 The optional independent reviewer checks also reproduce with SymPy 1.14.0. Their scientific output matches the saved review result. Their historical author-artifact hashes are retained separately from the current publication manifest.
+
+A second independent scientific review passes the closure and observation design at the stated scope. Its source hashes and saved independent checks are preserved in `second-review.md` and `second-review-checks.json`.
+
+The second reviewer script was rerun in a temporary copy with SymPy 1.14.0. Its independent scientific checks and temporary author replays reproduce the saved results. Historical artifact hashes are retained separately from the final publication hashes.

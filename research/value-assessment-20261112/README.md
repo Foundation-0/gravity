@@ -112,3 +112,7 @@ The publication copy uses the halo-to-seed label â€œunsupported identificationâ€
 These publication edits are recorded by the final manifest. Human scientific review remains pending.
 
 The optional independent reviewer script requires SymPy in addition to the main dependencies. It is included with its saved checks for inspection and is separate from the four-probe CI job. Its optional versions are pinned in `requirements-review.txt`. Running `python -B research/value-assessment-20261112/closure/independent_checks.py` regenerates reviewer results and current artifact hashes, so use a disposable copy to preserve the historical review record.
+
+The [second independent review](second-review.md) passes the closure and observational-identifiability reports at their stated scope, with no blocking scientific findings. It supersedes the historical separate-agent-review entry in the closure source ledger. Its original reviewed hashes remain intact. Human scientific review and the proposed physical/data gates remain pending.
+
+Its [independent checks](second-review-checks.py) and [saved results](second-review-checks.json) use the optional reviewer dependencies. Run the script in a disposable copy to preserve the historical review hashes and evidence.

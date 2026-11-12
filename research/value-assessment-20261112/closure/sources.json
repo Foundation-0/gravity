@@ -135,5 +135,10 @@
     },
     "initial_numerical_issue": "An initial local momentum residual exceeded 1e-9 because differentiating the density FFT three times amplified roundoff. Computing rho_xx from differentiated field products gives the same exact momentum flux and the stated passing residuals. Physical parameters and continuum equations were unchanged."
   },
-  "prior_publication_head": "02013ae95fa5913894b829c8e2e63a3efcde9e63"
+  "prior_publication_head": "02013ae95fa5913894b829c8e2e63a3efcde9e63",
+  "publication_review_update": {
+    "date": "2026-11-12",
+    "review": "../second-review.md",
+    "status": "The original not_done entry about separate-agent review is historical. The second independent review now passes at the stated scope; canonical initial-state mapping and physical dynamics remain incomplete."
+  }
 }

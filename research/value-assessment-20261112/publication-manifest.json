@@ -92,16 +92,28 @@
     {
       "path": "observations/sources.json",
       "sha256": "276f639649b197e7dfa2a59ed97c6162562b2371169006852676e63b56e4dbfb"
+    },
+    {
+      "path": "second-review.md",
+      "sha256": "05a0ffe76e5fac92e360f8d813f098e83119c6e7ab889bf2698980051a2ac989"
+    },
+    {
+      "path": "second-review-checks.py",
+      "sha256": "676379e8f089f725a79f9bd92a64de52e9a218d3af08d03de09102d7abc64483"
+    },
+    {
+      "path": "second-review-checks.json",
+      "sha256": "57d3f3528eb7a62fdd17ebe5721067925188387bf8bc6f295cbe8cc82fedb764"
     }
   ],
   "publication_files": [
     {
       "path": "README.md",
-      "sha256": "71212220c570070a8bda7b2b3c08ee9aefb738167977219b91062a66774f9c1c"
+      "sha256": "9ad4b9e076a89b7a07157e9590d2904bbede17d4f082dea66186962289c88da9"
     },
     {
       "path": "VALIDATION.md",
-      "sha256": "8b8d4d3eee0fd4a9e68d33c3838609f4132c03d7b72b8667a0ead5e4992e1983"
+      "sha256": "acb791f2ca6d01a939528715e982b08493c34fa5b37430e9bafd4465f9e29ea0"
     },
     {
       "path": "check.py",
@@ -133,7 +145,7 @@
     },
     {
       "path": "closure/sources.json",
-      "sha256": "c77c247ee5193dcdae4d1764e66914532ede2b80e9ff508b863f111f8315193c"
+      "sha256": "38097ec0b5ae5a412cee11d1d849ae48dc5588bdf8e4a41126c7c033bfeeee84"
     },
     {
       "path": "convergences/derivation.md",
@@ -218,6 +230,18 @@
     {
       "path": "requirements.txt",
       "sha256": "983665a6331eda07ab1f4b23ef92d66f4b024c27b360ee0e7420511ef3b28c64"
+    },
+    {
+      "path": "second-review-checks.json",
+      "sha256": "57d3f3528eb7a62fdd17ebe5721067925188387bf8bc6f295cbe8cc82fedb764"
+    },
+    {
+      "path": "second-review-checks.py",
+      "sha256": "676379e8f089f725a79f9bd92a64de52e9a218d3af08d03de09102d7abc64483"
+    },
+    {
+      "path": "second-review.md",
+      "sha256": "05a0ffe76e5fac92e360f8d813f098e83119c6e7ab889bf2698980051a2ac989"
     },
     {
       "path": "test_check.py",

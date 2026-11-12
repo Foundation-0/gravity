@@ -1,0 +1,129 @@
+{
+  "artifact_sha256": {
+    "closure/research.md": "259cc3e1d8d51dd31d9f922912ac5a36469b0e508f4506e23966ef251548011f",
+    "closure/caustic_control.py": "e326f8c636b5f782dc2a245c1376e199f4bdbbb3a01974cb8f1bc20c3dbb9bdc",
+    "closure/results.json": "f951fc8f17edadb60fef688e20525b0c85601e62c259d8982c6f2883c2710781",
+    "closure/sources.json": "c77c247ee5193dcdae4d1764e66914532ede2b80e9ff508b863f111f8315193c",
+    "observations/research.md": "d6cd8c559c29d7a3c6c8c516cccd8304c1b7ea459f5563c53529c9aa0e7a5abe",
+    "observations/probe.py": "e61535ad2e5c6dfaa98c250ef827b60903863e52f33368ac7d36e07f4c0cf53b",
+    "observations/results.json": "d4fe6c69cc06562ca737e504dfbe449df18a59f49254ff536c014ee09b4726d3",
+    "observations/sources.json": "276f639649b197e7dfa2a59ed97c6162562b2371169006852676e63b56e4dbfb"
+  },
+  "closure_independent_checks": {
+    "Bessel_wave_rows": [
+      {
+        "t": 0,
+        "density": 1.0000000000000002,
+        "current": 1.0899589056276974e-17,
+        "stress": 0.03844182680668212,
+        "K_5_over_3": 0.03844182680668211
+      },
+      {
+        "t": 0.9,
+        "density": 3.843709249742709,
+        "current": 0.0,
+        "stress": 1.1192902926159587,
+        "K_5_over_3": 0.11867480382880864
+      },
+      {
+        "t": 1.5,
+        "density": 4.790675110494943,
+        "current": 0.0,
+        "stress": 2.6582099863246356,
+        "K_5_over_3": 0.19525166818937342
+      },
+      {
+        "t": 3,
+        "density": 1.1852392170237336,
+        "current": 2.179917811255395e-17,
+        "stress": 0.40157945946147044,
+        "K_5_over_3": 0.30252513908874273
+      },
+      {
+        "t": 6,
+        "density": 0.5144217392972813,
+        "current": 2.7248972640692436e-18,
+        "stress": 0.063302050812297,
+        "K_5_over_3": 0.19166916804929673
+      }
+    ],
+    "max_difference_from_author": 1.0658141036401503e-14,
+    "modal_second_moment": 0.49999999999999917,
+    "modal_fourth_moment": 0.3751999999999991,
+    "classical_adaptive_quadrature": {
+      "rho": 4.772107863668249,
+      "j": 0.0,
+      "stress": 2.652045918129872
+    },
+    "matched_state_stress_range_factor": 4.0,
+    "mass_conservation_symbolic_residual": "0",
+    "momentum_conservation_symbolic_residual": "0",
+    "arcsine_response_at_first_J0_zero": -1.011125253564184e-16,
+    "Gaussian_same_variance_response": 0.2355583817481849
+  },
+  "observations_independent_checks": {
+    "homogeneity_relative_errors": {
+      "exponent_symmetry": 6.661338147750939e-16,
+      "amplitude_symmetry": 4.440892098500626e-16,
+      "q1_vs_q0_counterexample": 3.3306690738754696e-16
+    },
+    "full_parameter_rank": 4,
+    "amplitude_null_vector": [
+      1,
+      1,
+      0,
+      0,
+      -1,
+      0
+    ],
+    "exponent_null_vector": [
+      0,
+      0,
+      1,
+      1,
+      0,
+      -1
+    ],
+    "deep_apparent_q": 1.0,
+    "expected_q_plus_s_plus_2u": 1.0,
+    "precision_thresholds": [
+      {
+        "redshifts": [
+          0,
+          1
+        ],
+        "lever_dex": 0.25291401692741816,
+        "sigma_b_only_dex": 0.12904013488123847,
+        "sigma_velocity_only_dex": 0.03226003372030962,
+        "approx_velocity_fraction": 0.07428147274387017
+      },
+      {
+        "redshifts": [
+          0.33,
+          1.44
+        ],
+        "lever_dex": 0.28345950458783736,
+        "sigma_b_only_dex": 0.14462485373391032,
+        "sigma_velocity_only_dex": 0.03615621343347758,
+        "approx_velocity_fraction": 0.08325275807103655
+      }
+    ],
+    "covariance_GLS_sigma_dex": 0.10155048005794952,
+    "covariance_naive_sigma_dex": 0.03952847075210474,
+    "underestimate_factor": 2.5690465157330262,
+    "selection_integral_max_difference_dex": 9.71445146547012e-17
+  },
+  "temporary_author_replays": [
+    {
+      "probe": "closure/caustic_control.py",
+      "exit_code": 0,
+      "all_saved_JSON_values_match_replay": true
+    },
+    {
+      "probe": "observations/probe.py",
+      "exit_code": 0,
+      "all_saved_JSON_values_match_replay": true
+    }
+  ],
+  "author_artifacts_unchanged": true
+}

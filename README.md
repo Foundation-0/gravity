@@ -20,7 +20,7 @@ This repository is **not** a derivation of a new fundamental theory of gravity, 
 
 ## Repository Layout & Verification Commands
 
-All Python scripts use only the Python 3 standard library. Each certificate file in `results/*.json` embeds a `sha256_canonical` field equal to the `sha256` checksum of `json.dumps(payload_without_sha_field, sort_keys=True, separators=(",", ":"))` computed by the generator script that writes it (this is a deterministic content checksum for reproducibility, not a cryptographic signature). Raw file digests are recorded in `SHA256SUMS`.
+Root-level Wave scripts use only the Python 3 standard library. Each certificate file in `results/*.json` embeds a `sha256_canonical` field equal to the `sha256` checksum of `json.dumps(payload_without_sha_field, sort_keys=True, separators=(",", ":"))` computed by the generator script that writes it (this is a deterministic content checksum for reproducibility, not a cryptographic signature). Raw file digests are recorded in `SHA256SUMS`.
 
 | Script / Config | Output / Target | Verification Command |
 |---|---|---|
@@ -49,4 +49,4 @@ All Python scripts use only the Python 3 standard library. Each certificate file
 
 ## Research value assessment
 
-The [12 November assessment](research/value-assessment-20261112/) records the Wave 11/12 audit, bounded research directions, reproducible controls and stopping gates.
+The [12 November assessment](research/value-assessment-20261112/) records the Wave 11/12 audit, bounded research directions, reproducible controls and stopping gates. Its separate NumPy/SciPy dependencies are pinned in [the bundle requirements](research/value-assessment-20261112/requirements.txt).

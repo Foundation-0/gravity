@@ -44,7 +44,7 @@ Thus density and momentum do not predict every allowed preparation. Adding insta
 | Flat-space exact matrix exponential versus ODE | Relative error below \(1.6\times10^{-10}\) over ten periods |
 | Flat-space quadratic energy | Relative drift below \(1.3\times10^{-12}\) |
 
-The exact expanding solution for \(a(t)\) is checked independently. The scalar kinetic Hessian and short-wavelength characteristic have the required positive signs in the author derivation. 
+The exact expanding solution for \(a(t)\) is checked independently. The scalar kinetic Hessian and short-wavelength characteristic have the required positive signs in the author derivation.
 
 The separate review reproduces the scalar kinetic Hessian and integrates the ADM equations, matching eight reconstructed observables to 1.06e-12 normalized error. The test does not prove nonlinear stability or stability of an observationally fitted cosmology.
 

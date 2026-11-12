@@ -86,6 +86,10 @@ python response.py --output results.json
 
 The [script](response.py) includes assertions. The [results](results.json) retain all preparation values, residuals, amplitude controls and approximation errors. No network request, downloaded dataset, fitting stage or graphical dependency is needed.
 
-The bounded result supports retaining the additional scalar/vector response data before a nonlinear solver is attempted. The next bounded test selects a slow initial mode and measures sensitivity to fast-mode contamination. A three-dimensional collapse experiment remains unstarted.
+The bounded result supports retaining the additional scalar/vector response data before a nonlinear solver is attempted.
+
+The [slow-subspace continuation](slow-mode/RESULTS.md) removes initial fast components and tests controlled leakage. Its zero-pressure baseline errors remain 24.6–27.4% for this fixed benchmark.
+
+A [separate review](slow-mode/independent-review/REVIEW.md) reproduces all 65 preparations and 130 closure errors using the original five-field equations. This closes the specified same-action test. A three-dimensional collapse experiment remains unstarted.
 
 The derivation is retained byte-for-byte at its reviewed hash, including its original pre-review status. The review linked above supersedes that status. Run `python independent-review/adm_check.py` for the separate action reduction and comparison.

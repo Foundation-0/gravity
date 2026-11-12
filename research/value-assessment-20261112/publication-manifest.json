@@ -1,0 +1,251 @@
+{
+  "date": "2026-11-12",
+  "original_research_artifacts": [
+    {
+      "path": "wave12/evidence.json",
+      "sha256": "ea42c793f43dcb5f475794212459c1f55c6fc3d5e6e3ec913e31122632398f3d"
+    },
+    {
+      "path": "wave12/probe.py",
+      "sha256": "d5045f63124d78d3ae4387f67f3adcdfdf8574957623f65bae046999dcb70f96"
+    },
+    {
+      "path": "wave12/research.md",
+      "sha256": "40ef0b35838a93b0faa83c5723f748e1edba0018c660712f559f5060638a2cc5"
+    },
+    {
+      "path": "wave12/sources.json",
+      "sha256": "9a380924d8c9e64a174f86077f65609106e61389cb112ded1672814e83fa7de3"
+    },
+    {
+      "path": "closure/caustic_control.py",
+      "sha256": "e326f8c636b5f782dc2a245c1376e199f4bdbbb3a01974cb8f1bc20c3dbb9bdc"
+    },
+    {
+      "path": "closure/independent-checks.json",
+      "sha256": "3ca6a602c468aa166ae95b4049756bdcc659ce61b1eae9b4a01fa6c6f4af3323"
+    },
+    {
+      "path": "closure/independent-review.md",
+      "sha256": "9418590dd4cde5411579040d2c06a9d8db0a8814b7bc3c3a44266f424275203c"
+    },
+    {
+      "path": "closure/independent_checks.py",
+      "sha256": "c4d8754ac0e21a50f688dde2d6b8b489840d8c6781143efb83fd52796708a791"
+    },
+    {
+      "path": "closure/research.md",
+      "sha256": "259cc3e1d8d51dd31d9f922912ac5a36469b0e508f4506e23966ef251548011f"
+    },
+    {
+      "path": "closure/results.json",
+      "sha256": "f951fc8f17edadb60fef688e20525b0c85601e62c259d8982c6f2883c2710781"
+    },
+    {
+      "path": "closure/sources.json",
+      "sha256": "c77c247ee5193dcdae4d1764e66914532ede2b80e9ff508b863f111f8315193c"
+    },
+    {
+      "path": "convergences/derivation.md",
+      "sha256": "d722d7ea613e35a1adc2f8fd05cc0d3ea7120b3f5e86c19c46e71528e9db4d63"
+    },
+    {
+      "path": "convergences/evidence.json",
+      "sha256": "67e764c24c8176811478c615be497c3c7dd0a6654fd94166e9652b2a0d1afc66"
+    },
+    {
+      "path": "convergences/probe.py",
+      "sha256": "dbe5bb373376bffdbfa1f7c63ee57eea7d8b524620f7cd3e221f03760594f372"
+    },
+    {
+      "path": "convergences/research.md",
+      "sha256": "c26788bb39b07ac6bc426b5a8ddee725dd7ae8c27e6a390f3a22c5464228f239"
+    },
+    {
+      "path": "convergences/sources.json",
+      "sha256": "0d058f74cfd0d286fa0039ca524adec08bb182662637bfec4f27126d31a2a8fa"
+    },
+    {
+      "path": "observations/evidence.json",
+      "sha256": "f584b6b8c86cbf22b4dd3c187d8299d0fba9a258c3046987f6a9adc66babab11"
+    },
+    {
+      "path": "observations/probe.py",
+      "sha256": "e61535ad2e5c6dfaa98c250ef827b60903863e52f33368ac7d36e07f4c0cf53b"
+    },
+    {
+      "path": "observations/research.md",
+      "sha256": "d6cd8c559c29d7a3c6c8c516cccd8304c1b7ea459f5563c53529c9aa0e7a5abe"
+    },
+    {
+      "path": "observations/results.json",
+      "sha256": "d4fe6c69cc06562ca737e504dfbe449df18a59f49254ff536c014ee09b4726d3"
+    },
+    {
+      "path": "observations/retrieval-addendum.json",
+      "sha256": "283b308b523075cdd5ae50406da28eb3324565669c2b88944ef644fc9883dcb4"
+    },
+    {
+      "path": "observations/retrieval.json",
+      "sha256": "24111da4d09b24f80c24c29fbf7d87cd96bf132cff738c012f838e893871a34d"
+    },
+    {
+      "path": "observations/sources.json",
+      "sha256": "276f639649b197e7dfa2a59ed97c6162562b2371169006852676e63b56e4dbfb"
+    }
+  ],
+  "publication_files": [
+    {
+      "path": "README.md",
+      "sha256": "7cbdc491fa93758dec6b1fbf71a865b6b551a271251597cc4a095eca2eb0bb36"
+    },
+    {
+      "path": "VALIDATION.md",
+      "sha256": "8b8d4d3eee0fd4a9e68d33c3838609f4132c03d7b72b8667a0ead5e4992e1983"
+    },
+    {
+      "path": "check.py",
+      "sha256": "2e7c7243c932422c3eddaf5f361c977eff03ada4cb4a59318329d86442b75319"
+    },
+    {
+      "path": "closure/caustic_control.py",
+      "sha256": "e326f8c636b5f782dc2a245c1376e199f4bdbbb3a01974cb8f1bc20c3dbb9bdc"
+    },
+    {
+      "path": "closure/independent-checks.json",
+      "sha256": "3ca6a602c468aa166ae95b4049756bdcc659ce61b1eae9b4a01fa6c6f4af3323"
+    },
+    {
+      "path": "closure/independent-review.md",
+      "sha256": "9418590dd4cde5411579040d2c06a9d8db0a8814b7bc3c3a44266f424275203c"
+    },
+    {
+      "path": "closure/independent_checks.py",
+      "sha256": "c4d8754ac0e21a50f688dde2d6b8b489840d8c6781143efb83fd52796708a791"
+    },
+    {
+      "path": "closure/research.md",
+      "sha256": "6fb9535e20d0a6bbd0af1fda84cb157729a6534bf27b2d9bdf5a2823903411ee"
+    },
+    {
+      "path": "closure/results.json",
+      "sha256": "f951fc8f17edadb60fef688e20525b0c85601e62c259d8982c6f2883c2710781"
+    },
+    {
+      "path": "closure/sources.json",
+      "sha256": "c77c247ee5193dcdae4d1764e66914532ede2b80e9ff508b863f111f8315193c"
+    },
+    {
+      "path": "convergences/derivation.md",
+      "sha256": "d722d7ea613e35a1adc2f8fd05cc0d3ea7120b3f5e86c19c46e71528e9db4d63"
+    },
+    {
+      "path": "convergences/evidence.json",
+      "sha256": "67e764c24c8176811478c615be497c3c7dd0a6654fd94166e9652b2a0d1afc66"
+    },
+    {
+      "path": "convergences/probe.py",
+      "sha256": "dbe5bb373376bffdbfa1f7c63ee57eea7d8b524620f7cd3e221f03760594f372"
+    },
+    {
+      "path": "convergences/research.md",
+      "sha256": "f9293498e97868ad0fe790e24e378dc491614ce2539c44a5d1f1783de469d0d5"
+    },
+    {
+      "path": "convergences/sources.json",
+      "sha256": "6d89a0fdef257d2b5e96c23f4db6acf066d7e5048adfda0763751ab9f224528b"
+    },
+    {
+      "path": "inputs/formal/Wave11MachianZeroEnergy.lean",
+      "sha256": "781d83ac1bf12407f0a682b8abbe67a4ec101d78751ee0fa611c9a0f8a307573"
+    },
+    {
+      "path": "inputs/formal/Wave12QuasarCollapse.lean",
+      "sha256": "643bb2ed80cc11f90b07296a83e16c841b60501b89b4045ea471d8eddb24d2c3"
+    },
+    {
+      "path": "inputs/manifest.json",
+      "sha256": "6aae8900bf370ab7b51db05641657e6717f09d517edc9b454709633ffbd42e93"
+    },
+    {
+      "path": "inputs/results/wave11_machian_pairing_certificates.json",
+      "sha256": "9d05bb78b81b45aeda49edf6cfb9f734d761968ec4d06111aa1064cbc73eb359"
+    },
+    {
+      "path": "inputs/results/wave12_cosmic_dawn_quasar_certificates.json",
+      "sha256": "493be7e0c615633eb77398c668f2d06a04fe21dd7bc6739e9b68649f9901da78"
+    },
+    {
+      "path": "inputs/wave11_machian_pairing_unification.py",
+      "sha256": "911fbd9f428728daf1fe02de998fec5b519292c7739e0bac13f111a1bea00306"
+    },
+    {
+      "path": "inputs/wave12_cosmic_dawn_quasar_collapse.py",
+      "sha256": "d0eec3e85d06b501dbe0d0a0e8969baf9b3faaf308e84718ac40b9ac96fb2aaf"
+    },
+    {
+      "path": "observations/evidence.json",
+      "sha256": "f584b6b8c86cbf22b4dd3c187d8299d0fba9a258c3046987f6a9adc66babab11"
+    },
+    {
+      "path": "observations/probe.py",
+      "sha256": "e61535ad2e5c6dfaa98c250ef827b60903863e52f33368ac7d36e07f4c0cf53b"
+    },
+    {
+      "path": "observations/research.md",
+      "sha256": "d6cd8c559c29d7a3c6c8c516cccd8304c1b7ea459f5563c53529c9aa0e7a5abe"
+    },
+    {
+      "path": "observations/results.json",
+      "sha256": "d4fe6c69cc06562ca737e504dfbe449df18a59f49254ff536c014ee09b4726d3"
+    },
+    {
+      "path": "observations/retrieval-addendum.json",
+      "sha256": "283b308b523075cdd5ae50406da28eb3324565669c2b88944ef644fc9883dcb4"
+    },
+    {
+      "path": "observations/retrieval.json",
+      "sha256": "24111da4d09b24f80c24c29fbf7d87cd96bf132cff738c012f838e893871a34d"
+    },
+    {
+      "path": "observations/sources.json",
+      "sha256": "3687be781438be434995915ce74daafd242f0a2b5f22549888d2a04c94240c0a"
+    },
+    {
+      "path": "requirements-review.txt",
+      "sha256": "ef1d83c152848afcb4a88360247e76b3d17019bb01a4e4846941ab64c4486234"
+    },
+    {
+      "path": "requirements.txt",
+      "sha256": "983665a6331eda07ab1f4b23ef92d66f4b024c27b360ee0e7420511ef3b28c64"
+    },
+    {
+      "path": "test_check.py",
+      "sha256": "646c887b47dee0da77be9fe0801d67d9c817a29aa4570dc01d1e22c0fb2f2bc4"
+    },
+    {
+      "path": "wave12/evidence.json",
+      "sha256": "ea42c793f43dcb5f475794212459c1f55c6fc3d5e6e3ec913e31122632398f3d"
+    },
+    {
+      "path": "wave12/probe.py",
+      "sha256": "2cb8b27b56caa6b6771da4710545e1a8cc608ec20b803d1cb8146ad7852b25ed"
+    },
+    {
+      "path": "wave12/research.md",
+      "sha256": "12974bd499bd72fbc70ab9f882c6b0f6720596c016f8e8568f94a6267d687935"
+    },
+    {
+      "path": "wave12/sources.json",
+      "sha256": "9a380924d8c9e64a174f86077f65609106e61389cb112ded1672814e83fa7de3"
+    }
+  ],
+  "publication_changes": [
+    "Pinned historical inputs and pre-execution source validation",
+    "Unsupported halo-to-seed identification wording",
+    "Rank-one and pentamode prior art plus unimode distinction",
+    "Link analytic future-expansion bound from independent review",
+    "Portable reproduction runner, focused workflow, synthesis and companion notes",
+    "Exclude source-paper caches and machine-specific build logs"
+  ]
+}

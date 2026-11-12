@@ -1,0 +1,22 @@
+{
+  "status": "Completed deterministic identifiability probe; empirical fit parked pendingdataaudit",
+  "snapshot_gravity_head": "70a1204a536b3dca0b3053d1a056daf22601ac00",
+  "reproduce": "python3 probe.py",
+  "checks_passed": 26,
+  "result_scope": "Deterministic synthetic identifiability only; no observational fit or survey power forecast.",
+  "full_RAR_exact_symmetry": "(q,s,u) -> (q+delta,s+delta,u-delta)",
+  "deep_measured_slope": "q+s+2u",
+  "z0_anchor_breaks_exponent_symmetry": false,
+  "numerical_results": "results.json",
+  "sources": "sources.json",
+  "research_note": "research.md",
+  "retrieval_record": "retrieval.json",
+  "retrieval_addendum": "retrieval-addendum.json",
+  "raw_79_galaxy_fit_performed": false,
+  "primary_table_schema_independently_verified": false,
+  "probe_sha256": "e61535ad2e5c6dfaa98c250ef827b60903863e52f33368ac7d36e07f4c0cf53b",
+  "research_note_sha256": "d6cd8c559c29d7a3c6c8c516cccd8304c1b7ea459f5563c53529c9aa0e7a5abe",
+  "deterministic_rerun_matches": true,
+  "local_links_verified": true,
+  "prose_check": "passed"
+}

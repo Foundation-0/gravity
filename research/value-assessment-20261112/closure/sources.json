@@ -1,0 +1,139 @@
+{
+  "prepared_at": "2026-11-12",
+  "seat": "gpt-forge",
+  "model": "gpt-6-astra",
+  "requested_reasoning_effort": "ultra",
+  "repository_head": "70a1204a536b3dca0b3053d1a056daf22601ac00",
+  "repository_edit_scope": "Read only; outputs only in the coordinator-owned closure directory",
+  "sources": [
+    {
+      "id": "aest-original",
+      "title": "New Relativistic Theory for Modified Newtonian Dynamics",
+      "url": "https://arxiv.org/html/2007.00082v3",
+      "authors": "Constantinos Skordis and Tom Zlosnik",
+      "inspected": "Equations 7-12, Stability and waves, Discussion",
+      "supports": "Linear fluid pressure depends on extra vector data; scalar mode spectrum has zero-frequency and propagating branches; nonlinear formation is an open problem in this paper.",
+      "limits": "No new nonlinear conclusion; a frequency is not a damping rate."
+    },
+    {
+      "id": "aest-hamiltonian",
+      "title": "Aether scalar tensor theory: Hamiltonian Formalism",
+      "url": "https://arxiv.org/html/2307.15126v3",
+      "authors": "Marianthi Bataki, Constantinos Skordis and Tom Zlosnik",
+      "inspected": "Primary HTML, together with the prior independently reviewed model specification",
+      "supports": "Canonical formulation and constraints of the reference AeST action; six physical degrees of freedom.",
+      "limits": "This pass did not implement the canonical map or extend it to higher derivatives."
+    },
+    {
+      "id": "babichev-completion",
+      "title": "Caustic free completion of pressureless perfect fluid and k-essence",
+      "url": "https://arxiv.org/html/1704.03367v3",
+      "authors": "Eugeny Babichev and Sabir Ramazanov",
+      "inspected": "Introduction, sections 2, 3.3 and 3.4, conclusions",
+      "supports": "A canonical complex-field classical completion can remove a pressureless caustic under specific initial-data assumptions; the nonrelativistic limit relates to the Schrodinger equation.",
+      "limits": "Not a quantum UV completion or AeST completion. Does not establish a thermal fluid."
+    },
+    {
+      "id": "mocz-correspondence",
+      "title": "On the Schrodinger-Poisson--Vlasov-Poisson correspondence",
+      "url": "https://arxiv.org/html/1801.03507v2",
+      "authors": "Philip Mocz, Lachlan Lancaster, Anastasia Fialkov, Fernando Becerra and Pierre-Henri Chavanis",
+      "inspected": "Abstract, introduction, equations 1-7 and discussion of smoothing and shell crossing",
+      "supports": "Field descriptions can reproduce collisionless multistream phenomena; unsmoothed density interference and smoothed moments need distinction.",
+      "limits": "Published self-gravitating correspondence is not an AeST result. Our control is free Schrodinger without self-gravity."
+    },
+    {
+      "id": "anisotropy",
+      "title": "Large-Scale Velocity Dispersion and the Cosmic Web",
+      "url": "https://arxiv.org/abs/1812.07489",
+      "authors": "Michael Buehlmann and Oliver Hahn",
+      "inspected": "Primary arXiv abstract and primary publication section 2 at https://doi.org/10.1093/mnras/stz1243",
+      "supports": "Anisotropic velocity dispersion after collapse and its dependence on collapse history are established results.",
+      "limits": "Cosmological collisionless simulations, not AeST. General novelty claim only."
+    },
+    {
+      "id": "mimetic-map",
+      "title": "Connecting Relativistic MOND Theories with Mimetic Gravity",
+      "url": "https://arxiv.org/html/2503.11174v1",
+      "authors": "Guillem Domenech and Alexander Ganz",
+      "inspected": "Abstract, introduction, section VI conclusion",
+      "supports": "Conditional reformulation between constraints; caustic questions and possible movement between scalar/vector formulations explicitly left open.",
+      "limits": "Does not validate a new regulator or solve nonlinear AeST closure; conditions on timelike fields and branch maps matter."
+    },
+    {
+      "id": "braneworld",
+      "title": "Gravity and large black holes in Randall-Sundrum II braneworlds",
+      "url": "https://arxiv.org/abs/1105.2558",
+      "authors": "Pau Figueras and Toby Wiseman",
+      "inspected": "Primary abstract and metadata",
+      "supports": "Known explicit RSII solutions approach four-dimensional GR at low curvature and have model-specific corrections.",
+      "limits": "Only abstract-level claim used. Not evidence that observed horizons require five dimensions."
+    },
+    {
+      "id": "issue5",
+      "title": "Wave-10 Theory & PDE Handoff: 1D/3D Nonlinear AeST Pancake Collapse Test for Dark-WHIM Fluid Closure",
+      "url": "https://github.com/Foundation-0/gravity/issues/5",
+      "inspected": "Primary public issue snapshot 2026-11-12 and existing report/model specification",
+      "supports": "Defines the repository research conjecture and requested collapse test.",
+      "limits": "Conjecture, not an established result. The GitHub connector was unavailable; browser tool read the public page."
+    },
+    {
+      "id": "own-control",
+      "title": "Cold sine collapse and coherent wave control",
+      "local": [
+        "caustic_control.py",
+        "results.json"
+      ],
+      "classification": "Own reproducible calculation of established equations; regression benchmark, not claimed new physics",
+      "supports": "A rising pressure proxy, finite stress and a smooth caustic continuation do not establish a thermal closure. Filtered field moments converge to a collisionless reference in this experiment.",
+      "limits": "No gravity, AeST action, cosmological expansion, nonlinear wave interactions, thermal bath, transverse modes or open-boundary retention."
+    }
+  ],
+  "prior_artifacts": [
+    {
+      "bytes": 14645,
+      "sha256": "da5e849ef72b7514a504918f717b901e4b36c0d38d5c275e2a411dc7f6681b44",
+      "repository_relative_path": "research/convergences-20261112/reports/issue-5.md"
+    },
+    {
+      "bytes": 10427,
+      "sha256": "29306f48b0a4f0a6823aa3219bfffa586e7a093c2ec310ac31c1324d01c64341",
+      "repository_relative_path": "research/convergences-20261112/reports/issue-5-sources.json"
+    },
+    {
+      "bytes": 9611,
+      "sha256": "907347f115bc998eebdb2572fcc1a33807e2235a4846897e39f02487ee1c2a1e",
+      "repository_relative_path": "research/convergences-20261112/probes/issue-5/model-and-tests.md"
+    },
+    {
+      "bytes": 5232,
+      "sha256": "5b44368ff160041ee6a4e845ca8acc553daca3ceb63c9d4f6829ee568fe9a2d9",
+      "repository_relative_path": "research/convergences-20261112/probes/issue-5/closure-review.md"
+    },
+    {
+      "bytes": 7423,
+      "sha256": "152df722a98699e38f83fd0bb5138a0e57aed2cb049a995588cb463c9e198031",
+      "repository_relative_path": "research/convergences-20261112/probes/issue-5/independent-review.md"
+    }
+  ],
+  "not_done": [
+    "AeST full canonical constraint map",
+    "AeST nonlinear evolution",
+    "Specified higher-derivative AeST extension",
+    "Physical cutoff calculation",
+    "Thermodynamic entropy derivation",
+    "Cosmological population or 185 km/s scale derivation",
+    "Independent review of the new probe by a separate agent"
+  ],
+  "validation": {
+    "command": "python3 caustic_control.py",
+    "exit_code": 0,
+    "validation_kind": "Exact spectral propagation, exact classical Fourier comparison, independent quadrature, mass/energy/momentum balances, grid refinement, mode occupations and time reversal",
+    "prose_check": {
+      "command": "check-prose.py research.md",
+      "exit_code": 0
+    },
+    "initial_numerical_issue": "An initial local momentum residual exceeded 1e-9 because differentiating the density FFT three times amplified roundoff. Computing rho_xx from differentiated field products gives the same exact momentum flux and the stated passing residuals. Physical parameters and continuum equations were unchanged."
+  },
+  "prior_publication_head": "02013ae95fa5913894b829c8e2e63a3efcde9e63"
+}

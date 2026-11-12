@@ -1,0 +1,22 @@
+{
+  "checked_utc": "2026-11-12T21:43:06.696357+00:00",
+  "release_index": "https://dark.univ-lyon1.fr/data-releases/",
+  "release_index_accessible": true,
+  "muse_udf_endpoint": {
+    "url": "https://dark-matter.osu-lyon.fr/",
+    "result": "web timeout and TLS curl connection timeout after15seconds"
+  },
+  "kmos3d": {
+    "url": "https://cdsarc.cds.unistra.fr/ftp/J/ApJ/842/121/table3.dat",
+    "result": "TLS curl connection timeout after15seconds; prior indexed schema lacksindividualerrors/covariance"
+  },
+  "muscatel_link": {
+    "url": "https://www.aip.de/en/musewide/muscatel_cubes/",
+    "result": "officialreleaseindex link returned404 viaweb"
+  },
+  "lensing_cluster_link": {
+    "url": "https://cral-perso.univ-lyon1.fr/labo/perso/johan.richard/MUSE_data_release/",
+    "result": "accessible; identifiesRichard2021clusterredshift andlinecatalogs, not recovered2026individualgalaxykinematicposteriors"
+  },
+  "conclusion": "No raw79-galaxy radialmeasurements andjointposteriors acquired. Availability limits are observations fromthisenvironment, notproofdatasetsdo notexist."
+}

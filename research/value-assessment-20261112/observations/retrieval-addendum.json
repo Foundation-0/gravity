@@ -1,0 +1,78 @@
+{
+  "checked_utc": "2026-11-12T21:50:44.995816+00:00",
+  "requests": [
+    {
+      "url": "https://zenodo.org/api/records/21644662",
+      "error": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1082)>"
+    },
+    {
+      "url": "https://doi.org/10.5281/zenodo.21644662",
+      "error": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1082)>"
+    }
+  ],
+  "completed_utc": "2026-11-12T21:55:35.122795+00:00",
+  "curl_fallback": {
+    "note": "System curl kept normal certificate verification; no TLS verification disabled.",
+    "records": [
+      {
+        "url": "https://zenodo.org/api/records/21644662",
+        "http": 200,
+        "bytes": 6989,
+        "artifact": "zenodo-api.json",
+        "inventory": "One PDF, no raw tables or code"
+      },
+      {
+        "url": "https://zenodo.org/api/records/21623517",
+        "http": 200,
+        "bytes": 7829,
+        "artifact": "zenodo-earlier-api.json",
+        "inventory": "One PDF and files.zip"
+      },
+      {
+        "url": "https://zenodo.org/api/records/21623517/files/files.zip/content",
+        "http": 200,
+        "bytes": 621538,
+        "artifact": "rusishvili-files.zip",
+        "md5_matches_metadata": true,
+        "zip_members": [
+          {
+            "name": "a0z_three_systematics.pdf",
+            "bytes": 453100
+          },
+          {
+            "name": "a0z_three_systematics.tex",
+            "bytes": 32933
+          },
+          {
+            "name": "fig3_massdrift.png",
+            "bytes": 58363
+          },
+          {
+            "name": "fig1_correction.png",
+            "bytes": 67962
+          },
+          {
+            "name": "fig2_robustness.png",
+            "bytes": 68294
+          }
+        ]
+      },
+      {
+        "url": "http://dark-matter.osu-lyon.fr/",
+        "http": 0,
+        "result": "curl connection timeout after8seconds, no bytes"
+      }
+    ]
+  },
+  "additional_web_readings": [
+    {
+      "url": "https://amused.univ-lyon1.fr/project/UDF/",
+      "result": "Accessible parentcatalogue,cubes andPSF description; no selected79jointposterior product acquired"
+    },
+    {
+      "url": "https://doi.org/10.1051/0004-6361/202557396",
+      "result": "403; arxiv2506.19721v3 accessible; \u00a78 directs catalogues toDARK andcubes toAMUSED"
+    }
+  ],
+  "conclusion": "Downloaded two author manuscripts and TeX/figures, no individualgalaxy tables. No independent schema or selected79membership/covariance verified. Dataavailability elsewhere remainspossible."
+}

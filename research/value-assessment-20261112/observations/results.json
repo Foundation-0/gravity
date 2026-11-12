@@ -1,0 +1,925 @@
+{
+  "scope": "Deterministic synthetic identifiability only; no observational fit or survey power forecast.",
+  "verdict": "pursue_conditional_calibration_and_selection_design; park_current_empirical_fit",
+  "assumptions": {
+    "A_reference_m_s2": 1.2e-10,
+    "Omega_m": 0.315,
+    "cosmology": "flat matter plus constant Lambda, radiation neglected",
+    "b_convention": "actual baryonic acceleration / nominal at fixed geometry",
+    "k_convention": "measured total acceleration / true",
+    "parameters": [
+      "ln_A_over_Aref",
+      "ln_B",
+      "q",
+      "s",
+      "ln_C",
+      "u"
+    ],
+    "toy_sigma_dex": 0.05,
+    "toy_rows_are_not_MUSE_measurements": true
+  },
+  "designs": {
+    "deep_finite": {
+      "n_rows": 128,
+      "n_parameters": 4,
+      "rank_relative_tolerance": 1e-10,
+      "numerical_rank": 4,
+      "singular_values": [
+        78.26053697133884,
+        12.46729724146029,
+        0.11501674654244563,
+        0.018322746334025183
+      ],
+      "sigma_ln_y": 0.1151292546497023,
+      "independent_rows_assumed_for_design_only": true,
+      "parameter_standard_deviations": [
+        18.827000517981798,
+        18.749329427989068,
+        34.33627212646038,
+        34.1946172898441
+      ],
+      "condition_number": 4271.223076750764
+    },
+    "transition": {
+      "n_rows": 128,
+      "n_parameters": 4,
+      "rank_relative_tolerance": 1e-10,
+      "numerical_rank": 4,
+      "singular_values": [
+        79.61686584804515,
+        12.683367254745098,
+        9.354614500763907,
+        1.4902371498295532
+      ],
+      "sigma_ln_y": 0.1151292546497023,
+      "independent_rows_assumed_for_design_only": true,
+      "parameter_standard_deviations": [
+        0.27063672416454787,
+        0.18696277223335564,
+        0.4935813434249491,
+        0.34097861838323595
+      ],
+      "condition_number": 53.42563487774505
+    },
+    "wide": {
+      "n_rows": 128,
+      "n_parameters": 4,
+      "rank_relative_tolerance": 1e-10,
+      "numerical_rank": 4,
+      "singular_values": [
+        83.69475527971213,
+        28.091298809473173,
+        13.332995555673081,
+        4.475085218040899
+      ],
+      "sigma_ln_y": 0.1151292546497023,
+      "independent_rows_assumed_for_design_only": true,
+      "parameter_standard_deviations": [
+        0.10122083655932342,
+        0.05406388938152083,
+        0.18460434978207857,
+        0.09860054001941139
+      ],
+      "condition_number": 18.70238245794836
+    },
+    "exact_deep_limit": {
+      "n_rows": 128,
+      "n_parameters": 4,
+      "rank_relative_tolerance": 1e-10,
+      "numerical_rank": 2,
+      "singular_values": [
+        78.26036978363668,
+        12.467270607618273,
+        5.52849079499573e-14,
+        3.0027193239466452e-15
+      ],
+      "sigma_ln_y": 0.1151292546497023,
+      "independent_rows_assumed_for_design_only": true,
+      "parameter_standard_deviations": null,
+      "condition_number": null
+    },
+    "one_redshift": {
+      "n_rows": 128,
+      "n_parameters": 4,
+      "rank_relative_tolerance": 1e-10,
+      "numerical_rank": 2,
+      "singular_values": [
+        85.99503953673744,
+        28.863365974194167,
+        2.77316286356946e-14,
+        1.958584658563025e-15
+      ],
+      "sigma_ln_y": 0.1151292546497023,
+      "independent_rows_assumed_for_design_only": true,
+      "parameter_standard_deviations": null,
+      "condition_number": null
+    },
+    "fixed_ratio_selection_track": {
+      "n_rows": 128,
+      "n_parameters": 4,
+      "rank_relative_tolerance": 1e-10,
+      "numerical_rank": 2,
+      "singular_values": [
+        78.3549050078744,
+        12.482330544413635,
+        1.1348217712788659e-14,
+        3.773680173274725e-15
+      ],
+      "sigma_ln_y": 0.1151292546497023,
+      "independent_rows_assumed_for_design_only": true,
+      "parameter_standard_deviations": null,
+      "condition_number": null
+    },
+    "wide_with_free_acceleration_calibration": {
+      "n_rows": 128,
+      "n_parameters": 6,
+      "rank_relative_tolerance": 1e-10,
+      "numerical_rank": 4,
+      "singular_values": [
+        138.4869958584358,
+        29.405034697866288,
+        22.061675120837887,
+        4.684369954016699,
+        1.0667172381732517e-14,
+        4.556940073490402e-15
+      ],
+      "sigma_ln_y": 0.1151292546497023,
+      "independent_rows_assumed_for_design_only": true,
+      "parameter_standard_deviations": null,
+      "condition_number": null
+    },
+    "wide_plus_local_with_free_acceleration_calibration": {
+      "n_rows": 136,
+      "n_parameters": 6,
+      "rank_relative_tolerance": 1e-10,
+      "numerical_rank": 4,
+      "singular_values": [
+        141.16061005087798,
+        29.972724953620226,
+        26.153930973531192,
+        5.553281324323265,
+        6.1760626768790816e-15,
+        3.830306891292404e-15
+      ],
+      "sigma_ln_y": 0.1151292546497023,
+      "independent_rows_assumed_for_design_only": true,
+      "parameter_standard_deviations": null,
+      "condition_number": null
+    },
+    "wide_known_amplitudes_free_q_s_u": {
+      "n_rows": 128,
+      "n_parameters": 3,
+      "rank_relative_tolerance": 1e-10,
+      "numerical_rank": 2,
+      "singular_values": [
+        67.42165129001583,
+        14.315683456639828,
+        3.419002323882957e-15
+      ],
+      "sigma_ln_y": 0.1151292546497023,
+      "independent_rows_assumed_for_design_only": true,
+      "parameter_standard_deviations": null,
+      "condition_number": null
+    },
+    "wide_known_amplitudes_and_k_free_q_s": {
+      "n_rows": 128,
+      "n_parameters": 2,
+      "rank_relative_tolerance": 1e-10,
+      "numerical_rank": 2,
+      "singular_values": [
+        40.746342790482565,
+        13.676098184352144
+      ],
+      "sigma_ln_y": 0.1151292546497023,
+      "independent_rows_assumed_for_design_only": true,
+      "parameter_standard_deviations": [
+        0.0680328448143508,
+        0.03633757950812394
+      ],
+      "condition_number": 2.979383610824287
+    }
+  },
+  "injections": {
+    "physical_evolution": {
+      "truth": [
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "exact_deep_fit_assuming_B1_C1_s0_u0": {
+        "success": true,
+        "theta": [
+          9.041465082876703e-16,
+          0.0,
+          0.999999999999999,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "free_parameters": [
+          "ln_A_over_Aref",
+          "q"
+        ],
+        "max_abs_residual_dex": 3.857309866213148e-16,
+        "rms_residual_dex": 1.6702641672044702e-16
+      },
+      "finite_deep_fit_assuming_B1_C1_s0_u0": {
+        "success": true,
+        "theta": [
+          2.2002941909628948e-16,
+          0.0,
+          0.9999999999999992,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "free_parameters": [
+          "ln_A_over_Aref",
+          "q"
+        ],
+        "max_abs_residual_dex": 0.0,
+        "rms_residual_dex": 0.0
+      },
+      "wide_fit_assuming_B1_C1_s0_u0": {
+        "success": true,
+        "theta": [
+          -2.1708541761593197e-16,
+          0.0,
+          1.0000000000000004,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "free_parameters": [
+          "ln_A_over_Aref",
+          "q"
+        ],
+        "max_abs_residual_dex": 1.928654933106574e-16,
+        "rms_residual_dex": 3.859192858693479e-17
+      },
+      "wide_joint_mass_and_evolution_known_k": {
+        "success": true,
+        "theta": [
+          3.7618193164979705e-17,
+          -1.9222474363246833e-16,
+          1.0,
+          1.169556580362154e-16,
+          0.0,
+          0.0
+        ],
+        "free_parameters": [
+          "ln_A_over_Aref",
+          "ln_B",
+          "q",
+          "s"
+        ],
+        "max_abs_residual_dex": 3.857309866213148e-16,
+        "rms_residual_dex": 4.687942124829376e-17
+      }
+    },
+    "mass_drift_only": {
+      "truth": [
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      "exact_deep_fit_assuming_B1_C1_s0_u0": {
+        "success": true,
+        "theta": [
+          9.041465082876703e-16,
+          0.0,
+          0.999999999999999,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "free_parameters": [
+          "ln_A_over_Aref",
+          "q"
+        ],
+        "max_abs_residual_dex": 3.857309866213148e-16,
+        "rms_residual_dex": 1.6702641672044702e-16
+      },
+      "finite_deep_fit_assuming_B1_C1_s0_u0": {
+        "success": true,
+        "theta": [
+          -3.999513128429417e-05,
+          0.0,
+          1.0042816404990254,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "free_parameters": [
+          "ln_A_over_Aref",
+          "q"
+        ],
+        "max_abs_residual_dex": 0.001090873059625739,
+        "rms_residual_dex": 0.00035699719290693366
+      },
+      "wide_fit_assuming_B1_C1_s0_u0": {
+        "success": true,
+        "theta": [
+          -0.028891563405835822,
+          0.0,
+          1.4172122836334102,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "free_parameters": [
+          "ln_A_over_Aref",
+          "q"
+        ],
+        "max_abs_residual_dex": 0.35897624259658284,
+        "rms_residual_dex": 0.11950194182889019
+      },
+      "wide_joint_mass_and_evolution_known_k": {
+        "success": true,
+        "theta": [
+          -1.0467582235068078e-16,
+          -1.8071540937224455e-16,
+          -1.1542885458432137e-16,
+          1.0000000000000002,
+          0.0,
+          0.0
+        ],
+        "free_parameters": [
+          "ln_A_over_Aref",
+          "ln_B",
+          "q",
+          "s"
+        ],
+        "max_abs_residual_dex": 3.857309866213148e-16,
+        "rms_residual_dex": 6.792136646322546e-17
+      }
+    },
+    "kinematic_drift_only": {
+      "truth": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.5
+      ],
+      "exact_deep_fit_assuming_B1_C1_s0_u0": {
+        "success": true,
+        "theta": [
+          9.041465082876703e-16,
+          0.0,
+          0.999999999999999,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "free_parameters": [
+          "ln_A_over_Aref",
+          "q"
+        ],
+        "max_abs_residual_dex": 3.857309866213148e-16,
+        "rms_residual_dex": 1.6702641672044702e-16
+      },
+      "finite_deep_fit_assuming_B1_C1_s0_u0": {
+        "success": true,
+        "theta": [
+          9.293903333445302e-05,
+          0.0,
+          1.0016117383247802,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "free_parameters": [
+          "ln_A_over_Aref",
+          "q"
+        ],
+        "max_abs_residual_dex": 0.00042695352839339793,
+        "rms_residual_dex": 0.0001500546970189699
+      },
+      "wide_fit_assuming_B1_C1_s0_u0": {
+        "success": true,
+        "theta": [
+          -0.004540317886152082,
+          0.0,
+          1.1648270163862608,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "free_parameters": [
+          "ln_A_over_Aref",
+          "q"
+        ],
+        "max_abs_residual_dex": 0.17938562788832835,
+        "rms_residual_dex": 0.057964705395834176
+      }
+    },
+    "no_evolution": {
+      "truth": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "exact_deep_fit_assuming_B1_C1_s0_u0": {
+        "success": true,
+        "theta": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "free_parameters": [
+          "ln_A_over_Aref",
+          "q"
+        ],
+        "max_abs_residual_dex": 0.0,
+        "rms_residual_dex": 0.0
+      },
+      "finite_deep_fit_assuming_B1_C1_s0_u0": {
+        "success": true,
+        "theta": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "free_parameters": [
+          "ln_A_over_Aref",
+          "q"
+        ],
+        "max_abs_residual_dex": 0.0,
+        "rms_residual_dex": 0.0
+      },
+      "wide_fit_assuming_B1_C1_s0_u0": {
+        "success": true,
+        "theta": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "free_parameters": [
+          "ln_A_over_Aref",
+          "q"
+        ],
+        "max_abs_residual_dex": 0.0,
+        "rms_residual_dex": 0.0
+      },
+      "wide_joint_mass_and_evolution_known_k": {
+        "success": true,
+        "theta": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "free_parameters": [
+          "ln_A_over_Aref",
+          "ln_B",
+          "q",
+          "s"
+        ],
+        "max_abs_residual_dex": 0.0,
+        "rms_residual_dex": 0.0
+      }
+    }
+  },
+  "symmetry_max_abs_ln_difference": 1.7763568394002505e-15,
+  "q1_q0_counterexample_max_abs_ln_difference": 8.881784197001252e-16,
+  "heldout": {
+    "training_max_residual_dex": 0.001090873059625739,
+    "held_out_high_acceleration_max_residual_dex": 0.3599352918323855,
+    "held_out_high_acceleration_rms_residual_dex": 0.22720131443287364,
+    "caveat": "Synthetic held-out acceleration ranges, not independent observed galaxies."
+  },
+  "constant_mass_control": {
+    "success": true,
+    "theta": [
+      0.46051701859880956,
+      0.0,
+      -8.17753853190091e-16,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "free_parameters": [
+      "ln_A_over_Aref",
+      "q"
+    ],
+    "max_abs_residual_dex": 0.0,
+    "rms_residual_dex": 0.0
+  },
+  "calibration_thresholds": [
+    {
+      "z_low": 0.0,
+      "z_high": 1.0,
+      "E_ratio": 1.7902513789968157,
+      "q0_vs_q1_delta_log10_a0": 0.25291401692741816,
+      "equivalent_deep_mass_factor_b": 1.7902513789968157,
+      "equivalent_deep_acceleration_factor_k": 1.3380027574698101,
+      "equivalent_deep_velocity_factor": 1.1567206912084742,
+      "equivalent_inferred_distance_over_true": 0.7473826151831107,
+      "inclination_example_true_deg": 60.0,
+      "inclination_example_assumed_deg": 48.47704287711932,
+      "max_sigma_differential_log10_b_if_only_error_95pct": 0.12904013488123847,
+      "max_sigma_differential_log10_k_if_only_error_95pct": 0.06452006744061924,
+      "max_sigma_differential_log10_velocity_if_only_error_95pct": 0.03226003372030962,
+      "small_sigma_velocity_fraction_if_only_error_95pct": 0.07428147274387017
+    },
+    {
+      "z_low": 0.33,
+      "z_high": 1.44,
+      "E_ratio": 1.9206998594100706,
+      "q0_vs_q1_delta_log10_a0": 0.2834595045878373,
+      "equivalent_deep_mass_factor_b": 1.9206998594100706,
+      "equivalent_deep_acceleration_factor_k": 1.3858931630576978,
+      "equivalent_deep_velocity_factor": 1.1772396370568303,
+      "equivalent_inferred_distance_over_true": 0.7215563411783479,
+      "inclination_example_true_deg": 60.0,
+      "inclination_example_assumed_deg": 47.36138311684839,
+      "max_sigma_differential_log10_b_if_only_error_95pct": 0.1446248537339103,
+      "max_sigma_differential_log10_k_if_only_error_95pct": 0.07231242686695515,
+      "max_sigma_differential_log10_velocity_if_only_error_95pct": 0.03615621343347757,
+      "small_sigma_velocity_fraction_if_only_error_95pct": 0.08325275807103653
+    }
+  ],
+  "covariance_control": {
+    "radii_per_galaxy": 8,
+    "independent_sigma_dex": 0.05,
+    "shared_sigma_dex": 0.1,
+    "mean_sigma_with_covariance_dex": 0.10155048005794952,
+    "mean_sigma_if_marginals_treated_independent_dex": 0.03952847075210474,
+    "uncertainty_underestimate_factor": 2.5690465157330262
+  },
+  "selection_control": {
+    "parent_q": 0.0,
+    "parent_b": 1.0,
+    "parent_k": 1.0,
+    "noise_sigma_log10_acceleration": 0.1,
+    "retained_mean_apparent_q": 0.9999999999999912,
+    "redshifts": [
+      0.33,
+      0.404,
+      0.478,
+      0.552,
+      0.626,
+      0.7,
+      0.774,
+      0.8480000000000001,
+      0.9219999999999999,
+      0.996,
+      1.07,
+      1.144,
+      1.218,
+      1.292,
+      1.366,
+      1.44
+    ],
+    "cut_in_noise_sigma": [
+      -2.0,
+      -1.4501401028256207,
+      -1.1139954386277535,
+      -0.8531425526860266,
+      -0.6324383500563396,
+      -0.43728813160091373,
+      -0.26016540498727375,
+      -0.09665907779250199,
+      0.05604942852112379,
+      0.1998789574076541,
+      0.33620163334719194,
+      0.4660382858772668,
+      0.5901737105079546,
+      0.7092281495977499,
+      0.823703475204219,
+      0.9340140666272633
+    ],
+    "retained_fraction": [
+      0.9772498680518208,
+      0.9264902730225392,
+      0.867359428248133,
+      0.8032098718879507,
+      0.7364497594508195,
+      0.6690487992581443,
+      0.6026319057825232,
+      0.5385014306044024,
+      0.47765121537708605,
+      0.4207876239551115,
+      0.36835941064726335,
+      0.32059404808756875,
+      0.27753709768247564,
+      0.23909145380913738,
+      0.20505403217346568,
+      0.1751483184953836
+    ],
+    "retained_mean_residual_dex": [
+      0.0055247862678989975,
+      0.015046271592864844,
+      0.02473058055011878,
+      0.034516752455572605,
+      0.04435195460952311,
+      0.0541912510510333,
+      0.06399707253207215,
+      0.07373851762409032,
+      0.08339058150068618,
+      0.09293337910321367,
+      0.10235140523528717,
+      0.11163285594509875,
+      0.12076902268447474,
+      0.1297537621517201,
+      0.13858303937642566,
+      0.14725453856181753
+    ],
+    "interpretation": "A designed truncation counterexample; not a MUSE bias estimate."
+  },
+  "checks": [
+    {
+      "name": "analytic_jacobian_matches_finite_difference",
+      "passed": true,
+      "evidence": 7.484004527213983e-10
+    },
+    {
+      "name": "deep_limit_rank_two",
+      "passed": true,
+      "evidence": {
+        "n_rows": 128,
+        "n_parameters": 4,
+        "rank_relative_tolerance": 1e-10,
+        "numerical_rank": 2,
+        "singular_values": [
+          78.26036978363668,
+          12.467270607618273,
+          5.52849079499573e-14,
+          3.0027193239466452e-15
+        ],
+        "sigma_ln_y": 0.1151292546497023,
+        "independent_rows_assumed_for_design_only": true,
+        "parameter_standard_deviations": null,
+        "condition_number": null
+      }
+    },
+    {
+      "name": "wide_fixed_k_rank_four",
+      "passed": true,
+      "evidence": 4
+    },
+    {
+      "name": "single_redshift_rank_two",
+      "passed": true,
+      "evidence": 2
+    },
+    {
+      "name": "selection_track_rank_two",
+      "passed": true,
+      "evidence": 2
+    },
+    {
+      "name": "full_six_parameter_rank_four",
+      "passed": true,
+      "evidence": 4
+    },
+    {
+      "name": "local_anchor_does_not_restore_rank",
+      "passed": true,
+      "evidence": 4
+    },
+    {
+      "name": "known_amplitudes_leave_exponent_rank_two",
+      "passed": true,
+      "evidence": 2
+    },
+    {
+      "name": "known_k_restores_exponent_rank",
+      "passed": true,
+      "evidence": 2
+    },
+    {
+      "name": "full_RAR_exponent_symmetry_including_z0",
+      "passed": true,
+      "evidence": 1.7763568394002505e-15
+    },
+    {
+      "name": "full_RAR_amplitude_symmetry",
+      "passed": true,
+      "evidence": 1.7763568394002505e-15
+    },
+    {
+      "name": "q1_and_q0_full_RAR_counterexample",
+      "passed": true,
+      "evidence": 8.881784197001252e-16
+    },
+    {
+      "name": "analytic_null_vectors",
+      "passed": true,
+      "evidence": 8.326672684688674e-17
+    },
+    {
+      "name": "physical_evolution_joint_recovery",
+      "passed": true,
+      "evidence": 1.9222474363246833e-16
+    },
+    {
+      "name": "physical_evolution_deep_apparent_slope",
+      "passed": true,
+      "evidence": {
+        "recovered": 0.999999999999999,
+        "expected": 1.0
+      }
+    },
+    {
+      "name": "mass_drift_only_joint_recovery",
+      "passed": true,
+      "evidence": 2.220446049250313e-16
+    },
+    {
+      "name": "mass_drift_only_deep_apparent_slope",
+      "passed": true,
+      "evidence": {
+        "recovered": 0.999999999999999,
+        "expected": 1.0
+      }
+    },
+    {
+      "name": "kinematic_drift_only_deep_apparent_slope",
+      "passed": true,
+      "evidence": {
+        "recovered": 0.999999999999999,
+        "expected": 1.0
+      }
+    },
+    {
+      "name": "no_evolution_joint_recovery",
+      "passed": true,
+      "evidence": 0.0
+    },
+    {
+      "name": "no_evolution_deep_apparent_slope",
+      "passed": true,
+      "evidence": {
+        "recovered": 0.0,
+        "expected": 0.0
+      }
+    },
+    {
+      "name": "mass_drift_wrong_law_exposed_by_high_branch",
+      "passed": true,
+      "evidence": {
+        "training_max_residual_dex": 0.001090873059625739,
+        "held_out_high_acceleration_max_residual_dex": 0.3599352918323855,
+        "held_out_high_acceleration_rms_residual_dex": 0.22720131443287364,
+        "caveat": "Synthetic held-out acceleration ranges, not independent observed galaxies."
+      }
+    },
+    {
+      "name": "constant_mass_shift_changes_amplitude_only_in_deep_limit",
+      "passed": true,
+      "evidence": {
+        "success": true,
+        "theta": [
+          0.46051701859880956,
+          0.0,
+          -8.17753853190091e-16,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "free_parameters": [
+          "ln_A_over_Aref",
+          "q"
+        ],
+        "max_abs_residual_dex": 0.0,
+        "rms_residual_dex": 0.0
+      }
+    },
+    {
+      "name": "same_data_BTFR_and_deep_RAR_are_identical",
+      "passed": true,
+      "evidence": 2.220446049250313e-16
+    },
+    {
+      "name": "shared_radial_error_survives_averaging",
+      "passed": true,
+      "evidence": {
+        "radii_per_galaxy": 8,
+        "independent_sigma_dex": 0.05,
+        "shared_sigma_dex": 0.1,
+        "mean_sigma_with_covariance_dex": 0.10155048005794952,
+        "mean_sigma_if_marginals_treated_independent_dex": 0.03952847075210474,
+        "uncertainty_underestimate_factor": 2.5690465157330262
+      }
+    },
+    {
+      "name": "selection_alone_can_shift_conditional_mean",
+      "passed": true,
+      "evidence": {
+        "parent_q": 0.0,
+        "parent_b": 1.0,
+        "parent_k": 1.0,
+        "noise_sigma_log10_acceleration": 0.1,
+        "retained_mean_apparent_q": 0.9999999999999912,
+        "redshifts": [
+          0.33,
+          0.404,
+          0.478,
+          0.552,
+          0.626,
+          0.7,
+          0.774,
+          0.8480000000000001,
+          0.9219999999999999,
+          0.996,
+          1.07,
+          1.144,
+          1.218,
+          1.292,
+          1.366,
+          1.44
+        ],
+        "cut_in_noise_sigma": [
+          -2.0,
+          -1.4501401028256207,
+          -1.1139954386277535,
+          -0.8531425526860266,
+          -0.6324383500563396,
+          -0.43728813160091373,
+          -0.26016540498727375,
+          -0.09665907779250199,
+          0.05604942852112379,
+          0.1998789574076541,
+          0.33620163334719194,
+          0.4660382858772668,
+          0.5901737105079546,
+          0.7092281495977499,
+          0.823703475204219,
+          0.9340140666272633
+        ],
+        "retained_fraction": [
+          0.9772498680518208,
+          0.9264902730225392,
+          0.867359428248133,
+          0.8032098718879507,
+          0.7364497594508195,
+          0.6690487992581443,
+          0.6026319057825232,
+          0.5385014306044024,
+          0.47765121537708605,
+          0.4207876239551115,
+          0.36835941064726335,
+          0.32059404808756875,
+          0.27753709768247564,
+          0.23909145380913738,
+          0.20505403217346568,
+          0.1751483184953836
+        ],
+        "retained_mean_residual_dex": [
+          0.0055247862678989975,
+          0.015046271592864844,
+          0.02473058055011878,
+          0.034516752455572605,
+          0.04435195460952311,
+          0.0541912510510333,
+          0.06399707253207215,
+          0.07373851762409032,
+          0.08339058150068618,
+          0.09293337910321367,
+          0.10235140523528717,
+          0.11163285594509875,
+          0.12076902268447474,
+          0.1297537621517201,
+          0.13858303937642566,
+          0.14725453856181753
+        ],
+        "interpretation": "A designed truncation counterexample; not a MUSE bias estimate."
+      }
+    },
+    {
+      "name": "unselected_parent_mean_has_no_evolution",
+      "passed": true,
+      "evidence": 0.0
+    }
+  ],
+  "checks_passed": 26,
+  "environment": {
+    "python": "3.14.6",
+    "numpy": "2.5.4",
+    "scipy": "1.18.1"
+  },
+  "probe_sha256": "e61535ad2e5c6dfaa98c250ef827b60903863e52f33368ac7d36e07f4c0cf53b"
+}

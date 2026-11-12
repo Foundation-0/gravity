@@ -46,3 +46,7 @@ All Python scripts use only the Python 3 standard library. Each certificate file
 - `CHANGELOG.md` -- Reconciled chronological history across Waves 1-12 matching `CLAIMS.md` and code identifiers.- 
 - mic-Dawn quasar confrontation, and next-agent handoff queue.
 - `CHANGELOG.md` -- Reconciled chronological history across Waves 1-12 matching `CLAIMS.md` and code identifiers.
+
+## Research value assessment
+
+The [12 November assessment](research/value-assessment-20261112/) records the Wave 11/12 audit, bounded research directions, reproducible controls and stopping gates.

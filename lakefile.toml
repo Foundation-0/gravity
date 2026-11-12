@@ -1,7 +1,7 @@
 name = "gravity"
 version = "0.1.0"
 srcDir = "formal"
-defaultTargets = ["GravityClaims", "Wave5StochasticForces", "Wave6Convergence", "Wave7ThresholdAudit"]
+defaultTargets = ["GravityClaims", "Wave5StochasticForces", "Wave6Convergence", "Wave7ThresholdAudit", "Wave10JeansDerivation"]
 
 [[lean_lib]]
 name = "GravityClaims"
@@ -14,3 +14,6 @@ name = "Wave6Convergence"
 
 [[lean_lib]]
 name = "Wave7ThresholdAudit"
+
+[[lean_lib]]
+name = "Wave10JeansDerivation"

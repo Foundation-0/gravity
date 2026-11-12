@@ -39,6 +39,22 @@ class ComparisonTests(unittest.TestCase):
         with self.assertRaises(AssertionError):
             compare(1e-3, 3.197457694573648e-7, path)
 
+    def test_observation_null_controls_stay_scoped(self):
+        with self.assertRaises(AssertionError):
+            compare(False, 5.5284e-14, "observations.designs.exact_deep_limit.singular_values[2]")
+        compare(5.6785e-14, 5.5284e-14, "observations.designs.exact_deep_limit.singular_values[2]")
+        compare(-6e-16, 9e-16, "observations.injections.physical_evolution.exact_deep_fit_assuming_B1_C1_s0_u0.theta[0]")
+        compare(3.3e-16, 1.9e-16, "observations.checks[13].evidence")
+        for path, actual, expected in [
+            ("observations.designs.exact_deep_limit.singular_values[2]", 1e-5, 5e-14),
+            ("observations.checks[13].evidence", 1e-5, 1.9e-16),
+            ("observations.heldout.training_max_residual_dex", 0., .00109),
+            ("observations.heldout.held_out_high_acceleration_max_residual_dex", 0., .360),
+            ("observations.injections.mass_drift_only.finite_deep_fit_assuming_B1_C1_s0_u0.theta[0]", 0., .001),
+        ]:
+            with self.assertRaises(AssertionError):
+                compare(actual, expected, path)
+
     def test_changed_input_is_rejected_before_execution(self):
         with tempfile.TemporaryDirectory() as directory:
             root = Path(directory)

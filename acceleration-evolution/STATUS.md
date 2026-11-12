@@ -21,13 +21,15 @@ Current implementation: `model.py`, `compare.py`, `evidence.json`, `results.json
 - Local numerical checks: thirteen tests pass, including analytic limits, platform-rounding tolerance and stale-artifact rejection. Deterministic prediction and comparison checks pass. See `VALIDATION.md` for the baseline regression limit.
 - Scientific status: published-summary diagnostic only. No observational likelihood, new fitted exponent, calibrated model-selection score or detection significance.
 - Raw-data status: selected MUSE radial data and covariance not recovered. The public release server timed out. The full KMOS3D table was not recovered and its indexed schema lacks measurement errors.
-- Review status: separate source/code and cross-repository documentation reviews found no actionable issues in the inspected snapshot. Final tolerance change awaiting confirmation. Human review pending. No merge or deployment claimed.
+- Review status: separate source/code and cross-repository documentation reviews found no actionable issues. The source/code review approved `83809b8279c20ecb6932b9490e0cb9b468022e58`, including the final tolerance change and all 13 tests. Human review pending. No merge or deployment claimed.
 
 ## Peer responses and composition
 
 Research agents supplied separate observational and annihilation reviews. The observational response identified the 95% interval convention, shared-sample dependence and the lack of an effective redshift for the whole-sample fit. These findings changed the implementation from a proposed bin likelihood to an explicitly non-statistical central-curve comparison.
 
 The numerical agent implemented prediction functions separately from the evidence transcription. A non-author source/code reviewer checked the primary equations, model, comparison and figure. A separate reviewer checked the companion documents and composed links. Both found no actionable issues in their scopes. These are agent review records, not human scientific peer review.
+
+The approved scientific candidate is `83809b8279c20ecb6932b9490e0cb9b468022e58`. The subsequent change records this review without changing equations, data or results. Companion snapshots are fractals `9669f55`, physics0 `76410c3` and astr0 `607a11e`. All relative and composed file links resolved against those branch trees. Remote publication is a separate step.
 
 ## Retained lesson and next action
 

@@ -22,4 +22,5 @@ jobs:
           cache: pip
           cache-dependency-path: research/convergences-20261112/requirements.txt
       - run: python -m pip install -r research/convergences-20261112/requirements.txt
+      - run: python -B -m unittest discover -s research/convergences-20261112 -p test_check.py
       - run: python research/convergences-20261112/check.py

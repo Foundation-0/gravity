@@ -1,112 +1,126 @@
-# Claims, Proofs, and Falsification Ledger (`Foundation-0/gravity`)
+# Claims Ledger (`Foundation-0/gravity`)
 
-Every mathematical and numerical claim in this repository carries an explicit `Foundation-0` epistemic label:
-- **`KNOWN`** — Published literature result with direct citation.
-- **`PROVEN`** — Exact analytical derivation or mathematical inequality stated with all assumptions.
-- **`VERIFIED`** — Independently checked by `verify_all.py` against analytical benchmarks.
-- **`NEW-COMPUTATION`** — Quantitative numerical evaluation or parameter-space bound produced in `results/certificates.json`.
-- **`CONJECTURE`** — Testable physical hypothesis with an explicit observational falsification criterion.
+> **Attribution & Disclosure:** Written by AI agent (Gemini, Google, via `orda-aska` for `Foundation-0`); **not yet reviewed by a person**. Audited at `0311496` by an external Cursor / Grok 4.7 review and remediated in Wave 8.
+> **Licenses:** Code Apache-2.0; documentation and results CC-BY-4.0.
 
-## C-01: Coordinate-Fractal vs. Field-Gradient Dichotomy (`PROVEN` / `VERIFIED`)
+## Epistemic Status Taxonomy
 
-- **Statement:** Let a compact baryonic distribution of mass $M_b$ source a modified radial gravitational acceleration via an isotropic coordinate-space fractal measure of Hausdorff dimension $D_f$ above a universal length scale $\ell_*$ (Calcagni 2010, Phys. Rev. Lett. 104, 251301; Briscese & Calcagni 2026, arXiv:2603.24593):
-  $$g_{\text{coord}}(r) = \frac{G M_b}{r^2}\left(1 + \frac{r}{\ell_*}\right)^{3 - D_f}.$$
-  For $r \gg \ell_*$, $v^2(r) = r g_{\text{coord}}(r) \simeq (G M_b / \ell_*^{3 - D_f})\, r^{2 - D_f}$. Requiring asymptotically flat rotation curves ($\lim_{r\to\infty} d\ln v / d\ln r = 0$) uniquely fixes $D_f = 2$, which forces $v_{\text{flat}}^2 = G M_b / \ell_*$, locking the Baryonic Tully-Fisher exponent to $\beta_{\text{BTFR}} \equiv d\ln M_b / d\ln v_{\text{flat}} = 2$.
-- **Numerical Verification (`verify_all.py` -> `check_1_dichotomy`):** Across 51 galaxies spanning $M_b \in [10^7, 10^{12}]\,M_\odot$ with $R_b \propto M_b^{0.28}$ and $\ell_* = 3.0\text{ kpc}$, least-squares yields $\beta_{\text{BTFR}} = 2.0186$ and a 2D radial-acceleration RMS residual of $0.6234\text{ dex}$ against the empirical SPARC Radial Acceleration Relation (McGaugh, Lelli & Schombert 2016, Phys. Rev. Lett. 117, 201101).
-- **Implication:** Dimensional reduction $D_{\text{eff}}: 3 \to 2$ must be driven by the **local field gradient** $|\nabla\Phi| / a_0$ (selecting $r_M(M_b) = \sqrt{G M_b / a_0}$), never a fixed coordinate scale $\ell_*$.
+Every claim separates its **physical status** from any **arithmetic lemma**:
+- **`COMPUTED (KNOWN-FRAMEWORK)`**: Reproducible numerical evaluation or ODE/BVP solve of an established published equation (Milgrom 1983; Nelson 1966; Berezhiani & Khoury 2015; Hui et al. 2017) under chosen inputs. Not new physics.
+- **`EMPIRICAL-FIT`**: Parameterized statistical fit to published astronomical tables, stating fitted parameter count and error caveats.
+- **`CONJECTURE`**: Unproven hypothesis, heuristic analogy, or hand-placed phenomenological threshold.
+- **`KNOWN-LITERATURE-VALUE`**: Direct comparison against published experimental measurements.
+- **`PROVEN (ARITHMETIC-LEMMA)`**: Restricted **solely** to the literal integer or rational goal checked in `formal/*.lean` or `formal/verify_exact_rational_proofs.py`. Never applied to physical interpretations.
 
-## C-02: Spectral Dimension $d_s = 1$ Selection of the $q = 3/2$ Superfluid Action (`PROVEN` / `VERIFIED`)
+## Waves 1-2: Baseline Scaling, Solitons & EFE (`verify_all.py`)
 
-- **Background (`KNOWN`):** Quantum trajectories exhibit Hausdorff dimension $D_H = 2$ below $\lambda_{\text{dB}}$ (Abbott & Wise 1981, Am. J. Phys. 49, 37). In 3D conformal non-relativistic superfluids, scale invariance fixes the phonon Lagrangian to $\mathcal{L}(X) = P(X) \propto |X|^{5/2}$ (Son & Wingate 2006, Ann. Phys. 321, 197, arXiv:cond-mat/0509786), whereas galactic superfluid dark matter requires $\mathcal{L}(X) \propto |X|^{3/2}$ (Berezhiani & Khoury 2015, Phys. Rev. D 92, 103510).
-- **Derivation (`PROVEN`):** For a scale-invariant non-relativistic quantum condensate whose low-energy collective modes occupy spectral dimension $d_s$ ($N(k) \propto k^{d_s}$, $\varepsilon_k \propto \hbar^2 k^2 / 2m$), $n = \partial P / \partial \mu \propto \mu^{d_s / 2}$ integrates to:
-  $$\mathcal{L}_{\text{eff}}(X) = P(X) \propto \left(\frac{2 m}{\hbar^2}\right)^{d_s / 2} |X|^{1 + d_s / 2}, \qquad q(d_s) = 1 + \frac{d_s}{2}.$$
-  In the static phonon regime ($|X| \propto |\nabla\theta|^2$), varying $\int d^3x\,[c_0 |\nabla\theta|^{2 + d_s} - \lambda \theta \rho_b]$ yields the $p$-Laplacian $\nabla \cdot (|\nabla\theta|^{d_s}\nabla\theta) \propto \rho_b$ ($p = 2 + d_s$). By 3D Gauss flux conservation, $4\pi r^2 |\theta'(r)|^{1 + d_s} \propto M_b$, giving $v^2(r) = r g_{\text{ph}}(r) \propto (G M_b)^{1/(1 + d_s)} r^{1 - 2/(1 + d_s)}$. Setting $1 - 2/(1 + d_s) = 0$ uniquely selects **$d_s = 1$** ($q = 3/2$, $p = 3$, 1D filamentary / Tonks-Girardeau scaling $P \propto n^3$), simultaneously locking $M_b \propto v_{\text{flat}}^4$ ($\beta = 4$).
-- **Numerical Verification (`verify_all.py` -> `check_1_dichotomy`):** Sweeping $d_s \in [0.0, 3.0]$ confirms only $d_s = 1.00$ yields both $d\ln v / d\ln r = -0.01468$ ($100\text{--}300\text{ kpc}$) and $\beta = 3.8945$, matching SPARC RAR to $0.0096\text{ dex}$ RMS.
+- **C-01 (Coordinate-Fractal Scaling vs. BTFR)** -- `COMPUTED (KNOWN-FRAMEWORK)`
+  - *Computation & Inputs:* Evaluates `g propto (G M_b / r^2)(1 + r/l_*)^(3 - D_f)` with chosen `l_* = 3 kpc`, `R_b propto M_b^0.28`, `a_0 = 1.2e-10 m/s^2` (`beta = 2.0186`, RMS `0.6234 dex` vs. McGaugh RAR function on synthetic galaxies). Reproduces Milgrom (1983, ApJ 270, 365): a fixed length scale cannot give both flat curves and `M_b propto v^4`. Briscese & Calcagni (2026, arXiv:2603.24593) fix Hausdorff dimension equal to topological dimension and do not propose this rotation law.
+  - *Lean Arithmetic Lemma (`PROVEN (ARITHMETIC-LEMMA)` in `formal/GravityClaims.lean`):* `2 - Df = 0 <-> Df = 2` and `(2 : Int) != 4`. Does not derive a force law.
 
-## C-03: Macro-Quantum "Gravitational Atom" Soliton Bound (`VERIFIED`)
+- **C-02 (p-Laplacian Flux Exponent for Flat Rotation Curves)** -- `COMPUTED (KNOWN-FRAMEWORK)`
+  - *Computation & Inputs:* Under the Berezhiani & Khoury (2015, PRD 92, 103510, arXiv:1507.01019) phonon flux ansatz `4*pi*r^2 |theta'|^(1 + d_s) propto M_b` (cf. Son & Wingate 2006, Ann. Phys. 321, 197 for `X^(5/2)`), flat curves fix `d_s = 1`, `q = 3/2`, `p = 3`, `beta = 4`. `0.0096 dex` compares two analytical MOND interpolators at shared `a_0 = 1.2e-10 m/s^2` (not SPARC data; see C-08 where SPARC prefers `d_s = 0.94`). CDT (Ambjorn et al. 2005, PRL 95, 171301) and asymptotic safety (Lauscher & Reuter 2005, JHEP 10, 050) random-walk spectral dimensions are distinct objects.
+  - *Lean Arithmetic Lemma (`PROVEN (ARITHMETIC-LEMMA)` in `formal/GravityClaims.lean`):* `(ds - 1 = 0 /\ 2*(1 + ds) = 4 /\ 2 + ds = 3) <-> ds = 1` and `1 + 1/2 = 3/2`.
 
-- **Verification (`verify_all.py` -> `check_2_gravitational_atom`):** Pure-stdlib RK4 shooting of $\nabla_\xi^2 \hat{\psi} = 2(\hat{\Phi} - \hat{\varepsilon})\hat{\psi}$, $\nabla_\xi^2 \hat{\Phi} = \hat{\psi}^2$ certifies $\hat{\varepsilon}_0 = 0.64953399$, $\xi_c = 1.299271$, $\xi_{1/2} = 1.903322$, and $M_{\text{sol}} r_{1/2} = 3.9251\,\hbar^2 / (G m_\psi^2)$ (matching $3.925$ in Hui et al. 2017, Phys. Rev. D 95, 043541; cf. Schive et al. 2014, arXiv:1406.6586; Chavanis 2018, arXiv:1706.05900). Outside $2.5\,\xi_{\text{peak}}$, the pure ground state decays with Keplerian slope $d\ln v / d\ln r = -0.4994$.
+- **C-03 (Ground-State Schrodinger-Poisson Soliton)** -- `COMPUTED (KNOWN-FRAMEWORK)`
+  - *Computation & Inputs:* RK4 + bisection (`h = 0.0025`) reproduces the Hui, Ostriker, Tremaine & Witten (2017, PRD 95, 043541, Eq. 29) ground-state invariant `M r_{1/2} = 3.9251 hbar^2 / (G m^2)` and Keplerian outer slope `-0.4994` (cf. Schive et al. 2014; Chavanis 2018).
+  - *Lean Arithmetic Lemma:* None.
 
-## C-04: Single-Boson 1 Mpc vs. Bullet Cluster Phase-Space Inversion (`PROVEN` / `NEW-COMPUTATION`)
+- **C-04 (Single-Boson Condensation Window: 1 Mpc Halo vs. Bullet Cluster)** -- `COMPUTED (KNOWN-FRAMEWORK, MODEL-DEPENDENT)`
+  - *Computation & Inputs:* Evaluates `n lambda_th^3 >= zeta(3/2)` assuming `M_b = 6e10 M_sun`, `a_0 = 1.2e-10 m/s^2`, `sigma_gal = v_flat / sqrt(2)`, an `0.08` NFW factor at `1 Mpc`, and Bullet Cluster `sigma_cl = 1000 km/s` at `250 kpc` (Clowe et al. 2006; Berezhiani & Khoury 2015), giving `1.0306 < 1.9379 < 2.3015 eV`.
+  - *Lean Arithmetic Lemma (`PROVEN (ARITHMETIC-LEMMA)` in `formal/GravityClaims.lean`):* Checks isothermal interval bound `4 * 105^4 * 10^7 / (65536 * 66740 * 6 * 19884 * 115) < 1/12 < 1` (`0.081021 < 1`; excludes `0.08` NFW factor).
 
-- **Statement:** Bose-Einstein condensation of a single thermalized species of mass $m_\psi$ requires $\mathcal{N}_{\text{deg}} \equiv n \lambda_{\text{th}}^3 = (2\pi)^{3/2}\hbar^3 m_\psi^{-4} (\rho / \sigma_{\text{1D}}^3) \ge \zeta(3/2) \approx 2.6124$, monotonic in $Q \equiv \rho / \sigma_{\text{1D}}^3$.
-- **Evaluation (`verify_all.py` -> `check_3_phase_space_and_tower`):**
-  1. Condensing at $r = 1\text{ Mpc}$ around an isolated $L_*$ spiral ($M_b = 6 \times 10^{10}\,M_\odot$, $v_{\text{flat}} = 175.82\text{ km/s}$; Mistele et al. 2024, arXiv:2406.09685) requires $m_\psi \le 1.9379\text{ eV}$ (unbroken $r^{-2}$ profile) and **$m_\psi \le 1.0306\text{ eV}$** (NFW outer tail).
-  2. Melting out of degeneracy ($\mathcal{N}_{\text{deg}} < \zeta(3/2)$) inside the Bullet Cluster core ($r = 250\text{ kpc}$, $\sigma_{\text{1D}} = 1000\text{ km/s}$; Clowe et al. 2006, arXiv:astro-ph/0608407) requires **$m_\psi \ge 2.3015\text{ eV}$**.
-  3. Since $1.0306\text{ eV} < 1.9379\text{ eV} < 2.3015\text{ eV}$, no single thermalized boson species satisfies both regimes simultaneously.
+- **C-05 (Two-Species Degeneracy Example)** -- `COMPUTED (KNOWN-FRAMEWORK) / CONJECTURE`
+  - *Computation & Inputs:* Evaluates `N_deg` at chosen `m_L = 0.05 eV`, `f_L = 0.02`, `m_H = 3.0 eV`, `f_H = 0.98` (`N_L = 9432.49`, `N_H = 0.8867`), illustrating two-phase ideas in Berezhiani & Khoury (2015), Berezhiani, Famaey & Khoury (2018, arXiv:1711.05748), Hodson et al. (2017, A&A 607, A108), and Skordis & Zlosnik (2021, PRL 127, 161302). Cluster phonon screening is conjectured.
+  - *Lean Arithmetic Lemma:* None.
 
-## C-05: Two-Tier Hybrid Condensate + Normal Dark Sector (`NEW-COMPUTATION` / `CONJECTURE`)
+- **C-06 (Geometric-Shell Soliton Ripple Toy Integral)** -- `COMPUTED (TOY-MODEL)`
+  - *Computation & Inputs:* Stacks `(1 + 0.091 u^2)^(-8)` shells against a chosen `5%` ripple ceiling (`b = 6` gives `4.561%`; `b = 7` gives `6.084%`). Arvanitaki et al. (2010, PRD 81, 123530) motivate discrete axion spectra qualitatively but do not state this ripple bound.
+  - *Lean Arithmetic Lemma:* None.
 
-- **Evaluation (`verify_all.py` -> `check_3_phase_space_and_tower`):** Partitioning dark matter into a light condensate mode ($m_L = 0.05\text{ eV}$, $f_L = 0.02$) and a heavy mode ($m_H = 3.0\text{ eV}$, $f_H = 0.98$) yields $\mathcal{N}_{\text{deg},L}(1\text{ Mpc NFW}) = 9{,}432.49 \gg \zeta(3/2)$ (sustaining galactic Mpc phonon coherence) while $\mathcal{N}_{\text{deg},H}(\text{Bullet}) = 0.8867 < \zeta(3/2)$ (collisionless cluster lensing peak, with internal $g_{\text{cl}} = 2.161\,a_0$ screens the light-mode phonon force). Alternatively, a relativistic $T = 0$ vacuum condensate (Skordis & Zlosnik 2021, Phys. Rev. Lett. 127, 161302) avoids thermal occupancy constraints via vacuum coherence.
-- **Falsification Criterion:** Test environmental dependence of $0.3\text{--}1.5\text{ Mpc}$ weak-lensing rotation curves between void/field galaxies and group satellites in Euclid DR1/DR2.
+- **C-07 (External-Field Quadrature & Horizon Accelerations)** -- `COMPUTED (KNOWN-FRAMEWORK)`
+  - *Computation & Inputs:* Evaluates Bekenstein & Milgrom (1984) AQUAL quadrature at `e_MW = 1.8101` (`+18.31%` RAR vs. `+3.16%` exponential interpolator; Gaia wide binaries remain debated, e.g. Banik et al. 2024, arXiv:2311.03436) and compares `c H_0 / (2*pi)` (Milgrom 1983; arXiv:2001.09729) and `c H_0 / 6` (Verlinde 2017, arXiv:1611.02269) using Planck 2018 `H_0 = 67.4 km/s/Mpc`, `Omega_Lambda = 0.6847` (arXiv:1807.06209).
+  - *Lean Arithmetic Lemma:* None.
 
-## C-06: Discrete Scale-Invariant Soliton Tower Smoothness Bound (`NEW-COMPUTATION`)
+## Wave 3: Binned SPARC & KiDS Fits (`wave3_empirical_audit.py`)
 
-- **Evaluation (`verify_all.py` -> `check_3_phase_space_and_tower`):** Superposing self-similar solitons $m_k = m_0 b^{-k}$ (Arvanitaki et al. 2010, Phys. Rev. D 81, 123530) with $R_k = R_0 b^k, M_k \propto R_k$ yields log-periodic velocity ripples across $10\text{--}200\text{ kpc}$ of $\pm 0.036\%$ ($b=2$), $\pm 1.572\%$ ($b=4$), $\pm 4.561\%$ ($b=6$), and $\pm 6.084\%$ ($b=7$), requiring **$b \le 6.2$** for $\le 5\%$ smoothness.
+- **C-08 (SPARC RAR 14-Bin & KiDS-1000 4-Bin BTFR Fits)** -- `EMPIRICAL-FIT (KNOWN-FRAMEWORK)`
+  - *Computation & Caveats:* Fits 14 SPARC `RARbins.mrt` bin means (2,630 points; Lelli et al. 2017, ApJ 836, 152; McGaugh et al. 2016, PRL 117, 201101) using `sem = sd / sqrt(N)`, which treats points within the same galaxy as independent; profiling `a_0` gives best fit `d_s = 0.94` (`[0.92, 0.96]`, `chi^2 = 25.890`) vs. `d_s = 1.00` (`a_0 = 1.179e-10 m/s^2`, `chi^2 = 30.486`). Fits 8 SPARC kinematic BTFR bins (`beta = 3.83`) and 4 KiDS-1000 stacked WL bins (`52,553 + 43,727 + 22,950 + 9,797 = 129,027` isolated lenses in Mistele et al. 2024, ApJL 969, L3, arXiv:2406.09685 Sec. II & Table 2, adopting `H_0 = 73.0 km/s/Mpc` and an assumed `0.02 dex` mass error; `beta = 4.00`, `chi^2 = 0.634`). Combined 12-bin fit (`0.10 dex` WL systematic) yields `beta = 3.83` with `Delta BIC(free - beta=4) = -0.44`.
+  - *Lean Arithmetic Lemma:* None.
 
-## C-07: External-Field Rollover at ~0.83 Mpc & Wide-Binary UV-Crossover Sensitivity (`VERIFIED` / `NEW-COMPUTATION`)
+## Wave 4: Interpolator Scan, Bogoliubov BVP & Fermion Audit (`wave4_unified_field_solver.py`)
 
-- **Evaluation (`verify_all.py` -> `check_4_efe_and_wide_binaries`):**
-  1. For an $L_*$ galaxy ($r_M = 8.348\text{ kpc}$) in a cosmic external field $e = g_{\text{ext}}/a_0 = 0.010$, $R_{\text{EFE}} = r_M / e = 834.8\text{ kpc}$, matching the $\sim 1\text{ Mpc}$ flatness horizon of Mistele et al. (2024) alongside $c H_0 / (2\pi) = 1.042 \times 10^{-10}\text{ m/s}^2$ (Planck Collaboration 2020, arXiv:1807.06209) and $c H_0 / 6 = 1.091 \times 10^{-10}\text{ m/s}^2$ (Verlinde 2017, SciPost Phys. 2, 016).
-  2. At the Solar circle ($e_{\text{MW}} = 1.8101$, $r_M(\odot) = 7{,}029.9\text{ AU}$), 3D AQUAL quadrature gives an asymptotic wide-binary velocity boost of **$+18.31\%$** for $\mu_1(x) = x/(1+x)$ versus **$+3.16\%$** for $\mu_2(x) = x/\sqrt{1+x^2}$, showing Gaia DR3 wide binaries (Banik et al. 2024, arXiv:2311.03436) directly probe the UV crossover sharpness of $\mathcal{L}(X)$.
+- **C-09 (Interpolator Family Tradeoff vs. Assumed 2% Wide-Binary Ceiling)** -- `COMPUTED (MODEL-FAMILY-SCAN)`
+  - *Computation & Inputs:* Scans `mu_alpha(x) = (1 - exp(-x^alpha))^(1/alpha)` on the 14 SPARC bins (`chi^2_min = 20.381`): within `Delta chi^2 <= 25`, minimum wide-binary boost is `12.91%`; enforcing input ceiling `<= 2%` costs `Delta chi^2 = 311.37`.
+  - *Lean Arithmetic Lemma (`PROVEN (ARITHMETIC-LEMMA)` in `formal/GravityClaims.lean`):* For stipulated `mu <= 76/100` and `L <= 40/100`, checks `9375 / 6859 > (51 / 50)^4`.
 
-## C-08: Empirical Scale-Flow Convergence onto d_s* = 1.00 Across 2,630 SPARC RAR Points and 139,027 KiDS 1-Mpc Lenses (`VERIFIED` / `NEW-COMPUTATION`)
+- **C-10 (Spherical Bogoliubov-p-Laplacian BVP Solver)** -- `COMPUTED (BVP-SOLVER)`
+  - *Computation & Inputs:* For chosen inputs `xi_coh = 0.20 kpc` (`m_B = 3.8556e-23 eV`) and `f_B = 0.025` (`f_B < 0.20` is a simple rule-of-thumb check against Kobayashi et al. 2017, PRD 96, 123514, not a forest transfer-function solve), solves `-(xi_coh^2/r)(u'' - u' - 2u) + u^2/a_0 = r^2 g_N(r)` across 1 AU to 1 Mpc (`g_ph/g_N = 1.175e-7` at 20 kAU; `99.994%` recovery of deep-MOND limit at 100 kpc).
+  - *Lean Arithmetic Lemma:* None.
 
-- **Evaluation (`wave3_empirical_audit.py` -> `fit_1_sparc_rar_spectral_dimension`, `fit_2_scale_flow_and_btfr`, `fit_3_cosmic_efe_bound`):**
-  1. On the 14 empirical SPARC RAR bins (2,630 points), joint profile likelihood gives $\hat{d}_s = 0.94 \pm 0.02$ ($\hat{a}_0 = 1.2525 \times 10^{-10}\text{ m/s}^2$; canonical $d_s = 1.0$ gives $\hat{a}_0 = 1.1793 \times 10^{-10}\text{ m/s}^2$), rejecting Newtonian no-DM ($\chi^2 = 31,125.1$) and rejecting frozen $d_s = 0.75$ by $\Delta\chi^2 = +73.84$.
-  2. Splitting inner kinematic SPARC bins ($10\text{--}30\text{ kpc}$, $\hat{\beta} = 3.83 \iff d_s^{\text{eff}} = 0.915$) from outer KiDS-1000 spherical weak-lensing bins ($50\text{--}1000\text{ kpc}$, unconstrained fit $\hat{\beta} = 4.00 \iff d_s^{\text{IR}} = 1.00$, $\chi^2 = 0.634$ for 2 dof) shows direct convergence onto the $d_s^* = 1$ infrared fixed point once finite-disk geometry and UV crossover vanish, while rejecting coordinate-fractal $D_f = 2$ by $\Delta\text{BIC} = +402.59$ and $d_s = 0.75$ ($\beta = 3.5$) by $\Delta\text{BIC} = +9.10$.
-  3. Comparing KiDS $V_{\text{flat}}(50\text{--}300\text{ kpc})$ vs. $V_{\text{flat}}(50\text{--}1000\text{ kpc})$ bounds the cosmic external field around isolated lenses to $e_{\text{cosmic}} = g_{\text{ext}} / a_0 \le 0.0160$ (95% CL; $R_{\text{EFE}}(L_*) \ge 521.8\text{ kpc}$).
+- **C-11 (Relativistic-Freeze-Out Sterile Fermion Audit)** -- `COMPUTED (KNOWN-FRAMEWORK)`
+  - *Computation & Inputs:* For `g_F = 2` saturating `Omega_F h^2 = 0.117` via `(g_F/2)(T_F/T_nu)^3(m_F / 93.14 eV) = 0.117`, computes required `T_F/T_nu`, `g_*S,dec = 10.75/(T_F/T_nu)^3`, BBN `Delta N_eff^BBN = (g_F/2)(T_F/T_nu)^4`, UV photon ratio `rho_F/rho_gamma = (7/8)(4/11)^(4/3) Delta N_eff^BBN` (with the `7/8` fermionic factor), and non-relativistic redshift `z_nr` at `m_F = 3, 11, 35 eV` (`Delta N_eff^BBN = 5.584, 0.988, 0.211`; `z_nr = 3.69e3, 2.09e4, 9.77e4 > z_rec = 1100`). Shows `3` and `11 eV` fail BBN `Delta N_eff` (`3 eV` also needs `g_*S,dec = 2.96 < 10.75`), while all three are non-relativistic by recombination and excluded by warm-DM free-streaming (`m_WDM >= 3 keV`).
+  - *Lean Arithmetic Lemma:* None.
 
-## C-12: Cross-Scale Generalized Flux-Phase Ladder & Spin-1 vs Spin-2 Dichotomy (`PROVEN` / `VERIFIED`)
+## Wave 5: Force-Scale & Stochastic QM Checks (`wave5_unified_forces_stochastic_qm.py`)
 
-- **Statement:** Cross-Scale Generalized Flux-Phase Ladder ($\gamma_F \in \{-2, -1, 0\}$ placing galactic $d_s=1$ at the exact midpoint between 3D Coulomb/Newton $-2$ and 1D Cornell QCD vortex tubes $0$) and the Spin-1 vs. Spin-2 Charge-Neutrality Dichotomy resolved via the Bern-Carrasco-Johansson Double Copy (`Gravity = Gauge x Gauge`).
-- **Verification:** Verified in `formal/Wave5StochasticForces.lean` and `results/wave5_forces_stochastic_certificates.json` (SHA-256: `923d85f100f34ef2f320724af5264243d29018f8981c7cfdc537393bc3ed013b`).
-- 
+- **C-12 (Force-Law Exponent Comparison)** -- `COMPUTED (KNOWN-FRAMEWORK) / CONJECTURE`
+  - *Computation:* Textbook Cornell string tension `sigma = 0.18 GeV^2` -> `1.4615e5 N` (Eichten et al. 1978) gives log-slopes `-1.9129` (`0.05 fm`) and `-0.0470` (`2.0 fm`). Does not derive galactic phonons or the BCJ double copy (Bern, Carrasco & Johansson 2008/2010).
+  - *Lean Arithmetic Lemma (`PROVEN (ARITHMETIC-LEMMA)` in `formal/Wave5StochasticForces.lean`):* `claim_c12_log_slope_relation` checks `-2 + 0 = 2 * (-1)` and `-2 < -1 < 0`.
 
-## C-13: Universal Vacuum-Gap Critical Acceleration Law (`NEW-COMPUTATION` / `CONJECTURE`)
+- **C-13 (Compton & Horizon Accelerations)** -- `COMPUTED (KNOWN-FRAMEWORK) / CONJECTURE`
+  - *Computation:* Evaluates `a = c^2 / L_gap` at `m_W`, `sqrt(sigma_QCD)`, and `a_dS = c H_0 / (2*pi) = 1.0422e-10 m/s^2` (Milgrom 1983). Hypothetical dark SU(2) `alpha_UV = 0.00603` vs. QCD `0.02003` (ratio `3.322`) is an algebraic one-loop inversion; no dark beta-function is integrated.
+  - *Lean Arithmetic Lemma:* None (`formal/Wave5StochasticForces.lean` has no C-13 theorem).
 
-- **Statement:** Universal Vacuum-Gap Critical Acceleration Law $a_{\text{crit}} = c^2 / L_{\text{gap}}$ spanning Electroweak Higgs ($3.66\times 10^{34}\text{ m/s}^2$), Confined QCD ($1.93\times 10^{32}\text{ m/s}^2$), and Cosmic de Sitter / RAR $a_0$ ($1.04\times 10^{-10}\text{ m/s}^2 = 0.87\,a_0$), with the $1.85\times 10^{42}$ QCD-to-$a_0$ hierarchy generated exponentially from an $O(1)$ Planck-scale gauge-coupling ratio ($\alpha_{\text{UV}}^{\text{QCD}} / \alpha_{\text{UV}}^{\text{dark}} = 3.323$) via dimensional transmutation.
-- **Verification:** Verified in `formal/Wave5StochasticForces.lean` and `results/wave5_forces_stochastic_certificates.json` (SHA-256: `923d85f100f34ef2f320724af5264243d29018f8981c7cfdc537393bc3ed013b`).
-- 
-## C-14: Equivalence-Principle Mass-Scaling No-Go Theorem (`PROVEN` / `NEW-COMPUTATION`)
+- **C-14 (Diffusivity Mass Ratio `m / m_e` vs. Gravitational WEP)** -- `COMPUTED (MASS-RATIO ARITHMETIC)`
+  - *Computation:* `m(25 kDa) / m_e = 4.5572e7` is a particle mass ratio showing only that `D_ext = const` differs from `D_QM = hbar / (2m)` across electrons and 25 kDa oligoporphyrins (Fein et al. 2019, Nature Physics 15, 1242 measured interference fringes, not WEP violation; cf. Calogero 1997, PLA 228, 335). True gravitational WEP bounds are Eot-Wash `eta = (0.3 +/- 1.8)e-13` (Wagner et al. 2012) and MICROSCOPE `eta = (-1.5 +/- 2.7)e-15` (Touboul et al. 2022).
+  - *Lean Arithmetic Lemma (`PROVEN (ARITHMETIC-LEMMA)` in `formal/Wave5StochasticForces.lean`):* `claim_c14_mass_ratio_bound` checks `45570000 * 91095 < 415125 * 10^7`.
 
-- **Statement:** Equivalence-Principle Mass-Scaling No-Go Theorem proving passive gravitational N-body tremors ($\mathcal{D} \propto m^0$) fail 25 kDa macromolecule interferometry (Fein et al. 2019) by $> 4.557\times 10^7\times$ (and Calogero 1997 cosmic N-body scaling fails by $3.08\times 10^{11}\times$).
-- **Verification:** Verified in `formal/Wave5StochasticForces.lean` and `results/wave5_forces_stochastic_certificates.json` (SHA-256: `923d85f100f34ef2f320724af5264243d29018f8981c7cfdc537393bc3ed013b`).
+- **C-15 (Nelson Diffusion Simulation)** -- `COMPUTED (KNOWN-FRAMEWORK)`
+  - *Computation:* Seeded (`20261111`) harmonic-oscillator check (`heating_ratio = 6.263`, stationary `Var(x) = 0.4961` vs. `0.5`) illustrating established results of Nelson (1966, Phys. Rev. 150, 1079), Abbott & Wise (1981, AJP 49, 37), and Wallstrom (1994, PRA 49, 1613).
+  - *Lean Arithmetic Lemma:* None (`formal/Wave5StochasticForces.lean` has no C-15 theorem).
 
-## C-15: Time-Symmetric Nelson Stochastic Diffusion (`PROVEN` / `VERIFIED`)
+- **C-16 (Bell-CHSH Literature Benchmark)** -- `KNOWN-LITERATURE-VALUE`
+  - *Context:* Records Hensen et al. (2015, Nature 526, 682) `S = 2.42 +/- 0.20` above `2` and below Tsirelson's `2*sqrt(2) = 2.828427`. Tests quantum spin entanglement, **not** classical galactic N-body noise or dark-matter halos.
+  - *Lean Arithmetic Lemma (`PROVEN (ARITHMETIC-LEMMA)` in `formal/Wave5StochasticForces.lean`):* `claim_c16_bell_chsh_bounds` checks `4 * 2500 < 14641 /\ (4 : Int) < 8`.
 
-- **Statement:** Time-Symmetric Nelson Stochastic Diffusion (conserving ground-state $\langle x^2 \rangle = 0.496 \approx 0.5$, Cramér-Rao Heisenberg product $\Delta x\Delta p_u = \hbar/2$, $D_H = 2$ paths, and exact Bohmian quantum potential) vs. `6.26x` secular heating from unbalanced external kicks, with Onsager-Feynman condensate phase winding $\oint\nabla\theta\cdot dl = 2\pi k$ resolving Wallstrom's (1994) quantization objection.
-- **Verification:** Verified in `formal/Wave5StochasticForces.lean` and `results/wave5_forces_stochastic_certificates.json` (SHA-256: `923d85f100f34ef2f320724af5264243d29018f8981c7cfdc537393bc3ed013b`).
+- **C-17 (Solar-Circle Epicyclic Scale & Thin-Disk Quadrupole)** -- `COMPUTED (KNOWN-FRAMEWORK)`
+  - *Computation:* Evaluates `lambda_epi = sigma_R / kappa = 0.8604 kpc` and classical quadrupole decay `(3/2)(R_b/r)^2 g_N(r)` (`1.3231e-3` at `100 kpc`, `1.3231e-5` at `1 Mpc` vs. RAR boost `119.79`). Batygin (2018, MNRAS 475, 5070) applies to quasi-Keplerian disks, not outer galactic halos.
+  - *Lean Arithmetic Lemma:* None (`formal/Wave5StochasticForces.lean` has no C-17 theorem).
 
-## C-16: Bell-CHSH Non-Locality Theorem (`PROVEN` / `VERIFIED`)
+## Wave 6: Algebraic Re-Parameterizations & Potential Ansatz (`wave6_convergence_unification.py`)
 
-- **Statement:** Bell-CHSH Non-Locality Theorem ($S_{\text{Hensen}}^2 = (121/50)^2 = 14641/2500 > 4$ and Tsirelson $8 > 4$) eliminating all local 3D N-body hidden perturbation baths in favor of configuration-space condensate coherence or `ER = EPR` entanglement connectivity.
-- **Verification:** Verified in `formal/Wave5StochasticForces.lean` and `results/wave5_forces_stochastic_certificates.json` (SHA-256: `923d85f100f34ef2f320724af5264243d29018f8981c7cfdc537393bc3ed013b`).
+- **C-18 (Milgrom Horizon Acceleration & MOND Radius Identity)** -- `COMPUTED (KNOWN-FRAMEWORK) / CONJECTURE`
+  - *Computation:* `a_dS = c H_0 / (2*pi) = 1.0422e-10 m/s^2` is Milgrom's (1983) relation and `8.9580 kpc` is `r_M = sqrt(G M_b / a_dS)` for `6e10 M_sun`. `hbar` cancels by definition of `N_fil`; `1.815e-16` is float64 rounding; `d_s = 1.0` is postulated (no percolation calculation exists).
+  - *Lean Arithmetic Lemma (`PROVEN (ARITHMETIC-LEMMA)` in `formal/Wave6Convergence.lean`):* `c18_hbar_cancels_identically` checks commutative-ring rearrangement over `Int`.
 
-## C-17: Batygin (2018) Secular Astrophysical Disk Schrödinger Evolution (`PROVEN` / `NEW-COMPUTATION`)
+- **C-19 (Handwritten Potential-Depth Threshold Ansatz)** -- `CONJECTURE / PHENOMENOLOGICAL-ANSATZ`
+  - *Computation:* Places `Phi_crit/c^2 = 8.0e-6` by hand between logarithmic MOND galaxy potentials (`1.8658e-6` at `10 kpc`, Keplerian `2.8712e-7` at `1 Mpc`, `6.4938e-6` for `300 km/s`) and an isothermal Bullet Cluster potential (`6.8527e-5` at `250 kpc`, quotients `36.73` and `238.67`; cf. Berezhiani & Khoury 2015; Hodson et al. 2017). `388.1 km/s` solves `2*(sigma/c)^2*(1 + ln 4) = 8.0e-6`; `Delta N_eff = 0.0` is assumed via a non-thermal `T = 0` condensate.
+  - *Lean Arithmetic Lemma (`PROVEN (ARITHMETIC-LEMMA)` in `formal/Wave6Convergence.lean`):* `c19_potential_depth_clean_window` checks `29 < 187 < 650 < 800`, `8*800 < 6852`, `36*187 < 6852`, `236*29 < 6852`.
 
-- **Statement:** Batygin (2018) Secular Astrophysical Disk Schrödinger Evolution ($\lambda_{\text{epi}} = \sigma_R/\kappa = 0.860\text{ kpc}$) vs. Newton's 3rd-Law Virial Quadrupole Falloff ($1.32\times 10^{-5}\,g_N$ at $1\text{ Mpc}$ vs. $119.8\times$ RAR boost), proving outer halo flatness still requires the space-filling $d_s=1$ condensate.
-- **Verification:** Verified in `formal/Wave5StochasticForces.lean` and `results/wave5_forces_stochastic_certificates.json` (SHA-256: `923d85f100f34ef2f320724af5264243d29018f8981c7cfdc537393bc3ed013b`).
-## C-18: Horizon-Pixel Vortex Percolation (`PROVEN` / `NEW-COMPUTATION`)
+- **C-20 (Algebraic Cancellation in `D_1 / N_fil`)** -- `COMPUTED (ALGEBRAIC-IDENTITY) / CONJECTURE`
+  - *Computation:* `m` and `R_H(z)` cancel by definition of `N_fil = 2*pi*m*c*R_H(z)/hbar`. Not a redshift calculation, and `2.341e-16` is float64 rounding rather than an Eotvos WEP parameter `eta`.
+  - *Lean Arithmetic Lemma (`PROVEN (ARITHMETIC-LEMMA)` in `formal/Wave6Convergence.lean`):* `c20_centroid_diffusion_epoch_and_mass_invariant` checks `(piVal * c * RH * hbar) * (2 * m) = (2 * piVal * m * c * RH) * hbar`.
 
-- **Statement:** Horizon-pixel vortex percolation ($a_{\text{dS}} = c H_0 / 2\pi = 1.0422\times 10^{-10}\text{ m/s}^2$, $l^*_{\text{percolation\_radius}} = 8.958\text{ kpc}$, Kelvin vortex mode spectral dimension $d_s = 1.0$, max $\hbar$-cancellation identity relative error $1.815\times 10^{-16}$).
-- **Verification:** Verified in `formal/Wave6Convergence.lean`.
+## Wave 7: Empirical Group & Cluster Curve Fit (`wave7_group_cluster_threshold_audit.py`)
 
-## C-19: Potential-Depth Roton-Dust Unification (`PROVEN` / `NEW-COMPUTATION`)
+- **C-21 (Multi-Catalog 3-Parameter Saturation Fit Across 126 Systems)** -- `EMPIRICAL-FIT`
+  - *Computation:* Fits `(sigma_crit, sigma_half, R_sat)` across 126 systems (SPARC, Mistele et al. 2024 KiDS WL, Milgrom 2019 groups, Angus et al. 2008 X-ray, Kettula et al. 2015 WL+X-ray; cf. Sanders 2003; Tian et al. 2020; Li et al. 2024). Gradual onset near `sigma_crit = 190-195 km/s` is preferred over a sharp `388.1 km/s` step (`Delta chi^2 = 15.36` on the 60-system zero-covariance subset; `19.43` on `150-1200 km/s`), with 50% midpoint `372.2 km/s` (`199.1 km/s` on `150-1200 km/s`).
+  - *Lean Arithmetic Lemma (`PROVEN (ARITHMETIC-LEMMA)` in `formal/Wave7ThresholdAudit.lean`):* Checks `152 < 190 < 283 < 388` and `365^2 < 190^2 + 320^2 < 390^2`.
 
-- **Statement:** Potential-depth roton-dust unification resolving C-04 (thermal phase-space density re-scoped to potential-depth) and C-11 (early universe $T=0$ condensate with $\Delta N_{\text{eff}} = 0$), galactic roton contamination $0.0\%$, cluster-to-$L^*$ gap ratio up to $238.67$, with falsifiable group/cluster onset prediction $\sigma_{1\text{D}} \sim 388.1\text{ km/s}$ ($|\Phi|/c^2 = 8.0\times 10^{-6}$ threshold).
-- **Verification:** Verified in `formal/Wave6Convergence.lean`.
+- **C-22 (Core Plateau vs. Unsaturated `(sigma^2 - sigma_crit^2)^(3/2)` Growth)** -- `EMPIRICAL-FIT`
+  - *Computation:* Unsaturated `(sigma^2 - sigma_crit^2)^(3/2)` growth fails on `9-14 keV` WL clusters (`Delta chi^2 = 153.20` on `150-1200 km/s`), whereas core mass ratios plateau around `R_sat = 3.7-4.2` below cosmic `Omega_m / Omega_b = 6.39`.
+  - *Lean Arithmetic Lemma (`PROVEN (ARITHMETIC-LEMMA)` in `formal/Wave7ThresholdAudit.lean`):* Checks `11 * (1000^2 - 388^2)^3 < (1494^2 - 388^2)^3` and `(x + s) + (rSat - 1)*x < rSat*(x + s)` (`0 < s`, `1 < rSat`).
 
-## C-20: 1/N_fil Centroid Diffusion & Mass Invariance (`PROVEN` / `NEW-COMPUTATION`)
+## Wave 9: Two-Branch Phonon-Dust Crossover & AeST Oscillation Bounds (`wave9_scale_convergence_audit.py`)
 
-- **Statement:** $1/N_{\text{fil}}$ centroid diffusion resolving C-14 (WEP mass scaling relative error $2.341\times 10^{-16}$) and $d\hbar/dt = 0$ redshift constancy ($\text{centroid\_filament\_hbar\_over\_hbar0} = 1.0$ across $z = 0, 3, 1100, 10^9$).
-- **Verification:** Verified in `formal/Wave6Convergence.lean`.
-## C-21: Stratified Group-to-Cluster Roton-Threshold Refinement (`PROVEN` / `NEW-COMPUTATION`)
+- **C-23 (Phonon-Dust Baryonic-Acceleration Crossover, CLASH/X-COP Scale Dependence & 1-Parameter Jeans Fit)** -- `COMPUTED (KNOWN-FRAMEWORK) & EMPIRICAL-FIT`
+  - *Computation & External Inputs:* Evaluates an additive two-branch acceleration `g_tot(r) = g_RAR(g_b; a_0) + f_trap(sigma) * R_cdm_to_bar * g_b(r)` motivated by relativistic two-branch superfluid/AeST completions (Berezhiani & Khoury 2015, arXiv:1507.01019; Skordis & Zlosnik 2021, PRL 127, 161302, arXiv:2007.00082) using fixed `a_0 = 1.20e-10 m/s^2` (Lelli et al. 2017) and Planck 2018 `Omega_c / Omega_b = 5.3895`.
+    1. *Crossover (`COMPUTED`):* `g_RAR(g_b) - g_b = 5.3895 * g_b` occurs at `g_b,x = 0.02897 a_0 = 3.476e-12 m/s^2` (`r_x = 5.88 r_M = 49.05 kpc` for `6e10 M_sun` vs. `1001.2 kpc` for a `2.5e13 M_sun` cluster). At `1 Mpc` around isolated KiDS-1000 galaxies (Mistele et al. 2024), phonon acceleration exceeds the entire `5.39 M_b` cosmic dust budget by `12.24x` to `47.87x` (`<= 3.95%` circular-velocity shift even if `f_trap = 1`), whereas at `250 kpc` inside rich clusters (`g_b ~ 0.3-1.5 a_0 >> g_b,x`), cosmic dust exceeds phonon boost by `3x-5x`.
+    2. *CLASH vs. X-COP Apparent `g_ddag` (`COMPUTED`, zero fitted parameters):* Evaluating `g_RAR(g_b; a_0) + 5.3895 g_b` yields apparent `g_ddag = 2.049e-9 m/s^2` (log-slope `0.891`) at `g_b = 4.0e-11 m/s^2` vs. Tian et al. (2020, ApJ 896, 70) `(2.02 +/- 0.11)e-9 m/s^2`, `g_ddag = 1.062e-9 m/s^2` (log-slope `0.845`) at `g_b = 1.6e-11 m/s^2` vs. Pradyumna et al. (2021, PDU 31, 100765) `(1.12 +/- 0.11)e-9 m/s^2`, and `0.412e-9 m/s^2` at `g_b = 3.0e-12 m/s^2` (cf. Eckert et al. 2022, A&A 662, A123).
+    3. *1-Parameter Virial Jeans Fit (`EMPIRICAL-FIT`, `k = 1`):* Using unsegregated global `Omega_c/Omega_b = 5.39` at `250 kpc` underpredicts cluster cores (`chi^2 = 112.38` on `N = 60`); adopting the published Chandra `R_2500` intracluster gas-depletion factor `f_b,2500 = 0.105` (Vikhlinin et al. 2006, ApJ 640, 691, giving `(1 - f_b,2500)/f_b,2500 = 8.5238`) and fitting one Jeans dispersion `sigma_J = 190 km/s` in `f_trap = max(0, 1 - sigma_J^2 / sigma^2)` gives `chi^2 = 60.07` (`59 dof`, `BIC = 64.17` vs. Wave-7 3-parameter `BIC = 70.27`, `Delta BIC = -6.10` on `N = 60`; `BIC = 152.97` vs. `156.83`, `Delta BIC = -3.86` on `N = 126` at `sigma_J = 180 km/s`). *Open theoretical problem (`CONJECTURE`):* deriving late-time `sigma_J ~ 180-190 km/s` from a covariant condensate action without linear `P(k)` damping at `z >= 1` remains unsolved.
+  - *Lean Arithmetic Lemma:* None.
 
-- **Statement:** Radial halo stratification splits the group/cluster roton onset into an incipient central-core onset $\sigma_{\text{crit}} = 190.0\text{ km/s}$ (95% CI [165, 265] km/s; $\Delta\chi^2 = -15.36$ over single-zone M2) and a 50% full-halo midpoint $\sigma_{50\%} = 372.2\text{ km/s}$ (within 4.1% of Wave-6 $388.1\text{ km/s}$), rejecting pure universal $a_0$-MOND at $>32\sigma$ ($\Delta\chi^2 = +1030.2$).
-- **Verification:** Verified in `formal/Wave7ThresholdAudit.lean` and `results/wave7_group_cluster_certificates.json` (SHA-256: `973d6f1d5691ecd022a6d1a66d87ab8eadce088df14e61f985e6779967889710`).
-
-## C-22: Cosmic Turnaround Mass-Conservation Supply Cap (`PROVEN` / `NEW-COMPUTATION`)
-
-- **Statement:** Unbounded local Thomas-Fermi roton condensation ($\Delta R \sim \Delta\Phi^{3/2}$) blows up in 8-14 keV weak-lensing clusters ($\Delta\chi^2 = +153.2$, $>12\sigma$) and is canonically regulated by cosmic turnaround mass conservation $M_{\text{tot}}/M_{\text{bar}} \le \Omega_m/\Omega_b = 6.39$ ($250\text{ kpc}$ plateau $R_{\text{sat}} = 3.70\text{--}4.20$).
-- **Verification:** Verified in `formal/Wave7ThresholdAudit.lean` and `results/wave7_group_cluster_certificates.json` (SHA-256: `973d6f1d5691ecd022a6d1a66d87ab8eadce088df14e61f985e6779967889710`).
+- **C-24 (Quasistatic AeST Linear Mass-Term Oscillation Bound)** -- `COMPUTED (KNOWN-FRAMEWORK)`
+  - *Computation & Inputs:* Evaluates the Verwayen, Skordis & Boehm (2024, MNRAS 531, 272, arXiv:2304.05134, Eq. 35 & 50) quasistatic AeST breakdown radius `r_C^(max) = (18 r_M / mu^2)^(1/3)` (cf. Mistele, McGaugh & Hossenfelder 2023, arXiv:2301.03499). Requiring `r_C^(max) >= 1.0 Mpc` across the Mistele et al. (2024) KiDS-1000 bins forces `mu^(-1) >= 2.579 Mpc` (`L*`) to `3.774 Mpc` (Bin 1), which sets `r_C^(max) >= 2.733 Mpc >> 0.25 Mpc` for a `2.5e13 M_sun` cluster -- ruling out static linear `+mu^2 Phi` terms as the source of `250 kpc` cluster missing mass.
+  - *Lean Arithmetic Lemma:* None.

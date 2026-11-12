@@ -25,19 +25,26 @@ PROBES = {
 }
 # Environment labels do not describe a scientific result. All other keys count.
 ENVIRONMENT_KEYS = {'numpy_version', 'sympy_version', 'python_version', 'python_executable'}
-# These five residuals measure agreement of a finite-displacement Hessian with
-# C.T @ C, not physical observables. At epsilon=1e-4 the symmetric difference
-# has truncation and platform rounding error. Use the original probe's strict
-# acceptance bound for both regenerated and saved residuals.
-HESSIAN_RESIDUAL_LOCATIONS = {
-    f'robustness/results.json.mechanics.rows[{index}].energy_hessian_discrepancy'
-    for index in range(5)
+# Only these six finite-difference diagnostics use original native accuracy
+# bounds instead of comparing platform-dependent cancellation error digits.
+# All other error curves, variances, observables and residuals remain strict.
+DIAGNOSTIC_LIMITS = {
+    **{f'robustness/results.json.mechanics.rows[{index}].energy_hessian_discrepancy': 3e-8
+       for index in range(5)},
+    'robustness/results.json.aest_current.maximum_absolute_component_error': 1e-7,
 }
-HESSIAN_RESIDUAL_LIMIT = 3e-8
 
 
 def compare(actual, expected, location):
-    if isinstance(expected, dict):
+    if location in DIAGNOSTIC_LIMITS:
+        limit = DIAGNOSTIC_LIMITS[location]
+        for value in (actual, expected):
+            assert isinstance(value, (float, int)) and not isinstance(value, bool), (location, value)
+            assert math.isfinite(value) and 0 <= value < limit, (location, value)
+        return
+    if isinstance(expected, bool):
+        assert isinstance(actual, bool) and actual == expected, (location, actual, expected)
+    elif isinstance(expected, dict):
         assert isinstance(actual, dict) and actual.keys() == expected.keys(), location
         for key in expected:
             if key not in ENVIRONMENT_KEYS:
@@ -49,11 +56,7 @@ def compare(actual, expected, location):
     elif isinstance(expected, (float, int)) and not isinstance(expected, bool):
         assert isinstance(actual, (float, int)) and not isinstance(actual, bool), location
         assert math.isfinite(actual) and math.isfinite(expected), location
-        if location in HESSIAN_RESIDUAL_LOCATIONS:
-            assert 0 <= actual < HESSIAN_RESIDUAL_LIMIT, (location, actual)
-            assert 0 <= expected < HESSIAN_RESIDUAL_LIMIT, (location, expected)
-        else:
-            assert math.isclose(actual, expected, rel_tol=1e-9, abs_tol=1e-12), (location, actual, expected)
+        assert math.isclose(actual, expected, rel_tol=1e-9, abs_tol=1e-12), (location, actual, expected)
     else:
         assert actual == expected, (location, actual, expected)
 

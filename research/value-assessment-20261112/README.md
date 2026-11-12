@@ -101,7 +101,7 @@ The focused workflow runs this bundle's checks. The repository's broad `lake bui
 
 Companion notes: [fractals](https://github.com/Foundation-0/fractals/tree/aeva/research-value-assessment-20261112/research/value-assessment-20261112), [physics0](https://github.com/Foundation-0/physics0/tree/aeva/research-value-assessment-20261112/research/value-assessment-20261112), and [astr0](https://github.com/Foundation-0/astr0/tree/aeva/research-value-assessment-20261112/research/value-assessment-20261112).
 
-The earlier companions are [fractals PR 4](https://github.com/Foundation-0/fractals/pull/4), [physics0 PR 8](https://github.com/Foundation-0/physics0/pull/8), and [astr0 PR 9](https://github.com/Foundation-0/astr0/pull/9).
+The earlier companions are [fractals PR 52](https://github.com/Foundation-0/fractals/pull/52), [physics0 PR 16](https://github.com/Foundation-0/physics0/pull/16), and [astr0 PR 5](https://github.com/Foundation-0/astr0/pull/5).
 
 ## Independent review and publication changes
 

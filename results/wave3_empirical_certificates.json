@@ -1,14 +1,24 @@
 {
-  "schema": "FOUNDATION-0/GRAVITY-WAVE3-EMPIRICAL/1.0",
+  "schema": "FOUNDATION-0/GRAVITY-WAVE3-EMPIRICAL/1.1",
   "datasets": {
-    "sparc_rar_url": "https://astroweb.cwru.edu/SPARC/RARbins.mrt",
-    "kids_weak_lensing_url": "https://arxiv.org/html/2406.09685v1"
+    "sparc_rar_source": "Lelli, McGaugh, Schombert & Pawlowski (2017, ApJ 836, 152), RARbins.mrt (14 bins, 2,630 points)",
+    "kids_wl_source": "Mistele, McGaugh, Lelli, Schombert & Li (2024, ApJL 969, L3; arXiv:2406.09685, Sec. II & Table 2)",
+    "kids_isolated_lens_counts_by_mass_bin": [
+      52553,
+      43727,
+      22950,
+      9797
+    ],
+    "kids_isolated_lens_total": 129027,
+    "hubble_constant_convention_note": "Mistele et al. (2024) adopt H0 = 73.0 km/s/Mpc for lens distances and stellar masses, whereas Planck 2018 H0 = 67.4 km/s/Mpc is used when evaluating a_dS = c*H0/(2*pi) elsewhere."
   },
-  "fit_1_sparc_rar_2630_points": {
-    "n_rotation_points": 2630,
-    "n_bins": 14,
+  "fit_1_sparc_rar_14_bins": {
+    "epistemic_status": "EMPIRICAL-FIT (KNOWN-RAR-INTERPOLATOR)",
+    "methodology_caveat": "Fit to 14 published RARbins.mrt bin means using sem = sd/sqrt(N), which treats radial points within the same galaxy as independent; joint minimum is d_s = 0.94, not 1.00.",
+    "n_rotation_points_summarized": 2630,
+    "n_bins_fitted": 14,
     "newtonian_no_dm_chi2": 31125.1,
-    "fixed_ds1_best_a0_1e10_m_s2": 1.1793,
+    "fixed_ds1_best_a0_1e10_m_s2": 1.179,
     "fixed_ds1_chi2": 30.486,
     "constitutive_ds075_chi2": 104.323,
     "delta_chi2_ds075_vs_ds1": 73.837,
@@ -17,8 +27,8 @@
       0.92,
       0.96
     ],
-    "joint_best_a0_1e10_m_s2": 1.2525,
-    "joint_min_chi2": 25.892,
+    "joint_best_a0_1e10_m_s2": 1.253,
+    "joint_min_chi2": 25.89,
     "profile_scan": [
       {
         "d_s": 0.4,
@@ -29,74 +39,75 @@
       {
         "d_s": 0.55,
         "implied_btfr_slope": 3.1,
-        "profiled_a0_1e10_m_s2": 2.424,
+        "profiled_a0_1e10_m_s2": 2.423,
         "chi2_14bins": 472.451
       },
       {
         "d_s": 0.7,
         "implied_btfr_slope": 3.4,
-        "profiled_a0_1e10_m_s2": 1.742,
-        "chi2_14bins": 159.878
+        "profiled_a0_1e10_m_s2": 1.744,
+        "chi2_14bins": 159.874
       },
       {
         "d_s": 0.75,
         "implied_btfr_slope": 3.5,
-        "profiled_a0_1e10_m_s2": 1.6045,
+        "profiled_a0_1e10_m_s2": 1.604,
         "chi2_14bins": 104.323
       },
       {
         "d_s": 0.85,
         "implied_btfr_slope": 3.7,
-        "profiled_a0_1e10_m_s2": 1.39,
-        "chi2_14bins": 41.78
+        "profiled_a0_1e10_m_s2": 1.392,
+        "chi2_14bins": 41.771
       },
       {
         "d_s": 0.94,
         "implied_btfr_slope": 3.88,
-        "profiled_a0_1e10_m_s2": 1.2525,
-        "chi2_14bins": 25.892
+        "profiled_a0_1e10_m_s2": 1.253,
+        "chi2_14bins": 25.89
       },
       {
         "d_s": 1.0,
         "implied_btfr_slope": 4.0,
-        "profiled_a0_1e10_m_s2": 1.181,
-        "chi2_14bins": 30.495
+        "profiled_a0_1e10_m_s2": 1.179,
+        "chi2_14bins": 30.486
       },
       {
         "d_s": 1.15,
         "implied_btfr_slope": 4.3,
-        "profiled_a0_1e10_m_s2": 1.038,
-        "chi2_14bins": 77.712
+        "profiled_a0_1e10_m_s2": 1.037,
+        "chi2_14bins": 77.708
       },
       {
         "d_s": 1.3,
         "implied_btfr_slope": 4.6,
-        "profiled_a0_1e10_m_s2": 0.9335,
-        "chi2_14bins": 156.316
+        "profiled_a0_1e10_m_s2": 0.936,
+        "chi2_14bins": 156.292
       },
       {
         "d_s": 1.45,
         "implied_btfr_slope": 4.9,
-        "profiled_a0_1e10_m_s2": 0.862,
-        "chi2_14bins": 250.749
+        "profiled_a0_1e10_m_s2": 0.86,
+        "chi2_14bins": 250.726
       },
       {
         "d_s": 1.6,
         "implied_btfr_slope": 5.2,
-        "profiled_a0_1e10_m_s2": 0.8015,
-        "chi2_14bins": 352.035
+        "profiled_a0_1e10_m_s2": 0.802,
+        "chi2_14bins": 352.036
       },
       {
         "d_s": 1.75,
         "implied_btfr_slope": 5.5,
-        "profiled_a0_1e10_m_s2": 0.7575,
-        "chi2_14bins": 455.056
+        "profiled_a0_1e10_m_s2": 0.755,
+        "chi2_14bins": 454.999
       }
     ]
   },
-  "fit_2_scale_flow_and_btfr": {
-    "regime_progression_inner_to_1Mpc": {
-      "inner_SPARC_kinematic_10_30kpc": {
+  "fit_2_btfr_sparc_and_kids": {
+    "methodology_caveat": "Fits 8 SPARC kinematic BTFR bins and 4 stacked KiDS WL BTFR bins (0.02 dex assumed centroid mass error in standalone WL fit; 0.10 dex M*/L systematic in 12-bin fit). Combined free slope is beta = 3.83 with delta_BIC(free - beta=4) = -0.44.",
+    "separate_sample_fits": {
+      "SPARC_kinematic_BTFR_8bins": {
         "beta_slope": 3.83,
         "implied_effective_ds": 0.915,
         "intercept_A": 2.0378,
@@ -104,7 +115,7 @@
         "dof": 6,
         "BIC": 9.279
       },
-      "outer_KiDS_weak_lensing_50_1000kpc": {
+      "KiDS_weak_lensing_BTFR_4bins_1000kpc": {
         "beta_slope": 4.0,
         "implied_effective_ds": 1.0,
         "intercept_A": 1.6437,
@@ -190,5 +201,5 @@
     "cosmic_efe_95CL_upper_bound_gext_over_a0": 0.016,
     "min_EFE_horizon_for_Lstar_kpc": 521.8
   },
-  "sha256_canonical": "99c2440716205af3613eeb28ba09965d2c47f512ca9a65389d628fdcfc76e48f"
+  "sha256_canonical": "75f6df7cf8e64082a3d6097ddd4723b57ce87d75013d857f24447237b1856b93"
 }

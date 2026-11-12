@@ -49,4 +49,4 @@ All Python scripts use only the Python 3 standard library. Each certificate file
 
 ## AeST response benchmark in progress
 
-The [fixed action and protocol](research/aest-response-gate-20261112/protocol.md) defines the constraint and response checks for a Minkowski vacuum benchmark. Derivation and response checks are in progress. The protocol has not yet been independently reviewed.
+The [AeST response benchmark](research/aest-response-gate-20261112/README.md) constructs allowed field preparations on a specified expanding background and a flat-space control. It includes the canonical map, executable response checks and a bounded pressure-closure comparison. Independent review of the action expansion and constraint reduction is pending.

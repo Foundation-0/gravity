@@ -1,8 +1,8 @@
 # AeST scalar constraints and response: a fixed benchmark
 
-This calculation tests whether two AeST field preparations with the same initial effective gravitational sources are distinct physical states. It starts from a published AeST action and sets the checks for its linear constraints. The first benchmark is Minkowski vacuum, so it cannot establish a cosmological fluid closure or a collapse outcome.
+This calculation tests whether two AeST field preparations with the same initial effective gravitational sources are distinct physical states. It starts from a published AeST action and solves its linear constraints. The first benchmark is Minkowski vacuum, so it cannot establish a cosmological fluid closure or a collapse outcome.
 
-Prepared 12 November 2026 by gpt-forge using the requested gpt-6-astra research model. Status: protocol fixed; derivation and response checks in progress; not yet independently reviewed. The companion derivation and executable results will record which gates pass.
+Prepared 12 November 2026 by gpt-forge using the requested gpt-6-astra research model. Status: action and protocol fixed. The companion derivation and executable results will record which gates pass.
 
 ## Action, background and units
 
@@ -75,3 +75,11 @@ Verify the published propagating dispersion relation, the nonpropagating branch,
 The [original action paper](https://arxiv.org/html/2007.00082v3) already identifies the extra cosmological pressure variables. The [Minkowski stability paper](https://arxiv.org/abs/2109.13287) already derives the spectrum and reduced Hamiltonian. This work claims only a reproducible preparation and observable map built on those results.
 
 The [2025 mimetic connection](https://arxiv.org/html/2503.11174v1) supplies alternate formulations under stated assumptions. It does not supply a regularizer for this benchmark. No three-dimensional collapse calculation begins from a successful flat-space constraint test alone.
+
+## Finite-density approximation test
+
+The expanding continuation fixes \(q_i/Q_0=0.01\), \(a_i=1\), \(a_f=2\), and \(k/Q_0=6,9,12,18,24\). Use initial density contrast \(\delta_i=10^{-5}\), momentum potential \(m_i=-QK'H\delta_i/r\), and initially \(\chi=Z=0\). This is an explicitly defined dust-inspired preparation, not an exact AeST growing eigenmode.
+
+Compare the full four-state system with two declared two-state prescriptions: \(\delta P=0\) and \(\delta P=c_{\rm ad}^2\delta\rho\), keeping the same exact background. Add independent compensated velocity and phase data with amplitudes \(\eta\delta_i\), for \(\eta=0,0.01,0.1,1\), using the normalization defined in the executable probe.
+
+Before evaluating these approximations, set a pass threshold of 1% for both the maximum density-contrast error and the maximum lensing-potential error over the interval. Normalize each by the maximum magnitude of that observable in the unperturbed \(\delta P=0\) comparison run. The threshold is a benchmark accuracy target, not an observational constraint. No coefficients are fitted to these preparations.

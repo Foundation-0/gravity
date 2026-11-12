@@ -1,20 +1,42 @@
 {
-  "source_main": "364fa3e9f740f42acaa1991428ce043f547e10dd",
-  "stage": "protocol",
-  "files": [
+  "checked_on": "2026-11-12",
+  "scope": "Primary-source check for the specified AeST linear constraint and preparation calculation. Not a systematic review or novelty certification.",
+  "sources": [
     {
-      "path": "protocol.md",
-      "sha256": "4ca257a4c0084dca9abe3a8c91b06646d10189ce2d5a340e6e463b17716d05a8"
+      "id": "skordis_zlosnik_2021",
+      "title": "New Relativistic Theory for Modified Newtonian Dynamics",
+      "url": "https://arxiv.org/html/2007.00082v3",
+      "used_for": "Original action, homogeneous background, fluid definitions and pressure nonclosure. Equations 5 and 7-13.",
+      "boundary": "Displayed cosmological vector equation has no nonzero constant F_Y contribution; this benchmark derives the lambda_s=1 term directly. Published observational fits are not assigned to this benchmark."
+    },
+    {
+      "id": "skordis_zlosnik_2022",
+      "title": "Aether scalar tensor theory: Linear stability on Minkowski space",
+      "url": "https://arxiv.org/html/2109.13287v2",
+      "used_for": "Gauge transformations, quadratic scalar action, canonical constraints, reduced Hamiltonian and stability threshold. Equations 26-60.",
+      "boundary": "The mode spectrum and threshold are reproduced checks, not new findings."
+    },
+    {
+      "id": "bataki_skordis_zlosnik",
+      "title": "Aether scalar tensor theory: Hamiltonian Formalism",
+      "url": "https://arxiv.org/html/2307.15126v3",
+      "used_for": "Exact action, ADM momentum constraint, auxiliary variables, chosen function (84), and Minkowski canonical map (106-115).",
+      "boundary": "The finite-density quadratic expansion and response in this repository are author derivations awaiting independent review."
+    },
+    {
+      "id": "domenech_ganz_2025",
+      "title": "Connecting Relativistic MOND Theories with Mimetic Gravity",
+      "url": "https://arxiv.org/html/2503.11174v1",
+      "used_for": "Boundary check: alternate formulations do not supply the nonlinear caustic solution or a regularizer used here.",
+      "boundary": "No mimetic ultraviolet completion or entropy law is assumed."
     }
   ],
-  "primary_sources": [
-    "https://arxiv.org/html/2307.15126v3",
-    "https://arxiv.org/html/2007.00082v3",
-    "https://arxiv.org/abs/2109.13287",
-    "https://arxiv.org/html/2503.11174v1"
-  ],
-  "limits": [
-    "Derivation and executable response checks remain in progress.",
-    "No closure, cosmological fluid inference or collapse result established."
+  "new_calculation": [
+    "Explicit finite-density canonical map for the stated tracking branch",
+    "Gauge-distinct compensated preparations and their metric response",
+    "Second null preparation matching instantaneous pressure",
+    "Numerical transfer amplitudes, independent formulations and tolerance controls",
+    "Fixed-time zero-density limit with absolute versus contrast normalization",
+    "Unfitted two-variable closure errors for the stated preparation ensemble"
   ]
 }

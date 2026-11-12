@@ -1,26 +1,87 @@
 {
-  "schema": "FOUNDATION-0/GRAVITY-WAVE6-CONVERGENCE-UNIFICATION/1.0",
-  "claim_c18_horizon_pixel_vortex_percolation": {
+  "schema": "FOUNDATION-0/GRAVITY-WAVE6-CONVERGENCE-UNIFICATION/1.1",
+  "claim_c18_milgrom_radius_identity": {
+    "epistemic_status": "COMPUTED (ALGEBRAIC RE-PARAMETERIZATION OF MILGROM 1983) & CONJECTURE",
+    "caveat": "hbar cancels algebraically by definition of N_fil; 8.9580 kpc is the standard MOND radius r_M = sqrt(G*M_b/a_dS) for 6e10 M_sun; float64 residual is machine rounding.",
     "a_dS_cH0_over_2pi_m_s2": 1.0422e-10,
-    "max_hbar_cancellation_identity_rel_err": 1.815e-16,
-    "lstar_percolation_radius_kpc": 8.958,
-    "kelvin_vortex_mode_spectral_dimension_ds": 1.0
+    "lstar_MOND_radius_at_a_dS_kpc": 8.958,
+    "postulated_filament_spectral_dimension_ds": 1.0,
+    "max_ieee754_float64_rounding_rel_diff": 1.815e-16,
+    "benchmarks": [
+      {
+        "system": "proton",
+        "defined_N_fil": 4.1005e+42,
+        "r_M_at_a_dS_m": 3.2729e-14,
+        "ieee754_float64_rounding_rel_diff": 0.0
+      },
+      {
+        "system": "Sun_1Msun",
+        "defined_N_fil": 4.8748e+99,
+        "r_M_at_a_dS_m": 1128500000000000.0,
+        "ieee754_float64_rounding_rel_diff": 0.0
+      },
+      {
+        "system": "dwarf_galaxy_1e8Msun",
+        "defined_N_fil": 4.8748e+107,
+        "r_M_at_a_dS_m": 1.1285e+19,
+        "ieee754_float64_rounding_rel_diff": 1.815e-16
+      },
+      {
+        "system": "Lstar_spiral_6e10Msun",
+        "defined_N_fil": 2.9249e+110,
+        "r_M_at_a_dS_m": 2.7642e+20,
+        "ieee754_float64_rounding_rel_diff": 0.0
+      }
+    ]
   },
-  "claim_c19_potential_depth_roton_unification": {
-    "Lstar_spiral_1Mpc": 2.8712e-7,
-    "Lstar_spiral_10kpc": 1.8658e-6,
-    "massive_300kms_spiral_10kpc": 6.4938e-6,
-    "Bullet_Cluster_250kpc": 6.8527e-5,
-    "cluster_to_Lstar_10kpc_gap_ratio": 36.73,
-    "cluster_to_Lstar_1Mpc_gap_ratio": 238.67,
-    "roton_threshold_Phi_crit_over_c2": 8.0e-6,
-    "early_universe_T0_condensate_Delta_N_eff": 0.0,
-    "galactic_roton_contamination_pct_Lstar_and_300kms": 0.0,
-    "falsifiable_group_cluster_onset_sigma1D_kms": 388.1
+  "claim_c19_potential_depth_ansatz": {
+    "epistemic_status": "CONJECTURE / PHENOMENOLOGICAL-THRESHOLD-ANSATZ",
+    "caveat": "Phi_crit/c^2 = 8.0e-6 is placed by hand between galactic logarithmic MOND potentials and the Bullet Cluster isothermal well (following the Berezhiani & Khoury 2015 galaxy/cluster phase split); sigma_onset = 388.1 km/s solves 2*(sigma/c)^2*(1+ln 4) = 8.0e-6 at r/R_vir = 1/4; Delta_N_eff = 0.0 is assumed via a non-thermal T=0 condensate.",
+    "potential_depth_Phi_over_c2": {
+      "Lstar_logMOND_1kpc": 2.6577e-06,
+      "Lstar_logMOND_10kpc": 1.8658e-06,
+      "Lstar_logMOND_100kpc": 1.0738e-06,
+      "Lstar_KeplerTail_1Mpc": 2.8712e-07,
+      "massive_300kms_logMOND_10kpc": 6.4938e-06,
+      "Bullet_isothermal_250kpc": 6.8527e-05,
+      "bullet_to_Lstar_10kpc_ratio": 36.73,
+      "bullet_to_Lstar_1Mpc_ratio": 238.67
+    },
+    "chosen_threshold_Phi_crit_over_c2": 8e-06,
+    "assumed_nonthermal_T0_Delta_N_eff": 0.0,
+    "implied_single_zone_onset_sigma1D_kms": 388.1
   },
-  "claim_c20_filament_centroid_diffusion_hbar_constancy": {
-    "max_mass_scaling_rel_error_electron_to_25kDa": 2.341e-16,
-    "centroid_filament_hbar_over_hbar0": 1.0
+  "claim_c20_algebraic_cancellation": {
+    "epistemic_status": "COMPUTED (ALGEBRAIC CANCELLATION IDENTITY, NOT A WEP OR REDSHIFT MEASUREMENT)",
+    "caveat": "Defining N_fil = 2*pi*m*c*R_H(z)/hbar cancels m and R_H(z) identically in D_1/N_fil = hbar/(2m). Float64 residual (~2.3e-16) is IEEE-754 rounding, not an Eotvos WEP parameter eta.",
+    "single_filament_D1_today_m2_s": 1.2927e+35,
+    "max_ieee754_float64_rounding_rel_diff": 2.341e-16,
+    "epoch_cancellation_table": [
+      {
+        "epoch": "today_z0",
+        "redshift_z": 0.0,
+        "algebraic_identity_hbar_over_hbar0": 1.0,
+        "calogero1997_sqrt_RH_ratio_contrast": 1.0
+      },
+      {
+        "epoch": "quasar_z3",
+        "redshift_z": 3.0,
+        "algebraic_identity_hbar_over_hbar0": 1.0,
+        "calogero1997_sqrt_RH_ratio_contrast": 0.46787
+      },
+      {
+        "epoch": "CMB_z1100",
+        "redshift_z": 1100.0,
+        "algebraic_identity_hbar_over_hbar0": 1.0,
+        "calogero1997_sqrt_RH_ratio_contrast": 0.0065134
+      },
+      {
+        "epoch": "BBN_z1e9",
+        "redshift_z": 1000000000.0,
+        "algebraic_identity_hbar_over_hbar0": 1.0,
+        "calogero1997_sqrt_RH_ratio_contrast": 1.0211e-08
+      }
+    ]
   },
-  "sha256_canonical": "6b905845aaca043a95ab04effa73e19030d4924130a18cc22f80eb117ba105b0"
+  "sha256_canonical": "49996c541b68290c5512a390b5fcc2ebb7f31b99f349fb74409b974e84bae3bf"
 }

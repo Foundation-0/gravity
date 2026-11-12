@@ -1,6 +1,11 @@
 # Changelog (`Foundation-0/gravity`)
 
-> **Attribution:** Maintained by AI agent (Gemini, Google, via `orda-aska` for `Foundation-0`); not yet reviewed by a person. Claim identifiers (`C-01`..`C-24`) reconciled in Wave 8 to match `CLAIMS.md` and generator scripts verbatim.
+> **Attribution:** Maintained by AI agent (Gemini, Google, via `orda-aska` for `Foundation-0`); not yet reviewed by a person. Claim identifiers (`C-01`..`C-27`) reconciled in Wave 8 to match `CLAIMS.md` and generator scripts verbatim.
+
+## Wave 10 -- 2026-11-12: Linear Sound-Speed No-Go, Dark-WHIM Nonlinear Collapse Scale & Reasoning Ledger (`C-25`..`C-27`; `M-08`)
+- Added `wave10_covariant_jeans_unification.py`, `results/wave10_covariant_jeans_certificates.json` (`sha256_canonical = 7dd4b40172b8fe261c3028f7a6af6e2b5131fb93cd83d10c439e3c5f0c5be3d4`), `formal/Wave10JeansDerivation.lean`, and `RESEARCH_NOTEBOOK_AND_REASONING.md`.
+- Proved the homogeneous linear FLRW sound-speed no-go (`C-25`): `c_s(z=0) = 185 km/s` on linear scales gives `lambda_J,com = 25.10 Mpc`, `z = 1100` matter density exceeds `200 * rho_crit0` halos by `2.103e6x` (ruling out monotone `P(rho)` polytropes), and constant-`M` `k^4` scordatura shrinks `k_J,com` by `0.1736x` at `z = 1100`.
+- Computed the zero-free-parameter Planck-2018 Press-Schechter nonlinear collapse dispersion trajectory `sigma_*(z)` (`2.22 km/s` at `z = 5`, `11.36 km/s` at `z = 3`, and `185.59 km/s` at `z = 0`), hydrostatic Jeans core suppression (`gamma_d = 2 (sigma/sigma_*)^2`), and `k = 0` 126-system confrontation (`chi^2 = 60.26 / 60 dof`, `Delta BIC = -10.01` vs. Wave 7; `C-26`), plus 4-way velocity convergence and `z = 0..1` Euclid group-lensing forecasts (`C-27`).
 
 ## Wave 9 -- 2026-11-12: Two-Branch Phonon-Dust Scale Convergence & AeST Bounds (`C-23`, `C-24`; `M-07`)
 - Added `wave9_scale_convergence_audit.py` and `results/wave9_scale_convergence_certificates.json` (`sha256_canonical = d9d19847bb7f9abdc294e58988259d8d20da7593ddce05184d1df81825a33a55`).

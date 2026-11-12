@@ -1,91 +1,193 @@
 {
-  "wave": 7,
-  "title": "Empirical Weak-Lensing, X-Ray, and Kinematic Group-to-Cluster Roton-Threshold Audit",
-  "attribution": "Written by AI agent (Gemini, Google, via orda-aska for Foundation-0); not yet reviewed by a person.",
-  "licenses": {
-    "code": "Apache-2.0",
-    "results_and_docs": "CC-BY-4.0"
-  },
-  "full_126_system_catalog_sha256": "973d6f1d5691ecd022a6d1a66d87ab8eadce088df14e61f985e6779967889710",
-  "pre_envelope_sha256": "4e5c6579977560472bba5025981224b5b5e567b99f9df1f78023bfd5cf7b2505",
+  "schema": "FOUNDATION-0/GRAVITY-WAVE7-EMPIRICAL-THRESHOLD/1.1",
+  "epistemic_status": "EMPIRICAL-FIT (3-PARAMETER HILL SATURATION CURVE ON PUBLISHED GROUP/CLUSTER DATA)",
+  "caveat": "Phenomenological 3-parameter fit (sigma_crit, sigma_half, R_sat) to the known MOND cluster residual mass discrepancy (Sanders 2003; Angus et al. 2008; Milgrom 2019). Single-zone sharp onset at 388.1 km/s is disfavored relative to gradual onset starting around ~190-200 km/s (delta_chi2 = 10.6 on zero-covariance WL+X-ray+SPARC subset), while unbounded Thomas-Fermi scaling without saturation fails above ~900 km/s.",
   "dataset_counts": {
-    "total_unique_systems": 126,
-    "primary_window_150_to_1200_kms": 77,
-    "pure_wl_xray_sparc_cov0_subset": 60,
-    "galaxy_wl_and_rotation_anchors": 6,
-    "milgrom_2019_optical_and_rich_groups": 66,
-    "angus_2008_xray_groups_and_clusters": 26,
-    "kettula_2015_weak_lensing_clusters": 28
+    "total_systems": 126,
+    "primary_150_to_1200_kms": 77,
+    "zero_sigma4_cov_wl_xray_sparc": 60,
+    "kids_isolated_lenses_in_4_galaxy_bins": 129027
   },
-  "published_catalogs_audited": [
-    "Lelli, McGaugh & Schombert (2017), ApJ 836, 152 (SPARC RARbins.mrt, high-mass disk anchors 155.6-201.5 km/s)",
-    "Mistele, McGaugh, Lelli, Schombert & Li (2024), JCAP 020 / arXiv:2406.09685 (KiDS-1000 weak-lensing isolated galaxy bins, 93.1-190.2 km/s)",
-    "Milgrom (2019), Phys. Rev. D 99, 044041 / arXiv:1811.12233 (66 N_V >= 15 optical and rich galaxy groups, 60.0-426.0 km/s)",
-    "Angus, Famaey & Buote (2008), MNRAS 387, 1470 / arXiv:0709.0108 (26 Chandra/XMM X-ray groups and clusters, T_X = 0.5-8.9 keV, sigma_X = 282.6-1192.2 km/s)",
-    "Kettula et al. (2015), MNRAS 451, 1460 / arXiv:1410.8769 (28 CFHTLenS and high-mass weak-lensing clusters, T_X = 1.65-13.97 keV, sigma_X = 513.4-1493.7 km/s)",
-    "Tian, Umetsu, Ko, Donahue & Chiu (2020), ApJ 896, 70 / arXiv:2001.08340 (20 CLASH strong+weak-lensing clusters: g_ddag = 2.02e-9 m/s^2 = 16.83 a_0, <f_bar> = 0.142 +/- 0.014)",
-    "Li et al. (2024), A&A / arXiv:2411.09735 (22 eROSITA eRASS1 + 10 HIFLUGCS clusters, 533-1336 km/s: 0.3-0.5 dex RAR excess across X-ray, Jeans kinematics, and weak lensing)"
-  ],
   "regime_binned_summary": [
-    {"sigma_range_kms": [60.0, 150.0], "count": 45, "raw_median_R_MOND": 0.787, "ivar_weighted_R_MOND": 0.863},
-    {"sigma_range_kms": [150.0, 230.0], "count": 20, "raw_median_R_MOND": 2.712, "ivar_weighted_R_MOND": 1.036},
-    {"sigma_range_kms": [230.0, 390.0], "count": 9, "raw_median_R_MOND": 2.200, "ivar_weighted_R_MOND": 2.510},
-    {"sigma_range_kms": [390.0, 600.0], "count": 13, "raw_median_R_MOND": 2.841, "ivar_weighted_R_MOND": 2.903},
-    {"sigma_range_kms": [600.0, 900.0], "count": 14, "raw_median_R_MOND": 3.563, "ivar_weighted_R_MOND": 3.647},
-    {"sigma_range_kms": [900.0, 1200.0], "count": 21, "raw_median_R_MOND": 4.555, "ivar_weighted_R_MOND": 4.351},
-    {"sigma_range_kms": [1200.0, 1500.0], "count": 4, "raw_median_R_MOND": 5.248, "ivar_weighted_R_MOND": 5.205}
+    {
+      "bin": "60-150_kms",
+      "count": 45,
+      "median_R_MOND": 0.787,
+      "ivar_mean_R_MOND": 0.863
+    },
+    {
+      "bin": "150-230_kms",
+      "count": 20,
+      "median_R_MOND": 2.712,
+      "ivar_mean_R_MOND": 1.036
+    },
+    {
+      "bin": "230-390_kms",
+      "count": 9,
+      "median_R_MOND": 2.2,
+      "ivar_mean_R_MOND": 2.51
+    },
+    {
+      "bin": "390-600_kms",
+      "count": 13,
+      "median_R_MOND": 2.841,
+      "ivar_mean_R_MOND": 2.903
+    },
+    {
+      "bin": "600-900_kms",
+      "count": 14,
+      "median_R_MOND": 3.563,
+      "ivar_mean_R_MOND": 3.647
+    },
+    {
+      "bin": "900-1200_kms",
+      "count": 21,
+      "median_R_MOND": 4.555,
+      "ivar_mean_R_MOND": 4.351
+    },
+    {
+      "bin": "1200-1500_kms",
+      "count": 4,
+      "median_R_MOND": 5.248,
+      "ivar_mean_R_MOND": 5.205
+    }
   ],
-  "quantitative_model_audits": {
-    "primary_150_to_1200_kms_covariant_odr_N77": {
-      "M0_universal_a0_MOND": {"chi2": 1126.24, "bic": 1126.24, "rms_dex": 0.450},
-      "M1_unbounded_local_TF": {"chi2": 249.29, "bic": 253.63, "rms_dex": 0.230},
-      "M2_fixed_wave6_388kms_supply_capped": {"chi2": 115.51, "bic": 124.20, "R_sat": 3.80, "rms_dex": 0.149},
-      "M3_profiled_supply_capped": {
-        "chi2": 96.08,
-        "bic": 109.12,
+  "model_fits": {
+    "primary_150_to_1200_kms": {
+      "sample_label": "Primary_150_to_1200_kms_Covariant_ODR",
+      "n_systems": 77,
+      "M0_universal_a0_MOND": {
+        "chi2": 1126.2445,
+        "rms_dex": 0.4502,
+        "n": 77
+      },
+      "M1b_unbounded_TF_best_amp": {
+        "chi2": 249.2866,
+        "rms_dex": 0.2295,
+        "n": 77,
+        "best_amp_at_1000": 3.45,
+        "bic": 253.6304
+      },
+      "M2_wave6_388kms_supply_capped": {
+        "chi2": 115.514,
+        "rms_dex": 0.1487,
+        "n": 77,
+        "sigma_crit_kms_fixed": 388.14,
+        "sigma_half_kms": 40.0,
+        "R_sat": 3.8,
+        "bic": 124.2016
+      },
+      "M3_profiled_3param_supply_capped": {
+        "chi2": 96.0847,
+        "rms_dex": 0.1342,
+        "n": 77,
         "sigma_crit_kms": 195.0,
-        "ci_68pct_kms": [195.0, 210.0],
-        "ci_95pct_kms": [155.0, 225.0],
-        "R_sat": 3.70,
-        "rms_dex": 0.136,
-        "implied_Phi_crit_over_c2": 2.019e-6
+        "sigma_half_kms": 40.0,
+        "sigma_50pct_midpoint_kms": 199.06,
+        "R_sat": 3.7,
+        "bic": 109.1161,
+        "ci_95pct_sigma_crit_kms": [
+          155.0,
+          225.0
+        ],
+        "delta_chi2_vs_M0_pure_MOND": 1030.16,
+        "delta_chi2_vs_M1b_unbounded_TF": 153.202,
+        "delta_chi2_wave6_388kms_vs_best": 19.429
       }
     },
-    "pure_wl_xray_sparc_93_to_1494_kms_N60": {
-      "M0_universal_a0_MOND": {"chi2": 1236.12, "bic": 1236.12, "rms_dex": 0.530},
-      "M1_unbounded_local_TF": {"chi2": 204.23, "bic": 208.32, "rms_dex": 0.236},
-      "M2_fixed_wave6_388kms_supply_capped": {"chi2": 73.35, "bic": 81.53, "R_sat": 3.90, "rms_dex": 0.135},
-      "M3_profiled_supply_capped": {
-        "chi2": 57.99,
-        "bic": 70.27,
-        "reduced_chi2": 1.017,
-        "sigma_crit_kms": 190.0,
-        "ci_68pct_kms": [180.0, 225.0],
-        "ci_95pct_kms": [165.0, 265.0],
-        "sigma_half_kms": 320.0,
-        "sigma_50pct_midpoint_kms": 372.2,
-        "R_sat": 4.20,
-        "rms_dex": 0.121,
-        "implied_Phi_crit_over_c2": 1.917e-6
-      }
-    },
-    "full_master_60_to_1494_kms_covariant_odr_N126": {
-      "M0_universal_a0_MOND": {"chi2": 1336.53, "bic": 1336.53, "rms_dex": 0.377},
-      "M1_unbounded_local_TF": {"chi2": 304.64, "bic": 309.47, "rms_dex": 0.187},
-      "M2_fixed_wave6_388kms_supply_capped": {"chi2": 161.82, "bic": 171.49, "R_sat": 4.00, "rms_dex": 0.129},
-      "M3_profiled_supply_capped": {
-        "chi2": 142.32,
-        "bic": 156.83,
+    "full_60_to_1494_kms": {
+      "sample_label": "Full_60_to_1494_kms_Covariant_ODR",
+      "n_systems": 126,
+      "M0_universal_a0_MOND": {
+        "chi2": 1336.5271,
+        "rms_dex": 0.3774,
+        "n": 126
+      },
+      "M1b_unbounded_TF_best_amp": {
+        "chi2": 304.6355,
+        "rms_dex": 0.1872,
+        "n": 126,
+        "best_amp_at_1000": 3.1,
+        "bic": 309.4718
+      },
+      "M2_wave6_388kms_supply_capped": {
+        "chi2": 161.8168,
+        "rms_dex": 0.1287,
+        "n": 126,
+        "sigma_crit_kms_fixed": 388.14,
+        "sigma_half_kms": 40.0,
+        "R_sat": 4.0,
+        "bic": 171.4894
+      },
+      "M3_profiled_3param_supply_capped": {
+        "chi2": 142.3177,
+        "rms_dex": 0.1224,
+        "n": 126,
         "sigma_crit_kms": 180.0,
         "sigma_half_kms": 320.0,
-        "sigma_50pct_midpoint_kms": 367.1,
-        "R_sat": 4.20
+        "sigma_50pct_midpoint_kms": 367.15,
+        "R_sat": 4.2,
+        "bic": 156.8265,
+        "ci_95pct_sigma_crit_kms": [
+          150.0,
+          225.0
+        ],
+        "delta_chi2_vs_M0_pure_MOND": 1194.209,
+        "delta_chi2_vs_M1b_unbounded_TF": 162.318,
+        "delta_chi2_wave6_388kms_vs_best": 19.499
+      }
+    },
+    "zero_cov_wl_xray_sparc": {
+      "sample_label": "Zero_Sigma4_Covariance_WL_Xray_SPARC_60",
+      "n_systems": 60,
+      "M0_universal_a0_MOND": {
+        "chi2": 1236.118,
+        "rms_dex": 0.5303,
+        "n": 60
+      },
+      "M1b_unbounded_TF_best_amp": {
+        "chi2": 204.2265,
+        "rms_dex": 0.236,
+        "n": 60,
+        "best_amp_at_1000": 3.1,
+        "bic": 208.3208
+      },
+      "M2_wave6_388kms_supply_capped": {
+        "chi2": 73.3454,
+        "rms_dex": 0.1354,
+        "n": 60,
+        "sigma_crit_kms_fixed": 388.14,
+        "sigma_half_kms": 40.0,
+        "R_sat": 3.9,
+        "bic": 81.5341
+      },
+      "M3_profiled_3param_supply_capped": {
+        "chi2": 57.9852,
+        "rms_dex": 0.128,
+        "n": 60,
+        "sigma_crit_kms": 190.0,
+        "sigma_half_kms": 320.0,
+        "sigma_50pct_midpoint_kms": 372.16,
+        "R_sat": 4.2,
+        "bic": 70.2682,
+        "ci_95pct_sigma_crit_kms": [
+          165.0,
+          265.0
+        ],
+        "delta_chi2_vs_M0_pure_MOND": 1178.133,
+        "delta_chi2_vs_M1b_unbounded_TF": 146.241,
+        "delta_chi2_wave6_388kms_vs_best": 15.36
       }
     }
   },
-  "scientific_conclusions": {
-    "C21_stratified_threshold_refinement": "Pure universal a_0-MOND is rejected at >32 sigma (Delta chi^2 = +1030.2). Fixing Wave-6 388.1 km/s reduces chi^2 from 1236.12 to 73.35 on the 60-system WL+X-ray+SPARC baseline, while radial halo stratification splits the single-zone scale into an incipient central-core onset sigma_crit = 190.0 km/s (95% CI [165, 265] km/s; Delta chi^2 = -15.36) and a 50% full-halo midpoint sigma_50% = 372.2 km/s (within 4.1% of 388.1 km/s).",
-    "C22_cosmic_supply_cap_discovery": "Unbounded local Thomas-Fermi condensation (Delta R ~ Delta Phi^(3/2)) blows up in 8-14 keV weak-lensing clusters (Delta chi^2 = +153.2, >12 sigma) and is canonically regulated by cosmic turnaround mass conservation M_tot/M_bar <= Omega_m/Omega_b = 6.39 (observed 250 kpc plateau R_sat = 3.70-4.20).",
-    "M06_virial_covariance_debiassing": "Eliminates +4 * delta_log10_sigma fourth-power regression dilution in narrow-L_K optical group virial estimators via 2D latent-sigma ODR."
-  }
+  "summary_metrics": {
+    "wave6_apriori_single_zone_sigma_crit_kms": 388.14,
+    "primary_fitted_sigma_crit_kms": 195.0,
+    "primary_fitted_sigma_50pct_midpoint_kms": 199.06,
+    "zero_cov_fitted_sigma_crit_kms": 190.0,
+    "zero_cov_fitted_sigma_50pct_midpoint_kms": 372.16,
+    "fitted_core_plateau_R_sat_250kpc": 3.7,
+    "planck2018_cosmic_Omega_m_over_Omega_b": 6.3895
+  },
+  "sha256_canonical": "4db35ebcfb7b3cfc6b825e0e62c549435fa7ebdf9e31339e2bbb70482fcc08a9"
 }

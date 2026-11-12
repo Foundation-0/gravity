@@ -46,3 +46,7 @@ All Python scripts use only the Python 3 standard library. Each certificate file
 - `CHANGELOG.md` -- Reconciled chronological history across Waves 1-12 matching `CLAIMS.md` and code identifiers.- 
 - mic-Dawn quasar confrontation, and next-agent handoff queue.
 - `CHANGELOG.md` -- Reconciled chronological history across Waves 1-12 matching `CLAIMS.md` and code identifiers.
+
+## AeST response benchmark in progress
+
+The [fixed action and protocol](research/aest-response-gate-20261112/protocol.md) defines the constraint and response checks for a Minkowski vacuum benchmark. Derivation and response checks are in progress. The protocol has not yet been independently reviewed.

@@ -1,0 +1,135 @@
+{
+  "schema": "FOUNDATION-0/GRAVITY-WAVE9-CONVERGENCE/1.0",
+  "claim_c23_phonon_dust_crossover_and_cluster_rar": {
+    "epistemic_status": "COMPUTED & EMPIRICAL-FIT (1-PARAMETER JEANS SCALE; EXTERNAL A0, PLANCK OMEGA_C/OMEGA_B, VIKHLININ F_B,2500)",
+    "fixed_external_inputs": {
+      "a0_m_s2": 1.2e-10,
+      "Omega_c_over_Omega_b_Planck2018": 5.3895,
+      "f_bar_R2500_Vikhlinin2006": 0.105,
+      "core_collisionless_to_baryon_ratio_R2500": 8.5238
+    },
+    "phonon_dust_equality_crossover": {
+      "g_bar_crossover_over_a0": 0.02897,
+      "g_bar_crossover_m_s2": 3.4764e-12,
+      "lstar_crossover_radius_kpc": 49.05,
+      "rich_cluster_2_5e13Msun_crossover_radius_kpc": 1001.2
+    },
+    "kids_1Mpc_galaxy_insensitivity": [
+      {
+        "log10_Mb": 10.11,
+        "phonon_over_cosmic_dust_ratio_at_1Mpc": 47.87,
+        "v_obs_kms": 135.8,
+        "sigma_v_kms": 9.6,
+        "max_velocity_shift_from_100pct_cosmic_dust_pct": 1.04
+      },
+      {
+        "log10_Mb": 10.66,
+        "phonon_over_cosmic_dust_ratio_at_1Mpc": 25.37,
+        "v_obs_kms": 175.3,
+        "sigma_v_kms": 9.3,
+        "max_velocity_shift_from_100pct_cosmic_dust_pct": 1.94
+      },
+      {
+        "log10_Mb": 10.96,
+        "phonon_over_cosmic_dust_ratio_at_1Mpc": 17.93,
+        "v_obs_kms": 211.0,
+        "sigma_v_kms": 6.6,
+        "max_velocity_shift_from_100pct_cosmic_dust_pct": 2.72
+      },
+      {
+        "log10_Mb": 11.29,
+        "phonon_over_cosmic_dust_ratio_at_1Mpc": 12.24,
+        "v_obs_kms": 259.4,
+        "sigma_v_kms": 5.1,
+        "max_velocity_shift_from_100pct_cosmic_dust_pct": 3.95
+      }
+    ],
+    "clash_vs_xcop_apparent_gddag_predictions": [
+      {
+        "regime": "CLASH_inner_mid_gb_4e11",
+        "g_bar_m_s2": 4e-11,
+        "predicted_apparent_g_ddag_1e9_m_s2": 2.049,
+        "predicted_log_slope_dln_gtot_dln_gbar": 0.891,
+        "predicted_R_MOND": 3.364,
+        "published_comparison": "Tian et al. (2020, ApJ 896, 70): g_ddag = (2.02 +/- 0.11)e-9 m/s^2"
+      },
+      {
+        "regime": "XCOP_Chandra_gb_1_6e11",
+        "g_bar_m_s2": 1.6e-11,
+        "predicted_apparent_g_ddag_1e9_m_s2": 1.062,
+        "predicted_log_slope_dln_gtot_dln_gbar": 0.845,
+        "predicted_R_MOND": 2.649,
+        "published_comparison": "Pradyumna et al. (2021, PDU 31, 100765): g_ddag = (1.12 +/- 0.11)e-9 m/s^2"
+      },
+      {
+        "regime": "XCOP_outskirts_gb_3e12",
+        "g_bar_m_s2": 3e-12,
+        "predicted_apparent_g_ddag_1e9_m_s2": 0.412,
+        "predicted_log_slope_dln_gtot_dln_gbar": 0.743,
+        "predicted_R_MOND": 1.788,
+        "published_comparison": "Eckert et al. (2022, A&A 662, A123): virial-boundary flattening toward Omega_m/Omega_b"
+      }
+    ],
+    "one_parameter_jeans_fits_unsegregated_R200": {
+      "primary_77": {
+        "chi2": 152.7948,
+        "rms_dex": 0.1646,
+        "n": 77,
+        "best_sigma_J_kms": 150.0,
+        "k": 1,
+        "bic": 157.1386
+      },
+      "full_126": {
+        "chi2": 200.9081,
+        "rms_dex": 0.1397,
+        "n": 126,
+        "best_sigma_J_kms": 150.0,
+        "k": 1,
+        "bic": 205.7444
+      },
+      "clean_60": {
+        "chi2": 112.3798,
+        "rms_dex": 0.1631,
+        "n": 60,
+        "best_sigma_J_kms": 170.0,
+        "k": 1,
+        "bic": 116.4741
+      }
+    },
+    "one_parameter_jeans_fits_icm_segregated_R2500": {
+      "primary_77": {
+        "chi2": 106.4356,
+        "rms_dex": 0.1446,
+        "n": 77,
+        "best_sigma_J_kms": 180.0,
+        "k": 1,
+        "bic": 110.7794
+      },
+      "full_126": {
+        "chi2": 148.1304,
+        "rms_dex": 0.1229,
+        "n": 126,
+        "best_sigma_J_kms": 180.0,
+        "k": 1,
+        "bic": 152.9667
+      },
+      "clean_60": {
+        "chi2": 60.0727,
+        "rms_dex": 0.1287,
+        "n": 60,
+        "best_sigma_J_kms": 190.0,
+        "k": 1,
+        "bic": 64.167
+      }
+    }
+  },
+  "claim_c24_aest_quasistatic_oscillation_bound": {
+    "epistemic_status": "COMPUTED (PUBLISHED AEST QUASISTATIC EQUATION EVALUATION)",
+    "reference": "Verwayen, Skordis & Boehm (2024, MNRAS 531, 272; arXiv:2304.05134, Eq. 35 & 50)",
+    "mu_inv_min_KiDS_Bin1_Mpc": 3.774,
+    "mu_inv_min_Lstar_Mpc": 2.579,
+    "implied_cluster_rC_max_Mpc": 2.733,
+    "cluster_core_250kpc_inside_rC": true
+  },
+  "sha256_canonical": "d9d19847bb7f9abdc294e58988259d8d20da7593ddce05184d1df81825a33a55"
+}

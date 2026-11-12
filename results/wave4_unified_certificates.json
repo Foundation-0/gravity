@@ -1,34 +1,78 @@
 {
-  "schema": "FOUNDATION-0/GRAVITY-WAVE4-UNIFIED/1.0",
-  "claim_c09_sparc_gaia_local_nogo": {
+  "schema": "FOUNDATION-0/GRAVITY-WAVE4-UNIFIED/1.1",
+  "claim_c09_interpolator_tradeoff": {
+    "epistemic_status": "COMPUTED (MODEL-FAMILY-SCAN)",
+    "caveat": "Scans mu_alpha(x) = (1 - exp(-x^alpha))^(1/alpha); 2% wide-binary ceiling is an input assumption.",
     "g_MW_solar_circle_1e10_m_s2": 2.1721,
-    "sparc_bins_bracketing_gMW": [
-      {"bin_index": 8, "n_points": 229, "g_obs_1e10_m_s2": 1.259, "empirical_mu_gbar_over_gobs": 0.5129, "sigma_mu": 0.0101},
-      {"bin_index": 9, "n_points": 204, "g_obs_1e10_m_s2": 1.738, "empirical_mu_gbar_over_gobs": 0.6026, "sigma_mu": 0.0136},
-      {"bin_index": 10, "n_points": 177, "g_obs_1e10_m_s2": 2.512, "empirical_mu_gbar_over_gobs": 0.6918, "sigma_mu": 0.0168},
-      {"bin_index": 11, "n_points": 137, "g_obs_1e10_m_s2": 3.631, "empirical_mu_gbar_over_gobs": 0.7762, "sigma_mu": 0.0214},
-      {"bin_index": 12, "n_points": 104, "g_obs_1e10_m_s2": 5.129, "empirical_mu_gbar_over_gobs": 0.8913, "sigma_mu": 0.0221}
-    ],
     "min_sparc_chi2": 20.381,
-    "min_wb_velocity_boost_pct_within_5sigma_SPARC": 12.91,
+    "min_wb_velocity_boost_pct_within_delta_chi2_25": 12.91,
     "min_sparc_delta_chi2_if_wb_boost_le_2pct": 311.37,
     "alpha_tradeoff_table": [
-      {"alpha_sharpness": 0.5, "profiled_a0_1e10_m_s2": 0.85, "sparc_rar_chi2": 33.72, "delta_chi2_from_min": 13.34, "e_MW_at_profiled_a0": 2.5554, "wide_binary_velocity_boost_pct": 18.28},
-      {"alpha_sharpness": 0.65, "profiled_a0_1e10_m_s2": 1.0908, "sparc_rar_chi2": 39.42, "delta_chi2_from_min": 19.03, "e_MW_at_profiled_a0": 1.9912, "wide_binary_velocity_boost_pct": 12.91},
-      {"alpha_sharpness": 0.8, "profiled_a0_1e10_m_s2": 1.3033, "sparc_rar_chi2": 87.74, "delta_chi2_from_min": 67.36, "e_MW_at_profiled_a0": 1.6666, "wide_binary_velocity_boost_pct": 10.07},
-      {"alpha_sharpness": 1.0, "profiled_a0_1e10_m_s2": 1.4875, "sparc_rar_chi2": 159.8, "delta_chi2_from_min": 139.42, "e_MW_at_profiled_a0": 1.4602, "wide_binary_velocity_boost_pct": 7.22},
-      {"alpha_sharpness": 1.25, "profiled_a0_1e10_m_s2": 1.615, "sparc_rar_chi2": 241.37, "delta_chi2_from_min": 220.99, "e_MW_at_profiled_a0": 1.3449, "wide_binary_velocity_boost_pct": 4.53},
-      {"alpha_sharpness": 1.5, "profiled_a0_1e10_m_s2": 1.7, "sparc_rar_chi2": 308.28, "delta_chi2_from_min": 287.89, "e_MW_at_profiled_a0": 1.2777, "wide_binary_velocity_boost_pct": 2.71},
-      {"alpha_sharpness": 2.0, "profiled_a0_1e10_m_s2": 1.7, "sparc_rar_chi2": 414.25, "delta_chi2_from_min": 393.87, "e_MW_at_profiled_a0": 1.2777, "wide_binary_velocity_boost_pct": -0.25},
-      {"alpha_sharpness": 2.5, "profiled_a0_1e10_m_s2": 1.7, "sparc_rar_chi2": 488.01, "delta_chi2_from_min": 467.63, "e_MW_at_profiled_a0": 1.2777, "wide_binary_velocity_boost_pct": -1.6},
-      {"alpha_sharpness": 3.0, "profiled_a0_1e10_m_s2": 1.7, "sparc_rar_chi2": 537.12, "delta_chi2_from_min": 516.74, "e_MW_at_profiled_a0": 1.2777, "wide_binary_velocity_boost_pct": -2.16}
+      {
+        "alpha_sharpness": 0.5,
+        "profiled_a0_1e10_m_s2": 0.85,
+        "sparc_rar_chi2": 33.72,
+        "delta_chi2_from_min": 13.34,
+        "e_MW_at_profiled_a0": 2.5554,
+        "wide_binary_velocity_boost_pct": 18.28
+      },
+      {
+        "alpha_sharpness": 0.8,
+        "profiled_a0_1e10_m_s2": 1.3033,
+        "sparc_rar_chi2": 87.74,
+        "delta_chi2_from_min": 67.36,
+        "e_MW_at_profiled_a0": 1.6666,
+        "wide_binary_velocity_boost_pct": 10.07
+      },
+      {
+        "alpha_sharpness": 1.0,
+        "profiled_a0_1e10_m_s2": 1.4875,
+        "sparc_rar_chi2": 159.8,
+        "delta_chi2_from_min": 139.42,
+        "e_MW_at_profiled_a0": 1.4602,
+        "wide_binary_velocity_boost_pct": 7.22
+      },
+      {
+        "alpha_sharpness": 1.5,
+        "profiled_a0_1e10_m_s2": 1.7,
+        "sparc_rar_chi2": 308.28,
+        "delta_chi2_from_min": 287.89,
+        "e_MW_at_profiled_a0": 1.2777,
+        "wide_binary_velocity_boost_pct": 2.71
+      },
+      {
+        "alpha_sharpness": 2.0,
+        "profiled_a0_1e10_m_s2": 1.7,
+        "sparc_rar_chi2": 414.25,
+        "delta_chi2_from_min": 393.87,
+        "e_MW_at_profiled_a0": 1.2777,
+        "wide_binary_velocity_boost_pct": -0.25
+      },
+      {
+        "alpha_sharpness": 2.5,
+        "profiled_a0_1e10_m_s2": 1.7,
+        "sparc_rar_chi2": 488.01,
+        "delta_chi2_from_min": 467.63,
+        "e_MW_at_profiled_a0": 1.2777,
+        "wide_binary_velocity_boost_pct": -1.6
+      },
+      {
+        "alpha_sharpness": 3.0,
+        "profiled_a0_1e10_m_s2": 1.7,
+        "sparc_rar_chi2": 537.12,
+        "delta_chi2_from_min": 516.74,
+        "e_MW_at_profiled_a0": 1.2777,
+        "wide_binary_velocity_boost_pct": -2.16
+      }
     ]
   },
-  "claim_c10_bogoliubov_bose_fermi_unification": {
-    "coherence_length_xi_kpc": 0.2,
+  "claims_c10_c11_bogoliubov_and_fermion_audit": {
+    "epistemic_status": "COMPUTED (BVP-SOLVER & FREEZE-OUT-ARITHMETIC)",
+    "input_coherence_length_xi_kpc": 0.2,
     "implied_ultralight_boson_mass_eV": 3.8556e-23,
-    "boson_dm_fraction_f_B": 0.025,
-    "passes_kobayashi2017_lyman_alpha_f_lt_0_20": true,
+    "input_boson_dm_fraction_f_B": 0.025,
+    "f_B_below_0_20_published_rule_of_thumb": true,
+    "lyman_alpha_caveat": "xi_coh = 0.20 kpc and f_B = 0.025 are chosen inputs; f_B < 0.20 is a threshold check against Kobayashi et al. (2017, PRD 96, 123514), not a hydrodynamical forest transfer-function solve.",
     "stellar_wide_binary_ode_audit": {
       "max_relative_ode_residual": 8.111e-14,
       "saturn_9_58AU_gph_over_gN": 2.668e-14,
@@ -38,15 +82,51 @@
     },
     "lstar_galaxy_ode_audit": {
       "max_relative_ode_residual": 2.828e-16,
-      "recovery_of_exact_ds1_MOND_at_100kpc_pct": 99.99416,
+      "recovery_of_deep_MOND_limit_at_100kpc_pct": 99.99416,
       "v_circ_100kpc_kms": 180.15,
       "v_circ_1Mpc_kms": 176.29
     },
-    "fermionic_cluster_partner_candidates": [
-      {"m_F_eV": 3.0, "T_F_over_T_nu": 1.5419, "Delta_N_eff": 5.6527, "dwarf_1kpc_max_halo_frac_pct": 4e-05, "spiral_10kpc_max_halo_frac_pct": 0.0447, "bullet_250kpc_capacity_ratio": 2.21},
-      {"m_F_eV": 11.0, "T_F_over_T_nu": 0.9999, "Delta_N_eff": 0.9998, "dwarf_1kpc_max_halo_frac_pct": 0.0069, "spiral_10kpc_max_halo_frac_pct": 8.0796, "bullet_250kpc_capacity_ratio": 399.53},
-      {"m_F_eV": 35.0, "T_F_over_T_nu": 0.6799, "Delta_N_eff": 0.2136, "dwarf_1kpc_max_halo_frac_pct": 0.7076, "spiral_10kpc_max_halo_frac_pct": 828.1115, "bullet_250kpc_capacity_ratio": 40949.31}
+    "claim_c11_relativistic_freezeout_fermion_audit": [
+      {
+        "m_F_eV": 3.0,
+        "required_T_F_over_T_nu": 1.5372,
+        "required_g_star_S_at_decoupling": 2.96,
+        "Delta_N_eff_at_BBN_relativistic": 5.5839,
+        "rho_F_over_rho_gamma_UV_with_7_8_factor": 1.2681,
+        "nonrelativistic_transition_z_nr": 3693.1,
+        "nonrelativistic_prior_to_CMB_z1100": true,
+        "excluded_by_WDM_freestreaming_lt_3keV": true,
+        "dwarf_1kpc_max_halo_frac_pct": 4e-05,
+        "spiral_10kpc_max_halo_frac_pct": 0.0447,
+        "bullet_250kpc_capacity_ratio": 2.21
+      },
+      {
+        "m_F_eV": 11.0,
+        "required_T_F_over_T_nu": 0.9969,
+        "required_g_star_S_at_decoupling": 10.85,
+        "Delta_N_eff_at_BBN_relativistic": 0.9876,
+        "rho_F_over_rho_gamma_UV_with_7_8_factor": 0.2243,
+        "nonrelativistic_transition_z_nr": 20886.0,
+        "nonrelativistic_prior_to_CMB_z1100": true,
+        "excluded_by_WDM_freestreaming_lt_3keV": true,
+        "dwarf_1kpc_max_halo_frac_pct": 0.0069,
+        "spiral_10kpc_max_halo_frac_pct": 8.0796,
+        "bullet_250kpc_capacity_ratio": 399.53
+      },
+      {
+        "m_F_eV": 35.0,
+        "required_T_F_over_T_nu": 0.6778,
+        "required_g_star_S_at_decoupling": 34.53,
+        "Delta_N_eff_at_BBN_relativistic": 0.211,
+        "rho_F_over_rho_gamma_UV_with_7_8_factor": 0.0479,
+        "nonrelativistic_transition_z_nr": 97747.3,
+        "nonrelativistic_prior_to_CMB_z1100": true,
+        "excluded_by_WDM_freestreaming_lt_3keV": true,
+        "dwarf_1kpc_max_halo_frac_pct": 0.7076,
+        "spiral_10kpc_max_halo_frac_pct": 828.1115,
+        "bullet_250kpc_capacity_ratio": 40949.31
+      }
     ]
   },
-  "sha256_canonical": "1184c304b46eabfd6e0eba8a47455a531aaf3e7f99c016fcd7d3ea16b034446a"
+  "sha_26_canonical": "1a7f2ff0182b66d1a081e59e750b493afa6beaab0d976c5af2c6c72652d4452d"
 }

@@ -47,6 +47,8 @@ All Python scripts use only the Python 3 standard library. Each certificate file
 - mic-Dawn quasar confrontation, and next-agent handoff queue.
 - `CHANGELOG.md` -- Reconciled chronological history across Waves 1-12 matching `CLAIMS.md` and code identifiers.
 
-## AeST response benchmark in progress
+## AeST response benchmark and independent checks
 
-The [AeST response benchmark](research/aest-response-gate-20261112/README.md) constructs allowed field preparations on a specified expanding background and a flat-space control. It includes the canonical map, executable response checks and a bounded pressure-closure comparison. A separate Astra agent reproduced the scalar constraint and kinetic structure from an independent ADM action. A slow-mode preparation test is in progress.
+The [AeST response benchmark](research/aest-response-gate-20261112/README.md) constructs allowed field preparations on a specified expanding background and a flat-space control. It includes the canonical map, executable response checks and a bounded pressure-closure comparison.
+
+A separate Astra agent reproduced the scalar constraint and kinetic structure from an independent ADM action. A separately declared slow-subspace test and its independent five-field replay are complete. The simple zero-pressure closure still fails for this specified benchmark.

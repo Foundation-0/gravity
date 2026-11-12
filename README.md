@@ -17,6 +17,10 @@ This repository is **not** a derivation of a new fundamental theory of gravity, 
 3. **Phenomenological hypotheses & algebraic re-parameterizations (`CONJECTURE`)**: Wave-6 (`wave6_convergence_unification.py`) evaluates algebraic identities where `hbar`, `m`, and `R_H(z)` cancel by definition of `N_fil = 2*pi*m*c*R_H/hbar` (so `8.9580 kpc` is simply the ordinary MOND radius `r_M` of a `6e10 M_sun` galaxy at `a_dS`) and places a handwritten potential threshold `Phi_crit/c^2 = 8.0e-6` (`sigma_1D = 388.1 km/s`) between logarithmic MOND galaxy potentials and the Bullet Cluster.
 4. **Elementary Lean 4 arithmetic checks (`PROVEN (ARITHMETIC-LEMMA)`)**: Stock Lean 4 (`Init`, zero Mathlib dependencies) files in `formal/` check the exact integer/rational exponent equations, interval inequalities, and commutative-ring product rearrangements referenced in `CLAIMS.md`. They do **not** prove physical force laws, Bell's theorem, or Weak Equivalence Principle bounds.
 
+## Cosmic dawn audit
+
+The [cosmic dawn research note](research/cosmic-dawn-20261112/README.md) distinguishes a quasar-pair observation from Wave 10 collapse-scale assumptions. A standard-library probe checks the native calculation, high-wavenumber sensitivity and failed root brackets. The note also states what an extra-dimension test would need to predict.
+
 ## Repository Layout & Verification Commands
 
 All Python scripts use only the Python 3 standard library. Each certificate file in `results/*.json` embeds a `sha256_canonical` field equal to the `sha256` checksum of `json.dumps(payload_without_sha_field, sort_keys=True, separators=(",", ":"))` computed by the generator script that writes it (this is a deterministic content checksum for reproducibility, not a cryptographic signature). Raw file digests are recorded in `SHA256SUMS`.

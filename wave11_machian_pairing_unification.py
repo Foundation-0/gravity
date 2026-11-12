@@ -33,11 +33,11 @@ OMEGA_L = 1.0 - OMEGA_M
 
 
 def audit_c28_machian_inertia_and_horizon_scales() -> dict:
-    """Evaluates Sciama (1953) / Braun (2026) Machian induction identities, Milgrom (1999) Unruh-de Sitter scales, and PPN/locality caveats."""
+    """Evaluates Sciama (1953) / Urueña Palomo (2026) Machian induction identities, Milgrom (1999) Unruh-de Sitter scales, and PPN/locality caveats."""
     m_hubble = (4.0 / 3.0) * math.pi * (R_H ** 3) * RHO_CRIT0
     sciama_compactness = (G * m_hubble) / (R_H * (C_SI ** 2))
     sciama_potential_integral = (2.0 * math.pi * G * RHO_CRIT0 * (R_H ** 2)) / (C_SI ** 2)
-    # Braun (2026, EPJC 86, 1215): gravitomagnetic induction K_gm = (2 H0^2 R_H^2)/(3 c^2) = 2/3 + gravitoelectric K_ge = 1/3 = 1
+    # Illustrative partition associated with Urueña Palomo (2026, arXiv:2610.09987v2); not an established derivation of inertia: gravitomagnetic induction K_gm = (2 H0^2 R_H^2)/(3 c^2) = 2/3 + gravitoelectric K_ge = 1/3 = 1
     k_gm = (2.0 * (H0_SI ** 2) * (R_H ** 2)) / (3.0 * (C_SI ** 2))
     k_ge = 1.0 / 3.0
 
@@ -79,6 +79,13 @@ def audit_c28_machian_inertia_and_horizon_scales() -> dict:
     }
 
 
+def closed_cpl_hubble_squared(a, omega_k, w0=-0.75, wa=-0.85):
+    """Chosen radiation-free CPL continuation with present-day density closure."""
+    omega_de = 1.0 - OMEGA_M - omega_k
+    rho_de = a ** (-3.0 * (1.0 + w0 + wa)) * math.exp(3.0 * wa * (a - 1.0))
+    return OMEGA_M / a ** 3 + omega_de * rho_de + omega_k / a ** 2
+
+
 def audit_c29_zero_energy_and_desi_turnaround() -> dict:
     """Evaluates closed-FLRW / ADM zero-energy cancellation and DESI-motivated thawing dark-energy deceleration & turnaround."""
     w0_desi = -0.75
@@ -108,13 +115,15 @@ def audit_c29_zero_energy_and_desi_turnaround() -> dict:
         lo_t, hi_t = 2.0, 2000.0
         for _ in range(80):
             mt = 0.5 * (lo_t + hi_t)
-            h2 = OMEGA_M * (mt ** -3.0) + OMEGA_L * rho_de_rel(mt) - ok_abs * (mt ** -2.0)
+            h2 = closed_cpl_hubble_squared(mt, -ok_abs)
             if h2 > 0.0:
                 lo_t = mt
             else:
                 hi_t = mt
         closed_turnarounds.append({
             "Omega_k": -ok_abs,
+            "Omega_DE_present": 1.0 - OMEGA_M + ok_abs,
+            "H_squared_at_a1_over_H0_squared": closed_cpl_hubble_squared(1.0, -ok_abs),
             "turnaround_scale_factor_a_max": round(0.5 * (lo_t + hi_t), 2),
             "asymptotic_matter_curvature_ratio_Omega_m_over_abs_Omega_k": round(OMEGA_M / ok_abs, 2),
         })
@@ -134,8 +143,9 @@ def audit_c29_zero_energy_and_desi_turnaround() -> dict:
 
     return {
         "epistemic_status": "COMPUTED (FRIEDMANN & ADM HAMILTONIAN IDENTITIES UNDER STATED EOS INPUTS)",
-        "adm_hamiltonian_constraint": "H_grav + H_matter = 0 identically in GR and 3+1D AeST (Bataki et al. 2024 Eq. 43a)",
+        "adm_hamiltonian_constraint": "A Hamiltonian constraint applies on physical solutions, subject to boundary and gauge conditions (Bataki et al. 2024 Eq. 43a). It is not a global observable energy identity or an origin mechanism.",
         "desi_thawing_eos_inputs": {"w0": w0_desi, "wa": wa_desi},
+        "future_extrapolation_caveat": "Chosen CPL inputs are not a fit here. Recollapse is conditional on this unmeasured future continuation, not an observational prediction. Past-compatible future equations of state can avoid turnaround.",
         "future_deceleration_onset_scale_factor_a_slow": round(a_slow, 4),
         "closed_universe_recollapse_turnarounds": closed_turnarounds,
         "machian_a0_redshift_evolution_tracks": a0_evolution_comparison,
@@ -144,9 +154,9 @@ def audit_c29_zero_energy_and_desi_turnaround() -> dict:
 
 def audit_c30_cpt_pair_bifurcation_and_cogenesis() -> dict:
     """Evaluates CPT-even Mexican-hat kinetic condensate P(Q) = K_2 (Q^2/Q_0^2 - 1)^2 - Lambda_DE and cogenesis scales."""
-    # Dimensionless u = Q / Q_0 around u = 0 (unbroken creation maximum) and u = +/- (1 + eps) (CPT-conjugate branches)
+    # Dimensionless u = Q / Q_0 around u = 0 (symmetric polynomial point) and u = +/- (1 + eps) (CPT-conjugate branches)
     # P(u) / K_2 = (u^2 - 1)^2 - lam, rho(u) / K_2 = u * 4*u*(u^2 - 1) - (u^2 - 1)^2 + lam = (u^2 - 1)*(3*u^2 + 1) + lam
-    lam = 2.0  # illustrative Lambda_DE / K_2 > 1 so rho(0) > 0 at symmetric creation point
+    lam = 2.0  # illustrative Lambda_DE / K_2 > 1 so rho(0) > 0 at symmetric polynomial point
     p_u0 = 1.0 - lam
     rho_u0 = -1.0 + lam
     w_u0 = p_u0 / rho_u0
@@ -175,16 +185,23 @@ def audit_c30_cpt_pair_bifurcation_and_cogenesis() -> dict:
     m_p_gev = (M_P * (C_SI ** 2)) / 1.602176634e-10
     adm_equal_number_mass_gev = omega_c_over_b * m_p_gev
     eta_b_cmb = 6.12e-10
-    annihilated_pair_fraction_visible = 1.0 - eta_b_cmb
+    # eta_B is a present baryon-to-photon ratio, not an initial annihilated pair fraction.
 
     return {
         "epistemic_status": (
             "COMPUTED (KINETIC MEXICAN-HAT & COGENESIS ALGEBRA) & "
             "CONJECTURE (COSMOLOGICAL CPT PAIR-CREATION ORIGIN OF CONDENSATE CHARGE)"
         ),
-        "unbroken_creation_state_u0": {
+        "symmetric_polynomial_state_u0": {
+            "P_QQ_in_units_K2_over_Q0_squared": -4.0,
+            "homogeneous_shift_current": 0.0,
             "w_u0_exact": round(w_u0, 6),
         },
+        "origin_obstructions": [
+            "The minimal homogeneous scalar sector has P_QQ(0)=-4*K2/Q0^2<0. Full mixing stability is not solved.",
+            "Source-free homogeneous shift symmetry conserves a^3 P_Q. Starting at u=0 gives zero current, so nonzero branch charge requires an additional source, boundary condition or production prescription.",
+            "Evaluating opposite branches algebraically does not establish a dynamical transition through the kinetic degeneracy at abs(u)=1/sqrt(3).",
+        ],
         "cpt_conjugate_pair_branches": branches,
         "global_net_noether_charge_sum": round(net_noether_charge, 12),
         "both_sheets_positive_dust_gravity": bool(
@@ -194,13 +211,12 @@ def audit_c30_cpt_pair_bifurcation_and_cogenesis() -> dict:
         "baryon_dark_matter_remnant_scales": {
             "planck_Omega_c_over_Omega_b": round(omega_c_over_b, 4),
             "visible_baryon_to_photon_eta_B": eta_b_cmb,
-            "visible_pair_annihilation_completion": round(annihilated_pair_fraction_visible, 10),
+            "eta_B_interpretation": "The baryon-to-photon ratio does not determine the fraction of initial visible pairs annihilated.",
             "cogenesis_equal_charge_particle_mass_GeV": round(adm_equal_number_mass_gev, 3),
             "audit_distinction": (
-                "Collisionless 5.03 GeV ADM particles would form cold dwarf cusps (sigma_J = 0), "
-                "failing galactic RAR without MOND; storing the conserved cogenesis/Bogoliubov Noether "
-                "charge in the coherent P(Q, Y) condensate keeps linear dust scaling while preserving "
-                "galactic phonons and the Wave-10 Dark-WHIM Jeans floor."
+                "The mass ratio is an equal-number benchmark, not a cogenesis mechanism. "
+                "Shift symmetry permits derivative portals such as (partial_phi)^2 F_mu_nu F^mu_nu. "
+                "No portal coefficient, conversion rate or relic abundance is derived."
             ),
         },
     }
@@ -234,12 +250,12 @@ def main() -> int:
     assert c28["sciama_compactness_GMH_over_RH_c2"] == 0.5
     assert c28["frame_dragging_induction_partition"]["total_inertial_coefficient_K_tot"] == 1.0
     assert 1.35 <= c29["future_deceleration_onset_scale_factor_a_slow"] <= 1.45
-    assert c30["unbroken_creation_state_u0"]["w_u0_exact"] == -1.0
+    assert c30["symmetric_polynomial_state_u0"]["w_u0_exact"] == -1.0
     assert c30["global_net_noether_charge_sum"] == 0.0
     assert c30["both_sheets_positive_dust_gravity"] is True
 
     cert11 = {
-        "schema": "FOUNDATION-0/GRAVITY-WAVE11-MACHIAN-PAIRING/1.0",
+        "schema": "FOUNDATION-0/GRAVITY-WAVE11-MACHIAN-PAIRING/1.1",
         "claim_c28_machian_inertia_and_horizon_induction": c28,
         "claim_c29_zero_energy_and_desi_turnaround": c29,
         "claim_c30_cpt_pair_bifurcation_and_noether_remnant": c30,

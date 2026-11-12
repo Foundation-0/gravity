@@ -2,7 +2,7 @@
 Foundation-0 / gravity -- Wave-12 Cosmic-Dawn Compact Quasar Pair Audit: J1602+4228AB / Napowawa'enakaulua (C-31..C-33; M-10)
 Evaluates Onorato et al. (2026, ApJL 1011, L59, arXiv:2609.31835; NOIRLab Release noirlab2627) against:
   - C-31: Cosmic-Dawn age budget, Salpeter e-folding bottleneck (Schwarzschild vs Kerr spin; pure-H vs H+He), and Pop III vs DCBH seed requirements.
-  - C-32: Two-branch condensate + MOND phonon collapse at z = 6.0783 (evaluating exact Planck-2018 sigma_*(z=6.0783) vs z=0 Dark-WHIM inversion and MOND free-fall speedup).
+  - C-32: Two-branch condensate + MOND phonon collapse at z = 6.0783 (evaluating the chosen Planck-normalized spectrum approximation sigma_*(z=6.0783) vs z=0 Dark-WHIM inversion and MOND free-fall speedup).
   - C-33: Slim-disk photon-trapping super-Eddington growth, binary orbital / projection constraints at 5.56 pkpc, and Peters (1964) GW chirp-mass budget.
 attribution: Written by AI agent (Gemini, Google, via orda-aska for Foundation-0); not yet reviewed by a person.
 license: Apache-2.0 (code) / CC-BY-4.0 (results).
@@ -145,6 +145,82 @@ def build_sigma_r_evaluator():
     return sigma_lin
 
 
+def _adaptive_simpson(function, lo, hi, tolerance=1e-10, depth=20):
+    """Absolute-error adaptive Simpson quadrature; fail rather than hide nonconvergence."""
+    mid = (lo + hi) / 2.0
+    fl, fm, fh = function(lo), function(mid), function(hi)
+    whole = (hi - lo) * (fl + 4 * fm + fh) / 6
+
+    def refine(a, b, fa, fc, fb, old, tol, remaining):
+        c = (a + b) / 2
+        fd, fe = function((a + c) / 2), function((c + b) / 2)
+        left = (c - a) * (fa + 4 * fd + fc) / 6
+        right = (b - c) * (fc + 4 * fe + fb) / 6
+        delta = left + right - old
+        if abs(delta) <= 15 * tol:
+            return left + right + delta / 15
+        if remaining == 0:
+            raise ArithmeticError('radial potential quadrature did not converge')
+        return refine(a, c, fa, fd, fc, left, tol / 2, remaining - 1) + refine(c, b, fc, fe, fb, right, tol / 2, remaining - 1)
+
+    return refine(lo, hi, fl, fm, fh, whole, tolerance, depth)
+
+
+def radial_point_mass_fall_time(mass_kg, radius_m, a0=None, additive_mass_ratio=0.0, intervals=256):
+    """Rest-to-origin radial time in a fixed point-mass force, not filament dynamics.
+
+    Integrate dt=dr/sqrt(2 int_r^r0 g(s)ds). r/r0=cos(theta)^2 removes
+    both endpoint singularities. The exact Newton term is separated from the
+    exponentially suppressed high-acceleration RAR correction before quadrature.
+    """
+    if mass_kg <= 0 or radius_m <= 0 or additive_mass_ratio < 0 or (a0 is not None and a0 <= 0):
+        raise ValueError('positive mass, radius and a0 and nonnegative added ratio required')
+    if intervals < 2 or intervals % 2:
+        raise ValueError('an even positive Simpson interval count is required')
+    gb0 = G * mass_kg / radius_m ** 2
+    q0 = math.sqrt(gb0 / a0) if a0 is not None else None
+
+    def excess(x):
+        if q0 is None or x == 0 or q0 / x > 700:
+            return 0.0
+        return 1.0 / (x * x * math.expm1(q0 / x))
+
+    force_at_start = 1.0 + additive_mass_ratio + excess(1.0)
+
+    def integrand(theta):
+        if theta == 0:
+            return 2.0 / math.sqrt(force_at_start)
+        if theta >= math.pi / 2:
+            return 0.0
+        x = math.cos(theta) ** 2
+        # 1-x is stable near theta=0 when expressed as sin(theta)^2.
+        drop = (1.0 + additive_mass_ratio) * math.sin(theta) ** 2 / x
+        if a0 is not None:
+            # In log radius the scaled excess integrand y/expm1(y) is bounded
+            # by one even in the deep-MOND limit, avoiding a sharp inner core.
+            def log_excess(t):
+                y = q0 * math.exp(t)
+                return 0.0 if y > 700 else y / math.expm1(y)
+            drop += _adaptive_simpson(log_excess, 0.0, -math.log(x)) / q0
+        return 2.0 * math.sin(theta) * math.cos(theta) / math.sqrt(drop)
+
+    step = math.pi / (2 * intervals)
+    total = sum((1 if i in (0, intervals) else 4 if i % 2 else 2) * integrand(i * step) for i in range(intervals + 1))
+    return math.sqrt(radius_m / (2 * gb0)) * total * step / 3
+
+
+def slim_disk_growth_time_myr(efoldings, mdot, epsilon_reference=0.10):
+    """mdot=epsilon_reference*dotM_in*c^2/L_Edd; no outflows, constant duty one."""
+    if mdot <= 0 or not 0 < epsilon_reference < 1:
+        raise ValueError('positive inflow and efficiency between zero and one required')
+    luminosity_ratio = mdot if mdot < 2 else 2 * (1 + math.log(mdot / 2))
+    retained_inflow = mdot - epsilon_reference * luminosity_ratio
+    if retained_inflow <= 0:
+        raise ValueError('nonpositive retained black-hole growth')
+    t_edd = SIGMA_T * C_SI / (4 * math.pi * G * M_P) / MYR
+    return luminosity_ratio, efoldings * epsilon_reference * t_edd / retained_inflow
+
+
 def audit_c31_salpeter_seed_and_clustering_wall() -> dict:
     """Evaluates Cosmic-Dawn age, Salpeter growth bottleneck, and clustering excess for J1602+4228AB."""
     t_pair_myr = cosmic_age_myr(Z_PAIR)
@@ -173,6 +249,9 @@ def audit_c31_salpeter_seed_and_clustering_wall() -> dict:
     tsal_01_h = salpeter_myr(0.10, pure_h=True)
     tsal_01_prim = salpeter_myr(0.10, pure_h=False)
     tsal_02_kerr = salpeter_myr(0.20, pure_h=True)
+    eps_schwarzschild = 1.0 - math.sqrt(8.0 / 9.0)
+    tsal_schwarzschild_h = salpeter_myr(eps_schwarzschild, pure_h=True)
+    tsal_schwarzschild_prim = salpeter_myr(eps_schwarzschild, pure_h=False)
 
     return {
         "epistemic_status": "COMPUTED (KNOWN-FRAMEWORK COSMOLOGICAL & SALPETER IDENTITIES; LENSING & VIRIAL MASS CAVEATS NOTED)",
@@ -193,6 +272,7 @@ def audit_c31_salpeter_seed_and_clustering_wall() -> dict:
         "salpeter_timescales_Myr": {
             "pure_H_eps_0p10": round(tsal_01_h, 2),
             "primordial_H_He_eps_0p10": round(tsal_01_prim, 2),
+            "fixed_Schwarzschild_primordial_H_He": round(tsal_schwarzschild_prim, 6),
             "spinning_Kerr_pure_H_eps_0p20": round(tsal_02_kerr, 2),
         },
         "growth_windows_Myr": {
@@ -201,6 +281,13 @@ def audit_c31_salpeter_seed_and_clustering_wall() -> dict:
         },
         "seed_duty_cycle_audit_for_J1602A_1p5e9_Msun": {
             "popIII_100Msun_efoldings": round(efold_a_pop3, 3),
+            "popIII_100Msun_req_time_primordial_H_He_eps0p10_Myr": round(efold_a_pop3 * tsal_01_prim, 3),
+            "popIII_100Msun_duty_primordial_H_He_eps0p10": round(efold_a_pop3 * tsal_01_prim / dt_from_z20, 6),
+            "fixed_Schwarzschild_efficiency": eps_schwarzschild,
+            "popIII_100Msun_req_time_pure_H_Schwarzschild_Myr": round(efold_a_pop3 * tsal_schwarzschild_h, 3),
+            "popIII_100Msun_duty_pure_H_Schwarzschild": round(efold_a_pop3 * tsal_schwarzschild_h / dt_from_z20, 6),
+            "popIII_100Msun_req_time_primordial_H_He_Schwarzschild_Myr": round(efold_a_pop3 * tsal_schwarzschild_prim, 3),
+            "popIII_100Msun_duty_primordial_H_He_Schwarzschild": round(efold_a_pop3 * tsal_schwarzschild_prim / dt_from_z20, 6),
             "popIII_100Msun_req_time_Edd1_eps0p10_Myr": round(efold_a_pop3 * tsal_01_h, 2),
             "popIII_100Msun_duty_from_z20_Edd1_eps0p10": round((efold_a_pop3 * tsal_01_h) / dt_from_z20, 3),
             "popIII_100Msun_duty_from_z20_obsEdd1p23_eps0p10": round((efold_a_pop3 * tsal_01_h) / (LAM_EDD_A * dt_from_z20), 3),
@@ -216,6 +303,7 @@ def audit_c31_salpeter_seed_and_clustering_wall() -> dict:
             "dcbh_1e5Msun_duty_from_z20_obsEdd1p07_eps0p10": round((efold_b_dcbh * tsal_01_h) / (LAM_EDD_B * dt_from_z20), 3),
         },
         "scientific_caveats": [
+            "Efficiency 0.10 is a chosen benchmark, not the Schwarzschild thin-disk efficiency. All growth clocks assume fixed efficiency, opacity, Eddington ratio and duty; present luminosity need not equal its lifetime average.",
             "Single-epoch broad-line virial BH masses carry ~2x (0.3 dex) systematic uncertainty.",
             "Spectral slopes, dust attenuation, and [O III] outflow shapes differ between A and B (favoring a physical pair), but archival HST imaging shows a candidate foreground galaxy near B; a full lens model is pending (Onorato et al. 2026).",
         ],
@@ -271,13 +359,14 @@ def audit_c32_two_branch_condensate_and_phonon_collapse() -> dict:
     g_mond_hubble_a0 = g_rar(g_b_feed, a0_hubble_z6)
     g_two_branch_const = g_mond_const_a0 + (OMEGA_C / OMEGA_B) * f_trap_z6 * g_b_feed
 
-    t_ff_newt_myr = (math.pi / 2.0) * math.sqrt(r_feed_m / (2.0 * g_b_feed)) / MYR
-    t_ff_mond_const_myr = (math.pi / 2.0) * math.sqrt(r_feed_m / (2.0 * g_mond_const_a0)) / MYR
-    t_ff_mond_hubble_myr = (math.pi / 2.0) * math.sqrt(r_feed_m / (2.0 * g_mond_hubble_a0)) / MYR
-    t_ff_two_branch_myr = (math.pi / 2.0) * math.sqrt(r_feed_m / (2.0 * g_two_branch_const)) / MYR
+    t_ff_newt_myr = radial_point_mass_fall_time(m_b_feed, r_feed_m) / MYR
+    t_ff_mond_const_myr = radial_point_mass_fall_time(m_b_feed, r_feed_m, a0_const) / MYR
+    t_ff_mond_hubble_myr = radial_point_mass_fall_time(m_b_feed, r_feed_m, a0_hubble_z6) / MYR
+    t_ff_two_branch_myr = radial_point_mass_fall_time(m_b_feed, r_feed_m, a0_const, (OMEGA_C / OMEGA_B) * f_trap_z6) / MYR
+    convergence = [radial_point_mass_fall_time(m_b_feed, r_feed_m, a0_const, intervals=n) / MYR for n in (64, 128, 256)]
 
     return {
-        "epistemic_status": "COMPUTED (WAVE-10 SIGMA_*(Z) EXTENSION & MOND FREE-FALL) & CONJECTURE (COSMIC-DAWN DCBH SEEDING)",
+        "epistemic_status": "COMPUTED (CHOSEN SPECTRUM AND FIXED POINT-MASS FORCE BENCHMARKS); NO SEED-FORMATION OR FILAMENT-DYNAMICS SOLUTION",
         "planck_nonlinear_collapse_at_z6p08": {
             "R_star_comoving_Mpc": round(r_star_com_mpc, 5),
             "M_star_Msun": float(f"{m_star_msun:.4e}"),
@@ -287,7 +376,11 @@ def audit_c32_two_branch_condensate_and_phonon_collapse() -> dict:
             "host_177kms_trapping_at_z0": round(f_trap_z0, 6),
         },
         "lcdm_gaussian_halo_rarity_at_z6p08": halo_rarities,
-        "feeder_filament_30pkpc_5e10Msun_infall": {
+        "fixed_point_mass_30pkpc_5e10Msun_radial_infall": {
+            "method": "Energy-conserving radial quadrature, released from rest; fixed point mass; no pressure, angular momentum or environmental evolution",
+            "MOND_const_a0_convergence_intervals": [64, 128, 256],
+            "MOND_const_a0_convergence_Myr": convergence,
+            "superseded_outer_acceleration_shortcuts_Myr": [182.27, 109.04, 122.79],
             "g_baryon_m_s2": float(f"{g_b_feed:.4e}"),
             "a0_const_m_s2": a0_const,
             "a0_hubble_cHz_over_2pi_m_s2": float(f"{a0_hubble_z6:.4e}"),
@@ -297,11 +390,9 @@ def audit_c32_two_branch_condensate_and_phonon_collapse() -> dict:
             "free_fall_time_two_branch_trapped_condensate_Myr": round(t_ff_two_branch_myr, 2),
         },
         "dynamical_friction_audit_note": (
-            f"Pure baryon-only MOND slows kpc-scale galaxy mergers due to absent dark-halo dynamical friction "
-            f"(Nipoti et al. 2008), whereas in the two-branch condensate sigma_*(z=6.08) = {sigma_star_z6_kms:.2f} km/s "
-            f"<< sigma_halo keeps f_trap = {f_trap_z6:.5f}, supplying both deep central DCBH potentials and "
-            f"Chandrasekhar dynamical friction at z = 6.08 before late-time cosmic-web shocks heat the condensate "
-            f"to 185.59 km/s by z = 0."
+            "The assigned trapping fraction is a prescription, not a capture or friction calculation. "
+            "M_star is total nonlinear halo mass, not a black-hole seed. No density profile, phase-space "
+            "distribution, gas collapse, cooling or merger hardening history is solved here."
         ),
     }
 
@@ -309,13 +400,11 @@ def audit_c32_two_branch_condensate_and_phonon_collapse() -> dict:
 def audit_c33_slim_disk_and_binary_gw_budget() -> dict:
     """Evaluates slim-disk photon trapping for lambda_Edd > 1, 5.56 pkpc orbital projection, and GW merger timescale."""
     t_edd_pure_h_myr = (SIGMA_T * C_SI) / (4.0 * math.pi * G * M_P) / MYR
-    tsal_01_myr = (0.10 / 0.90) * t_edd_pure_h_myr
     efold_a_pop3 = math.log(M_BH_A_MSUN / 100.0)
 
     slim_disk_benchmarks = []
     for mdot in [1.0, 2.0, 3.0, 5.0]:
-        lam_obs = mdot if mdot < 2.0 else 2.0 * (1.0 + math.log(mdot / 2.0))
-        t_grow_pop3_myr = (efold_a_pop3 * tsal_01_myr) / mdot
+        lam_obs, t_grow_pop3_myr = slim_disk_growth_time_myr(efold_a_pop3, mdot)
         slim_disk_benchmarks.append({
             "dimensionless_mass_inflow_mdot": mdot,
             "radiated_lambda_Edd_slim_disk": round(lam_obs, 3),
@@ -343,12 +432,13 @@ def audit_c33_slim_disk_and_binary_gw_budget() -> dict:
 
     return {
         "epistemic_status": "COMPUTED (SLIM-DISK ADVECTION & PETERS 1964 GW INSPIRAL IDENTITIES)",
+        "slim_disk_mass_flow_convention": "mdot = epsilon_ref * dotM_in * c^2 / L_Edd; epsilon_ref=0.10; lambda=mdot below 2, otherwise 2*(1+ln(mdot/2)); dotM_BH=(mdot-epsilon_ref*lambda)*L_Edd/(epsilon_ref*c^2); no outflows; fixed coefficients and duty one",
         "slim_disk_photon_trapping_benchmarks": slim_disk_benchmarks,
         "kinematic_projection_at_5p56_pkpc": {
             "v_circ_BHs_only_kms": round(v_kepler_bh_only_kms, 2),
             "v_circ_with_1p5e11Msun_host_kms": round(v_circ_host_kms, 2),
             "observed_delta_v_los_kms": DELTA_V_OBS_KMS,
-            "required_abs_sin_i_cos_psi": round(proj_factor_host, 4),
+            "illustrative_abs_sin_i_cos_psi_from_point_velocity": round(proj_factor_host, 4),
         },
         "gravitational_wave_inspiral_budget": {
             "chirp_mass_Msun": float(f"{m_chirp_msun:.4e}"),
@@ -357,9 +447,9 @@ def audit_c33_slim_disk_and_binary_gw_budget() -> dict:
             "t_GW_at_0p05_pc_Myr": round(t_gw_at_0p05pc_myr, 2),
             "nanograv_relevance": (
                 f"At 5.56 pkpc, pure GW emission is negligible (t_GW = {t_gw_at_5p56kpc_myr:.2e} Myr); "
-                f"Chandrasekhar dynamical friction and stellar/condensate loss-cone scattering must harden "
-                f"the pair to 0.05-0.10 pc, after which GW inspiral merges the M_c = {m_chirp_msun:.2e} M_sun "
-                f"binary in {t_gw_at_0p05pc_myr:.2f}-{t_gw_at_0p10pc_myr:.2f} Myr, feeding the nHz GW background."
+                f"If the pair reaches 0.05-0.10 pc, the isolated circular point-mass GW clock is "
+                f"{t_gw_at_0p05pc_myr:.2f}-{t_gw_at_0p10pc_myr:.2f} Myr. "
+                f"No hardening history, population merger rate or GW background prediction is supplied."
             ),
         },
     }
@@ -400,7 +490,7 @@ def main() -> int:
     assert 6.46e8 <= c33["gravitational_wave_inspiral_budget"]["chirp_mass_Msun"] <= 6.48e8
 
     cert12 = {
-        "schema": "FOUNDATION-0/GRAVITY-WAVE12-COSMIC-DAWN-QUASAR-PAIR/1.0",
+        "schema": "FOUNDATION-0/GRAVITY-WAVE12-COSMIC-DAWN-QUASAR-PAIR/1.1",
         "claim_c31_salpeter_seed_and_clustering_wall": c31,
         "claim_c32_two_branch_condensate_and_phonon_collapse": c32,
         "claim_c33_slim_disk_and_binary_gw_budget": c33,

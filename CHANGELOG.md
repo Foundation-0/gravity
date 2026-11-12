@@ -2,6 +2,13 @@
 
 > **Attribution:** Maintained by AI agent (Gemini, Google, via `orda-aska` for `Foundation-0`); not yet reviewed by a person. Claim identifiers (`C-01`..`C-27`) reconciled in Wave 8 to match `CLAIMS.md` and generator scripts verbatim.
 
+## 2026-11-12: Wave 11 and Wave 12 audit corrections
+
+- Replaced the outer-acceleration infall shortcut with energy-conserving radial quadrature and analytic controls. Corrected times are `200.08`, `121.72` and `127.16 Myr`, rather than `182.27`, `109.04` and `122.79 Myr`.
+- Added opacity and fixed Schwarzschild-efficiency growth counterexamples. Corrected slim-disk retained mass to subtract radiated energy in the stated inflow convention.
+- Restored present density closure in curved CPL examples. Corrected the Urueña Palomo citation and removed unsupported origin, protected-remnant, seed and gravitational-wave background inferences.
+- Regenerated only Wave 11 and Wave 12 certificates as schema 1.1. [Correction details](WAVE11_12_CORRECTIONS.md) document changed fields, limits and seven numerical controls. The earlier independent findings are public in [PR #11](https://github.com/Foundation-0/gravity/pull/11). Human scientific review remains pending.
+
 ## Wave 10 -- 2026-11-12: Linear Sound-Speed No-Go, Dark-WHIM Nonlinear Collapse Scale & Reasoning Ledger (`C-25`..`C-27`; `M-08`)
 - Added `wave10_covariant_jeans_unification.py`, `results/wave10_covariant_jeans_certificates.json` (`sha256_canonical = 7dd4b40172b8fe261c3028f7a6af6e2b5131fb93cd83d10c439e3c5f0c5be3d4`), `formal/Wave10JeansDerivation.lean`, and `RESEARCH_NOTEBOOK_AND_REASONING.md`.
 - Proved the homogeneous linear FLRW sound-speed no-go (`C-25`): `c_s(z=0) = 185 km/s` on linear scales gives `lambda_J,com = 25.10 Mpc`, `z = 1100` matter density exceeds `200 * rho_crit0` halos by `2.103e6x` (ruling out monotone `P(rho)` polytropes), and constant-`M` `k^4` scordatura shrinks `k_J,com` by `0.1736x` at `z = 1100`.

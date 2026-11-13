@@ -14,6 +14,10 @@
 - Evaluated ADM zero-energy balance (`H_tot = 0`), DESI thawing dark-energy deceleration onset (`a_slow = 1.3897`), closed-`S^3` turnaround (`a_turn = Omega_m / |Omega_k|`), and `a_0(z)` evolution tracks (`C-29`).
 - Proved over `Int` in `formal/Wave11MachianZeroEnergy.lean` and computed in `wave11_machian_pairing_unification.py` that CPT-symmetric Mexican-hat pair bifurcation (`u -> +/- (1 + eps)`) yields zero net Noether charge (`J^0_+ + J^0_- = 0`) with strictly positive dust gravity (`rho_dust > 0`) on both sheets, connecting shift-symmetric condensate stability and axiogenesis/cogenesis to `Omega_c / Omega_b = 5.3895` (`C-30`).
 
+## Lean build repair -- 2026-11-12
+- Removed trailing duplicate declaration blocks and malformed comment fragments in the Wave 5, 6, and 7 Lean files. Kept the current theorem statements and proofs, and retained the three distinct earlier arithmetic statements under names ending in `_legacy_arithmetic`.
+- These checks establish integer identities and inequalities only. They do not validate the physical models.
+
 ## Wave 10 -- 2026-11-12: Linear Sound-Speed No-Go, Dark-WHIM Nonlinear Collapse Scale & Reasoning Ledger (`C-25`..`C-27`; `M-08`)
 - Added `wave10_covariant_jeans_unification.py`, `results/wave10_covariant_jeans_certificates.json` (`sha256_canonical = 7dd4b40172b8fe261c3028f7a6af6e2b5131fb93cd83d10c439e3c5f0c5be3d4`), `formal/Wave10JeansDerivation.lean`, and `RESEARCH_NOTEBOOK_AND_REASONING.md`.
 - Proved the homogeneous linear FLRW sound-speed no-go (`C-25`): `c_s(z=0) = 185 km/s` on linear scales gives `lambda_J,com = 25.10 Mpc`, `z = 1100` matter density exceeds `200 * rho_crit0` halos by `2.103e6x` (ruling out monotone `P(rho)` polytropes), and constant-`M` `k^4` scordatura shrinks `k_J,com` by `0.1736x` at `z = 1100`.

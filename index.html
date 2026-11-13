@@ -174,14 +174,15 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible{ou
           <div class="eyebrow-pill"><span class="dot dot-bronze"></span><span class="dot dot-cyan"></span><span>Biological + Digital Intelligence, On The Record · Waves 01–12</span></div>
           <h1 class="hero-title">Gravity &amp; the Two-Branch Condensate</h1>
           <p class="hero-subtitle">Reproducible audits from Cosmic-Dawn quasar collapse to galactic MOND phonons and intracluster dust.</p>
-          <p class="hero-lede">An open, byte-verified computational record (<span class="code-inline">37/37 SHA256SUMS</span>, zero-dependency Python 3 solvers, and stock Lean 4 arithmetic proofs) investigating how a shift-symmetric relativistic condensate unifies galactic rotation curves, <span class="code-inline">1 Mpc</span> weak lensing, cluster cores, and <span class="code-inline">z = 6.08</span> black hole assembly—audited at <span class="code-inline">0311496</span> to strictly separate computed identities from empirical fits and open conjectures.</p>
+          <p class="hero-lede">An open, byte-verified computational record (<span class="code-inline">36/
+            36 SHA256SUMS</span>, zero-dependency Python 3 solvers, and stock Lean 4 arithmetic proofs) investigating how a shift-symmetric relativistic condensate unifies galactic rotation curves, <span class="code-inline">1 Mpc</span> weak lensing, cluster cores, and <span class="code-inline">z = 6.08</span> black hole assembly—audited at <span class="code-inline">0311496</span> to strictly separate computed identities from empirical fits and open conjectures.</p>
           <div class="cta-row">
             <a class="btn-primary" href="#instruments">Explore Instruments -&gt;</a>
             <a class="btn-secondary" href="#ledger">Open 33-Claim Ledger</a>
             <a class="btn-secondary" href="https://github.com/Foundation-0/gravity" target="_blank" rel="noopener noreferrer">GitHub Repo</a>
           </div>
           <div class="stat-grid">
-            <div class="stat-cell"><div class="mono-label">Audited Scope</div><div class="stat-num">33 Claims / 12 Waves</div><div class="stat-desc">37 SHA-256 verified files &amp; 6 stock Lean 4 modules (zero unearned PROVEN tags).</div></div>
+            <div class="stat-cell"><div class="mono-label">Audited Scope</div><div class="stat-num">33 Claims / 12 Waves</div><div class="stat-desc">36 SHA-256 verified files &amp; 6 stock Lean 4 modules (zero unearned PROVEN tags).</div></div>
             <div class="stat-cell"><div class="mono-label">Observational Confrontation</div><div class="stat-num">129,027 + 126</div><div class="stat-desc">KiDS-1000 isolated galaxy lenses (1 Mpc) + 126 SPARC, X-ray &amp; WL groups/clusters.</div></div>
             <div class="stat-cell"><div class="mono-label">Zero-Param Collapse Dispersion</div><div class="stat-num">185.59 km/s</div><div class="stat-desc">Planck-2018 z=0 Press-Schechter scale: χ²/dof = 1.004 (k=0, ΔBIC = −10.01 vs Wave 7).</div></div>
             <div class="stat-cell"><div class="mono-label">Cosmic-Dawn Inversion (z = 6.08)</div><div class="stat-num">99.997% → 0%</div><div class="stat-desc">σ*(6.08) = 0.97 km/s traps condensate at Cosmic Dawn (M* = 8.39×10⁴ M_sun) before shocks.</div></div>
@@ -438,7 +439,9 @@ const CLAIMS=[
   { id: 'C-12', wave: 'W5', axis: 0, ring: 0.16, status: 'COMPUTED', tag: 'COMPUTED / CONJECTURE', lean: 'formal/Wave5StochasticForces.lean: -2 < -1 < 0', title: 'Cornell QCD String-Tension Force-Law Exponent Comparison', body: 'Lattice QCD string tension σ=0.18 GeV² (1.4615×10⁵ N) gives log-slopes −1.9129 (0.05 fm) and −0.0470 (2.0 fm) bracketing galactic d_s=1 (−1); structural analogy only.' },
   { id: 'C-13', wave: 'W5', axis: 6, ring: 0.3, status: 'CONJECTURE', tag: 'COMPUTED / CONJECTURE', lean: null, title: 'Compton & Horizon Acceleration Scale Comparison', body: 'Compares c²/L_gap at m_W (80.377 GeV), √σ_QCD, and a_dS=c H₀/(2π)=1.0422×10⁻¹⁰ m/s²; one-loop SU(2) α_UV=0.00603 is algebraic only.' },
   { id: 'C-14', wave: 'W5', axis: 0, ring: 0.24, status: 'COMPUTED', tag: 'COMPUTED (MASS-RATIO ARITHMETIC)', lean: 'formal/Wave5StochasticForces.lean: 45570000*91095 < 415125*10^7', title: 'Quantum Diffusivity Mass Ratio m(25 kDa)/m_e vs. Gravitational WEP', body: 'm(25 kDa)/m_e = 4.5572×10⁷ rules out mass-independent diffusion D_ext=const (Fein et al. 2019), alongside MICROSCOPE η=(−1.5±2.7)×10⁻¹⁵ WEP bound.' },
-  { id: 'C-15', wave: 'W5', axis: 1, ring: 0.2, status: 'COMPUTED', tag: 'COMPUTED (KNOWN-FRAMEWORK)', lean: null, title: 'Seeded Nelson Stochastic Mechanics Harmonic-Oscillator Check', body: 'Seeded (20261111) Euler-Maruyama run reproduces Nelson (1966) Var(x)=0.4961 vs 0.5000 (white-noise heating 6.263) with Wallstrom single-valuedness caveat.' },
+  
+
+{ id: 'C-15', wave: 'W5', axis: 1, ring: 0.2, status: 'COMPUTED', tag: 'COMPUTED (KNOWN-FRAMEWORK)', lean: null, title: 'Seeded Nelson Stochastic Mechanics Harmonic-Oscillator Check', body: 'Seeded (20261111) Euler-Maruyama run reproduces Nelson (1966) Var(x)=0.4961 vs 0.5000 (white-noise heating 6.263) with Wallstrom single-valuedness caveat.' },
   { id: 'C-16', wave: 'W5', axis: 0, ring: 0.12, status: 'LITERATURE', tag: 'KNOWN-LITERATURE-VALUE', lean: 'formal/Wave5StochasticForces.lean: 4*2500 < 14641 /\\ 4 < 8', title: 'Loophole-Free Bell-CHSH Literature Benchmark', body: 'Records Hensen et al. (2015, Nature 526, 682) S=2.42±0.20 between classical bound 2 and Tsirelson bound 2√2=2.8284.' },
   { id: 'C-17', wave: 'W5', axis: 2, ring: 0.36, status: 'COMPUTED', tag: 'COMPUTED (KNOWN-FRAMEWORK)', lean: null, title: 'Solar-Circle Epicyclic Scale & Thin-Disk Quadrupole Decay', body: 'λ_epi=σ_R/κ=0.8604 kpc and thin-disk quadrupole boost 1.32×10⁻⁵ at 1 Mpc vs RAR 119.79 rule out classical disk multipoles as halo support.' },
   { id: 'C-18', wave: 'W6', axis: 6, ring: 0.46, status: 'CONJECTURE', tag: 'COMPUTED / CONJECTURE', lean: 'formal/Wave6Convergence.lean: c18_hbar_cancels_identically', title: 'Milgrom Horizon Acceleration & N_fil Algebraic Re-Parameterization', body: 'r_M=√(G M_b/a_dS)=8.9580 kpc for 6×10¹⁰ M_sun; ħ cancels identically by definition of N_fil = 2π m c R_H / ħ.' },
@@ -458,6 +461,41 @@ const CLAIMS=[
   { id: 'C-32', wave: 'W12', axis: 7, ring: 0.66, status: 'COMPUTED', tag: 'COMPUTED & CONJECTURE', lean: 'formal/Wave12QuasarCollapse.lean: 2^2 < 177^2 < 185^2; f_trap > 0.9998', title: 'Cosmic-Dawn Dark-WHIM Trapping Inversion σ*(6.08) = 0.97 km/s', body: 'At z=6.0783, Wave-10 gives R_*=7.96 ckpc, M_*=8.39×10⁴ M_sun, σ*(6.08)=0.97 km/s: a 176.8 km/s halo flips from f_trap=0 (z=0) to 0.99997 (z=6.08), cutting 30 pkpc infall from 384.8 to 109–123 Myr.' },
   { id: 'C-33', wave: 'W12', axis: 7, ring: 0.4, status: 'COMPUTED', tag: 'COMPUTED (KNOWN-FRAMEWORK)', lean: 'formal/Wave12QuasarCollapse.lean: 6.47e8 < M_c < 6.48e8 M_sun', title: 'Slim-Disk Photon-Trapping Growth & NANOGrav Chirp Mass', body: 'Abramowicz et al. (1988) slim-disk photon trapping grows 100 M_sun to 1.5×10⁹ M_sun in 165–276 Myr (m_dot=3–5); Δv=15 km/s implies |sin i cos ψ|=0.0438, and M_c=6.47×10⁸ M_sun merges in 3.19–50.99 Myr at 0.05–0.10 pc.' }
 ];
+const state={theme:'light',motion:true,epochIdx:3,selectedClaimId:'C-26',angleOffset:0,deadEndIdx:0,activeInst:'clusters',sigmaJ:185.6,dsVal:1.0,dustRatio:5.3895,quasarPreset:'twobranch',qSeed:4.92,qMdot:1.23,ledgerStatus:'ALL',ledgerWave:'ALL',ledgerSearch:'',expandedClaims:new Set(['C-23','C-26','C-30','C-32'])};
+const safeGet=(k)=>{try{return localStorage.getItem(k)}catch(_){return null}};
+const safeSet=(k,v)=>{try{localStorage.setItem(k,v)}catch(_){}};
+const cssVar=(n)=>getComputedStyle(document.documentElement).getPropertyValue(n).trim();
+const savedTheme=safeGet('f0_gravity_theme');
+if(savedTheme==='dark'||savedTheme==='light')state.theme=savedTheme;
+else if(window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches)state.theme='dark';
+if(window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches)state.motion=false;
+
+const statusColor=(s)=>s==='COMPUTED'?cssVar('--cyan'):s==='EMPIRICAL-FIT'?cssVar('--bronze'):s==='LITERATURE'?cssVar('--green'):cssVar('--coral');
+const badgeClass=(s)=>s==='COMPUTED'?'badge badge-computed':s==='EMPIRICAL-FIT'?'badge badge-empirical':s==='LITERATURE'?'badge badge-literature':'badge badge-conjecture';
+
+const radCanvas=document.getElementById('radiant-canvas'),radCtx=radCanvas.getContext('2d');
+let radAnimId=null,plottedNodes=[],chartGeom=null,hoverIdx=-1;
+
+function drawRadiant(){
+  const rect=radCanvas.parentElement.getBoundingClientRect(),dpr=window.devicePixelRatio||1;
+  const w=Math.max(260,rect.width),h=Math.max(260,rect.height);
+  if(radCanvas.width!==Math.floor(w*dpr)||radCanvas.height!==Math.floor(h*dpr)){radCanvas.width=Math.floor(w*dpr);radCanvas.height=Math.floor(h*dpr);}
+  radCtx.setTransform(dpr,0,0,dpr,0,0);radCtx.clearRect(0,0,w,h);
+  const cx=w/2,cy=h/2,maxR=Math.min(w,h)*0.39,lineCol=cssVar('--line'),mutedCol=cssVar('--muted'),bronzeCol=cssVar('--bronze'),cyanCol=cssVar('--cyan'),inkCol=cssVar('--ink');
+  [[.22,'1 AU'],[.44,'10 kpc'],[.66,'250 kpc'],[.86,'1 Mpc'],[1,'R_H']].forEach(([rf,nm])=>{
+    radCtx.beginPath();radCtx.strokeStyle=lineCol;radCtx.lineWidth=1;radCtx.arc(cx,cy,maxR*rf,0,Math.PI*2);radCtx.stroke();
+    radCtx.fillStyle=mutedCol;radCtx.font='10px ui-monospace,monospace';radCtx.fillText(nm,cx+4,cy-maxR*rf+11);
+  });
+  const ep=EPOCHS[state.epochIdx];
+  radCtx.save();radCtx.beginPath();radCtx.setLineDash([5,4]);radCtx.lineWidth=1.6;radCtx.strokeStyle=bronzeCol;radCtx.arc(cx,cy,maxR*ep.ringRatio,0,Math.PI*2);radCtx.stroke();radCtx.restore();
+  for(let a=0;a<8;a++){
+    const ang=-Math.PI/2+(a*Math.PI*2)/8+state.angleOffset;
+    radCtx.beginPath();radCtx.strokeStyle=lineCol;radCtx.moveTo(cx,cy);radCtx.lineTo(cx+Math.cos(ang)*maxR,cy+Math.sin(ang)*maxR);radCtx.stroke();
+    radCtx.fillStyle=mutedCol;radCtx.font='600 10px ui-monospace,monospace';radCtx.textAlign='center';radCtx.textBaseline='middle';
+    radCtx.fillText(AXIS_LABELS[a],cx+Math.cos(ang)*(maxR+20),cy+Math.sin(ang)*(maxR+16));
+  }
+  plottedNodes=[];
+  CLAIMS.forEach((c,idx)=>{
       const ang=-Math.PI/2+(c.axis*Math.PI*2)/8+((idx%3)-1)*0.055+state.angleOffset,r=maxR*c.ring;
     const nx=cx+Math.cos(ang)*r,ny=cy+Math.sin(ang)*r,isSel=c.id===state.selectedClaimId;
     if(isSel){radCtx.beginPath();radCtx.fillStyle=bronzeCol;radCtx.globalAlpha=0.22;radCtx.arc(nx,ny,12,0,Math.PI*2);radCtx.fill();radCtx.globalAlpha=1;}

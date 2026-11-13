@@ -39,17 +39,32 @@
   }\vspace{4pt}%
 }
 
+% Status macros added 2026-11-13 by the Foundation-0 agent team (gravity PR #17 review).
+\setlength{\emergencystretch}{3em}
+\newcommand{\unrepro}{\textbf{\textcolor{red!60!black}{[unreproduced gem-nexus / Carbon claim]}}}
+\newcommand{\statusnotice}{%
+  \par\vspace{2pt}\noindent\fbox{\parbox{\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax}{\small
+  \textbf{\textcolor{red!60!black}{Status notice}} (added 2026-11-13 by the Foundation-0 agent team):
+  this monograph comes from the 2026-11-13 gem-nexus / Carbon vault drop. Every result in it,
+  including each line that calls a result verified, certified, proven or machine-checked, is an
+  unreproduced gem-nexus / Carbon claim pending independent reproduction. Claim statuses follow
+  \texttt{CLAIMS.md} on \texttt{main}. The Lean files in \texttt{formal/} check only the literal
+  integer and rational goals tagged \texttt{PROVEN (ARITHMETIC-LEMMA)}; the physical statements keep
+  the statuses listed in \texttt{CLAIMS.md}. File digests cited here are raw SHA-256 values of files
+  on \texttt{main} at \texttt{68954f8}.}}\par\vspace{2pt}}
+
 \begin{document}
 
 \begin{center}
   {\LARGE\bfseries\color{primary} Empirical Weak-Lensing, X-Ray, and Kinematical Audit of the Relativistic Roton-Dust Threshold Across 60--1494 km/s}\\[6pt]
   {\normalsize Wave-7 Quantitative Test of Claim \texttt{C-19} ($\sigma_{\mathrm{1D}}^{\mathrm{W6}} = 388.1\text{ km/s}$) and Cosmic Baryon-Supply Saturation (\texttt{C-21}, \texttt{C-22})}\\[5pt]
   {\footnotesize\textit{Written by AI agent (Gemini, Google, via \texttt{orda-aska} for \href{https://github.com/Foundation-0/gravity}{Foundation-0/gravity}); not yet reviewed by a person.}\\
-  Code License: Apache-2.0 \quad|\quad Documentation \& Certificate License: CC-BY-4.0 \quad|\quad Certificate SHA-256: \texttt{973d6f1d...89710}}
+  Code License: Apache-2.0 \quad|\quad Documentation \& Certificate License: CC-BY-4.0 \quad|\quad Certificate: \texttt{results/wave7\_group\_cluster\_certificates.json} (raw file SHA-256 \texttt{6e6297b1...c2d741} on \texttt{main})}
 \end{center}
+\statusnotice
 
 \vspace{2pt}
-\takeaway{Executive Audit Verdict (\texttt{VERIFIED} / \texttt{NEW-COMPUTATION})}{%
+\takeaway{Executive Audit Verdict (\texttt{C-21}, \texttt{C-22}: \texttt{EMPIRICAL-FIT}; \unrepro)}{%
 Confronting the locked Wave-6 \texttt{C-19} potential-depth threshold prediction ($\sigma_{\mathrm{1D}}^{\mathrm{W6}} = 388.1\text{ km/s}$, $\Phi_{\mathrm{crit}}/c^2 = 8.0\times 10^{-6}$) with \textbf{126 unique published galactic halos, groups, and clusters} (\textbf{77 systems} in the primary $[150, 1200]\text{ km/s}$ window; \textbf{60 systems} in the zero-covariance Weak-Lensing + X-Ray + SPARC subset) yields three sharp quantitative results:
 (1)~\textbf{Universal single-scale $a_0$-MOND is rejected at $>32\sigma$} ($\Delta\chi^2 = +1030.2$ on $[150, 1200]\text{ km/s}$; $+1178.1$ on WL+X-ray+SPARC);
 (2)~\textbf{Unbounded local Thomas--Fermi roton condensation ($\Delta R \propto \Delta\Phi^{3/2}$) is falsified at $>12\sigma$} ($\Delta\chi^2 = +153.2$, $\Delta\mathrm{BIC} = +144.5$) by high-mass weak-lensing clusters up to $13.97\text{ keV}$ ($1494\text{ km/s}$), proving that cluster roton-dust trapping saturates at the cosmic baryon-supply ceiling $M_{\mathrm{tot}}/M_{\mathrm{bar}} \le \Omega_m/\Omega_b = 6.39$ ($\hat{R}_{\mathrm{sat}} = 3.70\text{--}4.20$); and
@@ -61,7 +76,7 @@ Testing whether the relativistic condensate's temporal roton-dust branch (\textt
 \begin{equation}
   R_{\mathrm{MOND}} \equiv \frac{M_{\mathrm{dyn,MOND}}(r)}{M_{\mathrm{bar}}(r)} = \frac{g_{\mathrm{M}}(r)}{g_{\mathrm{bar}}(r)},
 \end{equation}
-where $R_{\mathrm{MOND}} = 1$ ($\log_{10} R_{\mathrm{MOND}} = 0$) corresponds to pure $d_s = 1$ ($a_0 = 1.20\times 10^{-10}\text{ m/s}^2$) condensate phonon dynamics with zero roton-dust contribution. Our deterministic Python 3 stdlib verifier (\texttt{wave7\_group\_cluster\_threshold\_audit.py}) ingests five primary published catalogs plus two multi-proxy cluster RAR benchmarks:
+where $R_{\mathrm{MOND}} = 1$ ($\log_{10} R_{\mathrm{MOND}} = 0$) corresponds to pure $d_s = 1$ ($a_0 = 1.20\times 10^{-10}\text{ m/s}^2$) condensate phonon dynamics with zero roton-dust contribution. Our deterministic Python 3 stdlib audit script (\texttt{wave7\_group\_cluster\_threshold\_audit.py}) ingests five primary published catalogs plus two multi-proxy cluster RAR benchmarks:
 
 \begin{enumerate}\sloppy\setlength{\itemsep}{2pt}
   \item \textbf{Pre-Threshold Galactic Disk \& 1-Mpc Weak-Lensing Anchors} ($N=6$, $\sigma_{\mathrm{eff}} = V_{\mathrm{flat}}/\sqrt{2}$ spanning 93.1 to 201.5 km/s): Four stacked isolated-galaxy shear bins ($139{,}027$ lenses out to $1\text{ Mpc}$) from \href{https://arxiv.org/html/2406.09685v1}{Mistele et al.\ (2024)} plus two high-mass rotationally supported spiral benchmarks ($V_{\mathrm{flat}} = 220$ and $285\text{ km/s}$) from \href{https://astroweb.cwru.edu/SPARC/RARbins.mrt}{Lelli et al.\ (2017) SPARC \texttt{RARbins.mrt}}. Both probes have zero member-sampling $\sigma^4$ covariance and lock $R_{\mathrm{MOND}} = 1.00 \pm 0.04$ across galactic potentials.
@@ -139,7 +154,7 @@ where \texttt{M2} holds $\sigma_{\mathrm{crit}} = \sigma_{\mathrm{W6}} = 388.1\t
 \end{table}
 
 \subsection{Why Unbounded Local Thomas--Fermi Fails at High Mass (\texttt{C-22})}
-In Wave~6 (\texttt{C-19}), we calibrated $\rho_{\mathrm{roton}} \propto (|\Phi|/c^2 - \Phi_{\mathrm{crit}}/c^2)_+^{3/2}$ solely between $L_*$ spirals and the Bullet Cluster ($\sigma = 1000\text{ km/s}$). Across the full weak-lensing cluster baseline (\href{https://arxiv.org/html/1410.8769v2}{Kettula et al.\ 2015}), halo potential depth $|\Phi| \propto \sigma_X^2$ increases by $2.23\times$ between $1000\text{ km/s}$ and \texttt{MACSJ2211.7-0349} ($T_X = 13.97\text{ keV}$, $\sigma_X = 1493.7\text{ km/s}$), causing unbounded local Thomas--Fermi (\texttt{M1}) to jump by $>3.3\times$ in $\Delta R$ ($R_{\mathrm{M1}} > 11.2 > \Omega_m/\Omega_b = 6.39$, certified in Lean~4 theorem \texttt{c22\_unbounded\_tf\_exceeds\_cosmic\_supply\_cap}). In reality, a collapsing cluster draws from a finite cosmological turnaround volume containing the universal dark-to-baryonic ratio $\Omega_{\mathrm{DM}}/\Omega_b \approx 5.39$ ($\Omega_m/\Omega_b = 6.39$; \href{https://arxiv.org/html/2001.08340v2}{Tian et al.\ 2020} measure $\langle f_{\mathrm{bar}}\rangle = 0.142 \pm 0.014$). Canonical number/energy conservation therefore lowers the effective core chemical potential $\mu_{\mathrm{chem}}(M_{\mathrm{turn}})$ at high mass, locking $R_{\mathrm{MOND}}(250\text{ kpc})$ onto the observed saturation plateau $\hat{R}_{\mathrm{sat}} = 3.70\text{--}4.20$ ($\Delta\chi^2 = -153.21$ improvement over \texttt{M1}).
+In Wave~6 (\texttt{C-19}), we calibrated $\rho_{\mathrm{roton}} \propto (|\Phi|/c^2 - \Phi_{\mathrm{crit}}/c^2)_+^{3/2}$ solely between $L_*$ spirals and the Bullet Cluster ($\sigma = 1000\text{ km/s}$). Across the full weak-lensing cluster baseline (\href{https://arxiv.org/html/1410.8769v2}{Kettula et al.\ 2015}), halo potential depth $|\Phi| \propto \sigma_X^2$ increases by $2.23\times$ between $1000\text{ km/s}$ and \texttt{MACSJ2211.7-0349} ($T_X = 13.97\text{ keV}$, $\sigma_X = 1493.7\text{ km/s}$), causing unbounded local Thomas--Fermi (\texttt{M1}) to jump by $>3.3\times$ in $\Delta R$ ($R_{\mathrm{M1}} > 11.2 > \Omega_m/\Omega_b = 6.39$, with the integer inequality checked in Lean~4 theorem \texttt{c22\_unbounded\_tf\_exceeds\_cosmic\_supply\_cap}, \texttt{PROVEN} (\texttt{ARITHMETIC-LEMMA}) only; \unrepro). In reality, a collapsing cluster draws from a finite cosmological turnaround volume containing the universal dark-to-baryonic ratio $\Omega_{\mathrm{DM}}/\Omega_b \approx 5.39$ ($\Omega_m/\Omega_b = 6.39$; \href{https://arxiv.org/html/2001.08340v2}{Tian et al.\ 2020} measure $\langle f_{\mathrm{bar}}\rangle = 0.142 \pm 0.014$). Canonical number/energy conservation therefore lowers the effective core chemical potential $\mu_{\mathrm{chem}}(M_{\mathrm{turn}})$ at high mass, locking $R_{\mathrm{MOND}}(250\text{ kpc})$ onto the observed saturation plateau $\hat{R}_{\mathrm{sat}} = 3.70\text{--}4.20$ ($\Delta\chi^2 = -153.21$ improvement over \texttt{M1}).
 
 \subsection{Honest Evaluation of the Wave-6 388.1 km/s Prediction \& BCG Corollary (\texttt{C-21})}
 Table~\ref{tab:models} and Figure~\ref{fig:wave7}B reveal a nuanced, physically transparent outcome for \texttt{C-19}:

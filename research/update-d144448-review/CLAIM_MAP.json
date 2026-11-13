@@ -1,0 +1,768 @@
+{
+  "schema_version": "1.0",
+  "review_date": "2026-11-12",
+  "requested_model": "gpt-6-astra",
+  "requested_reasoning": "ultra",
+  "scope": {
+    "base_commit": "364fa3e9f740f42acaa1991428ce043f547e10dd",
+    "head_commit": "d1444481cdefc59a275ede2fef740ea2cf48eeec",
+    "prior_correction_commit": "e5d7ee813e33de03c91857e48a2d55a0caf55506",
+    "prior_independent_review_commit": "03f96e977c1852930c85d7568aff087e093e4d50",
+    "new_commits": [
+      "990d86667fb6ae92760f61509e03a9c4c657e956",
+      "ab3e633e2003fe7cfdca6c4da7dc911988bc66d0",
+      "4741930a798610c3c97e0bedaf63fa8dc5967109",
+      "d1444481cdefc59a275ede2fef740ea2cf48eeec"
+    ]
+  },
+  "disposition": "documentation_reconciliation_only_no_new_parameter_search",
+  "new_physics_or_test_inputs": false,
+  "scope_checks": {
+    "changed_paths": [
+      "CHANGELOG.md",
+      "METHODS_AND_PLAYBOOK.md",
+      "RESEARCH_NOTEBOOK_AND_REASONING.md",
+      "SHA256SUMS"
+    ],
+    "unchanged_tracked_blob_count": 33,
+    "source_files_changed": false,
+    "certificate_files_changed": false,
+    "formal_files_changed": false,
+    "new_observation_table": false,
+    "generator_tests_rerun": false,
+    "complete_manifest_certified": false
+  },
+  "document_delta_note": "Wave 12 notebook section and Wave 11/12 changelog sections were absent as sections in the base documents. Before references identify the existing source calculations rather than claiming the prose existed before.",
+  "changed_files": [
+    {
+      "path": "CHANGELOG.md",
+      "base_git_blob": "e64ae139f69b96594ef3f6a75ef0dc2898c1d197",
+      "head_git_blob": "4f72a6c2e501b3117f1ecb28a6138bfeca0dd81d",
+      "base_sha256": "a25d663c071362f100f097dd58943785ee72e5deb7d26520662ae8bee3e0348d",
+      "head_sha256": "79133ad39cfc16b44707d174e35044c4e630f6d85c3a06dd0ba4f728c99bf88e"
+    },
+    {
+      "path": "METHODS_AND_PLAYBOOK.md",
+      "base_git_blob": "7cdad880cb5b77daa6aa361075f6a1716e939acb",
+      "head_git_blob": "79f9278640c57c3a9990e30abd328438475a45b2",
+      "base_sha256": "a08db487d924ae709e650df597eaab81da645aef6b9e7e326d26daf93f74dbca",
+      "head_sha256": "6109f20f98f191adcaa65e2a42f05000149c62163d548a783791d32e07435e13"
+    },
+    {
+      "path": "RESEARCH_NOTEBOOK_AND_REASONING.md",
+      "base_git_blob": "7e55650c68991b989fb1bf8294f466e7e860271f",
+      "head_git_blob": "5648748368cdc22c39899d10af8af57bfee4be81",
+      "base_sha256": "407c4cfbda5ac32e35dfc234530436b15fb963e28971f82888377c0a268751f4",
+      "head_sha256": "bf51cdb91977816de1849ade61c10bee7e9826f9ebdb9d689192725064386aa8"
+    },
+    {
+      "path": "SHA256SUMS",
+      "base_git_blob": "ac734897e228de10ba2c3eb2996446b1126c9342",
+      "head_git_blob": "56d652170a9529534392918d8de34a63116c76e8",
+      "base_sha256": "52342aa9fedb9378f4510fd355605f7a788a6b1e645def9a088b2a53a6b5440c",
+      "head_sha256": "c5bc024672af240187655c0986571082a668099b75b981f4fa3ba3737b1ab76d"
+    }
+  ],
+  "new_input_disclosures": [
+    {
+      "after": {
+        "commit": "d1444481cdefc59a275ede2fef740ea2cf48eeec",
+        "path": "METHODS_AND_PLAYBOOK.md",
+        "line_start": 18,
+        "line_end": 18,
+        "sha256": "6109f20f98f191adcaa65e2a42f05000149c62163d548a783791d32e07435e13",
+        "excerpt": "9. **Wave 11 (`wave11_machian_pairing_unification.py`)**: Adopts illustrative DESI thawing CPL inputs (`w_0 = -0.75, w_a = -0.85`), spatial curvature benchmarks (`Omega_k = -0.001, -0.004, -0.010`), and dimensionless Mexican-hat offset `eps = 10^-6` (`Lambda_DE / K_2 = 2.0`), separating exact polynomial/Friedmann identities from open Machian and CPT-cogenesis `CONJECTURES`.",
+        "url": "https://github.com/Foundation-0/gravity/blob/d1444481cdefc59a275ede2fef740ea2cf48eeec/METHODS_AND_PLAYBOOK.md#L18-L18"
+      },
+      "already_present_before": [
+        {
+          "commit": "364fa3e9f740f42acaa1991428ce043f547e10dd",
+          "path": "wave11_machian_pairing_unification.py",
+          "line_start": 84,
+          "line_end": 85,
+          "sha256": "911fbd9f428728daf1fe02de998fec5b519292c7739e0bac13f111a1bea00306",
+          "excerpt": "    w0_desi = -0.75\n    wa_desi = -0.85",
+          "url": "https://github.com/Foundation-0/gravity/blob/364fa3e9f740f42acaa1991428ce043f547e10dd/wave11_machian_pairing_unification.py#L84-L85"
+        },
+        {
+          "commit": "364fa3e9f740f42acaa1991428ce043f547e10dd",
+          "path": "wave11_machian_pairing_unification.py",
+          "line_start": 107,
+          "line_end": 107,
+          "sha256": "911fbd9f428728daf1fe02de998fec5b519292c7739e0bac13f111a1bea00306",
+          "excerpt": "    for ok_abs in [0.001, 0.004, 0.010]:",
+          "url": "https://github.com/Foundation-0/gravity/blob/364fa3e9f740f42acaa1991428ce043f547e10dd/wave11_machian_pairing_unification.py#L107-L107"
+        },
+        {
+          "commit": "364fa3e9f740f42acaa1991428ce043f547e10dd",
+          "path": "wave11_machian_pairing_unification.py",
+          "line_start": 149,
+          "line_end": 154,
+          "sha256": "911fbd9f428728daf1fe02de998fec5b519292c7739e0bac13f111a1bea00306",
+          "excerpt": "    lam = 2.0  # illustrative Lambda_DE / K_2 > 1 so rho(0) > 0 at symmetric creation point\n    p_u0 = 1.0 - lam\n    rho_u0 = -1.0 + lam\n    w_u0 = p_u0 / rho_u0\n\n    eps = 1.0e-6",
+          "url": "https://github.com/Foundation-0/gravity/blob/364fa3e9f740f42acaa1991428ce043f547e10dd/wave11_machian_pairing_unification.py#L149-L154"
+        }
+      ]
+    },
+    {
+      "after": {
+        "commit": "d1444481cdefc59a275ede2fef740ea2cf48eeec",
+        "path": "METHODS_AND_PLAYBOOK.md",
+        "line_start": 19,
+        "line_end": 19,
+        "sha256": "6109f20f98f191adcaa65e2a42f05000149c62163d548a783791d32e07435e13",
+        "excerpt": "10. **Wave 12 (`wave12_cosmic_dawn_quasar_collapse.py`)**: Uses published `J1602+4228AB` observables from Onorato et al. (2026, ApJL 1011, L59, arXiv:2609.31835), Planck 2018 flat `LCDM + Omega_r` background integrals, benchmark feeder-cloud parameters (`M_b = 5e10 M_sun` at `30 pkpc`, enclosed `1.5e11 M_sun` within `5.56 pkpc`), and Abramowicz et al. (1988) logarithmic slim-disk photon-trapping benchmarks (`mdot = 1..5`), noting the `~2x` virial mass systematic and pending foreground-lens model.",
+        "url": "https://github.com/Foundation-0/gravity/blob/d1444481cdefc59a275ede2fef740ea2cf48eeec/METHODS_AND_PLAYBOOK.md#L19-L19"
+      },
+      "already_present_before": [
+        {
+          "commit": "364fa3e9f740f42acaa1991428ce043f547e10dd",
+          "path": "wave12_cosmic_dawn_quasar_collapse.py",
+          "line_start": 31,
+          "line_end": 52,
+          "sha256": "d0eec3e85d06b501dbe0d0a0e8969baf9b3faaf308e84718ac40b9ac96fb2aaf",
+          "excerpt": "# Planck 2018 flat cosmology including relativistic radiation density Omega_r for high-z accuracy\nH_LITTLE = 0.6736\nH0_SI = (100.0 * H_LITTLE * 1000.0) / MPC\nOMEGA_B = 0.02237 / (H_LITTLE ** 2)\nOMEGA_C = 0.1200 / (H_LITTLE ** 2)\nOMEGA_M = (0.02237 + 0.1200 + 0.00064) / (H_LITTLE ** 2)\nOMEGA_R = 9.236e-5\nOMEGA_L = 1.0 - OMEGA_M - OMEGA_R\nRHO_CRIT0 = 3.0 * (H0_SI ** 2) / (8.0 * math.pi * G)\nN_S = 0.9649\nSIGMA_8_TARGET = 0.8111\n\n# Observed J1602+4228AB (Napowawa'enakaulua) parameters from Onorato et al. (2026, ApJL 1011, L59; arXiv:2609.31835)\nZ_SYS_A = 6.0781\nZ_SYS_B = 6.0785\nZ_PAIR = 0.5 * (Z_SYS_A + Z_SYS_B)\nTHETA_ARCSEC = 0.98\nDELTA_V_OBS_KMS = 15.0\nM_BH_A_MSUN = 1.5e9\nM_BH_B_MSUN = 4.0e8\nLAM_EDD_A = 1.23\nLAM_EDD_B = 1.07",
+          "url": "https://github.com/Foundation-0/gravity/blob/364fa3e9f740f42acaa1991428ce043f547e10dd/wave12_cosmic_dawn_quasar_collapse.py#L31-L52"
+        },
+        {
+          "commit": "364fa3e9f740f42acaa1991428ce043f547e10dd",
+          "path": "wave12_cosmic_dawn_quasar_collapse.py",
+          "line_start": 261,
+          "line_end": 262,
+          "sha256": "d0eec3e85d06b501dbe0d0a0e8969baf9b3faaf308e84718ac40b9ac96fb2aaf",
+          "excerpt": "    r_feed_m = 30.0 * KPC\n    m_b_feed = 5.0e10 * M_SUN",
+          "url": "https://github.com/Foundation-0/gravity/blob/364fa3e9f740f42acaa1991428ce043f547e10dd/wave12_cosmic_dawn_quasar_collapse.py#L261-L262"
+        },
+        {
+          "commit": "364fa3e9f740f42acaa1991428ce043f547e10dd",
+          "path": "wave12_cosmic_dawn_quasar_collapse.py",
+          "line_start": 316,
+          "line_end": 318,
+          "sha256": "d0eec3e85d06b501dbe0d0a0e8969baf9b3faaf308e84718ac40b9ac96fb2aaf",
+          "excerpt": "    for mdot in [1.0, 2.0, 3.0, 5.0]:\n        lam_obs = mdot if mdot < 2.0 else 2.0 * (1.0 + math.log(mdot / 2.0))\n        t_grow_pop3_myr = (efold_a_pop3 * tsal_01_myr) / mdot",
+          "url": "https://github.com/Foundation-0/gravity/blob/364fa3e9f740f42acaa1991428ce043f547e10dd/wave12_cosmic_dawn_quasar_collapse.py#L316-L318"
+        },
+        {
+          "commit": "364fa3e9f740f42acaa1991428ce043f547e10dd",
+          "path": "wave12_cosmic_dawn_quasar_collapse.py",
+          "line_start": 325,
+          "line_end": 329,
+          "sha256": "d0eec3e85d06b501dbe0d0a0e8969baf9b3faaf308e84718ac40b9ac96fb2aaf",
+          "excerpt": "    r_sep_m = 5.56 * KPC\n    m_bh_tot_kg = (M_BH_A_MSUN + M_BH_B_MSUN) * M_SUN\n    v_kepler_bh_only_kms = math.sqrt((G * m_bh_tot_kg) / r_sep_m) / 1000.0\n    m_enc_host_kg = 1.5e11 * M_SUN\n    v_circ_host_kms = math.sqrt((G * (m_bh_tot_kg + m_enc_host_kg)) / r_sep_m) / 1000.0",
+          "url": "https://github.com/Foundation-0/gravity/blob/364fa3e9f740f42acaa1991428ce043f547e10dd/wave12_cosmic_dawn_quasar_collapse.py#L325-L329"
+        }
+      ]
+    }
+  ],
+  "claims": [
+    {
+      "id": "D01",
+      "claim_ids": [
+        "C-28"
+      ],
+      "status": "repeated_previously_audited_claim",
+      "summary": "Misattributed Machian source and assigned induction algebra",
+      "novel_model": false,
+      "novel_observation": false,
+      "novel_parameter": false,
+      "novel_reference": false,
+      "before_source": [
+        {
+          "commit": "364fa3e9f740f42acaa1991428ce043f547e10dd",
+          "path": "wave11_machian_pairing_unification.py",
+          "line_start": 35,
+          "line_end": 43,
+          "sha256": "911fbd9f428728daf1fe02de998fec5b519292c7739e0bac13f111a1bea00306",
+          "excerpt": "def audit_c28_machian_inertia_and_horizon_scales() -> dict:\n    \"\"\"Evaluates Sciama (1953) / Braun (2026) Machian induction identities, Milgrom (1999) Unruh-de Sitter scales, and PPN/locality caveats.\"\"\"\n    m_hubble = (4.0 / 3.0) * math.pi * (R_H ** 3) * RHO_CRIT0\n    sciama_compactness = (G * m_hubble) / (R_H * (C_SI ** 2))\n    sciama_potential_integral = (2.0 * math.pi * G * RHO_CRIT0 * (R_H ** 2)) / (C_SI ** 2)\n    # Braun (2026, EPJC 86, 1215): gravitomagnetic induction K_gm = (2 H0^2 R_H^2)/(3 c^2) = 2/3 + gravitoelectric K_ge = 1/3 = 1\n    k_gm = (2.0 * (H0_SI ** 2) * (R_H ** 2)) / (3.0 * (C_SI ** 2))\n    k_ge = 1.0 / 3.0\n",
+          "url": "https://github.com/Foundation-0/gravity/blob/364fa3e9f740f42acaa1991428ce043f547e10dd/wave11_machian_pairing_unification.py#L35-L43"
+        }
+      ],
+      "after_documentation": [
+        {
+          "commit": "d1444481cdefc59a275ede2fef740ea2cf48eeec",
+          "path": "CHANGELOG.md",
+          "line_start": 13,
+          "line_end": 13,
+          "sha256": "79133ad39cfc16b44707d174e35044c4e630f6d85c3a06dd0ba4f728c99bf88e",
+          "excerpt": "- Evaluated Sciama (1953) / Braun (2026) Hubble-horizon inertial induction (`K_gm + K_ge = 2/3 + 1/3 = 1`) and Milgrom (1999) Unruh-de Sitter scales alongside PPN `gamma = 1` and non-locality constraints (`C-28`).",
+          "url": "https://github.com/Foundation-0/gravity/blob/d1444481cdefc59a275ede2fef740ea2cf48eeec/CHANGELOG.md#L13-L13"
+        }
+      ],
+      "prior_correction": [
+        {
+          "commit": "e5d7ee813e33de03c91857e48a2d55a0caf55506",
+          "path": "CLAIMS.md",
+          "line_start": 144,
+          "line_end": 147,
+          "sha256": "efd6e9acba39ec3dd86356df22edacc3d17761e205ac11420798de52290924a9",
+          "excerpt": "- **C-28 (Machian Horizon Frame-Dragging Induction vs. Relativistic Lensing & Non-Locality)** -- `COMPUTED (KNOWN-FRAMEWORK) / CONJECTURE`\n- *Computation & Literature:* Critical density and `R_H = c/H` imply Hubble-sphere compactness `1/2` and the selected potential integral `3/4`. An illustrative partition assigns `K_gm = 2/3` and `K_ge = 1/3`. Manuel Urueña Palomo (2026), arXiv:2610.09987v2, presents a related Machian proposal. These substitutions do not derive inertia here.\n- *Limits:* The quoted Unruh-de Sitter acceleration is a known benchmark. Lensing consistency, a covariant action and multi-body momentum conservation require separate analysis. Arithmetic partition checks establish no physical mechanism.\n- *Lean Arithmetic Lemma (`PROVEN (ARITHMETIC-LEMMA)` in `formal/Wave11MachianZeroEnergy.lean`):* Checks `2 + 1 = 3` and `2 * 1 = 2`.",
+          "url": "https://github.com/Foundation-0/gravity/blob/e5d7ee813e33de03c91857e48a2d55a0caf55506/CLAIMS.md#L144-L147"
+        }
+      ],
+      "needed_correction": "Attribute arXiv:2610.09987v2 to Manuel Uruena Palomo and distinguish an induction partition from a derivation of inertia.",
+      "evidence_to_reopen": "A specified covariant inertia mechanism with conservation and observable calculations."
+    },
+    {
+      "id": "D02",
+      "claim_ids": [
+        "C-29"
+      ],
+      "status": "repeated_previously_audited_claim",
+      "summary": "Conditional CPL future and Hamiltonian constraint",
+      "novel_model": false,
+      "novel_observation": false,
+      "novel_parameter": false,
+      "novel_reference": false,
+      "before_source": [
+        {
+          "commit": "364fa3e9f740f42acaa1991428ce043f547e10dd",
+          "path": "wave11_machian_pairing_unification.py",
+          "line_start": 82,
+          "line_end": 119,
+          "sha256": "911fbd9f428728daf1fe02de998fec5b519292c7739e0bac13f111a1bea00306",
+          "excerpt": "def audit_c29_zero_energy_and_desi_turnaround() -> dict:\n    \"\"\"Evaluates closed-FLRW / ADM zero-energy cancellation and DESI-motivated thawing dark-energy deceleration & turnaround.\"\"\"\n    w0_desi = -0.75\n    wa_desi = -0.85\n\n    def rho_de_rel(a: float) -> float:\n        return (a ** (-3.0 * (1.0 + w0_desi + wa_desi))) * math.exp(3.0 * wa_desi * (a - 1.0))\n\n    def accel_sign_term(a: float) -> float:\n        # proportional to -ddot(a)/a: negative means accelerating, positive means decelerating (slowing down)\n        w_a = w0_desi + wa_desi * (1.0 - a)\n        return OMEGA_M * (a ** -3.0) + OMEGA_L * rho_de_rel(a) * (1.0 + 3.0 * w_a)\n\n    # Bisection for future scale factor a_slow > 1 where cosmic expansion stops accelerating and begins slowing down:\n    lo_s, hi_s = 1.0, 2.5\n    for _ in range(70):\n        mid_s = 0.5 * (lo_s + hi_s)\n        if accel_sign_term(mid_s) < 0.0:\n            lo_s = mid_s\n        else:\n            hi_s = mid_s\n    a_slow = 0.5 * (lo_s + hi_s)\n\n    # Turnaround scale factor a_turn where H(a_turn)^2 = 0 in a spatially closed S^3 universe (Omega_k < 0) with decaying DE:\n    closed_turnarounds = []\n    for ok_abs in [0.001, 0.004, 0.010]:\n        lo_t, hi_t = 2.0, 2000.0\n        for _ in range(80):\n            mt = 0.5 * (lo_t + hi_t)\n            h2 = OMEGA_M * (mt ** -3.0) + OMEGA_L * rho_de_rel(mt) - ok_abs * (mt ** -2.0)\n            if h2 > 0.0:\n                lo_t = mt\n            else:\n                hi_t = mt\n        closed_turnarounds.append({\n            \"Omega_k\": -ok_abs,\n            \"turnaround_scale_factor_a_max\": round(0.5 * (lo_t + hi_t), 2),\n            \"asymptotic_matter_curvature_ratio_Omega_m_over_abs_Omega_k\": round(OMEGA_M / ok_abs, 2),",
+          "url": "https://github.com/Foundation-0/gravity/blob/364fa3e9f740f42acaa1991428ce043f547e10dd/wave11_machian_pairing_unification.py#L82-L119"
+        }
+      ],
+      "after_documentation": [
+        {
+          "commit": "d1444481cdefc59a275ede2fef740ea2cf48eeec",
+          "path": "CHANGELOG.md",
+          "line_start": 14,
+          "line_end": 14,
+          "sha256": "79133ad39cfc16b44707d174e35044c4e630f6d85c3a06dd0ba4f728c99bf88e",
+          "excerpt": "- Evaluated ADM zero-energy balance (`H_tot = 0`), DESI thawing dark-energy deceleration onset (`a_slow = 1.3897`), closed-`S^3` turnaround (`a_turn = Omega_m / |Omega_k|`), and `a_0(z)` evolution tracks (`C-29`).",
+          "url": "https://github.com/Foundation-0/gravity/blob/d1444481cdefc59a275ede2fef740ea2cf48eeec/CHANGELOG.md#L14-L14"
+        },
+        {
+          "commit": "d1444481cdefc59a275ede2fef740ea2cf48eeec",
+          "path": "METHODS_AND_PLAYBOOK.md",
+          "line_start": 18,
+          "line_end": 18,
+          "sha256": "6109f20f98f191adcaa65e2a42f05000149c62163d548a783791d32e07435e13",
+          "excerpt": "9. **Wave 11 (`wave11_machian_pairing_unification.py`)**: Adopts illustrative DESI thawing CPL inputs (`w_0 = -0.75, w_a = -0.85`), spatial curvature benchmarks (`Omega_k = -0.001, -0.004, -0.010`), and dimensionless Mexican-hat offset `eps = 10^-6` (`Lambda_DE / K_2 = 2.0`), separating exact polynomial/Friedmann identities from open Machian and CPT-cogenesis `CONJECTURES`.",
+          "url": "https://github.com/Foundation-0/gravity/blob/d1444481cdefc59a275ede2fef740ea2cf48eeec/METHODS_AND_PLAYBOOK.md#L18-L18"
+        }
+      ],
+      "prior_correction": [
+        {
+          "commit": "e5d7ee813e33de03c91857e48a2d55a0caf55506",
+          "path": "CLAIMS.md",
+          "line_start": 149,
+          "line_end": 153,
+          "sha256": "efd6e9acba39ec3dd86356df22edacc3d17761e205ac11420798de52290924a9",
+          "excerpt": "- **C-29 (Hamiltonian Constraint and Conditional CPL Turnaround)** -- `COMPUTED (FRIEDMANN-IDENTITIES)`\n  - *Computation & Inputs:* Records a Hamiltonian constraint under stated boundary and gauge conditions, not a measurable global energy balance or universe-creation process. For chosen CPL inputs `w_0 = -0.75`, `w_a = -0.85`, the flat model gives `a_slow = 1.3897`. Closed models now use `Omega_DE = 1 - Omega_m - Omega_k`, so `H^2(a=1)/H_0^2 = 1`.\n\n  Turnaround near `a = 315.18, 78.80, 31.52` is conditional on extending that equation of state into the unmeasured future. Past-compatible continuations need not recollapse. The parameters are inserted here, not fitted to DESI.\n  - *Lean Arithmetic Lemma:* None.",
+          "url": "https://github.com/Foundation-0/gravity/blob/e5d7ee813e33de03c91857e48a2d55a0caf55506/CLAIMS.md#L149-L153"
+        }
+      ],
+      "needed_correction": "State that CPL parameters and future continuation are assigned. The Hamiltonian constraint does not establish a universal creation-energy observable. Retain corrected closed-model normalization.",
+      "evidence_to_reopen": "Evidence fixing the future continuation or a boundary-defined observable energy calculation."
+    },
+    {
+      "id": "D03",
+      "claim_ids": [
+        "C-30",
+        "M-09"
+      ],
+      "status": "repeated_previously_audited_claim",
+      "summary": "Polynomial parity and positivity do not derive production, stability or protection",
+      "novel_model": false,
+      "novel_observation": false,
+      "novel_parameter": false,
+      "novel_reference": false,
+      "before_source": [
+        {
+          "commit": "364fa3e9f740f42acaa1991428ce043f547e10dd",
+          "path": "wave11_machian_pairing_unification.py",
+          "line_start": 145,
+          "line_end": 176,
+          "sha256": "911fbd9f428728daf1fe02de998fec5b519292c7739e0bac13f111a1bea00306",
+          "excerpt": "def audit_c30_cpt_pair_bifurcation_and_cogenesis() -> dict:\n    \"\"\"Evaluates CPT-even Mexican-hat kinetic condensate P(Q) = K_2 (Q^2/Q_0^2 - 1)^2 - Lambda_DE and cogenesis scales.\"\"\"\n    # Dimensionless u = Q / Q_0 around u = 0 (unbroken creation maximum) and u = +/- (1 + eps) (CPT-conjugate branches)\n    # P(u) / K_2 = (u^2 - 1)^2 - lam, rho(u) / K_2 = u * 4*u*(u^2 - 1) - (u^2 - 1)^2 + lam = (u^2 - 1)*(3*u^2 + 1) + lam\n    lam = 2.0  # illustrative Lambda_DE / K_2 > 1 so rho(0) > 0 at symmetric creation point\n    p_u0 = 1.0 - lam\n    rho_u0 = -1.0 + lam\n    w_u0 = p_u0 / rho_u0\n\n    eps = 1.0e-6\n    branches = {}\n    for label, sign in [(\"forward_sheet_plus\", +1.0), (\"cpt_conjugate_sheet_minus\", -1.0)]:\n        u = sign * (1.0 + eps)\n        j0_dimless = 4.0 * u * (u * u - 1.0)\n        rho_dust_dimless = u * j0_dimless - ((u * u - 1.0) ** 2)\n        p_dust_dimless = (u * u - 1.0) ** 2\n        branches[label] = {\n            \"u_value\": round(u, 7),\n            \"noether_charge_J0_dimless\": round(j0_dimless, 9),\n            \"dust_energy_density_dimless\": round(rho_dust_dimless, 9),\n            \"dust_equation_of_state_w_dust\": float(f\"{p_dust_dimless / rho_dust_dimless:.4e}\"),\n        }\n\n    net_noether_charge = (\n        branches[\"forward_sheet_plus\"][\"noether_charge_J0_dimless\"]\n        + branches[\"cpt_conjugate_sheet_minus\"][\"noether_charge_J0_dimless\"]\n    )\n\n    # Cogenesis / Asymmetric Dark Matter mass ratio vs condensate chemical-potential interpretation:\n    omega_c_over_b = OMEGA_C / OMEGA_B\n    m_p_gev = (M_P * (C_SI ** 2)) / 1.602176634e-10\n    adm_equal_number_mass_gev = omega_c_over_b * m_p_gev",
+          "url": "https://github.com/Foundation-0/gravity/blob/364fa3e9f740f42acaa1991428ce043f547e10dd/wave11_machian_pairing_unification.py#L145-L176"
+        },
+        {
+          "commit": "364fa3e9f740f42acaa1991428ce043f547e10dd",
+          "path": "formal/Wave11MachianZeroEnergy.lean",
+          "line_start": 44,
+          "line_end": 62,
+          "sha256": "781d83ac1bf12407f0a682b8abbe67a4ec101d78751ee0fa611c9a0f8a307573",
+          "excerpt": "theorem c30_cpt_pair_opposite_noether_charge (u q0 : Int) :\n    noetherJ (-u) q0 + noetherJ u q0 = 0 := by\n  unfold noetherJ\n  rw [neg_sq_eq]\n  have h1 : 4 * (-u) = -(4 * u) := Int.mul_neg 4 u\n  rw [h1, Int.neg_mul]\n  exact Int.add_left_neg (4 * u * (u * u - q0 * q0))\n\ntheorem c30_cpt_pair_equal_dust_density (u q0 : Int) :\n    legendreRho (-u) q0 = legendreRho u q0 := by\n  unfold legendreRho\n  rw [neg_sq_eq]\n\ntheorem c30_supercritical_branch_positive_dust_density (uSq q0Sq : Int)\n    (hNonNeg : 0 <= q0Sq) (hSup : q0Sq < uSq) :\n    0 < (uSq - q0Sq) * (3 * uSq + q0Sq) := by\n  have h1 : 0 < uSq - q0Sq := by omega\n  have h2 : 0 < 3 * uSq + q0Sq := by omega\n  exact Int.mul_pos h1 h2",
+          "url": "https://github.com/Foundation-0/gravity/blob/364fa3e9f740f42acaa1991428ce043f547e10dd/formal/Wave11MachianZeroEnergy.lean#L44-L62"
+        }
+      ],
+      "after_documentation": [
+        {
+          "commit": "d1444481cdefc59a275ede2fef740ea2cf48eeec",
+          "path": "CHANGELOG.md",
+          "line_start": 15,
+          "line_end": 15,
+          "sha256": "79133ad39cfc16b44707d174e35044c4e630f6d85c3a06dd0ba4f728c99bf88e",
+          "excerpt": "- Proved over `Int` in `formal/Wave11MachianZeroEnergy.lean` and computed in `wave11_machian_pairing_unification.py` that CPT-symmetric Mexican-hat pair bifurcation (`u -> +/- (1 + eps)`) yields zero net Noether charge (`J^0_+ + J^0_- = 0`) with strictly positive dust gravity (`rho_dust > 0`) on both sheets, connecting shift-symmetric condensate stability and axiogenesis/cogenesis to `Omega_c / Omega_b = 5.3895` (`C-30`).",
+          "url": "https://github.com/Foundation-0/gravity/blob/d1444481cdefc59a275ede2fef740ea2cf48eeec/CHANGELOG.md#L15-L15"
+        },
+        {
+          "commit": "d1444481cdefc59a275ede2fef740ea2cf48eeec",
+          "path": "METHODS_AND_PLAYBOOK.md",
+          "line_start": 31,
+          "line_end": 31,
+          "sha256": "6109f20f98f191adcaa65e2a42f05000149c62163d548a783791d32e07435e13",
+          "excerpt": "- **M-09 (Symmetry-Protected Remnant vs. Thermal Equipartition Audit)**: Translates qualitative cosmological creation/pair-production hypotheses into explicit Noether-current conservation laws (`nabla_mu J^mu = 0` under `phi -> phi + const`), verifying `J^0(-Q) = -J^0(Q)` and `rho(-Q) = +rho(Q) > 0` while rejecting naive thermal degree-of-freedom equipartition that would violate BBN `Delta N_eff`.",
+          "url": "https://github.com/Foundation-0/gravity/blob/d1444481cdefc59a275ede2fef740ea2cf48eeec/METHODS_AND_PLAYBOOK.md#L31-L31"
+        }
+      ],
+      "prior_correction": [
+        {
+          "commit": "e5d7ee813e33de03c91857e48a2d55a0caf55506",
+          "path": "CLAIMS.md",
+          "line_start": 155,
+          "line_end": 162,
+          "sha256": "efd6e9acba39ec3dd86356df22edacc3d17761e205ac11420798de52290924a9",
+          "excerpt": "- **C-30 (CPT-Symmetric Kinetic Mexican-Hat Pair Bifurcation & Condensate Cogenesis Remnant)** -- `COMPUTED (ALGEBRAIC-MODEL) & CONJECTURE`\n  - *Computation & Literature:* Evaluates the chosen polynomial `P(u) = K_2 (u^2 - 1)^2 - Lambda_DE`. Algebraically, the states `u = +/- (1 + eps)` have opposite shift charges and equal positive dust densities. This does not derive their production from `u = 0`.\n\n  The minimal homogeneous scalar sector has `P_QQ(0) = -4 K_2 / Q_0^2`, and a source-free homogeneous solution conserves `a^3 P_Q`. Starting with zero current cannot produce nonzero branch charge without an additional source, boundary condition or production prescription.\n  - *Limits:* Full AeST mixing stability is not solved. Constant shift symmetry allows derivative portals such as `(partial_phi)^2 F_mu_nu F^mu_nu`, so it does not forbid all pair conversion. `eta_B` is a baryon-to-photon ratio, not the fraction of initial pairs annihilated. No portal rate, origin mechanism or relic abundance is established.\n\n  Scherrer (2004), Boyle, Finn and Turok (2018) and Co and Harigaya (2020) provide prior frameworks, not proofs of this transition.\n  - *Lean Arithmetic Lemma (`PROVEN (ARITHMETIC-LEMMA)` in `formal/Wave11MachianZeroEnergy.lean`):* Proves over `Int` for all `u, q0` that `noetherJ (-u) q0 + noetherJ u q0 = 0`, `legendreRho (-u) q0 = legendreRho u q0`, and `0 <= q0Sq < uSq -> 0 < (uSq - q0Sq)*(3*uSq + q0Sq)`.",
+          "url": "https://github.com/Foundation-0/gravity/blob/e5d7ee813e33de03c91857e48a2d55a0caf55506/CLAIMS.md#L155-L162"
+        }
+      ],
+      "needed_correction": "Retain opposite-charge parity and positivity only with the stated branch hypotheses. Treat production, full mixing stability and protected abundance as unresolved.",
+      "evidence_to_reopen": "A current-generating source or boundary prescription, full stability calculation and portal rates."
+    },
+    {
+      "id": "D04",
+      "claim_ids": [
+        "C-31"
+      ],
+      "status": "repeated_previously_audited_claim",
+      "summary": "Conditional light-seed clock and inconsistent luminosity conventions in comparison",
+      "novel_model": false,
+      "novel_observation": false,
+      "novel_parameter": false,
+      "novel_reference": false,
+      "before_source": [
+        {
+          "commit": "364fa3e9f740f42acaa1991428ce043f547e10dd",
+          "path": "wave12_cosmic_dawn_quasar_collapse.py",
+          "line_start": 156,
+          "line_end": 175,
+          "sha256": "d0eec3e85d06b501dbe0d0a0e8969baf9b3faaf308e84718ac40b9ac96fb2aaf",
+          "excerpt": "    t_edd_pure_h_myr = (SIGMA_T * C_SI) / (4.0 * math.pi * G * M_P) / MYR\n    y_he = 0.245\n    mu_e_prim = 2.0 / (2.0 - y_he)\n    t_edd_prim_myr = t_edd_pure_h_myr / mu_e_prim\n\n    def salpeter_myr(eps_r: float, pure_h: bool = True) -> float:\n        base = t_edd_pure_h_myr if pure_h else t_edd_prim_myr\n        return (eps_r / (1.0 - eps_r)) * base\n\n    dt_from_z20 = t_pair_myr - t_z20_myr\n    dt_from_z30 = t_pair_myr - t_z30_myr\n\n    efold_a_pop3 = math.log(M_BH_A_MSUN / 100.0)\n    efold_b_pop3 = math.log(M_BH_B_MSUN / 100.0)\n    efold_a_dcbh = math.log(M_BH_A_MSUN / 1.0e5)\n    efold_b_dcbh = math.log(M_BH_B_MSUN / 1.0e5)\n\n    tsal_01_h = salpeter_myr(0.10, pure_h=True)\n    tsal_01_prim = salpeter_myr(0.10, pure_h=False)\n    tsal_02_kerr = salpeter_myr(0.20, pure_h=True)",
+          "url": "https://github.com/Foundation-0/gravity/blob/364fa3e9f740f42acaa1991428ce043f547e10dd/wave12_cosmic_dawn_quasar_collapse.py#L156-L175"
+        },
+        {
+          "commit": "364fa3e9f740f42acaa1991428ce043f547e10dd",
+          "path": "wave12_cosmic_dawn_quasar_collapse.py",
+          "line_start": 202,
+          "line_end": 216,
+          "sha256": "d0eec3e85d06b501dbe0d0a0e8969baf9b3faaf308e84718ac40b9ac96fb2aaf",
+          "excerpt": "        \"seed_duty_cycle_audit_for_J1602A_1p5e9_Msun\": {\n            \"popIII_100Msun_efoldings\": round(efold_a_pop3, 3),\n            \"popIII_100Msun_req_time_Edd1_eps0p10_Myr\": round(efold_a_pop3 * tsal_01_h, 2),\n            \"popIII_100Msun_duty_from_z20_Edd1_eps0p10\": round((efold_a_pop3 * tsal_01_h) / dt_from_z20, 3),\n            \"popIII_100Msun_duty_from_z20_obsEdd1p23_eps0p10\": round((efold_a_pop3 * tsal_01_h) / (LAM_EDD_A * dt_from_z20), 3),\n            \"popIII_100Msun_duty_from_z20_Edd1_Kerr_eps0p20\": round((efold_a_pop3 * tsal_02_kerr) / dt_from_z20, 3),\n            \"dcbh_1e5Msun_efoldings\": round(efold_a_dcbh, 3),\n            \"dcbh_1e5Msun_duty_from_z20_Edd1_eps0p10\": round((efold_a_dcbh * tsal_01_h) / dt_from_z20, 3),\n            \"dcbh_1e5Msun_duty_from_z20_obsEdd1p23_eps0p10\": round((efold_a_dcbh * tsal_01_h) / (LAM_EDD_A * dt_from_z20), 3),\n        },\n        \"seed_duty_cycle_audit_for_J1602B_4p0e8_Msun\": {\n            \"popIII_100Msun_efoldings\": round(efold_b_pop3, 3),\n            \"popIII_100Msun_duty_from_z20_Edd1_eps0p10\": round((efold_b_pop3 * tsal_01_h) / dt_from_z20, 3),\n            \"dcbh_1e5Msun_efoldings\": round(efold_b_dcbh, 3),\n            \"dcbh_1e5Msun_duty_from_z20_obsEdd1p07_eps0p10\": round((efold_b_dcbh * tsal_01_h) / (LAM_EDD_B * dt_from_z20), 3),",
+          "url": "https://github.com/Foundation-0/gravity/blob/364fa3e9f740f42acaa1991428ce043f547e10dd/wave12_cosmic_dawn_quasar_collapse.py#L202-L216"
+        }
+      ],
+      "after_documentation": [
+        {
+          "commit": "d1444481cdefc59a275ede2fef740ea2cf48eeec",
+          "path": "RESEARCH_NOTEBOOK_AND_REASONING.md",
+          "line_start": 79,
+          "line_end": 80,
+          "sha256": "bf51cdb91977816de1849ade61c10bee7e9826f9ebdb9d689192725064386aa8",
+          "excerpt": "2. **What DOES severely strain standard hierarchical `LambdaCDM` + thin-disk seeding (`C-31`, `C-32`)**:\n   - Under canonical `eps_r = 0.10` thin-disk Eddington growth (`t_Sal = 50.05 Myr`), growing from `100 M_sun` Pop III seeds formed at `z = 20` (`Delta t = 734.1 Myr`) requires `f_duty = 1.127 > 1` for `J1602A` and `1.037 > 1` for `J1602B` (`f_duty = 2.535` if spin-up raises `eps_r` to `0.20`), while `10^12-5e12 M_sun` host halos at `z = 6.08` sit out on the `4.23-5.38 sigma` Gaussian tail, making `5.56 pkpc` dual active pairs `10^2-10^3x` rarer than observed.",
+          "url": "https://github.com/Foundation-0/gravity/blob/d1444481cdefc59a275ede2fef740ea2cf48eeec/RESEARCH_NOTEBOOK_AND_REASONING.md#L79-L80"
+        },
+        {
+          "commit": "d1444481cdefc59a275ede2fef740ea2cf48eeec",
+          "path": "CHANGELOG.md",
+          "line_start": 7,
+          "line_end": 7,
+          "sha256": "79133ad39cfc16b44707d174e35044c4e630f6d85c3a06dd0ba4f728c99bf88e",
+          "excerpt": "- Audited Onorato et al. (2026, ApJL 1011, L59, arXiv:2609.31835; NOIRLab `noirlab2627`) for `J1602+4228AB` at `z = 6.0781/6.0785` (`911.72 Myr` post-Big Bang, `5.56 pkpc` separation, `1.5e9` & `4.0e8 M_sun`, `lambda_Edd = 1.23` & `1.07`): quantified the `100 M_sun` Pop III thin-disk duty-cycle wall (`f_duty = 1.127` & `1.037 > 1` from `z = 20`; `2.535` at Kerr `eps_r = 0.20`) vs. `10^5 M_sun` direct-collapse seeds (`f_duty = 0.533` & `0.529`), while recording the `~2x` virial mass systematic and pending HST lens model (`C-31`).",
+          "url": "https://github.com/Foundation-0/gravity/blob/d1444481cdefc59a275ede2fef740ea2cf48eeec/CHANGELOG.md#L7-L7"
+        }
+      ],
+      "prior_correction": [
+        {
+          "commit": "e5d7ee813e33de03c91857e48a2d55a0caf55506",
+          "path": "CLAIMS.md",
+          "line_start": 165,
+          "line_end": 170,
+          "sha256": "efd6e9acba39ec3dd86356df22edacc3d17761e205ac11420798de52290924a9",
+          "excerpt": "- **C-31 (Cosmic-Dawn Dual-Quasar Salpeter Duty-Cycle Wall & Clustering Excess)** -- `COMPUTED (KNOWN-FRAMEWORK)`\n  - *Computation & Observed Inputs:* Uses the reported `J1602+4228AB` point values from Onorato et al. (2026), arXiv:2609.31835. The `z = 20` growth budget is `734.10 Myr`. A `100 M_sun` seed growing to `1.5e9 M_sun` at fixed Eddington ratio one and efficiency `0.10` needs `827.08 Myr` for pure H, but `725.76 Myr` for primordial H/He.\n\n  Efficiency `0.10` is not the Schwarzschild thin-disk value. At fixed `1 - sqrt(8/9)`, the respective times are `451.54` and `396.22 Myr`. These are conditional growth clocks, not an exclusion of all light seeds or evidence that any history occurred.\n  - *Limits:* Formation delays, spin evolution, fuel supply and duty histories are omitted. Current luminosity is not a lifetime average. Virial masses, Eddington ratios and systemic velocities are uncertain. Lensing remains unresolved. Clustering excess over an extrapolated baseline does not by itself compare cosmological likelihoods.\n  - *Lean Arithmetic Lemma (`PROVEN (ARITHMETIC-LEMMA)` in `formal/Wave12QuasarCollapse.lean`):* Checks `(1 * 4) * 9 = 9 * 4` and `2 * 4 < 9` (`eps/(1-eps)` jumps by `9/4 > 2` from `eps = 0.1` to `0.2`).",
+          "url": "https://github.com/Foundation-0/gravity/blob/e5d7ee813e33de03c91857e48a2d55a0caf55506/CLAIMS.md#L165-L170"
+        }
+      ],
+      "needed_correction": "Report opacity, efficiency and lifetime Eddington ratio. Include conventional counterexamples. Use the same luminosity convention for light and heavy seeds or explicitly disclose differing conventions.",
+      "evidence_to_reopen": "Measured or population-constrained seed, spin, opacity, fuel and duty histories."
+    },
+    {
+      "id": "D05",
+      "claim_ids": [
+        "C-31",
+        "C-32",
+        "M-10"
+      ],
+      "status": "repeated_previously_audited_claim",
+      "summary": "Clustering extrapolation excess is not a cosmological likelihood rejection",
+      "novel_model": false,
+      "novel_observation": false,
+      "novel_parameter": false,
+      "novel_reference": false,
+      "before_source": [
+        {
+          "commit": "364fa3e9f740f42acaa1991428ce043f547e10dd",
+          "path": "wave12_cosmic_dawn_quasar_collapse.py",
+          "line_start": 179,
+          "line_end": 191,
+          "sha256": "d0eec3e85d06b501dbe0d0a0e8969baf9b3faaf308e84718ac40b9ac96fb2aaf",
+          "excerpt": "        \"observed_system\": {\n            \"designation\": \"J1602+4228AB (Napowawa'enakaulua)\",\n            \"z_sys_A\": Z_SYS_A,\n            \"z_sys_B\": Z_SYS_B,\n            \"cosmic_age_at_z_Myr\": round(t_pair_myr, 2),\n            \"angular_diameter_distance_kpc\": round(da_kpc, 2),\n            \"computed_projected_sep_pkpc\": round(r_proj_pkpc, 2),\n            \"reported_projected_sep_pkpc\": 5.56,\n            \"M_BH_A_Msun\": M_BH_A_MSUN,\n            \"M_BH_B_Msun\": M_BH_B_MSUN,\n            \"lambda_Edd_A\": LAM_EDD_A,\n            \"lambda_Edd_B\": LAM_EDD_B,\n            \"reported_clustering_excess_orders_of_magnitude\": \"2 to 3 (100x to 1000x over extrapolated high-z quasar clustering in 199 JWST Aether fields)\",",
+          "url": "https://github.com/Foundation-0/gravity/blob/364fa3e9f740f42acaa1991428ce043f547e10dd/wave12_cosmic_dawn_quasar_collapse.py#L179-L191"
+        },
+        {
+          "commit": "364fa3e9f740f42acaa1991428ce043f547e10dd",
+          "path": "wave12_cosmic_dawn_quasar_collapse.py",
+          "line_start": 245,
+          "line_end": 254,
+          "sha256": "d0eec3e85d06b501dbe0d0a0e8969baf9b3faaf308e84718ac40b9ac96fb2aaf",
+          "excerpt": "    halo_rarities = []\n    for m_h in [1.0e12, 5.0e12]:\n        r_lag_mpc = (((3.0 * m_h * M_SUN) / (4.0 * math.pi * rho_m0)) ** (1.0 / 3.0)) / MPC\n        sig_m = sigma_lin(r_lag_mpc, Z_PAIR)\n        halo_rarities.append({\n            \"halo_mass_Msun\": m_h,\n            \"comoving_lagrangian_radius_Mpc\": round(r_lag_mpc, 3),\n            \"sigma_lin_z6p08\": round(sig_m, 4),\n            \"gaussian_peak_height_nu\": round(delta_c / sig_m, 2),\n        })",
+          "url": "https://github.com/Foundation-0/gravity/blob/364fa3e9f740f42acaa1991428ce043f547e10dd/wave12_cosmic_dawn_quasar_collapse.py#L245-L254"
+        }
+      ],
+      "after_documentation": [
+        {
+          "commit": "d1444481cdefc59a275ede2fef740ea2cf48eeec",
+          "path": "RESEARCH_NOTEBOOK_AND_REASONING.md",
+          "line_start": 74,
+          "line_end": 74,
+          "sha256": "bf51cdb91977816de1849ade61c10bee7e9826f9ebdb9d689192725064386aa8",
+          "excerpt": "When NOIRLab (`noirlab2627`, 2026-11-10) and Onorato et al. (2026, ApJL 1011, L59, arXiv:2609.31835) announced `J1602+4228AB` (*Napowawa'enakaulua* -- two supermassive black holes of `1.5e9 M_sun` and `4.0e8 M_sun` accreting at `lambda_Edd = 1.23` and `1.07`, separated by just `0.98\"` = `5.56 pkpc` with `Delta v = 15 km/s` only `911.7 Myr` after the Big Bang, a `10^2-10^3x` excess over extrapolated high-`z` quasar clustering across `199` JWST Aether fields), we applied `M-10` triage to separate what genuinely strains standard theory from what does not:",
+          "url": "https://github.com/Foundation-0/gravity/blob/d1444481cdefc59a275ede2fef740ea2cf48eeec/RESEARCH_NOTEBOOK_AND_REASONING.md#L74-L74"
+        },
+        {
+          "commit": "d1444481cdefc59a275ede2fef740ea2cf48eeec",
+          "path": "RESEARCH_NOTEBOOK_AND_REASONING.md",
+          "line_start": 80,
+          "line_end": 80,
+          "sha256": "bf51cdb91977816de1849ade61c10bee7e9826f9ebdb9d689192725064386aa8",
+          "excerpt": "   - Under canonical `eps_r = 0.10` thin-disk Eddington growth (`t_Sal = 50.05 Myr`), growing from `100 M_sun` Pop III seeds formed at `z = 20` (`Delta t = 734.1 Myr`) requires `f_duty = 1.127 > 1` for `J1602A` and `1.037 > 1` for `J1602B` (`f_duty = 2.535` if spin-up raises `eps_r` to `0.20`), while `10^12-5e12 M_sun` host halos at `z = 6.08` sit out on the `4.23-5.38 sigma` Gaussian tail, making `5.56 pkpc` dual active pairs `10^2-10^3x` rarer than observed.",
+          "url": "https://github.com/Foundation-0/gravity/blob/d1444481cdefc59a275ede2fef740ea2cf48eeec/RESEARCH_NOTEBOOK_AND_REASONING.md#L80-L80"
+        },
+        {
+          "commit": "d1444481cdefc59a275ede2fef740ea2cf48eeec",
+          "path": "METHODS_AND_PLAYBOOK.md",
+          "line_start": 32,
+          "line_end": 32,
+          "sha256": "6109f20f98f191adcaa65e2a42f05000149c62163d548a783791d32e07435e13",
+          "excerpt": "- **M-10 (Breaking-Observation Triage: Fundamental-Law Violation vs. Sub-Grid / Cosmological-Assembly Tension)**: Separates newly announced observational anomalies into (i) conventional radiative/geometric resolutions (slim-disk photon advection, virial mass systematics, foreground lensing), (ii) cosmological assembly / seed-timing tensions (`LambdaCDM` Gaussian peak rarity and Salpeter duty cycles), and (iii) zero-adjustment predictions of existing repo equations (`sigma_*(z)` and `a_0(z)` evaluated at the discovery redshift).",
+          "url": "https://github.com/Foundation-0/gravity/blob/d1444481cdefc59a275ede2fef740ea2cf48eeec/METHODS_AND_PLAYBOOK.md#L32-L32"
+        }
+      ],
+      "prior_correction": [
+        {
+          "commit": "e5d7ee813e33de03c91857e48a2d55a0caf55506",
+          "path": "CLAIMS.md",
+          "line_start": 169,
+          "line_end": 169,
+          "sha256": "efd6e9acba39ec3dd86356df22edacc3d17761e205ac11420798de52290924a9",
+          "excerpt": "  - *Limits:* Formation delays, spin evolution, fuel supply and duty histories are omitted. Current luminosity is not a lifetime average. Virial masses, Eddington ratios and systemic velocities are uncertain. Lensing remains unresolved. Clustering excess over an extrapolated baseline does not by itself compare cosmological likelihoods.",
+          "url": "https://github.com/Foundation-0/gravity/blob/e5d7ee813e33de03c91857e48a2d55a0caf55506/CLAIMS.md#L169-L169"
+        }
+      ],
+      "needed_correction": "Preserve the published baseline definition and one-halo caveat. Distinguish Gaussian halo peak height from pair detection probability.",
+      "evidence_to_reopen": "Selection function plus matched occupation, triggering, duty-cycle and detection models for a sample of pairs."
+    },
+    {
+      "id": "D06",
+      "claim_ids": [
+        "C-32",
+        "M-10"
+      ],
+      "status": "repeated_previously_audited_claim",
+      "summary": "Total halo mass and assigned trapping prescription are not seed formation or capture",
+      "novel_model": false,
+      "novel_observation": false,
+      "novel_parameter": false,
+      "novel_reference": false,
+      "before_source": [
+        {
+          "commit": "364fa3e9f740f42acaa1991428ce043f547e10dd",
+          "path": "wave12_cosmic_dawn_quasar_collapse.py",
+          "line_start": 227,
+          "line_end": 243,
+          "sha256": "d0eec3e85d06b501dbe0d0a0e8969baf9b3faaf308e84718ac40b9ac96fb2aaf",
+          "excerpt": "    sigma_lin = build_sigma_r_evaluator()\n    delta_c = 1.686\n\n    lo_r, hi_r = 1.0e-4, 1.0\n    assert sigma_lin(lo_r, Z_PAIR) > delta_c > sigma_lin(hi_r, Z_PAIR), \"Invalid sigma_lin bracket at z=6.08\"\n    for _ in range(80):\n        mid_r = 0.5 * (lo_r + hi_r)\n        if sigma_lin(mid_r, Z_PAIR) > delta_c:\n            lo_r = mid_r\n        else:\n            hi_r = mid_r\n    r_star_com_mpc = 0.5 * (lo_r + hi_r)\n    rho_m0 = OMEGA_M * RHO_CRIT0\n    m_star_msun = ((4.0 / 3.0) * math.pi * ((r_star_com_mpc * MPC) ** 3) * rho_m0) / M_SUN\n    hz_si = H0_SI * e_hubble(Z_PAIR)\n    v200_star_kms = ((10.0 * G * (m_star_msun * M_SUN) * hz_si) ** (1.0 / 3.0)) / 1000.0\n    sigma_star_z6_kms = v200_star_kms / math.sqrt(2.0)",
+          "url": "https://github.com/Foundation-0/gravity/blob/364fa3e9f740f42acaa1991428ce043f547e10dd/wave12_cosmic_dawn_quasar_collapse.py#L227-L243"
+        },
+        {
+          "commit": "364fa3e9f740f42acaa1991428ce043f547e10dd",
+          "path": "wave12_cosmic_dawn_quasar_collapse.py",
+          "line_start": 256,
+          "line_end": 259,
+          "sha256": "d0eec3e85d06b501dbe0d0a0e8969baf9b3faaf308e84718ac40b9ac96fb2aaf",
+          "excerpt": "    sigma_host_kms = 250.0 / math.sqrt(2.0)\n    f_trap_z6 = max(0.0, 1.0 - (sigma_star_z6_kms / sigma_host_kms) ** 2)\n    sigma_star_z0_kms = 185.59\n    f_trap_z0 = max(0.0, 1.0 - (sigma_star_z0_kms / sigma_host_kms) ** 2)",
+          "url": "https://github.com/Foundation-0/gravity/blob/364fa3e9f740f42acaa1991428ce043f547e10dd/wave12_cosmic_dawn_quasar_collapse.py#L256-L259"
+        }
+      ],
+      "after_documentation": [
+        {
+          "commit": "d1444481cdefc59a275ede2fef740ea2cf48eeec",
+          "path": "RESEARCH_NOTEBOOK_AND_REASONING.md",
+          "line_start": 81,
+          "line_end": 83,
+          "sha256": "bf51cdb91977816de1849ade61c10bee7e9826f9ebdb9d689192725064386aa8",
+          "excerpt": "3. **Zero-Adjustment Consequence of Our Wave-10/Wave-11 Two-Branch Equations at `z = 6.08` (`C-32`)**:\n   - Evaluating the **exact same** Wave-10 Planck-2018 Press-Schechter nonlinear collapse dispersion (`C-26`) at `z = 6.0783` yields `R_*(6.08) = 7.96 comoving kpc`, **`M_*(6.08) = 8.39e4 M_sun`** (matching the canonical `~10^5 M_sun` direct-collapse black hole heavy-seed scale, where `f_duty` drops to `0.53`), and **`sigma_*(6.08) = 0.97 km/s`**!\n   - Thus a `V_vir = 250 km/s` (`sigma_halo = 176.8 km/s`) galaxy halo that expels `100%` of condensate dust today (`sigma_*(0) = 185.59 km/s`, `f_trap(0) = 0.0`) traps **`99.997%` (`f_trap(6.08) = 0.99997`)** of its `5.39 M_b` condensate dust at Cosmic Dawn!",
+          "url": "https://github.com/Foundation-0/gravity/blob/d1444481cdefc59a275ede2fef740ea2cf48eeec/RESEARCH_NOTEBOOK_AND_REASONING.md#L81-L83"
+        },
+        {
+          "commit": "d1444481cdefc59a275ede2fef740ea2cf48eeec",
+          "path": "CHANGELOG.md",
+          "line_start": 8,
+          "line_end": 8,
+          "sha256": "79133ad39cfc16b44707d174e35044c4e630f6d85c3a06dd0ba4f728c99bf88e",
+          "excerpt": "- Evaluated Wave-10's zero-free-parameter nonlinear collapse dispersion at `z = 6.0783` (`R_* = 7.96 comoving kpc`, `M_* = 8.39e4 M_sun`, `sigma_*(6.08) = 0.97 km/s`), showing a `176.8 km/s` host halo inverts from `f_trap = 0.0` at `z = 0` to `f_trap = 0.99997` at `z = 6.08`, cutting `30 pkpc` feeder free-fall from `384.82 Myr` to `109.04-122.79 Myr` and restoring Chandrasekhar dynamical friction in Cosmic-Dawn mergers (`C-32`).",
+          "url": "https://github.com/Foundation-0/gravity/blob/d1444481cdefc59a275ede2fef740ea2cf48eeec/CHANGELOG.md#L8-L8"
+        },
+        {
+          "commit": "d1444481cdefc59a275ede2fef740ea2cf48eeec",
+          "path": "METHODS_AND_PLAYBOOK.md",
+          "line_start": 32,
+          "line_end": 32,
+          "sha256": "6109f20f98f191adcaa65e2a42f05000149c62163d548a783791d32e07435e13",
+          "excerpt": "- **M-10 (Breaking-Observation Triage: Fundamental-Law Violation vs. Sub-Grid / Cosmological-Assembly Tension)**: Separates newly announced observational anomalies into (i) conventional radiative/geometric resolutions (slim-disk photon advection, virial mass systematics, foreground lensing), (ii) cosmological assembly / seed-timing tensions (`LambdaCDM` Gaussian peak rarity and Salpeter duty cycles), and (iii) zero-adjustment predictions of existing repo equations (`sigma_*(z)` and `a_0(z)` evaluated at the discovery redshift).",
+          "url": "https://github.com/Foundation-0/gravity/blob/d1444481cdefc59a275ede2fef740ea2cf48eeec/METHODS_AND_PLAYBOOK.md#L32-L32"
+        }
+      ],
+      "prior_correction": [
+        {
+          "commit": "e5d7ee813e33de03c91857e48a2d55a0caf55506",
+          "path": "CLAIMS.md",
+          "line_start": 172,
+          "line_end": 173,
+          "sha256": "efd6e9acba39ec3dd86356df22edacc3d17761e205ac11420798de52290924a9",
+          "excerpt": "- **C-32 (Cosmic-Dawn Dark-WHIM Trapping Inversion `sigma_*(z=6.08) = 0.97 km/s` & Phonon Free-Fall Speedup)** -- `COMPUTED (MODEL-COMPARISON) & CONJECTURE`\n  - *Computation & Inputs:* The chosen spectrum and growth approximation give `M_* = 8.39e4 M_sun` and `sigma_* = 0.97 km/s` at `z = 6.0783`. This is total nonlinear halo mass, not a black-hole seed. The value `f_trap = 0.99997` is an assigned trapping prescription, not a capture solution.",
+          "url": "https://github.com/Foundation-0/gravity/blob/e5d7ee813e33de03c91857e48a2d55a0caf55506/CLAIMS.md#L172-L173"
+        }
+      ],
+      "needed_correction": "Distinguish total nonlinear halo mass from black-hole seed mass. Call f_trap a prescription and distinguish no added fit from a physical prediction.",
+      "evidence_to_reopen": "A fixed dynamical model that produces capture and seed mass from specified initial and boundary conditions."
+    },
+    {
+      "id": "D07",
+      "claim_ids": [
+        "C-32"
+      ],
+      "status": "repeated_previously_audited_claim",
+      "summary": "Superseded radial shortcut and uncomputed filament or friction dynamics",
+      "novel_model": false,
+      "novel_observation": false,
+      "novel_parameter": false,
+      "novel_reference": false,
+      "before_source": [
+        {
+          "commit": "364fa3e9f740f42acaa1991428ce043f547e10dd",
+          "path": "wave12_cosmic_dawn_quasar_collapse.py",
+          "line_start": 261,
+          "line_end": 277,
+          "sha256": "d0eec3e85d06b501dbe0d0a0e8969baf9b3faaf308e84718ac40b9ac96fb2aaf",
+          "excerpt": "    r_feed_m = 30.0 * KPC\n    m_b_feed = 5.0e10 * M_SUN\n    g_b_feed = (G * m_b_feed) / (r_feed_m ** 2)\n    a0_const = A0_EMP\n    a0_hubble_z6 = (C_SI * hz_si) / (2.0 * math.pi)\n\n    def g_rar(gb: float, a0_val: float) -> float:\n        return gb / (1.0 - math.exp(-math.sqrt(gb / a0_val)))\n\n    g_mond_const_a0 = g_rar(g_b_feed, a0_const)\n    g_mond_hubble_a0 = g_rar(g_b_feed, a0_hubble_z6)\n    g_two_branch_const = g_mond_const_a0 + (OMEGA_C / OMEGA_B) * f_trap_z6 * g_b_feed\n\n    t_ff_newt_myr = (math.pi / 2.0) * math.sqrt(r_feed_m / (2.0 * g_b_feed)) / MYR\n    t_ff_mond_const_myr = (math.pi / 2.0) * math.sqrt(r_feed_m / (2.0 * g_mond_const_a0)) / MYR\n    t_ff_mond_hubble_myr = (math.pi / 2.0) * math.sqrt(r_feed_m / (2.0 * g_mond_hubble_a0)) / MYR\n    t_ff_two_branch_myr = (math.pi / 2.0) * math.sqrt(r_feed_m / (2.0 * g_two_branch_const)) / MYR",
+          "url": "https://github.com/Foundation-0/gravity/blob/364fa3e9f740f42acaa1991428ce043f547e10dd/wave12_cosmic_dawn_quasar_collapse.py#L261-L277"
+        },
+        {
+          "commit": "364fa3e9f740f42acaa1991428ce043f547e10dd",
+          "path": "wave12_cosmic_dawn_quasar_collapse.py",
+          "line_start": 299,
+          "line_end": 304,
+          "sha256": "d0eec3e85d06b501dbe0d0a0e8969baf9b3faaf308e84718ac40b9ac96fb2aaf",
+          "excerpt": "        \"dynamical_friction_audit_note\": (\n            f\"Pure baryon-only MOND slows kpc-scale galaxy mergers due to absent dark-halo dynamical friction \"\n            f\"(Nipoti et al. 2008), whereas in the two-branch condensate sigma_*(z=6.08) = {sigma_star_z6_kms:.2f} km/s \"\n            f\"<< sigma_halo keeps f_trap = {f_trap_z6:.5f}, supplying both deep central DCBH potentials and \"\n            f\"Chandrasekhar dynamical friction at z = 6.08 before late-time cosmic-web shocks heat the condensate \"\n            f\"to 185.59 km/s by z = 0.\"",
+          "url": "https://github.com/Foundation-0/gravity/blob/364fa3e9f740f42acaa1991428ce043f547e10dd/wave12_cosmic_dawn_quasar_collapse.py#L299-L304"
+        }
+      ],
+      "after_documentation": [
+        {
+          "commit": "d1444481cdefc59a275ede2fef740ea2cf48eeec",
+          "path": "RESEARCH_NOTEBOOK_AND_REASONING.md",
+          "line_start": 84,
+          "line_end": 84,
+          "sha256": "bf51cdb91977816de1849ade61c10bee7e9826f9ebdb9d689192725064386aa8",
+          "excerpt": "   - Together with outer MOND phonon acceleration (`g_b = 7.74e-12 m/s^2 << a_0(z)`), this cuts `30 pkpc` feeder-filament free-fall from `384.82 Myr` (pure baryonic Newton) to **`122.79 Myr`** (constant `a_0`) or **`109.04 Myr`** (Hubble-scaled `a_0(z) = c H(z)/(2*pi)`), accelerating early protogalactic assembly (McGaugh et al. 2024, arXiv:2406.17930) **while supplying the Chandrasekhar dynamical friction (`f_trap = 0.99997`) needed to bring merging SMBH pairs down to `5.56 pkpc` and eventually sub-parsec NANOGrav inspiral (`M_c = 6.47e8 M_sun`)** -- solving pure baryon-only MOND's well-known galaxy-merger dynamical-friction deficit (Nipoti et al. 2008)!",
+          "url": "https://github.com/Foundation-0/gravity/blob/d1444481cdefc59a275ede2fef740ea2cf48eeec/RESEARCH_NOTEBOOK_AND_REASONING.md#L84-L84"
+        },
+        {
+          "commit": "d1444481cdefc59a275ede2fef740ea2cf48eeec",
+          "path": "CHANGELOG.md",
+          "line_start": 8,
+          "line_end": 8,
+          "sha256": "79133ad39cfc16b44707d174e35044c4e630f6d85c3a06dd0ba4f728c99bf88e",
+          "excerpt": "- Evaluated Wave-10's zero-free-parameter nonlinear collapse dispersion at `z = 6.0783` (`R_* = 7.96 comoving kpc`, `M_* = 8.39e4 M_sun`, `sigma_*(6.08) = 0.97 km/s`), showing a `176.8 km/s` host halo inverts from `f_trap = 0.0` at `z = 0` to `f_trap = 0.99997` at `z = 6.08`, cutting `30 pkpc` feeder free-fall from `384.82 Myr` to `109.04-122.79 Myr` and restoring Chandrasekhar dynamical friction in Cosmic-Dawn mergers (`C-32`).",
+          "url": "https://github.com/Foundation-0/gravity/blob/d1444481cdefc59a275ede2fef740ea2cf48eeec/CHANGELOG.md#L8-L8"
+        }
+      ],
+      "prior_correction": [
+        {
+          "commit": "e5d7ee813e33de03c91857e48a2d55a0caf55506",
+          "path": "CLAIMS.md",
+          "line_start": 174,
+          "line_end": 176,
+          "sha256": "efd6e9acba39ec3dd86356df22edacc3d17761e205ac11420798de52290924a9",
+          "excerpt": "  - *Corrected radial benchmark:* For release from rest at `30 pkpc` around a fixed `5e10 M_sun` baryonic point mass, energy-conserving integration gives `384.82 Myr` for Newtonian baryons, `200.08 Myr` for constant-a0 RAR, `121.72 Myr` for Hubble-a0 RAR and `127.16 Myr` for constant-a0 RAR plus the assigned condensate force.\n\n  Earlier `182.27`, `109.04` and `122.79 Myr` values substituted the outer acceleration into a Newtonian formula and are superseded. No filament pressure, geometry, angular momentum, cooling or friction is solved.",
+          "url": "https://github.com/Foundation-0/gravity/blob/e5d7ee813e33de03c91857e48a2d55a0caf55506/CLAIMS.md#L174-L176"
+        },
+        {
+          "commit": "e5d7ee813e33de03c91857e48a2d55a0caf55506",
+          "path": "WAVE11_12_CORRECTIONS.md",
+          "line_start": 13,
+          "line_end": 22,
+          "sha256": "16edeec60b7a6ac3aab790021fab866273e95f508da8fb7ddebd5d6a78ff8bf1",
+          "excerpt": "| Fixed force at all radii | Earlier shortcut, Myr | Integrated time, Myr |\n|---|---:|---:|\n| Newtonian baryonic point mass | 384.823 | 384.823 |\n| RAR, constant a0 | 182.27 | 200.075 |\n| RAR, Hubble-scaled a0 at the observation epoch | 109.04 | 121.717 |\n| Constant-a0 RAR plus the assigned condensate force | 122.79 | 127.156 |\n\nThe baryonic point mass is `5e10 M_sun`. The initial radius is `30 pkpc`. Newtonian infall agrees with `pi sqrt(r0^3/(GM))/(2 sqrt(2))`. In deep MOND, `g = V^2/r` gives `t = sqrt(pi/2) r0/V`. The earlier shortcut divided by that exact result is `sqrt(pi)/2`. A separate test approaches this limit with a small Newtonian core.\n\nConstant-a0 results at 64, 128 and 256 outer intervals agree within `2e-9 Myr`. This is a numerical control for a fixed point-mass model. It does not describe a filament, evolving halo, pressure, angular momentum, cooling, seed formation or dynamical friction.",
+          "url": "https://github.com/Foundation-0/gravity/blob/e5d7ee813e33de03c91857e48a2d55a0caf55506/WAVE11_12_CORRECTIONS.md#L13-L22"
+        }
+      ],
+      "needed_correction": "Use 200.08, 121.72 and 127.16 Myr for the specified modified-force radial benchmarks. Label the Hubble-a0 case as RAR without assigned condensate mass. No filament, capture or friction solution is supplied.",
+      "evidence_to_reopen": "A conserved dynamical evolution including the needed spatial profile, pressure, geometry, angular momentum and response."
+    },
+    {
+      "id": "D08",
+      "claim_ids": [
+        "C-33"
+      ],
+      "status": "repeated_previously_audited_claim",
+      "summary": "Old slim-disk growth prescription does not conserve the assigned inflow and radiation",
+      "novel_model": false,
+      "novel_observation": false,
+      "novel_parameter": false,
+      "novel_reference": false,
+      "before_source": [
+        {
+          "commit": "364fa3e9f740f42acaa1991428ce043f547e10dd",
+          "path": "wave12_cosmic_dawn_quasar_collapse.py",
+          "line_start": 309,
+          "line_end": 323,
+          "sha256": "d0eec3e85d06b501dbe0d0a0e8969baf9b3faaf308e84718ac40b9ac96fb2aaf",
+          "excerpt": "def audit_c33_slim_disk_and_binary_gw_budget() -> dict:\n    \"\"\"Evaluates slim-disk photon trapping for lambda_Edd > 1, 5.56 pkpc orbital projection, and GW merger timescale.\"\"\"\n    t_edd_pure_h_myr = (SIGMA_T * C_SI) / (4.0 * math.pi * G * M_P) / MYR\n    tsal_01_myr = (0.10 / 0.90) * t_edd_pure_h_myr\n    efold_a_pop3 = math.log(M_BH_A_MSUN / 100.0)\n\n    slim_disk_benchmarks = []\n    for mdot in [1.0, 2.0, 3.0, 5.0]:\n        lam_obs = mdot if mdot < 2.0 else 2.0 * (1.0 + math.log(mdot / 2.0))\n        t_grow_pop3_myr = (efold_a_pop3 * tsal_01_myr) / mdot\n        slim_disk_benchmarks.append({\n            \"dimensionless_mass_inflow_mdot\": mdot,\n            \"radiated_lambda_Edd_slim_disk\": round(lam_obs, 3),\n            \"popIII_100Msun_to_1p5e9Msun_time_Myr\": round(t_grow_pop3_myr, 2),\n        })",
+          "url": "https://github.com/Foundation-0/gravity/blob/364fa3e9f740f42acaa1991428ce043f547e10dd/wave12_cosmic_dawn_quasar_collapse.py#L309-L323"
+        }
+      ],
+      "after_documentation": [
+        {
+          "commit": "d1444481cdefc59a275ede2fef740ea2cf48eeec",
+          "path": "RESEARCH_NOTEBOOK_AND_REASONING.md",
+          "line_start": 77,
+          "line_end": 77,
+          "sha256": "bf51cdb91977816de1849ade61c10bee7e9826f9ebdb9d689192725064386aa8",
+          "excerpt": "   - Observed `lambda_Edd = 1.23` and `1.07` do not violate radiation momentum conservation: in optically thick slim accretion disks (Abramowicz et al. 1988), inward photon advection traps radiation (`lambda_Edd^obs ~ 2(1 + ln(mdot/2))`), allowing `mdot = 3-5` mass inflow to grow a `100 M_sun` seed to `1.5e9 M_sun` in `165-276 Myr`.",
+          "url": "https://github.com/Foundation-0/gravity/blob/d1444481cdefc59a275ede2fef740ea2cf48eeec/RESEARCH_NOTEBOOK_AND_REASONING.md#L77-L77"
+        },
+        {
+          "commit": "d1444481cdefc59a275ede2fef740ea2cf48eeec",
+          "path": "CHANGELOG.md",
+          "line_start": 9,
+          "line_end": 9,
+          "sha256": "79133ad39cfc16b44707d174e35044c4e630f6d85c3a06dd0ba4f728c99bf88e",
+          "excerpt": "- Evaluated Abramowicz et al. (1988) slim-disk photon-trapping super-Eddington growth (`165-276 Myr` at `mdot = 3-5`), `5.56 pkpc` orbital projection (`|sin i cos psi| = 0.0438`), and Peters (1964) GW inspiral for `M_c = 6.4735e8 M_sun` (`3.19-50.99 Myr` once hardened to `0.05-0.10 pc`; `C-33`).",
+          "url": "https://github.com/Foundation-0/gravity/blob/d1444481cdefc59a275ede2fef740ea2cf48eeec/CHANGELOG.md#L9-L9"
+        }
+      ],
+      "prior_correction": [
+        {
+          "commit": "e5d7ee813e33de03c91857e48a2d55a0caf55506",
+          "path": "CLAIMS.md",
+          "line_start": 179,
+          "line_end": 180,
+          "sha256": "efd6e9acba39ec3dd86356df22edacc3d17761e205ac11420798de52290924a9",
+          "excerpt": "- **C-33 (Slim-Disk Photon-Trapping Super-Eddington Growth, `5.56 pkpc` Orbital Projection & NANOGrav Chirp Mass)** -- `COMPUTED (KNOWN-FRAMEWORK)`\n  - *Computation & Inputs:* With `mdot = 0.10 dotM_in c^2 / L_Edd`, the assigned luminosity is `lambda = mdot` below two and `2(1 + ln(mdot/2))` above. Mass conservation gives retained growth proportional to `mdot - 0.10 lambda`, not `0.90 mdot` above saturation. With no outflows and constant coefficients, `mdot = 3, 5` gives `273.78, 161.23 Myr` for a `100 M_sun` seed to reach `1.5e9 M_sun`.",
+          "url": "https://github.com/Foundation-0/gravity/blob/e5d7ee813e33de03c91857e48a2d55a0caf55506/CLAIMS.md#L179-L180"
+        },
+        {
+          "commit": "e5d7ee813e33de03c91857e48a2d55a0caf55506",
+          "path": "WAVE11_12_CORRECTIONS.md",
+          "line_start": 35,
+          "line_end": 35,
+          "sha256": "16edeec60b7a6ac3aab790021fab866273e95f508da8fb7ddebd5d6a78ff8bf1",
+          "excerpt": "The slim-disk convention is `mdot = epsilon_ref dotM_in c^2/L_Edd`, with `epsilon_ref=0.10`. The assigned luminosity is `lambda=mdot` below two and `lambda=2(1+ln(mdot/2))` above. Conservation gives `dotM_BH=(mdot-epsilon_ref lambda)L_Edd/(epsilon_ref c^2)`. The old `0.90 mdot` prescription agrees only in the unsaturated regime. Outflows are omitted.",
+          "url": "https://github.com/Foundation-0/gravity/blob/e5d7ee813e33de03c91857e48a2d55a0caf55506/WAVE11_12_CORRECTIONS.md#L35-L35"
+        }
+      ],
+      "needed_correction": "Use retained growth mdot-epsilon_ref*lambda, with 273.78 and 161.23 Myr for mdot 3 and 5. State no outflows and fixed coefficients.",
+      "evidence_to_reopen": "A specified time-dependent accretion/outflow calculation or data that constrain such a history."
+    },
+    {
+      "id": "D09",
+      "claim_ids": [
+        "C-33"
+      ],
+      "status": "repeated_previously_audited_claim",
+      "summary": "Projection and Peters clocks require unprovided geometry and hardening history",
+      "novel_model": false,
+      "novel_observation": false,
+      "novel_parameter": false,
+      "novel_reference": false,
+      "before_source": [
+        {
+          "commit": "364fa3e9f740f42acaa1991428ce043f547e10dd",
+          "path": "wave12_cosmic_dawn_quasar_collapse.py",
+          "line_start": 325,
+          "line_end": 334,
+          "sha256": "d0eec3e85d06b501dbe0d0a0e8969baf9b3faaf308e84718ac40b9ac96fb2aaf",
+          "excerpt": "    r_sep_m = 5.56 * KPC\n    m_bh_tot_kg = (M_BH_A_MSUN + M_BH_B_MSUN) * M_SUN\n    v_kepler_bh_only_kms = math.sqrt((G * m_bh_tot_kg) / r_sep_m) / 1000.0\n    m_enc_host_kg = 1.5e11 * M_SUN\n    v_circ_host_kms = math.sqrt((G * (m_bh_tot_kg + m_enc_host_kg)) / r_sep_m) / 1000.0\n    proj_factor_host = DELTA_V_OBS_KMS / v_circ_host_kms\n\n    m1 = M_BH_A_MSUN * M_SUN\n    m2 = M_BH_B_MSUN * M_SUN\n    m_chirp_msun = (((M_BH_A_MSUN * M_BH_B_MSUN) ** 0.6) / ((M_BH_A_MSUN + M_BH_B_MSUN) ** 0.2))",
+          "url": "https://github.com/Foundation-0/gravity/blob/364fa3e9f740f42acaa1991428ce043f547e10dd/wave12_cosmic_dawn_quasar_collapse.py#L325-L334"
+        }
+      ],
+      "after_documentation": [
+        {
+          "commit": "d1444481cdefc59a275ede2fef740ea2cf48eeec",
+          "path": "CHANGELOG.md",
+          "line_start": 9,
+          "line_end": 9,
+          "sha256": "79133ad39cfc16b44707d174e35044c4e630f6d85c3a06dd0ba4f728c99bf88e",
+          "excerpt": "- Evaluated Abramowicz et al. (1988) slim-disk photon-trapping super-Eddington growth (`165-276 Myr` at `mdot = 3-5`), `5.56 pkpc` orbital projection (`|sin i cos psi| = 0.0438`), and Peters (1964) GW inspiral for `M_c = 6.4735e8 M_sun` (`3.19-50.99 Myr` once hardened to `0.05-0.10 pc`; `C-33`).",
+          "url": "https://github.com/Foundation-0/gravity/blob/d1444481cdefc59a275ede2fef740ea2cf48eeec/CHANGELOG.md#L9-L9"
+        },
+        {
+          "commit": "d1444481cdefc59a275ede2fef740ea2cf48eeec",
+          "path": "RESEARCH_NOTEBOOK_AND_REASONING.md",
+          "line_start": 84,
+          "line_end": 84,
+          "sha256": "bf51cdb91977816de1849ade61c10bee7e9826f9ebdb9d689192725064386aa8",
+          "excerpt": "   - Together with outer MOND phonon acceleration (`g_b = 7.74e-12 m/s^2 << a_0(z)`), this cuts `30 pkpc` feeder-filament free-fall from `384.82 Myr` (pure baryonic Newton) to **`122.79 Myr`** (constant `a_0`) or **`109.04 Myr`** (Hubble-scaled `a_0(z) = c H(z)/(2*pi)`), accelerating early protogalactic assembly (McGaugh et al. 2024, arXiv:2406.17930) **while supplying the Chandrasekhar dynamical friction (`f_trap = 0.99997`) needed to bring merging SMBH pairs down to `5.56 pkpc` and eventually sub-parsec NANOGrav inspiral (`M_c = 6.47e8 M_sun`)** -- solving pure baryon-only MOND's well-known galaxy-merger dynamical-friction deficit (Nipoti et al. 2008)!",
+          "url": "https://github.com/Foundation-0/gravity/blob/d1444481cdefc59a275ede2fef740ea2cf48eeec/RESEARCH_NOTEBOOK_AND_REASONING.md#L84-L84"
+        }
+      ],
+      "prior_correction": [
+        {
+          "commit": "e5d7ee813e33de03c91857e48a2d55a0caf55506",
+          "path": "CLAIMS.md",
+          "line_start": 181,
+          "line_end": 181,
+          "sha256": "efd6e9acba39ec3dd86356df22edacc3d17761e205ac11420798de52290924a9",
+          "excerpt": "  - *Binary limits:* The projection `0.0438` uses a point velocity and assumed enclosed mass, not a measured inclination. The chirp mass is `6.4735e8 M_sun`. Circular isolated Peters clocks at `0.05-0.10 pc` are `3.19-50.99 Myr`. Reaching those separations and predicting a stochastic background require hardening and population models that are absent.",
+          "url": "https://github.com/Foundation-0/gravity/blob/e5d7ee813e33de03c91857e48a2d55a0caf55506/CLAIMS.md#L181-L181"
+        }
+      ],
+      "needed_correction": "Treat projection as an illustrative mass-and-velocity calculation. Peters clocks are conditional on already reaching the stated separations and do not predict a stochastic background.",
+      "evidence_to_reopen": "Resolved host and orbital constraints, a hardening calculation and a population model for any background claim."
+    }
+  ],
+  "primary_sources_checked": [
+    {
+      "url": "https://arxiv.org/abs/2610.09987v2",
+      "author": "Manuel Uruena Palomo",
+      "supports": "D01 author correction"
+    },
+    {
+      "url": "https://arxiv.org/html/2609.31835v1",
+      "sections": [
+        "III.1",
+        "III.3",
+        "III.4"
+      ],
+      "supports": [
+        "D04 measurement limitations",
+        "D05 extrapolation and one-halo limits",
+        "D09 velocity uncertainty and unresolved lensing"
+      ]
+    }
+  ],
+  "prior_results_boundary": "Numerical correction and independent validation evidence are read from frozen commits. This delta review does not rerun or extend those physical tests.",
+  "files_mutated": "Only this review output directory. No author source files or branches changed.",
+  "composition_review": {
+    "artifact": "COMPOSITION_REVIEW.md",
+    "evidence": "composition-evidence.json",
+    "status": "no_blocking_findings_in_final_composed_documentation",
+    "original_delta_findings_retained": true,
+    "note": "D01-D09 assess main d144448. The separate composition review checks the reconciled correction tree."
+  }
+}

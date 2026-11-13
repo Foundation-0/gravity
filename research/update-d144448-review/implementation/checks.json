@@ -1,0 +1,14 @@
+{
+  "frozen_files_unchanged": 10,
+  "changed_file_hashes_pass": 4,
+  "certificate_checksum_table_pass": 2,
+  "doc_consistency_pass": true,
+  "full_manifest_mismatches": [
+    "verify_all.py",
+    "wave5_unified_forces_stochastic_qm.py",
+    "formal/verify_exact_rational_proofs.py",
+    "formal/GravityClaims.lean",
+    "formal/Wave12QuasarCollapse.lean",
+    "results/wave4_unified_certificates.json"
+  ]
+}

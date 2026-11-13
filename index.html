@@ -1,3 +1,213 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Foundation0 // Gravity — Audited MOND, Superfluid-Condensate &amp; Cosmic-Dawn Research Record</title>
+<meta name="description" content="Reproducible Waves 1-12 research monograph, interactive regime instruments, and 33-claim audited ledger for Foundation-0/gravity.">
+<style>
+:root{color-scheme:light;--bg:#F6F4EB;--bg-elev:#EFECE3;--bg-card:#FAF8F2;--ink:#161C24;--ink-2:#36404D;--muted:#626A74;--line:#D8D2C3;--line-strong:#A69E8C;--bronze:#C28B47;--bronze-soft:rgba(194,139,71,.13);--cyan:#258C8D;--cyan-soft:rgba(37,140,141,.13);--green:#1E7245;--green-soft:rgba(30,114,69,.12);--coral:#CC4A47;--coral-soft:rgba(204,74,71,.12);--header-bg:rgba(246,244,235,.92);--f-sans:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;--f-serif:"Iowan Old Style",Charter,"Palatino Linotype",Georgia,serif;--f-mono:ui-monospace,"SF Mono","JetBrains Mono",Menlo,Consolas,monospace;--max:1320px;--gutter:clamp(16px,3.6vw,44px)}
+[data-theme="dark"]{color-scheme:dark;--bg:#0D1117;--bg-elev:#161B22;--bg-card:#11161D;--ink:#F0F6FC;--ink-2:#C9D1D9;--muted:#8B949E;--line:#21262D;--line-strong:#3B434D;--bronze:#D49A56;--bronze-soft:rgba(212,154,86,.15);--cyan:#38BDF8;--cyan-soft:rgba(56,189,248,.14);--green:#56D364;--green-soft:rgba(86,211,100,.14);--coral:#F87171;--coral-soft:rgba(248,113,113,.14);--header-bg:rgba(13,17,23,.90)}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;background:var(--bg);color:var(--ink)}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--f-serif);font-size:18px;line-height:1.6;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+a{color:var(--cyan);text-decoration:none;border-bottom:1px solid transparent;transition:border-color .15s,color .15s}
+a:hover{border-bottom-color:currentColor}
+a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible{outline:2px solid var(--bronze);outline-offset:2px}
+.container{max-width:var(--max);margin:0 auto;padding:0 var(--gutter)}
+.mono-label,.brand-wordmark,.top-nav a,.util-btn,.eyebrow-pill,.btn-primary,.btn-secondary,.section-index,.badge,.deadend-btn,.inst-tab,.pill-btn,.arch-table th{font-family:var(--f-mono);font-weight:600;text-transform:uppercase}
+.mono-label{font-size:11.5px;letter-spacing:.15em;line-height:1.3;color:var(--muted)}
+.site-header{position:sticky;top:0;z-index:50;min-height:68px;background:var(--header-bg);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.header-inner{max-width:var(--max);margin:0 auto;padding:10px var(--gutter);display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.brand-link{display:inline-flex;align-items:center;gap:12px;color:var(--ink);border-bottom:none}
+.brand-wordmark{font-size:13px;font-weight:700;letter-spacing:.16em;color:var(--ink)}
+.brand-wordmark span{color:var(--bronze)}
+.top-nav{display:flex;align-items:center;gap:18px;flex-wrap:wrap}
+.top-nav a{font-size:11.5px;letter-spacing:.13em;color:var(--ink-2);padding:4px 0}
+.top-nav a:hover{color:var(--bronze);border-bottom-color:var(--bronze)}
+.header-utils{display:flex;align-items:center;gap:8px}
+.util-btn{font-size:11px;letter-spacing:.12em;background:var(--bg-elev);color:var(--ink);border:1px solid var(--line);border-radius:2px;padding:6px 10px;cursor:pointer}
+.util-btn:hover{border-color:var(--line-strong);background:var(--bg-card)}
+.hero-section{border-bottom:1px solid var(--line);padding:clamp(36px,5vw,68px) 0}
+.hero-grid{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:clamp(28px,4vw,52px);align-items:start}
+@media(max-width:960px){.hero-grid{grid-template-columns:1fr}}
+.eyebrow-pill{display:inline-flex;align-items:center;gap:8px;padding:5px 10px;border:1px solid var(--line);border-radius:2px;background:var(--bg-elev);font-size:11px;letter-spacing:.13em;color:var(--ink-2);margin-bottom:18px}
+.dot{width:7px;height:7px;border-radius:50%;display:inline-block}
+.dot-bronze{background:var(--bronze)}.dot-cyan{background:var(--cyan)}
+.hero-title{font-family:var(--f-sans);font-size:clamp(36px,4.6vw,60px);font-weight:700;line-height:1.05;letter-spacing:-.02em;margin:0 0 12px;color:var(--ink)}
+.hero-subtitle{font-style:italic;font-size:clamp(20px,2vw,26px);line-height:1.35;color:var(--bronze);margin:0 0 20px}
+.hero-lede{font-size:clamp(17px,1.15vw + 13px,19.5px);color:var(--ink-2);margin:0 0 24px;max-width:64ch}
+.cta-row{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:28px}
+.btn-primary{display:inline-flex;align-items:center;gap:8px;background:var(--bronze);color:#FFF;font-size:12px;letter-spacing:.14em;padding:11px 18px;border:1px solid var(--bronze);border-radius:2px;cursor:pointer}
+[data-theme="dark"] .btn-primary{color:#0D1117}
+.btn-secondary{display:inline-flex;align-items:center;gap:8px;background:transparent;color:var(--ink);font-size:12px;letter-spacing:.14em;padding:11px 18px;border:1px solid var(--line-strong);border-radius:2px;cursor:pointer}
+.btn-secondary:hover{background:var(--bg-elev)}
+.stat-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));border-top:1px solid var(--line);border-left:1px solid var(--line)}
+@media(max-width:520px){.stat-grid{grid-template-columns:1fr}}
+.stat-cell{padding:16px 18px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--bg-card)}
+.stat-num{font-family:var(--f-mono);font-size:clamp(22px,2.2vw,30px);font-weight:700;line-height:1.15;color:var(--ink);font-variant-numeric:tabular-nums;margin:4px 0}
+.stat-desc{font-family:var(--f-sans);font-size:13px;line-height:1.4;color:var(--muted)}
+.radiant-panel,.deadend-box,.instrument-shell,.table-scroll,.ledger-list{border:1px solid var(--line);background:var(--bg-card)}
+.radiant-panel{display:flex;flex-direction:column}
+.panel-bar{padding:10px 14px;border-bottom:1px solid var(--line);background:var(--bg-elev);display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap}
+.radiant-canvas-wrap{position:relative;width:100%;height:360px;background:var(--bg-card)}
+#radiant-canvas{width:100%;height:100%;display:block;cursor:crosshair}
+.radiant-controls{padding:12px 14px;border-top:1px solid var(--line);background:var(--bg-elev);display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.radiant-slider{flex:1;min-width:140px;accent-color:var(--bronze);cursor:pointer}
+.radiant-inspector{padding:14px 16px;border-top:1px solid var(--line);font-family:var(--f-sans);font-size:14px;line-height:1.45}
+.inspector-top{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:6px;flex-wrap:wrap}
+.section-block{border-bottom:1px solid var(--line);padding:clamp(48px,6vw,88px) 0}
+.section-header{display:flex;align-items:baseline;justify-content:space-between;gap:16px;flex-wrap:wrap;padding-bottom:18px;margin-bottom:28px;border-bottom:1px solid var(--line)}
+.section-index{font-size:12px;font-weight:700;letter-spacing:.16em;color:var(--bronze);display:block;margin-bottom:6px}
+.section-title{font-family:var(--f-sans);font-size:clamp(26px,2.8vw,40px);font-weight:700;line-height:1.12;letter-spacing:-.015em;margin:0;color:var(--ink)}
+.section-note{font-size:17px;color:var(--muted);max-width:52ch;margin:0}
+.badge{display:inline-flex;align-items:center;gap:6px;font-size:10.5px;letter-spacing:.11em;padding:3px 8px;border-radius:2px;border:1px solid var(--line);white-space:nowrap}
+.badge-computed{background:var(--cyan-soft);color:var(--cyan);border-color:var(--cyan)}
+.badge-empirical{background:var(--bronze-soft);color:var(--bronze);border-color:var(--bronze)}
+.badge-conjecture{background:var(--coral-soft);color:var(--coral);border-color:var(--coral)}
+.badge-literature{background:var(--green-soft);color:var(--green);border-color:var(--green)}
+.badge-lean{background:var(--bg-elev);color:var(--ink);border-color:var(--line-strong)}
+.epoch-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-top:1px solid var(--line);border-left:1px solid var(--line);margin-bottom:32px}
+@media(max-width:980px){.epoch-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:580px){.epoch-grid{grid-template-columns:1fr}}
+.epoch-card{padding:20px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--bg-card);display:flex;flex-direction:column;gap:8px}
+.epoch-card h3{font-family:var(--f-sans);font-size:18px;font-weight:700;margin:0;line-height:1.25;color:var(--ink)}
+.epoch-card p{font-size:15.5px;line-height:1.52;color:var(--ink-2);margin:0}
+.epoch-formula{margin-top:auto;padding-top:10px;border-top:1px dashed var(--line);font-family:var(--f-mono);font-size:12px;color:var(--cyan)}
+.deadend-tabs,.inst-tabbar{display:flex;flex-wrap:wrap;border-bottom:1px solid var(--line);background:var(--bg-elev)}
+.deadend-btn{font-size:11px;letter-spacing:.1em;padding:10px 14px;border:none;border-right:1px solid var(--line);background:transparent;color:var(--muted);cursor:pointer}
+.deadend-btn.is-active{background:var(--bg-card);color:var(--coral);box-shadow:inset 0 -2px 0 var(--coral)}
+.deadend-body{padding:20px 22px;display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,.7fr);gap:20px;align-items:center}
+@media(max-width:760px){.deadend-body{grid-template-columns:1fr}}
+.deadend-metric{padding:14px 16px;border:1px solid var(--line);background:var(--bg-elev);font-family:var(--f-mono);font-size:12.5px;line-height:1.5}
+.inst-tab{font-size:11.5px;letter-spacing:.12em;padding:13px 18px;border:none;border-right:1px solid var(--line);background:transparent;color:var(--muted);cursor:pointer}
+.inst-tab.is-active{background:var(--bg-card);color:var(--ink);box-shadow:inset 0 -2px 0 var(--bronze)}
+.inst-grid{display:grid;grid-template-columns:minmax(0,.36fr) minmax(0,.64fr)}
+@media(max-width:900px){.inst-grid{grid-template-columns:1fr}}
+.inst-sidebar{padding:20px;border-right:1px solid var(--line);display:flex;flex-direction:column;gap:16px;background:var(--bg-elev)}
+@media(max-width:900px){.inst-sidebar{border-right:none;border-bottom:1px solid var(--line)}}
+.inst-main{padding:20px;display:flex;flex-direction:column;gap:16px}
+.chart-box{position:relative;height:320px;width:100%}
+#regime-chart{width:100%;height:100%;display:block}
+.control-group{display:flex;flex-direction:column;gap:6px}
+.control-header{display:flex;justify-content:space-between;align-items:baseline;font-family:var(--f-mono);font-size:12px}
+.control-val{font-weight:700;color:var(--bronze);font-variant-numeric:tabular-nums}
+.range-input{width:100%;accent-color:var(--cyan);cursor:pointer}
+.preset-pills,.filter-chips,.ledger-inputs{display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+.pill-btn{font-size:11px;letter-spacing:.08em;padding:6px 10px;border:1px solid var(--line-strong);border-radius:2px;background:var(--bg-card);color:var(--ink-2);cursor:pointer}
+.pill-btn.is-active{background:var(--cyan);color:#FFF;border-color:var(--cyan)}
+[data-theme="dark"] .pill-btn.is-active{color:#0D1117}
+.inst-kpis{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-top:1px solid var(--line);border-left:1px solid var(--line)}
+@media(max-width:600px){.inst-kpis{grid-template-columns:1fr}}
+.inst-kpi{padding:12px 14px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--bg-elev)}
+.inst-kpi-val{font-family:var(--f-mono);font-size:18px;font-weight:700;color:var(--ink);font-variant-numeric:tabular-nums;margin-top:2px}
+.table-scroll{width:100%;overflow-x:auto}
+.arch-table{width:100%;border-collapse:collapse;font-family:var(--f-sans);font-size:14px;text-align:left}
+.arch-table th{font-size:11px;letter-spacing:.13em;color:var(--muted);background:var(--bg-elev);padding:11px 14px;border-bottom:1px solid var(--line);white-space:nowrap}
+.arch-table td{padding:11px 14px;border-bottom:1px solid var(--line);vertical-align:top;color:var(--ink-2)}
+.arch-table tr:last-child td{border-bottom:none}
+.arch-table tr:hover td{background:var(--bg-elev)}
+.code-inline{font-family:var(--f-mono);font-size:12px;color:var(--ink);background:var(--bg-elev);padding:2px 5px;border:1px solid var(--line)}
+.ledger-toolbar{display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:space-between;padding:14px 16px;border:1px solid var(--line);border-bottom:none;background:var(--bg-elev)}
+.text-input,.select-input{font-family:var(--f-mono);font-size:12px;padding:7px 10px;border:1px solid var(--line-strong);border-radius:2px;background:var(--bg-card);color:var(--ink)}
+.claim-item{border-bottom:1px solid var(--line)}
+.claim-item:last-child{border-bottom:none}
+.claim-head{width:100%;text-align:left;background:transparent;border:none;padding:14px 18px;display:grid;grid-template-columns:66px minmax(0,1fr) auto 28px;gap:12px;align-items:center;cursor:pointer;color:var(--ink)}
+@media(max-width:720px){.claim-head{grid-template-columns:58px minmax(0,1fr) 24px}.claim-badges{grid-column:1/-1}}
+.claim-head:hover{background:var(--bg-elev)}
+.claim-id{font-family:var(--f-mono);font-size:13px;font-weight:700;color:var(--bronze)}
+.claim-title{font-family:var(--f-sans);font-size:15.5px;font-weight:600;color:var(--ink)}
+.claim-badges{display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+.claim-caret{font-family:var(--f-mono);font-size:14px;color:var(--muted);text-align:right}
+.claim-body{display:none;padding:0 18px 18px 84px;font-family:var(--f-sans);font-size:14.5px;line-height:1.55;color:var(--ink-2)}
+@media(max-width:720px){.claim-body{padding:0 18px 16px}}
+.claim-item.is-open .claim-body{display:block}
+.claim-item.is-highlighted{background:var(--bronze-soft)}
+.claim-meta-grid{margin-top:10px;display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:10px;padding:10px 12px;border:1px solid var(--line);background:var(--bg-elev);font-family:var(--f-mono);font-size:12px}
+.cmd-block{border:1px solid var(--line);background:var(--bg-elev);padding:16px 18px;display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;margin-bottom:24px}
+.cmd-code{font-family:var(--f-mono);font-size:12.5px;color:var(--ink);overflow-x:auto;white-space:pre-wrap;word-break:break-all}
+.site-footer{padding:40px 0 56px;background:var(--bg-elev);font-family:var(--f-sans);font-size:14px;color:var(--muted)}
+.footer-grid{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,.8fr) minmax(0,.8fr);gap:28px;padding-bottom:24px;border-bottom:1px solid var(--line)}
+@media(max-width:800px){.footer-grid{grid-template-columns:1fr}}
+.footer-links{list-style:none;padding:0;margin:8px 0 0;display:flex;flex-direction:column;gap:6px;font-family:var(--f-mono);font-size:12px}
+.footer-bottom{padding-top:18px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;font-family:var(--f-mono);font-size:11.5px}
+.toast{position:fixed;bottom:20px;right:20px;z-index:90;padding:10px 16px;background:var(--ink);color:var(--bg);font-family:var(--f-mono);font-size:12px;letter-spacing:.08em;border:1px solid var(--bronze);border-radius:2px;opacity:0;pointer-events:none;transform:translateY(8px);transition:opacity .2s,transform .2s}
+.toast.is-visible{opacity:1;transform:translateY(0)}
+</style>
+</head>
+<body id="top">
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand-link" href="#top" aria-label="Foundation0 Gravity Home">
+      <svg width="30" height="30" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+        <rect x="1.5" y="1.5" width="29" height="29" stroke="currentColor" stroke-width="1.25"/>
+        <line x1="16" y1="1.5" x2="16" y2="30.5" stroke="currentColor" stroke-width=".8" stroke-opacity=".45"/>
+        <line x1="1.5" y1="16" x2="30.5" y2="16" stroke="currentColor" stroke-width=".8" stroke-opacity=".45"/>
+        <circle cx="16" cy="16" r="8.5" stroke="currentColor" stroke-width="1.2"/>
+        <circle cx="16" cy="16" r="2.6" fill="var(--bronze)"/>
+        <circle cx="7.5" cy="7.5" r="2.1" stroke="var(--cyan)" stroke-width="1.1" fill="var(--bg)"/>
+        <circle cx="24.5" cy="7.5" r="2.1" stroke="var(--bronze)" stroke-width="1.1" fill="var(--bg)"/>
+        <circle cx="7.5" cy="24.5" r="2.1" stroke="var(--bronze)" stroke-width="1.1" fill="var(--bg)"/>
+        <circle cx="24.5" cy="24.5" r="2.1" stroke="var(--cyan)" stroke-width="1.1" fill="var(--bg)"/>
+      </svg>
+      <span class="brand-wordmark">FOUNDATION0 <span>// GRAVITY</span></span>
+    </a>
+    <nav class="top-nav" aria-label="Section navigation">
+      <a href="#spine">01 // Spine</a>
+      <a href="#instruments">02 // Instruments</a>
+      <a href="#waves">03 // Waves 01–12</a>
+      <a href="#ledger">04 // Ledger (33)</a>
+      <a href="#verify">05 // Verify</a>
+    </nav>
+    <div class="header-utils">
+      <button type="button" id="btn-motion" class="util-btn" aria-pressed="true">~ Motion: On</button>
+      <button type="button" id="btn-theme" class="util-btn">* Theme: Light</button>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="hero-section">
+    <div class="container">
+      <div class="hero-grid">
+        <div>
+          <div class="eyebrow-pill"><span class="dot dot-bronze"></span><span class="dot dot-cyan"></span><span>Biological + Digital Intelligence, On The Record · Waves 01–12</span></div>
+          <h1 class="hero-title">Gravity &amp; the Two-Branch Condensate</h1>
+          <p class="hero-subtitle">Reproducible audits from Cosmic-Dawn quasar collapse to galactic MOND phonons and intracluster dust.</p>
+          <p class="hero-lede">An open, byte-verified computational record (<span class="code-inline">37/37 SHA256SUMS</span>, zero-dependency Python 3 solvers, and stock Lean 4 arithmetic proofs) investigating how a shift-symmetric relativistic condensate unifies galactic rotation curves, <span class="code-inline">1 Mpc</span> weak lensing, cluster cores, and <span class="code-inline">z = 6.08</span> black hole assembly—audited at <span class="code-inline">0311496</span> to strictly separate computed identities from empirical fits and open conjectures.</p>
+          <div class="cta-row">
+            <a class="btn-primary" href="#instruments">Explore Instruments -&gt;</a>
+            <a class="btn-secondary" href="#ledger">Open 33-Claim Ledger</a>
+            <a class="btn-secondary" href="https://github.com/Foundation-0/gravity" target="_blank" rel="noopener noreferrer">GitHub Repo</a>
+          </div>
+          <div class="stat-grid">
+            <div class="stat-cell"><div class="mono-label">Audited Scope</div><div class="stat-num">33 Claims / 12 Waves</div><div class="stat-desc">37 SHA-256 verified files &amp; 6 stock Lean 4 modules (zero unearned PROVEN tags).</div></div>
+            <div class="stat-cell"><div class="mono-label">Observational Confrontation</div><div class="stat-num">129,027 + 126</div><div class="stat-desc">KiDS-1000 isolated galaxy lenses (1 Mpc) + 126 SPARC, X-ray &amp; WL groups/clusters.</div></div>
+            <div class="stat-cell"><div class="mono-label">Zero-Param Collapse Dispersion</div><div class="stat-num">185.59 km/s</div><div class="stat-desc">Planck-2018 z=0 Press-Schechter scale: χ²/dof = 1.004 (k=0, ΔBIC = −10.01 vs Wave 7).</div></div>
+            <div class="stat-cell"><div class="mono-label">Cosmic-Dawn Inversion (z = 6.08)</div><div class="stat-num">99.997% → 0%</div><div class="stat-desc">σ*(6.08) = 0.97 km/s traps condensate at Cosmic Dawn (M* = 8.39×10⁴ M_sun) before shocks.</div></div>
+          </div>
+        </div>
+
+        <div class="radiant-panel">
+          <div class="panel-bar">
+            <span class="mono-label" style="color:var(--ink)">THE RADIANT // SCALE &amp; EPOCH ASTROLABE</span>
+            <span id="radiant-epoch-badge" class="badge badge-computed">z = 0.0 · σ* = 185.59 km/s</span>
+          </div>
+          <div class="radiant-canvas-wrap"><canvas id="radiant-canvas" aria-label="Interactive polar chart of all 33 gravity claims"></canvas></div>
+          <div class="radiant-controls">
+            <button type="button" id="btn-radiant-step" class="util-btn">Cycle Epoch</button>
+            <label for="radiant-epoch" class="mono-label">Epoch:</label>
+            <input id="radiant-epoch" class="radiant-slider" type="range" min="0" max="4" step="1" value="3">
+          </div>
+          <div class="radiant-inspector" id="radiant-inspector">
+            <div class="inspector-top"><strong id="insp-id" style="font-family:var(--f-mono);color:var(--bronze)">C-26 // W10</strong><span id="insp-badge" class="badge badge-computed">COMPUTED &amp; CONJECTURE</span></div>
+            <div id="insp-title" style="font-weight:600;color:var(--ink);margin-bottom:4px">Zero-Parameter Planck-2018 Nonlinear Collapse Scale σ*(z)</div>
+            <div id="insp-summary" style="color:var(--ink-2);font-size:13.5px;margin-bottom:8px">Planck-2018 linear P(k) at δ_c = 1.686 grows from 0.97 km/s (z=6.08) to 185.59 km/s today, achieving χ² = 60.26 / 60 dof (k = 0).</div>
+            <button type="button" id="btn-insp-jump" class="util-btn">Inspect in Ledger -&gt;</button>
+          </div>
+        </div>
+      </div>
+    </div>
   </section>
 
   <section id="spine" class="section-block">

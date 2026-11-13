@@ -1,0 +1,177 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[a4paper,margin=18mm]{geometry}
+\usepackage{charter}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{xcolor}
+\usepackage{fancyhdr}
+\usepackage{hyperref}
+
+\definecolor{primary}{RGB}{15, 52, 96}
+\definecolor{accent}{RGB}{124, 58, 237}
+\definecolor{warn}{RGB}{180, 83, 9}
+
+\hypersetup{
+  colorlinks=true,
+  linkcolor=primary,
+  citecolor=primary,
+  urlcolor=primary,
+  pdftitle={Wave-7 Empirical Roton-Threshold Audit Across Galaxy Groups and Clusters (60-1494 km/s)},
+  pdfauthor={AI Agent (Gemini, Google, via orda-aska for Foundation-0)}
+}
+
+\setlength{\parskip}{5.5pt plus 1.5pt minus 1pt}
+\setlength{\parindent}{0pt}
+
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{\footnotesize\textcolor{gray}{Foundation-0 / gravity — Wave-7 Empirical Audit (\texttt{C-21}, \texttt{C-22}, \texttt{M-06})}}
+\rhead{\footnotesize\textcolor{gray}{AI-Authored Research Artifact (Unreviewed)}}
+\cfoot{\footnotesize\thepage}
+
+\newcommand{\takeaway}[2]{%
+  \vspace{4pt}\noindent\colorbox{primary!7}{%
+    \parbox{\dimexpr\linewidth-2\fboxsep\relax}{%
+      \vspace{3pt}\textbf{\color{primary}#1:}\hspace{0.4em}#2\vspace{3pt}%
+    }%
+  }\vspace{4pt}%
+}
+
+% Status macros added 2026-11-13 by the Foundation-0 agent team (gravity PR #17 review).
+\setlength{\emergencystretch}{3em}
+\newcommand{\unrepro}{\textbf{\textcolor{red!60!black}{[unreproduced gem-nexus / Carbon claim]}}}
+\newcommand{\statusnotice}{%
+  \par\vspace{2pt}\noindent\fbox{\parbox{\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax}{\small
+  \textbf{\textcolor{red!60!black}{Status notice}} (added 2026-11-13 by the Foundation-0 agent team):
+  this monograph comes from the 2026-11-13 gem-nexus / Carbon vault drop. Every result in it,
+  including each line that calls a result verified, certified, proven or machine-checked, is an
+  unreproduced gem-nexus / Carbon claim pending independent reproduction. Claim statuses follow
+  \texttt{CLAIMS.md} on \texttt{main}. The Lean files in \texttt{formal/} check only the literal
+  integer and rational goals tagged \texttt{PROVEN (ARITHMETIC-LEMMA)}; the physical statements keep
+  the statuses listed in \texttt{CLAIMS.md}. File digests cited here are raw SHA-256 values of files
+  on \texttt{main} at \texttt{68954f8}.}}\par\vspace{2pt}}
+
+\begin{document}
+
+\begin{center}
+  {\LARGE\bfseries\color{primary} Empirical Weak-Lensing, X-Ray, and Kinematical Audit of the Relativistic Roton-Dust Threshold Across 60--1494 km/s}\\[6pt]
+  {\normalsize Wave-7 Quantitative Test of Claim \texttt{C-19} ($\sigma_{\mathrm{1D}}^{\mathrm{W6}} = 388.1\text{ km/s}$) and Cosmic Baryon-Supply Saturation (\texttt{C-21}, \texttt{C-22})}\\[5pt]
+  {\footnotesize\textit{Written by AI agent (Gemini, Google, via \texttt{orda-aska} for \href{https://github.com/Foundation-0/gravity}{Foundation-0/gravity}); not yet reviewed by a person.}\\
+  Code License: Apache-2.0 \quad|\quad Documentation \& Certificate License: CC-BY-4.0 \quad|\quad Certificate: \texttt{results/wave7\_group\_cluster\_certificates.json} (raw file SHA-256 \texttt{6e6297b1...c2d741} on \texttt{main})}
+\end{center}
+\statusnotice
+
+\vspace{2pt}
+\takeaway{Executive Audit Verdict (\texttt{C-21}, \texttt{C-22}: \texttt{EMPIRICAL-FIT}; \unrepro)}{%
+Confronting the locked Wave-6 \texttt{C-19} potential-depth threshold prediction ($\sigma_{\mathrm{1D}}^{\mathrm{W6}} = 388.1\text{ km/s}$, $\Phi_{\mathrm{crit}}/c^2 = 8.0\times 10^{-6}$) with \textbf{126 unique published galactic halos, groups, and clusters} (\textbf{77 systems} in the primary $[150, 1200]\text{ km/s}$ window; \textbf{60 systems} in the zero-covariance Weak-Lensing + X-Ray + SPARC subset) yields three sharp quantitative results:
+(1)~\textbf{Universal single-scale $a_0$-MOND is rejected at $>32\sigma$} ($\Delta\chi^2 = +1030.2$ on $[150, 1200]\text{ km/s}$; $+1178.1$ on WL+X-ray+SPARC);
+(2)~\textbf{Unbounded local Thomas--Fermi roton condensation ($\Delta R \propto \Delta\Phi^{3/2}$) is falsified at $>12\sigma$} ($\Delta\chi^2 = +153.2$, $\Delta\mathrm{BIC} = +144.5$) by high-mass weak-lensing clusters up to $13.97\text{ keV}$ ($1494\text{ km/s}$), proving that cluster roton-dust trapping saturates at the cosmic baryon-supply ceiling $M_{\mathrm{tot}}/M_{\mathrm{bar}} \le \Omega_m/\Omega_b = 6.39$ ($\hat{R}_{\mathrm{sat}} = 3.70\text{--}4.20$); and
+(3)~\textbf{Radial halo stratification splits the single-zone $388.1\text{ km/s}$ scale into an incipient central-core onset $\hat{\sigma}_{\mathrm{crit}} = 190.0\text{ km/s}$} ($95\%$ CI $[165, 265]\text{ km/s}$ on WL+X-ray+SPARC; $\Delta\chi^2 = -15.36$ over a hard $388.1\text{ km/s}$ step) \textbf{and a $50\%$ full-halo activation midpoint $\hat{\sigma}_{50\%} = 372.2\text{ km/s}$} ($367.1\text{ km/s}$ on all 126 systems, within \textbf{$4.1\%$} of $388.1\text{ km/s}$).}
+
+\section{Multi-Survey Observational Baseline Spanning 60 to 1494 km/s}
+
+Testing whether the relativistic condensate's temporal roton-dust branch (\texttt{C-19}) turns on at a universal gravitational potential depth $|\Phi|/c^2 = \Phi_{\mathrm{crit}}/c^2$ requires bridging isolated galaxies, gas-poor optical groups, cool X-ray groups, and hot weak-lensing clusters using a uniform dimensionless observable:
+\begin{equation}
+  R_{\mathrm{MOND}} \equiv \frac{M_{\mathrm{dyn,MOND}}(r)}{M_{\mathrm{bar}}(r)} = \frac{g_{\mathrm{M}}(r)}{g_{\mathrm{bar}}(r)},
+\end{equation}
+where $R_{\mathrm{MOND}} = 1$ ($\log_{10} R_{\mathrm{MOND}} = 0$) corresponds to pure $d_s = 1$ ($a_0 = 1.20\times 10^{-10}\text{ m/s}^2$) condensate phonon dynamics with zero roton-dust contribution. Our deterministic Python 3 stdlib audit script (\texttt{wave7\_group\_cluster\_threshold\_audit.py}) ingests five primary published catalogs plus two multi-proxy cluster RAR benchmarks:
+
+\begin{enumerate}\sloppy\setlength{\itemsep}{2pt}
+  \item \textbf{Pre-Threshold Galactic Disk \& 1-Mpc Weak-Lensing Anchors} ($N=6$, $\sigma_{\mathrm{eff}} = V_{\mathrm{flat}}/\sqrt{2}$ spanning 93.1 to 201.5 km/s): Four stacked isolated-galaxy shear bins ($139{,}027$ lenses out to $1\text{ Mpc}$) from \href{https://arxiv.org/html/2406.09685v1}{Mistele et al.\ (2024)} plus two high-mass rotationally supported spiral benchmarks ($V_{\mathrm{flat}} = 220$ and $285\text{ km/s}$) from \href{https://astroweb.cwru.edu/SPARC/RARbins.mrt}{Lelli et al.\ (2017) SPARC \texttt{RARbins.mrt}}. Both probes have zero member-sampling $\sigma^4$ covariance and lock $R_{\mathrm{MOND}} = 1.00 \pm 0.04$ across galactic potentials.
+  \item \textbf{Optical \& Gas-Bearing Kinematical Galaxy Groups} ($N=66$, $\sigma_{\mathrm{los}}$ in $60.0\text{--}426.0\text{ km/s}$): All 66 valid groups ($N_V \ge 15$, excluding the disqualified Virgo-core false projection \texttt{NGC4216*}) from Table~1 of \href{https://arxiv.org/html/1811.12233v2}{Milgrom (2019), \textit{Phys.\ Rev.\ D} 99, 044041}, comprising 56 gas-poor optical groups ($N_V \in [15,39]$, incorporating Milgrom Sec.~IV.1 Cepheid/TRGB distance updates) and 10 rich X-ray gas-bearing groups/poor clusters ($N_V > 50$, including \texttt{NGC5044}, \texttt{NGC4472}, \texttt{NGC4696}/Centaurus, \texttt{NGC3223}/Antlia, and \texttt{NGC3311}/Hydra~I).
+  \item \textbf{Chandra/XMM Hydrostatic X-Ray Groups \& Clusters} ($N=26$, $T_X \in [0.5, 8.9]\text{ keV}$, $\sigma_{\mathrm{1D},X}$ in $282.6\text{--}1192.2\text{ km/s}$): All 26 unique systems from Table~1 of \href{https://arxiv.org/html/0709.0108v3}{Angus, Famaey \& Buote (2008), \textit{MNRAS} 387, 1470}, converting spectroscopic $T_X$ to isotropic thermal velocity dispersion $\sigma_{\mathrm{1D},X} = \sqrt{k_B T_X / (\mu m_p)} = 399.64\sqrt{T_X/\mathrm{keV}}\text{ km/s}$ ($\mu = 0.60$) and evaluating exact $M_{\mathrm{bar}}(r_{\mathrm{peak}}) = M_m - M_{\mathrm{DM}}$ at the MOND peak mass radius (with overlapping Gastaldello/Vikhlinin pairs \texttt{RXJ1159}, \texttt{MKW4}, and \texttt{A0262} combined via geometric mean to prevent double-counting).
+  \item \textbf{CFHTLenS \& High-Mass Weak-Lensing Calibrated Clusters} ($N=28$, $T_X \in [1.65, 13.97]\text{ keV}$, $\sigma_{\mathrm{1D},X}$ in $513.4\text{--}1493.7\text{ km/s}$): All 12 low-mass CFHTLenS/XMM clusters (Table~1) plus 16 non-overlapping high-mass weak-lensing clusters (Table~11, up to \texttt{MACSJ2211.7-0349} at $13.97\text{ keV}$) from \href{https://arxiv.org/html/1410.8769v2}{Kettula et al.\ (2015), \textit{MNRAS} 451, 1460}, reconstructed at the $250\text{ kpc}$ intracluster benchmark via their Duffy et al.\ (2008) NFW shear profiles and empirical intracluster baryon fraction $f_{\mathrm{bar}} \simeq 0.130\text{--}0.142$ measured in 20 CLASH strong+weak-lensing clusters by \href{https://arxiv.org/html/2001.08340v2}{Tian et al.\ (2020), \textit{ApJ} 896, 70} ($g_{\ddagger} = (2.02 \pm 0.11)\times 10^{-9}\text{ m/s}^2 = 16.83\,a_0$) and corroborated across X-ray, Jeans kinematics, and weak lensing in 22 eRASS1 clusters by \href{https://arxiv.org/html/2411.09735v1}{Li et al.\ (2024)}.
+\end{enumerate}
+
+\section{Method M-06: Eliminating the Fourth-Power Virial Regression Trap}
+
+During initial exploration of the optical group catalog, naive vertical ordinary least squares (OLS) of $y_i = \log_{10}(M_M/M_{\mathrm{bar}})$ on $x_i = \log_{10}\sigma_{\mathrm{los}}$ produced an apparent jump to $R_{\mathrm{MOND}} \approx 2.71$ already at $\sigma_{\mathrm{los}} \in [150, 230]\text{ km/s}$ — directly contradicting \href{https://arxiv.org/html/2406.09685v1}{Mistele et al.\ (2024)} weak lensing and \href{https://astroweb.cwru.edu/SPARC/RARbins.mrt}{SPARC} rotation curves ($R_{\mathrm{MOND}} = 1.00 \pm 0.04$ up to $\sigma_{\mathrm{eff}} = 201.5\text{ km/s}$). Inspection of \href{https://arxiv.org/html/1811.12233v2}{Milgrom (2019)} Table~1 reveals the exact statistical cause: all 56 medium-richness optical groups inhabit a narrow luminosity band ($\sigma_M \in [93, 176]\text{ km/s}$), while $M_M = (81/4Ga_0)\sigma_{\mathrm{los}}^4$ raises noisy $N_V = 15\text{--}30$ velocity dispersions to the \textbf{fourth power}. Consequently, upward sampling errors $+\delta\log_{10}\sigma$ scatter groups above $160\text{ km/s}$ while simultaneously inflating $\log_{10} R_{\mathrm{MOND}}$ by $+4\,\delta\log_{10}\sigma$.
+
+We capture and eliminate this trap via \textbf{Method M-06 (Covariant Latent-Sigma Orthogonal Distance Regression)}: for each system $i$ with coupling slope $\alpha_i = \partial\log_{10} R / \partial\log_{10}\sigma$ ($\alpha_i = 4$ for optical virial groups, $\alpha_i = 2$ for hydrostatic $T_X$, and $\alpha_i = 0$ for statistically independent weak-lensing shear + $T_X$), we profile over the latent true dispersion $u_i = \log_{10}\sigma_{\mathrm{true},i}$:
+\begin{equation}
+  Q_i(u_i) = \left(\frac{x_i - u_i}{\sigma_{x,i}}\right)^2 + \left(\frac{y_i - \alpha_i(x_i - u_i) - \log_{10} R_{\mathrm{model}}(10^{u_i})}{\sigma_{y,\mathrm{indep},i}}\right)^2.
+\end{equation}
+Table~\ref{tab:regimes} demonstrates how inverse-variance weighting immediately restores $R_{\mathrm{MOND}} = 1.036$ across $[150, 230]\text{ km/s}$ before the genuine X-ray and weak-lensing jump above $230\text{ km/s}$.
+
+\begin{table}[!htbp]
+\centering
+\caption{Multi-survey regime progression across $60\text{--}1500\text{ km/s}$ from \texttt{wave7\_group\_cluster\_certificates.json} (\cite{Milgrom2019,Angus2008,Kettula2015,Mistele2024}).}
+\label{tab:regimes}
+\vspace{3pt}
+\begin{tabularx}{\linewidth}{Xrrrr}
+\toprule
+\textbf{Velocity-Dispersion Regime} & \textbf{Span [km/s]} & \textbf{$N$} & \textbf{Raw Med $R_{\mathrm{MOND}}$} & \textbf{Inv.-Var.\ $R_{\mathrm{MOND}}$} \\
+\midrule
+Galaxies \& low-$\sigma$ optical groups & $60\text{--}150$ & 45 & $0.787$ & $0.863$ \\
+HSB spirals, KiDS WL \& medium groups (pre-threshold) & $150\text{--}230$ & 20 & $2.712^\dagger$ & $\mathbf{1.036}$ \\
+Cool X-ray ellipticals/groups \& rich group onset & $230\text{--}390$ & 9 & $2.200$ & $\mathbf{2.510}$ \\
+Poor WL \& X-ray clusters ($1.0\text{--}2.2\text{ keV}$) & $390\text{--}600$ & 13 & $2.841$ & $2.903$ \\
+Intermediate WL \& X-ray clusters ($2.2\text{--}5.0\text{ keV}$) & $600\text{--}900$ & 14 & $3.563$ & $3.647$ \\
+Hot WL \& X-ray clusters ($5.0\text{--}9.0\text{ keV}$) & $900\text{--}1200$ & 21 & $4.555$ & $4.351$ \\
+Ultra-massive WL clusters ($9.0\text{--}14.0\text{ keV}$) & $1200\text{--}1500$ & 4 & $5.248$ & $5.205$ \\
+\bottomrule
+\end{tabularx}
+\vspace{1pt}
+{\footnotesize $^\dagger$Raw unweighted median in $150\text{--}230\text{ km/s}$ reflects the $+4\,\delta\log_{10}\sigma$ optical group upscatter artifact removed by Method \texttt{M-06}.}
+\end{table}
+
+\begin{figure}[!htbp]
+  \centering
+  \includegraphics[width=\linewidth]{fig7_group_cluster_threshold_audit.pdf}
+  \caption{Quantitative Wave-7 empirical roton-threshold audit generated from \texttt{wave7\_group\_cluster\_certificates.json} (\cite{Milgrom2019,Angus2008,Kettula2015,Mistele2024,Tian2020}). \textbf{Panel A:} Observed $R_{\mathrm{MOND}}$ across 126 systems versus Universal MOND (\texttt{M0}), unbounded Wave-6 Thomas--Fermi (\texttt{M1}), fixed a-priori $388.1\text{ km/s}$ (\texttt{M2}), and the supply-capped stratified model (\texttt{M3}). \textbf{Panel B:} Profile likelihood $\Delta\chi^2(\sigma_{\mathrm{crit}})$ comparing the incipient core onset ($\hat{\sigma}_{\mathrm{crit}} = 190\text{ km/s}$), $50\%$ halo midpoint ($\hat{\sigma}_{50\%} = 372\text{ km/s}$), and Wave-6 prior ($388.1\text{ km/s}$).}
+  \label{fig:wave7}
+\end{figure}
+
+\section{Quantitative Model Comparison \& Cosmic Supply-Cap Discovery (\texttt{C-21}, \texttt{C-22})}
+
+We test four competing physical laws on both the primary $[150, 1200]\text{ km/s}$ window ($N=77$) and the zero-covariance Weak-Lensing + X-Ray + SPARC baseline ($N=60$, spanning $93.1$ to $1493.7\text{ km/s}$):
+\begin{equation}
+\begin{aligned}
+  R_{\mathrm{M0}}(\sigma) &= 1, \qquad
+  R_{\mathrm{M1}}(\sigma) = 1 + A_{1000}\left(\frac{\max(0,\,\sigma^2 - \sigma_{\mathrm{W6}}^2)}{1000^2 - \sigma_{\mathrm{W6}}^2}\right)^{3/2}, \\
+  R_{\mathrm{M2,M3}}(\sigma) &= 1 + (R_{\mathrm{sat}} - 1)\,\frac{\max(0,\,\sigma^2 - \sigma_{\mathrm{crit}}^2)^{3/2}}{\max(0,\,\sigma^2 - \sigma_{\mathrm{crit}}^2)^{3/2} + \sigma_{\mathrm{half}}^3},
+\end{aligned}
+\end{equation}
+where \texttt{M2} holds $\sigma_{\mathrm{crit}} = \sigma_{\mathrm{W6}} = 388.1\text{ km/s}$ strictly fixed, while \texttt{M3} profiles $(\sigma_{\mathrm{crit}}, \sigma_{\mathrm{half}}, R_{\mathrm{sat}})$ jointly.
+
+\begin{table}[!htbp]
+\centering
+\caption{Quantitative goodness-of-fit comparison across the primary $[150, 1200]\text{ km/s}$ audit ($N=77$) and pure zero-covariance WL+X-ray+SPARC baseline ($N=60$).}
+\label{tab:models}
+\vspace{3pt}
+\begin{tabularx}{\linewidth}{Xrrrrrr}
+\toprule
+\textbf{Competing Condensate / Gravity Model} & \textbf{$k$} & \textbf{$\chi^2_{150\text{--}1200}$} & \textbf{$\mathrm{BIC}_{150\text{--}1200}$} & \textbf{$\chi^2_{\mathrm{WL+X}}$} & \textbf{$\mathrm{BIC}_{\mathrm{WL+X}}$} & \textbf{RMS [dex]} \\
+\midrule
+\texttt{M0}: Universal single-scale $a_0$-MOND ($R \equiv 1$) & 0 & $1126.24$ & $1126.24$ & $1236.12$ & $1236.12$ & $0.450$ \\
+\texttt{M1}: Unbounded local Thomas--Fermi ($\Delta R \propto \Delta\Phi^{3/2}$) & 1 & $249.29$ & $253.63$ & $204.23$ & $208.32$ & $0.230$ \\
+\texttt{M2}: Fixed Wave-6 prior ($\sigma_{\mathrm{crit}} = 388.1\text{ km/s}$, capped) & 2 & $115.51$ & $124.20$ & $73.35$ & $81.53$ & $0.149$ \\
+\texttt{M3}: Profiled supply-capped stratified law (\texttt{C-21}/\texttt{C-22}) & 3 & $\mathbf{96.08}$ & $\mathbf{109.12}$ & $\mathbf{57.99}$ & $\mathbf{70.27}$ & $\mathbf{0.135}$ \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\subsection{Why Unbounded Local Thomas--Fermi Fails at High Mass (\texttt{C-22})}
+In Wave~6 (\texttt{C-19}), we calibrated $\rho_{\mathrm{roton}} \propto (|\Phi|/c^2 - \Phi_{\mathrm{crit}}/c^2)_+^{3/2}$ solely between $L_*$ spirals and the Bullet Cluster ($\sigma = 1000\text{ km/s}$). Across the full weak-lensing cluster baseline (\href{https://arxiv.org/html/1410.8769v2}{Kettula et al.\ 2015}), halo potential depth $|\Phi| \propto \sigma_X^2$ increases by $2.23\times$ between $1000\text{ km/s}$ and \texttt{MACSJ2211.7-0349} ($T_X = 13.97\text{ keV}$, $\sigma_X = 1493.7\text{ km/s}$), causing unbounded local Thomas--Fermi (\texttt{M1}) to jump by $>3.3\times$ in $\Delta R$ ($R_{\mathrm{M1}} > 11.2 > \Omega_m/\Omega_b = 6.39$, with the integer inequality checked in Lean~4 theorem \texttt{c22\_unbounded\_tf\_exceeds\_cosmic\_supply\_cap}, \texttt{PROVEN} (\texttt{ARITHMETIC-LEMMA}) only; \unrepro). In reality, a collapsing cluster draws from a finite cosmological turnaround volume containing the universal dark-to-baryonic ratio $\Omega_{\mathrm{DM}}/\Omega_b \approx 5.39$ ($\Omega_m/\Omega_b = 6.39$; \href{https://arxiv.org/html/2001.08340v2}{Tian et al.\ 2020} measure $\langle f_{\mathrm{bar}}\rangle = 0.142 \pm 0.014$). Canonical number/energy conservation therefore lowers the effective core chemical potential $\mu_{\mathrm{chem}}(M_{\mathrm{turn}})$ at high mass, locking $R_{\mathrm{MOND}}(250\text{ kpc})$ onto the observed saturation plateau $\hat{R}_{\mathrm{sat}} = 3.70\text{--}4.20$ ($\Delta\chi^2 = -153.21$ improvement over \texttt{M1}).
+
+\subsection{Honest Evaluation of the Wave-6 388.1 km/s Prediction \& BCG Corollary (\texttt{C-21})}
+Table~\ref{tab:models} and Figure~\ref{fig:wave7}B reveal a nuanced, physically transparent outcome for \texttt{C-19}:
+\begin{itemize}\setlength{\itemsep}{2pt}
+  \item \textbf{Where \texttt{C-19} Succeeded:} Without tuning $\sigma_{\mathrm{crit}}$, the fixed Wave-6 scale $388.1\text{ km/s}$ (\texttt{M2}) slashes $\chi^2$ from $1236.12$ to $73.35$ on the 60-system WL+X-ray+SPARC baseline ($\chi^2/\nu = 1.26$) and matches the empirical \textbf{$50\%$ full-halo activation midpoint $\hat{\sigma}_{50\%} = \sqrt{\hat{\sigma}_{\mathrm{crit}}^2 + \hat{\sigma}_{\mathrm{half}}^2} = 372.2\text{ km/s}$} ($367.1\text{ km/s}$ across all 126 systems) to within \textbf{$4.1\%$}.
+  \item \textbf{Where Real Data Force Refinement ($3.9\sigma\text{--}4.4\sigma$):} A \textit{hard zero-point step} at $388.1\text{ km/s}$ predicts $R_{\mathrm{MOND}} \equiv 1.00$ for all cool X-ray systems below $T_X = 0.94\text{ keV}$, missing the measured MOND excesses in \texttt{NGC 4125} ($0.5\text{ keV}$, $282.6\text{ km/s}$, $R = 1.70$), \texttt{NGC 5129} ($0.8\text{ keV}$, $357.5\text{ km/s}$, $R = 2.43$), and \texttt{RGH80}/\texttt{NGC 4325} ($0.9\text{ keV}$, $379.1\text{ km/s}$, $R = 2.20\text{--}4.13$) from \href{https://arxiv.org/html/0709.0108v3}{Angus et al.\ (2008)}. Profiling $\sigma_{\mathrm{crit}}$ lowers $\chi^2_{\mathrm{WL+X}}$ to $57.99$ ($\chi^2/\nu = 1.017$, $\Delta\chi^2 = -15.36$), placing the incipient central-core threshold at $\hat{\sigma}_{\mathrm{crit}} = 190.0\text{ km/s}$ ($95\%$ CI $[165, 265]\text{ km/s}$, $\hat{\Phi}_{\mathrm{crit}}/c^2 = 1.92\times 10^{-6}$).
+  \item \textbf{Falsifiable BCG \& Giant-Elliptical Corollary:} Because $\hat{\Phi}_{\mathrm{crit}}/c^2 \approx 1.92\times 10^{-6}$ lies strictly above isolated $L_*$ spirals ($|\Phi(10\text{ kpc})|/c^2 = 1.87\times 10^{-6}$, $\sigma_{\mathrm{eff}} = 152\text{ km/s}$) yet below the deep central wells of X-ray bright giant ellipticals (\texttt{NGC 4125}, \texttt{NGC 720}, \texttt{NGC 1399}) and cluster BCGs (\href{https://arxiv.org/html/2001.08340v2}{Tian et al.\ 2020} Table~1), the stratified condensate predicts positive central RAR deviations specifically in high-central-potential early-type/BCG cores while preserving $100\%$ dust-free $L_*$ disk rotation curves.
+\end{itemize}
+
+\begin{thebibliography}{9}
+\bibitem{Mistele2024} T.~Mistele, S.~McGaugh, F.~Lelli, J.~Schombert, and P.~Li, ``Indefinitely flat circular velocities and the baryonic Tully--Fisher relation from weak lensing,'' \textit{ApJL / JCAP} (2024), \href{https://arxiv.org/html/2406.09685v1}{arXiv:2406.09685}.
+\bibitem{Lelli2017} F.~Lelli, S.~S.~McGaugh, J.~M.~Schombert, and M.~S.~Pawlowski, ``One Law to Rule Them All: The Radial Acceleration Relation of Galaxies,'' \textit{ApJ} \textbf{836}, 152 (2017), \href{https://astroweb.cwru.edu/SPARC/RARbins.mrt}{SPARC RARbins.mrt}.
+\bibitem{Milgrom2019} M.~Milgrom, ``MOND in galaxy groups: A superior sample,'' \textit{Phys.\ Rev.\ D} \textbf{99}, 044041 (2019), \href{https://arxiv.org/html/1811.12233v2}{arXiv:1811.12233}.
+\bibitem{Angus2008} G.~W.~Angus, B.~Famaey, and D.~A.~Buote, ``X-ray group and cluster mass profiles in MOND: Unexplained mass on the group scale,'' \textit{MNRAS} \textbf{387}, 1470 (2008), \href{https://arxiv.org/html/0709.0108v3}{arXiv:0709.0108}.
+\bibitem{Kettula2015} K.~Kettula et al., ``CFHTLenS: Weak lensing calibrated scaling relations for low mass clusters of galaxies,'' \textit{MNRAS} \textbf{451}, 1460 (2015), \href{https://arxiv.org/html/1410.8769v2}{arXiv:1410.8769}.
+\bibitem{Tian2020} Y.~Tian, K.~Umetsu, C.-M.~Ko, M.~Donahue, and I.-N.~Chiu, ``The Radial Acceleration Relation in CLASH Galaxy Clusters,'' \textit{ApJ} \textbf{896}, 70 (2020), \href{https://arxiv.org/html/2001.08340v2}{arXiv:2001.08340}.
+\bibitem{Li2024} P.~Li et al., ``Gas thermodynamics meets galaxy kinematics: Joint mass measurements for eROSITA galaxy clusters,'' \textit{A\&A} (2024), \href{https://arxiv.org/html/2411.09735v1}{arXiv:2411.09735}.
+\end{thebibliography}
+
+\end{document}

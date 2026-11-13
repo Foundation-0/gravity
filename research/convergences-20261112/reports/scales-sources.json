@@ -1,0 +1,368 @@
+{
+  "route": "scale_selection",
+  "author": "gpt-forge",
+  "requested_model": "gpt-6-astra",
+  "requested_reasoning_effort": "ultra",
+  "research_date": "2026-11-12",
+  "scope": "Primary-source-led exploration and modest reversible local probes; existing clones read-only.",
+  "sources": [
+    {
+      "id": "S01",
+      "title": "Navon et al. (2015), Critical Dynamics of Spontaneous Symmetry Breaking in a Homogeneous Bose Gas",
+      "url": "https://arxiv.org/pdf/1410.8487",
+      "classification": "established_experimental_result",
+      "verified_locator": "Equations 1-2; Fig. 4; arXiv PDF p. 6 reports b=0.35(4).",
+      "supports": "Measured coherence-length dependence on cooling rate supports Kibble-Zurek scaling in a homogeneous atomic Bose gas.",
+      "limits": "Not a test of cosmic defects or galactic dark matter. The exponent depends on universality class and dynamics.",
+      "checked_on": "2026-11-12"
+    },
+    {
+      "id": "S02",
+      "title": "Zurek (1985), Cosmological experiments in superfluid helium?",
+      "url": "https://doi.org/10.1038/317505a0",
+      "classification": "established_theoretical_bridge",
+      "verified_locator": "Original Nature letter abstract and proposed annular quench experiment.",
+      "supports": "An explicit laboratory-cosmology analogy for defect formation and finite domains during symmetry breaking.",
+      "limits": "The proposal is not observational confirmation of cosmological strings.",
+      "checked_on": "2026-11-12"
+    },
+    {
+      "id": "S03",
+      "title": "Wilson (1971), Renormalization Group and Critical Phenomena I",
+      "url": "https://doi.org/10.1103/PhysRevB.4.3174",
+      "classification": "established_theoretical_result",
+      "verified_locator": "Publisher abstract: fixed-point condition and Widom-Kadanoff scaling.",
+      "supports": "Critical scaling can arise from a fixed point of coarse-grained equations.",
+      "limits": "Does not show all systems with power laws share one universality class.",
+      "checked_on": "2026-11-12"
+    },
+    {
+      "id": "S04",
+      "title": "Hornberger et al. (2003), Collisional Decoherence Observed in Matter Wave Interferometry",
+      "url": "https://arxiv.org/pdf/quant-ph/0303093",
+      "classification": "established_experimental_result",
+      "verified_locator": "Equation 5; Figs. 2-3; discussion immediately above Eq. 5.",
+      "supports": "Fullerene interference visibility decays with increasing gas pressure in quantitative agreement with collisional decoherence.",
+      "limits": "Experiment is effectively complete localization per collision. Does not measure the small-separation pressure exponents used in the toy probe.",
+      "checked_on": "2026-11-12"
+    },
+    {
+      "id": "S05",
+      "title": "Abbott and Wise (1981), Dimension of a quantum-mechanical path",
+      "url": "https://www.slac.stanford.edu/pubs/slacpubs/2250/slac-pub-2427.pdf",
+      "classification": "established_model_result",
+      "verified_locator": "SLAC-PUB-2427 original preprint, Introduction and measurement construction. Published DOI 10.1119/1.12657.",
+      "supports": "Dimension two belongs to a specified nonrelativistic observed-path construction.",
+      "limits": "Does not demonstrate a relativistic return to smoothness below the reduced Compton wavelength. Direct DOI access failed; the institutional original was read.",
+      "checked_on": "2026-11-12"
+    },
+    {
+      "id": "S06",
+      "title": "Li et al. (2010), Measurement of the instantaneous velocity of a Brownian particle",
+      "url": "https://doi.org/10.1126/science.1189403",
+      "classification": "established_experimental_result",
+      "verified_locator": "Original-paper abstract and primary PDF at https://users.physics.ox.ac.uk/~Foot/Phynance/Raizen1BrownianM.pdf; first-page discussion of t << tau_p.",
+      "supports": "Measured short-time ballistic behavior of a trapped glass bead.",
+      "limits": "Does not imply an arbitrarily wide diffusive regime in that trapped system.",
+      "checked_on": "2026-11-12"
+    },
+    {
+      "id": "S07",
+      "title": "Kolmogorov (1941), The local structure of turbulence in incompressible viscous fluid for very large Reynolds numbers",
+      "url": "https://www.ams.jhu.edu/~eyink/Turbulence/classics/Kolmogorov41a.pdf",
+      "classification": "established_theoretical_framework",
+      "verified_locator": "Original paper in English translation, Proc. R. Soc. A 434, 9-13 (1991).",
+      "supports": "Ordinary-fluid inertial and viscous scales under local homogeneity and isotropy assumptions.",
+      "limits": "Dimensional scaling estimates do not establish exact scaling of every high-order moment, or apply unchanged to collisionless plasmas.",
+      "checked_on": "2026-11-12"
+    },
+    {
+      "id": "S08",
+      "title": "Federrath et al. (2021), The sonic scale of interstellar turbulence",
+      "url": "https://arxiv.org/html/2011.06238",
+      "classification": "conditional_numerical_model",
+      "verified_locator": "Equation 1; abstract; Methods sections on Mach number and thermodynamics. Journal DOI 10.1038/s41550-020-01282-z.",
+      "supports": "Resolved sonic crossover, different supersonic and subsonic exponents, a finite transition width and different coefficients for driving-scale and cloud-size conventions.",
+      "limits": "Simulation result under chosen gas physics. Does not establish one physical sonic length for all clouds.",
+      "checked_on": "2026-11-12"
+    },
+    {
+      "id": "S09",
+      "title": "Scrimgeour et al. (2012), WiggleZ transition to large-scale cosmic homogeneity",
+      "url": "https://arxiv.org/pdf/1205.6812",
+      "classification": "established_observational_result",
+      "verified_locator": "Abstract; sections 3.6, 5 and 7, especially threshold choice and bias dependence.",
+      "supports": "D2 within 1% of 3 at about 70-81 h^-1 Mpc in four redshift bins, with selection-function tests.",
+      "limits": "A smooth tolerance-defined transition, not a sharp universal radius. The larger 80-300 h^-1 Mpc range is an exclusion/test range.",
+      "checked_on": "2026-11-12"
+    },
+    {
+      "id": "S10",
+      "title": "Eisenstein and Hu (1998), Baryonic Features in the Matter Transfer Function",
+      "url": "https://arxiv.org/abs/astro-ph/9709112",
+      "classification": "established_model_approximation",
+      "verified_locator": "Primary manuscript https://background.uchicago.edu/~whu/transfer/9709112.pdf; physical-scale discussion and transfer-function fits.",
+      "supports": "Acoustic propagation, drag, damping and growth leave distinct scales in the matter spectrum.",
+      "limits": "Analytic transfer-function approximation, not exact Planck-specific Boltzmann evolution.",
+      "checked_on": "2026-11-12"
+    },
+    {
+      "id": "S11",
+      "title": "Press and Schechter (1974), Formation of Galaxies and Clusters of Galaxies by Self-Similar Gravitational Condensation",
+      "url": "https://adsabs.harvard.edu/pdf/1974ApJ...187..425P",
+      "classification": "established_theoretical_framework",
+      "verified_locator": "Section III and characteristic-mass discussion.",
+      "supports": "A characteristic mass can grow while a distribution retains an approximately self-similar form.",
+      "limits": "A statistical collapse scale does not by itself establish a local fluid temperature or velocity-dispersion floor.",
+      "checked_on": "2026-11-12"
+    },
+    {
+      "id": "S12",
+      "title": "Rees and Ostriker (1977), Cooling, dynamics and fragmentation of massive gas clouds",
+      "url": "https://doi.org/10.1093/mnras/179.4.541",
+      "classification": "established_theoretical_framework",
+      "verified_locator": "Original abstract and primary scan https://articles.adsabs.harvard.edu/pdf/1977MNRAS.179..541R .",
+      "supports": "Competing cooling and collapse times can help select galactic masses and radii.",
+      "limits": "Not a derivation of the repository-specific Delta=1000 Hubble-time free-free velocity.",
+      "checked_on": "2026-11-12"
+    },
+    {
+      "id": "S13",
+      "title": "Voit et al. (2015), Precipitation-Regulated Star Formation in Galaxies",
+      "url": "https://arxiv.org/pdf/1505.03592",
+      "classification": "conditional_astrophysical_model",
+      "verified_locator": "Abstract and model discussion of marginal precipitation.",
+      "supports": "Cooling and feedback offer a physical alternative source of galaxy scaling relations.",
+      "limits": "Does not uniquely establish the origin of a group transition or validate the dark-condensate scenario.",
+      "checked_on": "2026-11-12"
+    },
+    {
+      "id": "S14",
+      "title": "Milgrom (1983), A modification of Newtonian dynamics as a possible alternative to the hidden mass hypothesis",
+      "url": "https://doi.org/10.1086/161130",
+      "classification": "conditional_gravity_model",
+      "verified_locator": "Original manuscript https://adsabs.harvard.edu/pdf/1983ApJ...270..365M .",
+      "supports": "Proposes an acceleration-controlled dynamical crossover. r_M=sqrt(GM/a0) follows by equating Newtonian acceleration to the model scale.",
+      "limits": "The proposal and radius relation are not proof of a new force law or of cosmological evolution of a0.",
+      "checked_on": "2026-11-12"
+    },
+    {
+      "id": "S15",
+      "title": "McGaugh, Lelli and Schombert (2016), The Radial Acceleration Relation in Rotationally Supported Galaxies",
+      "url": "https://arxiv.org/pdf/1609.05917",
+      "classification": "established_empirical_relation",
+      "verified_locator": "Equation 4 and adjacent fit paragraph.",
+      "supports": "Observed baryonic and dynamical accelerations follow a tight relation in the stated sample and mass model.",
+      "limits": "The fitted acceleration scale has stellar-mass normalization systematics; an empirical relation does not alone determine the microscopic mechanism.",
+      "checked_on": "2026-11-12"
+    },
+    {
+      "id": "S16",
+      "title": "Baumann, Chia and Porto (2019), Probing ultralight bosons with binary black holes",
+      "url": "https://arxiv.org/pdf/1804.03208",
+      "classification": "conditional_field_model",
+      "verified_locator": "Equations 2.5-2.9, weak-coupling hydrogenic limit.",
+      "supports": "Same leading-order Coulomb-like wave equation gives rescaled hydrogenic levels and cloud radii, with alpha set by black-hole and boson masses.",
+      "limits": "Existence and abundance of the assumed bosons are not established. Approximation fails as neglected corrections become important.",
+      "checked_on": "2026-11-12"
+    },
+    {
+      "id": "S17",
+      "title": "Berezhiani and Khoury (2015), Theory of Dark Matter Superfluidity",
+      "url": "https://arxiv.org/abs/1507.01019",
+      "classification": "untested_physical_conjecture",
+      "verified_locator": "Original article abstract, Phys. Rev. D 92, 103510.",
+      "supports": "Proposes phase-dependent differences between galaxy and cluster behavior.",
+      "limits": "A proposed dark-matter theory, not evidence that actual halos undergo this transition. Included as route context, not adopted by the probe.",
+      "checked_on": "2026-11-12"
+    },
+    {
+      "id": "S18",
+      "title": "Seidel and Suen (1994), Formation of Solitonic Stars Through Gravitational Cooling",
+      "url": "https://arxiv.org/abs/gr-qc/9309015",
+      "classification": "conditional_numerical_model",
+      "verified_locator": "Original abstract and primary publisher text at https://harvest.aps.org/v2/journals/articles/10.1103/PhysRevLett.72.2516/fulltext .",
+      "supports": "A scalar-field model can export energy through field ejection/radiation without electromagnetic cooling.",
+      "limits": "Counterexample to a generic no-photons/no-cooling inference. Not an action-specific result for AeST or the repository dark-WHIM ansatz.",
+      "checked_on": "2026-11-12"
+    },
+    {
+      "id": "S19",
+      "title": "Levkov, Panin and Tkachev (2018), Gravitational Bose-Einstein condensation in the kinetic regime",
+      "url": "https://arxiv.org/pdf/1804.05857",
+      "classification": "conditional_numerical_and_kinetic_model",
+      "verified_locator": "Equations 1, 2 and 4; explicit distinction from initially coherent configurations.",
+      "supports": "Gravitationally interacting highly occupied bosons can condense on a finite relaxation time under stated kinetic conditions.",
+      "limits": "Does not establish dark matter identity or condensation in every halo; not valid outside the kinetic scale hierarchy.",
+      "checked_on": "2026-11-12"
+    },
+    {
+      "id": "S20",
+      "title": "Semikoz and Tkachev (1997), Condensation of bosons in the kinetic regime",
+      "url": "https://doi.org/10.1103/PhysRevD.55.489",
+      "classification": "conditional_kinetic_model",
+      "verified_locator": "Publisher abstract.",
+      "supports": "Self-similar kinetic evolution during condensation provides a direct mathematical connection to turbulence.",
+      "limits": "No derivation in this pass for the specific gravitational or AeST field in the repositories.",
+      "checked_on": "2026-11-12"
+    },
+    {
+      "id": "S21",
+      "title": "Dmitriev et al. (2025), Self-similar kinetics for gravitational Bose-Einstein condensation",
+      "url": "https://arxiv.org/html/2509.02694v1",
+      "classification": "conditional_preprint_model",
+      "verified_locator": "Equations 1-2; introduction assumptions; sections II, IV and VI.",
+      "supports": "A simplified gravitational kinetic equation supports rescaling distributions with cutoffs and source-dependent or drifting exponents.",
+      "limits": "Mean spatial inhomogeneity is neglected and scattering uses an approximate Landau integral. D is a scaling parameter, not spatial fractal dimension. Only this preprint version was assessed.",
+      "checked_on": "2026-11-12"
+    },
+    {
+      "id": "S22",
+      "title": "Riedel and Zurek (2010), Quantum Darwinism in an Everyday Environment",
+      "url": "https://arxiv.org/html/1001.3419v2",
+      "classification": "conditional_quantum_model",
+      "verified_locator": "Equations 17-18 and isotropic-illumination discussion; Fig. 2b.",
+      "supports": "Environmental decoherence and redundant accessible records are separate quantities.",
+      "limits": "Idealized illumination and scattering assumptions, not a claim that real environments are perfectly isotropic.",
+      "checked_on": "2026-11-12"
+    }
+  ],
+  "repository_sources": [
+    {
+      "id": "R01",
+      "repository": "Foundation-0/gravity",
+      "path": "https://github.com/Foundation-0/gravity/blob/d8c7544e89388720fc1c13de816ddb7dd03d2096/wave10_covariant_jeans_unification.py",
+      "commit": "d8c7544e89388720fc1c13de816ddb7dd03d2096",
+      "locator": "Lines 111-197 and 264-311",
+      "use": "Reproduced collapse baseline and scanned explicit conventions and physical inputs.",
+      "classification": "repository_claim_not_independent_physical_evidence"
+    },
+    {
+      "id": "R02",
+      "repository": "Foundation-0/gravity",
+      "path": "https://github.com/Foundation-0/gravity/blob/d8c7544e89388720fc1c13de816ddb7dd03d2096/RESEARCH_NOTEBOOK_AND_REASONING.md",
+      "commit": "d8c7544e89388720fc1c13de816ddb7dd03d2096",
+      "locator": "Thread C",
+      "use": "Identified unsupported general no-electromagnetic-cooling inference and missing local transport derivation.",
+      "classification": "repository_claim_not_independent_physical_evidence"
+    },
+    {
+      "id": "R03",
+      "repository": "Foundation-0/fractals",
+      "path": "https://github.com/Foundation-0/fractals/blob/9669f5579635c3543f145e8eca86133069ad6f27/critical/model.js",
+      "commit": "9669f5579635c3543f145e8eca86133069ad6f27",
+      "locator": "Lines 6-8, 110-126 and 157-168",
+      "use": "Wolff updates are an equilibrium sampler, not a stated physical quench dynamics.",
+      "classification": "repository_claim_not_independent_physical_evidence"
+    },
+    {
+      "id": "R04",
+      "repository": "Foundation-0/fractals",
+      "path": "https://github.com/Foundation-0/fractals/blob/9669f5579635c3543f145e8eca86133069ad6f27/witness-map/model.js",
+      "commit": "9669f5579635c3543f145e8eca86133069ad6f27",
+      "locator": "Lines 109-111",
+      "use": "W=Gamma*m*dx^2/hbar definition used for the operational-threshold comparison.",
+      "classification": "repository_claim_not_independent_physical_evidence"
+    },
+    {
+      "id": "R05",
+      "repository": "Foundation-0/fractals",
+      "path": "https://github.com/Foundation-0/fractals/blob/9669f5579635c3543f145e8eca86133069ad6f27/quantum-paths/README.md",
+      "commit": "9669f5579635c3543f145e8eca86133069ad6f27",
+      "locator": "Sections observed path, Compton endpoint and repeated records",
+      "use": "Protocol and approximation boundaries, not an independently rerun measurement simulation.",
+      "classification": "repository_claim_not_independent_physical_evidence"
+    },
+    {
+      "id": "R06",
+      "repository": "Foundation-0/physics0",
+      "path": "https://github.com/Foundation-0/physics0/blob/76410c3deebf925f6c51017867dbcef29ff54e8b/AREAS.md",
+      "commit": "76410c3deebf925f6c51017867dbcef29ff54e8b",
+      "locator": "Area 5",
+      "use": "Incentre-lattice statistical physics bridge, without checking unpublished project novelty claims.",
+      "classification": "repository_claim_not_independent_physical_evidence"
+    },
+    {
+      "id": "R07",
+      "repository": "Foundation-0/astr0",
+      "path": "https://github.com/Foundation-0/astr0/blob/607a11eaa83b2ec7539e0986046c3230406d2b04/AREAS.md",
+      "commit": "607a11eaa83b2ec7539e0986046c3230406d2b04",
+      "locator": "Areas 1 and 3",
+      "use": "Cadence and observation-window scale selection lead, without adopting current release dates or candidate claims.",
+      "classification": "repository_claim_not_independent_physical_evidence"
+    }
+  ],
+  "own_claims": [
+    {
+      "id": "I01",
+      "classification": "own_inference",
+      "claim": "Cutoff response to an independent control is a stronger discriminator than equality of a scale at one setting.",
+      "basis": [
+        "S01",
+        "S04",
+        "S08",
+        "S09"
+      ],
+      "limit": "A research strategy, not a unifying theorem."
+    },
+    {
+      "id": "I02",
+      "classification": "own_conditional_calculation",
+      "claim": "For Gamma=Lambda*dx^2, W=1 gives Lambda^-1/4 but fixed-time visibility gives Lambda^-1/2.",
+      "basis": [
+        "R04"
+      ],
+      "artifact": "probes/scales/results.json",
+      "limit": "Small-separation Markovian toy at fixed mass, time and scattering physics, not the measured Hornberger regime."
+    },
+    {
+      "id": "I03",
+      "classification": "own_conditional_calculation",
+      "claim": "A smooth power-law correlation toy reports widely different homogeneity radii under different tolerances.",
+      "basis": [
+        "S09"
+      ],
+      "artifact": "probes/scales/scale_probes.py",
+      "limit": "Not a fit to WiggleZ; realistic correlation functions include additional features."
+    },
+    {
+      "id": "I04",
+      "classification": "own_reproduction_and_sensitivity_calculation",
+      "claim": "Wave10 collapse returns 185.5881 km/s; cooling scale responds linearly to selected gas density and time; matching speed labels changes L* comparison.",
+      "basis": [
+        "R01"
+      ],
+      "artifact": "probes/scales/results.json",
+      "limit": "Reuses original approximate power spectrum. Convention and environment scans are not observational error bars or proof the hypothesis is false."
+    },
+    {
+      "id": "I05",
+      "classification": "own_inference",
+      "claim": "No electromagnetic cooling is insufficient to infer no energy export in every dark-field model.",
+      "basis": [
+        "S18",
+        "S19"
+      ],
+      "limit": "Specific proposed action and boundary conditions must still be examined."
+    }
+  ],
+  "verification": {
+    "probe_command": "python3 ../probes/scales/scale_probes.py",
+    "probe_exit_code": 0,
+    "checks": [
+      "Collapse baseline within 0.02 km/s of repository reported number",
+      "Cooling baseline reproduced",
+      "Homogeneity thresholds substituted into defining D2 equation",
+      "Pressure-factor algebra checked"
+    ],
+    "not_done": [
+      "No astronomical raw-data fit",
+      "No independent Boltzmann code",
+      "No new quench Monte Carlo",
+      "No new numerical dark-field dynamics",
+      "No current survey-release audit"
+    ],
+    "source_clones_final_git_status": "All four clean at final check."
+  },
+  "publication_note": "Historical research snapshot prepared on 2026-11-12. Repository claims refer to the recorded studied revisions, not current main. Original research used gpt-6-astra with requested ultra reasoning; publication preparation used gpt-6.1-sol."
+}

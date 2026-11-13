@@ -1,0 +1,60 @@
+{
+  "scope": "Analytic identities and exact toy responses; no nonlinear AeST simulation.",
+  "sympy_version": "1.14.0",
+  "perfect_caustic": {
+    "model": "Nonrelativistic ghost-condensate truncation, external potential zero",
+    "pi": "x**2/(2*T - 2*t)",
+    "velocity": "-2*x/(2*T - 2*t)",
+    "Sigma": "0",
+    "pi_xxxx": "0",
+    "equation_of_motion_residual": "0",
+    "inviscid_burgers_residual": "0",
+    "pi_xx": "1/(T - t)",
+    "status": "Local exact special solution for t<T. Not a finite-energy periodic halo."
+  },
+  "linear_aest_compensated_initial_pair": {
+    "delta_E": "epsilon",
+    "delta_gamma": "B*K_B*Q*c_ad_squared*epsilon*k**2/(w + 1)",
+    "delta_density_contrast": "0",
+    "delta_theta": "0",
+    "delta_pressure_contrast": "B*K_B*c_ad_squared*epsilon*k**2",
+    "delta_theta_dot": "B*K_B*c_ad_squared*epsilon*k**2/(w + 1)",
+    "kinematic_delta_theta_dot": "B*K_B*c_ad_squared*epsilon*k**2/(w + 1)",
+    "delta_density_dot": "-3*B*H*K_B*c_ad_squared*epsilon*k**2",
+    "delta_E_dot_from_published_equation_12": "epsilon*(B*Q*c_ad_squared*k**2*(K_B - 2) - H*(w + 1))/(w + 1)",
+    "status": "Algebra in published linear variables; implementation must verify its complete constraint map and admissible initial ensemble."
+  },
+  "free_streaming_equal_first_moments": {
+    "two_stream_variance_over_sigma_squared": 1,
+    "gaussian_variance_over_sigma_squared": 1,
+    "two_stream_fourth_moment_over_sigma_fourth": 1,
+    "gaussian_fourth_moment_over_sigma_fourth": 3,
+    "density_response": [
+      {
+        "tau_equals_k_sigma_t": 0.0,
+        "two_stream_density_amplitude_ratio": 1.0,
+        "gaussian_density_amplitude_ratio": 1.0
+      },
+      {
+        "tau_equals_k_sigma_t": 0.5,
+        "two_stream_density_amplitude_ratio": 0.8775825618903728,
+        "gaussian_density_amplitude_ratio": 0.8824969025845955
+      },
+      {
+        "tau_equals_k_sigma_t": 1.0,
+        "two_stream_density_amplitude_ratio": 0.5403023058681398,
+        "gaussian_density_amplitude_ratio": 0.6065306597126334
+      },
+      {
+        "tau_equals_k_sigma_t": 1.5707963267948966,
+        "two_stream_density_amplitude_ratio": 6.123233995736766e-17,
+        "gaussian_density_amplitude_ratio": 0.29121293321402086
+      },
+      {
+        "tau_equals_k_sigma_t": 3.141592653589793,
+        "two_stream_density_amplitude_ratio": -1.0,
+        "gaussian_density_amplitude_ratio": 0.007191883355826368
+      }
+    ]
+  }
+}

@@ -1,0 +1,291 @@
+{
+  "route": "robustness",
+  "seat": "gpt-forge",
+  "model": "gpt-6-astra",
+  "reasoning_effort": "ultra",
+  "date": "2026-11-12",
+  "scope": "Constructive independent robustness pass on six expedition reports and selected primary sources. No new observations, postings, repository edits, or nonlinear collapse solution.",
+  "primary_sources": [
+    {
+      "id": "R01",
+      "title": "The Incomplete Rosetta Stone Problem: Identifiability Results for Multi-View Nonlinear ICA",
+      "url": "https://proceedings.mlr.press/v115/gresele20a/gresele20a.pdf",
+      "classification": "established_mathematical_result_conditional_on_assumptions",
+      "inspected": "Sections 3.1-3.3, Theorems 1 and 5, definition of sufficiently distinct views",
+      "support": "Suitable multiview data can identify components up to declared ambiguities. Theorem 5 recovers corrupted components rather than exact noiseless samples.",
+      "limits": "Smooth invertible mixing, independent components and noise, componentwise corruption, diversity, infinite-data/expressivity assumptions. The new known-linear probe does not implement this theorem.",
+      "accessed": "2026-11-12"
+    },
+    {
+      "id": "R02",
+      "title": "Rosetta Stone supplement",
+      "url": "https://proceedings.mlr.press/v115/gresele20a/gresele20a-supp.pdf",
+      "classification": "established_mathematical_result_conditional_on_assumptions",
+      "inspected": "Appendices A-C and Gaussian diversity discussion",
+      "support": "General nonlinear ICA has ambiguities; specified diversity condition can fail for conditional Gaussian forms.",
+      "limits": "No general inference that all Gaussian inference is unidentifiable. Known observation maps are a different problem.",
+      "accessed": "2026-11-12"
+    },
+    {
+      "id": "R03",
+      "title": "Parameter Space Compression Underlies Emergent Theories and Predictive Models",
+      "url": "https://arxiv.org/html/1303.6738",
+      "classification": "conditional_model_and_mathematical_analysis",
+      "inspected": "Main text, Fisher metric equation 1, diffusion and Ising setup",
+      "support": "In specified diffusion and Ising examples, coarse observations lose sensitivity to many microscopic combinations while preserving predictive effective parameters.",
+      "limits": "A demonstrated connection in these models, not a universal theorem for every apparent convergence. Raw matrix eigenvalues depend on coordinates; distinguishability quadratic form has the invariant meaning.",
+      "accessed": "2026-11-12"
+    },
+    {
+      "id": "R04",
+      "title": "Model Reduction by Manifold Boundaries",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4425275/",
+      "classification": "conditional_model_reduction_method",
+      "inspected": "Primary author manuscript, abstract and main text through Fisher-metric construction",
+      "support": "Model reduction can be formulated through output distributions and manifold boundaries for a fixed set of predictions.",
+      "limits": "Full later re-open encountered recaptcha. Used only the successfully read primary text. No theorem that all models have an exploitable boundary hierarchy; no proof of a unique microscopic mechanism.",
+      "accessed": "2026-11-12"
+    },
+    {
+      "id": "R05",
+      "title": "Relevance in the Renormalization Group and in Information Theory",
+      "url": "https://arxiv.org/html/2012.01447",
+      "classification": "established_mathematical_result_conditional_on_assumptions",
+      "inspected": "Main equations 1-6, large-buffer construction, Appendix B, symmetry limitations in Appendix D",
+      "support": "Information bottleneck relevance connects to leading transfer-matrix modes and low-scaling-dimension operators in a controlled short-range statistical model setting.",
+      "limits": "Specified relevance variable, large buffer, strong-compression expansion and CFT interpretation matter. Arbitrary compression is not RG, and limited compressed capacity can break symmetries.",
+      "accessed": "2026-11-12"
+    },
+    {
+      "id": "R06",
+      "title": "Quantum Darwinism in an Everyday Environment: Huge Redundancy in Scattered Photons",
+      "url": "https://arxiv.org/html/1001.3419v2",
+      "classification": "conditional_physical_model",
+      "inspected": "Figure 2 and equations 14-18, isotropic versus point-source discussion",
+      "support": "Perfectly isotropic mixed directional illumination decoheres without redundant accessible records; nonuniform illumination can produce substantial redundancy.",
+      "limits": "Ideal limiting counterexample, not a claim about generic sunlight or all scattering environments.",
+      "accessed": "2026-11-12"
+    },
+    {
+      "id": "R07",
+      "title": "Objectivity (or lack thereof): Comparison between predictions of quantum Darwinism and spectrum broadcast structure",
+      "url": "https://arxiv.org/html/1803.00765v2",
+      "classification": "conditional_physical_model",
+      "inspected": "Abstract, Sections I and III.3, accessible-information distinction",
+      "support": "Total mutual information and operationally accessible classical information need separate assessment.",
+      "limits": "Specific finite environment and partition constructions. New Bell example independently verifies only the claim about records of the specified Z observable.",
+      "accessed": "2026-11-12"
+    },
+    {
+      "id": "R08",
+      "title": "Topological Boundary Modes in Isostatic Lattices",
+      "url": "https://arxiv.org/html/1308.0554v2",
+      "classification": "established_mathematical_result_for_declared_spring_models",
+      "inspected": "Equations 1-2, definitions of compatibility/equilibrium matrices and D",
+      "support": "Central-force spectra depend on bond-direction compatibility matrices. Maxwell-Calladine count follows rank-nullity.",
+      "limits": "Does not prove topological protection or physical stability of the cab-to-fcc network. New probe is fixed-cell k=0, not full band structure.",
+      "accessed": "2026-11-12"
+    },
+    {
+      "id": "R09",
+      "title": "Cooling, dynamics and fragmentation of massive gas clouds: clues to the masses and radii of galaxies and clusters",
+      "url": "https://doi.org/10.1093/mnras/179.4.541",
+      "classification": "conditional_astrophysical_model",
+      "inspected": "Primary publisher abstract and ADS primary scan passages",
+      "support": "Cooling and gravitational collapse clocks distinguish evolutionary regimes and characteristic galaxy scales.",
+      "limits": "Does not independently establish the repository selected Delta=1000, Hubble-time 178 km/s coincidence or a universal galaxy speed.",
+      "accessed": "2026-11-12"
+    },
+    {
+      "id": "R10",
+      "title": "Boyle’s Law and Gravitational Instability",
+      "url": "https://articles.adsabs.harvard.edu/pdf/1956MNRAS.116..351B",
+      "classification": "established_stability_result_for_specified_model",
+      "inspected": "Summary and Section 3 stability analysis, pages 356-357",
+      "support": "Isothermal self-gravitating pressure-confined stability needs a boundary-value problem and perturbations.",
+      "limits": "Comparison only. Its threshold is not imposed on AeST or a tracer in an external potential. The new gamma=2 criticism follows directly from the repository formulas.",
+      "accessed": "2026-11-12"
+    },
+    {
+      "id": "R11",
+      "title": "Aether scalar tensor theory: Hamiltonian Formalism",
+      "url": "https://arxiv.org/html/2307.15126v3",
+      "classification": "conditional_gravity_theory_and_action",
+      "inspected": "Section II equations 1-4, background definitions, abstract/conclusions six-degree-of-freedom statement",
+      "support": "Supplies exact scalar action terms whose variation gives the checked shift current.",
+      "limits": "Finite-difference test checks differentiation only. No energy trapping, entropy law, viable chosen polynomial or nonlinear collapse result follows. Additional higher derivatives alter the analysis.",
+      "accessed": "2026-11-12"
+    },
+    {
+      "id": "R12",
+      "title": "New Relativistic Theory for Modified Newtonian Dynamics",
+      "url": "https://arxiv.org/html/2007.00082v3",
+      "classification": "conditional_gravity_theory",
+      "inspected": "Cosmological observables, equations 7-12 and explicit paragraph after equation 11",
+      "support": "Effective pressure depends on vector perturbations and does not close in displayed fluid variables. A restricted dustlike limit can occur.",
+      "limits": "Not an action-specific nonlinear post-caustic fluid closure, transport law, or proof of Dark-WHIM.",
+      "accessed": "2026-11-12"
+    },
+    {
+      "id": "R13",
+      "title": "ASASSN-24fw: Candidate gas-rich circumsecondary disk occultation of a main-sequence star",
+      "url": "https://arxiv.org/html/2507.05367v3",
+      "classification": "published_observational_result_with_model_interpretation",
+      "inspected": "Section III.1, historic and modern light curve and half-period discussion",
+      "support": "DASCH admits a half-period alternative that ASAS normal-brightness measurements at the discriminating phase exclude.",
+      "limits": "Published example, not an expedition discovery. Physical nature of the occulter remains model interpretation; repository candidate claims not independently verified here.",
+      "accessed": "2026-11-12"
+    },
+    {
+      "id": "R14",
+      "title": "The Rise and Fall of the Eclipsing Binary HS Hydrae",
+      "url": "https://arxiv.org/abs/2107.10954",
+      "classification": "published_observational_result_with_model_interpretation",
+      "inspected": "Primary abstract; route report provides full-paper handoff",
+      "support": "Long-baseline data trace fading eclipses and later TESS confirms cessation, associated with evolving inclination in a triple.",
+      "limits": "Abstract-level independent check here. Source binary persists while eclipse visibility changes. No reanalysis of photometry by this route.",
+      "accessed": "2026-11-12"
+    }
+  ],
+  "local_sources": [
+    {
+      "path": "scales.md",
+      "sha256": "374d361adb88ccd8216cbcfedd67bdba79a5805683f177710122485bfdb60711",
+      "role": "Source proposal or route handoff, not independent empirical evidence",
+      "verification": "Selected relevant definitions and claims read; no source module imported or modified."
+    },
+    {
+      "path": "relations.md",
+      "sha256": "274b329263fd47b478b39da44a883097d66abe97bc2309a399c06dd1bc8d686a",
+      "role": "Source proposal or route handoff, not independent empirical evidence",
+      "verification": "Selected relevant definitions and claims read; no source module imported or modified."
+    },
+    {
+      "path": "repetition.md",
+      "sha256": "2595c4ae6656c34084ca0314df5427f7f7e0a03d44ffc45f206c5f06824d3304",
+      "role": "Source proposal or route handoff, not independent empirical evidence",
+      "verification": "Selected relevant definitions and claims read; no source module imported or modified."
+    },
+    {
+      "path": "persistence.md",
+      "sha256": "58f66e108bc9bbd086162416c25d3493fa0c0a088ad0c253b01715100aeb7368",
+      "role": "Source proposal or route handoff, not independent empirical evidence",
+      "verification": "Selected relevant definitions and claims read; no source module imported or modified."
+    },
+    {
+      "path": "evidence.md",
+      "sha256": "ef1d7d3aaf0dbfb6691ecf559e6c841395cc2fbcdc6aa6665280ef18326fd885",
+      "role": "Source proposal or route handoff, not independent empirical evidence",
+      "verification": "Selected relevant definitions and claims read; no source module imported or modified."
+    },
+    {
+      "path": "unclaimed.md",
+      "sha256": "dbe9c2284b4d656c20d00327bc737a3d3b0c5a15cea68c2e6f8f0b535d3a63c9",
+      "role": "Source proposal or route handoff, not independent empirical evidence",
+      "verification": "Selected relevant definitions and claims read; no source module imported or modified."
+    },
+    {
+      "path": "https://github.com/aska-digital/incentre-lattice/blob/abeb94b0aa5f7c59b14dab139aa380d2ce5d81e2/results/fold-continuous-fcc/PROOF.md",
+      "sha256": "45d1021cc3a7fcac11276a4c09b4367903731d041190f9e65685d0d8411d158e",
+      "role": "Source proposal or route handoff, not independent empirical evidence",
+      "verification": "Selected relevant definitions and claims read; no source module imported or modified."
+    },
+    {
+      "path": "https://github.com/Foundation-0/gravity/blob/d8c7544e89388720fc1c13de816ddb7dd03d2096/wave10_covariant_jeans_unification.py",
+      "sha256": "af8a2459aa8f5885250ab6b5914c50cc852bcc691982c8ef5cf692603bece927",
+      "role": "Source proposal or route handoff, not independent empirical evidence",
+      "verification": "Selected relevant definitions and claims read; no source module imported or modified."
+    },
+    {
+      "path": "https://github.com/Foundation-0/gravity/blob/d8c7544e89388720fc1c13de816ddb7dd03d2096/RESEARCH_NOTEBOOK_AND_REASONING.md",
+      "sha256": "3c4427c87d5c53ac62bbb1a8b41836b6a567485f1716d5c29329d6809f24e45e",
+      "role": "Source proposal or route handoff, not independent empirical evidence",
+      "verification": "Selected relevant definitions and claims read; no source module imported or modified."
+    },
+    {
+      "path": "https://github.com/Foundation-0/gravity/blob/d8c7544e89388720fc1c13de816ddb7dd03d2096/CLAIMS.md",
+      "sha256": "92ea13005f4ff98b2737b632ac54084b87305f79ac87f0d6fa8f19124c27071d",
+      "role": "Source proposal or route handoff, not independent empirical evidence",
+      "verification": "Selected relevant definitions and claims read; no source module imported or modified."
+    },
+    {
+      "path": "https://github.com/Foundation-0/fractals/blob/9669f5579635c3543f145e8eca86133069ad6f27/witness-map/model.js",
+      "sha256": "e9ef220f4bf1caf8b0b636330106b415cf0f737e8a6d3ca8c54179379859d917",
+      "role": "Source proposal or route handoff, not independent empirical evidence",
+      "verification": "Selected relevant definitions and claims read; no source module imported or modified."
+    },
+    {
+      "path": "https://github.com/Foundation-0/physics0/blob/76410c3deebf925f6c51017867dbcef29ff54e8b/AREAS.md",
+      "sha256": "7c590dffe6a796c61a2e1c52e16b0ad1fcb982a19bb13ea136c4530b46fce61e",
+      "role": "Source proposal or route handoff, not independent empirical evidence",
+      "verification": "Selected relevant definitions and claims read; no source module imported or modified."
+    },
+    {
+      "path": "https://github.com/Foundation-0/astr0/blob/607a11eaa83b2ec7539e0986046c3230406d2b04/README.md",
+      "sha256": "34ec49fb13fa4598b220ad4221acb1314ab8a7f5f4737720176f726e20a232c5",
+      "role": "Source proposal or route handoff, not independent empirical evidence",
+      "verification": "Selected relevant definitions and claims read; no source module imported or modified."
+    }
+  ],
+  "derived_claims": [
+    {
+      "id": "C01",
+      "classification": "own_inference_and_reproducible_mathematical_example",
+      "claim": "Observation equivalence classes can grow under information loss and shrink under complementary known measurements.",
+      "independent_check": "Explicit ranks, a shared-gain scaling ambiguity, parameter-transform invariant distinguishability and correlated-noise information saturation.",
+      "limits": "Known linear maps or local Jacobian; not a general nonlinear identification theorem."
+    },
+    {
+      "id": "C02",
+      "classification": "own_reproducible_mathematical_example",
+      "claim": "Same complete dephasing channel and one-fragment mutual information can coexist with different local information about system Z.",
+      "independent_check": "All four system matrix units, exact branch marginals, Holevo information and trace distance.",
+      "limits": "Engineered finite system. Another system basis has readable records in Bell case."
+    },
+    {
+      "id": "C03",
+      "classification": "own_derived_prediction_in_conditional_model",
+      "claim": "Fixed-bar central-spring fold has tr(D)=30 and tr(D^2)=96-12t^2 at fixed cell and Bloch k=0.",
+      "independent_check": "Bond-direction construction, analytical trace identity, null-mode rank argument and direct finite-displacement energy Hessian.",
+      "limits": "No new fcc springs, no prestress, no real CaB6 claim, no all-wavevector stability."
+    },
+    {
+      "id": "C04",
+      "classification": "own_derivation_and_repository_qualification",
+      "claim": "gamma_d=2 is not a derived onset in the notebook hydrostatic expression.",
+      "independent_check": "Independent mass integral x^(3-gamma) is smooth at gamma=2; separate f_trap ansatz juxtaposed.",
+      "limits": "Does not exclude a threshold from fuller dynamics. No nonlinear AeST stability solved."
+    },
+    {
+      "id": "C05",
+      "classification": "own_conditional_sensitivity_calculation",
+      "claim": "Free-free cooling speed under fixed critical overdensity and Hubble clock scales as Delta H and diverges in redshift from repository sigma_star.",
+      "independent_check": "Dimensional formula and clock/density scaling rederived.",
+      "limits": "Collapse trajectory read from repository artifact, not independently recomputed. Ionized free-free regime and fixed composition assumed."
+    },
+    {
+      "id": "C06",
+      "classification": "own_algebraic_verification_of_published_action",
+      "claim": "Persistence route shift current follows from AeST scalar action.",
+      "independent_check": "Independent variation and finite differences at 16 configurations.",
+      "limits": "No implication of entropy conservation, energy retention or fluid closure."
+    },
+    {
+      "id": "C07",
+      "classification": "untested_conjecture_and_proposed_probe",
+      "claim": "A specified nonlinear AeST closure might generate a persistent dispersion and actual trapping threshold.",
+      "independent_check": "None; required mode, flux, stability and boundary checks proposed.",
+      "limits": "The current expedition does not establish Dark-WHIM or a shared fundamental scale."
+    }
+  ],
+  "clone_revisions": {
+    "gravity": "d8c7544e89388720fc1c13de816ddb7dd03d2096",
+    "fractals": "9669f5579635c3543f145e8eca86133069ad6f27",
+    "physics0": "76410c3deebf925f6c51017867dbcef29ff54e8b",
+    "astr0": "607a11eaa83b2ec7539e0986046c3230406d2b04"
+  },
+  "probe": "probes/robustness/robustness_probes.py",
+  "initial_snapshot": "probes/robustness/input-snapshot.json",
+  "completed_utc": "2026-11-12T16:22:48.636518+00:00",
+  "publication_note": "Historical research snapshot prepared on 2026-11-12. Repository claims refer to the recorded studied revisions, not current main. Original research used gpt-6-astra with requested ultra reasoning; publication preparation used gpt-6.1-sol."
+}

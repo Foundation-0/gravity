@@ -1,0 +1,146 @@
+{
+  "status": "Synthetic reproducible demonstrations, not new observational findings or a replication of nonlinear ICA identifiability.",
+  "gaussian_control": {
+    "model": "q,b independent N(0,1); y_i=q+b+e_i; x=b+eta; e_i,eta independent N(0,0.01)",
+    "posterior_variances": {
+      "one_target_measurement": 0.5024875621890548,
+      "one_hundred_exact_copies": 0.5024875621890548,
+      "one_hundred_fresh_readouts_same_bias": 0.5000249987500626,
+      "one_hundred_measurements_independent_biases": 0.00999900999901,
+      "one_target_plus_one_nuisance_control": 0.019512668672944433
+    },
+    "control_alone_information_about_q_bits": 0.0,
+    "control_conditional_information_given_y_bits": 2.3433024390163113,
+    "posterior_variance_reduction_with_control_factor": 25.751862577658894,
+    "wrong_independence_model": {
+      "assumed_posterior_variance": 0.00999900999901,
+      "actual_estimator_mean_squared_error": 0.9802999505999207,
+      "actual_prior_predictive_coverage_of_nominal_95_percent_interval": 0.15691281921709516
+    },
+    "control_leakage_cases": [
+      {
+        "signal_leakage_into_control": 0.0,
+        "known_model_posterior_variance": 0.019512668672944433,
+        "posterior_mean_weights_y_x": [
+          0.9804873313270556,
+          -0.9707795359673818
+        ],
+        "blind_regression_beta": 0.9900990099009901,
+        "blind_regression_signal_response": 1.0
+      },
+      {
+        "signal_leakage_into_control": 0.1,
+        "known_model_posterior_variance": 0.023922875505831553,
+        "posterior_mean_weights_y_x": [
+          1.0830754582242328,
+          -1.0699833373006433
+        ],
+        "blind_regression_beta": 1.0784313725490198,
+        "blind_regression_signal_response": 0.892156862745098
+      },
+      {
+        "signal_leakage_into_control": 0.5,
+        "known_model_posterior_variance": 0.07112526539278141,
+        "posterior_mean_weights_y_x": [
+          1.804670912951168,
+          -1.7515923566878988
+        ],
+        "blind_regression_beta": 1.1904761904761905,
+        "blind_regression_signal_response": 0.40476190476190477
+      },
+      {
+        "signal_leakage_into_control": 1.0,
+        "known_model_posterior_variance": 0.5012468827930145,
+        "posterior_mean_weights_y_x": [
+          0.2493765586034927,
+          0.2493765586034927
+        ],
+        "blind_regression_beta": 0.9950248756218907,
+        "blind_regression_signal_response": 0.004975124378109319
+      }
+    ],
+    "simulation": {
+      "seed": 20261112,
+      "trials": 100000,
+      "single_measurement_error_variance": 0.5001066077985307,
+      "joined_measurement_error_variance": 0.019518512055477045
+    }
+  },
+  "eclipse_aliases": {
+    "synthetic_event_times_days": [
+      0.0,
+      120.0
+    ],
+    "assumptions": "Uniform prior on six displayed aliases; known phase; perfect detected-event times; stationary eclipse; zero false positive rate; known detection completeness.",
+    "modern_alias_periods_days": [
+      120.0,
+      60.0,
+      40.0,
+      30.0,
+      24.0,
+      20.0
+    ],
+    "added_archival_event_time_days": -440.0,
+    "surviving_aliases_days": [
+      40.0,
+      20.0
+    ],
+    "candidate_discriminating_exposure_day": 20.0,
+    "cases": [
+      {
+        "detection_completeness": 0.0,
+        "posterior_after_no_eclipse_at_day_20": {
+          "40.0": 0.5,
+          "20.0": 0.5
+        },
+        "expected_information_at_day_20_bits": 0.0,
+        "expected_information_at_shared_phase_day_0_bits": 0.0
+      },
+      {
+        "detection_completeness": 0.05,
+        "posterior_after_no_eclipse_at_day_20": {
+          "40.0": 0.5128205128205129,
+          "20.0": 0.48717948717948717
+        },
+        "expected_information_at_day_20_bits": 0.025462452938692204,
+        "expected_information_at_shared_phase_day_0_bits": 0.0
+      },
+      {
+        "detection_completeness": 0.95,
+        "posterior_after_no_eclipse_at_day_20": {
+          "40.0": 0.9523809523809523,
+          "20.0": 0.04761904761904766
+        },
+        "expected_information_at_day_20_bits": 0.854997400484832,
+        "expected_information_at_shared_phase_day_0_bits": 0.0
+      },
+      {
+        "detection_completeness": 1.0,
+        "posterior_after_no_eclipse_at_day_20": {
+          "40.0": 1.0,
+          "20.0": 0.0
+        },
+        "expected_information_at_day_20_bits": 1.0,
+        "expected_information_at_shared_phase_day_0_bits": 0.0
+      }
+    ]
+  },
+  "difference_graph": {
+    "assumed_levels": [
+      0.0,
+      3.0,
+      8.0,
+      12.0
+    ],
+    "observed_differences": [
+      3.0,
+      5.0,
+      4.0,
+      12.0
+    ],
+    "cycle_residual": 0.0,
+    "with_wrong_fourth_line_cycle_residual": -0.5,
+    "with_shared_2_percent_scale_error_cycle_residual": 0.0,
+    "interpretation": "An extra edge can check consistency without adding parameter dimension. A common multiplicative calibration error survives every cycle check."
+  }
+}

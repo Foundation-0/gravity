@@ -1,0 +1,209 @@
+{
+  "force_balance_and_support": {
+    "alternating_quadrupole": {
+      "laplacian_at_every_time": 0,
+      "one_period_floquet_results": {
+        "2.0": {
+          "x_and_y": {
+            "determinant": 1.0,
+            "multiplier_moduli": [
+              0.9999999999999999,
+              0.9999999999999999
+            ],
+            "stable_linear_equation": true,
+            "trace": 0.7726511436271603
+          },
+          "z": {
+            "determinant": 1.000000000000001,
+            "multiplier_moduli": [
+              0.4131886830757272,
+              2.4202018132639074
+            ],
+            "stable_linear_equation": false,
+            "trace": -2.8333904963396344
+          },
+          "z_trace_step_halving_difference": 4.005240583637715e-12
+        },
+        "4.0": {
+          "x_and_y": {
+            "determinant": 0.9999999999999991,
+            "multiplier_moduli": [
+              0.9999999999999996,
+              0.9999999999999996
+            ],
+            "stable_linear_equation": true,
+            "trace": 1.9229185433660383
+          },
+          "z": {
+            "determinant": 1.0000000000000033,
+            "multiplier_moduli": [
+              1.0000000000000016,
+              1.0000000000000016
+            ],
+            "stable_linear_equation": true,
+            "trace": 1.6919720538243357
+          },
+          "z_trace_step_halving_difference": 1.674216321134736e-13
+        }
+      },
+      "potential": "cos(Omega*t)*(x^2+y^2-2*z^2)/2",
+      "scope": "Ideal linear imposed field. Finite electrodes, noise, nonlinear motion and many particles are omitted.",
+      "static_saddle_vertical_monodromy": {
+        "determinant": 0.9999999999999432,
+        "multiplier_moduli": [
+          9.220612518873262,
+          0.10845266493446992
+        ],
+        "stable_linear_equation": false,
+        "trace": 9.329065183807732
+      }
+    },
+    "three_fixed_positive_unit_charges": {
+      "hessian_at_origin": [
+        [
+          1.5000000000000009,
+          8.881784197001252e-16,
+          0.0
+        ],
+        [
+          1.1102230246251565e-15,
+          1.4999999999999987,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          -3.0
+        ]
+      ],
+      "hessian_eigenvalues": [
+        1.5,
+        1.5,
+        -3
+      ],
+      "planar_small_oscillation_frequency": 1.224744871391589,
+      "positions": [
+        [
+          1.0,
+          0.0,
+          0
+        ],
+        [
+          -0.49999999999999983,
+          0.8660254037844387,
+          0
+        ],
+        [
+          -0.5000000000000004,
+          -0.8660254037844384,
+          0
+        ]
+      ],
+      "test_charge": 1,
+      "test_charge_mass": 1,
+      "vertical_linear_growth_rate": 1.7320508075688772
+    }
+  },
+  "geometric_phase": {
+    "final_points": [
+      [
+        -0.7561924150129039,
+        -0.7092869578721166
+      ],
+      [
+        0.503881095657197,
+        -0.06724743595191052
+      ],
+      [
+        0.25231131935570694,
+        0.7765343938240271
+      ]
+    ],
+    "initial_points": [
+      [
+        -0.9957819157813603,
+        -0.28867513459481287
+      ],
+      [
+        0.41843164659173454,
+        -0.28867513459481287
+      ],
+      [
+        0.5773502691896258,
+        0.5773502691896257
+      ]
+    ],
+    "interpretation": "Prescribed internal actuation, not a free gravitational orbit; no net torque, positive kinetic energy.",
+    "maximum_center_of_mass_residual": 5.233641528945917e-17,
+    "maximum_kinetic_energy_for_unit_leg_duration": 3.4697827972579773,
+    "maximum_total_angular_momentum_residual": 1.9984014443252818e-15,
+    "net_orientation_degrees": 27.0,
+    "retraced_one_parameter_loop_degrees": 0.0,
+    "reversed_loop_degrees": -27.0,
+    "rotation_reconstruction_error": 1.5700924586837752e-16,
+    "shape_loop": [
+      {
+        "phi_rad": 0.7853981633974483,
+        "r": 1
+      },
+      {
+        "phi_rad": 2.356194490192345,
+        "r": 1
+      },
+      {
+        "phi_rad": 2.356194490192345,
+        "r": 2
+      },
+      {
+        "phi_rad": 0.7853981633974483,
+        "r": 2
+      },
+      {
+        "phi_rad": 0.7853981633974483,
+        "r": 1
+      }
+    ],
+    "side_length_closure_error": 0.0
+  },
+  "status": "Known-model analytical counterexamples with numerical checks; no observational discovery.",
+  "vorticity_and_angular_momentum": {
+    "curl_free_shear": {
+      "a": 2.0,
+      "alpha": 0.5,
+      "analytic_angular_momentum_per_particle": 0.75,
+      "analytic_curl": 0,
+      "angular_momentum_per_particle": 0.7499999999999983,
+      "b": 1.0,
+      "enclosed_winding": -3.400811803111769e-17,
+      "field": "exp[-(x^2/a^2+y^2/b^2)/2 + i alpha x y]",
+      "normalization_integral": 6.283185307179587,
+      "velocity": [
+        "alpha*y",
+        "alpha*x"
+      ],
+      "zeros": []
+    },
+    "interpretation": "Normalizable 2D wave snapshots; hbar=m=1; no evolution or halo equilibrium is asserted.",
+    "opposite_vortices": {
+      "analytic_angular_momentum_per_particle": 0,
+      "angular_momentum_per_particle": 7.566788156766849e-18,
+      "field": "exp[-(x^2+y^2)/2] * (x^2+y^2-1 + 2 i y)",
+      "normalization_integral": 9.424777960769381,
+      "winding_around_both": -2.3596188689058626e-16,
+      "windings": [
+        1.0000000000000002,
+        -1.0000000000000002
+      ],
+      "zeros": [
+        [
+          1,
+          0
+        ],
+        [
+          -1,
+          0
+        ]
+      ]
+    }
+  }
+}

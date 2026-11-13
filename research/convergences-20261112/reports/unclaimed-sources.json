@@ -1,0 +1,295 @@
+{
+  "route": "unclaimed",
+  "date": "2026-11-12",
+  "seat": "gpt-forge",
+  "requested_model": "gpt-6-astra",
+  "requested_reasoning_effort": "ultra",
+  "scope": "Independent bridges beyond the first five expedition routes. Existing clones were read-only. No astronomical data fit, public posting, or new fundamental-physics claim.",
+  "status_definitions": {
+    "established_result": "A known mathematical or physical result within its stated assumptions.",
+    "conditional_model": "A calculation applying a specified dynamical model and parameter regime; its use for actual dark matter remains conditional.",
+    "untested_conjecture": "An idea requiring a new action-specific derivation, evolution calculation, or observation.",
+    "own_inference": "A connection, proposed next probe, or independently derived teaching example from this pass.",
+    "repository_claim": "What a source repository says; not independently established by its inclusion here."
+  },
+  "literature": [
+    {
+      "id": "SW1989",
+      "authors": [
+        "Alfred Shapere",
+        "Frank Wilczek"
+      ],
+      "title": "Gauge Kinematics of Deformable Bodies",
+      "year": 1989,
+      "url": "https://www-thphys.physics.ox.ac.uk/talks/CMTjournalclub/sources/Shapere_Wilczek_1989.pdf",
+      "status": "established_result",
+      "type": "Primary theoretical treatment",
+      "reading": "Search-indexed abstract and opening discussion. Downloaded scan, visually inspected printed page 452 (PDF page 4), equations 2.1-2.6.",
+      "supports": "Shape deformation can reconstruct a net orientation change under zero-angular-momentum constraints. The geometric reconstruction is invariant under retiming the prescribed path.",
+      "limits": "Prescribing shape changes does not supply their energy, actuators or free-body dynamics. Gauge formulation does not make all physics one mechanism."
+    },
+    {
+      "id": "M1995",
+      "authors": [
+        "Richard Montgomery"
+      ],
+      "title": "The Geometric Phase of the Three-Body Problem",
+      "year": 1995,
+      "url": "https://arxiv.org/pdf/dg-ga/9510005",
+      "abstract_url": "https://arxiv.org/abs/dg-ga/9510005",
+      "status": "established_result",
+      "type": "Primary mathematical research",
+      "reading": "Full-text sections 1.1-1.2, 2.6, and portions of sections 3-4 and the Jacobi-coordinate appendix. Read reconstruction equation 2 and connection A = II^-1 J.",
+      "supports": "A return in triangle shape admits orientation reconstruction with dynamical and geometric terms. Zero-angular-momentum infinitesimal deformations define horizontal directions.",
+      "limits": "The report's prescribed loop is a pedagogical kinematic example, not a newly solved Newtonian orbit. General spatial and nonzero-angular-momentum formulas require their own conventions."
+    },
+    {
+      "id": "B1984",
+      "authors": [
+        "Michael V. Berry"
+      ],
+      "title": "Quantal phase factors accompanying adiabatic changes",
+      "year": 1984,
+      "doi": "10.1098/rspa.1984.0023",
+      "url": "https://michaelberryphysics.wordpress.com/wp-content/uploads/2013/07/berry120.pdf",
+      "status": "established_result",
+      "type": "Primary theoretical research",
+      "reading": "Indexed abstract and introduction; visually inspected printed pages 46-47, equations 1-10, from the author's scanned copy.",
+      "supports": "An adiabatically cycled isolated eigenstate acquires geometric and dynamical phase contributions. The geometric contribution is a circuit integral and can be observed relative to a reference through interference.",
+      "limits": "The elementary formula needs the adiabatic and isolated-level assumptions. Degeneracies, decoherence and nonadiabatic transitions need further treatment. No black-hole-cloud geometric-phase observation is asserted."
+    },
+    {
+      "id": "HJLL2020",
+      "authors": [
+        "Lam Hui",
+        "Austin Joyce",
+        "Michael J. Landry",
+        "Xinyu Li"
+      ],
+      "title": "Vortices and waves in light dark matter",
+      "year": 2020,
+      "url": "https://arxiv.org/html/2004.01188v2",
+      "abstract_url": "https://arxiv.org/abs/2004.01188",
+      "status": "conditional_model",
+      "type": "Primary analytical and numerical research",
+      "reading": "Full-text introduction including action 1.1 and nonrelativistic equation 1.3; section 2.2 equations 2.3-2.8; selected section 3 examples; numerical diagnostic discussion in section 5; section 7 equation 7.1 and surrounding angular-momentum discussion.",
+      "supports": "Phase zeros in a nonrelativistic scalar support quantized circulation. Simulated halos with zero net angular momentum can have vortex rings, and vortex-free wave configurations can carry angular momentum. The paper explicitly distinguishes its negligible-self-interaction regime from earlier condensate equilibrium studies.",
+      "limits": "Conditional scalar dark-matter model. No observed halo vortex is established. Its kinetic term and phase variable are not automatically those of AeST or ghost condensates.",
+      "version_note": "Read v2 HTML. Its abstract's mass threshold differs from later/default abstract text, so the report does not use either mass-threshold number."
+    },
+    {
+      "id": "RDS2012",
+      "authors": [
+        "Tanja Rindler-Daller",
+        "Paul R. Shapiro"
+      ],
+      "title": "Angular Momentum and Vortex Formation in Bose-Einstein-Condensed Cold Dark Matter Haloes",
+      "year": 2012,
+      "url": "https://arxiv.org/pdf/1106.1256",
+      "status": "conditional_model",
+      "type": "Primary theoretical research",
+      "reading": "v4 abstract, sections 3.2 and 4-related passages, equations 85-100 and 108-109, conclusion discussion of interaction-dependent vortex energetics.",
+      "supports": "A rotating equilibrium condensate can energetically favor a vortex for specified interaction and angular-momentum conditions. Non-axisymmetric irrotational Riemann-S figures can carry angular momentum.",
+      "limits": "Approximate equilibrium halo models and restricted interaction regimes. The statement about absent vortices for vanishing interaction is not a theorem excluding transient interference zeros in all scalar fields. No formation-rate or halo-observation result is adopted here."
+    },
+    {
+      "id": "P1989",
+      "authors": [
+        "Wolfgang Paul"
+      ],
+      "title": "Electromagnetic Traps for Charged and Neutral Particles",
+      "year": 1989,
+      "url": "https://www.physik.fu-berlin.de/studium/lehre/fortgeschrittenenpraktikum/unterlagen_fp_bachelor/Quadrupol-Massenfilter_2.pdf",
+      "status": "established_result",
+      "type": "Primary Nobel lecture by the technique's inventor",
+      "reading": "Pages 603-610: Laplace condition, alternating quadrupole fields, Mathieu equations, stability regions, secular motion and micromotion. PDF text retrieved and local copy downloaded.",
+      "supports": "A static quadrupole is a saddle; alternating focusing can confine motion within specified stability regions. Stabilization is a dynamical effect with continued micromotion.",
+      "limits": "The local Floquet example is dimensionless and idealized. It omits electrode boundaries, finite amplitudes, noise, many-body effects and cooling.",
+      "access_note": "Official Nobel PDF returned HTTP 403. A university-hosted copy of the same primary lecture was used."
+    },
+    {
+      "id": "ABK2026",
+      "authors": [
+        "Philip Arathoon",
+        "Gavin Ball",
+        "Matthew D. Kvalheim"
+      ],
+      "title": "The Maxwell Conjecture is False",
+      "year": 2026,
+      "url": "https://arxiv.org/abs/2607.27197",
+      "status": "repository_claim",
+      "type": "Primary preprint, limited verification in this pass",
+      "reading": "Abstract and submission metadata only.",
+      "supports": "The literature lead cited by point-charges exists and its abstract states a five-charge construction with at least 24 nondegenerate critical points.",
+      "limits": "Proof not reviewed here. The expedition does not independently certify or endorse the repository's count results. This source is context, not needed for the support no-go derivation."
+    }
+  ],
+  "repository_material": [
+    {
+      "id": "REPO_GRAVITY",
+      "repository": "Foundation-0/gravity",
+      "commit": "d8c7544e89388720fc1c13de816ddb7dd03d2096",
+      "local_root": "https://github.com/Foundation-0/gravity/tree/d8c7544e89388720fc1c13de816ddb7dd03d2096",
+      "files": [
+        "README.md",
+        "CLAIMS.md",
+        "RESEARCH_NOTEBOOK_AND_REASONING.md"
+      ],
+      "key_locations": [
+        "RESEARCH_NOTEBOOK_AND_REASONING.md:30-54",
+        "CLAIMS.md:133-140"
+      ],
+      "status": "untested_conjecture",
+      "use": "Identifies the proposed irrotational-scalar collapse and nonradiating-fluid mechanism that needs action-specific angular-momentum and circulation analysis. Its universal post-caustic heating assertions are not accepted as established physics."
+    },
+    {
+      "id": "REPO_FRACTALS",
+      "repository": "Foundation-0/fractals",
+      "commit": "9669f5579635c3543f145e8eca86133069ad6f27",
+      "local_root": "https://github.com/Foundation-0/fractals/tree/9669f5579635c3543f145e8eca86133069ad6f27",
+      "files": [
+        "README.md",
+        "turbulence/README.md",
+        "gravitational-atom/atom.js"
+      ],
+      "key_locations": [
+        "turbulence/README.md:229-235",
+        "gravitational-atom/atom.js:1-14",
+        "README.md:284-332"
+      ],
+      "status": "repository_claim",
+      "use": "Connects superfluid circulation and wave support to the new diagnostic questions. No claim of observed gravitational atoms or dark-matter vortices is taken from the repository."
+    },
+    {
+      "id": "REPO_PHYSICS0",
+      "repository": "Foundation-0/physics0",
+      "commit": "76410c3deebf925f6c51017867dbcef29ff54e8b",
+      "local_root": "https://github.com/Foundation-0/physics0/tree/76410c3deebf925f6c51017867dbcef29ff54e8b",
+      "files": [
+        "README.md",
+        "AREAS.md"
+      ],
+      "key_locations": [
+        "AREAS.md:12-42",
+        "README.md:12-18"
+      ],
+      "status": "repository_claim",
+      "use": "Supplies the charge-equilibrium, relative-equilibrium and orbit-certification questions. Existing counts and certificates were not independently rerun."
+    },
+    {
+      "id": "REPO_ASTR0",
+      "repository": "Foundation-0/astr0",
+      "commit": "607a11eaa83b2ec7539e0986046c3230406d2b04",
+      "local_root": "https://github.com/Foundation-0/astr0/tree/607a11eaa83b2ec7539e0986046c3230406d2b04",
+      "files": [
+        "README.md",
+        "AREAS.md"
+      ],
+      "key_locations": [
+        "README.md:19-23",
+        "AREAS.md:19-33"
+      ],
+      "status": "repository_claim",
+      "use": "Recurring eclipses and changing viewing geometry motivate keeping recurrence and orientation distinct. Archival findings and predicted dates were not revalidated. No geometric-phase explanation is assigned to a particular star."
+    },
+    {
+      "id": "POINT_CHARGES_LIVE",
+      "repository": "Foundation-0/point-charges",
+      "urls": [
+        "https://raw.githubusercontent.com/Foundation-0/point-charges/main/README.md",
+        "https://raw.githubusercontent.com/Foundation-0/point-charges/main/NOTE.md"
+      ],
+      "access_date": "2026-11-12",
+      "status": "repository_claim",
+      "reading": "README and NOTE sections 1, 2 and 4, including the harmonic no-extremum statement, Morse-index table and verification scope.",
+      "use": "Confirms the project already records the support/stability distinction and Morse indices. This expedition is not finding an omitted theorem in that project.",
+      "limits": "Live main was not pinned to a commit. Local README snapshot retained; no certifier executed."
+    }
+  ],
+  "local_results_and_inferences": [
+    {
+      "id": "PROBE_GEOMETRIC",
+      "status": "own_inference",
+      "claim": "A prescribed, internally actuated three-mass loop gives a 27-degree orientation change at zero total angular momentum.",
+      "basis": [
+        "SW1989",
+        "M1995",
+        "probes/unclaimed/constraint_probes.py:geometric_phase_probe"
+      ],
+      "checks": [
+        "analytic loop integral",
+        "reversed loop",
+        "retraced loop",
+        "center of mass",
+        "angular momentum from reconstructed velocities",
+        "pairwise distance closure",
+        "final rigid rotation"
+      ],
+      "limit": "Known kinematic effect, not a free gravitational orbit or new physical discovery."
+    },
+    {
+      "id": "PROBE_WAVE",
+      "status": "own_inference",
+      "claim": "Explicit normalizable fields separate nonzero angular momentum without vortices from opposite vortices with zero total angular momentum.",
+      "basis": [
+        "HJLL2020",
+        "RDS2012",
+        "probes/unclaimed/constraint_probes.py:wave_probe"
+      ],
+      "checks": [
+        "analytic density integrals",
+        "analytic angular-momentum expectations",
+        "midpoint quadrature",
+        "phase-winding loops around each defect and both"
+      ],
+      "limit": "Two-dimensional initial snapshots only. Neither stationarity, formation, lifetime, halo realism nor AeST applicability is asserted."
+    },
+    {
+      "id": "PROBE_SUPPORT",
+      "status": "own_inference",
+      "claim": "Static triangle force balance is a saddle; an ideal alternating quadrupole is linearly stable for one selected frequency and unstable for another.",
+      "basis": [
+        "P1989",
+        "POINT_CHARGES_LIVE",
+        "probes/unclaimed/constraint_probes.py:static_and_dynamic_probe"
+      ],
+      "checks": [
+        "analytic Hessian",
+        "Floquet determinant",
+        "distinct stable multipliers",
+        "unstable multiplier",
+        "step halving",
+        "static exact growth control"
+      ],
+      "limit": "Numerical linear stability check for a specified imposed field. No rigorous interval certificate or nonlinear experimental trap design is supplied."
+    },
+    {
+      "id": "ANGULAR_MOMENTUM_HANDOFF",
+      "status": "untested_conjecture",
+      "claim": "An angular-momentum and circulation audit may distinguish nonlinear dark-field collapse mechanisms that an energy-only argument leaves ambiguous.",
+      "basis": [
+        "REPO_GRAVITY",
+        "HJLL2020",
+        "RDS2012"
+      ],
+      "required_work": "Derive quantities and boundary fluxes from the actual intended action; choose admissible initial data; compare nonlinear evolution beyond one dimension.",
+      "limit": "No claim that vortex formation or a particular transport law occurs in AeST."
+    },
+    {
+      "id": "CIRCULARIZATION",
+      "status": "established_result",
+      "claim": "In a Newtonian point-mass potential, minimum orbital energy at fixed specific angular momentum j occurs at the circular radius j^2/(GM).",
+      "derivation": "Minimize effective potential j^2/(2r^2)-GM/r with respect to r. Its derivative vanishes at r=j^2/(GM) and its second derivative there is positive.",
+      "limit": "A point-mass potential and test matter are assumed. For actual extended self-gravitating systems the potential, stresses and angular-momentum transport must be derived."
+    }
+  ],
+  "verification": {
+    "command": "python3 ../probes/unclaimed/constraint_probes.py",
+    "result": "Passed all embedded checks; exit code 0.",
+    "results_file": "probes/unclaimed/results.json",
+    "dependencies": "Python 3 standard library",
+    "observational_data_fitted": false,
+    "existing_repository_mutations": false
+  },
+  "publication_note": "Historical research snapshot prepared on 2026-11-12. Repository claims refer to the recorded studied revisions, not current main. Original research used gpt-6-astra with requested ultra reasoning; publication preparation used gpt-6.1-sol."
+}

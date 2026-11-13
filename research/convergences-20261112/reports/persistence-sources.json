@@ -1,0 +1,374 @@
+{
+  "route": "persistence",
+  "checked_on": "2026-11-12",
+  "research_seat": "gpt-forge",
+  "requested_model": "gpt-6-astra",
+  "requested_reasoning_effort": "ultra",
+  "scope": "Primary-source research and small analytical probes. No new observations, dark-matter detection, nonlinear AeST evolution or validation of a universe-collision model.",
+  "classifications": {
+    "established_result": "Mathematical result under stated assumptions, standard physical consequence, or experimental observation within its measured domain.",
+    "conditional_model": "Derived or simulated result for specified equations, initial data, approximations and parameters.",
+    "untested_conjecture": "A proposed physical explanation whose application here has not been established.",
+    "own_inference": "A synthesis, counterexample, derivation or suggested discriminant produced in this pass. It is not an observation."
+  },
+  "sources": [
+    {
+      "id": "P01",
+      "authors": "Emmy Noether; English translation by M. A. Tavel",
+      "title": "Invariant Variation Problems",
+      "year": 1918,
+      "url": "https://arxiv.org/abs/physics/0503066",
+      "full_text_url": "https://web.stanford.edu/~cantwell/AA218_Course_Material/Resources/Invariant_Variation_Problems_Emmy_Noether.pdf",
+      "pointer": "Section 1, formulation of the theorems; subsequent variational proof",
+      "inspected": "Primary translated PDF opening and theorem framing",
+      "classification": "established_result",
+      "supports": "Continuous action symmetries yield conservation identities under the theorem's hypotheses.",
+      "limits": "A conserved charge does not preserve each object. Global conserved energy requires the relevant spacetime structure and boundary conditions."
+    },
+    {
+      "id": "P02",
+      "authors": "STAR Collaboration",
+      "title": "Measurement of e+e- Momentum and Angular Distributions from Linearly Polarized Photon Collisions",
+      "year": 2021,
+      "url": "https://arxiv.org/abs/1910.12400",
+      "doi": "10.1103/PhysRevLett.127.052302",
+      "pointer": "Abstract and reported momentum and angular distributions in ultraperipheral Au+Au collisions",
+      "inspected": "Primary abstract and reported experimental summary",
+      "classification": "established_result",
+      "supports": "Observed electron-positron pairs and angular structure consistent with photon-photon production in the electromagnetic fields of relativistic nuclei.",
+      "limits": "Not a collision of universes and not production from nothing. The report's invariant threshold calculation is standard two-photon kinematics."
+    },
+    {
+      "id": "P03",
+      "authors": "Hoernisa Iminniyaz, Manuel Drees, Xuelei Chen",
+      "title": "Relic Abundance of Asymmetric Dark Matter",
+      "year": 2011,
+      "url": "https://arxiv.org/html/1104.5548",
+      "doi": "10.1088/1475-7516/2011/07/003",
+      "pointer": "Section 2, equations 2 and 6-10; section 3 for the late abundance approximation",
+      "inspected": "Primary full-text HTML, assumptions and abundance equations",
+      "classification": "conditional_model",
+      "supports": "Pair-only annihilation conserves the difference of entropy-normalized yields while their sum evolves.",
+      "limits": "Assumes adiabatic cosmology and no later source, decay or same-species annihilation. The present probe begins after inverse production is negligible and does not reproduce a full thermal freeze-out calculation."
+    },
+    {
+      "id": "P04",
+      "authors": "A. D. Sakharov",
+      "title": "Violation of CP invariance, C asymmetry, and baryon asymmetry of the universe",
+      "year": 1967,
+      "url": "https://cds.cern.ch/record/721864",
+      "reproduced_text_url": "https://indico.cern.ch/event/57549/attachments/989844/1407468/CERN_CP_Lectures_12.pdf",
+      "pointer": "JETP Letters 5, 24-27, original proposal; opening paragraph reproduced in the CERN lecture document",
+      "inspected": "Primary bibliographic record and reproduced opening of the original paper",
+      "classification": "conditional_model",
+      "supports": "Producing a baryon asymmetry is a separate problem from preserving an initial excess through annihilation.",
+      "limits": "Used for the historical proposal involving baryon-number violation and asymmetric processes, not as a newly established origin of the observed asymmetry."
+    },
+    {
+      "id": "P05",
+      "authors": "C. Ryu, M. F. Andersen, P. Clade, Vasant Natarajan, K. Helmerson, W. D. Phillips",
+      "title": "Observation of persistent flow of a Bose-Einstein condensate in a toroidal trap",
+      "year": 2007,
+      "url": "https://arxiv.org/html/0709.0012",
+      "doi": "10.1103/PhysRevLett.99.260401",
+      "pointer": "Figures 2-5 and surrounding paragraphs about geometry, constriction, drift and vortex splitting",
+      "inspected": "Primary full-text HTML",
+      "classification": "established_result",
+      "supports": "Observed circulating flow survival changes with trap geometry and constriction; apparatus limits the ten-second observation.",
+      "limits": "Does not establish an infinite lifetime. Density zeros and changes in accessible configurations can allow winding to change."
+    },
+    {
+      "id": "P06",
+      "authors": "T. W. B. Kibble",
+      "title": "Topology of cosmic domains and strings",
+      "year": 1976,
+      "url": "https://doi.org/10.1088/0305-4470/9/8/029",
+      "full_text_url": "https://www.phys.ens.psl.eu/~placais/publication/1976_topology-kibble.jphysA.pdf",
+      "pointer": "Sections 3-5: formation, topology and later evolution of defects",
+      "inspected": "Primary PDF abstract and introduction describing section scope",
+      "classification": "conditional_model",
+      "supports": "Allowed defect types depend on vacuum-manifold topology; formation and later evolution are distinct questions.",
+      "limits": "The existence of particular cosmic defects is not established by their mathematical possibility or by laboratory analogues."
+    },
+    {
+      "id": "P07",
+      "authors": "Nir Navon, Alexander L. Gaunt, Robert P. Smith, Zoran Hadzibabic",
+      "title": "Critical Dynamics of Spontaneous Symmetry Breaking in a Homogeneous Bose gas",
+      "year": 2015,
+      "url": "https://arxiv.org/abs/1410.8487",
+      "pointer": "Coherence-length dependence on quench rate; equations 1-2 and figure 4 as examined by the scales route",
+      "inspected": "Primary abstract and scales-route handoff",
+      "classification": "established_result",
+      "supports": "Experiment tests the dependence of coherence length on the rate of crossing a transition.",
+      "limits": "Does not identify a galactic universality class. Later coarsening is a proposed separate survival probe, not a new measurement here."
+    },
+    {
+      "id": "P08",
+      "authors": "Asimina Arvanitaki, Masha Baryakhtar, Xinlu Huang",
+      "title": "Discovering the QCD Axion with Black Holes and Gravitational Waves",
+      "year": 2015,
+      "url": "https://arxiv.org/abs/1411.2263",
+      "doi": "10.1103/PhysRevD.91.084011",
+      "pointer": "Section III B, equations 23-25; equation 8 for occupation and section II for superradiance",
+      "inspected": "Primary PDF downloaded and relevant text read",
+      "classification": "conditional_model",
+      "supports": "A real-boson cloud's occupation can grow by superradiance and decline by pair annihilation while retaining a recognizable spatial mode.",
+      "limits": "Rates and astronomical abundance depend on particle and black-hole properties. Historical event forecasts and exclusions were not treated as current observational results."
+    },
+    {
+      "id": "P09",
+      "authors": "S. Erne, R. Buecker, T. Gasenzer, J. Berges, J. Schmiedmayer",
+      "title": "Observation of universal dynamics in an isolated one-dimensional Bose gas far from equilibrium",
+      "year": 2018,
+      "url": "https://arxiv.org/abs/1805.12310",
+      "doi": "10.1038/s41586-018-0667-0",
+      "pointer": "Equation 1; figures 2-4; text accompanying figure 4 on particle and energy transport",
+      "inspected": "Primary PDF downloaded and relevant experimental discussion read",
+      "classification": "established_result",
+      "supports": "Measured evolving low-momentum scaling, approximate number conservation in the moving scaling region, and energy redistribution outside it after preparation.",
+      "limits": "The cooling quench first removes energetic atoms. Subsequent redistribution does not show that every isolated system condenses or that gravity shares this exponent."
+    },
+    {
+      "id": "P10",
+      "authors": "Edward Seidel, Wai-Mo Suen",
+      "title": "Formation of Solitonic Stars Through Gravitational Cooling",
+      "year": 1994,
+      "url": "https://arxiv.org/abs/gr-qc/9309015",
+      "source_url": "https://arxiv.org/src/gr-qc/9309015",
+      "doi": "10.1103/PhysRevLett.72.2516",
+      "pointer": "Sections I-II and figures 1-3; downloaded TeX lines 115-153, 210-244 and 264-306",
+      "inspected": "Original 1993 arXiv TeX retrieved and read after PDF retrieval failed",
+      "classification": "conditional_model",
+      "supports": "Self-gravitating massive scalar configurations can form bound objects by ejecting scalar-field energy without electromagnetic cooling.",
+      "limits": "Spherical examples demonstrate existence, not a universal efficiency. These are Einstein-Klein-Gordon and related Newtonian models, not AeST. Historical dark-matter exclusions are not adopted."
+    },
+    {
+      "id": "P11",
+      "authors": "Cora Uhlemann, Michael Kopp, Thomas Haugg",
+      "title": "Schrodinger method as N-body double and UV completion of dust",
+      "year": 2014,
+      "url": "https://arxiv.org/html/1403.5567",
+      "doi": "10.1103/PhysRevD.90.023517",
+      "pointer": "Sections II.2 and II.4; equations 13-14; section IV.2 and figures 3-7",
+      "inspected": "Primary full-text HTML, Madelung equations and numerical collapse example",
+      "classification": "conditional_model",
+      "supports": "A single wavefunction and its smoothed phase-space distribution can describe momentum dispersion and multistream behavior through shell crossing.",
+      "limits": "Its pointwise Madelung velocity remains single valued away from nodes. Coarse phase-space streams are a distinct description. This is no derivation of AeST dynamics."
+    },
+    {
+      "id": "P12",
+      "authors": "D. G. Levkov, A. G. Panin, I. I. Tkachev",
+      "title": "Gravitational Bose-Einstein condensation in the kinetic regime",
+      "year": 2018,
+      "url": "https://arxiv.org/html/1804.05857",
+      "doi": "10.1103/PhysRevLett.121.151301",
+      "pointer": "Equations 1-4; section 5 paragraph after equation 5; section 6 virial estimate",
+      "inspected": "Primary full-text HTML, kinetic assumptions, relaxation time and regime caveat",
+      "classification": "conditional_model",
+      "supports": "Gravitational condensation can occur with a calculable kinetic relaxation time in highly occupied boson systems.",
+      "limits": "Requires Rmv/hbar and mv^2 tau/hbar much greater than one. The section 6 coefficient assumes an approximate virial relation. Section 5 does not identify ordinary power-law turbulent cascades in its gravitational relaxation."
+    },
+    {
+      "id": "P13",
+      "authors": "D. V. Semikoz, I. I. Tkachev",
+      "title": "Condensation of bosons in kinetic regime",
+      "year": 1997,
+      "url": "https://arxiv.org/abs/hep-ph/9507306",
+      "doi": "10.1103/PhysRevD.55.489",
+      "pointer": "Abstract, weak lambda phi^4 interaction and two kinetic stages",
+      "inspected": "Primary abstract and publication record",
+      "classification": "conditional_model",
+      "supports": "Short-range scalar self-interactions support kinetic condensation with self-similar stages in the studied model.",
+      "limits": "This interaction kernel differs from gravitational Landau kinetics. No quantitative cascade result was transferred to AeST."
+    },
+    {
+      "id": "P14",
+      "authors": "A. S. Dmitriev, D. G. Levkov, A. G. Panin, I. I. Tkachev",
+      "title": "Self-similar kinetics for gravitational Bose-Einstein condensation",
+      "year": 2025,
+      "url": "https://arxiv.org/html/2509.02694v1",
+      "pointer": "Equations 1-3; section IV equations 22-26; section V.2 equations 32-33",
+      "inspected": "Primary preprint HTML, overview and stationary-cascade analysis",
+      "classification": "conditional_model",
+      "supports": "Evolving gravitational kinetic profiles can be self-similar while a stationary power-law cascade has fluxes unsuitable for the condensation process studied.",
+      "limits": "Restricted kinetic approximation and source/boundary assumptions. The parameter D labels scaling, not a spatial fractal dimension. No general equivalence to short-range turbulence is asserted."
+    },
+    {
+      "id": "P15",
+      "authors": "Marianthi Bataki, Constantinos Skordis, Tom Zlosnik",
+      "title": "Aether scalar tensor theory: Hamiltonian Formalism",
+      "year": 2024,
+      "url": "https://arxiv.org/html/2307.15126v3",
+      "doi": "10.1103/PhysRevD.110.044015",
+      "pointer": "Section II equations 1-4; sections VI-VII and nonlinear degree-of-freedom count",
+      "inspected": "Primary HTML action, fields and conclusions",
+      "classification": "conditional_model",
+      "supports": "AeST includes scalar, vector and metric dynamics with six physical degrees of freedom. The stated action is the basis for the direct shift-current derivation.",
+      "limits": "A degree-of-freedom count is not a nonlinear collapse or energy-retention result. Stability on Minkowski backgrounds does not establish stability on every relevant background."
+    },
+    {
+      "id": "P16",
+      "authors": "Constantinos Skordis, Tom Zlosnik",
+      "title": "New Relativistic Theory for Modified Newtonian Dynamics",
+      "year": 2021,
+      "url": "https://arxiv.org/html/2007.00082v3",
+      "doi": "10.1103/PhysRevLett.127.161302",
+      "pointer": "Equation 5 action; Cosmological observables paragraph deriving K_Q=I0/a^3; equations 9-12 and explicit non-closure paragraph",
+      "inspected": "Primary full-text HTML, action and perturbation-fluid discussion",
+      "classification": "conditional_model",
+      "supports": "Shift charge fixes a homogeneous dilution law with an initial-condition normalization. Effective pressure also depends on vector perturbations.",
+      "limits": "The cosmological linear system is not a closed ordinary dark fluid. It does not derive the notebook's nonlinear thermal floor."
+    },
+    {
+      "id": "P17",
+      "authors": "Gavin E. Crooks",
+      "title": "Entropy production fluctuation theorem and the nonequilibrium work relation for free energy differences",
+      "year": 1999,
+      "url": "https://arxiv.org/abs/cond-mat/9901352",
+      "doi": "10.1103/PhysRevE.60.2721",
+      "pointer": "Equations 2, 5-7; section III preparation and reverse-process conditions",
+      "inspected": "Primary PDF text, microscopic reversibility and path probability derivation",
+      "classification": "established_result",
+      "supports": "A relation between forward and appropriately reversed path probabilities for specified stochastic dynamics and thermodynamic protocols.",
+      "limits": "Not a universal prescription for reversing the cosmos, and not an explanation for the cosmological low-entropy boundary condition."
+    },
+    {
+      "id": "P18",
+      "authors": "Latham Boyle, Kieran Finn, Neil Turok",
+      "title": "CPT-Symmetric Universe",
+      "year": 2018,
+      "url": "https://arxiv.org/html/1803.08928",
+      "doi": "10.1103/PhysRevLett.121.251301",
+      "pointer": "Abstract; Introduction; Spacetime background and perturbations",
+      "inspected": "Primary HTML opening, continuation hypothesis and dark-matter symmetry",
+      "classification": "untested_conjecture",
+      "supports": "An example of a mathematically specified cosmological symmetry hypothesis with a proposed stable relic.",
+      "limits": "The state-level CPT assumption is additional to microscopic CPT symmetry. This is not a collision model or a consequence of reversing electron-positron annihilation. Its predictions were not adjudicated against current data here."
+    },
+    {
+      "id": "P19",
+      "authors": "James R. A. Davenport and colleagues",
+      "title": "The Rise and Fall of the Eclipsing Binary HS Hydrae",
+      "year": 2021,
+      "url": "https://arxiv.org/abs/2107.10954",
+      "doi": "10.3847/1538-3881/ac1f97",
+      "pointer": "Abstract: combined DASCH and TESS history and cessation of eclipses",
+      "inspected": "Primary abstract, after evidence-route handoff",
+      "classification": "established_result",
+      "supports": "Observed eclipse disappearance can accompany survival of the underlying binary and changed orbital inclination.",
+      "limits": "Detailed instrumental selection and historical-data analysis belong to the evidence route. The predicted future return of eclipses was not used as an observed fact."
+    },
+    {
+      "id": "P20",
+      "authors": "E. K. Anderson and the ALPHA Collaboration",
+      "title": "Observation of the effect of gravity on the motion of antimatter",
+      "year": 2023,
+      "url": "https://www.nature.com/articles/s41586-023-06527-1",
+      "doi": "10.1038/s41586-023-06527-1",
+      "pointer": "Abstract and likelihood analysis of the local gravitational acceleration",
+      "inspected": "Primary paper abstract and measurement summary",
+      "classification": "established_result",
+      "supports": "Antihydrogen released in the ALPHA-g apparatus is attracted toward Earth.",
+      "limits": "The reported acceleration has substantial uncertainty. This measurement does not establish arbitrary antimatter properties or any cosmological branch hypothesis.",
+      "full_text_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10533407/"
+    }
+  ],
+  "own_work": [
+    {
+      "id": "O01",
+      "classification": "own_inference",
+      "file": "probes/persistence/persistence_probes.py",
+      "result_file": "probes/persistence/results.json",
+      "claim": "Exact post-production annihilation solution illustrates finite exposure and conserved excess as distinct survival mechanisms.",
+      "checks": "RK4 agreement, conserved difference, symmetric limit",
+      "limits": "No full freeze-out integration or astronomical abundance fit."
+    },
+    {
+      "id": "O02",
+      "classification": "own_inference",
+      "file": "probes/persistence/persistence_probes.py",
+      "claim": "A free standing wave has zero current and nonzero momentum variance and energy.",
+      "checks": "Numerical normalization and first two momentum moments using exact derivatives",
+      "limits": "Spatially averaged Wigner momentum streams do not make the pointwise Madelung velocity multivalued. Not a self-gravitating collapse calculation."
+    },
+    {
+      "id": "O03",
+      "classification": "own_inference",
+      "file": "probes/persistence/persistence_probes.py",
+      "claim": "An assumed scaling spectrum can conserve particle number in a moving band while its kinetic energy decreases.",
+      "checks": "Simpson integration agrees with number and energy scaling exponents",
+      "limits": "Profile and exponents are inputs. No kinetic equation or global energy reservoir is simulated."
+    },
+    {
+      "id": "O04",
+      "classification": "own_inference",
+      "file": "probes/persistence/aest_current.md",
+      "claim": "Direct variation of the AeST scalar terms gives a conserved shift current, with local boundary transport and homogeneous a^3 K_Q conservation.",
+      "checks": "Analytic variation and agreement with the homogeneous relation stated in P16",
+      "limits": "Not an energy-flux calculation, entropy law or proof of nonlinear stability. Higher-derivative extensions require a revised current."
+    },
+    {
+      "id": "O05",
+      "classification": "own_inference",
+      "file": "reports/persistence.md",
+      "claim": "Observed populations should be separated into formation, survival and visibility factors when comparing relic explanations.",
+      "checks": "Constructive mechanism comparison and the observed HS Hydrae example",
+      "limits": "A general inference framework, not a fitted population model or new empirical discovery."
+    }
+  ],
+  "repository_context": [
+    {
+      "repo": "Foundation-0/gravity",
+      "head": "d8c7544e89388720fc1c13de816ddb7dd03d2096",
+      "files": [
+        "README.md",
+        "CLAIMS.md",
+        "RESEARCH_NOTEBOOK_AND_REASONING.md"
+      ],
+      "key_pointer": "RESEARCH_NOTEBOOK_AND_REASONING.md line 40: single-valued scalar and no-electromagnetic-cooling inference",
+      "status": "Read-only agent-authored research context. C-26 Dark-WHIM mechanism remains a conjecture."
+    },
+    {
+      "repo": "Foundation-0/fractals",
+      "head": "9669f5579635c3543f145e8eca86133069ad6f27",
+      "files": [
+        "README.md",
+        "gravitational-atom/atom.js",
+        "gravitational-atom/index.html"
+      ],
+      "key_pointer": "README.md gravitational-atom section and atom.js growth/occupation implementation",
+      "status": "Read-only exploratory descriptions, not observational evidence for boson clouds."
+    },
+    {
+      "repo": "Foundation-0/physics0",
+      "head": "76410c3deebf925f6c51017867dbcef29ff54e8b",
+      "files": [
+        "README.md",
+        "AREAS.md"
+      ],
+      "key_pointer": "AREAS.md periodic-orbit, lattice, proof and archived-data routes",
+      "status": "Read-only project map. Detailed linked projects were not cloned or audited in this route."
+    },
+    {
+      "repo": "Foundation-0/astr0",
+      "head": "607a11eaa83b2ec7539e0986046c3230406d2b04",
+      "files": [
+        "README.md",
+        "AREAS.md"
+      ],
+      "key_pointer": "AREAS.md plate-archive joins and disappeared eclipses",
+      "status": "Read-only project map, supplemented by the evidence-route HS Hydrae lead."
+    }
+  ],
+  "validation": {
+    "probe_checks": "Passed when persistence_probes.py ran; numerical checks are embedded assertions.",
+    "source_ledger_json": "Parsed successfully.",
+    "local_report_links": {
+      "count": 5,
+      "all_exist": true
+    },
+    "rendered_prose_check_exit_code": 0,
+    "review_limit": "No independent scientific review of this route report has yet occurred."
+  },
+  "publication_note": "Historical research snapshot prepared on 2026-11-12. Repository claims refer to the recorded studied revisions, not current main. Original research used gpt-6-astra with requested ultra reasoning; publication preparation used gpt-6.1-sol."
+}

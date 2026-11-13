@@ -40,7 +40,7 @@ All Python scripts use only the Python 3 standard library. Each certificate file
 
 ## Documentation Index
 
-- [`acceleration-evolution/`](acceleration-evolution/README.md) -- Testable constant versus H-tracking acceleration scales, reproducible predictions, and a comparison with published MUSE-DARK fitted curves. No new raw-data fit or detection claim. Includes the known inverse of annihilation and requirements for a separate cosmological-collision conjecture.
+- [`acceleration-evolution/`](acceleration-evolution/README.md) -- Pending independent reproduction. Testable constant versus H-tracking acceleration scales, reproducible predictions, and a comparison with published MUSE-DARK fitted curves. No new raw-data fit or detection claim. Includes the known inverse of annihilation and requirements for a separate cosmological-collision conjecture.
 
 - `CLAIMS.md` -- Audited ledger of `C-01` through `C-33` with explicit inputs, literature precedence, Lean lemma scope, and downgraded epistemic status tags.
 - `METHODS_AND_PLAYBOOK.md` -- Numerical methods, parameter assumptions, error-model caveats (`M-01`..`M-10`), and canonical checksum table.

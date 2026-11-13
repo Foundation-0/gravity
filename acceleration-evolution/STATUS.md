@@ -1,6 +1,6 @@
 # Acceleration evolution: evidence and continuity
 
-Capability ID: `gravity.acceleration-evolution`. Purpose: distinguish a constant galactic acceleration scale from a scale tied to cosmic expansion using reproducible predictions and appropriately qualified observations. The purpose survives changes to implementation paths.
+Capability ID: `gravity.acceleration-evolution`. Purpose: Pending independent reproduction. Distinguish a constant galactic acceleration scale from a scale tied to cosmic expansion using reproducible predictions and appropriately qualified observations. The purpose survives changes to implementation paths.
 
 Human direction: investigate the relation, develop a testable model, check existing observations, and connect gravity, fractals, physics0 and astr0. The added annihilation idea is retained as a separate hypothesis. It has not been used as a premise for the acceleration model.
 

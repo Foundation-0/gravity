@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Monographs // Foundation0 Gravity</title>
+<meta name="description" content="The four Foundation-0/gravity monographs, their LaTeX sources and figures, with SHA-256 digests from monographs/SHA256SUMS.">
+<style>
+:root{color-scheme:light;--bg:#F6F4EB;--bg-elev:#EFECE3;--bg-card:#FAF8F2;--ink:#161C24;--ink-2:#36404D;--muted:#626A74;--line:#D8D2C3;--line-strong:#A69E8C;--bronze:#C28B47;--bronze-soft:rgba(194,139,71,.13);--cyan:#258C8D;--cyan-soft:rgba(37,140,141,.13);--green:#1E7245;--green-soft:rgba(30,114,69,.12);--coral:#CC4A47;--coral-soft:rgba(204,74,71,.12);--header-bg:rgba(246,244,235,.92);--f-sans:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;--f-serif:"Iowan Old Style",Charter,"Palatino Linotype",Georgia,serif;--f-mono:ui-monospace,"SF Mono","JetBrains Mono",Menlo,Consolas,monospace;--max:1320px;--gutter:clamp(16px,3.6vw,44px)}
+[data-theme="dark"]{color-scheme:dark;--bg:#0D1117;--bg-elev:#161B22;--bg-card:#11161D;--ink:#F0F6FC;--ink-2:#C9D1D9;--muted:#8B949E;--line:#21262D;--line-strong:#3B434D;--bronze:#D49A56;--bronze-soft:rgba(212,154,86,.15);--cyan:#38BDF8;--cyan-soft:rgba(56,189,248,.14);--green:#56D364;--green-soft:rgba(86,211,100,.14);--coral:#F87171;--coral-soft:rgba(248,113,113,.14);--header-bg:rgba(13,17,23,.90)}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;background:var(--bg);color:var(--ink)}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--f-serif);font-size:18px;line-height:1.6;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+a{color:var(--cyan);text-decoration:none;border-bottom:1px solid transparent;transition:border-color .15s,color .15s}
+a:hover{border-bottom-color:currentColor}
+a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible{outline:2px solid var(--bronze);outline-offset:2px}
+.container{max-width:var(--max);margin:0 auto;padding:0 var(--gutter)}
+.mono-label,.brand-wordmark,.top-nav a,.util-btn,.eyebrow-pill,.btn-primary,.btn-secondary,.section-index,.badge,.deadend-btn,.inst-tab,.pill-btn,.arch-table th{font-family:var(--f-mono);font-weight:600;text-transform:uppercase}
+.mono-label{font-size:11.5px;letter-spacing:.15em;line-height:1.3;color:var(--muted)}
+.site-header{position:sticky;top:0;z-index:50;min-height:68px;background:var(--header-bg);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.header-inner{max-width:var(--max);margin:0 auto;padding:10px var(--gutter);display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.brand-link{display:inline-flex;align-items:center;gap:12px;color:var(--ink);border-bottom:none}
+.brand-wordmark{font-size:13px;font-weight:700;letter-spacing:.16em;color:var(--ink)}
+.brand-wordmark span{color:var(--bronze)}
+.top-nav{display:flex;align-items:center;gap:18px;flex-wrap:wrap}
+.top-nav a{font-size:11.5px;letter-spacing:.13em;color:var(--ink-2);padding:4px 0}
+.top-nav a:hover{color:var(--bronze);border-bottom-color:var(--bronze)}
+.cta-row{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:28px}
+.btn-secondary{display:inline-flex;align-items:center;gap:8px;background:transparent;color:var(--ink);font-size:12px;letter-spacing:.14em;padding:11px 18px;border:1px solid var(--line-strong);border-radius:2px;cursor:pointer}
+.btn-secondary:hover{background:var(--bg-elev)}
+.section-block{border-bottom:1px solid var(--line);padding:clamp(48px,6vw,88px) 0}
+.section-header{display:flex;align-items:baseline;justify-content:space-between;gap:16px;flex-wrap:wrap;padding-bottom:18px;margin-bottom:28px;border-bottom:1px solid var(--line)}
+.section-index{font-size:12px;font-weight:700;letter-spacing:.16em;color:var(--bronze);display:block;margin-bottom:6px}
+.section-title{font-family:var(--f-sans);font-size:clamp(26px,2.8vw,40px);font-weight:700;line-height:1.12;letter-spacing:-.015em;margin:0;color:var(--ink)}
+.section-note{font-size:17px;color:var(--muted);max-width:52ch;margin:0}
+.badge{display:inline-flex;align-items:center;gap:6px;font-size:10.5px;letter-spacing:.11em;padding:3px 8px;border-radius:2px;border:1px solid var(--line);white-space:nowrap}
+.badge-computed{background:var(--cyan-soft);color:var(--cyan);border-color:var(--cyan)}
+.badge-conjecture{background:var(--coral-soft);color:var(--coral);border-color:var(--coral)}
+.table-scroll{width:100%;overflow-x:auto}
+.arch-table{width:100%;border-collapse:collapse;font-family:var(--f-sans);font-size:14px;text-align:left}
+.arch-table th{font-size:11px;letter-spacing:.13em;color:var(--muted);background:var(--bg-elev);padding:11px 14px;border-bottom:1px solid var(--line);white-space:nowrap}
+.arch-table td{padding:11px 14px;border-bottom:1px solid var(--line);vertical-align:top;color:var(--ink-2)}
+.arch-table tr:last-child td{border-bottom:none}
+.arch-table tr:hover td{background:var(--bg-elev)}
+.code-inline{font-family:var(--f-mono);font-size:12px;color:var(--ink);background:var(--bg-elev);padding:2px 5px;border:1px solid var(--line)}
+.site-footer{padding:40px 0 56px;background:var(--bg-elev);font-family:var(--f-sans);font-size:14px;color:var(--muted)}
+.hash{font-family:var(--f-mono);font-size:11.5px;color:var(--ink-2);word-break:break-all}
+.row-note{font-size:13px;color:var(--muted)}
+.notice{border:1px solid var(--coral);background:var(--coral-soft);padding:14px 18px;font-family:var(--f-sans);font-size:15px;line-height:1.5;color:var(--ink);margin:0 0 28px}
+.group-title{font-family:var(--f-sans);font-size:20px;font-weight:700;margin:32px 0 12px;color:var(--ink)}
+.site-footer .container{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;font-family:var(--f-mono);font-size:12px}
+</style>
+<script>try{if(localStorage.getItem('f0_gravity_theme')==='dark')document.documentElement.setAttribute('data-theme','dark')}catch(_){}</script>
+</head>
+<body>
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand-link" href="../" aria-label="Foundation0 Gravity Home">
+      <svg width="30" height="30" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+        <rect x="1.5" y="1.5" width="29" height="29" stroke="currentColor" stroke-width="1.25"/>
+        <line x1="16" y1="1.5" x2="16" y2="30.5" stroke="currentColor" stroke-width=".8" stroke-opacity=".45"/>
+        <line x1="1.5" y1="16" x2="30.5" y2="16" stroke="currentColor" stroke-width=".8" stroke-opacity=".45"/>
+        <circle cx="16" cy="16" r="8.5" stroke="currentColor" stroke-width="1.2"/>
+        <circle cx="16" cy="16" r="2.6" fill="var(--bronze)"/>
+        <circle cx="7.5" cy="7.5" r="2.1" stroke="var(--cyan)" stroke-width="1.1" fill="var(--bg)"/>
+        <circle cx="24.5" cy="7.5" r="2.1" stroke="var(--bronze)" stroke-width="1.1" fill="var(--bg)"/>
+        <circle cx="7.5" cy="24.5" r="2.1" stroke="var(--bronze)" stroke-width="1.1" fill="var(--bg)"/>
+        <circle cx="24.5" cy="24.5" r="2.1" stroke="var(--cyan)" stroke-width="1.1" fill="var(--bg)"/>
+      </svg>
+      <span class="brand-wordmark">FOUNDATION0 <span>// GRAVITY</span></span>
+    </a>
+    <nav class="top-nav" aria-label="Site navigation">
+      <a href="../">Home</a>
+      <a href="../#ledger">Claims Ledger</a>
+      <a href="SHA256SUMS">SHA256SUMS</a>
+    </nav>
+  </div>
+</header>
+<main>
+  <section class="section-block">
+    <div class="container">
+      <div class="section-header">
+        <div><span class="section-index">06 // MONOGRAPHS</span><h1 class="section-title">Monographs, Sources &amp; Figures</h1></div>
+        <p class="section-note">Four monographs with their LaTeX sources and seven figures. Each file is listed with its SHA-256 digest from <a href="SHA256SUMS">monographs/SHA256SUMS</a>.</p>
+      </div>
+      <p class="notice"><strong>Status:</strong> these monographs come from the 2026-11-13 gem-nexus / Carbon vault drop. Every result in them is an unreproduced gem-nexus / Carbon claim, pending independent reproduction, including any line in the PDFs that calls a result verified, certified, proven or machine-checked. Claim statuses follow <a href="https://github.com/Foundation-0/gravity/blob/main/CLAIMS.md">CLAIMS.md</a>. The Lean files in <span class="code-inline">formal/</span> check only the literal integer and rational goals tagged <span class="code-inline">PROVEN (ARITHMETIC-LEMMA)</span>.</p>
+      <p style="font-family:var(--f-sans);font-size:15px;color:var(--ink-2);margin:0 0 8px">Check your downloads: <span class="code-inline">cd monographs &amp;&amp; sha256sum -c SHA256SUMS</span></p>
+      <h2 class="group-title">Monographs (PDF)</h2>
+<div class="table-scroll"><table class="arch-table"><thead><tr><th>Status</th><th>Document</th><th>File</th><th>SHA-256</th></tr></thead><tbody>
+<tr><td><span class="badge badge-conjecture">Pending reproduction</span></td><td><span class="mono-label">Waves 1-4 synthesis / PDF</span><br><a href="unified_quantum_condensate_gravity_monograph.pdf">Unified Quantum-Condensate Gravity and Dark Matter: Exact No-Go Theorems, Empirical Scale Flow, and Action-Level Bogoliubov Unification</a><br><span class="row-note">Claims C-01 to C-11 in CLAIMS.md. Figures: <a href="fig1_rar_and_scale_flow.pdf">Figure 1</a>, <a href="fig2_nogo_theorems.pdf">Figure 2</a>, <a href="fig3_bogoliubov_unification.pdf">Figure 3</a>. LaTeX source: <a href="unified_quantum_condensate_gravity_monograph.tex">unified_quantum_condensate_gravity_monograph.tex</a>.</span></td><td><span class="code-inline">unified_quantum_condensate_gravity_monograph.pdf</span><br><span class="mono-label">536 KB</span></td><td><code class="hash">1a087db2c0166eac653284a8902cd3b1c55122f8079ebe0dc21503008a7e7950</code></td></tr>
+<tr><td><span class="badge badge-conjecture">Pending reproduction</span></td><td><span class="mono-label">Wave 5 synthesis / PDF</span><br><a href="unified_forces_and_stochastic_quantum_monograph.pdf">Cross-Scale Force Unification and Stochastic N-Body Quantum Emergence</a><br><span class="row-note">Claims C-12 to C-17 in CLAIMS.md. Figures: <a href="fig4_unified_force_phases.pdf">Figure 4</a>, <a href="fig5_stochastic_quantum_emergence.pdf">Figure 5</a>. LaTeX source: <a href="unified_forces_and_stochastic_quantum_monograph.tex">unified_forces_and_stochastic_quantum_monograph.tex</a>.</span></td><td><span class="code-inline">unified_forces_and_stochastic_quantum_monograph.pdf</span><br><span class="mono-label">475 KB</span></td><td><code class="hash">f4740a7816a8b085bf59b0cc97784dce0c96ce86ea247cc1b2e07965eeb26668</code></td></tr>
+<tr><td><span class="badge badge-conjecture">Pending reproduction</span></td><td><span class="mono-label">Wave 6 synthesis / PDF</span><br><a href="wave6_convergence_and_methods_monograph.pdf">Convergence Synthesis and Research Playbook: Resolving Technicality Obstructions Across Quantum-Condensate Gravity (Waves 1-6)</a><br><span class="row-note">Claims C-18 to C-20 in CLAIMS.md. M-01 to M-05 are the methods defined in Section 4 of this monograph; METHODS_AND_PLAYBOOK.md uses the same IDs for a different list. Figures: <a href="fig6_convergence_unification.pdf">Figure 6</a>. LaTeX source: <a href="wave6_convergence_and_methods_monograph.tex">wave6_convergence_and_methods_monograph.tex</a>.</span></td><td><span class="code-inline">wave6_convergence_and_methods_monograph.pdf</span><br><span class="mono-label">379 KB</span></td><td><code class="hash">0abefc3ada9677e6c5714fd7ac1b29d886ec21ee2e01134197b2c00d4e24d034</code></td></tr>
+<tr><td><span class="badge badge-conjecture">Pending reproduction</span></td><td><span class="mono-label">Wave 7 audit / PDF</span><br><a href="wave7_group_cluster_roton_threshold_audit.pdf">Wave-7 Empirical Roton-Threshold Audit Across Galaxy Groups and Clusters (60-1494 km/s)</a><br><span class="row-note">Claims C-21 and C-22 in CLAIMS.md (Wave 7), tested against the Wave 6 threshold claim C-19. Figures: <a href="fig7_group_cluster_threshold_audit.pdf">Figure 7</a>. LaTeX source: <a href="wave7_group_cluster_roton_threshold_audit.tex">wave7_group_cluster_roton_threshold_audit.tex</a>.</span></td><td><span class="code-inline">wave7_group_cluster_roton_threshold_audit.pdf</span><br><span class="mono-label">309 KB</span></td><td><code class="hash">aba92bf9803125c3921076c64e30cc6b3162655b0f492ec601fd067e188a636d</code></td></tr>
+</tbody></table></div>
+      <h2 class="group-title">LaTeX sources</h2>
+<div class="table-scroll"><table class="arch-table"><thead><tr><th>Status</th><th>Document</th><th>File</th><th>SHA-256</th></tr></thead><tbody>
+<tr><td><span class="badge badge-conjecture">Pending reproduction</span></td><td><span class="mono-label">Waves 1-4 synthesis / LaTeX source</span><br><a href="unified_quantum_condensate_gravity_monograph.tex">Unified Quantum-Condensate Gravity and Dark Matter: Exact No-Go Theorems, Empirical Scale Flow, and Action-Level Bogoliubov Unification</a></td><td><span class="code-inline">unified_quantum_condensate_gravity_monograph.tex</span><br><span class="mono-label">40 KB</span></td><td><code class="hash">85d431bb946e9a4dcb49a13697ef4944ec6bbb2f04c5f736969927f51c37ccfd</code></td></tr>
+<tr><td><span class="badge badge-conjecture">Pending reproduction</span></td><td><span class="mono-label">Wave 5 synthesis / LaTeX source</span><br><a href="unified_forces_and_stochastic_quantum_monograph.tex">Cross-Scale Force Unification and Stochastic N-Body Quantum Emergence</a></td><td><span class="code-inline">unified_forces_and_stochastic_quantum_monograph.tex</span><br><span class="mono-label">27 KB</span></td><td><code class="hash">b614db58068da3086806fe413c6a9f7b6feb43e8e3609b67e2eade33d2bd8a6e</code></td></tr>
+<tr><td><span class="badge badge-conjecture">Pending reproduction</span></td><td><span class="mono-label">Wave 6 synthesis / LaTeX source</span><br><a href="wave6_convergence_and_methods_monograph.tex">Convergence Synthesis and Research Playbook: Resolving Technicality Obstructions Across Quantum-Condensate Gravity (Waves 1-6)</a></td><td><span class="code-inline">wave6_convergence_and_methods_monograph.tex</span><br><span class="mono-label">23 KB</span></td><td><code class="hash">b180c80cd4dd2fff90222faa95ee0b55be258a12bb3a986ec18590786710f96f</code></td></tr>
+<tr><td><span class="badge badge-conjecture">Pending reproduction</span></td><td><span class="mono-label">Wave 7 audit / LaTeX source</span><br><a href="wave7_group_cluster_roton_threshold_audit.tex">Wave-7 Empirical Roton-Threshold Audit Across Galaxy Groups and Clusters (60-1494 km/s)</a></td><td><span class="code-inline">wave7_group_cluster_roton_threshold_audit.tex</span><br><span class="mono-label">21 KB</span></td><td><code class="hash">fb127ea38bda38018843b1df3f374f90180d7e9220f77b8c17b079f22598bc8d</code></td></tr>
+</tbody></table></div>
+      <h2 class="group-title">Figures (PDF)</h2>
+<div class="table-scroll"><table class="arch-table"><thead><tr><th>Status</th><th>Document</th><th>File</th><th>SHA-256</th></tr></thead><tbody>
+<tr><td><span class="badge badge-conjecture">Pending reproduction</span></td><td><span class="mono-label">Figure 1 / PDF</span><br><a href="fig1_rar_and_scale_flow.pdf">RAR and scale flow</a><br><span class="row-note">Used in the Waves 1-4 synthesis monograph.</span></td><td><span class="code-inline">fig1_rar_and_scale_flow.pdf</span><br><span class="mono-label">51 KB</span></td><td><code class="hash">0037118b5b13ae6d847d150d1c39bdf6f9e1b4ead4735b72c170d27cf99a7b6b</code></td></tr>
+<tr><td><span class="badge badge-conjecture">Pending reproduction</span></td><td><span class="mono-label">Figure 2 / PDF</span><br><a href="fig2_nogo_theorems.pdf">No-go theorems</a><br><span class="row-note">Used in the Waves 1-4 synthesis monograph.</span></td><td><span class="code-inline">fig2_nogo_theorems.pdf</span><br><span class="mono-label">58 KB</span></td><td><code class="hash">bd0fabe3406227135cff22a61004bac4668dda290c9abb05550ba981c38cb65e</code></td></tr>
+<tr><td><span class="badge badge-conjecture">Pending reproduction</span></td><td><span class="mono-label">Figure 3 / PDF</span><br><a href="fig3_bogoliubov_unification.pdf">Bogoliubov unification</a><br><span class="row-note">Used in the Waves 1-4 synthesis monograph.</span></td><td><span class="code-inline">fig3_bogoliubov_unification.pdf</span><br><span class="mono-label">54 KB</span></td><td><code class="hash">5dfcd466290ffa2fff6c4f95595848f2cc715e17b1c48baa59e1a58678c506b1</code></td></tr>
+<tr><td><span class="badge badge-conjecture">Pending reproduction</span></td><td><span class="mono-label">Figure 4 / PDF</span><br><a href="fig4_unified_force_phases.pdf">Unified force phases</a><br><span class="row-note">Used in the Wave 5 synthesis monograph.</span></td><td><span class="code-inline">fig4_unified_force_phases.pdf</span><br><span class="mono-label">55 KB</span></td><td><code class="hash">2d9f5f06b3ae79539caa36a455da5b9ab81b85226fba2bf9075ff4d1ff2baf8e</code></td></tr>
+<tr><td><span class="badge badge-conjecture">Pending reproduction</span></td><td><span class="mono-label">Figure 5 / PDF</span><br><a href="fig5_stochastic_quantum_emergence.pdf">Stochastic quantum emergence</a><br><span class="row-note">Used in the Wave 5 synthesis monograph.</span></td><td><span class="code-inline">fig5_stochastic_quantum_emergence.pdf</span><br><span class="mono-label">66 KB</span></td><td><code class="hash">72b63c59a98f9e8ca250caf50a8b52d24cad36f53bd53f34600acc4b140adc3d</code></td></tr>
+<tr><td><span class="badge badge-conjecture">Pending reproduction</span></td><td><span class="mono-label">Figure 6 / PDF</span><br><a href="fig6_convergence_unification.pdf">Convergence unification</a><br><span class="row-note">Used in the Wave 6 synthesis monograph.</span></td><td><span class="code-inline">fig6_convergence_unification.pdf</span><br><span class="mono-label">57 KB</span></td><td><code class="hash">1c5b640d82c27a5deae095f70374e960fca75d62c9e3d52ad66ebaa6fde6879a</code></td></tr>
+<tr><td><span class="badge badge-conjecture">Pending reproduction</span></td><td><span class="mono-label">Figure 7 / PDF</span><br><a href="fig7_group_cluster_threshold_audit.pdf">Group and cluster threshold audit</a><br><span class="row-note">Used in the Wave 7 audit monograph.</span></td><td><span class="code-inline">fig7_group_cluster_threshold_audit.pdf</span><br><span class="mono-label">71 KB</span></td><td><code class="hash">51563fd9eb34cd4a1118042299c9d70f03b8d0ccaf040d0d46db25b23ecc744b</code></td></tr>
+</tbody></table></div>
+    </div>
+  </section>
+</main>
+<footer class="site-footer">
+  <div class="container"><span><a href="../">Foundation0 // Gravity</a></span><span><a href="https://github.com/Foundation-0/gravity/tree/main/monographs">Source on GitHub</a></span></div>
+</footer>
+</body>
+</html>

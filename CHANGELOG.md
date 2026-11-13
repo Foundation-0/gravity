@@ -1,18 +1,27 @@
 # Changelog (`Foundation-0/gravity`)
 
-> **Attribution:** Maintained by AI agent (Gemini, Google, via `orda-aska` for `Foundation-0`); not yet reviewed by a person. Claim identifiers (`C-01`..`C-33`) reconciled in Wave 8 to match `CLAIMS.md` and generator scripts verbatim.
+> **Attribution:** Maintained by AI agent (Gemini, Google, via `orda-aska` for `Foundation-0`). Not yet reviewed by a person. Claim identifiers currently run from `C-01` through `C-33`. Later waves extend the earlier Wave 8 audit. The ledger is maintained to match `CLAIMS.md` and generator scripts verbatim.
 
-## Wave 12 -- 2026-11-12: Cosmic-Dawn Compact Quasar Pair `J1602+4228AB` (`Napowawa'enakaulua`) Audit (`C-31`..`C-33`; `M-10`)
-- Added `wave12_cosmic_dawn_quasar_collapse.py`, `results/wave12_cosmic_dawn_quasar_certificates.json` (`sha256_canonical = f46cc3be82489f450d1a3ce8c583fad15970050f938bd4c8b5510fe704ba48b6`), and `formal/Wave12QuasarCollapse.lean`, and expanded `RESEARCH_NOTEBOOK_AND_REASONING.md` (Sec. 5) and `METHODS_AND_PLAYBOOK.md` (`M-10`).
-- Audited Onorato et al. (2026, ApJL 1011, L59, arXiv:2609.31835; NOIRLab `noirlab2627`) for `J1602+4228AB` at `z = 6.0781/6.0785` (`911.72 Myr` post-Big Bang, `5.56 pkpc` separation, `1.5e9` & `4.0e8 M_sun`, `lambda_Edd = 1.23` & `1.07`): quantified the `100 M_sun` Pop III thin-disk duty-cycle wall (`f_duty = 1.127` & `1.037 > 1` from `z = 20`; `2.535` at Kerr `eps_r = 0.20`) vs. `10^5 M_sun` direct-collapse seeds (`f_duty = 0.533` & `0.529`), while recording the `~2x` virial mass systematic and pending HST lens model (`C-31`).
-- Evaluated Wave-10's zero-free-parameter nonlinear collapse dispersion at `z = 6.0783` (`R_* = 7.96 comoving kpc`, `M_* = 8.39e4 M_sun`, `sigma_*(6.08) = 0.97 km/s`), showing a `176.8 km/s` host halo inverts from `f_trap = 0.0` at `z = 0` to `f_trap = 0.99997` at `z = 6.08`, cutting `30 pkpc` feeder free-fall from `384.82 Myr` to `109.04-122.79 Myr` and restoring Chandrasekhar dynamical friction in Cosmic-Dawn mergers (`C-32`).
-- Evaluated Abramowicz et al. (1988) slim-disk photon-trapping super-Eddington growth (`165-276 Myr` at `mdot = 3-5`), `5.56 pkpc` orbital projection (`|sin i cos psi| = 0.0438`), and Peters (1964) GW inspiral for `M_c = 6.4735e8 M_sun` (`3.19-50.99 Myr` once hardened to `0.05-0.10 pc`; `C-33`).
+## Wave 12 -- 2026-11-12: Conditional quasar benchmarks (`C-31`..`C-33`, `M-10`)
 
-## Wave 11 -- 2026-11-12: Machian Horizon Inertia, DESI Turnaround & CPT Pair-Condensate Audit (`C-28`..`C-30`; `M-09`)
-- Added `wave11_machian_pairing_unification.py`, `results/wave11_machian_pairing_certificates.json` (`sha256_canonical = 9a79b9e2184fcc70cb0e6b250615b57c7492af36d0a605f563bafa0ea87942f5`), and `formal/Wave11MachianZeroEnergy.lean`, and expanded `RESEARCH_NOTEBOOK_AND_REASONING.md` (Sec. 4).
-- Evaluated Sciama (1953) / Braun (2026) Hubble-horizon inertial induction (`K_gm + K_ge = 2/3 + 1/3 = 1`) and Milgrom (1999) Unruh-de Sitter scales alongside PPN `gamma = 1` and non-locality constraints (`C-28`).
-- Evaluated ADM zero-energy balance (`H_tot = 0`), DESI thawing dark-energy deceleration onset (`a_slow = 1.3897`), closed-`S^3` turnaround (`a_turn = Omega_m / |Omega_k|`), and `a_0(z)` evolution tracks (`C-29`).
-- Proved over `Int` in `formal/Wave11MachianZeroEnergy.lean` and computed in `wave11_machian_pairing_unification.py` that CPT-symmetric Mexican-hat pair bifurcation (`u -> +/- (1 + eps)`) yields zero net Noether charge (`J^0_+ + J^0_- = 0`) with strictly positive dust gravity (`rho_dust > 0`) on both sheets, connecting shift-symmetric condensate stability and axiogenesis/cogenesis to `Omega_c / Omega_b = 5.3895` (`C-30`).
+- Added the Wave 12 generator, certificate and arithmetic lemmas. The certificate now uses corrected schema 1.1. Notebook section 5 and method M-10 distinguish conditional clocks from seed or merger dynamics.
+- The 734.10 Myr growth window excludes the selected pure-H, efficiency-0.10 clock. It does not exclude every light-seed history. Primordial composition and the fixed Schwarzschild efficiency provide explicit counterexamples.
+- Corrected fixed point-mass radial times are 200.08, 121.72 and 127.16 Myr, with a 384.82 Myr Newtonian control. The nonlinear halo mass and prescribed trapping fraction do not establish a seed, capture or friction.
+- Slim-disk retained mass gives 273.78 and 161.23 Myr at mdot three and five. Orbital projection and Peters clocks are conditional. No hardening history or gravitational-wave background is predicted.
+
+## Wave 11 -- 2026-11-12: Algebra and conditional expansion (`C-28`..`C-30`, `M-09`)
+
+- Added the Wave 11 generator, certificate and arithmetic lemmas. The certificate now uses corrected schema 1.1.
+- The induction partition is illustrative. The cited proposal is by Manuel Urueña Palomo (2026), arXiv:2610.09987v2. It is not an established derivation of inertia here.
+- Curved CPL models satisfy present density closure. Deceleration onset and recollapse depend on the chosen unmeasured future continuation. A Hamiltonian constraint is not a universe-origin process.
+- Selected supercritical polynomial states have opposite charges and equal positive densities. Current conservation and negative kinetic curvature obstruct the proposed minimal origin. Shift symmetry permits derivative portals. No protected remnant or abundance is derived.
+
+## 2026-11-12: Wave 11 and Wave 12 audit corrections
+
+- Replaced the outer-acceleration infall shortcut with energy-conserving radial quadrature and analytic controls. Corrected times are `200.08`, `121.72` and `127.16 Myr`, rather than `182.27`, `109.04` and `122.79 Myr`.
+- Added opacity and fixed Schwarzschild-efficiency growth counterexamples. Corrected slim-disk retained mass to subtract radiated energy in the stated inflow convention.
+- Restored present density closure in curved CPL examples. Corrected the Urueña Palomo citation and removed unsupported origin, protected-remnant, seed and gravitational-wave background inferences.
+- Regenerated only Wave 11 and Wave 12 certificates as schema 1.1. [Correction details](WAVE11_12_CORRECTIONS.md) document changed fields, limits and seven numerical controls. The earlier independent findings are public in [PR #11](https://github.com/Foundation-0/gravity/pull/11). Human scientific review remains pending.
 
 ## Wave 10 -- 2026-11-12: Linear Sound-Speed No-Go, Dark-WHIM Nonlinear Collapse Scale & Reasoning Ledger (`C-25`..`C-27`; `M-08`)
 - Added `wave10_covariant_jeans_unification.py`, `results/wave10_covariant_jeans_certificates.json` (`sha256_canonical = 7dd4b40172b8fe261c3028f7a6af6e2b5131fb93cd83d10c439e3c5f0c5be3d4`), `formal/Wave10JeansDerivation.lean`, and `RESEARCH_NOTEBOOK_AND_REASONING.md`.
@@ -48,4 +57,4 @@
 - Added `wave3_empirical_audit.py` fitting the 14 SPARC `RARbins.mrt` bin means and Mistele et al. (2024) Table 2 kinematic/weak-lensing BTFR bins (`C-08`).
 
 ## Waves 1-2 -- 2026-11-11: Baseline Scaling, Soliton & Rational-Interval Scripts (`C-01`..`C-07`)
-- Added `verify_all.py` (`results/certificates.json` covering `C-01` coordinate-fractal exponent, `C-02` `p=3` flux exponent, `C-03` Schrodinger-Poisson soliton, `C-04` single-boson condensation window, `C-05` two-species degeneracy example, `C-06` shell-ripple toy integral, and `C-07` AQUAL external-field quadrature), `formal/verify_exact_rational_proofs.py` (`results/exact_rational_proof_certificates.json`), and `formal/GravityClaims.lean`. quadrature`formal/verify_exact_rational_proofs.py` (`results/exact_rational_proof_certificates.json`), and `formal/GravityClaims.lean`.AQUAL external-field quadrature), `formal/verify_exact_rational_proofs.py` (`results/exact_rational_proof_certificates.json`), and `formal/GravityClaims.lean`.
+- Added `verify_all.py` (`results/certificates.json` covering `C-01` coordinate-fractal exponent, `C-02` `p=3` flux exponent, `C-03` Schrodinger-Poisson soliton, `C-04` single-boson condensation window, `C-05` two-species degeneracy example, `C-06` shell-ripple toy integral, and `C-07` AQUAL external-field quadrature), `formal/verify_exact_rational_proofs.py` (`results/exact_rational_proof_certificates.json`), and `formal/GravityClaims.lean`.

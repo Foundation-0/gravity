@@ -1,0 +1,17 @@
+{
+  "CHANGELOG.md": "30661fc8aca473bc136f2c251509868d16c973c8ea572f3d574ebd31bd1d88a6",
+  "METHODS_AND_PLAYBOOK.md": "ecdb12077d8ddfb1b8a787064f07e5028adcd308c6a11274600e596f8e4a6bd7",
+  "RESEARCH_NOTEBOOK_AND_REASONING.md": "3e512058fd3107ccd904bb8bfa58ea0c2e168fd053b0c05b0b891030d10e701f",
+  "SHA256SUMS": "8559c0e2ff5f74693d4ea00cd4dabce7ce09bf08648d450c5d9e42d87f2083a4",
+  "research/wave11-12-review-20261112/README.md": "df1bb88416f672c6b9a97ab75d5d7056b823bf8bda261888d076d98737db00e4",
+  "wave11_machian_pairing_unification.py": "88dd0f9827b2fa29292597c976695ce559d135d6d4867f59cde0d0de37426bda",
+  "wave12_cosmic_dawn_quasar_collapse.py": "53cb171ed423ab98509f62017b68d2cce935c9b6468cd9e5f098a02b465c99b0",
+  "results/wave11_machian_pairing_certificates.json": "fed7d58b8959cc68073bbf2020c7dca895fb4bac0b07adb9d95c3bee56d1c94b",
+  "results/wave12_cosmic_dawn_quasar_certificates.json": "78b988c2a6a83f23a8dc637626fdc63b9122579c2c3e37eaf9365deb2539ca79",
+  "test_wave11_12_corrections.py": "4a69d34265fe05e33f17a5afde1b529f508b4405753a300909d27ce41f14441c",
+  "WAVE11_12_CORRECTIONS.md": "16edeec60b7a6ac3aab790021fab866273e95f508da8fb7ddebd5d6a78ff8bf1",
+  "research/wave11-12-review-20261112/REVIEW.md": "8aed8f4fbbbd8862bf29c70fe8f429d09c7c9c0897b77f431beabf30ea44d0a4",
+  "research/wave11-12-review-20261112/check.py": "eab27a99be552ffe9ea0db7cbcc9c54a7ed1fc9f17d88709ffba518b46085865",
+  "research/wave11-12-review-20261112/checkpoint.json": "70c1ef0b953a33dd264f715ef7fca3f2a915689da597c3da4e98406f95b290be",
+  "research/wave11-12-review-20261112/evidence.json": "691e9a7fbccaafc339db65a20b43b4dc655b92d94bc8591f1489ab8f9bcf99a4"
+}

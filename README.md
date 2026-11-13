@@ -43,6 +43,4 @@ All Python scripts use only the Python 3 standard library. Each certificate file
 - `CLAIMS.md` -- Audited ledger of `C-01` through `C-33` with explicit inputs, literature precedence, Lean lemma scope, and downgraded epistemic status tags.
 - `METHODS_AND_PLAYBOOK.md` -- Numerical methods, parameter assumptions, error-model caveats (`M-01`..`M-10`), and canonical checksum table.
 - `RESEARCH_NOTEBOOK_AND_REASONING.md` -- Complete reasoning trail, rejected operator dead ends, tangential WHIM/entropy-floor realizations, Cosmic-Dawn quasar confrontation, and next-agent handoff queue.
-- `CHANGELOG.md` -- Reconciled chronological history across Waves 1-12 matching `CLAIMS.md` and code identifiers.- 
-- mic-Dawn quasar confrontation, and next-agent handoff queue.
 - `CHANGELOG.md` -- Reconciled chronological history across Waves 1-12 matching `CLAIMS.md` and code identifiers.

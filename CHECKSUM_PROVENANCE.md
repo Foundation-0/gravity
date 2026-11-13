@@ -1,5 +1,7 @@
 # Checksum snapshot provenance
 
+## Historical snapshot at `0bf72bf`
+
 Source commit: `364fa3e9f740f42acaa1991428ce043f547e10dd`. Manifest last changed at `f8030d6`.
 
 This snapshot records file bytes only. It does not establish proof compilation, generator agreement, or physical validity. No scientific values or source files are changed.
@@ -40,3 +42,15 @@ The full Lean build on the source commit fails. The separate corrections in PRs 
 Manifest values describe this branch snapshot. Recompute hashes for files subsequently changed by PRs 10, 12, 13, or 14. These independent changes have not been composed on main.
 
 Recompute the listed bytes with `shasum -a 256 -c SHA256SUMS`. A successful result means only that the listed bytes match this snapshot.
+
+## Update to current main
+
+This branch incorporates main at `d1444481cdefc59a275ede2fef740ea2cf48eeec` through a merge. The historical snapshot above describes the earlier checks at `0bf72bf773346fe34b8f4f7a71b1a31049932117`.
+
+An independent audit of main's Git blobs found 11 mismatches among its 36 manifest entries: `verify_all.py`, the Wave 5 generator, the exact rational verifier, the GravityClaims and Wave 5/6/7 Lean files, the Wave 4 certificate, `README.md`, `CLAIMS.md`, and `CHANGELOG.md`. The current manifest records all 36 files from this merged snapshot.
+
+The update on main changes documentation and the manifest only. All Python and Lean source files and all certificate bytes are identical to the previously tested branch at `0bf72bf`. The Wave 4 metadata key repair remains intact, with no scientific field changes. Wave 4 `--check` and all 36 file hashes pass again.
+
+The unchanged long Wave 7 check was not rerun. Its earlier result remains historical evidence, not a new run.
+
+This update adds no proof compilation or physical validation result. Recompute the manifest whenever any listed file changes.

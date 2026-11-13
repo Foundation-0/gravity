@@ -19,7 +19,7 @@
     3. c33_super_eddington_and_chirp_mass_bounds:
        Checks over Int that both observed Eddington ratios (123/100 and 107/100) exceed unity
        and that the binary chirp mass M_c for M_1 = 15 * 10^8 M_sun and M_2 = 4 * 10^8 M_sun
-       satisfies 19 * (647)^5 < 15^3 * 4^2 * 10^10 < 19 * (648)^5 (i.e. 6.47e8 M_sun < M_c < 6.48e8 M_sun).
+       satisfies 19 * (647)^5 < 15^3 * 4^3 * 10^10 < 19 * (648)^5 (i.e. 6.47e8 M_sun < M_c < 6.48e8 M_sun).
 
   NOTE: Certifies only the literal integer inequalities above; astrophysical seed formation,
   lensing exclusion, and nonlinear AeST + phonon collapse at z = 6.08 remain model-dependent
@@ -44,8 +44,8 @@ theorem c32_cosmic_dawn_condensate_trapping_inversion :
 theorem c33_super_eddington_and_chirp_mass_bounds :
     (100 : Int) < 123
     /\ (100 : Int) < 107
-    /\ (19 : Int) * (647 ^ 5) < (15 ^ 3) * (4 ^ 2) * (10 ^ 10)
-    /\ (15 : Int) ^ 3 * (4 ^ 2) * (10 ^ 10) < 19 * (648 ^ 5) := by
+    /\ (19 : Int) * (647 ^ 5) < (15 ^ 3) * (4 ^ 3) * (10 ^ 10)
+    /\ (15 : Int) ^ 3 * (4 ^ 3) * (10 ^ 10) < 19 * (648 ^ 5) := by
   decide
 
 end Foundation0.Gravity.Wave12

@@ -1,0 +1,189 @@
+{
+  "schema_version": 1,
+  "kind": "phenomenological_predictions",
+  "status": "Pending independent reproduction",
+  "parameters": {
+    "A_m_s2": 1.2e-10,
+    "omega_m": 0.315
+  },
+  "domain": {
+    "z_min": 0,
+    "z_max": 5
+  },
+  "assumptions": [
+    "Flat matter plus constant Lambda background; radiation neglected.",
+    "a0(z) = A E(z)^q; A is calibrated independently of H0.",
+    "q=0 is also degenerate with a constant-Lambda-normalized scale in this background.",
+    "q=1 tracks instantaneous H(z), with independently calibrated amplitude A.",
+    "BTFR shifts apply only to isolated asymptotic deep-MOND systems with slope four.",
+    "No covariant theory, observational fit, likelihood, or discovery is asserted.",
+    "c H(z)/(2 pi) is a separate dimensional relation and is not the normalization used here."
+  ],
+  "units": {
+    "a0_m_s2": "m s^-2",
+    "a0_ratio_to_z0": "dimensionless",
+    "btfr_mass_intercept_shift_dex": "dex in baryonic mass at fixed velocity",
+    "velocity_at_fixed_baryonic_mass_shift_dex": "dex in velocity at fixed baryonic mass",
+    "local_da0_dz_m_s2": "m s^-2 per unit redshift"
+  },
+  "models": [
+    {
+      "q": 0.0,
+      "label": "constant",
+      "local_da0_dz_m_s2": 0.0,
+      "predictions": [
+        {
+          "z": 0.0,
+          "E": 1.0,
+          "a0_m_s2": 1.2e-10,
+          "a0_ratio_to_z0": 1.0,
+          "btfr_mass_intercept_shift_dex": -0.0,
+          "velocity_at_fixed_baryonic_mass_shift_dex": 0.0
+        },
+        {
+          "z": 0.33,
+          "E": 1.1941861894193888,
+          "a0_m_s2": 1.2e-10,
+          "a0_ratio_to_z0": 1.0,
+          "btfr_mass_intercept_shift_dex": -0.0,
+          "velocity_at_fixed_baryonic_mass_shift_dex": 0.0
+        },
+        {
+          "z": 0.5,
+          "E": 1.3221667822177354,
+          "a0_m_s2": 1.2e-10,
+          "a0_ratio_to_z0": 1.0,
+          "btfr_mass_intercept_shift_dex": -0.0,
+          "velocity_at_fixed_baryonic_mass_shift_dex": 0.0
+        },
+        {
+          "z": 0.75,
+          "E": 1.5405204072001124,
+          "a0_m_s2": 1.2e-10,
+          "a0_ratio_to_z0": 1.0,
+          "btfr_mass_intercept_shift_dex": -0.0,
+          "velocity_at_fixed_baryonic_mass_shift_dex": 0.0
+        },
+        {
+          "z": 1.0,
+          "E": 1.7902513789968157,
+          "a0_m_s2": 1.2e-10,
+          "a0_ratio_to_z0": 1.0,
+          "btfr_mass_intercept_shift_dex": -0.0,
+          "velocity_at_fixed_baryonic_mass_shift_dex": 0.0
+        },
+        {
+          "z": 1.44,
+          "E": 2.293673246127268,
+          "a0_m_s2": 1.2e-10,
+          "a0_ratio_to_z0": 1.0,
+          "btfr_mass_intercept_shift_dex": -0.0,
+          "velocity_at_fixed_baryonic_mass_shift_dex": 0.0
+        },
+        {
+          "z": 2.0,
+          "E": 3.031501278244824,
+          "a0_m_s2": 1.2e-10,
+          "a0_ratio_to_z0": 1.0,
+          "btfr_mass_intercept_shift_dex": -0.0,
+          "velocity_at_fixed_baryonic_mass_shift_dex": 0.0
+        },
+        {
+          "z": 3.0,
+          "E": 4.565632486304608,
+          "a0_m_s2": 1.2e-10,
+          "a0_ratio_to_z0": 1.0,
+          "btfr_mass_intercept_shift_dex": -0.0,
+          "velocity_at_fixed_baryonic_mass_shift_dex": 0.0
+        },
+        {
+          "z": 5.0,
+          "E": 8.290054282090075,
+          "a0_m_s2": 1.2e-10,
+          "a0_ratio_to_z0": 1.0,
+          "btfr_mass_intercept_shift_dex": -0.0,
+          "velocity_at_fixed_baryonic_mass_shift_dex": 0.0
+        }
+      ]
+    },
+    {
+      "q": 1.0,
+      "label": "instantaneous_H_tracking",
+      "local_da0_dz_m_s2": 5.67e-11,
+      "predictions": [
+        {
+          "z": 0.0,
+          "E": 1.0,
+          "a0_m_s2": 1.2e-10,
+          "a0_ratio_to_z0": 1.0,
+          "btfr_mass_intercept_shift_dex": -0.0,
+          "velocity_at_fixed_baryonic_mass_shift_dex": 0.0
+        },
+        {
+          "z": 0.33,
+          "E": 1.1941861894193888,
+          "a0_m_s2": 1.4330234273032666e-10,
+          "a0_ratio_to_z0": 1.1941861894193888,
+          "btfr_mass_intercept_shift_dex": -0.07707204432555226,
+          "velocity_at_fixed_baryonic_mass_shift_dex": 0.019268011081388065
+        },
+        {
+          "z": 0.5,
+          "E": 1.3221667822177354,
+          "a0_m_s2": 1.5866001386612826e-10,
+          "a0_ratio_to_z0": 1.3221667822177354,
+          "btfr_mass_intercept_shift_dex": -0.12128624185780132,
+          "velocity_at_fixed_baryonic_mass_shift_dex": 0.03032156046445033
+        },
+        {
+          "z": 0.75,
+          "E": 1.5405204072001124,
+          "a0_m_s2": 1.8486244886401348e-10,
+          "a0_ratio_to_z0": 1.5405204072001124,
+          "btfr_mass_intercept_shift_dex": -0.18766745576928373,
+          "velocity_at_fixed_baryonic_mass_shift_dex": 0.04691686394232093
+        },
+        {
+          "z": 1.0,
+          "E": 1.7902513789968157,
+          "a0_m_s2": 2.1483016547961789e-10,
+          "a0_ratio_to_z0": 1.7902513789968157,
+          "btfr_mass_intercept_shift_dex": -0.25291401692741816,
+          "velocity_at_fixed_baryonic_mass_shift_dex": 0.06322850423185454
+        },
+        {
+          "z": 1.44,
+          "E": 2.293673246127268,
+          "a0_m_s2": 2.752407895352722e-10,
+          "a0_ratio_to_z0": 2.293673246127268,
+          "btfr_mass_intercept_shift_dex": -0.36053154891338957,
+          "velocity_at_fixed_baryonic_mass_shift_dex": 0.09013288722834739
+        },
+        {
+          "z": 2.0,
+          "E": 3.031501278244824,
+          "a0_m_s2": 3.6378015338937887e-10,
+          "a0_ratio_to_z0": 3.031501278244824,
+          "btfr_mass_intercept_shift_dex": -0.4816577556930557,
+          "velocity_at_fixed_baryonic_mass_shift_dex": 0.12041443892326392
+        },
+        {
+          "z": 3.0,
+          "E": 4.565632486304608,
+          "a0_m_s2": 5.478758983565529e-10,
+          "a0_ratio_to_z0": 4.565632486304608,
+          "btfr_mass_intercept_shift_dex": -0.659500949731158,
+          "velocity_at_fixed_baryonic_mass_shift_dex": 0.1648752374327895
+        },
+        {
+          "z": 5.0,
+          "E": 8.290054282090075,
+          "a0_m_s2": 9.94806513850809e-10,
+          "a0_ratio_to_z0": 8.290054282090075,
+          "btfr_mass_intercept_shift_dex": -0.918557374257753,
+          "velocity_at_fixed_baryonic_mass_shift_dex": 0.22963934356443824
+        }
+      ]
+    }
+  ]
+}

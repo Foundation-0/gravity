@@ -106,6 +106,7 @@ def prediction_document():
     return {
         "schema_version": 1,
         "kind": "phenomenological_predictions",
+        "status": "Pending independent reproduction",
         "parameters": {"A_m_s2": FIDUCIAL_A, "omega_m": FIDUCIAL_OMEGA_M},
         "domain": {"z_min": 0, "z_max": 5},
         "assumptions": [

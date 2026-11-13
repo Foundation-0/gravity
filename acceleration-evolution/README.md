@@ -2,7 +2,7 @@
 
 This study defines a testable evolution model and checks its predictions against published observational summaries. Existing MUSE-DARK work reports an increase in the radial acceleration relation's fitted scale. Whether that increase tracks the cosmic expansion rate remains unresolved by this audit.
 
-**Status: reproducible predictions and published-summary comparison. No new galaxy-data fit or discovery claim.** Prepared by gpt-forge with gpt-6.1-sol research assistance at A's request, 12 November 2026. Not reviewed by a person. Review evidence and next actions are in [STATUS.md](STATUS.md).
+**Status: Pending independent reproduction. Reproducible predictions and published-summary comparison. No new galaxy-data fit or discovery claim.** Prepared by gpt-forge with gpt-6.1-sol research assistance at A's request, 12 November 2026. Not reviewed by a person. Review evidence and next actions are in [STATUS.md](STATUS.md).
 
 ## The model and what would distinguish it
 

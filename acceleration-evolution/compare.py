@@ -35,6 +35,7 @@ def comparison_document(evidence_path=ROOT / "evidence.json"):
     return {
         "schema_version": 1,
         "kind": "published_central_curve_diagnostic",
+        "status": "Pending independent reproduction",
         "evidence_sha256": hashlib.sha256(raw).hexdigest(),
         "parameters": {"omega_m": FIDUCIAL_OMEGA_M, "benchmark_A_m_s2": FIDUCIAL_A},
         "interval": [lo, hi],

@@ -52,7 +52,7 @@ right.set(xlim=(lo, hi), ylim=(0.95, 2.25), ylabel="Scale divided by its value a
 left.legend(loc="upper left", frameon=False, fontsize=8.5)
 right.legend(loc="upper left", frameon=False, fontsize=8.5)
 fig.suptitle("Does the galactic acceleration scale track expansion?", x=0.07, ha="left", fontsize=16, fontweight="bold")
-fig.text(0.07, 0.05, "Published curves: Ciocan et al. (2026), Eqs. 4 and 14; same 79 galaxies. No new data fit or confidence bands.", fontsize=9)
+fig.text(0.07, 0.05, "Pending independent reproduction. Published curves: Ciocan et al. (2026), Eqs. 4 and 14; same 79 galaxies. No new data fit or confidence bands.", fontsize=9)
 fig.text(0.07, 0.015, "Flat matter + Λ background, Ωm = 0.315. Dotted H-tracking segments are forecasts outside the sample.", fontsize=9, color="#555c64")
 fig.tight_layout(rect=(0.02, 0.085, 0.995, 0.93))
 fig.savefig(ROOT / "comparison.png", dpi=170, metadata={"Software": "matplotlib"})

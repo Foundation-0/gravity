@@ -1,6 +1,7 @@
 {
   "schema_version": 1,
   "kind": "phenomenological_predictions",
+  "status": "Pending independent reproduction",
   "parameters": {
     "A_m_s2": 1.2e-10,
     "omega_m": 0.315
@@ -131,16 +132,16 @@
           "E": 1.3221667822177354,
           "a0_m_s2": 1.5866001386612826e-10,
           "a0_ratio_to_z0": 1.3221667822177354,
-          "btfr_mass_intercept_shift_dex": -0.1212862418578013,
-          "velocity_at_fixed_baryonic_mass_shift_dex": 0.030321560464450326
+          "btfr_mass_intercept_shift_dex": -0.12128624185780132,
+          "velocity_at_fixed_baryonic_mass_shift_dex": 0.03032156046445033
         },
         {
           "z": 0.75,
           "E": 1.5405204072001124,
           "a0_m_s2": 1.8486244886401348e-10,
           "a0_ratio_to_z0": 1.5405204072001124,
-          "btfr_mass_intercept_shift_dex": -0.1876674557692837,
-          "velocity_at_fixed_baryonic_mass_shift_dex": 0.046916863942320926
+          "btfr_mass_intercept_shift_dex": -0.18766745576928373,
+          "velocity_at_fixed_baryonic_mass_shift_dex": 0.04691686394232093
         },
         {
           "z": 1.0,

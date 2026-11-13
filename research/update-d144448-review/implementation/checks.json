@@ -8,9 +8,7 @@
     "wave5_unified_forces_stochastic_qm.py",
     "formal/verify_exact_rational_proofs.py",
     "formal/GravityClaims.lean",
-    "formal/Wave5StochasticForces.lean",
-    "formal/Wave6Convergence.lean",
-    "formal/Wave7ThresholdAudit.lean",
+    "formal/Wave12QuasarCollapse.lean",
     "results/wave4_unified_certificates.json"
   ]
 }

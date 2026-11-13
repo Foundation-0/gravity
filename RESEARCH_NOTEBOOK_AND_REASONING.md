@@ -72,3 +72,17 @@ Wave 12 now integrates radial infall through the changing force rather than inse
 The light-seed growth clock depends on opacity and efficiency. Efficiency 0.10 is a benchmark. The fixed Schwarzschild value is `1 - sqrt(8/9)`. Pure H and primordial H/He are reported separately.
 
 The mass-flow convention for the slim-disk table now enforces inflow minus radiated energy. No outflow, changing spin or fuel history is modeled. No present luminosity or binary velocity is treated as a measured lifetime history or orbital inclination.
+
+## 5. Wave 12: conditional quasar benchmarks
+
+The new documentation for J1602+4228AB is reconciled here with the corrected generators. Onorato et al. (2026), arXiv:2609.31835, reports the discovery and its observational limits. The quoted masses, luminosity ratios and projected separation remain inputs, with virial and lensing uncertainty. A point estimate above Eddington is not evidence for a sustained growth history.
+
+At fixed efficiency 0.10 and Eddington ratio one, the pure-H light-seed clock exceeds the 734.10 Myr budget. Primordial H/He instead gives 725.76 Myr. Fixed Schwarzschild efficiency `1-sqrt(8/9)` gives 451.54 Myr for pure H and 396.22 Myr for primordial H/He. None of these choices is an observed history. Fuel, duty, spin evolution and formation delays remain assumptions.
+
+The assigned slim-disk luminosity law uses `mdot=0.10 dotM_in c^2/L_Edd`. Retained growth subtracts radiated energy, giving `mdot-0.10 lambda`. For mdot three and five, the corresponding fixed-coefficient clocks are 273.78 and 161.23 Myr. They omit outflows and do not prove a formation channel.
+
+The chosen nonlinear spectrum gives total halo mass near `8.39e4 M_sun`, not a black-hole seed. The trapping fraction is prescribed. No capture, gas collapse, friction or merger hardening is calculated. Comparing a mass scale with a seed mass does not equate the two physical quantities.
+
+Radial energy integration around a fixed `5e10 M_sun` point mass gives 200.08 Myr for constant-a0 RAR, 121.72 Myr for Hubble-a0 RAR and 127.16 Myr for constant-a0 RAR plus the assigned condensate force. The Newtonian control is 384.82 Myr. These calculations omit filament geometry, pressure and angular momentum.
+
+The projected velocity comparison is illustrative. A circular Peters clock at a chosen subparsec separation is not a demonstrated route to that separation or a prediction of a gravitational-wave background. Neither a Gaussian-tail benchmark nor clustering excess over an extrapolated baseline supplies a comparative cosmological likelihood.

@@ -2,6 +2,8 @@
 
 Replays their scripts only in temporary copies and tests the central formulas
 using separate Bessel expansions, quadrature, and symbolic differentiation.
+Replayed JSON is compared with the bundle checker's tolerance policy
+(check.mismatches), so the replay is portable across CPython builds.
 """
 from pathlib import Path
 import hashlib
@@ -10,6 +12,7 @@ import math
 import shutil
 import subprocess
 import sys
+import importlib.util
 import tempfile
 
 import numpy as np
@@ -19,6 +22,15 @@ from scipy.stats import norm
 import sympy as sp
 
 ROOT=Path(__file__).resolve().parent
+
+
+def bundle_checker():
+    # check.py is the bundle runner, not an author probe; only its comparison
+    # policy is used here.
+    spec=importlib.util.spec_from_file_location('value_assessment_check',ROOT/'check.py')
+    module=importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(module)
+    return module
 
 
 def checks_closure():
@@ -155,7 +167,8 @@ def replay():
             assert run.returncode==0,run.stderr
             actual=json.loads((runpath/'results.json').read_text())
             saved=json.loads((ROOT/folder/'results.json').read_text())
-            assert actual==saved
+            errors=bundle_checker().mismatches(actual,saved,folder)
+            assert not errors,'\n'.join(errors)
             rows.append({'probe':folder+'/'+script,'exit_code':run.returncode,
                          'all_saved_JSON_values_match_replay':True})
     return rows

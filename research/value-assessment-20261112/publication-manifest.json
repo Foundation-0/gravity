@@ -237,7 +237,7 @@
     },
     {
       "path": "second-review-checks.py",
-      "sha256": "676379e8f089f725a79f9bd92a64de52e9a218d3af08d03de09102d7abc64483"
+      "sha256": "f917eb701769f6fdff372330ed4f4582a5ff4494e1066fe2ec011618087166ce"
     },
     {
       "path": "second-review.md",
@@ -270,6 +270,7 @@
     "Rank-one and pentamode prior art plus unimode distinction",
     "Link analytic future-expansion bound from independent review",
     "Portable reproduction runner, focused workflow, synthesis and companion notes",
-    "Exclude source-paper caches and machine-specific build logs"
+    "Exclude source-paper caches and machine-specific build logs",
+    "Portable second-review replay comparison using the bundle tolerance policy"
   ]
 }

@@ -1,0 +1,36 @@
+{
+  "captured_utc": "2026-11-12T16:10:42.596022+00:00",
+  "scope": "Historical report bytes reviewed by the original robustness pass. Publication changes paths and presentation, so these hashes do not authenticate the published report bytes. Private briefing and coordination records are omitted.",
+  "inputs": [
+    {
+      "path": "reports/evidence.md",
+      "sha256": "ef1d7d3aaf0dbfb6691ecf559e6c841395cc2fbcdc6aa6665280ef18326fd885",
+      "bytes": 19440
+    },
+    {
+      "path": "reports/persistence.md",
+      "sha256": "58f66e108bc9bbd086162416c25d3493fa0c0a088ad0c253b01715100aeb7368",
+      "bytes": 21060
+    },
+    {
+      "path": "reports/relations.md",
+      "sha256": "274b329263fd47b478b39da44a883097d66abe97bc2309a399c06dd1bc8d686a",
+      "bytes": 25873
+    },
+    {
+      "path": "reports/repetition.md",
+      "sha256": "2595c4ae6656c34084ca0314df5427f7f7e0a03d44ffc45f206c5f06824d3304",
+      "bytes": 21024
+    },
+    {
+      "path": "reports/scales.md",
+      "sha256": "374d361adb88ccd8216cbcfedd67bdba79a5805683f177710122485bfdb60711",
+      "bytes": 22333
+    },
+    {
+      "path": "reports/unclaimed.md",
+      "sha256": "12de0cdc9e625118d6f8b562129ace23513d46b18096308d136f794b04de7182",
+      "bytes": 18086
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "repository": "https://github.com/Foundation-0/gravity",
+  "commit": "d8c7544e89388720fc1c13de816ddb7dd03d2096",
+  "files": [
+    {
+      "upstream_path": "wave10_covariant_jeans_unification.py",
+      "bundle_path": "inputs/wave10_covariant_jeans_unification.py",
+      "sha256": "af8a2459aa8f5885250ab6b5914c50cc852bcc691982c8ef5cf692603bece927"
+    },
+    {
+      "upstream_path": "wave7_group_cluster_threshold_audit.py",
+      "bundle_path": "inputs/wave7_group_cluster_threshold_audit.py",
+      "sha256": "5de311fa11f22285f62cf82dd5cfc9e2651c2bfbe990fb194e6517171608dc29"
+    },
+    {
+      "upstream_path": "results/wave10_covariant_jeans_certificates.json",
+      "bundle_path": "inputs/wave10_covariant_jeans_certificates.json",
+      "sha256": "dd37a45adcb3c815d1a2d44bbbb58ac0235b9ea30d58d6b5a3438a46d91c874e"
+    }
+  ]
+}

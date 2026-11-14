@@ -1,0 +1,34 @@
+{
+  "date": "2026-11-12",
+  "status": "frozen calculation; independent review pending",
+  "files": [
+    {
+      "path": "PROTOCOL.md",
+      "sha256": "efe19e6cb78f46af8d612b4ab0188981f711604b6aa4755cf287e62a540d1fc7"
+    },
+    {
+      "path": "GROWING-MODE-PROTOCOL.md",
+      "sha256": "e18a17694fd46609e2574f680d6fd5a0d870295cf3f030b2a1da3d5d0187c9a9"
+    },
+    {
+      "path": "RESULTS.md",
+      "sha256": "4db8ba576047fcc296e7f99556ba2ab31121fb93d31ac7d9cd81c30296a2883e"
+    },
+    {
+      "path": "probe.py",
+      "sha256": "af9d4443c45298d723384ad0283bb8a635944fe347fd2067e3f4699ea94b2151"
+    },
+    {
+      "path": "evidence.json",
+      "sha256": "cc1e24085ca282198798514f01946c338b3df4f715ff7a694b0d8402f567d054"
+    },
+    {
+      "path": "selection_failure.py",
+      "sha256": "368230772939461a5a10c6ff0552c5aeb6375068660f45efd8a8403992ebd605"
+    },
+    {
+      "path": "selection-failure.json",
+      "sha256": "71a3187c110e66993bd3fd035b0f4abd041146c5ca74e983cbed2aa29ea46098"
+    }
+  ]
+}

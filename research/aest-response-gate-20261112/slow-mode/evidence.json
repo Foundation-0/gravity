@@ -1,0 +1,2598 @@
+{
+  "protocol_sha256": "efe19e6cb78f46af8d612b4ab0188981f711604b6aa4755cf287e62a540d1fc7",
+  "scope": "Same-action instantaneous slow-subspace initialization, plus compensated fast contamination. No invariant-manifold or observational claim.",
+  "points": [
+    {
+      "k": 6.0,
+      "mode_diagnostics": {
+        "initial_eigenvalues": [
+          [
+            0.00017829959360134856,
+            0.07694011280610696
+          ],
+          [
+            0.00017829959360134856,
+            -0.07694011280610696
+          ],
+          [
+            -0.058912799380405376,
+            5.392894883230915
+          ],
+          [
+            -0.058912799380405376,
+            -5.392894883230915
+          ]
+        ],
+        "final_eigenvalues": [
+          [
+            1.8127064619613925e-05,
+            0.010411659462677907
+          ],
+          [
+            1.8127064619613925e-05,
+            -0.010411659462677907
+          ],
+          [
+            -0.020475133026453686,
+            2.9644053206785275
+          ],
+          [
+            -0.020475133026453686,
+            -2.9644053206785275
+          ]
+        ],
+        "min_fast_slow_gap_over_H": 45.925691830260725,
+        "max_slow_rate_over_fast_frequency": 0.014266979250636452,
+        "max_frequency_adiabatic_ratio": 0.019950681931818245,
+        "max_fast_slow_eigenvector_mixing_over_gap": 0.7405699277716458,
+        "max_fast_from_slow_mixing_over_gap": 0.00015241770357156506,
+        "max_slow_from_fast_mixing_over_gap": 0.7405699277716458,
+        "max_eigenvector_condition_number": 1457.444538403897,
+        "initial_retained_slow_basis_condition_number": 469.4111195126547,
+        "initial_fast_spectral_coordinate_norm": 5.924143345756509e-19,
+        "slow_initial_state_per_unit_delta": [
+          1.0,
+          -0.0032155102507750626,
+          -0.0002681886339892248,
+          -0.0010331366680233396
+        ],
+        "compensated_leakage_vectors": [
+          {
+            "phase": 0.0,
+            "state": [
+              1.1102230246251565e-16,
+              0.0,
+              0.024136020133254155,
+              0.09114989401042602
+            ]
+          },
+          {
+            "phase": 1.5707963267948966,
+            "state": [
+              0.0,
+              -2.7755575615628914e-17,
+              0.1652803053026899,
+              0.00275143582024035
+            ]
+          },
+          {
+            "phase": 3.141592653589793,
+            "state": [
+              -1.1102230246251565e-16,
+              0.0,
+              -0.024136020133254135,
+              -0.09114989401042602
+            ]
+          },
+          {
+            "phase": 4.71238898038469,
+            "state": [
+              0.0,
+              2.7755575615628914e-17,
+              -0.1652803053026899,
+              -0.0027514358202403613
+            ]
+          }
+        ]
+      },
+      "direct_vs_fundamental_error_per_delta_i": 7.064254780100865e-14,
+      "reference_scales": [
+        2.0139112929987693e-05,
+        1.118915239922817e-08
+      ],
+      "rows": [
+        {
+          "k": 6.0,
+          "eta": 0.0,
+          "phase": 0.0,
+          "closure": "zero",
+          "density_error": 0.24603288376029978,
+          "lensing_error": 0.24576009132530746,
+          "passes_1_percent": false,
+          "max_amplitudes": {
+            "density_contrast": 1.518422889944848e-05,
+            "lensing_sum": 1.1154241129182369e-08,
+            "aether_spatial": 1.7699861698773795e-07,
+            "delta_Q_over_Q": 8.88103923953696e-09,
+            "chi": 3.6167149423427737e-09
+          }
+        },
+        {
+          "k": 6.0,
+          "eta": 0.0,
+          "phase": 0.0,
+          "closure": "adiabatic",
+          "density_error": 1.1758409572594646,
+          "lensing_error": 1.1756800774501743,
+          "passes_1_percent": false,
+          "max_amplitudes": {
+            "density_contrast": 1.518422889944848e-05,
+            "lensing_sum": 1.1154241129182369e-08,
+            "aether_spatial": 1.7699861698773795e-07,
+            "delta_Q_over_Q": 8.88103923953696e-09,
+            "chi": 3.6167149423427737e-09
+          }
+        },
+        {
+          "k": 6.0,
+          "eta": 0.001,
+          "phase": 0.0,
+          "closure": "zero",
+          "density_error": 0.24715508087043478,
+          "lensing_error": 0.24688033461340786,
+          "passes_1_percent": false,
+          "max_amplitudes": {
+            "density_contrast": 1.5161628845117766e-05,
+            "lensing_sum": 1.115418531327552e-08,
+            "aether_spatial": 1.7843243996595105e-07,
+            "delta_Q_over_Q": 1.5411420781136917e-08,
+            "chi": 4.77386184305501e-09
+          }
+        },
+        {
+          "k": 6.0,
+          "eta": 0.001,
+          "phase": 0.0,
+          "closure": "adiabatic",
+          "density_error": 1.1747187601493296,
+          "lensing_error": 1.174559834162074,
+          "passes_1_percent": false,
+          "max_amplitudes": {
+            "density_contrast": 1.5161628845117766e-05,
+            "lensing_sum": 1.115418531327552e-08,
+            "aether_spatial": 1.7843243996595105e-07,
+            "delta_Q_over_Q": 1.5411420781136917e-08,
+            "chi": 4.77386184305501e-09
+          }
+        },
+        {
+          "k": 6.0,
+          "eta": 0.001,
+          "phase": 1.5707963267948966,
+          "closure": "zero",
+          "density_error": 0.23278898335297873,
+          "lensing_error": 0.23252072808188703,
+          "passes_1_percent": false,
+          "max_amplitudes": {
+            "density_contrast": 1.545094930538503e-05,
+            "lensing_sum": 1.1154243662248263e-08,
+            "aether_spatial": 1.8681724898591758e-07,
+            "delta_Q_over_Q": 1.55159476101472e-08,
+            "chi": 5.165443349894344e-09
+          }
+        },
+        {
+          "k": 6.0,
+          "eta": 0.001,
+          "phase": 1.5707963267948966,
+          "closure": "adiabatic",
+          "density_error": 1.1890848576667858,
+          "lensing_error": 1.1889194406935948,
+          "passes_1_percent": false,
+          "max_amplitudes": {
+            "density_contrast": 1.545094930538503e-05,
+            "lensing_sum": 1.1154243662248263e-08,
+            "aether_spatial": 1.8681724898591758e-07,
+            "delta_Q_over_Q": 1.55159476101472e-08,
+            "chi": 5.165443349894344e-09
+          }
+        },
+        {
+          "k": 6.0,
+          "eta": 0.001,
+          "phase": 3.141592653589793,
+          "closure": "zero",
+          "density_error": 0.24491068665016502,
+          "lensing_error": 0.2446398480372072,
+          "passes_1_percent": false,
+          "max_amplitudes": {
+            "density_contrast": 1.520682895377919e-05,
+            "lensing_sum": 1.1156674337617167e-08,
+            "aether_spatial": 1.7556479400952485e-07,
+            "delta_Q_over_Q": 1.4229840094497347e-08,
+            "chi": 4.804721252543993e-09
+          }
+        },
+        {
+          "k": 6.0,
+          "eta": 0.001,
+          "phase": 3.141592653589793,
+          "closure": "adiabatic",
+          "density_error": 1.1769631543695995,
+          "lensing_error": 1.1768003207382747,
+          "passes_1_percent": false,
+          "max_amplitudes": {
+            "density_contrast": 1.520682895377919e-05,
+            "lensing_sum": 1.1156674337617167e-08,
+            "aether_spatial": 1.7556479400952485e-07,
+            "delta_Q_over_Q": 1.4229840094497347e-08,
+            "chi": 4.804721252543993e-09
+          }
+        },
+        {
+          "k": 6.0,
+          "eta": 0.001,
+          "phase": 4.71238898038469,
+          "closure": "zero",
+          "density_error": 0.259276784167621,
+          "lensing_error": 0.258999454568728,
+          "passes_1_percent": false,
+          "max_amplitudes": {
+            "density_contrast": 1.4917508493511928e-05,
+            "lensing_sum": 1.1154239358352858e-08,
+            "aether_spatial": 1.6717998498955835e-07,
+            "delta_Q_over_Q": 1.2563620439946258e-08,
+            "chi": 4.334689392919148e-09
+          }
+        },
+        {
+          "k": 6.0,
+          "eta": 0.001,
+          "phase": 4.71238898038469,
+          "closure": "adiabatic",
+          "density_error": 1.1625970568521433,
+          "lensing_error": 1.1624407142067539,
+          "passes_1_percent": false,
+          "max_amplitudes": {
+            "density_contrast": 1.4917508493511928e-05,
+            "lensing_sum": 1.1154239358352858e-08,
+            "aether_spatial": 1.6717998498955835e-07,
+            "delta_Q_over_Q": 1.2563620439946258e-08,
+            "chi": 4.334689392919148e-09
+          }
+        },
+        {
+          "k": 6.0,
+          "eta": 0.01,
+          "phase": 0.0,
+          "closure": "zero",
+          "density_error": 0.25725485486164823,
+          "lensing_error": 0.2569625242063109,
+          "passes_1_percent": false,
+          "max_amplitudes": {
+            "density_contrast": 1.4958228356141366e-05,
+            "lensing_sum": 1.1154136179375398e-08,
+            "aether_spatial": 1.913656924308888e-07,
+            "delta_Q_over_Q": 8.778806439298389e-08,
+            "chi": 1.826946356236263e-08
+          }
+        },
+        {
+          "k": 6.0,
+          "eta": 0.01,
+          "phase": 0.0,
+          "closure": "adiabatic",
+          "density_error": 1.1646189861581162,
+          "lensing_error": 1.1644776445691711,
+          "passes_1_percent": false,
+          "max_amplitudes": {
+            "density_contrast": 1.4958228356141366e-05,
+            "lensing_sum": 1.1154136179375398e-08,
+            "aether_spatial": 1.913656924308888e-07,
+            "delta_Q_over_Q": 8.778806439298389e-08,
+            "chi": 1.826946356236263e-08
+          }
+        },
+        {
+          "k": 6.0,
+          "eta": 0.01,
+          "phase": 1.5707963267948966,
+          "closure": "zero",
+          "density_error": 0.11359387968708903,
+          "lensing_error": 0.11336645889110303,
+          "passes_1_percent": false,
+          "max_amplitudes": {
+            "density_contrast": 1.7851432958813972e-05,
+            "lensing_sum": 1.167611865665971e-08,
+            "aether_spatial": 2.7518493696953394e-07,
+            "delta_Q_over_Q": 7.523283010133843e-08,
+            "chi": 1.9107117046874034e-08
+          }
+        },
+        {
+          "k": 6.0,
+          "eta": 0.01,
+          "phase": 1.5707963267948966,
+          "closure": "adiabatic",
+          "density_error": 1.3082799613326754,
+          "lensing_error": 1.3080737098843789,
+          "passes_1_percent": false,
+          "max_amplitudes": {
+            "density_contrast": 1.7851432958813972e-05,
+            "lensing_sum": 1.167611865665971e-08,
+            "aether_spatial": 2.7518493696953394e-07,
+            "delta_Q_over_Q": 7.523283010133843e-08,
+            "chi": 1.9107117046874034e-08
+          }
+        },
+        {
+          "k": 6.0,
+          "eta": 0.01,
+          "phase": 3.141592653589793,
+          "closure": "zero",
+          "density_error": 0.2348109126589516,
+          "lensing_error": 0.23455765844430437,
+          "passes_1_percent": false,
+          "max_amplitudes": {
+            "density_contrast": 1.541022944275559e-05,
+            "lensing_sum": 1.1331059778162223e-08,
+            "aether_spatial": 1.8042649605627142e-07,
+            "delta_Q_over_Q": 7.749139452965993e-08,
+            "chi": 1.9189838431335464e-08
+          }
+        },
+        {
+          "k": 6.0,
+          "eta": 0.01,
+          "phase": 3.141592653589793,
+          "closure": "adiabatic",
+          "density_error": 1.187062928360813,
+          "lensing_error": 1.1868825103311775,
+          "passes_1_percent": false,
+          "max_amplitudes": {
+            "density_contrast": 1.541022944275559e-05,
+            "lensing_sum": 1.1331059778162223e-08,
+            "aether_spatial": 1.8042649605627142e-07,
+            "delta_Q_over_Q": 7.749139452965993e-08,
+            "chi": 1.9189838431335464e-08
+          }
+        },
+        {
+          "k": 6.0,
+          "eta": 0.01,
+          "phase": 4.71238898038469,
+          "closure": "zero",
+          "density_error": 0.37847188783351077,
+          "lensing_error": 0.37815372375951206,
+          "passes_1_percent": false,
+          "max_amplitudes": {
+            "density_contrast": 1.2517024840082984e-05,
+            "lensing_sum": 1.115423041508101e-08,
+            "aether_spatial": 9.829543877028916e-08,
+            "delta_Q_over_Q": 8.026530616648796e-08,
+            "chi": 1.920991687016124e-08
+          }
+        },
+        {
+          "k": 6.0,
+          "eta": 0.01,
+          "phase": 4.71238898038469,
+          "closure": "adiabatic",
+          "density_error": 1.0434019531862537,
+          "lensing_error": 1.0432864450159698,
+          "passes_1_percent": false,
+          "max_amplitudes": {
+            "density_contrast": 1.2517024840082984e-05,
+            "lensing_sum": 1.115423041508101e-08,
+            "aether_spatial": 9.829543877028916e-08,
+            "delta_Q_over_Q": 8.026530616648796e-08,
+            "chi": 1.920991687016124e-08
+          }
+        },
+        {
+          "k": 6.0,
+          "eta": 0.1,
+          "phase": 0.0,
+          "closure": "zero",
+          "density_error": 0.3582525947737832,
+          "lensing_error": 0.3577844201353395,
+          "passes_1_percent": false,
+          "max_amplitudes": {
+            "density_contrast": 1.3163335959619203e-05,
+            "lensing_sum": 1.1154135185185187e-08,
+            "aether_spatial": 3.318385556898087e-07,
+            "delta_Q_over_Q": 8.115545005114534e-07,
+            "chi": 1.5735959490819594e-07
+          }
+        },
+        {
+          "k": 6.0,
+          "eta": 0.1,
+          "phase": 0.0,
+          "closure": "adiabatic",
+          "density_error": 1.0636212462459813,
+          "lensing_error": 1.0699381889523976,
+          "passes_1_percent": false,
+          "max_amplitudes": {
+            "density_contrast": 1.3163335959619203e-05,
+            "lensing_sum": 1.1154135185185187e-08,
+            "aether_spatial": 3.318385556898087e-07,
+            "delta_Q_over_Q": 8.115545005114534e-07,
+            "chi": 1.5735959490819594e-07
+          }
+        },
+        {
+          "k": 6.0,
+          "eta": 0.1,
+          "phase": 1.5707963267948966,
+          "closure": "zero",
+          "density_error": 1.07835715697181,
+          "lensing_error": 1.1070645296053139,
+          "passes_1_percent": false,
+          "max_amplitudes": {
+            "density_contrast": 4.185626949310344e-05,
+            "lensing_sum": 2.3574422461335633e-08,
+            "aether_spatial": 1.158861816805698e-06,
+            "delta_Q_over_Q": 7.472050508782539e-07,
+            "chi": 1.6259841896279767e-07
+          }
+        },
+        {
+          "k": 6.0,
+          "eta": 0.1,
+          "phase": 1.5707963267948966,
+          "closure": "adiabatic",
+          "density_error": 2.5002309979915744,
+          "lensing_error": 2.49961640179222,
+          "passes_1_percent": false,
+          "max_amplitudes": {
+            "density_contrast": 4.185626949310344e-05,
+            "lensing_sum": 2.3574422461335633e-08,
+            "aether_spatial": 1.158861816805698e-06,
+            "delta_Q_over_Q": 7.472050508782539e-07,
+            "chi": 1.6259841896279767e-07
+          }
+        },
+        {
+          "k": 6.0,
+          "eta": 0.1,
+          "phase": 3.141592653589793,
+          "closure": "zero",
+          "density_error": 0.13381317274681637,
+          "lensing_error": 0.1823415491718124,
+          "passes_1_percent": false,
+          "max_amplitudes": {
+            "density_contrast": 1.7444234332519607e-05,
+            "lensing_sum": 1.3198896270664613e-08,
+            "aether_spatial": 3.7462744785168895e-07,
+            "delta_Q_over_Q": 7.9681535752959e-07,
+            "chi": 1.636278191062348e-07
+          }
+        },
+        {
+          "k": 6.0,
+          "eta": 0.1,
+          "phase": 3.141592653589793,
+          "closure": "adiabatic",
+          "density_error": 1.288060668272948,
+          "lensing_error": 1.2877044062602065,
+          "passes_1_percent": false,
+          "max_amplitudes": {
+            "density_contrast": 1.7444234332519607e-05,
+            "lensing_sum": 1.3198896270664613e-08,
+            "aether_spatial": 3.7462744785168895e-07,
+            "delta_Q_over_Q": 7.9681535752959e-07,
+            "chi": 1.636278191062348e-07
+          }
+        },
+        {
+          "k": 6.0,
+          "eta": 0.1,
+          "phase": 4.71238898038469,
+          "closure": "zero",
+          "density_error": 1.5704229244924095,
+          "lensing_error": 1.569696415667353,
+          "passes_1_percent": false,
+          "max_amplitudes": {
+            "density_contrast": 1.1487811694206476e-05,
+            "lensing_sum": 1.1154231225322832e-08,
+            "aether_spatial": 8.302168222135057e-07,
+            "delta_Q_over_Q": 7.572865073849131e-07,
+            "chi": 1.6796219164258218e-07
+          }
+        },
+        {
+          "k": 6.0,
+          "eta": 0.1,
+          "phase": 4.71238898038469,
+          "closure": "adiabatic",
+          "density_error": 0.2646373613364418,
+          "lensing_error": 0.4248181695624312,
+          "passes_1_percent": false,
+          "max_amplitudes": {
+            "density_contrast": 1.1487811694206476e-05,
+            "lensing_sum": 1.1154231225322832e-08,
+            "aether_spatial": 8.302168222135057e-07,
+            "delta_Q_over_Q": 7.572865073849131e-07,
+            "chi": 1.6796219164258218e-07
+          }
+        }
+      ]
+    },
+    {
+      "k": 9.0,
+      "mode_diagnostics": {
+        "initial_eigenvalues": [
+          [
+            0.00011886004005979699,
+            0.083786596544086
+          ],
+          [
+            0.00011886004005979699,
+            -0.083786596544086
+          ],
+          [
+            -0.05885335982686522,
+            7.926675767004695
+          ],
+          [
+            -0.05885335982686522,
+            -7.926675767004695
+          ]
+        ],
+        "final_eigenvalues": [
+          [
+            1.1708276998284783e-05,
+            0.022249762444947523
+          ],
+          [
+            1.1708276998284783e-05,
+            -0.022249762444947523
+          ],
+          [
+            -0.020468714238831787,
+            4.150278404064025
+          ],
+          [
+            -0.020468714238831787,
+            -4.150278404064025
+          ]
+        ],
+        "min_fast_slow_gap_over_H": 67.75415846842542,
+        "max_slow_rate_over_fast_frequency": 0.010570216735810357,
+        "max_frequency_adiabatic_ratio": 0.014126460492512894,
+        "max_fast_slow_eigenvector_mixing_over_gap": 0.20948451292702086,
+        "max_fast_from_slow_mixing_over_gap": 0.00010225304315407084,
+        "max_slow_from_fast_mixing_over_gap": 0.20948451292702086,
+        "max_eigenvector_condition_number": 1917.5266453556537,
+        "initial_retained_slow_basis_condition_number": 970.8041317318567,
+        "initial_fast_spectral_coordinate_norm": 4.307564897304308e-19,
+        "slow_initial_state_per_unit_delta": [
+          1.0,
+          -0.0014291156670111391,
+          -0.00012436881216402063,
+          -0.00047910010144377487
+        ],
+        "compensated_leakage_vectors": [
+          {
+            "phase": 0.0,
+            "state": [
+              0.0,
+              0.0,
+              0.010444149897426007,
+              0.03889068887646355
+            ]
+          },
+          {
+            "phase": 1.5707963267948966,
+            "state": [
+              0.0,
+              0.0,
+              0.10333912158270793,
+              0.0007438755558518391
+            ]
+          },
+          {
+            "phase": 3.141592653589793,
+            "state": [
+              0.0,
+              -4.336808689942018e-19,
+              -0.010444149897425994,
+              -0.03889068887646355
+            ]
+          },
+          {
+            "phase": 4.71238898038469,
+            "state": [
+              0.0,
+              0.0,
+              -0.10333912158270793,
+              -0.0007438755558518439
+            ]
+          }
+        ]
+      },
+      "direct_vs_fundamental_error_per_delta_i": 7.335305323222241e-14,
+      "reference_scales": [
+        2.014128920196035e-05,
+        4.975033787037482e-09
+      ],
+      "rows": [
+        {
+          "k": 9.0,
+          "eta": 0.0,
+          "phase": 0.0,
+          "closure": "zero",
+          "density_error": 0.26193493844583987,
+          "lensing_error": 0.2618027602579335,
+          "passes_1_percent": false,
+          "max_amplitudes": {
+            "density_contrast": 1.4865581854625005e-05,
+            "lensing_sum": 4.9605243440142484e-09,
+            "aether_spatial": 1.1753804063024822e-07,
+            "delta_Q_over_Q": 4.614223010412869e-09,
+            "chi": 1.6526290477252796e-09
+          }
+        },
+        {
+          "k": 9.0,
+          "eta": 0.0,
+          "phase": 0.0,
+          "closure": "adiabatic",
+          "density_error": 1.2915393264922588,
+          "lensing_error": 1.5123946908993695,
+          "passes_1_percent": false,
+          "max_amplitudes": {
+            "density_contrast": 1.4865581854625005e-05,
+            "lensing_sum": 4.9605243440142484e-09,
+            "aether_spatial": 1.1753804063024822e-07,
+            "delta_Q_over_Q": 4.614223010412869e-09,
+            "chi": 1.6526290477252796e-09
+          }
+        },
+        {
+          "k": 9.0,
+          "eta": 0.001,
+          "phase": 0.0,
+          "closure": "zero",
+          "density_error": 0.262886343402509,
+          "lensing_error": 0.26275155168778624,
+          "passes_1_percent": false,
+          "max_amplitudes": {
+            "density_contrast": 1.4846419332244555e-05,
+            "lensing_sum": 4.96049807269057e-09,
+            "aether_spatial": 1.1846870745279113e-07,
+            "delta_Q_over_Q": 1.1133804484971514e-08,
+            "chi": 2.454268993902797e-09
+          }
+        },
+        {
+          "k": 9.0,
+          "eta": 0.001,
+          "phase": 0.0,
+          "closure": "adiabatic",
+          "density_error": 1.2905353630729468,
+          "lensing_error": 1.5115397755304054,
+          "passes_1_percent": false,
+          "max_amplitudes": {
+            "density_contrast": 1.4846419332244555e-05,
+            "lensing_sum": 4.96049807269057e-09,
+            "aether_spatial": 1.1846870745279113e-07,
+            "delta_Q_over_Q": 1.1133804484971514e-08,
+            "chi": 2.454268993902797e-09
+          }
+        },
+        {
+          "k": 9.0,
+          "eta": 0.001,
+          "phase": 1.5707963267948966,
+          "closure": "zero",
+          "density_error": 0.24268375547706186,
+          "lensing_error": 0.2425516013327664,
+          "passes_1_percent": false,
+          "max_amplitudes": {
+            "density_contrast": 1.5253325498279017e-05,
+            "lensing_sum": 4.971194259712155e-09,
+            "aether_spatial": 1.2674647720692517e-07,
+            "delta_Q_over_Q": 1.138013990770759e-08,
+            "chi": 2.6283382343468294e-09
+          }
+        },
+        {
+          "k": 9.0,
+          "eta": 0.001,
+          "phase": 1.5707963267948966,
+          "closure": "adiabatic",
+          "density_error": 1.3087802562022421,
+          "lensing_error": 1.5301233343963347,
+          "passes_1_percent": false,
+          "max_amplitudes": {
+            "density_contrast": 1.5253325498279017e-05,
+            "lensing_sum": 4.971194259712155e-09,
+            "aether_spatial": 1.2674647720692517e-07,
+            "delta_Q_over_Q": 1.138013990770759e-08,
+            "chi": 2.6283382343468294e-09
+          }
+        },
+        {
+          "k": 9.0,
+          "eta": 0.001,
+          "phase": 3.141592653589793,
+          "closure": "zero",
+          "density_error": 0.26098353348917064,
+          "lensing_error": 0.26085396882808054,
+          "passes_1_percent": false,
+          "max_amplitudes": {
+            "density_contrast": 1.488474437700546e-05,
+            "lensing_sum": 4.96521249058864e-09,
+            "aether_spatial": 1.1660737380770532e-07,
+            "delta_Q_over_Q": 1.0415040389600846e-08,
+            "chi": 2.467623534056735e-09
+          }
+        },
+        {
+          "k": 9.0,
+          "eta": 0.001,
+          "phase": 3.141592653589793,
+          "closure": "adiabatic",
+          "density_error": 1.292553511188635,
+          "lensing_error": 1.5132522984536079,
+          "passes_1_percent": false,
+          "max_amplitudes": {
+            "density_contrast": 1.488474437700546e-05,
+            "lensing_sum": 4.96521249058864e-09,
+            "aether_spatial": 1.1660737380770532e-07,
+            "delta_Q_over_Q": 1.0415040389600846e-08,
+            "chi": 2.467623534056735e-09
+          }
+        },
+        {
+          "k": 9.0,
+          "eta": 0.001,
+          "phase": 4.71238898038469,
+          "closure": "zero",
+          "density_error": 0.2811861214146178,
+          "lensing_error": 0.2810539191831005,
+          "passes_1_percent": false,
+          "max_amplitudes": {
+            "density_contrast": 1.4477838210970995e-05,
+            "lensing_sum": 4.9605215150697826e-09,
+            "aether_spatial": 1.083296040535713e-07,
+            "delta_Q_over_Q": 9.271536799648073e-09,
+            "chi": 2.2770793374672856e-09
+          }
+        },
+        {
+          "k": 9.0,
+          "eta": 0.001,
+          "phase": 4.71238898038469,
+          "closure": "adiabatic",
+          "density_error": 1.274396016482801,
+          "lensing_error": 1.494667537838199,
+          "passes_1_percent": false,
+          "max_amplitudes": {
+            "density_contrast": 1.4477838210970995e-05,
+            "lensing_sum": 4.9605215150697826e-09,
+            "aether_spatial": 1.083296040535713e-07,
+            "delta_Q_over_Q": 9.271536799648073e-09,
+            "chi": 2.2770793374672856e-09
+          }
+        },
+        {
+          "k": 9.0,
+          "eta": 0.01,
+          "phase": 0.0,
+          "closure": "zero",
+          "density_error": 0.27144898801253164,
+          "lensing_error": 0.2712906745564624,
+          "passes_1_percent": false,
+          "max_amplitudes": {
+            "density_contrast": 1.4673956630820481e-05,
+            "lensing_sum": 4.960487608596251e-09,
+            "aether_spatial": 1.2684470885567736e-07,
+            "delta_Q_over_Q": 8.061550282567814e-08,
+            "chi": 1.1077434925716504e-08
+          }
+        },
+        {
+          "k": 9.0,
+          "eta": 0.01,
+          "phase": 0.0,
+          "closure": "adiabatic",
+          "density_error": 1.282151534634057,
+          "lensing_error": 1.5038954012702108,
+          "passes_1_percent": false,
+          "max_amplitudes": {
+            "density_contrast": 1.4673956630820481e-05,
+            "lensing_sum": 4.960487608596251e-09,
+            "aether_spatial": 1.2684470885567736e-07,
+            "delta_Q_over_Q": 8.061550282567814e-08,
+            "chi": 1.1077434925716504e-08
+          }
+        },
+        {
+          "k": 9.0,
+          "eta": 0.01,
+          "phase": 1.5707963267948966,
+          "closure": "zero",
+          "density_error": 0.06942310875806022,
+          "lensing_error": 0.08057749825157252,
+          "passes_1_percent": false,
+          "max_amplitudes": {
+            "density_contrast": 1.874301829116511e-05,
+            "lensing_sum": 5.367592291704556e-09,
+            "aether_spatial": 2.0962240639701767e-07,
+            "delta_Q_over_Q": 7.227339198336024e-08,
+            "chi": 1.1411207083887414e-08
+          }
+        },
+        {
+          "k": 9.0,
+          "eta": 0.01,
+          "phase": 1.5707963267948966,
+          "closure": "adiabatic",
+          "density_error": 1.465758296971356,
+          "lensing_error": 1.689767597684015,
+          "passes_1_percent": false,
+          "max_amplitudes": {
+            "density_contrast": 1.874301829116511e-05,
+            "lensing_sum": 5.367592291704556e-09,
+            "aether_spatial": 2.0962240639701767e-07,
+            "delta_Q_over_Q": 7.227339198336024e-08,
+            "chi": 1.1411207083887414e-08
+          }
+        },
+        {
+          "k": 9.0,
+          "eta": 0.01,
+          "phase": 3.141592653589793,
+          "closure": "zero",
+          "density_error": 0.25242088887914793,
+          "lensing_error": 0.2523148459594045,
+          "passes_1_percent": false,
+          "max_amplitudes": {
+            "density_contrast": 1.5057207078429533e-05,
+            "lensing_sum": 5.048865693851958e-09,
+            "aether_spatial": 1.224019222980724e-07,
+            "delta_Q_over_Q": 7.385344941198415e-08,
+            "chi": 1.149638238348561e-08
+          }
+        },
+        {
+          "k": 9.0,
+          "eta": 0.01,
+          "phase": 3.141592653589793,
+          "closure": "adiabatic",
+          "density_error": 1.3019025212779316,
+          "lensing_error": 1.5214487714617002,
+          "passes_1_percent": false,
+          "max_amplitudes": {
+            "density_contrast": 1.5057207078429533e-05,
+            "lensing_sum": 5.048865693851958e-09,
+            "aether_spatial": 1.224019222980724e-07,
+            "delta_Q_over_Q": 7.385344941198415e-08,
+            "chi": 1.149638238348561e-08
+          }
+        },
+        {
+          "k": 9.0,
+          "eta": 0.01,
+          "phase": 4.71238898038469,
+          "closure": "zero",
+          "density_error": 0.45444676813361956,
+          "lensing_error": 0.45431434950960403,
+          "passes_1_percent": false,
+          "max_amplitudes": {
+            "density_contrast": 1.099973359317955e-05,
+            "lensing_sum": 4.960513026714017e-09,
+            "aether_spatial": 3.796593058575482e-08,
+            "delta_Q_over_Q": 7.568593845874518e-08,
+            "chi": 1.1577600279911e-08
+          }
+        },
+        {
+          "k": 9.0,
+          "eta": 0.01,
+          "phase": 4.71238898038469,
+          "closure": "adiabatic",
+          "density_error": 1.1248436676095843,
+          "lensing_error": 1.3351676341691245,
+          "passes_1_percent": false,
+          "max_amplitudes": {
+            "density_contrast": 1.099973359317955e-05,
+            "lensing_sum": 4.960513026714017e-09,
+            "aether_spatial": 3.796593058575482e-08,
+            "delta_Q_over_Q": 7.568593845874518e-08,
+            "chi": 1.1577600279911e-08
+          }
+        },
+        {
+          "k": 9.0,
+          "eta": 0.1,
+          "phase": 0.0,
+          "closure": "zero",
+          "density_error": 0.3570754341127586,
+          "lensing_error": 0.356681903243223,
+          "passes_1_percent": false,
+          "max_amplitudes": {
+            "density_contrast": 1.3093071406177081e-05,
+            "lensing_sum": 4.960487608596251e-09,
+            "aether_spatial": 2.1394840331322986e-07,
+            "delta_Q_over_Q": 7.754324862327442e-07,
+            "chi": 9.907205153441258e-08
+          }
+        },
+        {
+          "k": 9.0,
+          "eta": 0.1,
+          "phase": 0.0,
+          "closure": "adiabatic",
+          "density_error": 1.2088609610346752,
+          "lensing_error": 1.4278957691187426,
+          "passes_1_percent": false,
+          "max_amplitudes": {
+            "density_contrast": 1.3093071406177081e-05,
+            "lensing_sum": 4.960487608596251e-09,
+            "aether_spatial": 2.1394840331322986e-07,
+            "delta_Q_over_Q": 7.754324862327442e-07,
+            "chi": 9.907205153441258e-08
+          }
+        },
+        {
+          "k": 9.0,
+          "eta": 0.1,
+          "phase": 1.5707963267948966,
+          "closure": "zero",
+          "density_error": 1.6631833584319569,
+          "lensing_error": 1.6971679533829942,
+          "passes_1_percent": false,
+          "max_amplitudes": {
+            "density_contrast": 5.363994622002607e-05,
+            "lensing_sum": 1.3417247843797647e-08,
+            "aether_spatial": 1.038381698297943e-06,
+            "delta_Q_over_Q": 7.360456373746636e-07,
+            "chi": 1.0209543346106774e-07
+          }
+        },
+        {
+          "k": 9.0,
+          "eta": 0.1,
+          "phase": 1.5707963267948966,
+          "closure": "adiabatic",
+          "density_error": 3.171401555150129,
+          "lensing_error": 3.3502181462700236,
+          "passes_1_percent": false,
+          "max_amplitudes": {
+            "density_contrast": 5.363994622002607e-05,
+            "lensing_sum": 1.3417247843797647e-08,
+            "aether_spatial": 1.038381698297943e-06,
+            "delta_Q_over_Q": 7.360456373746636e-07,
+            "chi": 1.0209543346106774e-07
+          }
+        },
+        {
+          "k": 9.0,
+          "eta": 0.1,
+          "phase": 3.141592653589793,
+          "closure": "zero",
+          "density_error": 0.16826302657500358,
+          "lensing_error": 0.18812515182618236,
+          "passes_1_percent": false,
+          "max_amplitudes": {
+            "density_contrast": 1.684240870621049e-05,
+            "lensing_sum": 5.897654393097208e-09,
+            "aether_spatial": 2.442692015254552e-07,
+            "delta_Q_over_Q": 7.686052546718473e-07,
+            "chi": 1.0196146467994778e-07
+          }
+        },
+        {
+          "k": 9.0,
+          "eta": 0.1,
+          "phase": 3.141592653589793,
+          "closure": "adiabatic",
+          "density_error": 1.3972276277750253,
+          "lensing_error": 1.6320172163310613,
+          "passes_1_percent": false,
+          "max_amplitudes": {
+            "density_contrast": 1.684240870621049e-05,
+            "lensing_sum": 5.897654393097208e-09,
+            "aether_spatial": 2.442692015254552e-07,
+            "delta_Q_over_Q": 7.686052546718473e-07,
+            "chi": 1.0196146467994778e-07
+          }
+        },
+        {
+          "k": 9.0,
+          "eta": 0.1,
+          "phase": 4.71238898038469,
+          "closure": "zero",
+          "density_error": 2.1870532353236367,
+          "lensing_error": 2.188856387402447,
+          "passes_1_percent": false,
+          "max_amplitudes": {
+            "density_contrast": 2.390878251077606e-05,
+            "lensing_sum": 5.914868071396648e-09,
+            "aether_spatial": 8.270045528884294e-07,
+            "delta_Q_over_Q": 7.398299550497162e-07,
+            "chi": 1.0458280970434816e-07
+          }
+        },
+        {
+          "k": 9.0,
+          "eta": 0.1,
+          "phase": 4.71238898038469,
+          "closure": "adiabatic",
+          "density_error": 0.6788350386054649,
+          "lensing_error": 0.6783148261526724,
+          "passes_1_percent": false,
+          "max_amplitudes": {
+            "density_contrast": 2.390878251077606e-05,
+            "lensing_sum": 5.914868071396648e-09,
+            "aether_spatial": 8.270045528884294e-07,
+            "delta_Q_over_Q": 7.398299550497162e-07,
+            "chi": 1.0458280970434816e-07
+          }
+        }
+      ]
+    },
+    {
+      "k": 12.0,
+      "mode_diagnostics": {
+        "initial_eigenvalues": [
+          [
+            9.625784388558612e-05,
+            0.08618326184768918
+          ],
+          [
+            9.625784388558612e-05,
+            -0.08618326184768918
+          ],
+          [
+            -0.058830757630689456,
+            10.491986085246275
+          ],
+          [
+            -0.058830757630689456,
+            -10.491986085246275
+          ]
+        ],
+        "final_eigenvalues": [
+          [
+            8.721521662666724e-06,
+            0.025670147190798104
+          ],
+          [
+            8.721521662666724e-06,
+            -0.025670147190798104
+          ],
+          [
+            -0.02046572748349714,
+            5.388612659839058
+          ],
+          [
+            -0.02046572748349714,
+            -5.388612659839058
+          ]
+        ],
+        "min_fast_slow_gap_over_H": 89.89388636285625,
+        "max_slow_rate_over_fast_frequency": 0.008214204146145475,
+        "max_frequency_adiabatic_ratio": 0.010827035400911934,
+        "max_fast_slow_eigenvector_mixing_over_gap": 0.11237844758874892,
+        "max_fast_from_slow_mixing_over_gap": 7.649686444683892e-05,
+        "max_slow_from_fast_mixing_over_gap": 0.11237844758874892,
+        "max_eigenvector_condition_number": 3347.140597268955,
+        "initial_retained_slow_basis_condition_number": 1678.4440945322576,
+        "initial_fast_spectral_coordinate_norm": 1.662712382259848e-19,
+        "slow_initial_state_per_unit_delta": [
+          1.0,
+          -0.0008038775626937655,
+          -7.103518318063276e-05,
+          -0.00027364415607450393
+        ],
+        "compensated_leakage_vectors": [
+          {
+            "phase": 0.0,
+            "state": [
+              0.0,
+              0.0,
+              0.005817408707450706,
+              0.021556990337990894
+            ]
+          },
+          {
+            "phase": 1.5707963267948966,
+            "state": [
+              0.0,
+              0.0,
+              0.07574092806688408,
+              0.00030350926499057667
+            ]
+          },
+          {
+            "phase": 3.141592653589793,
+            "state": [
+              0.0,
+              0.0,
+              -0.005817408707450697,
+              -0.021556990337990894
+            ]
+          },
+          {
+            "phase": 4.71238898038469,
+            "state": [
+              2.465190328815662e-32,
+              0.0,
+              -0.07574092806688408,
+              -0.00030350926499057927
+            ]
+          }
+        ]
+      },
+      "direct_vs_fundamental_error_per_delta_i": 1.2315859053077527e-13,
+      "reference_scales": [
+        2.0142049991825473e-05,
+        2.7988654470991203e-09
+      ],
+      "rows": [
+        {
+          "k": 12.0,
+          "eta": 0.0,
+          "phase": 0.0,
+          "closure": "zero",
+          "density_error": 0.2680557383360454,
+          "lensing_error": 0.2679788751026277,
+          "passes_1_percent": false,
+          "max_amplitudes": {
+            "density_contrast": 1.4742857909665158e-05,
+            "lensing_sum": 2.7909026143976484e-09,
+            "aether_spatial": 8.802548377901828e-08,
+            "delta_Q_over_Q": 2.9068696309165187e-09,
+            "chi": 9.399556486063731e-10
+          }
+        },
+        {
+          "k": 12.0,
+          "eta": 0.0,
+          "phase": 0.0,
+          "closure": "adiabatic",
+          "density_error": 1.204413785960097,
+          "lensing_error": 1.663078832745763,
+          "passes_1_percent": false,
+          "max_amplitudes": {
+            "density_contrast": 1.4742857909665158e-05,
+            "lensing_sum": 2.7909026143976484e-09,
+            "aether_spatial": 8.802548377901828e-08,
+            "delta_Q_over_Q": 2.9068696309165187e-09,
+            "chi": 9.399556486063731e-10
+          }
+        },
+        {
+          "k": 12.0,
+          "eta": 0.001,
+          "phase": 0.0,
+          "closure": "zero",
+          "density_error": 0.2689117958645356,
+          "lensing_error": 0.2688337182005234,
+          "passes_1_percent": false,
+          "max_amplitudes": {
+            "density_contrast": 1.472561515613043e-05,
+            "lensing_sum": 2.7908871931600857e-09,
+            "aether_spatial": 8.871666105119065e-08,
+            "delta_Q_over_Q": 9.556534001426638e-09,
+            "chi": 1.558193914970469e-09
+          }
+        },
+        {
+          "k": 12.0,
+          "eta": 0.001,
+          "phase": 0.0,
+          "closure": "adiabatic",
+          "density_error": 1.2035514193702272,
+          "lensing_error": 1.6616801670889225,
+          "passes_1_percent": false,
+          "max_amplitudes": {
+            "density_contrast": 1.472561515613043e-05,
+            "lensing_sum": 2.7908871931600857e-09,
+            "aether_spatial": 8.871666105119065e-08,
+            "delta_Q_over_Q": 9.556534001426638e-09,
+            "chi": 1.558193914970469e-09
+          }
+        },
+        {
+          "k": 12.0,
+          "eta": 0.001,
+          "phase": 1.5707963267948966,
+          "closure": "zero",
+          "density_error": 0.24260162455217513,
+          "lensing_error": 0.2425234164485814,
+          "passes_1_percent": false,
+          "max_amplitudes": {
+            "density_contrast": 1.5255555941997487e-05,
+            "lensing_sum": 2.800962454666463e-09,
+            "aether_spatial": 9.702440592557878e-08,
+            "delta_Q_over_Q": 9.789061646160045e-09,
+            "chi": 1.656625496896456e-09
+          }
+        },
+        {
+          "k": 12.0,
+          "eta": 0.001,
+          "phase": 1.5707963267948966,
+          "closure": "adiabatic",
+          "density_error": 1.2201859185227484,
+          "lensing_error": 1.683516805454511,
+          "passes_1_percent": false,
+          "max_amplitudes": {
+            "density_contrast": 1.5255555941997487e-05,
+            "lensing_sum": 2.800962454666463e-09,
+            "aether_spatial": 9.702440592557878e-08,
+            "delta_Q_over_Q": 9.789061646160045e-09,
+            "chi": 1.656625496896456e-09
+          }
+        },
+        {
+          "k": 12.0,
+          "eta": 0.001,
+          "phase": 3.141592653589793,
+          "closure": "zero",
+          "density_error": 0.26719968080755524,
+          "lensing_error": 0.267124032004732,
+          "passes_1_percent": false,
+          "max_amplitudes": {
+            "density_contrast": 1.4760100663199885e-05,
+            "lensing_sum": 2.794837497955462e-09,
+            "aether_spatial": 8.733430650684591e-08,
+            "delta_Q_over_Q": 9.030438937214788e-09,
+            "chi": 1.5680090237071626e-09
+          }
+        },
+        {
+          "k": 12.0,
+          "eta": 0.001,
+          "phase": 3.141592653589793,
+          "closure": "adiabatic",
+          "density_error": 1.2052975100082741,
+          "lensing_error": 1.664482379402485,
+          "passes_1_percent": false,
+          "max_amplitudes": {
+            "density_contrast": 1.4760100663199885e-05,
+            "lensing_sum": 2.794837497955462e-09,
+            "aether_spatial": 8.733430650684591e-08,
+            "delta_Q_over_Q": 9.030438937214788e-09,
+            "chi": 1.5680090237071626e-09
+          }
+        },
+        {
+          "k": 12.0,
+          "eta": 0.001,
+          "phase": 4.71238898038469,
+          "closure": "zero",
+          "density_error": 0.2935098521199157,
+          "lensing_error": 0.2934343337566738,
+          "passes_1_percent": false,
+          "max_amplitudes": {
+            "density_contrast": 1.423015987733283e-05,
+            "lensing_sum": 2.7908993621133447e-09,
+            "aether_spatial": 7.90265616324578e-08,
+            "delta_Q_over_Q": 8.169413806428237e-09,
+            "chi": 1.4677611124751685e-09
+          }
+        },
+        {
+          "k": 12.0,
+          "eta": 0.001,
+          "phase": 4.71238898038469,
+          "closure": "adiabatic",
+          "density_error": 1.1887205569782127,
+          "lensing_error": 1.6427454885961292,
+          "passes_1_percent": false,
+          "max_amplitudes": {
+            "density_contrast": 1.423015987733283e-05,
+            "lensing_sum": 2.7908993621133447e-09,
+            "aether_spatial": 7.90265616324578e-08,
+            "delta_Q_over_Q": 8.169413806428237e-09,
+            "chi": 1.4677611124751685e-09
+          }
+        },
+        {
+          "k": 12.0,
+          "eta": 0.01,
+          "phase": 0.0,
+          "closure": "zero",
+          "density_error": 0.27661631362094724,
+          "lensing_error": 0.2765273060815846,
+          "passes_1_percent": false,
+          "max_amplitudes": {
+            "density_contrast": 1.457043037431788e-05,
+            "lensing_sum": 2.790883449074074e-09,
+            "aether_spatial": 9.493725650074188e-08,
+            "delta_Q_over_Q": 7.80249671894381e-08,
+            "chi": 7.96455056146263e-09
+          }
+        },
+        {
+          "k": 12.0,
+          "eta": 0.01,
+          "phase": 0.0,
+          "closure": "adiabatic",
+          "density_error": 1.1968163587879335,
+          "lensing_error": 1.6498075290667649,
+          "passes_1_percent": false,
+          "max_amplitudes": {
+            "density_contrast": 1.457043037431788e-05,
+            "lensing_sum": 2.790883449074074e-09,
+            "aether_spatial": 9.493725650074188e-08,
+            "delta_Q_over_Q": 7.80249671894381e-08,
+            "chi": 7.96455056146263e-09
+          }
+        },
+        {
+          "k": 12.0,
+          "eta": 0.01,
+          "phase": 1.5707963267948966,
+          "closure": "zero",
+          "density_error": 0.08186961409331035,
+          "lensing_error": 0.1203994531458711,
+          "passes_1_percent": false,
+          "max_amplitudes": {
+            "density_contrast": 1.986983823298845e-05,
+            "lensing_sum": 3.1321078707095453e-09,
+            "aether_spatial": 1.7801470524462313e-07,
+            "delta_Q_over_Q": 7.270298094528573e-08,
+            "chi": 8.131536005012313e-09
+          }
+        },
+        {
+          "k": 12.0,
+          "eta": 0.01,
+          "phase": 1.5707963267948966,
+          "closure": "adiabatic",
+          "density_error": 1.3676070231445434,
+          "lensing_error": 1.8701281402483194,
+          "passes_1_percent": false,
+          "max_amplitudes": {
+            "density_contrast": 1.986983823298845e-05,
+            "lensing_sum": 3.1321078707095453e-09,
+            "aether_spatial": 1.7801470524462313e-07,
+            "delta_Q_over_Q": 7.270298094528573e-08,
+            "chi": 8.131536005012313e-09
+          }
+        },
+        {
+          "k": 12.0,
+          "eta": 0.01,
+          "phase": 3.141592653589793,
+          "closure": "zero",
+          "density_error": 0.25949516305114356,
+          "lensing_error": 0.2594304441236708,
+          "passes_1_percent": false,
+          "max_amplitudes": {
+            "density_contrast": 1.4915285445012437e-05,
+            "lensing_sum": 2.8429754466504577e-09,
+            "aether_spatial": 9.299057904363355e-08,
+            "delta_Q_over_Q": 7.41271065616985e-08,
+            "chi": 8.205380129881235e-09
+          }
+        },
+        {
+          "k": 12.0,
+          "eta": 0.01,
+          "phase": 3.141592653589793,
+          "closure": "adiabatic",
+          "density_error": 1.2138134594466299,
+          "lensing_error": 1.677208304419691,
+          "passes_1_percent": false,
+          "max_amplitudes": {
+            "density_contrast": 1.4915285445012437e-05,
+            "lensing_sum": 2.8429754466504577e-09,
+            "aether_spatial": 9.299057904363355e-08,
+            "delta_Q_over_Q": 7.41271065616985e-08,
+            "chi": 8.205380129881235e-09
+          }
+        },
+        {
+          "k": 12.0,
+          "eta": 0.01,
+          "phase": 4.71238898038469,
+          "closure": "zero",
+          "density_error": 0.5225968761747484,
+          "lensing_error": 0.5225334616430896,
+          "passes_1_percent": false,
+          "max_amplitudes": {
+            "density_contrast": 1.0195809218593384e-05,
+            "lensing_sum": 2.7908933910553324e-09,
+            "aether_spatial": 2.062594014998869e-08,
+            "delta_Q_over_Q": 7.433773678510332e-08,
+            "chi": 8.284444638494737e-09
+          }
+        },
+        {
+          "k": 12.0,
+          "eta": 0.01,
+          "phase": 4.71238898038469,
+          "closure": "adiabatic",
+          "density_error": 1.0490435333101757,
+          "lensing_error": 1.4640630849852314,
+          "passes_1_percent": false,
+          "max_amplitudes": {
+            "density_contrast": 1.0195809218593384e-05,
+            "lensing_sum": 2.7908933910553324e-09,
+            "aether_spatial": 2.062594014998869e-08,
+            "delta_Q_over_Q": 7.433773678510332e-08,
+            "chi": 8.284444638494737e-09
+          }
+        },
+        {
+          "k": 12.0,
+          "eta": 0.1,
+          "phase": 0.0,
+          "closure": "zero",
+          "density_error": 0.35366149118506357,
+          "lensing_error": 0.36182249463968724,
+          "passes_1_percent": false,
+          "max_amplitudes": {
+            "density_contrast": 1.3054556957947373e-05,
+            "lensing_sum": 2.790883449074074e-09,
+            "aether_spatial": 1.5854610837189698e-07,
+            "delta_Q_over_Q": 7.627092990695529e-07,
+            "chi": 7.301076734902847e-08
+          }
+        },
+        {
+          "k": 12.0,
+          "eta": 0.1,
+          "phase": 0.0,
+          "closure": "adiabatic",
+          "density_error": 1.1451906215831615,
+          "lensing_error": 1.575077563027081,
+          "passes_1_percent": false,
+          "max_amplitudes": {
+            "density_contrast": 1.3054556957947373e-05,
+            "lensing_sum": 2.790883449074074e-09,
+            "aether_spatial": 1.5854610837189698e-07,
+            "delta_Q_over_Q": 7.627092990695529e-07,
+            "chi": 7.301076734902847e-08
+          }
+        },
+        {
+          "k": 12.0,
+          "eta": 0.1,
+          "phase": 1.5707963267948966,
+          "closure": "zero",
+          "density_error": 2.2773556400509847,
+          "lensing_error": 2.304398199169391,
+          "passes_1_percent": false,
+          "max_amplitudes": {
+            "density_contrast": 6.60126611428981e-05,
+            "lensing_sum": 9.248088433073973e-09,
+            "aether_spatial": 9.94485993306678e-07,
+            "delta_Q_over_Q": 7.343862107320364e-07,
+            "chi": 7.503057623507777e-08
+          }
+        },
+        {
+          "k": 12.0,
+          "eta": 0.1,
+          "phase": 1.5707963267948966,
+          "closure": "adiabatic",
+          "density_error": 3.102212021064928,
+          "lensing_error": 3.8188416770089737,
+          "passes_1_percent": false,
+          "max_amplitudes": {
+            "density_contrast": 6.60126611428981e-05,
+            "lensing_sum": 9.248088433073973e-09,
+            "aether_spatial": 9.94485993306678e-07,
+            "delta_Q_over_Q": 7.343862107320364e-07,
+            "chi": 7.503057623507777e-08
+          }
+        },
+        {
+          "k": 12.0,
+          "eta": 0.1,
+          "phase": 3.141592653589793,
+          "closure": "zero",
+          "density_error": 0.18252809364904754,
+          "lensing_error": 0.19109480127767317,
+          "passes_1_percent": false,
+          "max_amplitudes": {
+            "density_contrast": 1.6772268975895452e-05,
+            "lensing_sum": 3.3262389452627945e-09,
+            "aether_spatial": 1.8267494654647416e-07,
+            "delta_Q_over_Q": 7.588114384418133e-07,
+            "chi": 7.465495533989827e-08
+          }
+        },
+        {
+          "k": 12.0,
+          "eta": 0.1,
+          "phase": 3.141592653589793,
+          "closure": "adiabatic",
+          "density_error": 1.3046750985859454,
+          "lensing_error": 1.8053843930242033,
+          "passes_1_percent": false,
+          "max_amplitudes": {
+            "density_contrast": 1.6772268975895452e-05,
+            "lensing_sum": 3.3262389452627945e-09,
+            "aether_spatial": 1.8267494654647416e-07,
+            "delta_Q_over_Q": 7.588114384418133e-07,
+            "chi": 7.465495533989827e-08
+          }
+        },
+        {
+          "k": 12.0,
+          "eta": 0.1,
+          "phase": 4.71238898038469,
+          "closure": "zero",
+          "density_error": 2.813467116723075,
+          "lensing_error": 2.8198871386625854,
+          "passes_1_percent": false,
+          "max_amplitudes": {
+            "density_contrast": 3.652694532356778e-05,
+            "lensing_sum": 5.093705629556035e-09,
+            "aether_spatial": 8.326713058943473e-07,
+            "delta_Q_over_Q": 7.360209665718541e-07,
+            "chi": 7.645127989869042e-08
+          }
+        },
+        {
+          "k": 12.0,
+          "eta": 0.1,
+          "phase": 4.71238898038469,
+          "closure": "adiabatic",
+          "density_error": 2.0066445613676205,
+          "lensing_error": 2.006324498437747,
+          "passes_1_percent": false,
+          "max_amplitudes": {
+            "density_contrast": 3.652694532356778e-05,
+            "lensing_sum": 5.093705629556035e-09,
+            "aether_spatial": 8.326713058943473e-07,
+            "delta_Q_over_Q": 7.360209665718541e-07,
+            "chi": 7.645127989869042e-08
+          }
+        }
+      ]
+    },
+    {
+      "k": 18.0,
+      "mode_diagnostics": {
+        "initial_eigenvalues": [
+          [
+            7.949097133435931e-05,
+            0.08789796210453217
+          ],
+          [
+            7.949097133435931e-05,
+            -0.08789796210453217
+          ],
+          [
+            -0.05881399075813738,
+            15.65507798675622
+          ],
+          [
+            -0.05881399075813738,
+            -15.65507798675622
+          ]
+        ],
+        "final_eigenvalues": [
+          [
+            6.269346664844055e-06,
+            0.028061631557602086
+          ],
+          [
+            6.269346664844055e-06,
+            -0.028061631557602086
+          ],
+          [
+            -0.020463275308500346,
+            7.923825938789269
+          ],
+          [
+            -0.020463275308500346,
+            -7.923825938789269
+          ]
+        ],
+        "min_fast_slow_gap_over_H": 134.48091535302294,
+        "max_slow_rate_over_fast_frequency": 0.0056146636971669715,
+        "max_frequency_adiabatic_ratio": 0.007332094926919238,
+        "max_fast_slow_eigenvector_mixing_over_gap": 0.04873413928118613,
+        "max_fast_from_slow_mixing_over_gap": 5.070306605034744e-05,
+        "max_slow_from_fast_mixing_over_gap": 0.04873413928118613,
+        "max_eigenvector_condition_number": 7436.724502833988,
+        "initial_retained_slow_basis_condition_number": 3703.718338985233,
+        "initial_fast_spectral_coordinate_norm": 5.548444972673678e-19,
+        "slow_initial_state_per_unit_delta": [
+          1.0,
+          -0.00035727891675278473,
+          -3.192224296819962e-05,
+          -0.00012297141022957878
+        ],
+        "compensated_leakage_vectors": [
+          {
+            "phase": 0.0,
+            "state": [
+              0.0,
+              0.0,
+              0.002567045416274756,
+              0.009479616734084883
+            ]
+          },
+          {
+            "phase": 1.5707963267948966,
+            "state": [
+              0.0,
+              0.0,
+              0.04966151313505416,
+              8.776752323116512e-05
+            ]
+          },
+          {
+            "phase": 3.141592653589793,
+            "state": [
+              0.0,
+              0.0,
+              -0.00256704541627475,
+              -0.009479616734084883
+            ]
+          },
+          {
+            "phase": 4.71238898038469,
+            "state": [
+              0.0,
+              0.0,
+              -0.04966151313505416,
+              -8.77675232311663e-05
+            ]
+          }
+        ]
+      },
+      "direct_vs_fundamental_error_per_delta_i": 2.783350264677631e-13,
+      "reference_scales": [
+        2.0142593125752876e-05,
+        1.244070021533114e-09
+      ],
+      "rows": [
+        {
+          "k": 18.0,
+          "eta": 0.0,
+          "phase": 0.0,
+          "closure": "zero",
+          "density_error": 0.2726270325504013,
+          "lensing_error": 0.27259206563947513,
+          "passes_1_percent": false,
+          "max_amplitudes": {
+            "density_contrast": 1.4651177734008757e-05,
+            "lensing_sum": 1.240594532022091e-09,
+            "aether_spatial": 5.8621092407307276e-08,
+            "delta_Q_over_Q": 1.5489086438948663e-09,
+            "chi": 4.2097928878486746e-10
+          }
+        },
+        {
+          "k": 18.0,
+          "eta": 0.0,
+          "phase": 0.0,
+          "closure": "adiabatic",
+          "density_error": 1.1288052650958253,
+          "lensing_error": 1.7957216377566765,
+          "passes_1_percent": false,
+          "max_amplitudes": {
+            "density_contrast": 1.4651177734008757e-05,
+            "lensing_sum": 1.240594532022091e-09,
+            "aether_spatial": 5.8621092407307276e-08,
+            "delta_Q_over_Q": 1.5489086438948663e-09,
+            "chi": 4.2097928878486746e-10
+          }
+        },
+        {
+          "k": 18.0,
+          "eta": 0.001,
+          "phase": 0.0,
+          "closure": "zero",
+          "density_error": 0.2734444186463192,
+          "lensing_error": 0.2734099459013817,
+          "passes_1_percent": false,
+          "max_amplitudes": {
+            "density_contrast": 1.4634713458452035e-05,
+            "lensing_sum": 1.240586038603585e-09,
+            "aether_spatial": 5.907858564981168e-08,
+            "delta_Q_over_Q": 8.402751954367175e-09,
+            "chi": 8.499833830014192e-10
+          }
+        },
+        {
+          "k": 18.0,
+          "eta": 0.001,
+          "phase": 0.0,
+          "closure": "adiabatic",
+          "density_error": 1.1278322215127214,
+          "lensing_error": 1.7950589006967161,
+          "passes_1_percent": false,
+          "max_amplitudes": {
+            "density_contrast": 1.4634713458452035e-05,
+            "lensing_sum": 1.240586038603585e-09,
+            "aether_spatial": 5.907858564981168e-08,
+            "delta_Q_over_Q": 8.402751954367175e-09,
+            "chi": 8.499833830014192e-10
+          }
+        },
+        {
+          "k": 18.0,
+          "eta": 0.001,
+          "phase": 1.5707963267948966,
+          "closure": "zero",
+          "density_error": 0.23462114306829154,
+          "lensing_error": 0.23458501501977264,
+          "passes_1_percent": false,
+          "max_amplitudes": {
+            "density_contrast": 1.5416714902229225e-05,
+            "lensing_sum": 1.2477920525384849e-09,
+            "aether_spatial": 6.747165910464366e-08,
+            "delta_Q_over_Q": 8.583545425881444e-09,
+            "chi": 8.935325624349938e-10
+          }
+        },
+        {
+          "k": 18.0,
+          "eta": 0.001,
+          "phase": 1.5707963267948966,
+          "closure": "adiabatic",
+          "density_error": 1.1438078486408794,
+          "lensing_error": 1.8181566785407084,
+          "passes_1_percent": false,
+          "max_amplitudes": {
+            "density_contrast": 1.5416714902229225e-05,
+            "lensing_sum": 1.2477920525384849e-09,
+            "aether_spatial": 6.747165910464366e-08,
+            "delta_Q_over_Q": 8.583545425881444e-09,
+            "chi": 8.935325624349938e-10
+          }
+        },
+        {
+          "k": 18.0,
+          "eta": 0.001,
+          "phase": 3.141592653589793,
+          "closure": "zero",
+          "density_error": 0.27180964645448336,
+          "lensing_error": 0.2717741853775687,
+          "passes_1_percent": false,
+          "max_amplitudes": {
+            "density_contrast": 1.466764200956548e-05,
+            "lensing_sum": 1.2428433619855971e-09,
+            "aether_spatial": 5.816359916480286e-08,
+            "delta_Q_over_Q": 8.05690649057664e-09,
+            "chi": 8.561529036378529e-10
+          }
+        },
+        {
+          "k": 18.0,
+          "eta": 0.001,
+          "phase": 3.141592653589793,
+          "closure": "adiabatic",
+          "density_error": 1.129781018129326,
+          "lensing_error": 1.7964023219751095,
+          "passes_1_percent": false,
+          "max_amplitudes": {
+            "density_contrast": 1.466764200956548e-05,
+            "lensing_sum": 1.2428433619855971e-09,
+            "aether_spatial": 5.816359916480286e-08,
+            "delta_Q_over_Q": 8.05690649057664e-09,
+            "chi": 8.561529036378529e-10
+          }
+        },
+        {
+          "k": 18.0,
+          "eta": 0.001,
+          "phase": 4.71238898038469,
+          "closure": "zero",
+          "density_error": 0.31063292203251114,
+          "lensing_error": 0.31059911625917763,
+          "passes_1_percent": false,
+          "max_amplitudes": {
+            "density_contrast": 1.3885640565788289e-05,
+            "lensing_sum": 1.2405912464053733e-09,
+            "aether_spatial": 4.977052570997089e-08,
+            "delta_Q_over_Q": 7.483748020781853e-09,
+            "chi": 8.158375610325379e-10
+          }
+        },
+        {
+          "k": 18.0,
+          "eta": 0.001,
+          "phase": 4.71238898038469,
+          "closure": "adiabatic",
+          "density_error": 1.1139396172432334,
+          "lensing_error": 1.773290292415087,
+          "passes_1_percent": false,
+          "max_amplitudes": {
+            "density_contrast": 1.3885640565788289e-05,
+            "lensing_sum": 1.2405912464053733e-09,
+            "aether_spatial": 4.977052570997089e-08,
+            "delta_Q_over_Q": 7.483748020781853e-09,
+            "chi": 8.158375610325379e-10
+          }
+        },
+        {
+          "k": 18.0,
+          "eta": 0.01,
+          "phase": 0.0,
+          "closure": "zero",
+          "density_error": 0.28080089350958054,
+          "lensing_error": 0.28077086825854,
+          "passes_1_percent": false,
+          "max_amplitudes": {
+            "density_contrast": 1.4486534978441534e-05,
+            "lensing_sum": 1.2405860310928212e-09,
+            "aether_spatial": 6.319602483235139e-08,
+            "delta_Q_over_Q": 7.61474887365246e-08,
+            "chi": 5.113583374300791e-09
+          }
+        },
+        {
+          "k": 18.0,
+          "eta": 0.01,
+          "phase": 0.0,
+          "closure": "adiabatic",
+          "density_error": 1.1196157770700774,
+          "lensing_error": 1.789479851239308,
+          "passes_1_percent": false,
+          "max_amplitudes": {
+            "density_contrast": 1.4486534978441534e-05,
+            "lensing_sum": 1.2405860310928212e-09,
+            "aether_spatial": 6.319602483235139e-08,
+            "delta_Q_over_Q": 7.61474887365246e-08,
+            "chi": 5.113583374300791e-09
+          }
+        },
+        {
+          "k": 18.0,
+          "eta": 0.01,
+          "phase": 1.5707963267948966,
+          "closure": "zero",
+          "density_error": 0.15966243610679137,
+          "lensing_error": 0.2141132351846982,
+          "passes_1_percent": false,
+          "max_amplitudes": {
+            "density_contrast": 2.230654941621344e-05,
+            "lensing_sum": 1.509145309392272e-09,
+            "aether_spatial": 1.4712675938067113e-07,
+            "delta_Q_over_Q": 7.344126426035001e-08,
+            "chi": 5.168669487848322e-09
+          }
+        },
+        {
+          "k": 18.0,
+          "eta": 0.01,
+          "phase": 1.5707963267948966,
+          "closure": "adiabatic",
+          "density_error": 1.2839637815181952,
+          "lensing_error": 2.0201808544782516,
+          "passes_1_percent": false,
+          "max_amplitudes": {
+            "density_contrast": 2.230654941621344e-05,
+            "lensing_sum": 1.509145309392272e-09,
+            "aether_spatial": 1.4712675938067113e-07,
+            "delta_Q_over_Q": 7.344126426035001e-08,
+            "chi": 5.168669487848322e-09
+          }
+        },
+        {
+          "k": 18.0,
+          "eta": 0.01,
+          "phase": 3.141592653589793,
+          "closure": "zero",
+          "density_error": 0.2644531715912221,
+          "lensing_error": 0.2644132630204104,
+          "passes_1_percent": false,
+          "max_amplitudes": {
+            "density_contrast": 1.482009607035058e-05,
+            "lensing_sum": 1.2645856632944467e-09,
+            "aether_spatial": 6.293842244200489e-08,
+            "delta_Q_over_Q": 7.43963707793808e-08,
+            "chi": 5.222370418356128e-09
+          }
+        },
+        {
+          "k": 18.0,
+          "eta": 0.01,
+          "phase": 3.141592653589793,
+          "closure": "adiabatic",
+          "density_error": 1.1386325175225769,
+          "lensing_error": 1.8040798544436083,
+          "passes_1_percent": false,
+          "max_amplitudes": {
+            "density_contrast": 1.482009607035058e-05,
+            "lensing_sum": 1.2645856632944467e-09,
+            "aether_spatial": 6.293842244200489e-08,
+            "delta_Q_over_Q": 7.43963707793808e-08,
+            "chi": 5.222370418356128e-09
+          }
+        },
+        {
+          "k": 18.0,
+          "eta": 0.01,
+          "phase": 4.71238898038469,
+          "closure": "zero",
+          "density_error": 0.6526859273714992,
+          "lensing_error": 0.6526625718365001,
+          "passes_1_percent": false,
+          "max_amplitudes": {
+            "density_contrast": 1.0063816883335767e-05,
+            "lensing_sum": 1.240588494970944e-09,
+            "aether_spatial": 3.4450755568315326e-08,
+            "delta_Q_over_Q": 7.369512170534428e-08,
+            "chi": 5.285373743187413e-09
+          }
+        },
+        {
+          "k": 18.0,
+          "eta": 0.01,
+          "phase": 4.71238898038469,
+          "closure": "adiabatic",
+          "density_error": 0.9838127878442624,
+          "lensing_error": 1.5714278428057118,
+          "passes_1_percent": false,
+          "max_amplitudes": {
+            "density_contrast": 1.0063816883335767e-05,
+            "lensing_sum": 1.240588494970944e-09,
+            "aether_spatial": 3.4450755568315326e-08,
+            "delta_Q_over_Q": 7.369512170534428e-08,
+            "chi": 5.285373743187413e-09
+          }
+        },
+        {
+          "k": 18.0,
+          "eta": 0.1,
+          "phase": 0.0,
+          "closure": "zero",
+          "density_error": 0.3664108980205351,
+          "lensing_error": 0.3712643100401308,
+          "passes_1_percent": false,
+          "max_amplitudes": {
+            "density_contrast": 1.3004750178336535e-05,
+            "lensing_sum": 1.2405860310928212e-09,
+            "aether_spatial": 1.0477862654457696e-07,
+            "delta_Q_over_Q": 7.53594856558099e-07,
+            "chi": 4.8176954766086793e-08
+          }
+        },
+        {
+          "k": 18.0,
+          "eta": 0.1,
+          "phase": 0.0,
+          "closure": "adiabatic",
+          "density_error": 1.081243617648337,
+          "lensing_error": 1.737968898465537,
+          "passes_1_percent": false,
+          "max_amplitudes": {
+            "density_contrast": 1.3004750178336535e-05,
+            "lensing_sum": 1.2405860310928212e-09,
+            "aether_spatial": 1.0477862654457696e-07,
+            "delta_Q_over_Q": 7.53594856558099e-07,
+            "chi": 4.8176954766086793e-08
+          }
+        },
+        {
+          "k": 18.0,
+          "eta": 0.1,
+          "phase": 1.5707963267948966,
+          "closure": "zero",
+          "density_error": 3.527961915660579,
+          "lensing_error": 3.539396526362494,
+          "passes_1_percent": false,
+          "max_amplitudes": {
+            "density_contrast": 9.120489455605559e-05,
+            "lensing_sum": 5.647204172893392e-09,
+            "aether_spatial": 9.534338968160421e-07,
+            "delta_Q_over_Q": 7.355550011059743e-07,
+            "chi": 4.934229070537217e-08
+          }
+        },
+        {
+          "k": 18.0,
+          "eta": 0.1,
+          "phase": 1.5707963267948966,
+          "closure": "adiabatic",
+          "density_error": 4.423144396827935,
+          "lensing_error": 4.423013321155493,
+          "passes_1_percent": false,
+          "max_amplitudes": {
+            "density_contrast": 9.120489455605559e-05,
+            "lensing_sum": 5.647204172893392e-09,
+            "aether_spatial": 9.534338968160421e-07,
+            "delta_Q_over_Q": 7.355550011059743e-07,
+            "chi": 4.934229070537217e-08
+          }
+        },
+        {
+          "k": 18.0,
+          "eta": 0.1,
+          "phase": 3.141592653589793,
+          "closure": "zero",
+          "density_error": 0.19088842295860903,
+          "lensing_error": 0.19401791053022419,
+          "passes_1_percent": false,
+          "max_amplitudes": {
+            "density_contrast": 1.6718550529693042e-05,
+            "lensing_sum": 1.4821054887004998e-09,
+            "aether_spatial": 1.2208678815897368e-07,
+            "delta_Q_over_Q": 7.518437386009554e-07,
+            "chi": 4.891038003341392e-08
+          }
+        },
+        {
+          "k": 18.0,
+          "eta": 0.1,
+          "phase": 3.141592653589793,
+          "closure": "adiabatic",
+          "density_error": 1.2277992702058707,
+          "lensing_error": 1.9367481956657198,
+          "passes_1_percent": false,
+          "max_amplitudes": {
+            "density_contrast": 1.6718550529693042e-05,
+            "lensing_sum": 1.4821054887004998e-09,
+            "aether_spatial": 1.2208678815897368e-07,
+            "delta_Q_over_Q": 7.518437386009554e-07,
+            "chi": 4.891038003341392e-08
+          }
+        },
+        {
+          "k": 18.0,
+          "eta": 0.1,
+          "phase": 4.71238898038469,
+          "closure": "zero",
+          "density_error": 4.073215980761382,
+          "lensing_error": 4.076518696363319,
+          "passes_1_percent": false,
+          "max_amplitudes": {
+            "density_contrast": 6.190253908803808e-05,
+            "lensing_sum": 3.827417711100537e-09,
+            "aether_spatial": 8.426470088939065e-07,
+            "delta_Q_over_Q": 7.358088585509686e-07,
+            "chi": 4.9980735564736163e-08
+          }
+        },
+        {
+          "k": 18.0,
+          "eta": 0.1,
+          "phase": 4.71238898038469,
+          "closure": "adiabatic",
+          "density_error": 3.197230932834264,
+          "lensing_error": 3.5079377786044654,
+          "passes_1_percent": false,
+          "max_amplitudes": {
+            "density_contrast": 6.190253908803808e-05,
+            "lensing_sum": 3.827417711100537e-09,
+            "aether_spatial": 8.426470088939065e-07,
+            "delta_Q_over_Q": 7.358088585509686e-07,
+            "chi": 4.9980735564736163e-08
+          }
+        }
+      ]
+    },
+    {
+      "k": 24.0,
+      "mode_diagnostics": {
+        "initial_eigenvalues": [
+          [
+            7.349527804354895e-05,
+            0.08849886989701668
+          ],
+          [
+            7.349527804354895e-05,
+            -0.08849886989701668
+          ],
+          [
+            -0.058807995064846894,
+            20.834619228531693
+          ],
+          [
+            -0.058807995064846894,
+            -20.834619228531693
+          ]
+        ],
+        "final_eigenvalues": [
+          [
+            5.338730046035026e-06,
+            0.02889520500625476
+          ],
+          [
+            5.338730046035026e-06,
+            -0.02889520500625476
+          ],
+          [
+            -0.020462344691880043,
+            10.489850804028292
+          ],
+          [
+            -0.020462344691880043,
+            -10.489850804028292
+          ]
+        ],
+        "min_fast_slow_gap_over_H": 179.2199051455021,
+        "max_slow_rate_over_fast_frequency": 0.0042476850401697,
+        "max_frequency_adiabatic_ratio": 0.0055295497102073494,
+        "max_fast_slow_eigenvector_mixing_over_gap": 0.02700050021133804,
+        "max_fast_from_slow_mixing_over_gap": 3.7877399007937005e-05,
+        "max_slow_from_fast_mixing_over_gap": 0.02700050021133804,
+        "max_eigenvector_condition_number": 13163.773057373624,
+        "initial_retained_slow_basis_condition_number": 6540.230635614686,
+        "initial_fast_spectral_coordinate_norm": 2.456498907010672e-19,
+        "slow_initial_state_per_unit_delta": [
+          0.9999999999999999,
+          -0.00020096939067344144,
+          -1.8026391248794667e-05,
+          -6.944145156214542e-05
+        ],
+        "compensated_leakage_vectors": [
+          {
+            "phase": 0.0,
+            "state": [
+              1.1102230246251565e-16,
+              5.421010862427522e-20,
+              0.0014403005038075372,
+              0.0053123488167144605
+            ]
+          },
+          {
+            "phase": 1.5707963267948966,
+            "state": [
+              0.0,
+              0.0,
+              0.037028698637692176,
+              3.6709623251754964e-05
+            ]
+          },
+          {
+            "phase": 3.141592653589793,
+            "state": [
+              -1.1102230246251565e-16,
+              0.0,
+              -0.0014403005038075326,
+              -0.0053123488167144605
+            ]
+          },
+          {
+            "phase": 4.71238898038469,
+            "state": [
+              0.0,
+              0.0,
+              -0.037028698637692176,
+              -3.670962325175562e-05
+            ]
+          }
+        ]
+      },
+      "direct_vs_fundamental_error_per_delta_i": 2.2463313761184042e-13,
+      "reference_scales": [
+        2.0142783166044648e-05,
+        6.998149459805356e-10
+      ],
+      "rows": [
+        {
+          "k": 24.0,
+          "eta": 0.0,
+          "phase": 0.0,
+          "closure": "zero",
+          "density_error": 0.27427088124074445,
+          "lensing_error": 0.27425108818136235,
+          "passes_1_percent": false,
+          "max_amplitudes": {
+            "density_contrast": 1.461820427645235e-05,
+            "lensing_sum": 6.978730705659738e-10,
+            "aether_spatial": 4.3949154851021276e-08,
+            "delta_Q_over_Q": 1.0122685825284746e-09,
+            "chi": 2.3755792963213276e-10
+          }
+        },
+        {
+          "k": 24.0,
+          "eta": 0.0,
+          "phase": 0.0,
+          "closure": "adiabatic",
+          "density_error": 1.2911048846279887,
+          "lensing_error": 1.8540908924144577,
+          "passes_1_percent": false,
+          "max_amplitudes": {
+            "density_contrast": 1.461820427645235e-05,
+            "lensing_sum": 6.978730705659738e-10,
+            "aether_spatial": 4.3949154851021276e-08,
+            "delta_Q_over_Q": 1.0122685825284746e-09,
+            "chi": 2.3755792963213276e-10
+          }
+        },
+        {
+          "k": 24.0,
+          "eta": 0.001,
+          "phase": 0.0,
+          "closure": "zero",
+          "density_error": 0.2751348148796979,
+          "lensing_error": 0.2751159840395085,
+          "passes_1_percent": false,
+          "max_amplitudes": {
+            "density_contrast": 1.460080224849306e-05,
+            "lensing_sum": 6.978677155671296e-10,
+            "aether_spatial": 4.429140447568841e-08,
+            "delta_Q_over_Q": 7.993424219762179e-09,
+            "chi": 5.671156061716349e-10
+          }
+        },
+        {
+          "k": 24.0,
+          "eta": 0.001,
+          "phase": 0.0,
+          "closure": "adiabatic",
+          "density_error": 1.2902650876491708,
+          "lensing_error": 1.853510723517193,
+          "passes_1_percent": false,
+          "max_amplitudes": {
+            "density_contrast": 1.460080224849306e-05,
+            "lensing_sum": 6.978677155671296e-10,
+            "aether_spatial": 4.429140447568841e-08,
+            "delta_Q_over_Q": 7.993424219762179e-09,
+            "chi": 5.671156061716349e-10
+          }
+        },
+        {
+          "k": 24.0,
+          "eta": 0.001,
+          "phase": 1.5707963267948966,
+          "closure": "zero",
+          "density_error": 0.2236934138770985,
+          "lensing_error": 0.22367321898702855,
+          "passes_1_percent": false,
+          "max_amplitudes": {
+            "density_contrast": 1.563697523464597e-05,
+            "lensing_sum": 7.040959574530117e-10,
+            "aether_spatial": 5.274805353720556e-08,
+            "delta_Q_over_Q": 8.135328534628313e-09,
+            "chi": 5.910399988406311e-10
+          }
+        },
+        {
+          "k": 24.0,
+          "eta": 0.001,
+          "phase": 1.5707963267948966,
+          "closure": "adiabatic",
+          "density_error": 1.3374213867063132,
+          "lensing_error": 1.8783888912608337,
+          "passes_1_percent": false,
+          "max_amplitudes": {
+            "density_contrast": 1.563697523464597e-05,
+            "lensing_sum": 7.040959574530117e-10,
+            "aether_spatial": 5.274805353720556e-08,
+            "delta_Q_over_Q": 8.135328534628313e-09,
+            "chi": 5.910399988406311e-10
+          }
+        },
+        {
+          "k": 24.0,
+          "eta": 0.001,
+          "phase": 3.141592653589793,
+          "closure": "zero",
+          "density_error": 0.27340694760179113,
+          "lensing_error": 0.27338619232321637,
+          "passes_1_percent": false,
+          "max_amplitudes": {
+            "density_contrast": 1.4635606304411638e-05,
+            "lensing_sum": 6.992360951943307e-10,
+            "aether_spatial": 4.360690522635414e-08,
+            "delta_Q_over_Q": 7.734166585249982e-09,
+            "chi": 5.713984452578904e-10
+          }
+        },
+        {
+          "k": 24.0,
+          "eta": 0.001,
+          "phase": 3.141592653589793,
+          "closure": "adiabatic",
+          "density_error": 1.2919586461076529,
+          "lensing_error": 1.8546879219926742,
+          "passes_1_percent": false,
+          "max_amplitudes": {
+            "density_contrast": 1.4635606304411638e-05,
+            "lensing_sum": 6.992360951943307e-10,
+            "aether_spatial": 4.360690522635414e-08,
+            "delta_Q_over_Q": 7.734166585249982e-09,
+            "chi": 5.713984452578904e-10
+          }
+        },
+        {
+          "k": 24.0,
+          "eta": 0.001,
+          "phase": 4.71238898038469,
+          "closure": "zero",
+          "density_error": 0.3248483486043904,
+          "lensing_error": 0.3248289573756961,
+          "passes_1_percent": false,
+          "max_amplitudes": {
+            "density_contrast": 1.359943331825873e-05,
+            "lensing_sum": 6.978699448102397e-10,
+            "aether_spatial": 3.51678572918024e-08,
+            "delta_Q_over_Q": 7.300860280046643e-09,
+            "chi": 5.505508988648685e-10
+          }
+        },
+        {
+          "k": 24.0,
+          "eta": 0.001,
+          "phase": 4.71238898038469,
+          "closure": "adiabatic",
+          "density_error": 1.244818632838818,
+          "lensing_error": 1.8297928935680812,
+          "passes_1_percent": false,
+          "max_amplitudes": {
+            "density_contrast": 1.359943331825873e-05,
+            "lensing_sum": 6.978699448102397e-10,
+            "aether_spatial": 3.51678572918024e-08,
+            "delta_Q_over_Q": 7.300860280046643e-09,
+            "chi": 5.505508988648685e-10
+          }
+        },
+        {
+          "k": 24.0,
+          "eta": 0.01,
+          "phase": 0.0,
+          "closure": "zero",
+          "density_error": 0.28291021763027774,
+          "lensing_error": 0.28290004676282177,
+          "passes_1_percent": false,
+          "max_amplitudes": {
+            "density_contrast": 1.4444183996859462e-05,
+            "lensing_sum": 6.978677155671296e-10,
+            "aether_spatial": 4.737165109769265e-08,
+            "delta_Q_over_Q": 7.548488649269563e-08,
+            "chi": 3.77214467541895e-09
+          }
+        },
+        {
+          "k": 24.0,
+          "eta": 0.01,
+          "phase": 0.0,
+          "closure": "adiabatic",
+          "density_error": 1.283086299621619,
+          "lensing_error": 1.848733148584426,
+          "passes_1_percent": false,
+          "max_amplitudes": {
+            "density_contrast": 1.4444183996859462e-05,
+            "lensing_sum": 6.978677155671296e-10,
+            "aether_spatial": 4.737165109769265e-08,
+            "delta_Q_over_Q": 7.548488649269563e-08,
+            "chi": 3.77214467541895e-09
+          }
+        },
+        {
+          "k": 24.0,
+          "eta": 0.01,
+          "phase": 1.5707963267948966,
+          "closure": "zero",
+          "density_error": 0.25449956637600807,
+          "lensing_error": 0.3182692800036282,
+          "passes_1_percent": false,
+          "max_amplitudes": {
+            "density_contrast": 2.4805913858388543e-05,
+            "lensing_sum": 9.219073158294425e-10,
+            "aether_spatial": 1.3193814171286408e-07,
+            "delta_Q_over_Q": 7.372323682031603e-08,
+            "chi": 3.789334596782152e-09
+          }
+        },
+        {
+          "k": 24.0,
+          "eta": 0.01,
+          "phase": 1.5707963267948966,
+          "closure": "adiabatic",
+          "density_error": 1.754907143935263,
+          "lensing_error": 2.0971396420011077,
+          "passes_1_percent": false,
+          "max_amplitudes": {
+            "density_contrast": 2.4805913858388543e-05,
+            "lensing_sum": 9.219073158294425e-10,
+            "aether_spatial": 1.3193814171286408e-07,
+            "delta_Q_over_Q": 7.372323682031603e-08,
+            "chi": 3.789334596782152e-09
+          }
+        },
+        {
+          "k": 24.0,
+          "eta": 0.01,
+          "phase": 3.141592653589793,
+          "closure": "zero",
+          "density_error": 0.2656315448512112,
+          "lensing_error": 0.2656021295999031,
+          "passes_1_percent": false,
+          "max_amplitudes": {
+            "density_contrast": 1.4805764256312405e-05,
+            "lensing_sum": 7.115508826728256e-10,
+            "aether_spatial": 4.7594697700489785e-08,
+            "delta_Q_over_Q": 7.449614078048983e-08,
+            "chi": 3.83546074262731e-09
+          }
+        },
+        {
+          "k": 24.0,
+          "eta": 0.01,
+          "phase": 3.141592653589793,
+          "closure": "adiabatic",
+          "density_error": 1.30031377932393,
+          "lensing_error": 1.8618034167911097,
+          "passes_1_percent": false,
+          "max_amplitudes": {
+            "density_contrast": 1.4805764256312405e-05,
+            "lensing_sum": 7.115508826728256e-10,
+            "aether_spatial": 4.7594697700489785e-08,
+            "delta_Q_over_Q": 7.449614078048983e-08,
+            "chi": 3.83546074262731e-09
+          }
+        },
+        {
+          "k": 24.0,
+          "eta": 0.01,
+          "phase": 4.71238898038469,
+          "closure": "zero",
+          "density_error": 0.7800455548772037,
+          "lensing_error": 0.7800297801247005,
+          "passes_1_percent": false,
+          "max_amplitudes": {
+            "density_contrast": 1.0041093191434805e-05,
+            "lensing_sum": 6.978686448222465e-10,
+            "aether_spatial": 4.701367009829047e-08,
+            "delta_Q_over_Q": 7.359330336216157e-08,
+            "chi": 3.883133776257165e-09
+          }
+        },
+        {
+          "k": 24.0,
+          "eta": 0.01,
+          "phase": 4.71238898038469,
+          "closure": "adiabatic",
+          "density_error": 0.9494514156418431,
+          "lensing_error": 1.6112811342018543,
+          "passes_1_percent": false,
+          "max_amplitudes": {
+            "density_contrast": 1.0041093191434805e-05,
+            "lensing_sum": 6.978686448222465e-10,
+            "aether_spatial": 4.701367009829047e-08,
+            "delta_Q_over_Q": 7.359330336216157e-08,
+            "chi": 3.883133776257165e-09
+          }
+        },
+        {
+          "k": 24.0,
+          "eta": 0.1,
+          "phase": 0.0,
+          "closure": "zero",
+          "density_error": 0.37256194169043944,
+          "lensing_error": 0.3753277833227003,
+          "passes_1_percent": false,
+          "max_amplitudes": {
+            "density_contrast": 1.295875528063681e-05,
+            "lensing_sum": 6.978677155671296e-10,
+            "aether_spatial": 7.834852305809575e-08,
+            "delta_Q_over_Q": 7.503995092220304e-07,
+            "chi": 3.607061803378365e-08
+          }
+        },
+        {
+          "k": 24.0,
+          "eta": 0.1,
+          "phase": 0.0,
+          "closure": "adiabatic",
+          "density_error": 1.2147375309049206,
+          "lensing_error": 1.805928053492779,
+          "passes_1_percent": false,
+          "max_amplitudes": {
+            "density_contrast": 1.295875528063681e-05,
+            "lensing_sum": 6.978677155671296e-10,
+            "aether_spatial": 7.834852305809575e-08,
+            "delta_Q_over_Q": 7.503995092220304e-07,
+            "chi": 3.607061803378365e-08
+          }
+        },
+        {
+          "k": 24.0,
+          "eta": 0.1,
+          "phase": 1.5707963267948966,
+          "closure": "zero",
+          "density_error": 4.7834758551238465,
+          "lensing_error": 4.785514717739097,
+          "passes_1_percent": false,
+          "max_amplitudes": {
+            "density_contrast": 0.00011649530009581429,
+            "lensing_sum": 4.048743181850336e-09,
+            "aether_spatial": 9.333266510145783e-07,
+            "delta_Q_over_Q": 7.366476676414654e-07,
+            "chi": 3.684843472520423e-08
+          }
+        },
+        {
+          "k": 24.0,
+          "eta": 0.1,
+          "phase": 1.5707963267948966,
+          "closure": "adiabatic",
+          "density_error": 6.167844034325502,
+          "lensing_error": 6.387955267724192,
+          "passes_1_percent": false,
+          "max_amplitudes": {
+            "density_contrast": 0.00011649530009581429,
+            "lensing_sum": 4.048743181850336e-09,
+            "aether_spatial": 9.333266510145783e-07,
+            "delta_Q_over_Q": 7.366476676414654e-07,
+            "chi": 3.684843472520423e-08
+          }
+        },
+        {
+          "k": 24.0,
+          "eta": 0.1,
+          "phase": 3.141592653589793,
+          "closure": "zero",
+          "density_error": 0.18787751734541158,
+          "lensing_error": 0.19543700572399794,
+          "passes_1_percent": false,
+          "max_amplitudes": {
+            "density_contrast": 1.6700812070109236e-05,
+            "lensing_sum": 8.346987574577751e-10,
+            "aether_spatial": 9.189488779875603e-08,
+            "delta_Q_over_Q": 7.494107635098243e-07,
+            "chi": 3.6485888832418086e-08
+          }
+        },
+        {
+          "k": 24.0,
+          "eta": 0.1,
+          "phase": 3.141592653589793,
+          "closure": "adiabatic",
+          "density_error": 1.3927648881279482,
+          "lensing_error": 2.0036767029868265,
+          "passes_1_percent": false,
+          "max_amplitudes": {
+            "density_contrast": 1.6700812070109236e-05,
+            "lensing_sum": 8.346987574577751e-10,
+            "aether_spatial": 9.189488779875603e-08,
+            "delta_Q_over_Q": 7.494107635098243e-07,
+            "chi": 3.6485888832418086e-08
+          }
+        },
+        {
+          "k": 24.0,
+          "eta": 0.1,
+          "phase": 4.71238898038469,
+          "closure": "zero",
+          "density_error": 5.332017617605336,
+          "lensing_error": 5.332263145190226,
+          "passes_1_percent": false,
+          "max_amplitudes": {
+            "density_contrast": 8.72588915429096e-05,
+            "lensing_sum": 3.0317837811524933e-09,
+            "aether_spatial": 8.490685660021925e-07,
+            "delta_Q_over_Q": 7.365177341833109e-07,
+            "chi": 3.7208962550180127e-08
+          }
+        },
+        {
+          "k": 24.0,
+          "eta": 0.1,
+          "phase": 4.71238898038469,
+          "closure": "adiabatic",
+          "density_error": 3.947793146683812,
+          "lensing_error": 4.103058668913917,
+          "passes_1_percent": false,
+          "max_amplitudes": {
+            "density_contrast": 8.72588915429096e-05,
+            "lensing_sum": 3.0317837811524933e-09,
+            "aether_spatial": 8.490685660021925e-07,
+            "delta_Q_over_Q": 7.365177341833109e-07,
+            "chi": 3.7208962550180127e-08
+          }
+        }
+      ]
+    }
+  ],
+  "refinement": {
+    "k": 12.0,
+    "grid_points": 4001,
+    "rtol": 1e-12,
+    "max_error_fraction_change": 4.167191673953852e-06,
+    "direct_vs_fundamental_error_per_delta_i": 1.2654672231979247e-13
+  }
+}

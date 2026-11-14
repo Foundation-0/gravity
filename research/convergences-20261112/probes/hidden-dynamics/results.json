@@ -1,0 +1,248 @@
+{
+  "kind": "synthetic mathematical probes; no observational data",
+  "classical_equations": "x'=-x+y; y'=-gamma*(x+y)",
+  "reduced_equation": "x'=-x+exp(-gamma*t)*y0-gamma*integral_0^t exp(-gamma*(t-s))*x(s) ds",
+  "same_present_different_hidden_state": {
+    "x0": 0.0,
+    "gamma": 1.0,
+    "t": 1.0,
+    "x_y0_plus_1": 0.3095598756531122,
+    "x_y0_minus_1": -0.3095598756531122
+  },
+  "numerical_checks": [
+    {
+      "dt": 0.04,
+      "full_rk4_max_abs_error": 4.902233868842032e-08,
+      "scalar_volterra_max_abs_error": 8.03507476551113e-05
+    },
+    {
+      "dt": 0.02,
+      "full_rk4_max_abs_error": 2.9808385759722e-09,
+      "scalar_volterra_max_abs_error": 2.009070502520527e-05
+    },
+    {
+      "dt": 0.01,
+      "full_rk4_max_abs_error": 1.8373294552453956e-10,
+      "scalar_volterra_max_abs_error": 5.022621959838158e-06
+    },
+    {
+      "dt": 0.005,
+      "full_rk4_max_abs_error": 1.1403572530710449e-11,
+      "scalar_volterra_max_abs_error": 1.2556583717238112e-06
+    }
+  ],
+  "volterra_step_halving_error_ratios": [
+    3.9993991029336886,
+    4.000043241528901,
+    3.999990819909821
+  ],
+  "instantaneous_closure_errors": [
+    {
+      "gamma": 1,
+      "max_abs_error_xdot_equals_minus_2x": 0.2639819091813228,
+      "interval": [
+        0,
+        6
+      ],
+      "initial_state": [
+        1,
+        -1
+      ]
+    },
+    {
+      "gamma": 10,
+      "max_abs_error_xdot_equals_minus_2x": 0.037899073436530095,
+      "interval": [
+        0,
+        6
+      ],
+      "initial_state": [
+        1,
+        -1
+      ]
+    },
+    {
+      "gamma": 100,
+      "max_abs_error_xdot_equals_minus_2x": 0.0036968960691542985,
+      "interval": [
+        0,
+        6
+      ],
+      "initial_state": [
+        1,
+        -1
+      ]
+    }
+  ],
+  "stationary_gaussian_non_markov_witness": {
+    "lag": 0.7853981633974483,
+    "C0": 1.0,
+    "C_lag": 0.3223969419448345,
+    "C_2lag": 1.272895288930342e-17,
+    "markov_required_C_2lag": 0.10393978817538098,
+    "cov_X0_X2_given_X1": -0.10393978817538096,
+    "corr_X0_X2_given_X1": -0.11599643283315936,
+    "conditional_mutual_information_nats": 0.006773256764037708
+  },
+  "same_static_response_different_transient_response": [
+    {
+      "gamma": 1,
+      "omega": 0,
+      "response_real": 0.5,
+      "response_imag": 0.0,
+      "amplitude": 0.5,
+      "phase_deg": 0.0
+    },
+    {
+      "gamma": 1,
+      "omega": 1,
+      "response_real": 0.6,
+      "response_imag": -0.2,
+      "amplitude": 0.6324555320336759,
+      "phase_deg": -18.434948822922014
+    },
+    {
+      "gamma": 1,
+      "omega": 2,
+      "response_real": 0.3,
+      "response_imag": -0.4,
+      "amplitude": 0.5,
+      "phase_deg": -53.13010235415599
+    },
+    {
+      "gamma": 20,
+      "omega": 0,
+      "response_real": 0.5,
+      "response_imag": 0.0,
+      "amplitude": 0.5,
+      "phase_deg": 0.0
+    },
+    {
+      "gamma": 20,
+      "omega": 1,
+      "response_real": 0.408256880733945,
+      "response_imag": -0.19418960244648317,
+      "amplitude": 0.45208769322437187,
+      "phase_deg": -25.43835053989463
+    },
+    {
+      "gamma": 20,
+      "omega": 2,
+      "response_real": 0.26274509803921564,
+      "response_imag": -0.25098039215686274,
+      "amplitude": 0.36335401991838434,
+      "phase_deg": -43.6881122174959
+    }
+  ],
+  "hidden_coordinate_rescaling_max_response_defect": 1.1123893155135927e-16,
+  "quantum_two_swap_with_reset": {
+    "cases": [
+      {
+        "initial_system": "zero",
+        "system_after_first_swap": [
+          [
+            1,
+            0
+          ],
+          [
+            0,
+            0
+          ]
+        ],
+        "system_after_reset": [
+          [
+            1,
+            0
+          ],
+          [
+            0,
+            0
+          ]
+        ],
+        "system_after_second_swap": [
+          [
+            1,
+            0
+          ],
+          [
+            0,
+            0
+          ]
+        ],
+        "product_state_defect_at_middle": 0
+      },
+      {
+        "initial_system": "one",
+        "system_after_first_swap": [
+          [
+            1,
+            0
+          ],
+          [
+            0,
+            0
+          ]
+        ],
+        "system_after_reset": [
+          [
+            1,
+            0
+          ],
+          [
+            0,
+            0
+          ]
+        ],
+        "system_after_second_swap": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            1
+          ]
+        ],
+        "product_state_defect_at_middle": 0
+      },
+      {
+        "initial_system": "plus",
+        "system_after_first_swap": [
+          [
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        "system_after_reset": [
+          [
+            1,
+            0
+          ],
+          [
+            0,
+            0
+          ]
+        ],
+        "system_after_second_swap": [
+          [
+            0.5,
+            0.5
+          ],
+          [
+            0.5,
+            0.5
+          ]
+        ],
+        "product_state_defect_at_middle": 0.0
+      }
+    ],
+    "trace_distance_after_reset_zero_vs_one": 0.0,
+    "trace_distance_after_second_swap_zero_vs_one": 1.0,
+    "qualification": "Product states at sampled discrete times; no claim about a continuous gate implementation."
+  },
+  "all_assertions_passed": true
+}

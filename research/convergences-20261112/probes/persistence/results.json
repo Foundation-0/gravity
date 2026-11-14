@@ -1,0 +1,122 @@
+{
+  "condensation_time": {
+    "limit": "Requires high occupation, q much greater than one, kinetic evolution, and stated virial assumptions; not AeST",
+    "model": "Kinetic gravitational condensation estimate in a specified boson model",
+    "rows": [
+      {
+        "q_Rmv_over_hbar": 10.0,
+        "tau_gr_over_t_dyn": 20.411840649452834
+      },
+      {
+        "q_Rmv_over_hbar": 30.0,
+        "tau_gr_over_t_dyn": 373.1038977161165
+      },
+      {
+        "q_Rmv_over_hbar": 100.0,
+        "tau_gr_over_t_dyn": 10205.920324726418
+      },
+      {
+        "q_Rmv_over_hbar": 300.0,
+        "tau_gr_over_t_dyn": 222483.9403744074
+      }
+    ]
+  },
+  "late_annihilation": {
+    "exposure_u": 100.0,
+    "initial_y_minus": 1.0,
+    "model": "After inverse production is negligible, adiabatic entropy, only pair annihilation, no decays or fresh production",
+    "radiation_era_example": {
+      "assumptions": "Constant relativistic degrees of freedom and s-wave cross section; dY/dx proportional to -Y_plus Y_minus/x^2",
+      "lesson": "Finite integrated exposure leaves a symmetric remnant; an exact conserved excess also sets a lower bound",
+      "u_of_x": "u_infinity * (1 - x_start/x)"
+    },
+    "rows": [
+      {
+        "final_total_y": 0.019801980198019802,
+        "final_y_minus": 0.009900990099009901,
+        "final_y_plus": 0.009900990099009901,
+        "initial_asymmetry_q": 0.0,
+        "minority_to_majority": 1.0,
+        "rk4_relative_error": 8.480022239965024e-14
+      },
+      {
+        "final_total_y": 0.019818908551650985,
+        "final_y_minus": 0.009409454275825494,
+        "final_y_plus": 0.010409454275825493,
+        "initial_asymmetry_q": 0.001,
+        "minority_to_majority": 0.9039334845514082,
+        "rk4_relative_error": 9.512956728040464e-14
+      },
+      {
+        "final_total_y": 0.021458267022086232,
+        "final_y_minus": 0.005729133511043117,
+        "final_y_plus": 0.015729133511043117,
+        "initial_asymmetry_q": 0.01,
+        "minority_to_majority": 0.36423707046677456,
+        "rk4_relative_error": 1.4185704468722719e-13
+      },
+      {
+        "final_total_y": 0.10000825487338472,
+        "final_y_minus": 4.12743669234947e-06,
+        "final_y_plus": 0.10000412743669236,
+        "initial_asymmetry_q": 0.1,
+        "minority_to_majority": 4.127266342044077e-05,
+        "rk4_relative_error": 1.0240482705969714e-12
+      }
+    ]
+  },
+  "one_wave_two_momenta": {
+    "coarse_graining": "Spatial averaging over many interference fringes removes the p=0 Wigner interference term",
+    "kinetic_energy": 4.500000000000002,
+    "length": 6.283185307179586,
+    "lesson": "Zero current does not imply zero momentum spread or zero kinetic energy",
+    "max_pointwise_probability_current": 0.0,
+    "mean_momentum": 0.0,
+    "model": "Free standing wave, not AeST and not a collapse simulation",
+    "momentum_distribution": [
+      {
+        "p": -3,
+        "weight": 0.5
+      },
+      {
+        "p": 3,
+        "weight": 0.5
+      }
+    ],
+    "momentum_variance": 9.00000000000001,
+    "norm": 0.9999999999999998,
+    "units": "hbar=m=1",
+    "wavenumber": 3
+  },
+  "ordering_by_spectral_transport": {
+    "alpha": 0.1,
+    "beta": 0.1,
+    "lesson": "An isolated whole system can order at low momentum by transferring energy outside that sector",
+    "limit": "No collision equation was solved; no mechanism, exponent or applicability to dark matter is established",
+    "model": "Assumed one-dimensional Gaussian scaling spectrum restricted to a moving low-momentum band",
+    "rows": [
+      {
+        "expected_kinetic_energy_ratio": 1.0,
+        "kinetic_energy_ratio": 1.0,
+        "moving_cutoff": 3.0,
+        "number_ratio": 1.0,
+        "t_over_t0": 1.0
+      },
+      {
+        "expected_kinetic_energy_ratio": 0.6309573444801932,
+        "kinetic_energy_ratio": 0.6309573444801932,
+        "moving_cutoff": 2.3829847041728445,
+        "number_ratio": 0.9999999999999999,
+        "t_over_t0": 10.0
+      },
+      {
+        "expected_kinetic_energy_ratio": 0.3981071705534972,
+        "kinetic_energy_ratio": 0.39810717055349726,
+        "moving_cutoff": 1.8928720334405797,
+        "number_ratio": 0.9999999999999999,
+        "t_over_t0": 100.0
+      }
+    ]
+  },
+  "status": "Illustrative analytical consequences with numerical checks; no observations or AeST nonlinear evolution"
+}

@@ -1,0 +1,211 @@
+{
+  "route": "hidden_variables_memory_and_effective_dynamics",
+  "report": "hidden-dynamics.md",
+  "research_date": "2026-11-12",
+  "seat": "gpt-forge",
+  "expedition_model": "gpt-6-astra",
+  "reasoning_effort": "ultra",
+  "scope": "A coherent exploratory pass. Existing repositories read only. No empirical discovery, new microscopic theory, MOND derivation or AeST evolution claimed.",
+  "claim_classes": {
+    "established_result": "Mathematical identity or published result within its explicit assumptions.",
+    "conditional_model": "A physical-model prediction or reduction conditional on its equations, initial state and regime.",
+    "untested_conjecture": "An application or mechanism not established by a derivation or observation in this pass.",
+    "own_inference": "This pass's mathematical example, comparison, interpretation or proposed discriminating probe. No priority claimed."
+  },
+  "sources": [
+    {
+      "id": "H01",
+      "title": "Optimal prediction with memory",
+      "authors": "Alexandre J. Chorin, Ole H. Hald and Raz Kupferman",
+      "year": 2002,
+      "url": "https://math.berkeley.edu/~chorin/CHK02.pdf",
+      "doi": "10.1016/S0167-2789(02)00446-3",
+      "type": "primary_mathematical_methods_paper_author_hosted_full_text",
+      "class": "established_result",
+      "locator": "Section 2, equations 1-7, printed pages 240-242; section 6, orthogonal dynamics; section 7, short-memory approximations.",
+      "inspection": "Read full-text extracted derivation of the Liouville formulation, conditional and linear projections, Dyson formula, exact generalized Langevin equation and short-memory assumptions. PDF page 3 was also requested through screenshot, but the evidence used here is the extracted text.",
+      "supports": "The nonlinear Mori-Zwanzig identity separates instantaneous evolution, history and an orthogonal term determined by full initial data. Projection and initial ensemble specify the description. Practical approximation is a separate step.",
+      "limits": "Formal projection does not independently solve the orthogonal dynamics or establish physical thermal noise. Infinite-dimensional applications need analytical assumptions. Our finite block derivation and closure criterion are elementary independent calculations, not a new theorem credited to this paper."
+    },
+    {
+      "id": "H02",
+      "title": "Nonlinear generalized Langevin equations",
+      "authors": "Robert Zwanzig",
+      "year": 1973,
+      "url": "https://link.springer.com/article/10.1007/BF01008729",
+      "doi": "10.1007/BF01008729",
+      "type": "primary_theory_paper_publisher_abstract",
+      "class": "conditional_model",
+      "locator": "Publisher abstract; Journal of Statistical Physics 9, pages 215-220.",
+      "inspection": "Publisher abstract and bibliographic information only. Full text was subscription restricted and was not acquired.",
+      "supports": "Exact generalized Langevin equations are derived for nonlinear systems interacting with specified heat baths. The abstract separately identifies an approximately Markovian example.",
+      "limits": "Used only for its stated model scope and historical credit. No bath Hamiltonian, fluctuation-dissipation formula or detailed derivation is attributed to uninspected full text."
+    },
+    {
+      "id": "H03",
+      "title": "Non-Markovian quantum dynamics and the method of correlated projection superoperators",
+      "authors": "Heinz-Peter Breuer",
+      "year": 2007,
+      "url": "https://arxiv.org/html/0707.0172v1",
+      "type": "author_methods_paper_and_review_with_explicit_derivations",
+      "class": "established_result",
+      "locator": "Section II.1, equations 3-14; section II.2, equation 15 and propagator caveat; section III.3, equation 31.",
+      "inspection": "Read standard projection, Nakajima-Zwanzig kernel, the assumptions used for the displayed homogeneous equation, time-convolutionless representation and correlated-initial-state discussion.",
+      "supports": "The partial trace can be represented by an idempotent superoperator on the joint state. Initial-state compatibility controls an inhomogeneous term. A time-local representation can describe non-Markovian dynamics and can fail at singular times.",
+      "limits": "The paper's simplified interaction-picture homogeneous equation uses additional assumptions. We use independent constant-generator block algebra in the report instead of generalizing those simplifications. Time dependence of a generator alone is not a sufficient witness of non-Markovianity. arXiv's HTML generated date is not the paper's publication date."
+    },
+    {
+      "id": "H04",
+      "title": "Operational Markov condition for quantum processes",
+      "authors": "Felix A. Pollock, Cesar Rodriguez-Rosario, Thomas Frauenheim, Mauro Paternostro and Kavan Modi",
+      "year": 2018,
+      "url": "https://arxiv.org/html/1801.09811v1",
+      "type": "primary_quantum_process_theory",
+      "class": "established_result",
+      "locator": "Main operational definition and theorem, equation 2; Appendix B.3, two-swap construction; Appendix B.1-B.2 for narrower diagnostics.",
+      "inspection": "Read the causal-break definition, main theorem, divisibility discussion and the explicit two-swap counterexample in Appendix B.3.",
+      "supports": "Past controls can alter the future after the system is re-prepared in the same state. Two swaps provide memory without system-environment correlations at the sampled discrete stages.",
+      "limits": "A statement about an operational quantum process with allowed controls and specified sampling. It is not equivalent to every two-time non-Markovianity measure. Product states at discrete stages do not exclude correlations during a physical continuous implementation of a swap. This pass reproduces the authors' example with a system reset; it is not a novel construction."
+    },
+    {
+      "id": "H05",
+      "title": "A Unified Framework for Multiscale Modeling using the Mori-Zwanzig Formalism and the Variational Multiscale Method",
+      "authors": "Eric J. Parish and Karthik Duraisamy",
+      "year": 2017,
+      "url": "https://arxiv.org/html/1712.09669v1",
+      "type": "primary_mathematical_model_reduction_paper",
+      "class": "conditional_model",
+      "locator": "Section 3.1, equations 21-35; section 4 on orthogonal dynamics; section 6.2 on dissipativity; section 6.3, equations 98-103.",
+      "inspection": "Read the linear integrating-factor elimination, remarks about cost, orthogonal-dynamics limitations, dissipation caveat and finite-memory upwind-flux construction.",
+      "supports": "Fine-scale elimination produces an exact coarse equation with memory. Approximation choices can reproduce known stabilization terms. A selected finite-memory model gives the upwind correction for linear advection.",
+      "limits": "The upwind equivalence uses a specific discontinuous Galerkin setting and memory-length choice. It is not a general equivalence between all physical viscosity and information loss. No generic sign of dissipation is established."
+    },
+    {
+      "id": "H06",
+      "title": "Introduction to Effective Field Theory",
+      "authors": "C. P. Burgess",
+      "year": 2007,
+      "url": "https://arxiv.org/html/hep-th/0701053",
+      "version": "arXiv:hep-th/0701053v2",
+      "type": "author_review_with_explicit_scalar_model_calculation",
+      "class": "conditional_model",
+      "locator": "Section 2.1, scalar model and locality discussion, especially equation 20; section 2.2, Wilson action.",
+      "inspection": "Read the tree-level heavy-field elimination and local inverse-mass expansion, its decoupling assumptions and the Wilson-action definitions.",
+      "supports": "An exact eliminated-field expression can be nonlocal while its controlled low-energy expansion yields local interactions. Regime and scale hierarchy matter.",
+      "limits": "A low-energy scattering effective action is not automatically a retarded initial-value equation. The report's causal-boundary warning is a distinction in interpretation, not a claim that this source derives an AeST memory kernel or MOND law."
+    },
+    {
+      "id": "H07",
+      "title": "New Relativistic Theory for Modified Newtonian Dynamics",
+      "authors": "Constantinos Skordis and Tom Zlosnik",
+      "year": 2021,
+      "url": "https://arxiv.org/html/2007.00082v3",
+      "version": "arXiv:2007.00082v3, 14 October 2021",
+      "type": "primary_gravitational_theory",
+      "class": "conditional_model",
+      "locator": "Phenomenological requirements and equation 2; cosmological observables, equations 7-12 and paragraph immediately after equation 11.",
+      "inspection": "Independently read the fluid-variable definitions, perturbation evolution, pressure contrast, explicit nonclosure paragraph and prescribed low-gradient action limit.",
+      "supports": "Effective density and velocity equations have fluid form while the pressure depends on vector perturbations alpha and E. The low-gradient functional behavior is selected to obtain MOND phenomenology.",
+      "limits": "This is a linear cosmological perturbation result within AeST. It does not establish nonlinear shock thermodynamics, a halo memory time, an effective thermal equation of state, or radiative trapping. Gauge and constraint reduction must precede a proposed matched-state test."
+    },
+    {
+      "id": "H08",
+      "title": "Quantum Darwinism in an Everyday Environment: Huge Redundancy in Scattered Photons",
+      "authors": "C. Jess Riedel and Wojciech H. Zurek",
+      "year": 2010,
+      "url": "https://arxiv.org/html/1001.3419v2",
+      "type": "primary_quantum_decoherence_model",
+      "class": "conditional_model",
+      "locator": "Figure 2(b), equations 17-18, paragraphs on perfectly isotropic illumination.",
+      "inspection": "Independently read the figure caption and isotropic-limit calculation after the relations route supplied this lead.",
+      "supports": "Decoherence and accessible redundant records are distinct in a specified photon-scattering model.",
+      "limits": "Perfectly mixed directional illumination is a special limit. This source alone does not analyze a general operational feedback-memory criterion. The fresh-fragment comparison in our report is an elementary channel argument with explicit additional assumptions."
+    },
+    {
+      "id": "H09",
+      "title": "ASASSN-24fw: Candidate gas-rich circumsecondary disk occultation of a main-sequence star",
+      "authors": "Zakamska and colleagues",
+      "year": 2025,
+      "url": "https://arxiv.org/html/2507.05367v3",
+      "type": "primary_observational_paper",
+      "class": "established_result",
+      "locator": "Section III.1, period-alias discussion after figures 5-6.",
+      "inspection": "Independently read the DASCH period discussion and ASAS phase-coverage exclusion of P/2 after the evidence route supplied this lead.",
+      "supports": "Additional phase coverage excludes a period alias left unresolved by the archival data alone.",
+      "limits": "This is an inference about candidate periods, not evidence that a physical history-dependent force caused the eclipse. It does not uniquely identify the occulting structure."
+    },
+    {
+      "id": "H10",
+      "title": "Foundation-0/gravity claim C-26 and research notebook fluid analogy",
+      "url": "https://github.com/Foundation-0/gravity",
+      "local_paths": [
+        "https://github.com/Foundation-0/gravity/blob/d8c7544e89388720fc1c13de816ddb7dd03d2096/CLAIMS.md",
+        "https://github.com/Foundation-0/gravity/blob/d8c7544e89388720fc1c13de816ddb7dd03d2096/RESEARCH_NOTEBOOK_AND_REASONING.md"
+      ],
+      "type": "local_agent_authored_project_record",
+      "class": "untested_conjecture",
+      "locator": "CLAIMS.md lines 128-140, especially line 136; notebook lines 38-54.",
+      "inspection": "Read matching claim and notebook passages locally; not an independent observational source.",
+      "supports": "The project proposes a post-caustic entropy-conserving fluid treatment and explicitly labels its AeST application a conjecture.",
+      "limits": "Numerical scale matches do not establish closure, dissipation, entropy production or stability. These files were not edited."
+    },
+    {
+      "id": "H11",
+      "title": "Expedition route reports: relations, persistence and evidence",
+      "local_paths": [
+        "relations.md",
+        "persistence.md",
+        "evidence.md"
+      ],
+      "type": "peer_research_handoffs",
+      "class": "own_inference",
+      "inspection": "Read report text and targeted source-relevant passages. Checked AeST, photon-record and period-alias primary passages independently.",
+      "supports": "Route continuity and leads connecting fluid closure, environment records and complementary observation channels.",
+      "limits": "Peer reports are not independent primary evidence. Hidden-dynamics findings do not broaden their physical claims."
+    },
+    {
+      "id": "H12",
+      "title": "Exact block elimination, two-variable closure, stationary Gaussian memory and two-swap probes",
+      "local_paths": [
+        "../probes/hidden-dynamics/hidden_dynamics.py",
+        "../probes/hidden-dynamics/results.json",
+        "../probes/hidden-dynamics/trajectories.csv"
+      ],
+      "type": "reproducible_synthetic_mathematical_examples",
+      "class": "own_inference",
+      "inspection": "Ran standard-library Python calculation and built-in assertions; analytic solution compared with full RK4 and independent scalar Volterra quadrature at four steps; exact covariance and small-matrix algebra checked.",
+      "supports": "Equivalent retained dynamics under elimination; insufficiency of a scalar deterministic state; accuracy limits of instantaneous closure; a stationary Gaussian conditional-memory witness; identical static but different transient responses; Pollock two-swap reproduction with reset.",
+      "limits": "No measured data, no stochastic trajectory simulation, no AeST equations, no microscopic identification from a fitted kernel. The Gaussian result assumes the specified stationary linear process, independent white driving, exact samples and no measurement noise. The swap result assumes ideal discrete swaps, a pure independent environment initially and a system-only reset."
+    }
+  ],
+  "strongest_result": {
+    "class": "established_result",
+    "claim": "Exact elimination of coupled dynamical degrees of freedom is a shared mathematical operation that can generate history dependence across otherwise different theories.",
+    "sources": [
+      "H01",
+      "H03",
+      "H05",
+      "H12"
+    ],
+    "boundary": "This establishes a common operation, not a common microscopic mechanism. Memory depends on the retained state, preparation, measurements and interventions."
+  },
+  "proposed_next_probes": [
+    {
+      "class": "own_inference",
+      "name": "Constraint-reduced linear AeST closure test",
+      "description": "Fix gauge and constraints, identify allowed full states sharing the candidate fluid variables, vary independent vector modes, and compare pressure and retained evolution.",
+      "would_strengthen": "A measured long-lived difference would establish insufficiency of that particular fluid closure in the tested linear regime.",
+      "would_weaken": "Absence of independent allowed hidden states, or fast relaxation with a uniform error bound, could justify a restricted closure.",
+      "not_done": true
+    },
+    {
+      "class": "own_inference",
+      "name": "Witness Map companion separating interference, records and feedback",
+      "description": "Compare outgoing fresh fragments with recycled fragments and a controlled reset. Measure coherence, fragment information and conditional future dependence separately.",
+      "would_strengthen": "One model exhibiting independent changes in the three quantities would make the distinctions directly inspectable.",
+      "would_weaken": "A restricted physical environment might relate them quantitatively, but this would not make the relation universal.",
+      "not_done": true
+    }
+  ],
+  "publication_note": "Historical research snapshot prepared on 2026-11-12. Repository claims refer to the recorded studied revisions, not current main. Original research used gpt-6-astra with requested ultra reasoning; publication preparation used gpt-6.1-sol."
+}

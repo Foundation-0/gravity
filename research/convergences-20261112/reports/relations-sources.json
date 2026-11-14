@@ -1,0 +1,403 @@
+{
+  "route": "relations_and_properties",
+  "report": "relations.md",
+  "research_date": "2026-11-12",
+  "seat": "gpt-forge",
+  "expedition_model": "gpt-6-astra",
+  "reasoning_effort": "ultra",
+  "claim_classes": {
+    "established_result": "Observed effect or mathematical result within stated assumptions; not unlimited extrapolation.",
+    "conditional_model": "Prediction conditional on a physical model whose application or empirical status is not settled.",
+    "untested_conjecture": "Proposed mechanism or interpretation not established by the cited observation.",
+    "own_inference": "This expedition's comparison, calculation, or proposed follow-up. No novelty priority claimed."
+  },
+  "sources": [
+    {
+      "id": "R01",
+      "title": "Quantum Darwinism in an Everyday Environment: Huge Redundancy in Scattered Photons",
+      "authors": "C. Jess Riedel and Wojciech H. Zurek",
+      "year": 2010,
+      "url": "https://arxiv.org/html/1001.3419v2",
+      "doi": "10.1103/PhysRevLett.105.020404",
+      "type": "primary_theory",
+      "class": "conditional_model",
+      "locator": "Figure 2(a-b); equations 14-18; isotropic-illumination discussion",
+      "supports": "Directional illumination makes redundant records. Perfectly isotropic mixed directional states can decohere without redundant records.",
+      "limits": "Specified scattering model and ideal isotropic limit, not a description of every natural radiation field.",
+      "inspection": "Read relevant full-text derivation and figures' captions through arXiv HTML."
+    },
+    {
+      "id": "R02",
+      "title": "The Rise and Fall of Redundancy in Decoherence and Quantum Darwinism",
+      "authors": "C. Jess Riedel, Wojciech H. Zurek and Michael Zwolak",
+      "year": 2012,
+      "url": "https://arxiv.org/html/1205.3197v2",
+      "doi": "10.1088/1367-2630/14/8/083010",
+      "type": "primary_theory",
+      "class": "conditional_model",
+      "locator": "Equation 1; sections 3 Pure decoherence and 4 Mixing within the environment",
+      "supports": "Interactions among environment constituents can redistribute redundant information into collective correlations.",
+      "limits": "Specific spin models and asymptotic arguments; not every environment scrambles at the same rate.",
+      "inspection": "Abstract and full-text model discussion."
+    },
+    {
+      "id": "R03",
+      "title": "Objectivity (or lack thereof): Comparison between predictions of quantum Darwinism and spectrum broadcast structure",
+      "authors": "Thao P. Le and Alexandra Olaya-Castro",
+      "year": 2018,
+      "url": "https://doi.org/10.1103/PhysRevA.98.032103",
+      "type": "primary_theory",
+      "class": "established_result",
+      "locator": "Abstract and model comparison of mutual information, discord and accessible information",
+      "supports": "A mutual-information plateau need not consist solely of independently accessible classical information.",
+      "limits": "Uses explicit model counterexamples. No blanket claim against all quantum Darwinism.",
+      "inspection": "Publisher abstract. The later 2019 equivalence theorem was not relied on because a published comment exists."
+    },
+    {
+      "id": "R04",
+      "title": "Perfect Quantum Error Correcting Code",
+      "authors": "Raymond Laflamme, Cesar Miquel, Juan Pablo Paz and Wojciech Hubert Zurek",
+      "year": 1996,
+      "url": "https://arxiv.org/abs/quant-ph/9602019",
+      "doi": "10.1103/PhysRevLett.77.198",
+      "type": "primary_theory",
+      "class": "established_result",
+      "locator": "Five-qubit encoding and single-qubit error correction construction",
+      "supports": "Prior work for a perfect five-qubit code protecting a logical qubit against arbitrary single-qubit errors.",
+      "limits": "Probe uses a standard cyclic stabilizer representation and verifies its properties directly.",
+      "inspection": "Primary abstract; code representation independently checked numerically in probe."
+    },
+    {
+      "id": "R05",
+      "title": "A Theory of Quantum Error-Correcting Codes",
+      "authors": "Emanuel Knill and Raymond Laflamme",
+      "year": 1997,
+      "url": "https://arxiv.org/abs/quant-ph/9604034",
+      "type": "primary_theory",
+      "class": "established_result",
+      "locator": "Necessary and sufficient correction conditions, encoded states and recovery",
+      "supports": "Error correction constrains local operators on the code space.",
+      "limits": "General framework does not imply natural environments routinely implement a code.",
+      "inspection": "Primary abstract, together with explicit local-operator checks in probe."
+    },
+    {
+      "id": "R06",
+      "title": "Coherence in Spontaneous Radiation Processes",
+      "authors": "R. H. Dicke",
+      "year": 1954,
+      "url": "https://doi.org/10.1103/PhysRev.93.99",
+      "type": "primary_theory",
+      "class": "established_result",
+      "locator": "Opening two-emitter example and collective radiation analysis",
+      "supports": "Collective symmetric and antisymmetric states can have different decay through a common radiation field.",
+      "limits": "Ideal small-sample and coupling assumptions; real emitters have additional channels.",
+      "inspection": "Publisher abstract and primary-paper first-page text."
+    },
+    {
+      "id": "R07",
+      "title": "Observation of Superradiant and Subradiant Spontaneous Emission of Two Trapped Ions",
+      "authors": "R. G. DeVoe and R. G. Brewer",
+      "year": 1996,
+      "url": "https://doi.org/10.1103/PhysRevLett.76.2049",
+      "type": "primary_experiment",
+      "class": "established_result",
+      "locator": "Abstract: distance-dependent spontaneous-emission rate of a two-ion crystal",
+      "supports": "Measured cooperative emission changes with ion separation.",
+      "limits": "Does not measure all ideal eta=1 endpoints in this expedition's illustrative model.",
+      "inspection": "Publisher abstract."
+    },
+    {
+      "id": "R08",
+      "title": "Inhibited Spontaneous Emission by a Rydberg Atom",
+      "authors": "Randall G. Hulet, Eric S. Hilfer and Daniel Kleppner",
+      "year": 1985,
+      "url": "https://doi.org/10.1103/PhysRevLett.55.2137",
+      "type": "primary_experiment",
+      "class": "established_result",
+      "locator": "Abstract: conducting-plane mode cutoff; lifetime increase of at least 20",
+      "supports": "The environment changes an atom's radiative lifetime.",
+      "limits": "Specific Rydberg transition and geometry; not all decay processes are suppressed.",
+      "inspection": "Publisher abstract verified."
+    },
+    {
+      "id": "R09",
+      "title": "Observation of Cavity-Enhanced Single-Atom Spontaneous Emission",
+      "authors": "P. Goy, J. M. Raimond, M. Gross and S. Haroche",
+      "year": 1983,
+      "url": "https://doi.org/10.1103/PhysRevLett.50.1903",
+      "type": "primary_experiment",
+      "class": "established_result",
+      "locator": "Abstract: resonant superconducting cavity and Rydberg-atom lifetime",
+      "supports": "A resonant cavity can enhance spontaneous emission.",
+      "limits": "Specific cavity-transition setting; no general multiplicative factor claimed.",
+      "inspection": "Publisher abstract."
+    },
+    {
+      "id": "R10",
+      "title": "Decoherence-Free Subspaces for Quantum Computation",
+      "authors": "D. A. Lidar, I. L. Chuang and K. B. Whaley",
+      "year": 1998,
+      "url": "https://doi.org/10.1103/PhysRevLett.81.2594",
+      "type": "primary_theory",
+      "class": "established_result",
+      "locator": "Error generators and protected subspace condition",
+      "supports": "Protected collective states depend on the noise coupling's algebra and symmetry.",
+      "limits": "Conditional on the relevant interaction/noise model; extra channels can break protection.",
+      "inspection": "Publisher abstract and author-hosted first page."
+    },
+    {
+      "id": "R11",
+      "title": "Topological Boundary Modes in Isostatic Lattices",
+      "authors": "C. L. Kane and T. C. Lubensky",
+      "year": 2014,
+      "url": "https://arxiv.org/html/1308.0554v2",
+      "doi": "10.1038/nphys2835",
+      "type": "primary_theory",
+      "class": "established_result",
+      "locator": "Equation 1; Mechanical Modes and Topological Band Theory; equations 2, 6-7",
+      "supports": "Mechanical spectra depend on the equilibrium/compatibility matrix; boundary modes can reflect bulk topology.",
+      "limits": "Spring-framework assumptions. Does not establish topological modes or material constants for the incentre lattice.",
+      "inspection": "Full relevant arXiv sections and equations."
+    },
+    {
+      "id": "R12",
+      "title": "Quantum mechanics and the covariance of physical laws in quantum reference frames",
+      "authors": "Flaminia Giacomini, Esteban Castro-Ruiz and Caslav Brukner",
+      "year": 2019,
+      "url": "https://arxiv.org/html/1712.07207v2",
+      "doi": "10.1038/s41467-018-08155-0",
+      "type": "primary_theory",
+      "class": "established_result",
+      "locator": "Results I.1-I.2 and Methods II.5; introduction on invariant probabilities",
+      "supports": "Quantum-frame transformations alter subsystem descriptions while preserving consistently transformed outcome probabilities.",
+      "limits": "Formal construction, not evidence selecting an interpretation or erasing operational Bell correlations.",
+      "inspection": "Full relevant arXiv text; publisher full-text access redirected unsuccessfully."
+    },
+    {
+      "id": "R13",
+      "title": "Partial observables",
+      "authors": "Carlo Rovelli",
+      "year": 2002,
+      "url": "https://arxiv.org/abs/gr-qc/0110035",
+      "doi": "10.1103/PhysRevD.65.124013",
+      "type": "primary_theory",
+      "class": "established_result",
+      "locator": "Sections II-III; https://arxiv.org/html/gr-qc/0110035v2",
+      "supports": "Distinguishes individual measurable readings from predictive relations among them in covariant physics.",
+      "limits": "A conceptual/formal framework; does not force a universal ontology of relations.",
+      "inspection": "Primary abstract and full-text introduction/section structure."
+    },
+    {
+      "id": "R14",
+      "title": "Relational Quantum Mechanics",
+      "authors": "Carlo Rovelli",
+      "year": 1996,
+      "url": "https://arxiv.org/abs/quant-ph/9609002",
+      "type": "primary_foundations",
+      "class": "untested_conjecture",
+      "locator": "Original proposal and abstract; all interacting systems treated equivalently",
+      "supports": "Relational interpretation assigns states/values relative to physical systems without requiring consciousness.",
+      "limits": "Interpretational proposal. Classification does not claim a distinct falsified prediction; later developments not surveyed exhaustively.",
+      "inspection": "Primary abstract and opening paper text."
+    },
+    {
+      "id": "R15",
+      "title": "Does the missing mass problem signal the breakdown of Newtonian gravity?",
+      "authors": "Jacob Bekenstein and Mordehai Milgrom",
+      "year": 1984,
+      "url": "https://doi.org/10.1086/162570",
+      "open_copy": "https://adsabs.harvard.edu/pdf/1984ApJ...286....7B",
+      "type": "primary_theory",
+      "class": "conditional_model",
+      "locator": "Nonlinear field equation; external-field analysis including equation 32",
+      "supports": "AQUAL has a uniform external-field effect while preserving universal center-of-mass free fall.",
+      "limits": "Specific MOND formulation, not verified universal gravity. Linearization in report assumes internal field much smaller than external.",
+      "inspection": "Primary PDF abstract and indexed equation discussion; report linearization derived directly; external limit cross-checked with R17."
+    },
+    {
+      "id": "R16",
+      "title": "Testing the Strong Equivalence Principle: Detection of the External Field Effect in Rotationally Supported Galaxies",
+      "authors": "Kyu-Hyun Chae, Federico Lelli, Harry Desmond, Stacy S. McGaugh, Pengfei Li and James M. Schombert",
+      "year": 2020,
+      "url": "https://arxiv.org/abs/2009.11525",
+      "type": "primary_observational_analysis",
+      "class": "conditional_model",
+      "locator": "SPARC rotation-curve and environmental-field analysis; abstract",
+      "supports": "Authors report an external-field signal in a MOND-motivated analysis.",
+      "limits": "Interpretation and significance contested. Report does not repeat detection as established equivalence-principle violation.",
+      "inspection": "Primary abstract; complementary 2021 analysis abstract also inspected."
+    },
+    {
+      "id": "R17",
+      "title": "The phenomenology of the external field effect in cold dark matter models",
+      "authors": "Aseem Paranjape and Ravi K. Sheth",
+      "year": 2022,
+      "url": "https://arxiv.org/html/2112.00026v2",
+      "doi": "10.1093/mnras/stac2689",
+      "type": "primary_theory_and_mock_catalogue",
+      "class": "conditional_model",
+      "locator": "Sections 2, 3.2.2 and 4; Figure 4; external-limit discussion citing Bekenstein-Milgrom equation 32",
+      "supports": "Ordinary halo correlations can generate EFE-like statistical signals; mock correlation sign offers a discriminator.",
+      "limits": "Specific mocks and estimators, not a theorem excluding every MOND or dark-matter account.",
+      "inspection": "Read full relevant analytical, comparison and conclusion sections."
+    },
+    {
+      "id": "R18",
+      "title": "The Modified Dynamics as a Vacuum Effect",
+      "authors": "Mordehai Milgrom",
+      "year": 1999,
+      "url": "https://arxiv.org/html/astro-ph/9805346v2",
+      "doi": "10.1016/S0375-9601(99)00077-8",
+      "type": "primary_conjecture",
+      "class": "untested_conjecture",
+      "locator": "Sections III-IV; equations 6-11; final distinction between cosmic acceleration scales",
+      "supports": "A de Sitter detector-temperature difference has MOND-like asymptotics; inertia mechanism remains unspecified.",
+      "limits": "Special trajectory/background, circular-motion gap and arbitrary choice of response function.",
+      "inspection": "Full relevant sections and limitations read."
+    },
+    {
+      "id": "R19",
+      "title": "Gravitational Decoherence of Dark Matter",
+      "authors": "Itamar Allali and Mark P. Hertzberg",
+      "year": 2020,
+      "url": "https://arxiv.org/abs/2005.12287",
+      "doi": "10.1088/1475-7516/2020/07/056",
+      "type": "primary_theory",
+      "class": "conditional_model",
+      "locator": "Abstract: density-superposition scattering by diffuse hydrogen or air",
+      "supports": "Ordinary matter can gravitationally decohere specified collective dark-matter configurations.",
+      "limits": "Conditional dark-matter/scattering models; not a detection of dark-matter quantum state.",
+      "inspection": "Primary abstract checked against repository claim."
+    },
+    {
+      "id": "R20",
+      "title": "General Relativistic Decoherence with Applications to Dark Matter Detection",
+      "authors": "Itamar J. Allali and Mark P. Hertzberg",
+      "year": 2021,
+      "url": "https://arxiv.org/abs/2103.15892",
+      "doi": "10.1103/PhysRevLett.127.031301",
+      "type": "primary_theory",
+      "class": "conditional_model",
+      "locator": "Abstract: phase versus spatial superpositions in Milky Way axion model",
+      "supports": "Different collective variables can have very different gravitational decoherence rates.",
+      "limits": "Specified axion model and environment, not all dark matter.",
+      "inspection": "Primary abstract checked."
+    },
+    {
+      "id": "R21",
+      "title": "Black Holes Decohere Quantum Superpositions",
+      "authors": "Daine L. Danielson, Gautam Satishchandran and Robert M. Wald",
+      "year": 2022,
+      "url": "https://arxiv.org/abs/2205.06279v2",
+      "doi": "10.1142/S0218271822410036",
+      "type": "primary_theory",
+      "class": "conditional_model",
+      "locator": "Abstract: soft field excitations carry which-path information into horizon",
+      "supports": "Horizon degrees of freedom supply a theoretical decoherence channel.",
+      "limits": "Not an experimental detection or a license for extrapolating rates outside their regime.",
+      "inspection": "Primary abstract verified."
+    }
+  ],
+  "own_outputs": [
+    {
+      "id": "O01",
+      "class": "own_inference",
+      "path": "probes/relations/correlation_probe.py",
+      "output": "probes/relations/results.json",
+      "claim": "Identical reduced system states and complete dephasing channels can have different local-record accessibility.",
+      "basis": [
+        "R04",
+        "R05"
+      ],
+      "validation": "All 32 subsets per construction; commuting conditional states; independent weight-1/2 Pauli check; arbitrary-amplitude dephasing examples.",
+      "limits": "Finite-dimensional constructed states, not a simulation of generic natural environments."
+    },
+    {
+      "id": "O02",
+      "class": "own_inference",
+      "path": "probes/relations/correlation_probe.py",
+      "output": "probes/relations/results.json",
+      "claim": "Equal one-atom marginals coexist with initial two-emitter rates Gamma(1+eta), Gamma(1-eta), Gamma.",
+      "basis": [
+        "R06",
+        "R07"
+      ],
+      "validation": "Density-matrix evaluation checked against analytic rates for five eta values.",
+      "limits": "Ideal Markov decay matrix, specified one-excitation states; extra channels excluded."
+    },
+    {
+      "id": "O03",
+      "class": "own_inference",
+      "claim": "Extend the Witness Map by separating spreading/decoherence competition, finite-time visibility, and fragment information.",
+      "basis": [
+        "R01",
+        "R02",
+        "R03",
+        "O01"
+      ],
+      "limits": "Proposed companion study only; no existing repository changes."
+    },
+    {
+      "id": "O04",
+      "class": "own_inference",
+      "claim": "Compare external field strength, gradients, direction and assembly history with matched observation/simulation estimators.",
+      "basis": [
+        "R15",
+        "R16",
+        "R17"
+      ],
+      "limits": "Observational design, no new data or fit."
+    }
+  ],
+  "repositories_read": [
+    {
+      "repository": "Foundation-0/fractals",
+      "local_root": "https://github.com/Foundation-0/fractals/tree/9669f5579635c3543f145e8eca86133069ad6f27",
+      "head": "9669f5579635c3543f145e8eca86133069ad6f27",
+      "paths": [
+        "README.md",
+        "witness-map/model.js"
+      ],
+      "status": "Exploratory repository, not independent physical evidence"
+    },
+    {
+      "repository": "Foundation-0/gravity",
+      "local_root": "https://github.com/Foundation-0/gravity/tree/d8c7544e89388720fc1c13de816ddb7dd03d2096",
+      "head": "d8c7544e89388720fc1c13de816ddb7dd03d2096",
+      "paths": [
+        "README.md",
+        "CLAIMS.md",
+        "RESEARCH_NOTEBOOK_AND_REASONING.md",
+        "verify_all.py",
+        "wave3_empirical_audit.py"
+      ],
+      "status": "Known-framework computations, fits and conjectures distinguished in report"
+    },
+    {
+      "repository": "Foundation-0/physics0",
+      "local_root": "https://github.com/Foundation-0/physics0/tree/76410c3deebf925f6c51017867dbcef29ff54e8b",
+      "head": "76410c3deebf925f6c51017867dbcef29ff54e8b",
+      "paths": [
+        "README.md",
+        "AREAS.md"
+      ],
+      "status": "Hub and project proposals; lattice results delegated to repetition route"
+    },
+    {
+      "repository": "Foundation-0/astr0",
+      "local_root": "https://github.com/Foundation-0/astr0/tree/607a11eaa83b2ec7539e0986046c3230406d2b04",
+      "head": "607a11eaa83b2ec7539e0986046c3230406d2b04",
+      "paths": [
+        "README.md",
+        "AREAS.md"
+      ],
+      "status": "Project inventory read; repository dates and candidate discoveries were not independently revalidated or adopted as facts"
+    }
+  ],
+  "access_limits": [
+    "Most central bridges received full relevant primary-text inspection; some peripheral experimental claims use publisher abstracts, recorded per entry.",
+    "An attempted GitHub connector read of the incentre-lattice README failed. No claim from the unrelated web mirror was used.",
+    "This is not an exhaustive review of quantum interpretations, every MOND formulation, or every external-field data analysis."
+  ],
+  "publication_note": "Historical research snapshot prepared on 2026-11-12. Repository claims refer to the recorded studied revisions, not current main. Original research used gpt-6-astra with requested ultra reasoning; publication preparation used gpt-6.1-sol."
+}

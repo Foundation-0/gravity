@@ -1,0 +1,1021 @@
+{
+  "reviewed_files": [
+    {
+      "path": "PROTOCOL.md",
+      "sha256": "efe19e6cb78f46af8d612b4ab0188981f711604b6aa4755cf287e62a540d1fc7"
+    },
+    {
+      "path": "GROWING-MODE-PROTOCOL.md",
+      "sha256": "e18a17694fd46609e2574f680d6fd5a0d870295cf3f030b2a1da3d5d0187c9a9"
+    },
+    {
+      "path": "RESULTS.md",
+      "sha256": "4db8ba576047fcc296e7f99556ba2ab31121fb93d31ac7d9cd81c30296a2883e"
+    },
+    {
+      "path": "probe.py",
+      "sha256": "af9d4443c45298d723384ad0283bb8a635944fe347fd2067e3f4699ea94b2151"
+    },
+    {
+      "path": "evidence.json",
+      "sha256": "cc1e24085ca282198798514f01946c338b3df4f715ff7a694b0d8402f567d054"
+    },
+    {
+      "path": "selection_failure.py",
+      "sha256": "368230772939461a5a10c6ff0552c5aeb6375068660f45efd8a8403992ebd605"
+    },
+    {
+      "path": "selection-failure.json",
+      "sha256": "71a3187c110e66993bd3fd035b0f4abd041146c5ca74e983cbed2aa29ea46098"
+    }
+  ],
+  "base_response_sha256": "e28c8f4ada1e41924e6317f8932de4d065307516cd57c5ff83a0cf23b72397ef",
+  "method": "Exact background-normalization transform; independently differentiate the generator; integrate the prior ADM-reviewed five-field equations and unnormalized conservation closures.",
+  "points": [
+    {
+      "k": 6.0,
+      "generator_max_absolute_error": 7.105427357601002e-15,
+      "initial_fast_coordinate_norm_independent_basis": 1.6180349234272426e-16,
+      "max_retained_initial_mismatch": 2.6469779601696886e-23,
+      "exact_derivative_fast_from_slow_ratio": 0.00015242587921505875,
+      "exact_derivative_slow_from_fast_ratio": 0.7405636658656684,
+      "finite_difference_fast_from_slow_ratio": 0.00015241770357156506,
+      "finite_difference_slow_from_fast_ratio": 0.7405699277716458,
+      "five_field_state_discrepancy_per_delta_i": 1.2610626518722021e-12,
+      "five_field_constraint_residual_per_initial_density": 8.033127480870853e-13,
+      "max_error_fraction_discrepancy": 9.141354340158614e-12,
+      "rows": [
+        {
+          "eta": 0.0,
+          "phase": 0.0,
+          "closure": "zero",
+          "density_error": 0.24603288376031418,
+          "lensing_error": 0.24576009132532387
+        },
+        {
+          "eta": 0.0,
+          "phase": 0.0,
+          "closure": "adiabatic",
+          "density_error": 1.1758409572598947,
+          "lensing_error": 1.1756800774506033
+        },
+        {
+          "eta": 0.001,
+          "phase": 0.0,
+          "closure": "zero",
+          "density_error": 0.24715508087046764,
+          "lensing_error": 0.24688033461344402
+        },
+        {
+          "eta": 0.001,
+          "phase": 0.0,
+          "closure": "adiabatic",
+          "density_error": 1.1747187601497413,
+          "lensing_error": 1.174559834162483
+        },
+        {
+          "eta": 0.001,
+          "phase": 1.5707963267948966,
+          "closure": "zero",
+          "density_error": 0.2327889833529661,
+          "lensing_error": 0.23252072808187668
+        },
+        {
+          "eta": 0.001,
+          "phase": 1.5707963267948966,
+          "closure": "adiabatic",
+          "density_error": 1.1890848576672428,
+          "lensing_error": 1.1889194406940504
+        },
+        {
+          "eta": 0.001,
+          "phase": 3.141592653589793,
+          "closure": "zero",
+          "density_error": 0.24491068665016044,
+          "lensing_error": 0.24463984803720368
+        },
+        {
+          "eta": 0.001,
+          "phase": 3.141592653589793,
+          "closure": "adiabatic",
+          "density_error": 1.1769631543700485,
+          "lensing_error": 1.1768003207387234
+        },
+        {
+          "eta": 0.001,
+          "phase": 4.71238898038469,
+          "closure": "zero",
+          "density_error": 0.259276784167663,
+          "lensing_error": 0.25899945456877105
+        },
+        {
+          "eta": 0.001,
+          "phase": 4.71238898038469,
+          "closure": "adiabatic",
+          "density_error": 1.1625970568525459,
+          "lensing_error": 1.162440714207156
+        },
+        {
+          "eta": 0.01,
+          "phase": 0.0,
+          "closure": "zero",
+          "density_error": 0.2572548548618497,
+          "lensing_error": 0.25696252420652593
+        },
+        {
+          "eta": 0.01,
+          "phase": 0.0,
+          "closure": "adiabatic",
+          "density_error": 1.1646189861583591,
+          "lensing_error": 1.1644776445694012
+        },
+        {
+          "eta": 0.01,
+          "phase": 1.5707963267948966,
+          "closure": "zero",
+          "density_error": 0.11359387968683063,
+          "lensing_error": 0.11336645889085183
+        },
+        {
+          "eta": 0.01,
+          "phase": 1.5707963267948966,
+          "closure": "adiabatic",
+          "density_error": 1.3082799613333784,
+          "lensing_error": 1.3080737098850752
+        },
+        {
+          "eta": 0.01,
+          "phase": 3.141592653589793,
+          "closure": "zero",
+          "density_error": 0.2348109126587791,
+          "lensing_error": 0.23455765844412152
+        },
+        {
+          "eta": 0.01,
+          "phase": 3.141592653589793,
+          "closure": "adiabatic",
+          "density_error": 1.1870629283614298,
+          "lensing_error": 1.1868825103318057
+        },
+        {
+          "eta": 0.01,
+          "phase": 4.71238898038469,
+          "closure": "zero",
+          "density_error": 0.37847188783379726,
+          "lensing_error": 0.3781537237597957
+        },
+        {
+          "eta": 0.01,
+          "phase": 4.71238898038469,
+          "closure": "adiabatic",
+          "density_error": 1.0434019531864116,
+          "lensing_error": 1.0432864450161314
+        },
+        {
+          "eta": 0.1,
+          "phase": 0.0,
+          "closure": "zero",
+          "density_error": 0.35825259477566895,
+          "lensing_error": 0.35778442013734557
+        },
+        {
+          "eta": 0.1,
+          "phase": 0.0,
+          "closure": "adiabatic",
+          "density_error": 1.06362124624454,
+          "lensing_error": 1.0699381889509116
+        },
+        {
+          "eta": 0.1,
+          "phase": 1.5707963267948966,
+          "closure": "zero",
+          "density_error": 1.078357156974518,
+          "lensing_error": 1.1070645296053074
+        },
+        {
+          "eta": 0.1,
+          "phase": 1.5707963267948966,
+          "closure": "adiabatic",
+          "density_error": 2.5002309979947266,
+          "lensing_error": 2.4996164017953233
+        },
+        {
+          "eta": 0.1,
+          "phase": 3.141592653589793,
+          "closure": "zero",
+          "density_error": 0.13381317274495974,
+          "lensing_error": 0.18234154917374792
+        },
+        {
+          "eta": 0.1,
+          "phase": 3.141592653589793,
+          "closure": "adiabatic",
+          "density_error": 1.2880606682752491,
+          "lensing_error": 1.2877044062626253
+        },
+        {
+          "eta": 0.1,
+          "phase": 4.71238898038469,
+          "closure": "zero",
+          "density_error": 1.57042292449515,
+          "lensing_error": 1.5696964156700437
+        },
+        {
+          "eta": 0.1,
+          "phase": 4.71238898038469,
+          "closure": "adiabatic",
+          "density_error": 0.2646373613273004,
+          "lensing_error": 0.42481816955452867
+        }
+      ]
+    },
+    {
+      "k": 9.0,
+      "generator_max_absolute_error": 2.842170943040401e-14,
+      "initial_fast_coordinate_norm_independent_basis": 1.1249075218067494e-16,
+      "max_retained_initial_mismatch": 0.0,
+      "exact_derivative_fast_from_slow_ratio": 0.00010225855631209479,
+      "exact_derivative_slow_from_fast_ratio": 0.2094851712728349,
+      "finite_difference_fast_from_slow_ratio": 0.00010225304315407084,
+      "finite_difference_slow_from_fast_ratio": 0.20948451292702086,
+      "five_field_state_discrepancy_per_delta_i": 9.317362419797304e-13,
+      "five_field_constraint_residual_per_initial_density": 5.062417367037064e-13,
+      "max_error_fraction_discrepancy": 8.274464446955676e-12,
+      "rows": [
+        {
+          "eta": 0.0,
+          "phase": 0.0,
+          "closure": "zero",
+          "density_error": 0.26193493844585636,
+          "lensing_error": 0.2618027602579587
+        },
+        {
+          "eta": 0.0,
+          "phase": 0.0,
+          "closure": "adiabatic",
+          "density_error": 1.2915393264924553,
+          "lensing_error": 1.512394690904696
+        },
+        {
+          "eta": 0.001,
+          "phase": 0.0,
+          "closure": "zero",
+          "density_error": 0.2628863434025832,
+          "lensing_error": 0.2627515516878684
+        },
+        {
+          "eta": 0.001,
+          "phase": 0.0,
+          "closure": "adiabatic",
+          "density_error": 1.2905353630729088,
+          "lensing_error": 1.511539775535463
+        },
+        {
+          "eta": 0.001,
+          "phase": 1.5707963267948966,
+          "closure": "zero",
+          "density_error": 0.24268375547709325,
+          "lensing_error": 0.24255160133280734
+        },
+        {
+          "eta": 0.001,
+          "phase": 1.5707963267948966,
+          "closure": "adiabatic",
+          "density_error": 1.308780256201869,
+          "lensing_error": 1.5301233344013097
+        },
+        {
+          "eta": 0.001,
+          "phase": 3.141592653589793,
+          "closure": "zero",
+          "density_error": 0.2609835334891292,
+          "lensing_error": 0.260853968828049
+        },
+        {
+          "eta": 0.001,
+          "phase": 3.141592653589793,
+          "closure": "adiabatic",
+          "density_error": 1.2925535111890165,
+          "lensing_error": 1.5132522984594763
+        },
+        {
+          "eta": 0.001,
+          "phase": 4.71238898038469,
+          "closure": "zero",
+          "density_error": 0.28118612141462,
+          "lensing_error": 0.28105391918311
+        },
+        {
+          "eta": 0.001,
+          "phase": 4.71238898038469,
+          "closure": "adiabatic",
+          "density_error": 1.2743960164839332,
+          "lensing_error": 1.4946675378438632
+        },
+        {
+          "eta": 0.01,
+          "phase": 0.0,
+          "closure": "zero",
+          "density_error": 0.27144898801312684,
+          "lensing_error": 0.2712906745570561
+        },
+        {
+          "eta": 0.01,
+          "phase": 0.0,
+          "closure": "adiabatic",
+          "density_error": 1.2821515346347152,
+          "lensing_error": 1.5038954012736259
+        },
+        {
+          "eta": 0.01,
+          "phase": 1.5707963267948966,
+          "closure": "zero",
+          "density_error": 0.06942310875822261,
+          "lensing_error": 0.08057749825065841
+        },
+        {
+          "eta": 0.01,
+          "phase": 1.5707963267948966,
+          "closure": "adiabatic",
+          "density_error": 1.4657582969714011,
+          "lensing_error": 1.6897675976853876
+        },
+        {
+          "eta": 0.01,
+          "phase": 3.141592653589793,
+          "closure": "zero",
+          "density_error": 0.2524208888785855,
+          "lensing_error": 0.2523148459588613
+        },
+        {
+          "eta": 0.01,
+          "phase": 3.141592653589793,
+          "closure": "adiabatic",
+          "density_error": 1.301902521279345,
+          "lensing_error": 1.5214487714639469
+        },
+        {
+          "eta": 0.01,
+          "phase": 4.71238898038469,
+          "closure": "zero",
+          "density_error": 0.4544467681334899,
+          "lensing_error": 0.4543143495094717
+        },
+        {
+          "eta": 0.01,
+          "phase": 4.71238898038469,
+          "closure": "adiabatic",
+          "density_error": 1.124843667609085,
+          "lensing_error": 1.335167634176529
+        },
+        {
+          "eta": 0.1,
+          "phase": 0.0,
+          "closure": "zero",
+          "density_error": 0.35707543411856424,
+          "lensing_error": 0.3566819032489328
+        },
+        {
+          "eta": 0.1,
+          "phase": 0.0,
+          "closure": "adiabatic",
+          "density_error": 1.2088609610360876,
+          "lensing_error": 1.4278957691229042
+        },
+        {
+          "eta": 0.1,
+          "phase": 1.5707963267948966,
+          "closure": "zero",
+          "density_error": 1.663183358430482,
+          "lensing_error": 1.6971679533843116
+        },
+        {
+          "eta": 0.1,
+          "phase": 1.5707963267948966,
+          "closure": "adiabatic",
+          "density_error": 3.171401555149449,
+          "lensing_error": 3.3502181462739764
+        },
+        {
+          "eta": 0.1,
+          "phase": 3.141592653589793,
+          "closure": "zero",
+          "density_error": 0.1682630265701214,
+          "lensing_error": 0.18812515183445683
+        },
+        {
+          "eta": 0.1,
+          "phase": 3.141592653589793,
+          "closure": "adiabatic",
+          "density_error": 1.3972276277767572,
+          "lensing_error": 1.6320172163352908
+        },
+        {
+          "eta": 0.1,
+          "phase": 4.71238898038469,
+          "closure": "zero",
+          "density_error": 2.187053235322194,
+          "lensing_error": 2.1888563873981375
+        },
+        {
+          "eta": 0.1,
+          "phase": 4.71238898038469,
+          "closure": "adiabatic",
+          "density_error": 0.6788350386032266,
+          "lensing_error": 0.6783148261503276
+        }
+      ]
+    },
+    {
+      "k": 12.0,
+      "generator_max_absolute_error": 2.842170943040401e-14,
+      "initial_fast_coordinate_norm_independent_basis": 1.6587695742423072e-16,
+      "max_retained_initial_mismatch": 0.0,
+      "exact_derivative_fast_from_slow_ratio": 7.650099167627567e-05,
+      "exact_derivative_slow_from_fast_ratio": 0.11237902114419132,
+      "finite_difference_fast_from_slow_ratio": 7.649686444683892e-05,
+      "finite_difference_slow_from_fast_ratio": 0.11237844758874892,
+      "five_field_state_discrepancy_per_delta_i": 7.386127300057498e-13,
+      "five_field_constraint_residual_per_initial_density": 4.175348466602555e-13,
+      "max_error_fraction_discrepancy": 1.0799305893982591e-11,
+      "rows": [
+        {
+          "eta": 0.0,
+          "phase": 0.0,
+          "closure": "zero",
+          "density_error": 0.2680557383360843,
+          "lensing_error": 0.26797887510265633
+        },
+        {
+          "eta": 0.0,
+          "phase": 0.0,
+          "closure": "adiabatic",
+          "density_error": 1.2044137859601032,
+          "lensing_error": 1.6630788327445525
+        },
+        {
+          "eta": 0.001,
+          "phase": 0.0,
+          "closure": "zero",
+          "density_error": 0.26891179586462177,
+          "lensing_error": 0.2688337182005978
+        },
+        {
+          "eta": 0.001,
+          "phase": 0.0,
+          "closure": "adiabatic",
+          "density_error": 1.2035514193700878,
+          "lensing_error": 1.661680167087683
+        },
+        {
+          "eta": 0.001,
+          "phase": 1.5707963267948966,
+          "closure": "zero",
+          "density_error": 0.24260162455228484,
+          "lensing_error": 0.24252341644868192
+        },
+        {
+          "eta": 0.001,
+          "phase": 1.5707963267948966,
+          "closure": "adiabatic",
+          "density_error": 1.2201859185229635,
+          "lensing_error": 1.6835168054534189
+        },
+        {
+          "eta": 0.001,
+          "phase": 3.141592653589793,
+          "closure": "zero",
+          "density_error": 0.2671996808075472,
+          "lensing_error": 0.2671240320047147
+        },
+        {
+          "eta": 0.001,
+          "phase": 3.141592653589793,
+          "closure": "adiabatic",
+          "density_error": 1.2052975100084506,
+          "lensing_error": 1.6644823794011923
+        },
+        {
+          "eta": 0.001,
+          "phase": 4.71238898038469,
+          "closure": "zero",
+          "density_error": 0.2935098521198832,
+          "lensing_error": 0.29343433375663075
+        },
+        {
+          "eta": 0.001,
+          "phase": 4.71238898038469,
+          "closure": "adiabatic",
+          "density_error": 1.1887205569780095,
+          "lensing_error": 1.6427454885937496
+        },
+        {
+          "eta": 0.01,
+          "phase": 0.0,
+          "closure": "zero",
+          "density_error": 0.2766163136214564,
+          "lensing_error": 0.276527306082072
+        },
+        {
+          "eta": 0.01,
+          "phase": 0.0,
+          "closure": "adiabatic",
+          "density_error": 1.1968163587863108,
+          "lensing_error": 1.6498075290670202
+        },
+        {
+          "eta": 0.01,
+          "phase": 1.5707963267948966,
+          "closure": "zero",
+          "density_error": 0.08186961409435368,
+          "lensing_error": 0.12039945314729024
+        },
+        {
+          "eta": 0.01,
+          "phase": 1.5707963267948966,
+          "closure": "adiabatic",
+          "density_error": 1.3676070231440431,
+          "lensing_error": 1.870128140247975
+        },
+        {
+          "eta": 0.01,
+          "phase": 3.141592653589793,
+          "closure": "zero",
+          "density_error": 0.25949516305071224,
+          "lensing_error": 0.25943044412324073
+        },
+        {
+          "eta": 0.01,
+          "phase": 3.141592653589793,
+          "closure": "adiabatic",
+          "density_error": 1.2138134594464642,
+          "lensing_error": 1.6772083044172594
+        },
+        {
+          "eta": 0.01,
+          "phase": 4.71238898038469,
+          "closure": "zero",
+          "density_error": 0.5225968761740768,
+          "lensing_error": 0.5225334616424008
+        },
+        {
+          "eta": 0.01,
+          "phase": 4.71238898038469,
+          "closure": "adiabatic",
+          "density_error": 1.0490435333096735,
+          "lensing_error": 1.464063084986502
+        },
+        {
+          "eta": 0.1,
+          "phase": 0.0,
+          "closure": "zero",
+          "density_error": 0.35366149118980317,
+          "lensing_error": 0.36182249463842925
+        },
+        {
+          "eta": 0.1,
+          "phase": 0.0,
+          "closure": "adiabatic",
+          "density_error": 1.1451906215774796,
+          "lensing_error": 1.5750775630251341
+        },
+        {
+          "eta": 0.1,
+          "phase": 1.5707963267948966,
+          "closure": "zero",
+          "density_error": 2.2773556400438415,
+          "lensing_error": 2.3043981991691647
+        },
+        {
+          "eta": 0.1,
+          "phase": 1.5707963267948966,
+          "closure": "adiabatic",
+          "density_error": 3.1022120210703465,
+          "lensing_error": 3.818841677011046
+        },
+        {
+          "eta": 0.1,
+          "phase": 3.141592653589793,
+          "closure": "zero",
+          "density_error": 0.18252809364537959,
+          "lensing_error": 0.19109480128847248
+        },
+        {
+          "eta": 0.1,
+          "phase": 3.141592653589793,
+          "closure": "adiabatic",
+          "density_error": 1.304675098584173,
+          "lensing_error": 1.8053843930214097
+        },
+        {
+          "eta": 0.1,
+          "phase": 4.71238898038469,
+          "closure": "zero",
+          "density_error": 2.813467116716012,
+          "lensing_error": 2.819887138657145
+        },
+        {
+          "eta": 0.1,
+          "phase": 4.71238898038469,
+          "closure": "adiabatic",
+          "density_error": 2.006644561359418,
+          "lensing_error": 2.0063244984294637
+        }
+      ]
+    },
+    {
+      "k": 18.0,
+      "generator_max_absolute_error": 1.1368683772161603e-13,
+      "initial_fast_coordinate_norm_independent_basis": 9.619377899302516e-17,
+      "max_retained_initial_mismatch": 0.0,
+      "exact_derivative_fast_from_slow_ratio": 5.070579637012163e-05,
+      "exact_derivative_slow_from_fast_ratio": 0.048734389287901476,
+      "finite_difference_fast_from_slow_ratio": 5.070306605034744e-05,
+      "finite_difference_slow_from_fast_ratio": 0.04873413928118613,
+      "five_field_state_discrepancy_per_delta_i": 7.379351036479464e-13,
+      "five_field_constraint_residual_per_initial_density": 3.156625129494726e-13,
+      "max_error_fraction_discrepancy": 1.2394973936125098e-11,
+      "rows": [
+        {
+          "eta": 0.0,
+          "phase": 0.0,
+          "closure": "zero",
+          "density_error": 0.2726270325504532,
+          "lensing_error": 0.27259206563950755
+        },
+        {
+          "eta": 0.0,
+          "phase": 0.0,
+          "closure": "adiabatic",
+          "density_error": 1.1288052650949119,
+          "lensing_error": 1.7957216377543468
+        },
+        {
+          "eta": 0.001,
+          "phase": 0.0,
+          "closure": "zero",
+          "density_error": 0.27344441864631924,
+          "lensing_error": 0.27340994590136103
+        },
+        {
+          "eta": 0.001,
+          "phase": 0.0,
+          "closure": "adiabatic",
+          "density_error": 1.1278322215117373,
+          "lensing_error": 1.7950589006942694
+        },
+        {
+          "eta": 0.001,
+          "phase": 1.5707963267948966,
+          "closure": "zero",
+          "density_error": 0.2346211430684669,
+          "lensing_error": 0.23458501501992812
+        },
+        {
+          "eta": 0.001,
+          "phase": 1.5707963267948966,
+          "closure": "adiabatic",
+          "density_error": 1.1438078486393857,
+          "lensing_error": 1.818156678538293
+        },
+        {
+          "eta": 0.001,
+          "phase": 3.141592653589793,
+          "closure": "zero",
+          "density_error": 0.2718096464545879,
+          "lensing_error": 0.2717741853776542
+        },
+        {
+          "eta": 0.001,
+          "phase": 3.141592653589793,
+          "closure": "adiabatic",
+          "density_error": 1.1297810181283368,
+          "lensing_error": 1.796402321972897
+        },
+        {
+          "eta": 0.001,
+          "phase": 4.71238898038469,
+          "closure": "zero",
+          "density_error": 0.31063292203243975,
+          "lensing_error": 0.31059911625908715
+        },
+        {
+          "eta": 0.001,
+          "phase": 4.71238898038469,
+          "closure": "adiabatic",
+          "density_error": 1.1139396172424043,
+          "lensing_error": 1.7732902924128258
+        },
+        {
+          "eta": 0.01,
+          "phase": 0.0,
+          "closure": "zero",
+          "density_error": 0.2808008935091105,
+          "lensing_error": 0.28077086825804165
+        },
+        {
+          "eta": 0.01,
+          "phase": 0.0,
+          "closure": "adiabatic",
+          "density_error": 1.1196157770676585,
+          "lensing_error": 1.7894798512361443
+        },
+        {
+          "eta": 0.01,
+          "phase": 1.5707963267948966,
+          "closure": "zero",
+          "density_error": 0.15966243610645464,
+          "lensing_error": 0.2141132351854046
+        },
+        {
+          "eta": 0.01,
+          "phase": 1.5707963267948966,
+          "closure": "adiabatic",
+          "density_error": 1.2839637815168359,
+          "lensing_error": 2.0201808544753543
+        },
+        {
+          "eta": 0.01,
+          "phase": 3.141592653589793,
+          "closure": "zero",
+          "density_error": 0.2644531715917964,
+          "lensing_error": 0.26441326302097334
+        },
+        {
+          "eta": 0.01,
+          "phase": 3.141592653589793,
+          "closure": "adiabatic",
+          "density_error": 1.1386325175213396,
+          "lensing_error": 1.8040798544416872
+        },
+        {
+          "eta": 0.01,
+          "phase": 4.71238898038469,
+          "closure": "zero",
+          "density_error": 0.6526859273703176,
+          "lensing_error": 0.6526625718353029
+        },
+        {
+          "eta": 0.01,
+          "phase": 4.71238898038469,
+          "closure": "adiabatic",
+          "density_error": 0.9838127878422913,
+          "lensing_error": 1.5714278428044863
+        },
+        {
+          "eta": 0.1,
+          "phase": 0.0,
+          "closure": "zero",
+          "density_error": 0.3664108980197015,
+          "lensing_error": 0.37126431003780624
+        },
+        {
+          "eta": 0.1,
+          "phase": 0.0,
+          "closure": "adiabatic",
+          "density_error": 1.0812436176454838,
+          "lensing_error": 1.7379688984643535
+        },
+        {
+          "eta": 0.1,
+          "phase": 1.5707963267948966,
+          "closure": "zero",
+          "density_error": 3.527961915648184,
+          "lensing_error": 3.5393965263667844
+        },
+        {
+          "eta": 0.1,
+          "phase": 1.5707963267948966,
+          "closure": "adiabatic",
+          "density_error": 4.423144396817431,
+          "lensing_error": 4.423013321145057
+        },
+        {
+          "eta": 0.1,
+          "phase": 3.141592653589793,
+          "closure": "zero",
+          "density_error": 0.19088842296388334,
+          "lensing_error": 0.19401791052980652
+        },
+        {
+          "eta": 0.1,
+          "phase": 3.141592653589793,
+          "closure": "adiabatic",
+          "density_error": 1.2277992702051799,
+          "lensing_error": 1.9367481956679058
+        },
+        {
+          "eta": 0.1,
+          "phase": 4.71238898038469,
+          "closure": "zero",
+          "density_error": 4.073215980749097,
+          "lensing_error": 4.076518696359591
+        },
+        {
+          "eta": 0.1,
+          "phase": 4.71238898038469,
+          "closure": "adiabatic",
+          "density_error": 3.197230932832966,
+          "lensing_error": 3.507937778601228
+        }
+      ]
+    },
+    {
+      "k": 24.0,
+      "generator_max_absolute_error": 1.1368683772161603e-13,
+      "initial_fast_coordinate_norm_independent_basis": 1.1187134045061292e-16,
+      "max_retained_initial_mismatch": 0.0,
+      "exact_derivative_fast_from_slow_ratio": 3.7879434216217664e-05,
+      "exact_derivative_slow_from_fast_ratio": 0.027000620511254677,
+      "finite_difference_fast_from_slow_ratio": 3.7877399007937005e-05,
+      "finite_difference_slow_from_fast_ratio": 0.02700050021133804,
+      "five_field_state_discrepancy_per_delta_i": 7.833360696207769e-13,
+      "five_field_constraint_residual_per_initial_density": 2.392257258667935e-13,
+      "max_error_fraction_discrepancy": 1.859179477037287e-11,
+      "rows": [
+        {
+          "eta": 0.0,
+          "phase": 0.0,
+          "closure": "zero",
+          "density_error": 0.2742708812407702,
+          "lensing_error": 0.2742510881813852
+        },
+        {
+          "eta": 0.0,
+          "phase": 0.0,
+          "closure": "adiabatic",
+          "density_error": 1.2911048846223705,
+          "lensing_error": 1.854090892412778
+        },
+        {
+          "eta": 0.001,
+          "phase": 0.0,
+          "closure": "zero",
+          "density_error": 0.2751348148795621,
+          "lensing_error": 0.2751159840393697
+        },
+        {
+          "eta": 0.001,
+          "phase": 0.0,
+          "closure": "adiabatic",
+          "density_error": 1.2902650876436734,
+          "lensing_error": 1.8535107235201227
+        },
+        {
+          "eta": 0.001,
+          "phase": 1.5707963267948966,
+          "closure": "zero",
+          "density_error": 0.22369341387720496,
+          "lensing_error": 0.22367321898712766
+        },
+        {
+          "eta": 0.001,
+          "phase": 1.5707963267948966,
+          "closure": "adiabatic",
+          "density_error": 1.3374213867005895,
+          "lensing_error": 1.878388891258987
+        },
+        {
+          "eta": 0.001,
+          "phase": 3.141592653589793,
+          "closure": "zero",
+          "density_error": 0.273406947601979,
+          "lensing_error": 0.2733861923234008
+        },
+        {
+          "eta": 0.001,
+          "phase": 3.141592653589793,
+          "closure": "adiabatic",
+          "density_error": 1.291958646101845,
+          "lensing_error": 1.8546879219909347
+        },
+        {
+          "eta": 0.001,
+          "phase": 4.71238898038469,
+          "closure": "zero",
+          "density_error": 0.32484834860433615,
+          "lensing_error": 0.32482895737564266
+        },
+        {
+          "eta": 0.001,
+          "phase": 4.71238898038469,
+          "closure": "adiabatic",
+          "density_error": 1.2448186328331632,
+          "lensing_error": 1.8297928935665695
+        },
+        {
+          "eta": 0.01,
+          "phase": 0.0,
+          "closure": "zero",
+          "density_error": 0.28291021762868757,
+          "lensing_error": 0.2829000467612301
+        },
+        {
+          "eta": 0.01,
+          "phase": 0.0,
+          "closure": "adiabatic",
+          "density_error": 1.283086299616118,
+          "lensing_error": 1.8487331485989509
+        },
+        {
+          "eta": 0.01,
+          "phase": 1.5707963267948966,
+          "closure": "zero",
+          "density_error": 0.25449956637568916,
+          "lensing_error": 0.3182692800055698
+        },
+        {
+          "eta": 0.01,
+          "phase": 1.5707963267948966,
+          "closure": "adiabatic",
+          "density_error": 1.754907143927004,
+          "lensing_error": 2.0971396420031128
+        },
+        {
+          "eta": 0.01,
+          "phase": 3.141592653589793,
+          "closure": "zero",
+          "density_error": 0.26563154485285345,
+          "lensing_error": 0.2656021296015402
+        },
+        {
+          "eta": 0.01,
+          "phase": 3.141592653589793,
+          "closure": "adiabatic",
+          "density_error": 1.300313779316595,
+          "lensing_error": 1.861803416779511
+        },
+        {
+          "eta": 0.01,
+          "phase": 4.71238898038469,
+          "closure": "zero",
+          "density_error": 0.7800455548764288,
+          "lensing_error": 0.7800297801239606
+        },
+        {
+          "eta": 0.01,
+          "phase": 4.71238898038469,
+          "closure": "adiabatic",
+          "density_error": 0.9494514156407065,
+          "lensing_error": 1.611281134187546
+        },
+        {
+          "eta": 0.1,
+          "phase": 0.0,
+          "closure": "zero",
+          "density_error": 0.3725619416865701,
+          "lensing_error": 0.3753277833203473
+        },
+        {
+          "eta": 0.1,
+          "phase": 0.0,
+          "closure": "adiabatic",
+          "density_error": 1.2147375309014632,
+          "lensing_error": 1.8059280535111106
+        },
+        {
+          "eta": 0.1,
+          "phase": 1.5707963267948966,
+          "closure": "zero",
+          "density_error": 4.783475855115797,
+          "lensing_error": 4.785514717740217
+        },
+        {
+          "eta": 0.1,
+          "phase": 1.5707963267948966,
+          "closure": "adiabatic",
+          "density_error": 6.167844034311462,
+          "lensing_error": 6.387955267718615
+        },
+        {
+          "eta": 0.1,
+          "phase": 3.141592653589793,
+          "closure": "zero",
+          "density_error": 0.1878775173616014,
+          "lensing_error": 0.19543700572378042
+        },
+        {
+          "eta": 0.1,
+          "phase": 3.141592653589793,
+          "closure": "adiabatic",
+          "density_error": 1.392764888121472,
+          "lensing_error": 2.0036767030054183
+        },
+        {
+          "eta": 0.1,
+          "phase": 4.71238898038469,
+          "closure": "zero",
+          "density_error": 5.33201761759735,
+          "lensing_error": 5.332263145187284
+        },
+        {
+          "eta": 0.1,
+          "phase": 4.71238898038469,
+          "closure": "adiabatic",
+          "density_error": 3.9477931466839715,
+          "lensing_error": 4.103058668913466
+        }
+      ]
+    }
+  ]
+}

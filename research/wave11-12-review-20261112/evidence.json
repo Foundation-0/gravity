@@ -1,0 +1,212 @@
+{
+  "reviewed_commit": "e5d7ee813e33de03c91857e48a2d55a0caf55506",
+  "source_sha256": {
+    "CHANGELOG.md": "b95e0b1b867a876758f4751a0806bce54325f95d2ad8f4e25d801e0850e1a000",
+    "CLAIMS.md": "efd6e9acba39ec3dd86356df22edacc3d17761e205ac11420798de52290924a9",
+    "README.md": "ea84eb79d2ab891fd5b151b6e0b3ee72fafda601d7b4e1c16157298c8da001ce",
+    "RESEARCH_NOTEBOOK_AND_REASONING.md": "7d678663f6689639039445d7fe972109a3234c7cd8220601b43c435431214c64",
+    "SHA256SUMS": "45d6b2826527f882800f2e1fa51896693c8e84de413970e8675d778cd370aa57",
+    "WAVE11_12_CORRECTIONS.md": "16edeec60b7a6ac3aab790021fab866273e95f508da8fb7ddebd5d6a78ff8bf1",
+    "results/wave11_machian_pairing_certificates.json": "fed7d58b8959cc68073bbf2020c7dca895fb4bac0b07adb9d95c3bee56d1c94b",
+    "results/wave12_cosmic_dawn_quasar_certificates.json": "78b988c2a6a83f23a8dc637626fdc63b9122579c2c3e37eaf9365deb2539ca79",
+    "test_wave11_12_corrections.py": "4a69d34265fe05e33f17a5afde1b529f508b4405753a300909d27ce41f14441c",
+    "wave11_machian_pairing_unification.py": "88dd0f9827b2fa29292597c976695ce559d135d6d4867f59cde0d0de37426bda",
+    "wave12_cosmic_dawn_quasar_collapse.py": "53cb171ed423ab98509f62017b68d2cce935c9b6468cd9e5f098a02b465c99b0"
+  },
+  "radial_comparisons": [
+    {
+      "case": "Newton",
+      "analytic_potential_Myr": 384.8231820895629,
+      "submitted_Myr": 384.82318208956303,
+      "radial_ODE_Myr": 384.8231820843983,
+      "submitted_relative_error": 2.220446049250313e-16,
+      "ODE_relative_error": -1.342070898857628e-11,
+      "dimensionless_outer_quadrature_error_estimate": 3.774758283725532e-15
+    },
+    {
+      "case": "constant_a0_RAR",
+      "analytic_potential_Myr": 200.07513758299433,
+      "submitted_Myr": 200.07513758290773,
+      "radial_ODE_Myr": 200.07513757782954,
+      "submitted_relative_error": -4.3287595730134854e-13,
+      "ODE_relative_error": -2.5814350657071827e-11,
+      "dimensionless_outer_quadrature_error_estimate": 1.695310558602614e-13
+    },
+    {
+      "case": "Hubble_a0_RAR",
+      "analytic_potential_Myr": 121.7166766140901,
+      "submitted_Myr": 121.71667661408623,
+      "radial_ODE_Myr": 121.71667660892543,
+      "submitted_relative_error": -3.186340080674199e-14,
+      "ODE_relative_error": -4.243205786735871e-11,
+      "dimensionless_outer_quadrature_error_estimate": 1.9595436384634013e-14
+    },
+    {
+      "case": "RAR_plus_assigned_mass",
+      "analytic_potential_Myr": 127.15620463376732,
+      "submitted_Myr": 127.15620463374627,
+      "radial_ODE_Myr": 127.15620463172033,
+      "submitted_relative_error": -1.6542323066914832e-13,
+      "ODE_relative_error": -1.609823385706477e-11,
+      "dimensionless_outer_quadrature_error_estimate": 6.877831637552845e-14
+    }
+  ],
+  "newtonian_controls": [
+    {
+      "added_mass_ratio": 0.0,
+      "relative_error": 2.220446049250313e-16
+    },
+    {
+      "added_mass_ratio": 0.1,
+      "relative_error": 2.220446049250313e-16
+    },
+    {
+      "added_mass_ratio": 5.36,
+      "relative_error": 0.0
+    },
+    {
+      "added_mass_ratio": 20.0,
+      "relative_error": 2.220446049250313e-16
+    }
+  ],
+  "high_acceleration_relative_error": 2.220446049250313e-16,
+  "deep_MOND_controls": [
+    {
+      "q0": 0.01,
+      "RAR_over_exact_deep_MOND": 0.9959942052496246,
+      "submitted_over_exact_RAR": 1.000000000000037,
+      "old_shortcut_over_exact_deep_MOND": 0.8862269254527579
+    },
+    {
+      "q0": 0.001,
+      "RAR_over_exact_deep_MOND": 0.9995847463313614,
+      "submitted_over_exact_RAR": 1.000000000024938,
+      "old_shortcut_over_exact_deep_MOND": 0.8862269254527579
+    },
+    {
+      "q0": 0.0001,
+      "RAR_over_exact_deep_MOND": 0.9999575875686578,
+      "submitted_over_exact_RAR": 1.0000000782144847,
+      "old_shortcut_over_exact_deep_MOND": 0.8862269254527579
+    }
+  ],
+  "growth_counterexamples": [
+    {
+      "epsilon": 0.1,
+      "composition": "pure_H",
+      "time_Myr": 827.0784108740284
+    },
+    {
+      "epsilon": 0.1,
+      "composition": "primordial_H_He",
+      "time_Myr": 725.7613055419598
+    },
+    {
+      "epsilon": 0.057190958417936644,
+      "composition": "pure_H",
+      "time_Myr": 451.5364663110016
+    },
+    {
+      "epsilon": 0.057190958417936644,
+      "composition": "primordial_H_He",
+      "time_Myr": 396.2232491879039
+    }
+  ],
+  "slim_disk": [
+    {
+      "mdot": 0.1,
+      "lambda": 0.1,
+      "retained_dimensionless_rate": 0.09,
+      "time_Myr": 8270.784108740285
+    },
+    {
+      "mdot": 1.0,
+      "lambda": 1.0,
+      "retained_dimensionless_rate": 0.9,
+      "time_Myr": 827.0784108740284
+    },
+    {
+      "mdot": 2.0,
+      "lambda": 2.0,
+      "retained_dimensionless_rate": 1.8,
+      "time_Myr": 413.5392054370142
+    },
+    {
+      "mdot": 3.0,
+      "lambda": 2.8109302162163288,
+      "retained_dimensionless_rate": 2.7189069783783673,
+      "time_Myr": 273.775666363764
+    },
+    {
+      "mdot": 5.0,
+      "lambda": 3.83258146374831,
+      "retained_dimensionless_rate": 4.616741853625169,
+      "time_Myr": 161.2328766448419
+    },
+    {
+      "mdot": 10.0,
+      "lambda": 5.218875824868201,
+      "retained_dimensionless_rate": 9.47811241751318,
+      "time_Myr": 78.5357397123941
+    }
+  ],
+  "curvature_controls": [
+    {
+      "Omega_k": -0.01,
+      "H2_at_a1": 1.0,
+      "turnaround_scale_factor": 31.518261152893515,
+      "matter_curvature_limit": 31.518261152893515
+    },
+    {
+      "Omega_k": -0.004,
+      "H2_at_a1": 1.0,
+      "turnaround_scale_factor": 78.79565288223378,
+      "matter_curvature_limit": 78.7956528822338
+    },
+    {
+      "Omega_k": -0.001,
+      "H2_at_a1": 1.0000000000000002,
+      "turnaround_scale_factor": 315.1826115289351,
+      "matter_curvature_limit": 315.1826115289352
+    },
+    {
+      "Omega_k": 0.0,
+      "H2_at_a1": 1.0
+    },
+    {
+      "Omega_k": 0.01,
+      "H2_at_a1": 1.0
+    }
+  ],
+  "polynomial_curvature": "4*K2*(3*Q**2/Q0**2 - 1)/Q0**2",
+  "formal_files_unchanged": true,
+  "inherited_global_manifest_mismatches": [
+    "lakefile.toml",
+    "verify_all.py",
+    "wave5_unified_forces_stochastic_qm.py",
+    "formal/verify_exact_rational_proofs.py",
+    "formal/GravityClaims.lean",
+    "formal/Wave5StochasticForces.lean",
+    "formal/Wave6Convergence.lean",
+    "formal/Wave7ThresholdAudit.lean",
+    "results/wave4_unified_certificates.json"
+  ],
+  "all_changed_manifest_entries_match": true,
+  "author_checks": [
+    {
+      "command": "python3 -m unittest test_wave11_12_corrections.py",
+      "returncode": 0,
+      "output": ".......\n----------------------------------------------------------------------\nRan 7 tests (elapsed time omitted)\n\nOK\n"
+    },
+    {
+      "command": "python3 wave11_machian_pairing_unification.py --check",
+      "returncode": 0,
+      "output": "CHECK OK (byte-identical): wave11_machian_pairing_certificates.json sha256_canonical=4786fa9822b8b99edfd2c11ac922ca589065403e4881f5bf72d415481644692b\n"
+    },
+    {
+      "command": "python3 wave12_cosmic_dawn_quasar_collapse.py --check",
+      "returncode": 0,
+      "output": "CHECK OK (byte-identical): wave12_cosmic_dawn_quasar_certificates.json sha256_canonical=40a770d70d19ec3a9d7e9e5e770d0454d94595f7e7abb75e92efa351672354c9\n"
+    }
+  ]
+}

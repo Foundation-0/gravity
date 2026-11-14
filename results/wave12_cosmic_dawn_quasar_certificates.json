@@ -1,5 +1,5 @@
 {
-  "schema": "FOUNDATION-0/GRAVITY-WAVE12-COSMIC-DAWN-QUASAR-PAIR/1.0",
+  "schema": "FOUNDATION-0/GRAVITY-WAVE12-COSMIC-DAWN-QUASAR-PAIR/1.1",
   "claim_c31_salpeter_seed_and_clustering_wall": {
     "epistemic_status": "COMPUTED (KNOWN-FRAMEWORK COSMOLOGICAL & SALPETER IDENTITIES; LENSING & VIRIAL MASS CAVEATS NOTED)",
     "observed_system": {
@@ -19,6 +19,7 @@
     "salpeter_timescales_Myr": {
       "pure_H_eps_0p10": 50.05,
       "primordial_H_He_eps_0p10": 43.92,
+      "fixed_Schwarzschild_primordial_H_He": 23.97929,
       "spinning_Kerr_pure_H_eps_0p20": 112.62
     },
     "growth_windows_Myr": {
@@ -27,6 +28,13 @@
     },
     "seed_duty_cycle_audit_for_J1602A_1p5e9_Msun": {
       "popIII_100Msun_efoldings": 16.524,
+      "popIII_100Msun_req_time_primordial_H_He_eps0p10_Myr": 725.761,
+      "popIII_100Msun_duty_primordial_H_He_eps0p10": 0.988641,
+      "fixed_Schwarzschild_efficiency": 0.057190958417936644,
+      "popIII_100Msun_req_time_pure_H_Schwarzschild_Myr": 451.536,
+      "popIII_100Msun_duty_pure_H_Schwarzschild": 0.615089,
+      "popIII_100Msun_req_time_primordial_H_He_Schwarzschild_Myr": 396.223,
+      "popIII_100Msun_duty_primordial_H_He_Schwarzschild": 0.53974,
       "popIII_100Msun_req_time_Edd1_eps0p10_Myr": 827.08,
       "popIII_100Msun_duty_from_z20_Edd1_eps0p10": 1.127,
       "popIII_100Msun_duty_from_z20_obsEdd1p23_eps0p10": 0.916,
@@ -42,12 +50,13 @@
       "dcbh_1e5Msun_duty_from_z20_obsEdd1p07_eps0p10": 0.529
     },
     "scientific_caveats": [
+      "Efficiency 0.10 is a chosen benchmark, not the Schwarzschild thin-disk efficiency. All growth clocks assume fixed efficiency, opacity, Eddington ratio and duty; present luminosity need not equal its lifetime average.",
       "Single-epoch broad-line virial BH masses carry ~2x (0.3 dex) systematic uncertainty.",
       "Spectral slopes, dust attenuation, and [O III] outflow shapes differ between A and B (favoring a physical pair), but archival HST imaging shows a candidate foreground galaxy near B; a full lens model is pending (Onorato et al. 2026)."
     ]
   },
   "claim_c32_two_branch_condensate_and_phonon_collapse": {
-    "epistemic_status": "COMPUTED (WAVE-10 SIGMA_*(Z) EXTENSION & MOND FREE-FALL) & CONJECTURE (COSMIC-DAWN DCBH SEEDING)",
+    "epistemic_status": "COMPUTED (CHOSEN SPECTRUM AND FIXED POINT-MASS FORCE BENCHMARKS); NO SEED-FORMATION OR FILAMENT-DYNAMICS SOLUTION",
     "planck_nonlinear_collapse_at_z6p08": {
       "R_star_comoving_Mpc": 0.00796,
       "M_star_Msun": 83914.0,
@@ -70,19 +79,36 @@
         "gaussian_peak_height_nu": 5.38
       }
     ],
-    "feeder_filament_30pkpc_5e10Msun_infall": {
+    "fixed_point_mass_30pkpc_5e10Msun_radial_infall": {
+      "method": "Energy-conserving radial quadrature, released from rest; fixed point mass; no pressure, angular momentum or environmental evolution",
+      "MOND_const_a0_convergence_intervals": [
+        64,
+        128,
+        256
+      ],
+      "MOND_const_a0_convergence_Myr": [
+        200.07513758474812,
+        200.07513758287334,
+        200.07513758290773
+      ],
+      "superseded_outer_acceleration_shortcuts_Myr": [
+        182.27,
+        109.04,
+        122.79
+      ],
       "g_baryon_m_s2": 7.7437e-12,
       "a0_const_m_s2": 1.2e-10,
       "a0_hubble_cHz_over_2pi_m_s2": 1.1057e-09,
       "free_fall_time_pure_baryon_Newton_Myr": 384.82,
-      "free_fall_time_MOND_const_a0_Myr": 182.27,
-      "free_fall_time_MOND_Hubble_a0_Myr": 109.04,
-      "free_fall_time_two_branch_trapped_condensate_Myr": 122.79
+      "free_fall_time_MOND_const_a0_Myr": 200.08,
+      "free_fall_time_MOND_Hubble_a0_Myr": 121.72,
+      "free_fall_time_two_branch_trapped_condensate_Myr": 127.16
     },
-    "dynamical_friction_audit_note": "Pure baryon-only MOND slows kpc-scale galaxy mergers due to absent dark-halo dynamical friction (Nipoti et al. 2008), whereas in the two-branch condensate sigma_*(z=6.08) = 0.97 km/s << sigma_halo keeps f_trap = 0.99997, supplying both deep central DCBH potentials and Chandrasekhar dynamical friction at z = 6.08 before late-time cosmic-web shocks heat the condensate to 185.59 km/s by z = 0."
+    "dynamical_friction_audit_note": "The assigned trapping fraction is a prescription, not a capture or friction calculation. M_star is total nonlinear halo mass, not a black-hole seed. No density profile, phase-space distribution, gas collapse, cooling or merger hardening history is solved here."
   },
   "claim_c33_slim_disk_and_binary_gw_budget": {
     "epistemic_status": "COMPUTED (SLIM-DISK ADVECTION & PETERS 1964 GW INSPIRAL IDENTITIES)",
+    "slim_disk_mass_flow_convention": "mdot = epsilon_ref * dotM_in * c^2 / L_Edd; epsilon_ref=0.10; lambda=mdot below 2, otherwise 2*(1+ln(mdot/2)); dotM_BH=(mdot-epsilon_ref*lambda)*L_Edd/(epsilon_ref*c^2); no outflows; fixed coefficients and duty one",
     "slim_disk_photon_trapping_benchmarks": [
       {
         "dimensionless_mass_inflow_mdot": 1.0,
@@ -97,27 +123,27 @@
       {
         "dimensionless_mass_inflow_mdot": 3.0,
         "radiated_lambda_Edd_slim_disk": 2.811,
-        "popIII_100Msun_to_1p5e9Msun_time_Myr": 275.69
+        "popIII_100Msun_to_1p5e9Msun_time_Myr": 273.78
       },
       {
         "dimensionless_mass_inflow_mdot": 5.0,
         "radiated_lambda_Edd_slim_disk": 3.833,
-        "popIII_100Msun_to_1p5e9Msun_time_Myr": 165.42
+        "popIII_100Msun_to_1p5e9Msun_time_Myr": 161.23
       }
     ],
     "kinematic_projection_at_5p56_pkpc": {
       "v_circ_BHs_only_kms": 38.34,
       "v_circ_with_1p5e11Msun_host_kms": 342.79,
       "observed_delta_v_los_kms": 15.0,
-      "required_abs_sin_i_cos_psi": 0.0438
+      "illustrative_abs_sin_i_cos_psi_from_point_velocity": 0.0438
     },
     "gravitational_wave_inspiral_budget": {
       "chirp_mass_Msun": 647350000.0,
       "t_GW_at_5p56_pkpc_Myr": 4.872e+20,
       "t_GW_at_0p10_pc_Myr": 50.99,
       "t_GW_at_0p05_pc_Myr": 3.19,
-      "nanograv_relevance": "At 5.56 pkpc, pure GW emission is negligible (t_GW = 4.87e+20 Myr); Chandrasekhar dynamical friction and stellar/condensate loss-cone scattering must harden the pair to 0.05-0.10 pc, after which GW inspiral merges the M_c = 6.47e+08 M_sun binary in 3.19-50.99 Myr, feeding the nHz GW background."
+      "nanograv_relevance": "At 5.56 pkpc, pure GW emission is negligible (t_GW = 4.87e+20 Myr); If the pair reaches 0.05-0.10 pc, the isolated circular point-mass GW clock is 3.19-50.99 Myr. No hardening history, population merger rate or GW background prediction is supplied."
     }
   },
-  "sha256_canonical": "f46cc3be82489f450d1a3ce8c583fad15970050f938bd4c8b5510fe704ba48b6"
+  "sha256_canonical": "40a770d70d19ec3a9d7e9e5e770d0454d94595f7e7abb75e92efa351672354c9"
 }

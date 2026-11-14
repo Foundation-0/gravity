@@ -139,3 +139,44 @@ Every claim separates its **physical status** from any **arithmetic lemma**:
 - **C-27 (Four-Way `~185 km/s` Scale Convergence & Euclid/LSST High-`z` Discriminating Forecast)** -- `COMPUTED / CONJECTURE`
   - *Computation:* Compares four independently defined velocity scales at `z = 0`: Wave-9 empirical group onset (`180-190 km/s`), Planck-2018 nonlinear collapse `sigma_*(0) = 185.59 km/s`, Milgrom `L*` rotation speed `(G M_b* a_0)^(1/4) = 175.82 km/s`, and QED bremsstrahlung Hubble-time cooling at `Delta = 1000` (`178.42 km/s`, Rees & Ostriker 1977). Contrasts dynamic Dark-WHIM shock heating against a constant Lorentz-norm scale `Q_0^(-1) = 2 c sigma_* / a_0 = 30.052 Mpc` in `X = Q^2 - Y`: for `sigma = 200 km/s` groups, dynamic `sigma_*(z)` predicts `f_trap` rises from `0.1389` (`z = 0`) to `0.6730` (`z = 0.5`) and `0.8778` (`z = 1.0`), whereas constant `Q_0` predicts `f_trap = 0.1389` at all redshifts.
   - *Lean Arithmetic Lemma:* None.
+
+## Wave 11: Machian Horizon Inertia, DESI Turnaround & CPT Pair-Condensate Audit (`wave11_machian_pairing_unification.py`)
+- **C-28 (Machian Horizon Frame-Dragging Induction vs. Relativistic Lensing & Non-Locality)** -- `COMPUTED (KNOWN-FRAMEWORK) / CONJECTURE`
+- *Computation & Literature:* Critical density and `R_H = c/H` imply Hubble-sphere compactness `1/2` and the selected potential integral `3/4`. An illustrative partition assigns `K_gm = 2/3` and `K_ge = 1/3`. Manuel Urueña Palomo (2026), arXiv:2610.09987v2, presents a related Machian proposal. These substitutions do not derive inertia here.
+- *Limits:* The quoted Unruh-de Sitter acceleration is a known benchmark. Lensing consistency, a covariant action and multi-body momentum conservation require separate analysis. Arithmetic partition checks establish no physical mechanism.
+- *Lean Arithmetic Lemma (`PROVEN (ARITHMETIC-LEMMA)` in `formal/Wave11MachianZeroEnergy.lean`):* Checks `2 + 1 = 3` and `2 * 1 = 2`.
+- 
+- **C-29 (Hamiltonian Constraint and Conditional CPL Turnaround)** -- `COMPUTED (FRIEDMANN-IDENTITIES)`
+  - *Computation & Inputs:* Records a Hamiltonian constraint under stated boundary and gauge conditions, not a measurable global energy balance or universe-creation process. For chosen CPL inputs `w_0 = -0.75`, `w_a = -0.85`, the flat model gives `a_slow = 1.3897`. Closed models now use `Omega_DE = 1 - Omega_m - Omega_k`, so `H^2(a=1)/H_0^2 = 1`.
+
+  Turnaround near `a = 315.18, 78.80, 31.52` is conditional on extending that equation of state into the unmeasured future. Past-compatible continuations need not recollapse. The parameters are inserted here, not fitted to DESI.
+  - *Lean Arithmetic Lemma:* None.
+
+- **C-30 (CPT-Symmetric Kinetic Mexican-Hat Pair Bifurcation & Condensate Cogenesis Remnant)** -- `COMPUTED (ALGEBRAIC-MODEL) & CONJECTURE`
+  - *Computation & Literature:* Evaluates the chosen polynomial `P(u) = K_2 (u^2 - 1)^2 - Lambda_DE`. Algebraically, the states `u = +/- (1 + eps)` have opposite shift charges and equal positive dust densities. This does not derive their production from `u = 0`.
+
+  The minimal homogeneous scalar sector has `P_QQ(0) = -4 K_2 / Q_0^2`, and a source-free homogeneous solution conserves `a^3 P_Q`. Starting with zero current cannot produce nonzero branch charge without an additional source, boundary condition or production prescription.
+  - *Limits:* Full AeST mixing stability is not solved. Constant shift symmetry allows derivative portals such as `(partial_phi)^2 F_mu_nu F^mu_nu`, so it does not forbid all pair conversion. `eta_B` is a baryon-to-photon ratio, not the fraction of initial pairs annihilated. No portal rate, origin mechanism or relic abundance is established.
+
+  Scherrer (2004), Boyle, Finn and Turok (2018) and Co and Harigaya (2020) provide prior frameworks, not proofs of this transition.
+  - *Lean Arithmetic Lemma (`PROVEN (ARITHMETIC-LEMMA)` in `formal/Wave11MachianZeroEnergy.lean`):* Proves over `Int` for all `u, q0` that `noetherJ (-u) q0 + noetherJ u q0 = 0`, `legendreRho (-u) q0 = legendreRho u q0`, and `0 <= q0Sq < uSq -> 0 < (uSq - q0Sq)*(3*uSq + q0Sq)`.
+## Wave 12: Cosmic-Dawn Compact Quasar Pair `J1602+4228AB` (`Napowawa'enakaulua`) Audit (`wave12_cosmic_dawn_quasar_collapse.py`)
+
+- **C-31 (Cosmic-Dawn Dual-Quasar Salpeter Duty-Cycle Wall & Clustering Excess)** -- `COMPUTED (KNOWN-FRAMEWORK)`
+  - *Computation & Observed Inputs:* Uses the reported `J1602+4228AB` point values from Onorato et al. (2026), arXiv:2609.31835. The `z = 20` growth budget is `734.10 Myr`. A `100 M_sun` seed growing to `1.5e9 M_sun` at fixed Eddington ratio one and efficiency `0.10` needs `827.08 Myr` for pure H, but `725.76 Myr` for primordial H/He.
+
+  Efficiency `0.10` is not the Schwarzschild thin-disk value. At fixed `1 - sqrt(8/9)`, the respective times are `451.54` and `396.22 Myr`. These are conditional growth clocks, not an exclusion of all light seeds or evidence that any history occurred.
+  - *Limits:* Formation delays, spin evolution, fuel supply and duty histories are omitted. Current luminosity is not a lifetime average. Virial masses, Eddington ratios and systemic velocities are uncertain. Lensing remains unresolved. Clustering excess over an extrapolated baseline does not by itself compare cosmological likelihoods.
+  - *Lean Arithmetic Lemma (`PROVEN (ARITHMETIC-LEMMA)` in `formal/Wave12QuasarCollapse.lean`):* Checks `(1 * 4) * 9 = 9 * 4` and `2 * 4 < 9` (`eps/(1-eps)` jumps by `9/4 > 2` from `eps = 0.1` to `0.2`).
+
+- **C-32 (Cosmic-Dawn Dark-WHIM Trapping Inversion `sigma_*(z=6.08) = 0.97 km/s` & Phonon Free-Fall Speedup)** -- `COMPUTED (MODEL-COMPARISON) & CONJECTURE`
+  - *Computation & Inputs:* The chosen spectrum and growth approximation give `M_* = 8.39e4 M_sun` and `sigma_* = 0.97 km/s` at `z = 6.0783`. This is total nonlinear halo mass, not a black-hole seed. The value `f_trap = 0.99997` is an assigned trapping prescription, not a capture solution.
+  - *Corrected radial benchmark:* For release from rest at `30 pkpc` around a fixed `5e10 M_sun` baryonic point mass, energy-conserving integration gives `384.82 Myr` for Newtonian baryons, `200.08 Myr` for constant-a0 RAR, `121.72 Myr` for Hubble-a0 RAR and `127.16 Myr` for constant-a0 RAR plus the assigned condensate force.
+
+  Earlier `182.27`, `109.04` and `122.79 Myr` values substituted the outer acceleration into a Newtonian formula and are superseded. No filament pressure, geometry, angular momentum, cooling or friction is solved.
+  - *Lean Arithmetic Lemma (`PROVEN (ARITHMETIC-LEMMA)` in `formal/Wave12QuasarCollapse.lean`):* Checks `2^2 < 177^2 < 185^2` and `9998 * 177^2 < 10000 * (177^2 - 2^2)`.
+
+- **C-33 (Slim-Disk Photon-Trapping Super-Eddington Growth, `5.56 pkpc` Orbital Projection & NANOGrav Chirp Mass)** -- `COMPUTED (KNOWN-FRAMEWORK)`
+  - *Computation & Inputs:* With `mdot = 0.10 dotM_in c^2 / L_Edd`, the assigned luminosity is `lambda = mdot` below two and `2(1 + ln(mdot/2))` above. Mass conservation gives retained growth proportional to `mdot - 0.10 lambda`, not `0.90 mdot` above saturation. With no outflows and constant coefficients, `mdot = 3, 5` gives `273.78, 161.23 Myr` for a `100 M_sun` seed to reach `1.5e9 M_sun`.
+  - *Binary limits:* The projection `0.0438` uses a point velocity and assumed enclosed mass, not a measured inclination. The chirp mass is `6.4735e8 M_sun`. Circular isolated Peters clocks at `0.05-0.10 pc` are `3.19-50.99 Myr`. Reaching those separations and predicting a stochastic background require hardening and population models that are absent.
+  - *Lean Arithmetic Lemma (`PROVEN (ARITHMETIC-LEMMA)` in `formal/Wave12QuasarCollapse.lean`):* Checks `100 < 123`, `100 < 107`, and `19 * 647^5 < 15^3 * 4^3 * 10^10 < 19 * 648^5`.

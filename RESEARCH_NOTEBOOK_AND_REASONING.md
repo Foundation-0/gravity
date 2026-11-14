@@ -53,3 +53,36 @@ Instead of inventing a new microphysical mass parameter, we asked how **continuo
   1. **1D/3D Nonlinear AeST Zeldovich Pancake PDE Simulation (Theoretical Priority #1)**: Simulate single-field / AeST spherical & 1D pancake collapse through shell-crossing using the Hamiltonian formulation of Bataki, Skordis & Zlosnik (2024, arXiv:2307.15126) to test directly whether dispersive shock regularization produces coarse-grained Eulerian entropy conservation (`CONJECTURE` in `C-26`) rather than Vlasov-like soliton pass-through.
   2. **Euclid / KiDS-1000 Void vs. Filament & High-`z` Group Lensing Split (Observational Priority #1)**: Test the sharp discriminating forecast in `C-27` -- dynamic Dark-WHIM shock heating predicts `f_trap` in `sigma = 200 km/s` groups rises from `0.139` at `z = 0` to `0.673` at `z = 0.5` and `0.878` at `z = 1.0` (and predicts cooler outer envelopes around ultra-isolated galaxies deep inside `R > 10 Mpc` cosmic voids), whereas a constant Lagrangian parameter `Q_0^(-1) = 30.052 Mpc` in `X = Q^2 - Y` predicts redshift- and environment-invariant `f_trap = 0.139`.
   3. **Singular-Source Coincidence Investigation (`C-27`)**: Investigate why four distinct combinations of fundamental parameters -- `(A_s, n_s, z_eq)` giving `sigma_*(0) = 185.59 km/s`, `(G, M_b*, c H_0)` giving `V_flat(L*) = 175.82 km/s`, and `(alpha_EM^3, m_e, m_p, G, H_0)` giving `sigma_ff(Delta=1000) = 178.42 km/s` -- intersect specifically at the Dark-Energy crossover epoch `Omega_Lambda ~ Omega_m`.
+## 4. Wave 11 and Wave 12: corrected interpretation
+
+The [independent value audit](https://github.com/Foundation-0/gravity/pull/11) separates reproducible algebra and conditional clocks from physical mechanisms. This section replaces the earlier creation and protected-remnant claims.
+
+The Hubble-sphere compactness follows from critical density and `R_H = c/H`. The selected induction partition sums to one by construction. Manuel Urueña Palomo (2026), arXiv:2610.09987v2, presents a Machian proposal. Neither the partition nor that citation establishes a derivation of inertia in this calculation.
+
+A Hamiltonian constraint is not a universe-creation process or a globally measurable cancellation of all energies. Negative heat capacity does not prove that every gravitating system forms a core and an expanding envelope. A future turnaround is conditional on extrapolating the chosen CPL equation of state. Density closure now includes curvature, with `Omega_DE = 1 - Omega_m - Omega_k`. No future history is fitted here.
+
+The CPT-even polynomial has opposite-charge branches with equal positive dust densities. Algebraic evaluation does not produce those branches from the symmetric origin. In the minimal homogeneous scalar sector, `P_QQ(0) = -4 K_2 / Q_0^2`. The kinetic curvature changes sign through a degeneracy.
+
+Source-free homogeneous shift symmetry conserves `a^3 P_Q`, so an initially zero current requires an additional production prescription to become nonzero. Full mixing stability is not solved.
+
+Constant shift symmetry permits derivative portals, including `(partial_phi)^2 F_mu_nu F^mu_nu`. A portal coefficient and rate are needed to assess pair conversion. The measured baryon-to-photon ratio does not specify the fraction of initial pairs that annihilated. No cogenesis abundance or origin mechanism is derived.
+
+Wave 12 now integrates radial infall through the changing force rather than inserting its outer value into the Newtonian time formula. The result is a fixed point-mass test, not a filament or black-hole formation calculation. Its nonlinear halo mass remains total matter mass. Trapping remains an assigned prescription.
+
+The light-seed growth clock depends on opacity and efficiency. Efficiency 0.10 is a benchmark. The fixed Schwarzschild value is `1 - sqrt(8/9)`. Pure H and primordial H/He are reported separately.
+
+The mass-flow convention for the slim-disk table now enforces inflow minus radiated energy. No outflow, changing spin or fuel history is modeled. No present luminosity or binary velocity is treated as a measured lifetime history or orbital inclination.
+
+## 5. Wave 12: conditional quasar benchmarks
+
+The new documentation for J1602+4228AB is reconciled here with the corrected generators. Onorato et al. (2026), arXiv:2609.31835, reports the discovery and its observational limits. The quoted masses, luminosity ratios and projected separation remain inputs, with virial and lensing uncertainty. A point estimate above Eddington is not evidence for a sustained growth history.
+
+At fixed efficiency 0.10 and Eddington ratio one, the pure-H light-seed clock exceeds the 734.10 Myr budget. Primordial H/He instead gives 725.76 Myr. Fixed Schwarzschild efficiency `1-sqrt(8/9)` gives 451.54 Myr for pure H and 396.22 Myr for primordial H/He. None of these choices is an observed history. Fuel, duty, spin evolution and formation delays remain assumptions.
+
+The assigned slim-disk luminosity law uses `mdot=0.10 dotM_in c^2/L_Edd`. Retained growth subtracts radiated energy, giving `mdot-0.10 lambda`. For mdot three and five, the corresponding fixed-coefficient clocks are 273.78 and 161.23 Myr. They omit outflows and do not prove a formation channel.
+
+The chosen nonlinear spectrum gives total halo mass near `8.39e4 M_sun`, not a black-hole seed. The trapping fraction is prescribed. No capture, gas collapse, friction or merger hardening is calculated. Comparing a mass scale with a seed mass does not equate the two physical quantities.
+
+Radial energy integration around a fixed `5e10 M_sun` point mass gives 200.08 Myr for constant-a0 RAR, 121.72 Myr for Hubble-a0 RAR and 127.16 Myr for constant-a0 RAR plus the assigned condensate force. The Newtonian control is 384.82 Myr. These calculations omit filament geometry, pressure and angular momentum.
+
+The projected velocity comparison is illustrative. A circular Peters clock at a chosen subparsec separation is not a demonstrated route to that separation or a prediction of a gravitational-wave background. Neither a Gaussian-tail benchmark nor clustering excess over an extrapolated baseline supplies a comparative cosmological likelihood.

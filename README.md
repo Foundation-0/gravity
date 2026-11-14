@@ -24,6 +24,10 @@ The [convergence research collection](research/convergences-20261112/README.md) 
 
 The collection includes a test specification for nonlinear AeST collapse, distinctions between interference and readable records, a lattice mechanics comparison and methods for combining astronomical evidence. Its scope and next tests are explicit. No nonlinear AeST simulation or new galaxy-data fit is claimed.
 
+## Cosmic dawn audit
+
+The [cosmic dawn research note](research/cosmic-dawn-20261112/README.md) distinguishes a quasar-pair observation from Wave 10 collapse-scale assumptions. A standard-library probe checks the native calculation, high-wavenumber sensitivity and failed root brackets. The note also states what an extra-dimension test would need to predict.
+
 ## Repository Layout & Verification Commands
 
 The root audit scripts use only the Python 3 standard library. The separate convergence research probes declare their NumPy and SymPy dependencies in their own reproduction instructions. Each certificate file in `results/*.json` embeds a `sha256_canonical` field equal to the `sha256` checksum of `json.dumps(payload_without_sha_field, sort_keys=True, separators=(",", ":"))` computed by the generator script that writes it (this is a deterministic content checksum for reproducibility, not a cryptographic signature). Raw file digests are recorded in `SHA256SUMS`.

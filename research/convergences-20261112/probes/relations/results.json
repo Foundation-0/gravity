@@ -1,0 +1,203 @@
+{
+  "status": "COMPUTED_ILLUSTRATION_OF_KNOWN_QUANTUM_MECHANICS",
+  "numpy_version": "2.5.4",
+  "python_version": "3.14.6",
+  "python_executable": "python3",
+  "records": {
+    "environment_qubits": 5,
+    "system_qubits": 1,
+    "code_stabilizers": [
+      "XZZXI",
+      "IXZZX",
+      "XIXZZ",
+      "ZXIXZ"
+    ],
+    "max_code_matrix_element_of_weight_1_or_2_pauli": 0.0,
+    "states": {
+      "redundant_records": {
+        "system_density_matrix": [
+          [
+            0.4999999999999999,
+            0.0
+          ],
+          [
+            0.0,
+            0.4999999999999999
+          ]
+        ],
+        "fragments": [
+          {
+            "fragment_qubits": 0,
+            "fragments_checked": 1,
+            "mutual_information_bits_min": 0.0,
+            "mutual_information_bits_max": 0.0,
+            "pointer_holevo_bits": 0.0,
+            "pointer_trace_distance": 0.0
+          },
+          {
+            "fragment_qubits": 1,
+            "fragments_checked": 5,
+            "mutual_information_bits_min": 1.0,
+            "mutual_information_bits_max": 1.0,
+            "pointer_holevo_bits": 1.0,
+            "pointer_trace_distance": 1.0
+          },
+          {
+            "fragment_qubits": 2,
+            "fragments_checked": 10,
+            "mutual_information_bits_min": 1.0,
+            "mutual_information_bits_max": 1.0,
+            "pointer_holevo_bits": 1.0,
+            "pointer_trace_distance": 1.0
+          },
+          {
+            "fragment_qubits": 3,
+            "fragments_checked": 10,
+            "mutual_information_bits_min": 1.0,
+            "mutual_information_bits_max": 1.0,
+            "pointer_holevo_bits": 1.0,
+            "pointer_trace_distance": 1.0
+          },
+          {
+            "fragment_qubits": 4,
+            "fragments_checked": 5,
+            "mutual_information_bits_min": 1.0,
+            "mutual_information_bits_max": 1.0,
+            "pointer_holevo_bits": 1.0,
+            "pointer_trace_distance": 1.0
+          },
+          {
+            "fragment_qubits": 5,
+            "fragments_checked": 1,
+            "mutual_information_bits_min": 2.0,
+            "mutual_information_bits_max": 2.0,
+            "pointer_holevo_bits": 1.0,
+            "pointer_trace_distance": 1.0
+          }
+        ]
+      },
+      "encoded_correlations": {
+        "system_density_matrix": [
+          [
+            0.49999999999999994,
+            0.0
+          ],
+          [
+            0.0,
+            0.49999999999999994
+          ]
+        ],
+        "fragments": [
+          {
+            "fragment_qubits": 0,
+            "fragments_checked": 1,
+            "mutual_information_bits_min": 0.0,
+            "mutual_information_bits_max": 0.0,
+            "pointer_holevo_bits": 0.0,
+            "pointer_trace_distance": 0.0
+          },
+          {
+            "fragment_qubits": 1,
+            "fragments_checked": 5,
+            "mutual_information_bits_min": 0.0,
+            "mutual_information_bits_max": 0.0,
+            "pointer_holevo_bits": 0.0,
+            "pointer_trace_distance": 0.0
+          },
+          {
+            "fragment_qubits": 2,
+            "fragments_checked": 10,
+            "mutual_information_bits_min": 0.0,
+            "mutual_information_bits_max": 0.0,
+            "pointer_holevo_bits": 0.0,
+            "pointer_trace_distance": 0.0
+          },
+          {
+            "fragment_qubits": 3,
+            "fragments_checked": 10,
+            "mutual_information_bits_min": 2.0,
+            "mutual_information_bits_max": 2.0,
+            "pointer_holevo_bits": 1.0,
+            "pointer_trace_distance": 1.0
+          },
+          {
+            "fragment_qubits": 4,
+            "fragments_checked": 5,
+            "mutual_information_bits_min": 2.0,
+            "mutual_information_bits_max": 2.0,
+            "pointer_holevo_bits": 1.0,
+            "pointer_trace_distance": 1.0
+          },
+          {
+            "fragment_qubits": 5,
+            "fragments_checked": 1,
+            "mutual_information_bits_min": 2.0,
+            "mutual_information_bits_max": 2.0,
+            "pointer_holevo_bits": 1.0,
+            "pointer_trace_distance": 1.0
+          }
+        ]
+      }
+    }
+  },
+  "emission": {
+    "description": "Initial photon emission rates in the two-emitter Markov model; not measured rates.",
+    "one_atom_density_matrix_for_each_pure_state": [
+      [
+        0.5,
+        0
+      ],
+      [
+        0,
+        0.5
+      ]
+    ],
+    "rows": [
+      {
+        "bath_cross_correlation_eta": 0.0,
+        "photon_emission_rate_over_single_atom_gamma": {
+          "symmetric": 0.9999999999999998,
+          "antisymmetric": 0.9999999999999998,
+          "incoherent_mixture": 1.0
+        }
+      },
+      {
+        "bath_cross_correlation_eta": 0.25,
+        "photon_emission_rate_over_single_atom_gamma": {
+          "symmetric": 1.2499999999999998,
+          "antisymmetric": 0.7499999999999998,
+          "incoherent_mixture": 1.0
+        }
+      },
+      {
+        "bath_cross_correlation_eta": 0.5,
+        "photon_emission_rate_over_single_atom_gamma": {
+          "symmetric": 1.4999999999999996,
+          "antisymmetric": 0.4999999999999999,
+          "incoherent_mixture": 1.0
+        }
+      },
+      {
+        "bath_cross_correlation_eta": 0.9,
+        "photon_emission_rate_over_single_atom_gamma": {
+          "symmetric": 1.8999999999999995,
+          "antisymmetric": 0.09999999999999998,
+          "incoherent_mixture": 1.0
+        }
+      },
+      {
+        "bath_cross_correlation_eta": 1.0,
+        "photon_emission_rate_over_single_atom_gamma": {
+          "symmetric": 1.9999999999999996,
+          "antisymmetric": 0.0,
+          "incoherent_mixture": 1.0
+        }
+      }
+    ]
+  },
+  "limitations": [
+    "Endpoint states and ideal channels, not a natural-environment simulation.",
+    "All original system phase information remains in global correlations in both record examples.",
+    "Exact dark emission requires ideal collective coupling and no extra loss channels."
+  ]
+}

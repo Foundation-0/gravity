@@ -1,0 +1,184 @@
+{
+  "date": "2026-11-12",
+  "seat": "gpt-forge",
+  "model": "gpt-6-astra",
+  "reasoning_effort": "ultra",
+  "task": "Broad cross-repository value assessment; at most two selected avenues",
+  "snapshot_repositories": {
+    "gravity": {
+      "head": "70a1204a536b3dca0b3053d1a056daf22601ac00",
+      "status": ""
+    },
+    "fractals": {
+      "head": "48b923bd25dbcfef7fa8e8399d4144592145f0ef",
+      "status": ""
+    },
+    "physics0": {
+      "head": "913468f093f82d869dc58b404039ea0a416cfb80",
+      "status": ""
+    },
+    "astr0": {
+      "head": "67cafe2defc44d5a4e17815fc7329f65eeef45eb",
+      "status": ""
+    }
+  },
+  "incentre_source": {
+    "repository": "Foundation-0/incentre-lattices",
+    "head": "2d374fff2a59cc9331566733043a4bb25c1040bf",
+    "files": [
+      {
+        "path": "README.md",
+        "blob_sha": "dc718351e634ff14a068f4defb96ae5723f17d17",
+        "sha256": "38b87aad99378cc9de6d80f2a603b89402bdf11147356020a5c9f14b7bb3e1a4",
+        "url": "https://github.com/Foundation-0/incentre-lattices/blob/2d374fff2a59cc9331566733043a4bb25c1040bf/README.md"
+      },
+      {
+        "path": "research/1-mechanics.md",
+        "blob_sha": "8faacd2aae947dd0a2de6f7fcaa42dff204d04fe",
+        "sha256": "bfa41c6c2a7eac84e3f7eb7569b73810948daba3f59cfa640bff36348962263a",
+        "url": "https://github.com/Foundation-0/incentre-lattices/blob/2d374fff2a59cc9331566733043a4bb25c1040bf/research/1-mechanics.md"
+      },
+      {
+        "path": "results/rigidity-nd/PROOF.md",
+        "blob_sha": "c9cb065c828e84155f7baf415290bd065344290e",
+        "sha256": "159e6ad160819d48be563cd50333ab12c13ce578f1b44080c622142b4972ede3",
+        "url": "https://github.com/Foundation-0/incentre-lattices/blob/2d374fff2a59cc9331566733043a4bb25c1040bf/results/rigidity-nd/PROOF.md"
+      },
+      {
+        "path": "papers/source/main.tex",
+        "blob_sha": "b0ff84aeb476ec2f8bae0479097649421efe0051",
+        "sha256": "ce86312702a728a56738208e3ecaea451ca541a367fb56688550a2e8c5bcc452",
+        "url": "https://github.com/Foundation-0/incentre-lattices/blob/2d374fff2a59cc9331566733043a4bb25c1040bf/papers/source/main.tex"
+      },
+      {
+        "path": "results/fold-continuous-fcc/PROOF.md",
+        "blob_sha": "966bffe597948d7b53ead878925567d5fbf331cc",
+        "sha256": "45d1021cc3a7fcac11276a4c09b4367903731d041190f9e65685d0d8411d158e",
+        "url": "https://github.com/Foundation-0/incentre-lattices/blob/2d374fff2a59cc9331566733043a4bb25c1040bf/results/fold-continuous-fcc/PROOF.md"
+      }
+    ],
+    "inspection": "README, mechanics note and rigidity proof read; main paper source searched for folded elasticity and prior-art scope; exact path independently transcribed from existing convergence probe. Reads at pinned ref verified source hashes. No source repository edited."
+  },
+  "existing_convergence_bundle": {
+    "immutable_publication_ref": "02013ae95fa5913894b829c8e2e63a3efcde9e63",
+    "inputs": [
+      {
+        "path": "README.md",
+        "sha256": "a243f487aef5796a9469aa0db3d053fe0ed422ccf6751e2e0efd9c8d6f5b47bd"
+      },
+      {
+        "path": "reports/repetition.md",
+        "sha256": "f31a619732acf94da7c8c3c1e367ccfdc1eb5ded788a6131e94eaac6647b528d"
+      },
+      {
+        "path": "reports/relations.md",
+        "sha256": "ada0c350438fd80ef831edbff6e7916c4fab28811c23f8404078bdc6e6a34039"
+      },
+      {
+        "path": "reports/hidden-dynamics.md",
+        "sha256": "5a8be63d649fa8ad8e842d13a99062b882068fb7594880ddc6e11932d52d5e52"
+      },
+      {
+        "path": "probes/repetition/graph_vs_geometry.py",
+        "sha256": "25fa573c327f74d2b1f7a3836f252c40eacf2d55891835c20407da4f90e6c1d4"
+      },
+      {
+        "path": "probes/robustness/robustness_probes.py",
+        "sha256": "b98d004c35dd8d22c93c2882f909be5739be8d5a289e8c31548253bd9485c12e"
+      }
+    ]
+  },
+  "primary_sources": [
+    {
+      "id": "M1",
+      "title": "Topological Boundary Modes in Isostatic Lattices",
+      "authors": "C. L. Kane and T. C. Lubensky",
+      "year": 2014,
+      "url": "https://arxiv.org/html/1308.0554v2",
+      "inspection": "Primary full-text equations 1-2 and mechanical matrix derivation",
+      "supports": "Compatibility matrices, zero modes, self-stress and Maxwell-Calladine counting",
+      "limits": "Does not establish our folded elastic formula or topology of this underconstrained network."
+    },
+    {
+      "id": "M2",
+      "title": "Rigid unit modes and intrinsic flexibility in linearly bridged framework structures",
+      "authors": "Andrew L. Goodwin",
+      "year": 2006,
+      "url": "https://doi.org/10.1103/PhysRevB.74.134302",
+      "inspection": "Publisher abstract read; full article requires subscription. Oxford repository metadata inspected.",
+      "supports": "Extensive rigid unit modes are known in bridged framework families, including Prussian-blue topology.",
+      "limits": "No claim that full text excludes folded elastic formulas. Priority unresolved."
+    },
+    {
+      "id": "Q1",
+      "title": "Redundant Information from Thermal Illumination: Quantum Darwinism in Scattered Photons",
+      "authors": "C. Jess Riedel and Wojciech H. Zurek",
+      "year": 2011,
+      "url": "https://arxiv.org/html/1102.3179v2",
+      "inspection": "Primary full text, sections 2.1-2.4, equations 18,21,25-27 and Fig.4 discussion.",
+      "supports": "Angular receptivity, separation of decoherence and redundancy, isotropic limit, squared-coherence convention.",
+      "limits": "Specified long-wavelength dipole model; no aperture-specific observed information rate. The displayed HTML includes incidental transcription errors; no dimensional prefactor was used."
+    },
+    {
+      "id": "Q0",
+      "title": "Quantum Darwinism in an Everyday Environment: Huge Redundancy in Scattered Photons",
+      "authors": "C. Jess Riedel and Wojciech H. Zurek",
+      "year": 2010,
+      "url": "https://arxiv.org/html/1001.3419v2",
+      "inspection": "Primary text initial comparison; full numerical follow-up uses Q1.",
+      "supports": "Earlier point-source and isotropic limits already identified by the existing convergence study."
+    }
+  ],
+  "known_versus_incremental": {
+    "known": "Framework topology, open-state zero bands, open-state homogeneous elasticity and exact fold are existing source-project results. Extensive rigid-unit modes have older literature. Photon angular receptivity is known theory.",
+    "incremental": "Closed-form relaxed homogeneous elastic tensor along the exact equal-bar fold; explicit weak extra-spring completion and order-of-limits calculation. Not found in inspected project passages, not claimed as a priority discovery.",
+    "unverified": "Historical priority of the folded tensor; nonlinear stability; finite-amplitude equilibria; all-wavevector rigidity of completed spring models; real material interactions; measured illumination."
+  },
+  "environment": {
+    "python": "3.14.6 (v3.14.6:c63aec69bd5, Jun 10 2026, 08:07:54) [Clang 21.0.0 (clang-2100.1.1.101)]",
+    "numpy": "2.5.4",
+    "platform": "macOS-27.0.1-arm64-arm-64bit-Mach-O",
+    "machine": "arm64"
+  },
+  "tool_notes": [
+    "GitHub connector fetch unavailable (Unknown tool). Read-only gh API used.",
+    "RSC full-text requests for Li-Refson-Dove 2023 were blocked (403). No technical claim relies on that unread article."
+  ],
+  "data_statement": "No observational data fitted or acquired. All new numerical outputs are synthetic mathematical calculations under explicit assumptions.",
+  "files": {
+    "probe.py": {
+      "sha256": "dbe5bb373376bffdbfa1f7c63ee57eea7d8b524620f7cd3e221f03760594f372"
+    },
+    "evidence.json": {
+      "sha256": "67e764c24c8176811478c615be497c3c7dd0a6654fd94166e9652b2a0d1afc66"
+    },
+    "research.md": {
+      "sha256": "c26788bb39b07ac6bc426b5a8ddee725dd7ae8c27e6a390f3a22c5464228f239"
+    },
+    "derivation.md": {
+      "sha256": "d722d7ea613e35a1adc2f8fd05cc0d3ea7120b3f5e86c19c46e71528e9db4d63"
+    }
+  },
+  "validation": {
+    "probe_execution": "PASS",
+    "saved_evidence_exact_replay": "PASS",
+    "research_prose_gate": "PASS",
+    "closed_form_vs_SVD_max_error": 3.384653668447868e-13,
+    "finite_length_max_relative_error": 3.197457694573648e-07,
+    "angular_quadrature_refinement_max_error": 1.2212453270876722e-15,
+    "completed_network_all_wavevector_stability": "NOT TESTED",
+    "new_observations": "NONE",
+    "open_state_completion_rotation_minor": "Exact integer determinant 2",
+    "derivation_prose_gate": "PASS"
+  },
+  "independent_review_prior_art": [
+    {
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6283905/",
+      "role": "Nassar, Chen and Huang section 3; one supported stress state and pentamode prior art; checked in independent scientific review."
+    },
+    {
+      "url": "https://arxiv.org/abs/1205.6213",
+      "role": "Milton unimode definition; one easy macroscopic path differs from five easy strain combinations."
+    }
+  ]
+}

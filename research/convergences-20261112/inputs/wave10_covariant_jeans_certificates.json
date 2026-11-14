@@ -1,0 +1,204 @@
+{
+  "schema": "FOUNDATION-0/GRAVITY-WAVE10-JEANS-UNIFICATION/1.0",
+  "claim_c25_linear_sound_speed_nogo": {
+    "epistemic_status": "COMPUTED (LINEAR PERTURBATION & JEANS SCALING NO-GO BOUND)",
+    "target_halo_dispersion_kms": 185.0,
+    "homogeneous_z0_comoving_kJ_Mpc_inv": 0.2504,
+    "homogeneous_z0_comoving_lambdaJ_Mpc": 25.1,
+    "recombination_matter_density_over_crit0": 420653209.2,
+    "recombination_to_virial200_density_ratio": 2103266.0,
+    "polytrope_gamma2_naive_cs_z1100_over_c": 0.8949,
+    "scordatura_k4_comoving_kJ_ratio_z1100_over_z0": 0.1736,
+    "shift_symmetric_K_power_scan": [
+      {
+        "power_p": 2.0,
+        "eps_z0": 3.808e-07,
+        "w_z1100": 0.93921,
+        "cs_z1100_kms": 295055.77,
+        "k_J_com_z1100_Mpc_inv": 0.0052
+      },
+      {
+        "power_p": 4.0,
+        "eps_z0": 1.1424e-06,
+        "w_z1100": 0.00031405,
+        "cs_z1100_kms": 6133.73,
+        "k_J_com_z1100_Mpc_inv": 0.2506
+      },
+      {
+        "power_p": 8.0,
+        "eps_z0": 2.6656e-06,
+        "w_z1100": 6.7036e-06,
+        "cs_z1100_kms": 829.8,
+        "k_J_com_z1100_Mpc_inv": 1.852
+      },
+      {
+        "power_p": 16.0,
+        "eps_z0": 5.7121e-06,
+        "w_z1100": 1.4488e-06,
+        "cs_z1100_kms": 372.69,
+        "k_J_com_z1100_Mpc_inv": 4.1236
+      },
+      {
+        "power_p": 32.0,
+        "eps_z0": 1.1805e-05,
+        "w_z1100": 7.2657e-07,
+        "cs_z1100_kms": 259.63,
+        "k_J_com_z1100_Mpc_inv": 5.9193
+      }
+    ]
+  },
+  "claim_c26_dark_whim_nonlinear_collapse_scale": {
+    "epistemic_status": "COMPUTED (ZERO-FREE-PARAMETER PRESS-SCHECHTER SCALE & JEANS SLOPE) & CONJECTURE (NONLINEAR AEST FLUID-SHOCK CLOSURE WITHOUT DARK COOLING)",
+    "sigma_star_z0_kms": 185.59,
+    "press_schechter_redshift_trajectory": [
+      {
+        "z": 0.0,
+        "D_z": 1.0,
+        "R_star_comoving_Mpc": 3.3483,
+        "M_star_Msun": 6240000000000.0,
+        "V_200_kms": 262.46,
+        "sigma_1D_star_kms": 185.59
+      },
+      {
+        "z": 0.3,
+        "D_z": 0.8528,
+        "R_star_comoving_Mpc": 2.3822,
+        "M_star_Msun": 2247000000000.0,
+        "V_200_kms": 196.97,
+        "sigma_1D_star_kms": 139.28
+      },
+      {
+        "z": 0.5,
+        "D_z": 0.7689,
+        "R_star_comoving_Mpc": 1.8798,
+        "M_star_Msun": 1104000000000.0,
+        "V_200_kms": 161.74,
+        "sigma_1D_star_kms": 114.36
+      },
+      {
+        "z": 1.0,
+        "D_z": 0.6067,
+        "R_star_comoving_Mpc": 1.0388,
+        "M_star_Msun": 186300000000.0,
+        "V_200_kms": 98.88,
+        "sigma_1D_star_kms": 69.92
+      },
+      {
+        "z": 2.0,
+        "D_z": 0.4171,
+        "R_star_comoving_Mpc": 0.3406,
+        "M_star_Msun": 6570000000.0,
+        "V_200_kms": 38.65,
+        "sigma_1D_star_kms": 27.33
+      },
+      {
+        "z": 3.0,
+        "D_z": 0.3154,
+        "R_star_comoving_Mpc": 0.1235,
+        "M_star_Msun": 313400000.0,
+        "V_200_kms": 16.07,
+        "sigma_1D_star_kms": 11.36
+      },
+      {
+        "z": 5.0,
+        "D_z": 0.2111,
+        "R_star_comoving_Mpc": 0.0198,
+        "M_star_Msun": 1282000.0,
+        "V_200_kms": 3.13,
+        "sigma_1D_star_kms": 2.22
+      }
+    ],
+    "hydrostatic_jeans_slope_suppression": [
+      {
+        "system": "Dwarf_50kms",
+        "sigma_halo_kms": 35.0,
+        "hydrostatic_density_slope_gamma_d": 0.0711,
+        "r_probe_kpc": 5.0,
+        "R_vir_kpc": 75.0,
+        "enclosed_dust_fraction_inside_r_probe": 0.000359,
+        "enclosed_dust_over_Mb_cosmic_cap": 0.00193
+      },
+      {
+        "system": "Lstar_spiral_176kms",
+        "sigma_halo_kms": 125.0,
+        "hydrostatic_density_slope_gamma_d": 0.9073,
+        "r_probe_kpc": 10.0,
+        "R_vir_kpc": 220.0,
+        "enclosed_dust_fraction_inside_r_probe": 0.001551,
+        "enclosed_dust_over_Mb_cosmic_cap": 0.00832
+      },
+      {
+        "system": "Threshold_halo_185_6kms",
+        "sigma_halo_kms": 185.59,
+        "hydrostatic_density_slope_gamma_d": 2.0,
+        "r_probe_kpc": 15.0,
+        "R_vir_kpc": 300.0,
+        "enclosed_dust_fraction_inside_r_probe": 0.05,
+        "enclosed_dust_over_Mb_cosmic_cap": 0.26822
+      }
+    ],
+    "zero_fitted_parameter_catalog_benchmarks": {
+      "clean_60": {
+        "chi2": 60.2645,
+        "rms_dex": 0.1283,
+        "n": 60,
+        "k_fitted_params": 0,
+        "bic_k0": 60.2645,
+        "delta_bic_vs_wave7_3param": -10.01,
+        "delta_bic_vs_wave9_1param": -3.9
+      },
+      "primary_77": {
+        "chi2": 106.5107,
+        "rms_dex": 0.1461,
+        "n": 77,
+        "k_fitted_params": 0,
+        "bic_k0": 106.5107,
+        "delta_bic_vs_wave7_3param": -6.6,
+        "delta_bic_vs_wave9_1param": -4.27
+      },
+      "full_126": {
+        "chi2": 148.2134,
+        "rms_dex": 0.124,
+        "n": 126,
+        "k_fitted_params": 0,
+        "bic_k0": 148.2134,
+        "delta_bic_vs_wave7_3param": -8.62,
+        "delta_bic_vs_wave9_1param": -4.75
+      }
+    }
+  },
+  "claim_c27_four_way_scale_convergence_and_forecasts": {
+    "epistemic_status": "COMPUTED (SCALE COMPARISON & FALSIFIABLE REDSHIFT FORECAST) / CONJECTURE (SINGULAR-ORIGIN COINCIDENCE)",
+    "four_converging_scales_kms": {
+      "empirical_wave9_group_onset_clean60_full126": [
+        180.0,
+        190.0
+      ],
+      "planck2018_press_schechter_Mstar_z0": 185.59,
+      "milgrom_btfr_Lstar_vflat": 175.82,
+      "bremsstrahlung_hubble_cooling_Delta1000": 178.42
+    },
+    "lorentz_norm_equivalent_Q0_inv_Mpc": 30.052,
+    "euclid_lsst_200kms_group_redshift_test": [
+      {
+        "redshift_z": 0.0,
+        "dynamic_dark_whim_sigma_J_kms": 185.59,
+        "dynamic_f_trap_at_200kms": 0.1389,
+        "constant_lagrangian_f_trap_at_200kms": 0.1389
+      },
+      {
+        "redshift_z": 0.5,
+        "dynamic_dark_whim_sigma_J_kms": 114.36,
+        "dynamic_f_trap_at_200kms": 0.673,
+        "constant_lagrangian_f_trap_at_200kms": 0.1389
+      },
+      {
+        "redshift_z": 1.0,
+        "dynamic_dark_whim_sigma_J_kms": 69.92,
+        "dynamic_f_trap_at_200kms": 0.8778,
+        "constant_lagrangian_f_trap_at_200kms": 0.1389
+      }
+    ]
+  },
+  "sha256_canonical": "7dd4b40172b8fe261c3028f7a6af6e2b5131fb93cd83d10c439e3c5f0c5be3d4"
+}

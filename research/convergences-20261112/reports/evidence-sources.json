@@ -1,0 +1,246 @@
+{
+  "route": "Reconnecting evidence",
+  "date_checked": "2026-11-12",
+  "seat": "gpt-forge",
+  "requested_research_model": "gpt-6-astra",
+  "requested_reasoning_effort": "ultra",
+  "scope": "Read-only repository reconnaissance, primary-source research and synthetic local calculations. No repository candidate was validated.",
+  "sources": [
+    {
+      "id": "E01",
+      "title": "The Incomplete Rosetta Stone Problem: Identifiability Results for Multi-View Nonlinear ICA",
+      "authors": "Gresele, Rubenstein, Mehrjou, Locatello and Scholkopf",
+      "year": 2020,
+      "url": "https://proceedings.mlr.press/v115/gresele20a/gresele20a.pdf",
+      "type": "Primary conference paper, UAI 2019 proceedings published 2020",
+      "classification": "established mathematical result conditional on stated model",
+      "inspected": "Sections 3.1-3.3, Definition 2, Theorems 1, 5 and 8, equations 17-21, discussion",
+      "use": "Scope of multi-view identifiability and the distinction between demixing and noiseless recovery.",
+      "limit": "Asymptotic result with restrictive generative and diversity assumptions. Theorem 8 includes residual restrictions beyond observed independence."
+    },
+    {
+      "id": "E02",
+      "title": "Incomplete Rosetta Stone supplementary material",
+      "url": "https://proceedings.mlr.press/v115/gresele20a/gresele20a-supp.pdf",
+      "type": "Primary supplementary proofs",
+      "classification": "established mathematical result conditional on stated model",
+      "inspected": "Appendices B-C and D.1",
+      "use": "Deterministic-view issue, diversity-condition counterexample and permutation ambiguity.",
+      "limit": "The Gaussian diversity failure is relevant to the multicomponent case. It does not imply known linear Gaussian measurement models cannot benefit from additional observations."
+    },
+    {
+      "id": "E03",
+      "title": "Removing systematic errors for exoplanet search via latent causes",
+      "authors": "Scholkopf, Hogg, Wang, Foreman-Mackey, Janzing, Simon-Gabriel and Peters",
+      "year": 2015,
+      "url": "https://proceedings.mlr.press/v37/scholkopf15.pdf",
+      "type": "Primary ICML paper",
+      "classification": "established mathematical result conditional on stated causal model",
+      "inspected": "Section 2, Figure 1, Proposition 1, equations 1-9 and incomplete-information discussion",
+      "use": "A reference may help estimate a target by measuring shared nuisance rather than the target signal.",
+      "limit": "The assumed structure is not inferred by the method. Signal leakage into a control can remove real variation."
+    },
+    {
+      "id": "E04",
+      "title": "ASASSN-24fw: Candidate gas-rich circumsecondary disk occultation of a main-sequence star",
+      "authors": "Zakamska and colleagues",
+      "year": 2025,
+      "version": "arXiv:2507.05367v3, 12 November 2025; HTML title differs from stale abstract-page title",
+      "url": "https://arxiv.org/html/2507.05367v3",
+      "type": "Primary observational paper",
+      "classification": "published observational result with conditional physical interpretation",
+      "inspected": "Section III.1, figures 5-6, paragraphs on period alternatives; section IV.5 alternatives",
+      "use": "DASCH historical dimmings plus ASAS normal-brightness coverage distinguish period aliases.",
+      "limit": "Period determination does not uniquely identify the occulter's physical nature. This is prior work, not a Foundation0 discovery."
+    },
+    {
+      "id": "E05",
+      "title": "The Rise and Fall of the Eclipsing Binary HS Hydrae",
+      "authors": "Davenport, Windemuth, Warmbein, Howard, Klein and Birky",
+      "year": 2021,
+      "url": "https://arxiv.org/pdf/2107.10954",
+      "type": "Primary observational paper",
+      "classification": "published observational result with dynamical interpretation",
+      "inspected": "Abstract, sections 2-4, final paragraph before acknowledgments describing TESS Sector 35",
+      "use": "A century-scale archive join traces eclipse appearance changing while the binary persists.",
+      "limit": "The predicted long-term return of eclipses is a model forecast. It was not observed or reverified in this expedition."
+    },
+    {
+      "id": "E06",
+      "title": "DASCH DR7 Lightcurve Reduction Guide",
+      "url": "https://dasch.cfa.harvard.edu/dr7/reduce-lightcurve/",
+      "type": "Official data documentation",
+      "classification": "documented measurement limitations",
+      "inspected": "Introduction, Source Splitting, AFLAG rejections and Plate Series sections",
+      "use": "Existing reduction requirements, blends and time-clustered instrument-series artifacts.",
+      "limit": "The guide explicitly describes itself as under development. It does not certify any candidate."
+    },
+    {
+      "id": "E07",
+      "title": "DASCH DR7 Photometric Calibration ASDF File Contents",
+      "url": "https://dasch.cfa.harvard.edu/dr7/photcal-asdf-contents/",
+      "type": "Official data schema",
+      "classification": "documented available metadata",
+      "inspected": "solutions[solnum].reference_stars and defect_table",
+      "use": "Reference-star, local-correction and quality information for a proposed calibration audit.",
+      "limit": "No actual calibration metadata files were retrieved in this pass."
+    },
+    {
+      "id": "E08",
+      "title": "Accelerating Atomic Fine Structure Determination with Graph Reinforcement Learning",
+      "authors": "Ding, Darvariu, Ryabtsev, Hawes and Pickering",
+      "year": 2025,
+      "url": "https://arxiv.org/html/2509.16184v1",
+      "type": "Primary preprint",
+      "classification": "proposed computational method with retrospective evaluation",
+      "inspected": "Sections 2.2-2.3, equation 5, abstract performance context",
+      "use": "Level-difference graph, multi-line matching and accidental-candidate dependence on line density.",
+      "limit": "The proposed held-out-line benchmark in this expedition has not been run. No new atomic level is claimed."
+    },
+    {
+      "id": "E09",
+      "title": "Climate-Induced Decadal Ocean Wave Height Variability From Microseisms: 1931-2021",
+      "authors": "Peter D. Bromirski",
+      "year": 2023,
+      "url": "https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2023JC019722",
+      "type": "Primary observational/reconstruction paper",
+      "classification": "published empirical reconstruction under calibration assumptions",
+      "inspected": "Section 2 including archived seismograms and response adjustment, appendix A description",
+      "use": "Historical seismic records joined to modern buoy and instrument information.",
+      "limit": "Regional transfer model and sampling limitations. No new historical trend was estimated here."
+    },
+    {
+      "id": "E10",
+      "title": "Ocean wave sources of seismic noise",
+      "authors": "Ardhuin, Stutzmann, Schimmel and Mangeney",
+      "year": 2011,
+      "url": "https://doi.org/10.1029/2011JC006952",
+      "type": "Primary physical modeling paper",
+      "classification": "physical source model with empirical comparison",
+      "inspected": "Indexed abstract and source-class discussion excerpt",
+      "use": "Different source contributions can limit microseism amplitude as a storm-climate proxy.",
+      "limit": "Full model implementation was not reproduced."
+    },
+    {
+      "id": "E11",
+      "title": "An Evaluation of the Performance of the Twentieth Century Reanalysis Version 3",
+      "authors": "Slivinski and colleagues",
+      "year": 2021,
+      "url": "https://repository.library.noaa.gov/view/noaa/31016/noaa_31016_DS1.pdf",
+      "type": "Primary evaluation paper hosted by NOAA",
+      "classification": "published reconstruction evaluation",
+      "inspected": "Abstract and description of assimilated observations",
+      "use": "Pressure assimilation makes observation provenance necessary when claiming an independent reanalysis comparison.",
+      "limit": "No station-level ISPD membership was checked in this pass. The independence warning is our inference from the assimilation design."
+    },
+    {
+      "id": "E12",
+      "title": "Extracting distribution parameters from multiple uncertain observations with selection biases",
+      "authors": "Mandel, Farr and Gair",
+      "year": 2019,
+      "url": "https://arxiv.org/pdf/1809.02063",
+      "type": "Primary statistical-method paper",
+      "classification": "established conditional inference framework",
+      "inspected": "Introduction, problem statement and the derivation structure in sections 2-4",
+      "use": "Selection enters the normalization for population inference, not merely a weight on reported events.",
+      "limit": "Does not supply a selection function for the repository's rejected TESS candidates."
+    },
+    {
+      "id": "E13",
+      "title": "Probabilistic Cross-Identification of Astronomical Sources",
+      "authors": "Budavari and Szalay",
+      "year": 2008,
+      "url": "https://arxiv.org/abs/0707.1611",
+      "type": "Primary cross-identification paper",
+      "classification": "conditional probabilistic method",
+      "inspected": "Primary abstract and introduction excerpt",
+      "use": "A join between catalogues is itself an uncertain inference.",
+      "limit": "No actual cross-match was performed."
+    },
+    {
+      "id": "E14",
+      "title": "Cross-Identification of Stars with Unknown Proper Motions",
+      "authors": "Kerekes, Budavari, Csabai, Connolly and Szalay",
+      "year": 2010,
+      "url": "https://arxiv.org/abs/1006.2096",
+      "type": "Primary cross-identification paper",
+      "classification": "conditional probabilistic method with demonstration",
+      "inspected": "Primary abstract",
+      "use": "Motion between epochs affects source associations.",
+      "limit": "Used for this narrow methodological statement only."
+    },
+    {
+      "id": "E15",
+      "title": "ASASSN-21co: A detached eclipsing binary with an 11.9 year period",
+      "authors": "Rowan and colleagues",
+      "year": 2021,
+      "url": "https://arxiv.org/abs/2107.00662",
+      "type": "Primary observational paper",
+      "classification": "published observational result and conditional binary model",
+      "inspected": "Primary abstract",
+      "use": "Distinguishes the prior published modern-data interpretation from Foundation0's later archival claims.",
+      "limit": "Does not independently confirm the repository's 1902/1985 plate claims or refined prediction."
+    }
+  ],
+  "repository_sources": [
+    {
+      "path": "https://github.com/Foundation-0/astr0/blob/607a11eaa83b2ec7539e0986046c3230406d2b04/README.md",
+      "lines": "19-23, 36-49",
+      "classification": "repository claims and project policy, not independent observational confirmation"
+    },
+    {
+      "path": "https://github.com/Foundation-0/astr0/blob/607a11eaa83b2ec7539e0986046c3230406d2b04/AREAS.md",
+      "lines": "17-35, 56-77, 79-87",
+      "classification": "project leads and hypotheses"
+    },
+    {
+      "path": "https://github.com/Foundation-0/physics0/blob/76410c3deebf925f6c51017867dbcef29ff54e8b/README.md",
+      "lines": "project table and verification rules",
+      "classification": "project leads and claims"
+    },
+    {
+      "path": "https://github.com/Foundation-0/physics0/blob/76410c3deebf925f6c51017867dbcef29ff54e8b/AREAS.md",
+      "lines": "107-169",
+      "classification": "project leads, not evidence that the proposed archive searches are novel or successful"
+    }
+  ],
+  "own_results": [
+    {
+      "id": "P01",
+      "classification": "synthetic analytical calculation and seeded simulation",
+      "file": "../probes/evidence/evidence_join.py",
+      "function": "gaussian_probe",
+      "claim": "The specified nuisance control reduces posterior variance by 25.7519-fold; exact copies add no information; common-bias readouts do not remove the ambiguity.",
+      "limit": "Known Gaussian measurement equations and priors. No nonlinear ICA training and no observational fit."
+    },
+    {
+      "id": "P02",
+      "classification": "synthetic alias and completeness calculation",
+      "file": "../probes/evidence/evidence_join.py",
+      "function": "alias_probe",
+      "claim": "An exposure where alternatives disagree adds information conditional on detection completeness.",
+      "limit": "Invented times, discrete uniform prior, fixed eclipse, perfect event timing and no false alarms."
+    },
+    {
+      "id": "P03",
+      "classification": "algebraic counterexample",
+      "file": "../probes/evidence/evidence_join.py",
+      "function": "line_graph_probe",
+      "claim": "Difference-cycle closure detects the constructed inconsistent line but survives a common multiplicative calibration error.",
+      "limit": "Four-level arithmetic example, not an identified atom or complete transition model."
+    },
+    {
+      "id": "I01",
+      "classification": "untested research proposals",
+      "claim": "Exposure ranking, one-candidate control audit, HS Hya benchmark, withheld-line recovery and short seismic calibration experiment.",
+      "limit": "No empirical performance, novelty or discovery claim. Existing literature must be rechecked before project expansion."
+    }
+  ],
+  "retrieval_notes": [
+    "ESA Gaia release page returned HTTP 451. Its planned date was not used as a scientific premise or repeated in the report.",
+    "Historical PDF-only arXiv sources were read through PDFs after guessed HTML versions returned 404.",
+    "No raw plates, TESS light curves, seismic waveforms or atomic spectra were acquired in this pass.",
+    "The repository source paths were read only. Written files are confined to the assigned report, ledger and evidence probe directory."
+  ],
+  "publication_note": "Historical research snapshot prepared on 2026-11-12. Repository claims refer to the recorded studied revisions, not current main. Original research used gpt-6-astra with requested ultra reasoning; publication preparation used gpt-6.1-sol."
+}

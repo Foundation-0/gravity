@@ -16,7 +16,7 @@ None of the numerical suites in this repository are parameter-free. Every script
 7. **Wave 9 (`wave9_scale_convergence_audit.py`)**: Fixes `a_0 = 1.20e-10 m/s^2` (Lelli et al. 2017), Planck 2018 `Omega_c / Omega_b = 5.3895`, and Chandra `R_2500` core baryon fraction `f_b,2500 = 0.105` (Vikhlinin et al. 2006) externally, and fits `k = 1` virial Jeans dispersion `sigma_J` (`180-190 km/s`) across the 126-system Wave-7 catalog while stating the covariant UV/linear-`P(k)` origin of `sigma_J` as an open `CONJECTURE`.
 8. **Wave 10 (`wave10_covariant_jeans_unification.py`)**: Replaces the `k = 1` fitted `sigma_J` of Wave 9 with the zero-free-parameter (`k = 0`) Planck-2018 spherical-collapse velocity dispersion `sigma_*(z=0) = 185.59 km/s` (`sigma_lin(R_*, z) = 1.686` evaluated via Eisenstein & Hu 1998 transfer functions), while explicitly flagging the post-caustic Eulerian fluid closure of AeST as an open 3+1D PDE `CONJECTURE`.
 9. **Wave 11 (`wave11_machian_pairing_unification.py`)**: Adopts illustrative DESI thawing CPL inputs (`w_0 = -0.75, w_a = -0.85`), spatial curvature benchmarks (`Omega_k = -0.001, -0.004, -0.010`), and dimensionless Mexican-hat offset `eps = 10^-6` (`Lambda_DE / K_2 = 2.0`), separating exact polynomial/Friedmann identities from open Machian and CPT-cogenesis `CONJECTURES`.
-10. **Wave 12 (`wave12_cosmic_dawn_quasar_collapse.py`)**: Uses published `J1602+4228AB` observables from Onorato et al. (2026, ApJL 1011, L59, arXiv:2609.31835), Planck 2018 flat `LCDM + Omega_r` background integrals, benchmark feeder-cloud parameters (`M_b = 5e10 M_sun` at `30 pkpc`, enclosed `1.5e11 M_sun` within `5.56 pkpc`), and Abramowicz et al. (1988) logarithmic slim-disk photon-trapping benchmarks (`mdot = 1..5`), noting the `~2x` virial mass systematic and pending foreground-lens model.
+10. **Wave 12 (`wave12_cosmic_dawn_quasar_collapse.py`)**: Uses published `J1602+4228AB` observables from Onorato et al. (2026, ApJL 1011, L59, arXiv:2609.31835), Planck 2018 flat `LCDM + Omega_r` background integrals, fixed point-mass test parameters (`M_b = 5e10 M_sun` at `30 pkpc`, enclosed `1.5e11 M_sun` within `5.56 pkpc`), and Abramowicz et al. (1988) logarithmic slim-disk photon-trapping benchmarks (`mdot = 1..5`), noting the `~2x` virial mass systematic and pending foreground-lens model.
 
 ## Methodological Notes (`M-01` through `M-10`)
 
@@ -28,8 +28,17 @@ None of the numerical suites in this repository are parameter-free. Every script
 - **M-06 (Virial `sigma^4` Orthogonal-Distance Regression)**: Accounts for correlated `delta log10 R_MOND = +alpha * delta log10 sigma` measurement noise (`alpha = 4` in virial group estimators, `alpha = 2` in isothermal X-ray HSE, `alpha = 0` in weak lensing) via 2D Mahalanobis errors-in-variables quadrature in `wave7_group_cluster_threshold_audit.py`.
 - **M-07 (Two-Branch Acceleration Crossover & BIC Parsimony Audit)**: Tests whether apparent multi-scale anomalies (`1 Mpc` galaxy weak lensing vs. `250 kpc` cluster cores, and CLASH vs. X-COP `g_ddag` shifts) arise from summing two established branches at fixed cosmic abundance before introducing extra free shape parameters, penalizing fitted parameters via `BIC = chi^2 + k ln N`.
 - **M-08 (Cross-Epoch Cosmological Consistency & Ancillary Fluid Mapping)**: Tests candidate halo Jeans mechanisms simultaneously at `z = 1100` (CMB), `z = 3` (Lyman-alpha forest), and `z = 0` (dwarfs, `L*` spirals, groups, clusters), and maps non-radiative scalar-condensate caustics onto established WHIM / intracluster entropy-floor hydrodynamics (`Cen & Ostriker 1999`; `Voit, Kay & Bryan 2005`).
-- **M-09 (Symmetry-Protected Remnant vs. Thermal Equipartition Audit)**: Translates qualitative cosmological creation/pair-production hypotheses into explicit Noether-current conservation laws (`nabla_mu J^mu = 0` under `phi -> phi + const`), verifying `J^0(-Q) = -J^0(Q)` and `rho(-Q) = +rho(Q) > 0` while rejecting naive thermal degree-of-freedom equipartition that would violate BBN `Delta N_eff`.
-- **M-10 (Breaking-Observation Triage: Fundamental-Law Violation vs. Sub-Grid / Cosmological-Assembly Tension)**: Separates newly announced observational anomalies into (i) conventional radiative/geometric resolutions (slim-disk photon advection, virial mass systematics, foreground lensing), (ii) cosmological assembly / seed-timing tensions (`LambdaCDM` Gaussian peak rarity and Salpeter duty cycles), and (iii) zero-adjustment predictions of existing repo equations (`sigma_*(z)` and `a_0(z)` evaluated at the discovery redshift).
+- **M-09 (Current and Origin Limits)**: Checks the selected polynomial's opposite charges and equal positive dust densities on the supercritical branches `abs(u)>1`. Source-free homogeneous evolution conserves `a^3 P_Q`, so selecting charged branches does not produce them from zero current.
+
+  Negative kinetic curvature at the symmetric origin and a kinetic degeneracy obstruct the minimal proposed transition. Full mixing stability is unresolved.
+
+  Constant shift symmetry allows derivative portals. No annihilation rate or relic abundance is calculated. The baryon-to-photon ratio is not an initial annihilated-pair fraction. Thermal mode counting does not establish the abundance either.
+
+- **M-10 (Conditional Observation Benchmarks)**: Separates uncertain observed inputs from model-dependent growth, halo and binary clocks. Efficiency 0.10 is a benchmark, not the Schwarzschild value. Pure H and primordial H/He opacity give different clocks. The fixed Schwarzschild counterexamples are reported separately.
+
+  Radial infall integrates the complete force around a fixed point mass. Modified-force times are 200.08, 121.72 and 127.16 Myr. The assigned slim-disk luminosity subtracts radiated energy from the inflow, yielding 273.78 and 161.23 Myr at mdot three and five. No filament evolution, seed formation, capture, friction or merger hardening is established.
+
+  The curved CPL models use `Omega_DE=1-Omega_m-Omega_k`. Their future onset and turnaround are conditional on an unmeasured continuation. No observed future recollapse or origin mechanism follows.
 
 ## Canonical JSON Payload Checksums (`sha256_canonical`)
 
@@ -44,7 +53,7 @@ None of the numerical suites in this repository are parameter-free. Every script
 | `results/wave7_group_cluster_certificates.json` | `wave7_group_cluster_threshold_audit.py` | `4db35ebcfb7b3cfc6b825e0e62c549435fa7ebdf9e31339e2bbb70482fcc08a9` |
 | `results/wave9_scale_convergence_certificates.json` | `wave9_scale_convergence_audit.py` | `d9d19847bb7f9abdc294e58988259d8d20da7593ddce05184d1df81825a33a55` |
 | `results/wave10_covariant_jeans_certificates.json` | `wave10_covariant_jeans_unification.py` | `7dd4b40172b8fe261c3028f7a6af6e2b5131fb93cd83d10c439e3c5f0c5be3d4` |
-| `results/wave11_machian_pairing_certificates.json` | `wave11_machian_pairing_unification.py` | `9a79b9e2184fcc70cb0e6b250615b57c7492af36d0a605f563bafa0ea87942f5` |
-| `results/wave12_cosmic_dawn_quasar_certificates.json` | `wave12_cosmic_dawn_quasar_collapse.py` | `f46cc3be82489f450d1a3ce8c583fad15970050f938bd4c8b5510fe704ba48b6` |
+| `results/wave11_machian_pairing_certificates.json` | `wave11_machian_pairing_unification.py` | `4786fa9822b8b99edfd2c11ac922ca589065403e4881f5bf72d415481644692b` |
+| `results/wave12_cosmic_dawn_quasar_certificates.json` | `wave12_cosmic_dawn_quasar_collapse.py` | `40a770d70d19ec3a9d7e9e5e770d0454d94595f7e7abb75e92efa351672354c9` |
 
 Raw file digests (for `sha256sum -c SHA256SUMS`) are stored in root `SHA256SUMS`.

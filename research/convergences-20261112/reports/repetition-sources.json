@@ -1,0 +1,387 @@
+{
+  "route": "repetition_and_common_rules",
+  "prepared_on": "2026-11-12",
+  "author_seat": "gpt-forge",
+  "requested_model": "gpt-6-astra",
+  "requested_reasoning": "ultra",
+  "scope": "Exploratory literature synthesis and a local exact graph/geometry probe. No new fundamental theory or physical detection is claimed.",
+  "sources": [
+    {
+      "id": "R01",
+      "title": "Probing Ultralight Bosons with Binary Black Holes",
+      "authors": [
+        "Daniel Baumann",
+        "Horng Sheng Chia",
+        "Rafael A. Porto"
+      ],
+      "url": "https://arxiv.org/html/1804.03208v2",
+      "locator": "Section 2.2, equations 2.3-2.13; Section 3 on binary-induced transitions",
+      "access": "Primary author manuscript; relevant equations and surrounding discussion read",
+      "status": "conditional_model",
+      "supports": "Small-alpha gravitational scalar bound states reduce to a Coulomb Schrodinger problem; higher-order splitting and horizon growth/decay break exact hydrogen equivalence.",
+      "limits": "Does not establish existence of ultralight bosons or observation of an astrophysical cloud. Equating the leading differential equation does not equate quantum statistics or boundary conditions."
+    },
+    {
+      "id": "R02",
+      "title": "Schrodinger Evolution of Self-Gravitating Disks",
+      "authors": [
+        "Konstantin Batygin"
+      ],
+      "url": "https://arxiv.org/html/1803.01258v1",
+      "locator": "Section 2, equations 1-7; Section 3.2 and its local-coupling assumptions",
+      "access": "Primary author manuscript; Hamiltonian-to-complex-amplitude derivation and applicability discussion read",
+      "status": "established_result_with_model_assumptions",
+      "supports": "Conservative classical inclination dynamics of thin quasi-Keplerian disks admit Schrodinger-form evolution under the specified approximations.",
+      "limits": "The complex amplitude denotes classical inclination and phase. No quantum measurement postulate for stellar orbits follows. Applies to small inclinations and nearly Keplerian disks, not arbitrary galaxy halos."
+    },
+    {
+      "id": "R03",
+      "title": "Eigenstates of Quasi-Keplerian Self-Gravitating Particle Discs",
+      "authors": [
+        "Walker Melton",
+        "Konstantin Batygin"
+      ],
+      "url": "https://arxiv.org/html/2102.02312v1",
+      "locator": "Sections 2-4; Tables 3-4; discussion of conserved inner product and imaginary-time evolution",
+      "access": "Primary author manuscript; abstract, mode comparisons and discussion read",
+      "status": "established_result_with_model_assumptions",
+      "supports": "The nonlocal classical coupling problem has a conserved inner product. Local approximations can fit mode shapes while failing on frequencies.",
+      "limits": "A correspondence in linear dynamics is weaker than physical equivalence of the systems; accuracy deteriorates with disk width and shorter wavelengths."
+    },
+    {
+      "id": "R04",
+      "title": "Ultralight scalars as cosmological dark matter",
+      "authors": [
+        "Lam Hui",
+        "Jeremiah P. Ostriker",
+        "Scott Tremaine",
+        "Edward Witten"
+      ],
+      "url": "https://arxiv.org/html/1610.08297v2",
+      "locator": "Section III.2, equation 29 and its footnote; Appendix B",
+      "access": "Primary author manuscript; equation 29 and its qualification read",
+      "status": "conditional_model",
+      "supports": "For the spherical time-independent Schrodinger-Poisson system, the half-mass radius bound has coefficient 3.925 and is saturated by the minimum-energy soliton.",
+      "limits": "The gravitating mass is the cloud itself. The inverse-mass radius relation does not imply a hydrogen spectrum or confirm fuzzy dark matter. The full real scalar field lacks exact particle-number conservation."
+    },
+    {
+      "id": "R05",
+      "title": "Critical Exponents in 3.99 Dimensions",
+      "authors": [
+        "Kenneth G. Wilson",
+        "Michael E. Fisher"
+      ],
+      "url": "https://doi.org/10.1103/PhysRevLett.28.240",
+      "locator": "Publisher abstract: first-order epsilon expansion for Ising and XY susceptibility exponents",
+      "access": "Primary publisher abstract read; full article was subscription restricted",
+      "status": "established_result_with_model_assumptions",
+      "supports": "Renormalization-group analysis predicts differing critical exponents for different order-parameter symmetries near four dimensions.",
+      "limits": "The source's displayed calculation is perturbative in small epsilon. The report does not treat a first-order extrapolation to three dimensions as a precision prediction."
+    },
+    {
+      "id": "R06",
+      "title": "Precision Islands in the Ising and O(N) Models",
+      "authors": [
+        "Filip Kos",
+        "David Poland",
+        "David Simmons-Duffin",
+        "Alessandro Vichi"
+      ],
+      "url": "https://arxiv.org/abs/1603.04436",
+      "locator": "Abstract and stated 3D Ising/O(2)/O(3) scaling-data scope",
+      "access": "Primary author abstract read",
+      "status": "established_numerical_result_under_bootstrap_assumptions",
+      "supports": "Several distinct scaling dimensions and operator-product coefficients characterize a critical model beyond one matched exponent.",
+      "limits": "No new bootstrap calculation was performed here; applicability of a lattice model to a universality class still requires its assumptions."
+    },
+    {
+      "id": "R07",
+      "title": "Dissipation of Energy in the Locally Isotropic Turbulence",
+      "authors": [
+        "A. N. Kolmogorov"
+      ],
+      "url": "https://rainbow.ldeo.columbia.edu/~alexeyk/Papers/Kolmogorov1941b.pdf",
+      "doi": "10.1098/rspa.1991.0076",
+      "locator": "1991 English translation of 1941 paper, equations 5-7 and discussion of local isotropy and separation from the integral scale",
+      "access": "Primary paper in university-hosted scan; relevant derivation read",
+      "status": "established_result_with_assumptions",
+      "supports": "The signed longitudinal third-order increment relation is constrained by energy balance in the appropriate isotropic inertial-range limit.",
+      "limits": "Stationarity/local-stationarity, homogeneity, isotropy and scale separation matter. It does not fix all higher moments or imply exact self-similarity of probability distributions."
+    },
+    {
+      "id": "R08",
+      "title": "An Optimal Shell Model of Turbulence (published as Improved shell model of turbulence)",
+      "authors": [
+        "Victor S. L'vov",
+        "Evgenii Podivilov",
+        "Anna Pomyalov",
+        "Itamar Procaccia",
+        "Denis Vandembroucq"
+      ],
+      "url": "https://arxiv.org/html/chao-dyn/9803025v2",
+      "doi": "10.1103/PhysRevE.58.1811",
+      "locator": "Equation 16; structure functions and invariant-dependent oscillatory term",
+      "access": "Primary author manuscript; equation 16 and surrounding definitions read",
+      "status": "conditional_model",
+      "supports": "The Sabra shell model has a model-specific third-order relation determined by two invariant fluxes.",
+      "limits": "Agreement with this exact identity tests the model calculation. The shell model omits spatial geometry and is not a validated model of every turbulent medium."
+    },
+    {
+      "id": "R09",
+      "title": "Observation of Universality in Decaying Turbulence (author manuscript; published as Universal velocity statistics in decaying turbulence)",
+      "authors": [
+        "Christian Kuchler",
+        "Gregory P. Bewley",
+        "Eberhard Bodenschatz"
+      ],
+      "url": "https://arxiv.org/html/2106.01795v2",
+      "doi": "10.1103/PhysRevLett.131.024001",
+      "locator": "Abstract; Figure 1; equation 5; concluding discussion",
+      "access": "Primary author manuscript read for full-function collapse versus power-law behavior",
+      "status": "established_experimental_result_with_interpretation",
+      "supports": "The reported high-Reynolds-number decaying-flow statistics approach a scale-dependent common form without a clean pure power law over the measured range.",
+      "limits": "The report confines the result to the described flow class and measurements. It does not establish the same universal function across all turbulence."
+    },
+    {
+      "id": "R10",
+      "title": "Periodic tilings and auxetic deployments",
+      "authors": [
+        "Ciprian S. Borcea",
+        "Ileana Streinu"
+      ],
+      "url": "https://doi.org/10.1177/1081286520948116",
+      "full_text_url": "https://par.nsf.gov/servlets/purl/10230398",
+      "metadata_url": "https://scholarworks.smith.edu/csc_facpubs/261/",
+      "locator": "Section 7, manuscript pages 15-16; Figure 12",
+      "access": "Publisher metadata read; full author manuscript retrieved from NSF and Section 7 extracted locally. Smith download returned 403, web NSF fetch returned 502, direct curl to the public NSF URL succeeded.",
+      "status": "established_mathematical_result_and_framework_prior_art",
+      "supports": "Bridged cross-polytope framework family exists in arbitrary dimension; 3D example uses octahedra and describes folding with a specified bar-to-edge ratio.",
+      "limits": "Does not establish the local repository's specific equal-bar non-overlapping fcc curve, physical stability, or material phase transition."
+    },
+    {
+      "id": "R11",
+      "title": "A remarkable periodic solution of the three-body problem in the case of equal masses",
+      "authors": [
+        "Alain Chenciner",
+        "Richard Montgomery"
+      ],
+      "url": "https://arxiv.org/abs/math/0011268",
+      "locator": "Author abstract and published-version metadata, Annals of Mathematics 152 (2000), 881-901",
+      "access": "Primary author abstract read; not a re-verification of its variational proof",
+      "status": "established_mathematical_result",
+      "supports": "Existence of an equal-mass Newtonian figure-eight choreography with rich symmetry.",
+      "limits": "Existence is separate from a catalogue count, robustness to arbitrary perturbations, or astrophysical occurrence."
+    },
+    {
+      "id": "R12",
+      "title": "Computer assisted proofs for non-symmetric planar choreographies and for stability of the Eight",
+      "authors": [
+        "Tomasz Kapela",
+        "Carles Simo"
+      ],
+      "url": "https://ww2.ii.uj.edu.pl/~kapela/papers/nosym.pdf",
+      "doi": "10.1088/0951-7715/20/5/010",
+      "locator": "Abstract; Introduction equations 1.1-1.3 and symmetry-reduction discussion",
+      "access": "Primary author PDF read for proof formulation and scope",
+      "status": "established_computer_assisted_mathematical_result",
+      "supports": "Choreographies are fixed points of evolution plus permutation; translation, rotation, rescaling and phase symmetries must be reduced for isolated-root certification. Planar linear stability is a distinct checked property.",
+      "limits": "No existing orbit certificate was rerun in this research pass. The report's Newtonian scaling relation is an elementary derivation from the equations."
+    },
+    {
+      "id": "R13",
+      "title": "Understanding critical collapse of a scalar field",
+      "authors": [
+        "Carsten Gundlach"
+      ],
+      "url": "https://arxiv.org/html/gr-qc/9604019v1",
+      "locator": "Abstract; Sections II and IV; Table 2 convergence and perturbation spectrum",
+      "access": "Primary author manuscript; echoing, growing-mode and mass-scaling claims read",
+      "status": "established_numerical_theory_result_in_specified_classical_model",
+      "supports": "A discretely self-similar spherical massless-scalar critical solution has echoing period about 3.4453 and one growing perturbation mode, leading to mass exponent about 0.374 and a log-periodic correction.",
+      "limits": "Numerical classical gravity result, not an observed astrophysical echo. It is not automatically a model of halo formation, realistic stellar collapse, or quantum gravity."
+    },
+    {
+      "id": "R14",
+      "title": "Observation of the Second Triatomic Resonance in Efimov's Scenario",
+      "authors": [
+        "Bo Huang",
+        "Leonid A. Sidorenkov",
+        "Rudolf Grimm",
+        "Jeremy M. Hutson"
+      ],
+      "url": "https://doi.org/10.1103/PhysRevLett.112.190401",
+      "locator": "Publisher abstract: measured scaling factor 21.0(1.3), ideal identical-boson value 22.7",
+      "access": "Primary publisher abstract read; full article was subscription restricted",
+      "status": "established_experimental_result",
+      "supports": "Two cesium triatomic resonances with a finite-temperature analysis support discrete Efimov scaling.",
+      "limits": "Measurement is through recombination resonances and model analysis; it does not directly image an infinite tower of states."
+    },
+    {
+      "id": "R15",
+      "title": "Geometric scaling of Efimov states in a 6Li-133Cs mixture",
+      "authors": [
+        "Shih-Kuang Tung",
+        "Karina Jimenez-Garcia",
+        "Jacob Johansen",
+        "Colin V. Parker",
+        "Cheng Chin"
+      ],
+      "url": "https://arxiv.org/abs/1402.5943",
+      "locator": "Primary author abstract; three successive resonances and measured ratio 4.9(4) versus 4.88 prediction",
+      "access": "Primary author abstract read",
+      "status": "established_experimental_result",
+      "supports": "A changed constituent mass ratio changes the predicted and observed discrete scaling factor, supplying a control-response test.",
+      "limits": "Resonant cold-atom few-body regime. No common microscopic mechanism with gravitational collapse is inferred."
+    },
+    {
+      "id": "R16",
+      "title": "Nonlinear Measures for Characterizing Rough Surface Morphologies",
+      "authors": [
+        "Jan Kondev",
+        "Christopher L. Henley",
+        "David G. Salinas"
+      ],
+      "url": "https://arxiv.org/html/cond-mat/9907229v1",
+      "locator": "Sections IV.2-IV.3, equations 37-38; distinction between loops and level sets",
+      "access": "Primary author manuscript; derivation scope and explicit conjecture read",
+      "status": "mixed_established_relations_and_explicit_conjecture",
+      "supports": "Individual contour-loop geometry differs from the whole level set. The general loop-dimension formula uses a conjectured loop-correlation exponent, exact in stated endpoint cases.",
+      "limits": "Gaussian/self-affine surface assumptions and observable definitions matter. Numerical agreement of cloud-outline dimensions is not enough to infer a shared mechanism."
+    }
+  ],
+  "repository_snapshots": [
+    {
+      "name": "Foundation-0/fractals",
+      "commit": "9669f5579635c3543f145e8eca86133069ad6f27",
+      "local_root": "https://github.com/Foundation-0/fractals/tree/9669f5579635c3543f145e8eca86133069ad6f27",
+      "paths": [
+        "README.md",
+        "gravitational-atom/atom.js",
+        "critical/README.md",
+        "critical/model.js",
+        "turbulence/README.md"
+      ],
+      "role": "Existing explorations and implementation pointers; primary papers were checked separately for claims used here",
+      "working_tree": "Read-only; clean status observed"
+    },
+    {
+      "name": "Foundation-0/physics0",
+      "commit": "76410c3deebf925f6c51017867dbcef29ff54e8b",
+      "local_root": "https://github.com/Foundation-0/physics0/tree/76410c3deebf925f6c51017867dbcef29ff54e8b",
+      "paths": [
+        "README.md",
+        "AREAS.md"
+      ],
+      "role": "Lattice statistical-physics proposal and orbit-certification proposal",
+      "working_tree": "Read-only; clean status observed"
+    },
+    {
+      "name": "Foundation-0/gravity",
+      "commit": "d8c7544e89388720fc1c13de816ddb7dd03d2096",
+      "local_root": "https://github.com/Foundation-0/gravity/tree/d8c7544e89388720fc1c13de816ddb7dd03d2096",
+      "paths": [
+        "README.md",
+        "CLAIMS.md",
+        "RESEARCH_NOTEBOOK_AND_REASONING.md"
+      ],
+      "role": "C-03 soliton and C-17 disk-wave limits; no empirical gravity fit audited in this route",
+      "working_tree": "Read-only"
+    },
+    {
+      "name": "Foundation-0/astr0",
+      "commit": "607a11eaa83b2ec7539e0986046c3230406d2b04",
+      "local_root": "https://github.com/Foundation-0/astr0/tree/607a11eaa83b2ec7539e0986046c3230406d2b04",
+      "paths": [
+        "README.md",
+        "AREAS.md"
+      ],
+      "role": "Recurrent-eclipse and archive-observation pointers; individual astronomical discoveries not independently validated here",
+      "working_tree": "Read-only"
+    },
+    {
+      "name": "aska-digital/incentre-lattice",
+      "commit": "db3b51d0f31e04ea3c0ffafb553f70fcdfc617ec",
+      "local_root": "https://github.com/aska-digital/incentre-lattice/tree/abeb94b0aa5f7c59b14dab139aa380d2ce5d81e2",
+      "paths": [
+        "README.md",
+        "results/fold-continuous-fcc/PROOF.md",
+        "results/fold-continuous-fcc/curve.py",
+        "fold-continuous.js",
+        "papers/source/refs.bib"
+      ],
+      "role": "Existing curve and distant-image bound underlying the local contact-graph corollary",
+      "working_tree": "Read-only; clean status observed",
+      "limits": "Repository describes its curve as internally reviewed mathematical work awaiting independent specialist review. This expedition does not establish historical novelty or physical realization."
+    }
+  ],
+  "own_inferences_and_probes": [
+    {
+      "id": "P01",
+      "claim": "The cab-to-fcc curve preserves its degree-5 contact graph throughout 0<s<1, then has degree-12 contacts at s=1.",
+      "status": "exact_conditional_mathematical_corollary_with_reproducible_probe",
+      "artifact": "probes/repetition/graph_vs_geometry.py",
+      "results": "probes/repetition/graph-results.json",
+      "method": "Exact integer-pair Bernstein coefficients prove strict positive separation for 6120 directed nonbar polynomials, and identify 30 directed bar identities. The analytic distant-image bound is inherited from the source proof. Endpoint contacts are counted with integers.",
+      "limits": "This reuses an existing unreviewed curve and its analytic bound. It is not a physical transition prediction or a new universal principle."
+    },
+    {
+      "id": "P02",
+      "claim": "Fixed-J scalar Ising and fixed-p percolation on corresponding original bar graphs remain invariant under the geometric fold.",
+      "status": "conditional_identity",
+      "derivation": "The Hamiltonian or bond/site probability measure has no geometric parameter when graph, couplings and graph boundary conditions are fixed.",
+      "limits": "This invariance is built into the model. Physical distance correlations, scattering, geometry-selected boundaries, vector elasticity and microscopic couplings can change."
+    },
+    {
+      "id": "P03",
+      "claim": "The bar and all-fcc-contact Ising models differ in high-temperature coefficients and ground-state energy.",
+      "status": "exact_model_calculation",
+      "derivation": "Even-subgraph expansion gives logZ/N = log2 + z K^2/4 + triangles_per_site K^3 + O(K^4). Counts yield (1.25,4/3) for original bars and (3,8) for full contacts. Ground energies are -2.5J and -6J per site.",
+      "limits": "Infinite simple-graph limit or sufficiently large periodic supercells; no small-torus edge identifications. Ferromagnetic uniform J, zero field. No Tc calculated."
+    },
+    {
+      "id": "P04",
+      "claim": "Classical disk waves, gravitational atoms and self-gravitating solitons share useful mathematical forms without sharing all observables or mechanisms.",
+      "status": "synthesis_of_primary_results",
+      "sources": [
+        "R01",
+        "R02",
+        "R03",
+        "R04"
+      ],
+      "limits": "A useful mapping must specify operators, domains, boundary conditions, state interpretation, conserved norm and measured observables."
+    },
+    {
+      "id": "P05",
+      "claim": "Discrete scale repetition and its response to an independent control are a promising bridge between few-body physics and critical dynamics.",
+      "status": "method_level_inference",
+      "sources": [
+        "R13",
+        "R14",
+        "R15"
+      ],
+      "limits": "Different physical equations and scales. No unified mechanism or matched numerical constant is proposed."
+    }
+  ],
+  "verification": {
+    "probe_command": "python3 explorations/convergences-20261112/probes/repetition/graph_vs_geometry.py",
+    "probe_exit_code": 0,
+    "runtime": "Python 3.14.6, standard library only",
+    "checks": [
+      "Exact graph degree remains 5 at all declared geometric states",
+      "Exact nonbar separation throughout open parameter interval, conditional on analytic infinite-image bound",
+      "Integer endpoint coordinates give 12 contacts per site",
+      "Direct neighbor-pair enumeration gives 8 versus 48 triangles per six-site cell",
+      "Sampled bar squared-length error stays below 1e-12",
+      "Repository nextOrder(2,1,1,alpha,0.9) gives -0.010025 at alpha=0.1 and -0.079425 at alpha=0.3",
+      "Exact near-cancelling integer-pair signs verified against Pell pairs",
+      "A curve mutation that changes a bridge length is rejected"
+    ],
+    "limits": "No raw astronomical-data fit, new physical measurement, finite-size Monte Carlo campaign, full orbit certification or new collapse evolution was performed.",
+    "artifact_sha256": {
+      "probes/repetition/graph_vs_geometry.py": "25fa573c327f74d2b1f7a3836f252c40eacf2d55891835c20407da4f90e6c1d4",
+      "probes/repetition/graph-results.json": "627c78a301753f72136699d92207b19d2fbbc88416280089926c7433f4e250fb",
+      "probes/repetition/borcea-streinu-2021.pdf": "2a5e74fbd395fb62875d68e096ee01a990ffda18bece742b627f2f71a78cf03e"
+    }
+  },
+  "publication_note": "Historical research snapshot prepared on 2026-11-12. Repository claims refer to the recorded studied revisions, not current main. Original research used gpt-6-astra with requested ultra reasoning; publication preparation used gpt-6.1-sol."
+}

@@ -1,0 +1,56 @@
+{
+  "checked_source_sha256": {
+    "response.py": "e28c8f4ada1e41924e6317f8932de4d065307516cd57c5ff83a0cf23b72397ef",
+    "derivation.md": "5700296d3d35b09b6101f8695dd57abfc86863a3287f9f050beb2828513a93fe"
+  },
+  "action_source": "https://arxiv.org/html/2307.15126v3",
+  "method": "Independent scalar ADM expansion in spatially flat gauge, retaining shift; eliminate constraints; derive Euler-Lagrange equations; integrate and reconstruct Newtonian observables.",
+  "shift_constraint": "2*H*lapse - Kp*v",
+  "kinetic_hessian": "Matrix([[8*a**3, 0], [0, 2*a*k**2]])",
+  "newtonian_extrinsic_curvature_check": "symbolically exact",
+  "comparisons": [
+    {
+      "k": 6.0,
+      "max_normalized_discrepancy": 1.0541854424171802e-12,
+      "by_variable": {
+        "D": 6.763558083825588e-13,
+        "m": 2.712407946622633e-14,
+        "chi": 1.0541854424171802e-12,
+        "Z": 1.046959192585917e-12,
+        "Phi": 7.561051184194088e-15,
+        "pressure": 2.291621169016908e-13,
+        "v_Newtonian": 9.140014896465935e-13,
+        "alpha_Newtonian": 4.759001674589083e-13
+      }
+    },
+    {
+      "k": 12.0,
+      "max_normalized_discrepancy": 7.366407314254235e-13,
+      "by_variable": {
+        "D": 5.210311416798015e-13,
+        "m": 1.8491622593622934e-14,
+        "chi": 7.366407314254235e-13,
+        "Z": 2.652834398906564e-13,
+        "Phi": 1.5154465809854313e-15,
+        "pressure": 1.9077431903432988e-13,
+        "v_Newtonian": 7.293350722553551e-13,
+        "alpha_Newtonian": 1.0072082010690686e-13
+      }
+    },
+    {
+      "k": 24.0,
+      "max_normalized_discrepancy": 4.1928130889087867e-13,
+      "by_variable": {
+        "D": 4.1928130889087867e-13,
+        "m": 9.177362101122704e-15,
+        "chi": 3.41665297653803e-13,
+        "Z": 8.484556979078915e-14,
+        "Phi": 3.771814346271095e-16,
+        "pressure": 2.760268616864951e-13,
+        "v_Newtonian": 3.3516034931668597e-13,
+        "alpha_Newtonian": 3.026131703569854e-14
+      }
+    }
+  ],
+  "review_scope": "Linear scalar action, two physical scalar modes, constraints and observable map. No global or nonlinear stability proof."
+}

@@ -1,0 +1,35 @@
+{
+  "source_commit": "70a1204a536b3dca0b3053d1a056daf22601ac00",
+  "files": [
+    {
+      "path": "wave12_cosmic_dawn_quasar_collapse.py",
+      "sha256": "d0eec3e85d06b501dbe0d0a0e8969baf9b3faaf308e84718ac40b9ac96fb2aaf",
+      "upstream_url": "https://github.com/Foundation-0/gravity/blob/70a1204a536b3dca0b3053d1a056daf22601ac00/wave12_cosmic_dawn_quasar_collapse.py"
+    },
+    {
+      "path": "wave11_machian_pairing_unification.py",
+      "sha256": "911fbd9f428728daf1fe02de998fec5b519292c7739e0bac13f111a1bea00306",
+      "upstream_url": "https://github.com/Foundation-0/gravity/blob/70a1204a536b3dca0b3053d1a056daf22601ac00/wave11_machian_pairing_unification.py"
+    },
+    {
+      "path": "formal/Wave12QuasarCollapse.lean",
+      "sha256": "643bb2ed80cc11f90b07296a83e16c841b60501b89b4045ea471d8eddb24d2c3",
+      "upstream_url": "https://github.com/Foundation-0/gravity/blob/70a1204a536b3dca0b3053d1a056daf22601ac00/formal/Wave12QuasarCollapse.lean"
+    },
+    {
+      "path": "formal/Wave11MachianZeroEnergy.lean",
+      "sha256": "781d83ac1bf12407f0a682b8abbe67a4ec101d78751ee0fa611c9a0f8a307573",
+      "upstream_url": "https://github.com/Foundation-0/gravity/blob/70a1204a536b3dca0b3053d1a056daf22601ac00/formal/Wave11MachianZeroEnergy.lean"
+    },
+    {
+      "path": "results/wave12_cosmic_dawn_quasar_certificates.json",
+      "sha256": "493be7e0c615633eb77398c668f2d06a04fe21dd7bc6739e9b68649f9901da78",
+      "upstream_url": "https://github.com/Foundation-0/gravity/blob/70a1204a536b3dca0b3053d1a056daf22601ac00/results/wave12_cosmic_dawn_quasar_certificates.json"
+    },
+    {
+      "path": "results/wave11_machian_pairing_certificates.json",
+      "sha256": "9d05bb78b81b45aeda49edf6cfb9f734d761968ec4d06111aa1064cbc73eb359",
+      "upstream_url": "https://github.com/Foundation-0/gravity/blob/70a1204a536b3dca0b3053d1a056daf22601ac00/results/wave11_machian_pairing_certificates.json"
+    }
+  ]
+}

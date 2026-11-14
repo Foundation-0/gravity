@@ -1,0 +1,110 @@
+{
+  "schema_version": 1,
+  "review_date": "2026-11-12",
+  "purpose": "Published-summary comparisons, not a new fit to galaxy observations",
+  "primary_source": {
+    "authors": "Ciocan et al.",
+    "year": 2026,
+    "title": "MUSE-DARK III: The evolution of the radial acceleration relation at intermediate redshifts",
+    "url": "https://arxiv.org/html/2604.22613v1",
+    "doi": "10.1051/0004-6361/202659230",
+    "html_sha256": "d6acffa4c1e5861652a85cc9b7ef5213aafa5be3f5ea6773e773d568d06bdb13",
+    "galaxies": 79,
+    "sample_redshift_limits": [0.33, 1.44],
+    "independence_group": "MUSE_MHUDF_79",
+    "observable": "RAR inferred from modelled disk and halo velocity components",
+    "selection": "Regular star-forming systems, stellar mass above 10^8.8 solar masses; radial points below 2 kpc excluded",
+    "limitations": [
+      "Several radial points per galaxy share fitted parameters.",
+      "Gas and stellar mass assumptions affect both acceleration axes.",
+      "Published global fits, four bins and alternative reconstructions overlap.",
+      "No numeric joint covariance or fitted-point posterior was recovered."
+    ]
+  },
+  "published_linear_curves": [
+    {
+      "id": "muse_dc14_eq4",
+      "label": "Published DC14 reconstruction",
+      "source_location": "Section 3.2, equations 3 and 4",
+      "formula": "a0(z) = intercept + slope*z",
+      "intercept_m_s2": 1e-10,
+      "slope_m_s2_per_redshift": 1.59e-10,
+      "intercept_reported_interval_halfwidth_m_s2": 4e-12,
+      "slope_reported_interval_halfwidth_m_s2_per_redshift": 1e-11,
+      "interval_level": 0.95,
+      "interval_note": "Eq4 gives symmetric slope 0.10; abstract/conclusion give +0.11/-0.10, in 1e-10 SI units.",
+      "covariance": null,
+      "statistical_use": "Central curve only; no reconstructed likelihood or confidence band",
+      "independence_group": "MUSE_MHUDF_79"
+    },
+    {
+      "id": "muse_mond_eq14",
+      "label": "Published MOND reconstruction",
+      "source_location": "Appendix E, equation 14",
+      "formula": "a0(z) = intercept + slope*z",
+      "intercept_m_s2": 1.03e-10,
+      "slope_m_s2_per_redshift": 1.20e-10,
+      "reported_intercept_error_m_s2": 5e-12,
+      "reported_slope_error_m_s2_per_redshift": 1e-11,
+      "interval_level": null,
+      "interval_note": "Appendix uses the main-text methodology; no separately verified coverage statement attached to Eq14. Errors unused.",
+      "covariance": null,
+      "statistical_use": "Same-sample reconstruction sensitivity, not independent replication",
+      "independence_group": "MUSE_MHUDF_79"
+    }
+  ],
+  "full_sample_constant_fit": {
+    "source_location": "Section 3.1, equation 2",
+    "a0_m_s2": 2.38e-10,
+    "upper_error_m_s2": 1.2e-11,
+    "lower_error_m_s2": 1e-11,
+    "interval_level": 0.95,
+    "effective_redshift": null,
+    "use": "Context only; the full 0.33<z<1.44 sample is not a point measurement at z=1"
+  },
+  "prior_h_tracking_comparison": {
+    "authors": "G. T. Alcock",
+    "url": "https://arxiv.org/abs/2609.38796",
+    "source_location": "Abstract inspected; full reanalysis not replicated",
+    "same_sample_as_primary": true,
+    "reported_error_assumption": "Plotted uncertainties interpreted as 1 sigma",
+    "use": "Prior work credit only; no reported significance reused",
+    "unresolved": "Primary Eq2/Eq4 state 95% coverage; Fig3 plotted-error coverage requires resolution before a bin likelihood"
+  },
+  "other_observations": [
+    {
+      "id": "ubler_2017_kmos3d",
+      "url": "https://arxiv.org/html/1703.04321",
+      "source_location": "Table 2; Section II.4; Appendix E Table 3",
+      "html_sha256": "2355f6fdf4ac419daae644882b791bc2566dc6c36583a0b183fbfcab1aa0e026",
+      "observable": "log10 Mbar = 3.75 log10(Vcirc/242 km s^-1) + b",
+      "velocity_definition": "Maximum circular speed, pressure corrected; not established asymptotic Vflat",
+      "gas_definition": "Molecular-gas scaling estimate, without HI",
+      "rows": [
+        {"sample": "all", "n": 135, "b": 10.75, "error_dex": 0.03},
+        {"sample": "z about 0.9", "n": 65, "b": 10.68, "error_dex": 0.04},
+        {"sample": "z about 2.3", "n": 46, "b": 10.85, "error_dex": 0.05}
+      ],
+      "use": "Context only; slope, velocity and baryonic mass do not match the asymptotic slope-four translation",
+      "overlap": "All-sample row contains both redshift subsamples and 24 additional galaxies; never combine all three as independent"
+    },
+    {
+      "id": "puech_2010",
+      "url": "https://arxiv.org/abs/0903.3961",
+      "source_location": "Sections 5.1 and 5.2",
+      "sample": "Six selected rotating disks at z about 0.6",
+      "slope": 3.74,
+      "corrected_mass_offset_dex": -0.05,
+      "random_error_dex": 0.08,
+      "systematic_upper_dex": 0.23,
+      "systematic_lower_dex": 0.08,
+      "use": "Context only; small selected sample, inferred gas and velocity calibration; not a slope-four a0 datum"
+    }
+  ],
+  "retrieval": [
+    {"url": "https://dark.univ-lyon1.fr/data-releases/", "status": "Release index read; parent catalogue and rotation curves advertised"},
+    {"url": "https://dark-matter.osu-lyon.fr/", "status": "Connection timed out after 10 seconds in this session; raw data not obtained"},
+    {"url": "https://cdsarc.cds.unistra.fr/ftp/J/ApJ/842/121/table3.dat", "status": "Connection timed out; browser FTP access denied. Full 135 rows not obtained"},
+    {"url": "https://cdsarc.cds.unistra.fr/viz-bin/ReadMe/J/ApJ/842/121?format=html&tex=true", "status": "Indexed primary schema verified: sequence,z,stellar mass,baryonic mass,Vcirc,dispersion; no individual errors/covariance/radii"}
+  ]
+}

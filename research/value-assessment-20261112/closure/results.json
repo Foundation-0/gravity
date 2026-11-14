@@ -1,0 +1,587 @@
+{
+  "scope": "Exact free Schrodinger and collisionless caustic controls. NOT AeST; no gravity, collisions or interacting-wave thermalization.",
+  "equations": {
+    "wave": "i eps psi_t = -eps^2 psi_xx/2",
+    "initial": "psi(x,0)=exp(i cos(x)/eps), x on [0,2pi)",
+    "kinetic": "x(q,t)=q-t sin(q), v=-sin(q), uniform q",
+    "first_classical_caustic_time": 1,
+    "wave_momentum_flux": "eps^2 |psi_x|^2 - eps^2 rho_xx/4",
+    "coarse_stress": "GaussianFilter(momentum_flux)-GaussianFilter(j)^2/GaussianFilter(rho)"
+  },
+  "environment": {
+    "python": "3.14.6",
+    "numpy": "2.5.4",
+    "scipy": "1.18.1"
+  },
+  "convergence": [
+    {
+      "eps": 0.08,
+      "ell": 0.1,
+      "t": 1.5,
+      "central": {
+        "density": 6.801780954909236,
+        "mean_velocity": -3.635302483675793e-16,
+        "stress": 3.1432397797491625,
+        "stress_over_density": 0.4621201124509171,
+        "K_5_over_3_proxy": 0.12872802588873716
+      },
+      "density_relative_L2_error_vs_collisionless": 0.23760216139529852,
+      "stress_relative_L2_error_vs_collisionless": 0.21655426264612257,
+      "classical_central_density": 4.614511611463204,
+      "classical_central_stress": 2.472895766974232
+    },
+    {
+      "eps": 0.04,
+      "ell": 0.1,
+      "t": 1.5,
+      "central": {
+        "density": 4.49855383564312,
+        "mean_velocity": -6.356240013786649e-16,
+        "stress": 2.5290890406890485,
+        "stress_over_density": 0.5622004611016256,
+        "K_5_over_3_proxy": 0.206304760438973
+      },
+      "density_relative_L2_error_vs_collisionless": 0.06564568971209125,
+      "stress_relative_L2_error_vs_collisionless": 0.06493822363742678,
+      "classical_central_density": 4.614511611463204,
+      "classical_central_stress": 2.472895766974232
+    },
+    {
+      "eps": 0.02,
+      "ell": 0.1,
+      "t": 1.5,
+      "central": {
+        "density": 4.583740069933028,
+        "mean_velocity": -7.515922895958718e-16,
+        "stress": 2.47052032630207,
+        "stress_over_density": 0.5389747866610958,
+        "K_5_over_3_proxy": 0.19532378337238593
+      },
+      "density_relative_L2_error_vs_collisionless": 0.018224567933264733,
+      "stress_relative_L2_error_vs_collisionless": 0.021466714184463002,
+      "classical_central_density": 4.614511611463204,
+      "classical_central_stress": 2.472895766974232
+    },
+    {
+      "eps": 0.01,
+      "ell": 0.1,
+      "t": 1.5,
+      "central": {
+        "density": 4.60847236665815,
+        "mean_velocity": -5.312540469742985e-16,
+        "stress": 2.472514308655823,
+        "stress_over_density": 0.5365149472402664,
+        "K_5_over_3_proxy": 0.1937360767066503
+      },
+      "density_relative_L2_error_vs_collisionless": 0.004589328793627462,
+      "stress_relative_L2_error_vs_collisionless": 0.005921548334615017,
+      "classical_central_density": 4.614511611463204,
+      "classical_central_stress": 2.472895766974232
+    },
+    {
+      "eps": 0.08,
+      "ell": 0.2,
+      "t": 1.5,
+      "central": {
+        "density": 5.116809580614984,
+        "mean_velocity": -1.7377558447657535e-16,
+        "stress": 2.7169550685696118,
+        "stress_over_density": 0.5309861595910833,
+        "K_5_over_3_proxy": 0.17882038722349786
+      },
+      "density_relative_L2_error_vs_collisionless": 0.049750398710495386,
+      "stress_relative_L2_error_vs_collisionless": 0.04593455529575715,
+      "classical_central_density": 4.772107863668246,
+      "classical_central_stress": 2.652045918129872
+    },
+    {
+      "eps": 0.04,
+      "ell": 0.2,
+      "t": 1.5,
+      "central": {
+        "density": 4.8499198042205425,
+        "mean_velocity": -3.421320224767065e-16,
+        "stress": 2.6759646111363296,
+        "stress_over_density": 0.5517544040228514,
+        "K_5_over_3_proxy": 0.19257035753160504
+      },
+      "density_relative_L2_error_vs_collisionless": 0.012263782571841799,
+      "stress_relative_L2_error_vs_collisionless": 0.014110630465660032,
+      "classical_central_density": 4.772107863668246,
+      "classical_central_stress": 2.652045918129872
+    },
+    {
+      "eps": 0.02,
+      "ell": 0.2,
+      "t": 1.5,
+      "central": {
+        "density": 4.790675110494954,
+        "mean_velocity": -3.3179619403212396e-16,
+        "stress": 2.6582099863246462,
+        "stress_over_density": 0.554871688230599,
+        "K_5_over_3_proxy": 0.19525166818937345
+      },
+      "density_relative_L2_error_vs_collisionless": 0.0030400397426329517,
+      "stress_relative_L2_error_vs_collisionless": 0.003720790519737914,
+      "classical_central_density": 4.772107863668246,
+      "classical_central_stress": 2.652045918129872
+    },
+    {
+      "eps": 0.01,
+      "ell": 0.2,
+      "t": 1.5,
+      "central": {
+        "density": 4.7766932657907795,
+        "mean_velocity": -2.5070135264967054e-16,
+        "stress": 2.653592741021475,
+        "stress_over_density": 0.5555292319114767,
+        "K_5_over_3_proxy": 0.1958643280900424
+      },
+      "density_relative_L2_error_vs_collisionless": 0.0007583085901567792,
+      "stress_relative_L2_error_vs_collisionless": 0.0009430605541564936,
+      "classical_central_density": 4.772107863668246,
+      "classical_central_stress": 2.652045918129872
+    },
+    {
+      "eps": 0.08,
+      "ell": 0.4,
+      "t": 1.5,
+      "central": {
+        "density": 3.47079353367001,
+        "mean_velocity": -5.682639833337974e-17,
+        "stress": 1.985871663405915,
+        "stress_over_density": 0.5721664639918983,
+        "K_5_over_3_proxy": 0.2495953821760082
+      },
+      "density_relative_L2_error_vs_collisionless": 0.004042324387463501,
+      "stress_relative_L2_error_vs_collisionless": 0.012173424868379018,
+      "classical_central_density": 3.4533000548212858,
+      "classical_central_stress": 2.0074136186630716
+    },
+    {
+      "eps": 0.04,
+      "ell": 0.4,
+      "t": 1.5,
+      "central": {
+        "density": 3.4578462338295655,
+        "mean_velocity": -1.7971046472684434e-16,
+        "stress": 2.002213014595276,
+        "stress_over_density": 0.5790347167571487,
+        "K_5_over_3_proxy": 0.25322164084239673
+      },
+      "density_relative_L2_error_vs_collisionless": 0.0010509498758515838,
+      "stress_relative_L2_error_vs_collisionless": 0.00307551872236874,
+      "classical_central_density": 3.4533000548212858,
+      "classical_central_stress": 2.0074136186630716
+    },
+    {
+      "eps": 0.02,
+      "ell": 0.4,
+      "t": 1.5,
+      "central": {
+        "density": 3.454446604311201,
+        "mean_velocity": -1.18291805566839e-16,
+        "stress": 2.0061261533418704,
+        "stress_over_density": 0.5807373461318508,
+        "K_5_over_3_proxy": 0.25413282614749777
+      },
+      "density_relative_L2_error_vs_collisionless": 0.0002651811840931197,
+      "stress_relative_L2_error_vs_collisionless": 0.0007711031705905792,
+      "classical_central_density": 3.4533000548212858,
+      "classical_central_stress": 2.0074136186630716
+    },
+    {
+      "eps": 0.01,
+      "ell": 0.4,
+      "t": 1.5,
+      "central": {
+        "density": 3.4535873042306915,
+        "mean_velocity": -2.0043861155398715e-17,
+        "stress": 2.007092561475563,
+        "stress_over_density": 0.5811616689165052,
+        "K_5_over_3_proxy": 0.25436069492820945
+      },
+      "density_relative_L2_error_vs_collisionless": 6.644668743562441e-05,
+      "stress_relative_L2_error_vs_collisionless": 0.0001929185824878082,
+      "classical_central_density": 3.4533000548212858,
+      "classical_central_stress": 2.0074136186630716
+    }
+  ],
+  "conservation_and_reversibility": [
+    {
+      "eps": 0.08,
+      "ell": 0.1,
+      "mass_mean": 1.0000000000000002,
+      "energy_mean": 0.25000000000000006,
+      "momentum_mean": -6.938893903907228e-18,
+      "continuity_relative_residual": 2.3224007330232665e-12,
+      "momentum_relative_residual": 6.116561814088929e-10,
+      "time_reversal_relative_field_error": 4.811956100817836e-16,
+      "modal_occupation_max_change": 1.3877787807814457e-17,
+      "momentum_distribution_second_moment": 0.5,
+      "momentum_distribution_fourth_moment": 0.37820000000000004,
+      "momentum_distribution_kurtosis": 1.5128000000000001,
+      "high_k_mass_fraction_abs_k_gt_n_over_4": 1.1503654703601024e-30
+    },
+    {
+      "eps": 0.04,
+      "ell": 0.1,
+      "mass_mean": 1.0000000000000002,
+      "energy_mean": 0.2500000000000001,
+      "momentum_mean": -1.249000902703301e-16,
+      "continuity_relative_residual": 1.3964308807939469e-12,
+      "momentum_relative_residual": 9.028009939416989e-11,
+      "time_reversal_relative_field_error": 5.450072324819847e-16,
+      "modal_occupation_max_change": 1.3877787807814457e-17,
+      "momentum_distribution_second_moment": 0.5000000000000001,
+      "momentum_distribution_fourth_moment": 0.37580000000000013,
+      "momentum_distribution_kurtosis": 1.5031999999999999,
+      "high_k_mass_fraction_abs_k_gt_n_over_4": 4.539395260887846e-30
+    },
+    {
+      "eps": 0.02,
+      "ell": 0.1,
+      "mass_mean": 1.0000000000000002,
+      "energy_mean": 0.2500000000000001,
+      "momentum_mean": -9.71445146547012e-17,
+      "continuity_relative_residual": 8.418815272682181e-13,
+      "momentum_relative_residual": 3.963882657712924e-11,
+      "time_reversal_relative_field_error": 5.247285398049557e-16,
+      "modal_occupation_max_change": 1.3877787807814457e-17,
+      "momentum_distribution_second_moment": 0.5,
+      "momentum_distribution_fourth_moment": 0.3752,
+      "momentum_distribution_kurtosis": 1.5008,
+      "high_k_mass_fraction_abs_k_gt_n_over_4": 1.8154213065842795e-29
+    },
+    {
+      "eps": 0.01,
+      "ell": 0.1,
+      "mass_mean": 1.0000000000000002,
+      "energy_mean": 0.25000000000000006,
+      "momentum_mean": -6.938893903907228e-18,
+      "continuity_relative_residual": 6.806172544445448e-13,
+      "momentum_relative_residual": 1.5111202906286288e-11,
+      "time_reversal_relative_field_error": 5.433704267099638e-16,
+      "modal_occupation_max_change": 1.0408340855860843e-17,
+      "momentum_distribution_second_moment": 0.5,
+      "momentum_distribution_fourth_moment": 0.37505,
+      "momentum_distribution_kurtosis": 1.5002,
+      "high_k_mass_fraction_abs_k_gt_n_over_4": 6.918327300521662e-29
+    },
+    {
+      "eps": 0.08,
+      "ell": 0.2,
+      "mass_mean": 1.0000000000000002,
+      "energy_mean": 0.25000000000000006,
+      "momentum_mean": -6.938893903907228e-18,
+      "continuity_relative_residual": 2.3224007330232665e-12,
+      "momentum_relative_residual": 6.116561814088929e-10,
+      "time_reversal_relative_field_error": 4.811956100817836e-16,
+      "modal_occupation_max_change": 1.3877787807814457e-17,
+      "momentum_distribution_second_moment": 0.5,
+      "momentum_distribution_fourth_moment": 0.37820000000000004,
+      "momentum_distribution_kurtosis": 1.5128000000000001,
+      "high_k_mass_fraction_abs_k_gt_n_over_4": 1.1503654703601024e-30
+    },
+    {
+      "eps": 0.04,
+      "ell": 0.2,
+      "mass_mean": 1.0000000000000002,
+      "energy_mean": 0.2500000000000001,
+      "momentum_mean": -1.249000902703301e-16,
+      "continuity_relative_residual": 1.3964308807939469e-12,
+      "momentum_relative_residual": 9.028009939416989e-11,
+      "time_reversal_relative_field_error": 5.450072324819847e-16,
+      "modal_occupation_max_change": 1.3877787807814457e-17,
+      "momentum_distribution_second_moment": 0.5000000000000001,
+      "momentum_distribution_fourth_moment": 0.37580000000000013,
+      "momentum_distribution_kurtosis": 1.5031999999999999,
+      "high_k_mass_fraction_abs_k_gt_n_over_4": 4.539395260887846e-30
+    },
+    {
+      "eps": 0.02,
+      "ell": 0.2,
+      "mass_mean": 1.0000000000000002,
+      "energy_mean": 0.2500000000000001,
+      "momentum_mean": -9.71445146547012e-17,
+      "continuity_relative_residual": 8.418815272682181e-13,
+      "momentum_relative_residual": 3.963882657712924e-11,
+      "time_reversal_relative_field_error": 5.247285398049557e-16,
+      "modal_occupation_max_change": 1.3877787807814457e-17,
+      "momentum_distribution_second_moment": 0.5,
+      "momentum_distribution_fourth_moment": 0.3752,
+      "momentum_distribution_kurtosis": 1.5008,
+      "high_k_mass_fraction_abs_k_gt_n_over_4": 1.8154213065842795e-29
+    },
+    {
+      "eps": 0.01,
+      "ell": 0.2,
+      "mass_mean": 1.0000000000000002,
+      "energy_mean": 0.25000000000000006,
+      "momentum_mean": -6.938893903907228e-18,
+      "continuity_relative_residual": 6.806172544445448e-13,
+      "momentum_relative_residual": 1.5111202906286288e-11,
+      "time_reversal_relative_field_error": 5.433704267099638e-16,
+      "modal_occupation_max_change": 1.0408340855860843e-17,
+      "momentum_distribution_second_moment": 0.5,
+      "momentum_distribution_fourth_moment": 0.37505,
+      "momentum_distribution_kurtosis": 1.5002,
+      "high_k_mass_fraction_abs_k_gt_n_over_4": 6.918327300521662e-29
+    },
+    {
+      "eps": 0.08,
+      "ell": 0.4,
+      "mass_mean": 1.0000000000000002,
+      "energy_mean": 0.25000000000000006,
+      "momentum_mean": -6.938893903907228e-18,
+      "continuity_relative_residual": 2.3224007330232665e-12,
+      "momentum_relative_residual": 6.116561814088929e-10,
+      "time_reversal_relative_field_error": 4.811956100817836e-16,
+      "modal_occupation_max_change": 1.3877787807814457e-17,
+      "momentum_distribution_second_moment": 0.5,
+      "momentum_distribution_fourth_moment": 0.37820000000000004,
+      "momentum_distribution_kurtosis": 1.5128000000000001,
+      "high_k_mass_fraction_abs_k_gt_n_over_4": 1.1503654703601024e-30
+    },
+    {
+      "eps": 0.04,
+      "ell": 0.4,
+      "mass_mean": 1.0000000000000002,
+      "energy_mean": 0.2500000000000001,
+      "momentum_mean": -1.249000902703301e-16,
+      "continuity_relative_residual": 1.3964308807939469e-12,
+      "momentum_relative_residual": 9.028009939416989e-11,
+      "time_reversal_relative_field_error": 5.450072324819847e-16,
+      "modal_occupation_max_change": 1.3877787807814457e-17,
+      "momentum_distribution_second_moment": 0.5000000000000001,
+      "momentum_distribution_fourth_moment": 0.37580000000000013,
+      "momentum_distribution_kurtosis": 1.5031999999999999,
+      "high_k_mass_fraction_abs_k_gt_n_over_4": 4.539395260887846e-30
+    },
+    {
+      "eps": 0.02,
+      "ell": 0.4,
+      "mass_mean": 1.0000000000000002,
+      "energy_mean": 0.2500000000000001,
+      "momentum_mean": -9.71445146547012e-17,
+      "continuity_relative_residual": 8.418815272682181e-13,
+      "momentum_relative_residual": 3.963882657712924e-11,
+      "time_reversal_relative_field_error": 5.247285398049557e-16,
+      "modal_occupation_max_change": 1.3877787807814457e-17,
+      "momentum_distribution_second_moment": 0.5,
+      "momentum_distribution_fourth_moment": 0.3752,
+      "momentum_distribution_kurtosis": 1.5008,
+      "high_k_mass_fraction_abs_k_gt_n_over_4": 1.8154213065842795e-29
+    },
+    {
+      "eps": 0.01,
+      "ell": 0.4,
+      "mass_mean": 1.0000000000000002,
+      "energy_mean": 0.25000000000000006,
+      "momentum_mean": -6.938893903907228e-18,
+      "continuity_relative_residual": 6.806172544445448e-13,
+      "momentum_relative_residual": 1.5111202906286288e-11,
+      "time_reversal_relative_field_error": 5.433704267099638e-16,
+      "modal_occupation_max_change": 1.0408340855860843e-17,
+      "momentum_distribution_second_moment": 0.5,
+      "momentum_distribution_fourth_moment": 0.37505,
+      "momentum_distribution_kurtosis": 1.5002,
+      "high_k_mass_fraction_abs_k_gt_n_over_4": 6.918327300521662e-29
+    }
+  ],
+  "central_time_series_eps_002_ell_02": [
+    {
+      "t": 0,
+      "density": 1.0000000000000004,
+      "mean_velocity": 7.310148342550405e-17,
+      "stress": 0.0384418268066823,
+      "stress_over_density": 0.03844182680668229,
+      "K_5_over_3_proxy": 0.038441826806682275,
+      "mean_coarse_stress": 0.019605280423838353
+    },
+    {
+      "t": 0.5,
+      "density": 1.8818916234791638,
+      "mean_velocity": 1.7556312053706096e-16,
+      "stress": 0.21697755956145276,
+      "stress_over_density": 0.115297585075762,
+      "K_5_over_3_proxy": 0.07564097849357981,
+      "mean_coarse_stress": 0.03326274953323083
+    },
+    {
+      "t": 0.9,
+      "density": 3.8437092497427088,
+      "mean_velocity": 1.8515246962042502e-16,
+      "stress": 1.1192902926159576,
+      "stress_over_density": 0.2912005617206559,
+      "K_5_over_3_proxy": 0.11867480382880854,
+      "mean_coarse_stress": 0.10682384842764445
+    },
+    {
+      "t": 1.0,
+      "density": 4.51779030602901,
+      "mean_velocity": 1.5868336001978937e-16,
+      "stress": 1.5720676381111143,
+      "stress_over_density": 0.3479726883324318,
+      "K_5_over_3_proxy": 0.12732913212153898,
+      "mean_coarse_stress": 0.14934009521527608
+    },
+    {
+      "t": 1.2,
+      "density": 5.524273649871285,
+      "mean_velocity": -5.363596524142275e-17,
+      "stress": 2.5099729910651325,
+      "stress_over_density": 0.454353486113711,
+      "K_5_over_3_proxy": 0.14539308183563748,
+      "mean_coarse_stress": 0.26236925768800523
+    },
+    {
+      "t": 1.5,
+      "density": 4.790675110494954,
+      "mean_velocity": -3.3179619403212396e-16,
+      "stress": 2.6582099863246462,
+      "stress_over_density": 0.554871688230599,
+      "K_5_over_3_proxy": 0.19525166818937345,
+      "mean_coarse_stress": 0.3720216209482372
+    },
+    {
+      "t": 2,
+      "density": 2.3227521097737522,
+      "mean_velocity": -1.0562207704855248e-16,
+      "stress": 1.1974143670434767,
+      "stress_over_density": 0.5155153500905058,
+      "K_5_over_3_proxy": 0.29392714256021285,
+      "mean_coarse_stress": 0.3521927735270587
+    },
+    {
+      "t": 3,
+      "density": 1.1852392170237338,
+      "mean_velocity": -3.7879301627135936e-17,
+      "stress": 0.4015794594614709,
+      "stress_over_density": 0.338817222459008,
+      "K_5_over_3_proxy": 0.30252513908874296,
+      "mean_coarse_stress": 0.2552728804214495
+    },
+    {
+      "t": 6,
+      "density": 0.5144217392972806,
+      "mean_velocity": -2.3399543916136425e-17,
+      "stress": 0.06330205081229684,
+      "stress_over_density": 0.12305477388799667,
+      "K_5_over_3_proxy": 0.19166916804929665,
+      "mean_coarse_stress": 0.3883173827627806
+    },
+    {
+      "t": 12,
+      "density": 0.8042969608295748,
+      "mean_velocity": 4.551503040740517e-16,
+      "stress": 0.2449686328248758,
+      "stress_over_density": 0.3045748582366993,
+      "K_5_over_3_proxy": 0.3521678983931367,
+      "mean_coarse_stress": 0.44135492571341306
+    }
+  ],
+  "resolution_2048_4096_max_absolute_difference": 1.7763568394002505e-15,
+  "matched_density_velocity_different_infall_stress": [
+    {
+      "infall_amplitude": 0.75,
+      "initial_displacement_amplitude": 0.75,
+      "physical_time": 1.0,
+      "dimensionless_age": 1.5,
+      "first_caustic_time": 0.3333333333333333,
+      "central_density": 4.772107863668246,
+      "central_velocity": 0.0,
+      "central_stress": 1.491775828948053
+    },
+    {
+      "infall_amplitude": 1,
+      "initial_displacement_amplitude": 0.5,
+      "physical_time": 1.0,
+      "dimensionless_age": 1.5,
+      "first_caustic_time": 0.5,
+      "central_density": 4.772107863668246,
+      "central_velocity": 0.0,
+      "central_stress": 2.652045918129872
+    },
+    {
+      "infall_amplitude": 1.5,
+      "initial_displacement_amplitude": 0.0,
+      "physical_time": 1.0,
+      "dimensionless_age": 1.5,
+      "first_caustic_time": 0.6666666666666666,
+      "central_density": 4.772107863668246,
+      "central_velocity": 0.0,
+      "central_stress": 5.967103315792212
+    }
+  ],
+  "planar_classical_stress_eigenvalues_at_center": [
+    2.652045918129872,
+    0.0,
+    0.0
+  ],
+  "planar_normalized_anisotropy_frobenius_over_trace": 0.816496580927726,
+  "generated_velocity_marginal": {
+    "density": "1/(pi sqrt(1-v^2)) on |v|<1",
+    "variance": 0.5,
+    "fourth_moment": 0.375,
+    "kurtosis": 1.5,
+    "same_variance_gaussian_fourth_moment": 0.75,
+    "same_variance_gaussian_kurtosis": 3
+  },
+  "long_wavelength_response_of_homogenized_kinetic_control": [
+    {
+      "k_t": 0,
+      "arcsine_density_response": 1.0,
+      "gaussian_same_variance_density_response": 1.0
+    },
+    {
+      "k_t": 1,
+      "arcsine_density_response": 0.7651976865579665,
+      "gaussian_same_variance_density_response": 0.7788007830714049
+    },
+    {
+      "k_t": 2,
+      "arcsine_density_response": 0.22389077914123562,
+      "gaussian_same_variance_density_response": 0.36787944117144233
+    },
+    {
+      "k_t": 2.404825557695773,
+      "arcsine_density_response": -9.586882554916807e-17,
+      "gaussian_same_variance_density_response": 0.2355583817481849
+    },
+    {
+      "k_t": 3,
+      "arcsine_density_response": -0.2600519549019335,
+      "gaussian_same_variance_density_response": 0.10539922456186433
+    },
+    {
+      "k_t": 4,
+      "arcsine_density_response": -0.3971498098638473,
+      "gaussian_same_variance_density_response": 0.01831563888873418
+    },
+    {
+      "k_t": 6,
+      "arcsine_density_response": 0.15064525725099698,
+      "gaussian_same_variance_density_response": 0.00012340980408667956
+    }
+  ],
+  "torus_recurrence": {
+    "eps": 0.02,
+    "time": 628.3185307179587,
+    "initial_central": {
+      "density": 1.0000000000000004,
+      "mean_velocity": 7.310148342550405e-17,
+      "stress": 0.0384418268066823,
+      "stress_over_density": 0.03844182680668229,
+      "K_5_over_3_proxy": 0.038441826806682275
+    },
+    "recurrent_central": {
+      "density": 0.9999999999999976,
+      "mean_velocity": 6.773476436106012e-17,
+      "stress": 0.03844182680668345,
+      "stress_over_density": 0.038441826806683545,
+      "K_5_over_3_proxy": 0.03844182680668361
+    }
+  },
+  "tests": "All assertions passed. Fourier kinetic moments checked against independent Lagrangian quadrature."
+}

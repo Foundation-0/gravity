@@ -1,0 +1,207 @@
+{
+  "status": "reproducible model calculation; no material prediction",
+  "source_repository": "https://github.com/aska-digital/incentre-lattice",
+  "source_commit": "db3b51d0f31e04ea3c0ffafb553f70fcdfc617ec",
+  "source_path": "results/fold-continuous-fcc/PROOF.md",
+  "assumption": "Fixed scalar Ising J on prescribed bars; no interactions on other contacts",
+  "image_bound": "sigma_min(L)>=1 and |p-q|<=2 exclude |n|^2>=12 from contact; written source proof",
+  "states": [
+    {
+      "s": 0.0,
+      "density": 0.22326611566327859,
+      "bar_degree_each_vertex": [
+        5,
+        5,
+        5,
+        5,
+        5,
+        5
+      ],
+      "contact_degree_each_vertex": [
+        5,
+        5,
+        5,
+        5,
+        5,
+        5
+      ],
+      "bar_graph_sha256": "5f79040796ece8e1c4f91c0ee20f8ea160f3c85f740ac581eaa0363a31b9e1dd",
+      "max_bar_squared_length_error": 4.440892098500626e-16,
+      "smallest_nonbar_gap_over_contact_distance": 0.41421356237309515
+    },
+    {
+      "s": 0.25,
+      "density": 0.2525279756510523,
+      "bar_degree_each_vertex": [
+        5,
+        5,
+        5,
+        5,
+        5,
+        5
+      ],
+      "contact_degree_each_vertex": [
+        5,
+        5,
+        5,
+        5,
+        5,
+        5
+      ],
+      "bar_graph_sha256": "5f79040796ece8e1c4f91c0ee20f8ea160f3c85f740ac581eaa0363a31b9e1dd",
+      "max_bar_squared_length_error": 8.881784197001252e-16,
+      "smallest_nonbar_gap_over_contact_distance": 0.41421356237309515
+    },
+    {
+      "s": 0.5,
+      "density": 0.3422823920720581,
+      "bar_degree_each_vertex": [
+        5,
+        5,
+        5,
+        5,
+        5,
+        5
+      ],
+      "contact_degree_each_vertex": [
+        5,
+        5,
+        5,
+        5,
+        5,
+        5
+      ],
+      "bar_graph_sha256": "5f79040796ece8e1c4f91c0ee20f8ea160f3c85f740ac581eaa0363a31b9e1dd",
+      "max_bar_squared_length_error": 4.440892098500626e-16,
+      "smallest_nonbar_gap_over_contact_distance": 0.41421356237309515
+    },
+    {
+      "s": 0.75,
+      "density": 0.5011075176643782,
+      "bar_degree_each_vertex": [
+        5,
+        5,
+        5,
+        5,
+        5,
+        5
+      ],
+      "contact_degree_each_vertex": [
+        5,
+        5,
+        5,
+        5,
+        5,
+        5
+      ],
+      "bar_graph_sha256": "5f79040796ece8e1c4f91c0ee20f8ea160f3c85f740ac581eaa0363a31b9e1dd",
+      "max_bar_squared_length_error": 0.0,
+      "smallest_nonbar_gap_over_contact_distance": 0.1983237448471371
+    },
+    {
+      "s": 0.9,
+      "density": 0.6343008927582018,
+      "bar_degree_each_vertex": [
+        5,
+        5,
+        5,
+        5,
+        5,
+        5
+      ],
+      "contact_degree_each_vertex": [
+        5,
+        5,
+        5,
+        5,
+        5,
+        5
+      ],
+      "bar_graph_sha256": "5f79040796ece8e1c4f91c0ee20f8ea160f3c85f740ac581eaa0363a31b9e1dd",
+      "max_bar_squared_length_error": 0.0,
+      "smallest_nonbar_gap_over_contact_distance": 0.07423378240243128
+    },
+    {
+      "s": 0.99,
+      "density": 0.7292096182619797,
+      "bar_degree_each_vertex": [
+        5,
+        5,
+        5,
+        5,
+        5,
+        5
+      ],
+      "contact_degree_each_vertex": [
+        5,
+        5,
+        5,
+        5,
+        5,
+        5
+      ],
+      "bar_graph_sha256": "5f79040796ece8e1c4f91c0ee20f8ea160f3c85f740ac581eaa0363a31b9e1dd",
+      "max_bar_squared_length_error": 0.0,
+      "smallest_nonbar_gap_over_contact_distance": 0.0071064219985181865
+    },
+    {
+      "s": 1.0,
+      "density": 0.740480489693061,
+      "bar_degree_each_vertex": [
+        5,
+        5,
+        5,
+        5,
+        5,
+        5
+      ],
+      "contact_degree_each_vertex": [
+        12,
+        12,
+        12,
+        12,
+        12,
+        12
+      ],
+      "bar_graph_sha256": "5f79040796ece8e1c4f91c0ee20f8ea160f3c85f740ac581eaa0363a31b9e1dd",
+      "max_bar_squared_length_error": 0.0,
+      "smallest_nonbar_gap_over_contact_distance": 0.0
+    }
+  ],
+  "exact_endpoint_contacts": [
+    12,
+    12,
+    12,
+    12,
+    12,
+    12
+  ],
+  "exact_interior_certificate": {
+    "directed_bar_identities": 30,
+    "directed_nonbar_strict_distance_polynomials": 6120,
+    "arithmetic": "exact integer pairs a+b*sqrt(2)",
+    "interior_contact_graph_equals_prescribed_bar_graph": true,
+    "scope": "0<s<1; distant images excluded by analytic singular-value bound"
+  },
+  "negative_controls": {
+    "near_cancellation_signs": "passed",
+    "changed_bridge_curve_rejected": true
+  },
+  "bar_graph": {
+    "edges_per_cell": 15,
+    "triangles_per_cell": 8,
+    "ground_energy_per_site_over_J": -2.5,
+    "logZ_per_site_K2_coefficient": 1.25,
+    "logZ_per_site_K3_coefficient": 1.3333333333333333,
+    "reduced_susceptibility_K_coefficient": 5
+  },
+  "full_fcc_contact_graph": {
+    "edges_per_cell": 36,
+    "triangles_per_cell": 48,
+    "ground_energy_per_site_over_J": -6,
+    "logZ_per_site_K2_coefficient": 3,
+    "logZ_per_site_K3_coefficient": 8,
+    "reduced_susceptibility_K_coefficient": 12
+  },
+  "limitation": "Exact interior contact result uses the source curve and analytic distant-image bound. Fixed-bar partition-function invariance is algebraic by definition. No Tc or percolation threshold estimated."
+}

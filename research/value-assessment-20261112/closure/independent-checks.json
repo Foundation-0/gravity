@@ -1,0 +1,227 @@
+{
+  "artifact_sha256": {
+    "wave12/research.md": "40ef0b35838a93b0faa83c5723f748e1edba0018c660712f559f5060638a2cc5",
+    "wave12/probe.py": "d5045f63124d78d3ae4387f67f3adcdfdf8574957623f65bae046999dcb70f96",
+    "wave12/evidence.json": "ea42c793f43dcb5f475794212459c1f55c6fc3d5e6e3ec913e31122632398f3d",
+    "wave12/sources.json": "9a380924d8c9e64a174f86077f65609106e61389cb112ded1672814e83fa7de3",
+    "convergences/research.md": "c26788bb39b07ac6bc426b5a8ddee725dd7ae8c27e6a390f3a22c5464228f239",
+    "convergences/derivation.md": "d722d7ea613e35a1adc2f8fd05cc0d3ea7120b3f5e86c19c46e71528e9db4d63",
+    "convergences/probe.py": "dbe5bb373376bffdbfa1f7c63ee57eea7d8b524620f7cd3e221f03760594f372",
+    "convergences/evidence.json": "67e764c24c8176811478c615be497c3c7dd0a6654fd94166e9652b2a0d1afc66",
+    "convergences/sources.json": "0d058f74cfd0d286fa0039ca524adec08bb182662637bfec4f27126d31a2a8fa"
+  },
+  "astrophysics": {
+    "age_window_Myr": 734.0997922979537,
+    "growth": [
+      {
+        "efficiency": 0.1,
+        "opacity_factor": 1,
+        "time_Myr": 827.0784108740284,
+        "duty": 1.1266566474362067
+      },
+      {
+        "efficiency": 0.1,
+        "opacity_factor": 0.8775,
+        "time_Myr": 725.7613055419598,
+        "duty": 0.9886412081252715
+      },
+      {
+        "efficiency": 0.057190958417936644,
+        "opacity_factor": 1,
+        "time_Myr": 451.5364663110016,
+        "duty": 0.6150886719332208
+      }
+    ],
+    "halo": {
+      "radius_pc": 191.82394059178895,
+      "compactness": 4.1869158108105286e-11,
+      "baryon_budget_Msun": 13126.042397237956,
+      "temperature_K": 139.0432709264797
+    },
+    "infall": [
+      {
+        "case": "Newton",
+        "time_Myr": 384.8231820895311,
+        "quadrature_error_Myr": 2.000183869963256e-12
+      },
+      {
+        "case": "MOND_const",
+        "time_Myr": 200.07513758300058,
+        "quadrature_error_Myr": 1.6485746246683689e-09
+      },
+      {
+        "case": "MOND_H",
+        "time_Myr": 121.71667661411158,
+        "quadrature_error_Myr": 6.789085635548359e-12
+      },
+      {
+        "case": "two_branch",
+        "time_Myr": 127.15620463316782,
+        "quadrature_error_Myr": 3.3374606473313817e-09
+      }
+    ],
+    "future": {
+      "integral_1_to_infinity": 0.5931047420252846,
+      "rho_DE_limit": 0.16875383457574408,
+      "strict_H2_lower_bound_all_a_ge_1": 0.11156556028863915,
+      "renormalized_curvature_H2_lower_bound": 0.11224057562694213
+    },
+    "chirp": {
+      "lower": 2154145352572133,
+      "incorrect": 540000000000000,
+      "correct": 2160000000000000,
+      "upper": 2170844073787392
+    }
+  },
+  "symbolic_mechanics": {
+    "derived_internal_tensions": [
+      "a/4 + t/2",
+      "a/4 - t/2",
+      "a/4 + t/2",
+      "a/4 - t/2",
+      "a/4 - t/2",
+      "a/4 + t/2",
+      "a/4 - t/2",
+      "a/4 + t/2",
+      "-3*a/4 - t/2",
+      "-3*a/4 + t/2",
+      "-3*a/4 + t/2",
+      "-3*a/4 - t/2"
+    ],
+    "norm_squared": "11*a**2/4 + 3*t**2 + 3",
+    "determinant": "(t + x)*(2*t**2 - t*x + x**2)",
+    "bridge_rotation_rank": 2,
+    "added_rotation_minor_determinant": 2
+  },
+  "independent_QR_mechanics": {
+    "endpoint_contact_count": 36,
+    "added_count": 21,
+    "method": "Independent enlarged contact search, translation gauge, full QR energy projection",
+    "limit_distance": 0.21318848803387838,
+    "rows": [
+      {
+        "s": 0,
+        "eta": 1e-06,
+        "eigenvalues": [
+          2.524530494171507e-07,
+          6.117205479877821e-07,
+          1.1205289011486676e-06,
+          0.09763139339704513,
+          0.09763200197001182,
+          0.1952625128454998
+        ],
+        "distance_to_open": 1.997673878558609e-06,
+        "distance_to_fold": 0.2131889175751914
+      },
+      {
+        "s": 0.01,
+        "eta": 1e-08,
+        "eigenvalues": [
+          2.5680886350991184e-09,
+          6.069450998230845e-09,
+          1.1341258870918388e-08,
+          1.2148467449182562e-05,
+          2.6500125441353255e-05,
+          0.103421673898198
+        ],
+        "distance_to_open": 0.2131972279748765,
+        "distance_to_fold": 0.004129364707359724
+      },
+      {
+        "s": 0.01,
+        "eta": 1e-06,
+        "eigenvalues": [
+          2.56808808231693e-07,
+          6.069423713677523e-07,
+          1.1341226727288303e-06,
+          0.001200348702301728,
+          0.0026129131773679915,
+          0.10349788976634891
+        ],
+        "distance_to_open": 0.21028814994275757,
+        "distance_to_fold": 0.005063921818610704
+      },
+      {
+        "s": 0.01,
+        "eta": 0.0001,
+        "eigenvalues": [
+          2.568032804969814e-05,
+          6.06669574227687e-05,
+          0.00011338013370410546,
+          0.0547349707086351,
+          0.09040122998634707,
+          0.12861822636887654
+        ],
+        "distance_to_open": 0.08571212745652276,
+        "distance_to_fold": 0.12786871079527468
+      },
+      {
+        "s": 1,
+        "eta": 1e-06,
+        "eigenvalues": [
+          1.0237805454576387e-06,
+          1.2427331876597885e-06,
+          1.979704385640963e-06,
+          2.05121516455304e-06,
+          3.668578802398917e-06,
+          0.18055668536326314
+        ],
+        "distance_to_open": 0.2873289467639079,
+        "distance_to_fold": 0.20340175163553578
+      },
+      {
+        "s": 0.0001,
+        "eta": 0.0001,
+        "eigenvalues": [
+          2.5249067740912287e-05,
+          6.113854191491685e-05,
+          0.0001120346014454173,
+          0.09767395452669889,
+          0.09772527397722852,
+          0.19539016699434938
+        ],
+        "distance_to_open": 0.00024063440794034547,
+        "distance_to_fold": 0.21331881304999878
+      },
+      {
+        "s": 0.0001,
+        "eta": 1e-16,
+        "eigenvalues": [
+          2.5249616783161034e-17,
+          6.116783312564282e-17,
+          1.120665661789287e-16,
+          1.1756657881255984e-09,
+          2.5276211933363277e-09,
+          0.10337408200893845
+        ],
+        "distance_to_open": 0.21318848904902185,
+        "distance_to_fold": 4.1349060084659e-05
+      }
+    ]
+  },
+  "symbolic_photon_caps": {
+    "alpha_aligned_cap_exact_polynomial_ratio": "(b + 1)*(9*b**6 - 35*b**4 + 235*b**2 + 1135)/(64*(11*b**2 + 11*b + 20))",
+    "rows": [
+      {
+        "sky_fraction": 0.25,
+        "alpha": 0.9886917519358407,
+        "decoherence_rate_relative": 0.353125
+      },
+      {
+        "sky_fraction": 0.5,
+        "alpha": 0.88671875,
+        "decoherence_rate_relative": 0.5
+      },
+      {
+        "sky_fraction": 0.99,
+        "alpha": 0.021108545366358342,
+        "decoherence_rate_relative": 0.9793278
+      },
+      {
+        "sky_fraction": 1.0,
+        "alpha": 0.0,
+        "decoherence_rate_relative": 1.0
+      }
+    ]
+  }
+}

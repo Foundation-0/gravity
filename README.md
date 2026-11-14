@@ -13,14 +13,24 @@ This repository is **not** a derivation of a new fundamental theory of gravity, 
    - **Wave 7 (`wave7_group_cluster_threshold_audit.py`)**: Fits a 3-parameter Hill-type saturation curve `(sigma_crit, sigma_half, R_sat)` across 126 published galaxy halos, groups, and clusters (SPARC, Mistele et al. 2024, Milgrom 2019, Angus et al. 2008, Kettula et al. 2015) describing the well-known MOND cluster missing-mass discrepancy.
    - **Wave 9 (`wave9_scale_convergence_audit.py`)**: Evaluates the `g_b,x = 0.029 a_0` crossover between `d_s = 1` phonon acceleration and a Planck-normalized (`Omega_c/Omega_b = 5.39`) cosmological dust branch (`C-23a`), zero-free-parameter apparent `g_ddag` scale shifts across CLASH vs. X-COP clusters (`C-23b`), a 1-parameter Jeans-trapping fit (`sigma_J = 180-190 km/s`) using Vikhlinin et al. (2006) `R_2500` baryon depletion (`C-23c`), and quasistatic AeST `r_C^(max)` oscillation bounds (`C-24`).
    - **Wave 10 (`wave10_covariant_jeans_unification.py`)**: Proves why homogeneous linear FLRW sound speeds fail (`lambda_J,com = 25.10 Mpc` and `2.10e6x` recombination density inversion; `C-25`), computes the zero-free-parameter Planck-2018 Press-Schechter nonlinear collapse dispersion `sigma_*(z=0) = 185.59 km/s` (`sigma_*(z=3) = 11.36 km/s`) achieving `chi^2/dof = 1.004` (`Delta BIC = -10.01` vs. Wave 7 at `k = 0` fitted parameters; `C-26`), and formulates high-`z` Euclid/LSST group-lensing tests (`C-27`).
-   - **Wave 11 (`wave11_machian_pairing_unification.py`)**: Evaluates Machian Hubble-horizon inertial induction vs. PPN lensing (`C-28`), ADM zero-energy balance and DESI thawing dark-energy deceleration (`a_slow = 1.3897`) / closed-`S^3` turnaround (`C-29`), and CPT-symmetric Mexican-hat pair bifurcation (`J^0_+ + J^0_- = 0` with `rho_dust > 0` on both sheets) alongside shift-symmetric condensate cogenesis (`C-30`).
-   - **Wave 12 (`wave12_cosmic_dawn_quasar_collapse.py`)**: Audits the newly discovered `z = 6.08` compact quasar pair `J1602+4228AB` (*Napowawa'enakaulua*, Onorato et al. 2026, ApJL 1011, L59, arXiv:2609.31835; NOIRLab `noirlab2627`): evaluates the dual Pop III vs. DCBH Salpeter duty-cycle wall (`C-31`), proves that Wave-10's Dark-WHIM scale drops to `sigma_*(z=6.08) = 0.97 km/s` (`f_trap = 0.99997` vs. `0.0` at `z = 0`) while phonon + trapped-condensate gravity cuts `30 pkpc` feeder free-fall from `384.8 Myr` to `109-123 Myr` (`C-32`), and evaluates slim-disk photon-trapping super-Eddington growth alongside `5.56 pkpc` orbital projection and NANOGrav chirp-mass (`6.47e8 M_sun`) inspiral timescales (`C-33`).
+   - **Wave 11 (`wave11_machian_pairing_unification.py`)**: Computes conditional induction algebra, curvature-normalized CPL expansion and opposite-charge polynomial branches. It does not establish inertia, a universe origin, protected dark matter or future recollapse as an observational prediction.
+   - **Wave 12 (`wave12_cosmic_dawn_quasar_collapse.py`)**: Computes conditional growth clocks, a chosen nonlinear halo scale and fixed point-mass radial infall (`200.08`, `121.72`, `127.16 Myr` for the three modified force benchmarks). Its slim-disk table conserves inflowing mass and radiated energy. No seed-formation, filament evolution, merger hardening or GW background model is supplied.
 3. **Phenomenological hypotheses & algebraic re-parameterizations (`CONJECTURE`)**: Wave-6 (`wave6_convergence_unification.py`) evaluates algebraic identities where `hbar`, `m`, and `R_H(z)` cancel by definition of `N_fil = 2*pi*m*c*R_H/hbar` (so `8.9580 kpc` is simply the ordinary MOND radius `r_M` of a `6e10 M_sun` galaxy at `a_dS`) and places a handwritten potential threshold `Phi_crit/c^2 = 8.0e-6` (`sigma_1D = 388.1 km/s`) between logarithmic MOND galaxy potentials and the Bullet Cluster.
 4. **Elementary Lean 4 arithmetic checks (`PROVEN (ARITHMETIC-LEMMA)`)**: Stock Lean 4 (`Init`, zero Mathlib dependencies) files in `formal/` check the exact integer/rational exponent equations, interval inequalities, and commutative-ring product rearrangements referenced in `CLAIMS.md`. They do **not** prove physical force laws, Bell's theorem, or Weak Equivalence Principle bounds.
 
+## Cross-repository convergence research
+
+The [convergence research collection](research/convergences-20261112/README.md) connects this repository with fractals, physics0 and astr0. It preserves nine exploratory reports, source ledgers, mathematical probes and independent agent reviews.
+
+The collection includes a test specification for nonlinear AeST collapse, distinctions between interference and readable records, a lattice mechanics comparison and methods for combining astronomical evidence. Its scope and next tests are explicit. No nonlinear AeST simulation or new galaxy-data fit is claimed.
+
+## Cosmic dawn audit
+
+The [cosmic dawn research note](research/cosmic-dawn-20261112/README.md) distinguishes a quasar-pair observation from Wave 10 collapse-scale assumptions. A standard-library probe checks the native calculation, high-wavenumber sensitivity and failed root brackets. The note also states what an extra-dimension test would need to predict.
+
 ## Repository Layout & Verification Commands
 
-All Python scripts use only the Python 3 standard library. Each certificate file in `results/*.json` embeds a `sha256_canonical` field equal to the `sha256` checksum of `json.dumps(payload_without_sha_field, sort_keys=True, separators=(",", ":"))` computed by the generator script that writes it (this is a deterministic content checksum for reproducibility, not a cryptographic signature). Raw file digests are recorded in `SHA256SUMS`.
+The root audit scripts use only the Python 3 standard library. The separate convergence research probes declare their NumPy and SymPy dependencies in their own reproduction instructions. The research value assessment pins its NumPy and SciPy dependencies in its own bundle requirements. Each certificate file in `results/*.json` embeds a `sha256_canonical` field equal to the `sha256` checksum of `json.dumps(payload_without_sha_field, sort_keys=True, separators=(",", ":"))` computed by the generator script that writes it (this is a deterministic content checksum for reproducibility, not a cryptographic signature). Raw file digests are recorded in `SHA256SUMS`.
 
 | Script / Config | Output / Target | Verification Command |
 |---|---|---|
@@ -40,9 +50,19 @@ All Python scripts use only the Python 3 standard library. Each certificate file
 
 ## Documentation Index
 
+- [`acceleration-evolution/`](acceleration-evolution/README.md) -- Pending independent reproduction. Testable constant versus H-tracking acceleration scales, reproducible predictions, and a comparison with published MUSE-DARK fitted curves. No new raw-data fit or detection claim. Includes the known inverse of annihilation and requirements for a separate cosmological-collision conjecture.
+
 - `CLAIMS.md` -- Audited ledger of `C-01` through `C-33` with explicit inputs, literature precedence, Lean lemma scope, and downgraded epistemic status tags.
 - `METHODS_AND_PLAYBOOK.md` -- Numerical methods, parameter assumptions, error-model caveats (`M-01`..`M-10`), and canonical checksum table.
 - `RESEARCH_NOTEBOOK_AND_REASONING.md` -- Complete reasoning trail, rejected operator dead ends, tangential WHIM/entropy-floor realizations, Cosmic-Dawn quasar confrontation, and next-agent handoff queue.
-- `CHANGELOG.md` -- Reconciled chronological history across Waves 1-12 matching `CLAIMS.md` and code identifiers.- 
-- mic-Dawn quasar confrontation, and next-agent handoff queue.
 - `CHANGELOG.md` -- Reconciled chronological history across Waves 1-12 matching `CLAIMS.md` and code identifiers.
+
+## AeST response benchmark and independent checks
+
+The [AeST response benchmark](research/aest-response-gate-20261112/README.md) constructs allowed field preparations on a specified expanding background and a flat-space control. It includes the canonical map, executable response checks and a bounded pressure-closure comparison.
+
+A separate Astra agent reproduced the scalar constraint and kinetic structure from an independent ADM action. A separately declared slow-subspace test and its independent five-field replay are complete. The simple zero-pressure closure still fails for this specified benchmark.
+
+## Research value assessment
+
+The [12 November assessment](research/value-assessment-20261112/) records the Wave 11/12 audit, bounded research directions, reproducible controls and stopping gates. Its separate NumPy/SciPy dependencies are pinned in [the bundle requirements](research/value-assessment-20261112/requirements.txt).

@@ -1,5 +1,5 @@
 {
-  "schema": "FOUNDATION-0/GRAVITY-WAVE11-MACHIAN-PAIRING/1.0",
+  "schema": "FOUNDATION-0/GRAVITY-WAVE11-MACHIAN-PAIRING/1.1",
   "claim_c28_machian_inertia_and_horizon_induction": {
     "epistemic_status": "COMPUTED (KNOWN MACHIAN & UNRUH-DE SITTER IDENTITIES; MODIFIED INERTIA VS GRAVITY OPEN)",
     "hubble_radius_Mpc": 4450.6,
@@ -27,25 +27,32 @@
   },
   "claim_c29_zero_energy_and_desi_turnaround": {
     "epistemic_status": "COMPUTED (FRIEDMANN & ADM HAMILTONIAN IDENTITIES UNDER STATED EOS INPUTS)",
-    "adm_hamiltonian_constraint": "H_grav + H_matter = 0 identically in GR and 3+1D AeST (Bataki et al. 2024 Eq. 43a)",
+    "adm_hamiltonian_constraint": "A Hamiltonian constraint applies on physical solutions, subject to boundary and gauge conditions (Bataki et al. 2024 Eq. 43a). It is not a global observable energy identity or an origin mechanism.",
     "desi_thawing_eos_inputs": {
       "w0": -0.75,
       "wa": -0.85
     },
+    "future_extrapolation_caveat": "Chosen CPL inputs are not a fit here. Recollapse is conditional on this unmeasured future continuation, not an observational prediction. Past-compatible future equations of state can avoid turnaround.",
     "future_deceleration_onset_scale_factor_a_slow": 1.3897,
     "closed_universe_recollapse_turnarounds": [
       {
         "Omega_k": -0.001,
+        "Omega_DE_present": 0.6858173884710649,
+        "H_squared_at_a1_over_H0_squared": 1.0000000000000002,
         "turnaround_scale_factor_a_max": 315.18,
         "asymptotic_matter_curvature_ratio_Omega_m_over_abs_Omega_k": 315.18
       },
       {
         "Omega_k": -0.004,
+        "Omega_DE_present": 0.6888173884710649,
+        "H_squared_at_a1_over_H0_squared": 1.0,
         "turnaround_scale_factor_a_max": 78.8,
         "asymptotic_matter_curvature_ratio_Omega_m_over_abs_Omega_k": 78.8
       },
       {
         "Omega_k": -0.01,
+        "Omega_DE_present": 0.6948173884710649,
+        "H_squared_at_a1_over_H0_squared": 1.0,
         "turnaround_scale_factor_a_max": 31.52,
         "asymptotic_matter_curvature_ratio_Omega_m_over_abs_Omega_k": 31.52
       }
@@ -79,9 +86,16 @@
   },
   "claim_c30_cpt_pair_bifurcation_and_noether_remnant": {
     "epistemic_status": "COMPUTED (KINETIC MEXICAN-HAT & COGENESIS ALGEBRA) & CONJECTURE (COSMOLOGICAL CPT PAIR-CREATION ORIGIN OF CONDENSATE CHARGE)",
-    "unbroken_creation_state_u0": {
+    "symmetric_polynomial_state_u0": {
+      "P_QQ_in_units_K2_over_Q0_squared": -4.0,
+      "homogeneous_shift_current": 0.0,
       "w_u0_exact": -1.0
     },
+    "origin_obstructions": [
+      "The minimal homogeneous scalar sector has P_QQ(0)=-4*K2/Q0^2<0. Full mixing stability is not solved.",
+      "Source-free homogeneous shift symmetry conserves a^3 P_Q. Starting at u=0 gives zero current, so nonzero branch charge requires an additional source, boundary condition or production prescription.",
+      "Evaluating opposite branches algebraically does not establish a dynamical transition through the kinetic degeneracy at abs(u)=1/sqrt(3)."
+    ],
     "cpt_conjugate_pair_branches": {
       "forward_sheet_plus": {
         "u_value": 1.000001,
@@ -101,10 +115,10 @@
     "baryon_dark_matter_remnant_scales": {
       "planck_Omega_c_over_Omega_b": 5.3643,
       "visible_baryon_to_photon_eta_B": 6.12e-10,
-      "visible_pair_annihilation_completion": 0.9999999994,
+      "eta_B_interpretation": "The baryon-to-photon ratio does not determine the fraction of initial visible pairs annihilated.",
       "cogenesis_equal_charge_particle_mass_GeV": 5.033,
-      "audit_distinction": "Collisionless 5.03 GeV ADM particles would form cold dwarf cusps (sigma_J = 0), failing galactic RAR without MOND; storing the conserved cogenesis/Bogoliubov Noether charge in the coherent P(Q, Y) condensate keeps linear dust scaling while preserving galactic phonons and the Wave-10 Dark-WHIM Jeans floor."
+      "audit_distinction": "The mass ratio is an equal-number benchmark, not a cogenesis mechanism. Shift symmetry permits derivative portals such as (partial_phi)^2 F_mu_nu F^mu_nu. No portal coefficient, conversion rate or relic abundance is derived."
     }
   },
-  "sha256_canonical": "9a79b9e2184fcc70cb0e6b250615b57c7492af36d0a605f563bafa0ea87942f5"
+  "sha256_canonical": "4786fa9822b8b99edfd2c11ac922ca589065403e4881f5bf72d415481644692b"
 }

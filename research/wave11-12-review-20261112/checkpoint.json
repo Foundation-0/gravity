@@ -1,0 +1,18 @@
+{
+  "status": "complete; no blocking issue in correction commit; inherited global manifest mismatches recorded",
+  "reviewed_commit": "e5d7ee813e33de03c91857e48a2d55a0caf55506",
+  "files": [
+    {
+      "path": "REVIEW.md",
+      "sha256": "8aed8f4fbbbd8862bf29c70fe8f429d09c7c9c0897b77f431beabf30ea44d0a4"
+    },
+    {
+      "path": "check.py",
+      "sha256": "eab27a99be552ffe9ea0db7cbcc9c54a7ed1fc9f17d88709ffba518b46085865"
+    },
+    {
+      "path": "evidence.json",
+      "sha256": "691e9a7fbccaafc339db65a20b43b4dc655b92d94bc8591f1489ab8f9bcf99a4"
+    }
+  ]
+}

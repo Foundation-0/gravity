@@ -54,3 +54,20 @@ The update on main changes documentation and the manifest only. All Python and L
 The unchanged long Wave 7 check was not rerun. Its earlier result remains historical evidence, not a new run.
 
 This update adds no proof compilation or physical validation result. Recompute the manifest whenever any listed file changes.
+
+## Update to main `b7550b10`
+
+This branch merges main at `b7550b10a9f70c546e5004e98fff3e6065717825`, after #21 and #23 through #26. Main's manifest has 39 entries: the 36 above plus `test_wave11_12_corrections.py`, `WAVE11_12_CORRECTIONS.md` and `research/wave11-12-review-20261112/README.md`. The regenerated manifest keeps main's 39 paths in main's order and hashes each one from the merged tree. `SHA256SUMS` and this note stay excluded.
+
+On main, `sha256sum -c SHA256SUMS` failed on six entries. Five lines change here, and the Wave 4 line is unchanged because main's manifest already records the repaired certificate:
+
+| File | Main manifest | Merged file | Cause |
+| --- | --- | --- | --- |
+| `verify_all.py` | `1e907f6af0b1` | `49bd79489023` | No committed version of the file has the manifest digest. The file last changed at `fab0101`. |
+| `wave5_unified_forces_stochastic_qm.py` | `290a9bbb1ddd` | `effc8ef25d44` | The manifest digest is the `102a1ae` version. `942a9f2` changed the file without updating the manifest. |
+| `formal/verify_exact_rational_proofs.py` | `606431af2e13` | `d0acfe8ea3ab` | No committed version of the file has the manifest digest. The file last changed at `d286264`. |
+| `formal/GravityClaims.lean` | `db6e4a202d35` | `c2e635f3af90` | No committed version of the file has the manifest digest. The file last changed at `86d1ee6`. |
+| `formal/Wave12QuasarCollapse.lean` | `643bb2ed80cc` | `40b210c201e7` | The manifest digest is the `ecc4823` version. The chirp-mass bound fix `c326de3` changed the file without updating the manifest. |
+| `results/wave4_unified_certificates.json` | `7bb2326b36aa` | `7bb2326b36aa` | Main still has the `sha_26_canonical` key (`824d1a5d68f1`). The manifest digest is the repaired file from `0bf72bf`, which this branch carries. |
+
+The README line already matched main's README and is unchanged. All 39 entries pass on the merged tree.

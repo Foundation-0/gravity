@@ -1,0 +1,110 @@
+{
+  "schema": "FOUNDATION-0/GRAVITY-WAVE11-MACHIAN-PAIRING/1.0",
+  "claim_c28_machian_inertia_and_horizon_induction": {
+    "epistemic_status": "COMPUTED (KNOWN MACHIAN & UNRUH-DE SITTER IDENTITIES; MODIFIED INERTIA VS GRAVITY OPEN)",
+    "hubble_radius_Mpc": 4450.6,
+    "hubble_critical_mass_Msun": 4.65e+22,
+    "sciama_compactness_GMH_over_RH_c2": 0.5,
+    "sciama_potential_integral_over_c2": 0.75,
+    "frame_dragging_induction_partition": {
+      "gravitomagnetic_K_gm": 0.666667,
+      "gravitoelectric_K_ge": 0.333333,
+      "total_inertial_coefficient_K_tot": 1.0
+    },
+    "horizon_acceleration_benchmarks_m_s2": {
+      "empirical_sparc_a0": 1.2e-10,
+      "milgrom_cH0_over_2pi": 1.0416e-10,
+      "unruh_desitter_cH_Lambda_over_2pi": 8.6195e-11,
+      "verlinde_cH0_over_6": 1.0907e-10
+    },
+    "audit_caveats": {
+      "linear_sciama_ppn_gamma": 0,
+      "gr_and_aest_ppn_gamma": 1,
+      "earth_1AU_acceleration_over_a0": 49420000.0,
+      "uds_1AU_naive_relative_offset": -4.047e-08,
+      "note": "Linearized vector Sciama/Treder models give PPN gamma=0 (half GR light bending); AeST restores Phi=Psi (gamma=1). Time-local F=m*mu(a/a0)*a violates momentum conservation on multi-body orbits unless formulated non-locally (Milgrom 1994)."
+    }
+  },
+  "claim_c29_zero_energy_and_desi_turnaround": {
+    "epistemic_status": "COMPUTED (FRIEDMANN & ADM HAMILTONIAN IDENTITIES UNDER STATED EOS INPUTS)",
+    "adm_hamiltonian_constraint": "H_grav + H_matter = 0 identically in GR and 3+1D AeST (Bataki et al. 2024 Eq. 43a)",
+    "desi_thawing_eos_inputs": {
+      "w0": -0.75,
+      "wa": -0.85
+    },
+    "future_deceleration_onset_scale_factor_a_slow": 1.3897,
+    "closed_universe_recollapse_turnarounds": [
+      {
+        "Omega_k": -0.001,
+        "turnaround_scale_factor_a_max": 315.18,
+        "asymptotic_matter_curvature_ratio_Omega_m_over_abs_Omega_k": 315.18
+      },
+      {
+        "Omega_k": -0.004,
+        "turnaround_scale_factor_a_max": 78.8,
+        "asymptotic_matter_curvature_ratio_Omega_m_over_abs_Omega_k": 78.8
+      },
+      {
+        "Omega_k": -0.01,
+        "turnaround_scale_factor_a_max": 31.52,
+        "asymptotic_matter_curvature_ratio_Omega_m_over_abs_Omega_k": 31.52
+      }
+    ],
+    "machian_a0_redshift_evolution_tracks": [
+      {
+        "z": 0.0,
+        "a0_H_z_over_a0_z0_LCDM": 1.0,
+        "a0_H_z_over_a0_z0_DESI": 1.0,
+        "a0_sqrt_rhoDE_over_a0_z0_DESI": 1.0
+      },
+      {
+        "z": 0.5,
+        "a0_H_z_over_a0_z0_LCDM": 1.3223,
+        "a0_H_z_over_a0_z0_DESI": 1.355,
+        "a0_sqrt_rhoDE_over_a0_z0_DESI": 1.0619
+      },
+      {
+        "z": 1.0,
+        "a0_H_z_over_a0_z0_LCDM": 1.7906,
+        "a0_H_z_over_a0_z0_DESI": 1.7959,
+        "a0_sqrt_rhoDE_over_a0_z0_DESI": 1.0138
+      },
+      {
+        "z": 2.0,
+        "a0_H_z_over_a0_z0_LCDM": 3.0323,
+        "a0_H_z_over_a0_z0_DESI": 3.0048,
+        "a0_sqrt_rhoDE_over_a0_z0_DESI": 0.8704
+      }
+    ]
+  },
+  "claim_c30_cpt_pair_bifurcation_and_noether_remnant": {
+    "epistemic_status": "COMPUTED (KINETIC MEXICAN-HAT & COGENESIS ALGEBRA) & CONJECTURE (COSMOLOGICAL CPT PAIR-CREATION ORIGIN OF CONDENSATE CHARGE)",
+    "unbroken_creation_state_u0": {
+      "w_u0_exact": -1.0
+    },
+    "cpt_conjugate_pair_branches": {
+      "forward_sheet_plus": {
+        "u_value": 1.000001,
+        "noether_charge_J0_dimless": 8e-06,
+        "dust_energy_density_dimless": 8e-06,
+        "dust_equation_of_state_w_dust": 5e-07
+      },
+      "cpt_conjugate_sheet_minus": {
+        "u_value": -1.000001,
+        "noether_charge_J0_dimless": -8e-06,
+        "dust_energy_density_dimless": 8e-06,
+        "dust_equation_of_state_w_dust": 5e-07
+      }
+    },
+    "global_net_noether_charge_sum": 0.0,
+    "both_sheets_positive_dust_gravity": true,
+    "baryon_dark_matter_remnant_scales": {
+      "planck_Omega_c_over_Omega_b": 5.3643,
+      "visible_baryon_to_photon_eta_B": 6.12e-10,
+      "visible_pair_annihilation_completion": 0.9999999994,
+      "cogenesis_equal_charge_particle_mass_GeV": 5.033,
+      "audit_distinction": "Collisionless 5.03 GeV ADM particles would form cold dwarf cusps (sigma_J = 0), failing galactic RAR without MOND; storing the conserved cogenesis/Bogoliubov Noether charge in the coherent P(Q, Y) condensate keeps linear dust scaling while preserving galactic phonons and the Wave-10 Dark-WHIM Jeans floor."
+    }
+  },
+  "sha256_canonical": "9a79b9e2184fcc70cb0e6b250615b57c7492af36d0a605f563bafa0ea87942f5"
+}

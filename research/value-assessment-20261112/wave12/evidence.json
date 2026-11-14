@@ -1,0 +1,256 @@
+{
+  "CPT": {
+    "J_at_u0": 0,
+    "J_at_u1p000001": 8.000011999701467e-06,
+    "P_double_prime_at_u0_in_K2_over_Q02": -4,
+    "homogeneous_current_conservation": "a^3 P_Q=constant on each smooth source-free sheet",
+    "kinetic_degeneracy_abs_u": 0.5773502691896258
+  },
+  "chirp": {
+    "Python_Msun": 647351308.2849301,
+    "correct_bounds_true": true,
+    "correct_middle": 2160000000000000,
+    "left": 2154145352572133,
+    "right": 2170844073787392,
+    "source_lower_bound_true": false,
+    "source_middle": 540000000000000
+  },
+  "future_counterexample": {
+    "dw_da_at_1": 0.85,
+    "for_a_at_most_1": "identical to original CPL, hence identical past distances and expansion",
+    "formula_for_a_greater_than_1": "w=-1+[0.25+1.10(a-1)] exp[-(a-1)]",
+    "min_H2_on_1_to_1e5": 0.11556546484404903,
+    "note": "This deliberately mirrors the source Omega_L normalization; re-normalizing for curvature does not restore a turnaround.",
+    "rows": [
+      {
+        "H2_over_H02_Omega_k_minus0p004": 0.996,
+        "a": 1,
+        "deceleration_sign_term": -0.540839124059896,
+        "rho_DE_over_rho0": 1.0,
+        "w_alt": -0.75
+      },
+      {
+        "H2_over_H02_Omega_k_minus0p004": 0.591889441722337,
+        "a": 1.3897,
+        "deceleration_sign_term": -0.17853049849797203,
+        "rho_DE_over_rho0": 0.695842742216995,
+        "w_alt": -0.5403639408481395
+      },
+      {
+        "H2_over_H02_Omega_k_minus0p004": 0.31563696607110603,
+        "a": 2,
+        "deceleration_sign_term": -0.10201860479923727,
+        "rho_DE_over_rho0": 0.4048365948314456,
+        "w_alt": -0.5033627544185528
+      },
+      {
+        "H2_over_H02_Omega_k_minus0p004": 0.11557159892533204,
+        "a": 31.52,
+        "deceleration_sign_term": -0.23112105581203618,
+        "rho_DE_over_rho0": 0.1687538345757748,
+        "w_alt": -0.9999999999981184
+      },
+      {
+        "H2_over_H02_Omega_k_minus0p004": 0.11556556025310184,
+        "a": 78.8,
+        "deceleration_sign_term": -0.23113047643234155,
+        "rho_DE_over_rho0": 0.16875383457574386,
+        "w_alt": -1.0
+      },
+      {
+        "H2_over_H02_Omega_k_minus0p004": 0.11556553008893036,
+        "a": 315.18,
+        "deceleration_sign_term": -0.23113111051059723,
+        "rho_DE_over_rho0": 0.16875383457574386,
+        "w_alt": -1.0
+      },
+      {
+        "H2_over_H02_Omega_k_minus0p004": 0.11556555660382162,
+        "a": 1000,
+        "deceleration_sign_term": -0.2311311202620954,
+        "rho_DE_over_rho0": 0.16875383457574386,
+        "w_alt": -1.0
+      }
+    ],
+    "w_at_1": -0.75
+  },
+  "growth": {
+    "critical_epsilon_for_duty1_pureH_lambda1": 0.08976733341003718,
+    "note": "Constant efficiency, no delay or mergers, retained fuel, and time-averaged lambda*duty are assumed. Current lambda is not a history.",
+    "rows": [
+      {
+        "composition": "pure_H",
+        "epsilon": 0.057190958417936644,
+        "required_duty_z20_lambda1": 0.6150886722093295,
+        "required_duty_z20_lambda1p23": 0.5000720912270972,
+        "time_Myr_at_lambda1": 451.53646631100156
+      },
+      {
+        "composition": "primordial_fully_ionized",
+        "epsilon": 0.057190958417936644,
+        "required_duty_z20_lambda1": 0.5397403098636867,
+        "required_duty_z20_lambda1p23": 0.43881326005177784,
+        "time_Myr_at_lambda1": 396.2232491879039
+      },
+      {
+        "composition": "pure_H",
+        "epsilon": 0.1,
+        "required_duty_z20_lambda1": 1.1266566479419546,
+        "required_duty_z20_lambda1p23": 0.915981014586955,
+        "time_Myr_at_lambda1": 827.0784108740284
+      },
+      {
+        "composition": "primordial_fully_ionized",
+        "epsilon": 0.1,
+        "required_duty_z20_lambda1": 0.9886412085690652,
+        "required_duty_z20_lambda1p23": 0.8037733403000531,
+        "time_Myr_at_lambda1": 725.7613055419598
+      },
+      {
+        "composition": "pure_H",
+        "epsilon": 0.2,
+        "required_duty_z20_lambda1": 2.534977457869398,
+        "required_duty_z20_lambda1p23": 2.060957282820649,
+        "time_Myr_at_lambda1": 1860.9264244665637
+      },
+      {
+        "composition": "primordial_fully_ionized",
+        "epsilon": 0.2,
+        "required_duty_z20_lambda1": 2.224442719280397,
+        "required_duty_z20_lambda1p23": 1.8084900156751194,
+        "time_Myr_at_lambda1": 1632.9629374694096
+      }
+    ],
+    "window_z20_Myr": 734.0997919684218
+  },
+  "infall": {
+    "assumptions": "Static point baryon mass, initially resting radial test particle, fixed a0, no angular momentum, pressure, expansion, feedback, or external field. Counterexample to exactness, not a realistic gas solution.",
+    "deep_MOND_exact_over_shortcut": 1.1283791670955126,
+    "rows": [
+      {
+        "Wave12_outer_acceleration_shortcut_Myr": 384.823182089563,
+        "direct_radial_time_Myr": 384.8231820843765,
+        "model": "Newton_baryon",
+        "shortcut_fractional_error": 1.3477441385134625e-11
+      },
+      {
+        "Wave12_outer_acceleration_shortcut_Myr": 182.2662699600939,
+        "direct_radial_time_Myr": 200.07513757781376,
+        "model": "MOND_const_a0",
+        "shortcut_fractional_error": -0.08901089777231119
+      },
+      {
+        "Wave12_outer_acceleration_shortcut_Myr": 109.03505807398065,
+        "direct_radial_time_Myr": 121.71667660891077,
+        "model": "MOND_Hubble_a0",
+        "shortcut_fractional_error": -0.10418965492853194
+      },
+      {
+        "Wave12_outer_acceleration_shortcut_Myr": 122.7904118467972,
+        "direct_radial_time_Myr": 127.15620463169661,
+        "model": "two_branch_const_a0",
+        "shortcut_fractional_error": -0.03433409165950474
+      }
+    ]
+  },
+  "source_commit": "70a1204a536b3dca0b3053d1a056daf22601ac00",
+  "source_sha256": {
+    "formal/Wave11MachianZeroEnergy.lean": "781d83ac1bf12407f0a682b8abbe67a4ec101d78751ee0fa611c9a0f8a307573",
+    "formal/Wave12QuasarCollapse.lean": "643bb2ed80cc11f90b07296a83e16c841b60501b89b4045ea471d8eddb24d2c3",
+    "results/wave11_machian_pairing_certificates.json": "9d05bb78b81b45aeda49edf6cfb9f734d761968ec4d06111aa1064cbc73eb359",
+    "results/wave12_cosmic_dawn_quasar_certificates.json": "493be7e0c615633eb77398c668f2d06a04fe21dd7bc6739e9b68649f9901da78",
+    "wave11_machian_pairing_unification.py": "911fbd9f428728daf1fe02de998fec5b519292c7739e0bac13f111a1bea00306",
+    "wave12_cosmic_dawn_quasar_collapse.py": "d0eec3e85d06b501dbe0d0a0e8969baf9b3faaf308e84718ac40b9ac96fb2aaf"
+  },
+  "spectrum_grid": [
+    {
+      "kmax_Mpc_inverse": 50000.0,
+      "nk": 1200,
+      "point": {
+        "Mstar_Msun": 83913.96168856745,
+        "R200_pc": 191.82394058307807,
+        "R_Mpc": 0.007962033709164085,
+        "Tvir_neutral_K": 139.0432709138503,
+        "baryon_budget_Msun": 13126.042395449647,
+        "compactness": 4.1869158104302285e-11,
+        "ftrap_host250_over_sqrt2": 0.9999698959018595,
+        "growth_factor_used": 0.1793055349894796,
+        "sigma_kms": 0.9699242583262915,
+        "status": "root",
+        "z": 6.0783000000000005
+      }
+    },
+    {
+      "kmax_Mpc_inverse": 50000.0,
+      "nk": 12800,
+      "point": {
+        "Mstar_Msun": 83913.94342091963,
+        "R200_pc": 191.82392666337438,
+        "R_Mpc": 0.007962033131399133,
+        "Tvir_neutral_K": 139.04325073450195,
+        "baryon_budget_Msun": 13126.039537976172,
+        "compactness": 4.186915202783183e-11,
+        "ftrap_host250_over_sqrt2": 0.9999698959062285,
+        "growth_factor_used": 0.1793055349894796,
+        "sigma_kms": 0.9699241879437406,
+        "status": "root",
+        "z": 6.0783000000000005
+      }
+    },
+    {
+      "early_seed_epoch": {
+        "endpoint_residuals": [
+          -0.6648790807186162,
+          -1.5154637274159126
+        ],
+        "status": "no_root_in_native_bracket",
+        "z": 20
+      },
+      "kmax_Mpc_inverse": 100000.0,
+      "nk": 12800,
+      "point": {
+        "Mstar_Msun": 83913.94344421639,
+        "R200_pc": 191.82392668112624,
+        "R_Mpc": 0.007962033132135959,
+        "Tvir_neutral_K": 139.0432507602367,
+        "baryon_budget_Msun": 13126.039541620312,
+        "compactness": 4.1869152035581156e-11,
+        "ftrap_host250_over_sqrt2": 0.999969895906223,
+        "growth_factor_used": 0.1793055349894796,
+        "sigma_kms": 0.9699241880334994,
+        "status": "root",
+        "z": 6.0783000000000005
+      },
+      "using_integrated_LCDM_growth": {
+        "Mstar_Msun": 82232.06439395719,
+        "R200_pc": 190.5336984569106,
+        "R_Mpc": 0.007908479646671664,
+        "Tvir_neutral_K": 137.17910162987107,
+        "baryon_budget_Msun": 12862.955600956735,
+        "compactness": 4.130781343820571e-11,
+        "ftrap_host250_over_sqrt2": 0.9999702995110001,
+        "growth_factor_used": 0.1791011484707328,
+        "sigma_kms": 0.9634003743236983,
+        "status": "root",
+        "z": 6.0783000000000005
+      }
+    },
+    {
+      "kmax_Mpc_inverse": 300,
+      "nk": 12800,
+      "point": {
+        "Mstar_Msun": 60221.00068939857,
+        "R200_pc": 171.74102710852904,
+        "R_Mpc": 0.007128452491008821,
+        "Tvir_neutral_K": 111.45318167687253,
+        "baryon_budget_Msun": 9419.927175874736,
+        "compactness": 3.3561141464715565e-11,
+        "ftrap_host250_over_sqrt2": 0.9999758694002434,
+        "growth_factor_used": 0.1793055349894796,
+        "sigma_kms": 0.8683785133185307,
+        "status": "root",
+        "z": 6.0783000000000005
+      }
+    }
+  ]
+}

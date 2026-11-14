@@ -1,0 +1,109 @@
+{
+  "checked_date": "2026-11-12",
+  "scope": "Primary-source reading and synthetic mathematical audit, not independent replication of survey or preprint fits",
+  "sources": [
+    {
+      "id": "RAR2016",
+      "title": "McGaugh, Lelli and Schombert (2016)",
+      "url": "https://arxiv.org/html/1609.05917v1",
+      "location": "Equation 4 and discussion",
+      "use": "Empirical fitting function and separation from physical interpretation"
+    },
+    {
+      "id": "Desmond2023",
+      "title": "Desmond (2023)",
+      "url": "https://arxiv.org/html/2303.11314v2",
+      "location": "Introduction and inference model",
+      "use": "Joint galaxy nuisance inference is prior work; shared radial errors"
+    },
+    {
+      "id": "MUSEIII",
+      "title": "Ciocan et al. MUSE-DARK III (2026)",
+      "url": "https://arxiv.org/html/2604.22613v1",
+      "location": "Sections 2-3, Appendices B-E",
+      "use": "Selected79, low-acceleration emphasis, reconstruction dependence and author checks"
+    },
+    {
+      "id": "MUSEI",
+      "title": "Ciocan et al. MUSE-DARK I (2026)",
+      "url": "https://arxiv.org/html/2506.19721v3",
+      "location": "Section8 and AppendixH",
+      "use": "Published release description includes best-fit parameters and95percent intervals; covariance not established by this description"
+    },
+    {
+      "id": "Alcock2026",
+      "title": "Alcock (2026)",
+      "url": "https://arxiv.org/pdf/2609.38796",
+      "location": "Sections2-4",
+      "use": "Prior comparison of constant,Hubble andmatter-density scalings; sharedcalibration andconfidence caveats"
+    },
+    {
+      "id": "Limbach2008",
+      "title": "Limbach, Psaltis and Ozel (2008)",
+      "url": "https://arxiv.org/abs/0809.2790",
+      "location": "Abstract",
+      "use": "Prior Tully-Fisher comparison of Hubble anddark-energy scalings"
+    },
+    {
+      "id": "DARK",
+      "title": "ANR DARK data releases",
+      "url": "https://dark.univ-lyon1.fr/data-releases/",
+      "location": "Releaseindex",
+      "use": "Official links toMUSEUDF andAMUSED"
+    },
+    {
+      "id": "AMUSED",
+      "title": "AMUSED UDF public data description",
+      "url": "https://amused.univ-lyon1.fr/project/UDF/",
+      "location": "Delivered data products",
+      "use": "Parentcatalogue,cubes,variance andPSF metadata; selected79jointposteriors not identified"
+    },
+    {
+      "id": "RusishviliEarlier",
+      "title": "Rusishvili (2026), Three baryonic systematics",
+      "url": "https://doi.org/10.5281/zenodo.21623517",
+      "location": "Downloaded TeX sections2 andLimitations; ZIP inventory",
+      "use": "Existing calibration critique; acknowledged89vs79sample andgas scaling limits; not replicated"
+    },
+    {
+      "id": "RusishviliLater",
+      "title": "Rusishvili (2026), Baryonic systematics and an ensemble-geometric interpretation",
+      "url": "https://doi.org/10.5281/zenodo.21644662",
+      "location": "DownloadedPDF pages3and9, visualinspectionpage3",
+      "use": "89sample text versus93inbin counts; code/exactselection onrequest; not replicated"
+    }
+  ],
+  "downloaded_artifacts": [
+    {
+      "file": "zenodo-api.json",
+      "bytes": 6989,
+      "sha256": "e762338ef8623869182ec6e31ce0b1f340a5cf96aac04a0600997b5d32a6b741"
+    },
+    {
+      "file": "rusishvili-2026.pdf",
+      "bytes": 369157,
+      "sha256": "00a684f94f286c1436ce3195c20d937af676beb1ae5e205db5a9e4e6c2c45dff"
+    },
+    {
+      "file": "zenodo-earlier-api.json",
+      "bytes": 7829,
+      "sha256": "1dc45850aa8be7dbbb970b7b7e92b4e3d2e14c266c5e0844d49e4679b84ebb96"
+    },
+    {
+      "file": "rusishvili-files.zip",
+      "bytes": 621538,
+      "sha256": "9e873559c198799fc3ed20c7e2951e377f5ea26a3d5a7ea54d8034a5f8da329d"
+    },
+    {
+      "file": "a0z_three_systematics.pdf",
+      "bytes": 453100,
+      "sha256": "a709b28bc3306e97ccdd0cc4d15ede5d16fcd7cddab2b709915fa2c29fd2afe4"
+    },
+    {
+      "file": "a0z_three_systematics.tex",
+      "bytes": 32933,
+      "sha256": "c1143b5c8bca14bf3be64b5e2fa72341131e80bd78450cebe90c2d1346398fcd"
+    }
+  ],
+  "artifact_distribution": "The downloaded_artifacts list records inspected source hashes only. Full papers, images, ZIP archives and API caches are not distributed in this bundle."
+}

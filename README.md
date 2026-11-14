@@ -30,7 +30,7 @@ The [cosmic dawn research note](research/cosmic-dawn-20261112/README.md) disting
 
 ## Repository Layout & Verification Commands
 
-The root audit scripts use only the Python 3 standard library. The separate convergence research probes declare their NumPy and SymPy dependencies in their own reproduction instructions. Each certificate file in `results/*.json` embeds a `sha256_canonical` field equal to the `sha256` checksum of `json.dumps(payload_without_sha_field, sort_keys=True, separators=(",", ":"))` computed by the generator script that writes it (this is a deterministic content checksum for reproducibility, not a cryptographic signature). Raw file digests are recorded in `SHA256SUMS`.
+The root audit scripts use only the Python 3 standard library. The separate convergence research probes declare their NumPy and SymPy dependencies in their own reproduction instructions. The research value assessment pins its NumPy and SciPy dependencies in its own bundle requirements. Each certificate file in `results/*.json` embeds a `sha256_canonical` field equal to the `sha256` checksum of `json.dumps(payload_without_sha_field, sort_keys=True, separators=(",", ":"))` computed by the generator script that writes it (this is a deterministic content checksum for reproducibility, not a cryptographic signature). Raw file digests are recorded in `SHA256SUMS`.
 
 | Script / Config | Output / Target | Verification Command |
 |---|---|---|
@@ -62,3 +62,7 @@ The root audit scripts use only the Python 3 standard library. The separate conv
 The [AeST response benchmark](research/aest-response-gate-20261112/README.md) constructs allowed field preparations on a specified expanding background and a flat-space control. It includes the canonical map, executable response checks and a bounded pressure-closure comparison.
 
 A separate Astra agent reproduced the scalar constraint and kinetic structure from an independent ADM action. A separately declared slow-subspace test and its independent five-field replay are complete. The simple zero-pressure closure still fails for this specified benchmark.
+
+## Research value assessment
+
+The [12 November assessment](research/value-assessment-20261112/) records the Wave 11/12 audit, bounded research directions, reproducible controls and stopping gates. Its separate NumPy/SciPy dependencies are pinned in [the bundle requirements](research/value-assessment-20261112/requirements.txt).

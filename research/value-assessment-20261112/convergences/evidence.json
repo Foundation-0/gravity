@@ -1,0 +1,913 @@
+{
+  "date": "2026-11-12",
+  "mechanics": {
+    "model": "Unit masses and unstressed unit central springs on original 15 bars. Fixed reference fold; linear periodic internal relaxation; energy per current cell volume.",
+    "claim_scope": "Mathematical extension of a specified framework. No real-material constants, nonlinear stability, or novelty priority.",
+    "mandel_order": [
+      "xx",
+      "yy",
+      "zz",
+      "sqrt(2)yz",
+      "sqrt(2)xz",
+      "sqrt(2)xy"
+    ],
+    "closed_form": {
+      "a": "sqrt(2)*(1-s^2)/(1+s^2)",
+      "t": "2*s/(1+s^2)",
+      "L": "(2+a)I+t*C",
+      "D": "a*I+t*C",
+      "C": [
+        [
+          0.0,
+          -1.0,
+          -1.0
+        ],
+        [
+          1.0,
+          0.0,
+          -1.0
+        ],
+        [
+          1.0,
+          -1.0,
+          0.0
+        ]
+      ],
+      "T": [
+        1,
+        -1,
+        -1
+      ],
+      "M": "D.T*T*L/sqrt(2)",
+      "stress_norm_squared": "(11*a^2+12*t^2+12)/4",
+      "elastic_tensor": "K=mandel(M)*mandel(M).T/(stress_norm_squared*det(L)), 0<s<=1",
+      "sole_modulus_s_to_zero_positive": 0.10337407722827735
+    },
+    "fold_rows": [
+      {
+        "s": 0.0,
+        "zero_modes_at_q0": 6,
+        "self_stresses_at_q0": 3,
+        "mandel_elastic_eigenvalues": [
+          -1.1028172654716534e-19,
+          -5.537898079683794e-21,
+          1.5671780338180016e-19,
+          0.09763107293781736,
+          0.09763107293781757,
+          0.19526214587563495
+        ],
+        "exx_internal_displacement_norm_per_unit_strain": 0.38631388367889224,
+        "unnormalized_supported_stress_principal_values": [
+          -3.4142135623730945,
+          -3.4142135623730945,
+          3.4142135623730945
+        ],
+        "compatibility_smallest_three_singular_values": [
+          1.7337998055879852e-16,
+          8.904196471610197e-17,
+          5.1142797812271926e-17
+        ]
+      },
+      {
+        "s": 1e-05,
+        "zero_modes_at_q0": 4,
+        "self_stresses_at_q0": 1,
+        "mandel_elastic_eigenvalues": [
+          -7.311863998742569e-23,
+          -3.0696697039988763e-23,
+          7.620656313737726e-23,
+          1.2478438253131375e-18,
+          2.0611167434016034e-17,
+          0.10337407727525112
+        ],
+        "exx_internal_displacement_norm_per_unit_strain": 100418.04595376276,
+        "unnormalized_supported_stress_principal_values": [
+          -3.414281845961485,
+          -3.414145278219023,
+          3.4142135622074123
+        ],
+        "compatibility_smallest_three_singular_values": [
+          1.9436506314381085e-05,
+          1.4142135622988393e-05,
+          2.309795608914136e-16
+        ]
+      },
+      {
+        "s": 0.001,
+        "zero_modes_at_q0": 4,
+        "self_stresses_at_q0": 1,
+        "mandel_elastic_eigenvalues": [
+          -9.212648790070461e-18,
+          -5.600597000297505e-21,
+          -1.079467846760178e-21,
+          1.904665723535437e-21,
+          7.774504122628609e-18,
+          0.10337454805252483
+        ],
+        "exx_internal_displacement_norm_per_unit_strain": 1004.1805937763087,
+        "unnormalized_supported_stress_principal_values": [
+          -3.4210351462519695,
+          -3.407386323987395,
+          3.4142119078622675
+        ],
+        "compatibility_smallest_three_singular_values": [
+          0.0019436489483888645,
+          0.0014142128552667639,
+          1.7908169418078305e-16
+        ]
+      },
+      {
+        "s": 0.01,
+        "zero_modes_at_q0": 4,
+        "self_stresses_at_q0": 1,
+        "mandel_elastic_eigenvalues": [
+          -7.578784888516179e-20,
+          2.2777341779326005e-21,
+          7.974129283911972e-20,
+          2.802549072127684e-18,
+          1.1115497406312549e-17,
+          0.10342091316514564
+        ],
+        "exx_internal_displacement_norm_per_unit_strain": 100.41938860949085,
+        "unnormalized_supported_stress_principal_values": [
+          -3.48180026131955,
+          -3.346063563119385,
+          3.4140502220698417
+        ],
+        "compatibility_smallest_three_singular_values": [
+          0.019434823163154303,
+          0.014141428569978343,
+          1.3133164741436504e-16
+        ]
+      },
+      {
+        "s": 0.1,
+        "zero_modes_at_q0": 4,
+        "self_stresses_at_q0": 1,
+        "mandel_elastic_eigenvalues": [
+          -7.368656765672451e-18,
+          -2.735083161406668e-19,
+          4.467317254735595e-19,
+          2.29683273487258e-18,
+          1.4636286258377357e-17,
+          0.10777950571239722
+        ],
+        "exx_internal_displacement_norm_per_unit_strain": 10.055423705885982,
+        "unnormalized_supported_stress_principal_values": [
+          -4.015122167756785,
+          -2.7594164265344423,
+          3.3999289923141744
+        ],
+        "compatibility_smallest_three_singular_values": [
+          0.19268922429957155,
+          0.14071950894605842,
+          1.4226550255701698e-16
+        ]
+      },
+      {
+        "s": 0.25,
+        "zero_modes_at_q0": 4,
+        "self_stresses_at_q0": 1,
+        "mandel_elastic_eigenvalues": [
+          -1.1693631083374878e-17,
+          -3.77874721718051e-18,
+          -2.5288186858833915e-19,
+          2.5589248172011625e-18,
+          1.4643044526272497e-17,
+          0.12724099395331015
+        ],
+        "exx_internal_displacement_norm_per_unit_strain": 4.058684917345553,
+        "unnormalized_supported_stress_principal_values": [
+          -4.518290415268604,
+          -2.0010871845116474,
+          3.3404581550542147
+        ],
+        "compatibility_smallest_three_singular_values": [
+          0.46033858949872103,
+          0.34299717028501736,
+          2.1458312993042827e-16
+        ]
+      },
+      {
+        "s": 0.5,
+        "zero_modes_at_q0": 4,
+        "self_stresses_at_q0": 1,
+        "mandel_elastic_eigenvalues": [
+          -1.004449325242634e-17,
+          -5.1297782405769106e-18,
+          -2.958210941476821e-18,
+          1.0462843443612989e-18,
+          2.951168931007655e-17,
+          0.1684543982952124
+        ],
+        "exx_internal_displacement_norm_per_unit_strain": 2.1931735580616154,
+        "unnormalized_supported_stress_principal_values": [
+          -4.253036072312181,
+          -1.498284868913206,
+          3.1371073788522916
+        ],
+        "compatibility_smallest_three_singular_values": [
+          0.785988233395646,
+          0.6324555320336757,
+          9.068942265390995e-17
+        ]
+      },
+      {
+        "s": 0.75,
+        "zero_modes_at_q0": 4,
+        "self_stresses_at_q0": 1,
+        "mandel_elastic_eigenvalues": [
+          -1.8369952349017492e-17,
+          -8.959724760465274e-18,
+          -2.7559943539261503e-18,
+          9.078308943008108e-19,
+          1.7219027966348204e-17,
+          0.18621827189483334
+        ],
+        "exx_internal_displacement_norm_per_unit_strain": 1.7365081788038617,
+        "unnormalized_supported_stress_principal_values": [
+          -3.2177889727097435,
+          -1.5383301479211913,
+          2.78190555825784
+        ],
+        "compatibility_smallest_three_singular_values": [
+          0.9400849364027771,
+          0.8485281374238571,
+          1.8804698646404754e-16
+        ]
+      },
+      {
+        "s": 1.0,
+        "zero_modes_at_q0": 4,
+        "self_stresses_at_q0": 1,
+        "mandel_elastic_eigenvalues": [
+          -8.658047042247523e-18,
+          -6.531287864306274e-18,
+          -7.386617549932892e-19,
+          4.3720219234814085e-18,
+          1.0090717073410632e-17,
+          0.18055555555555547
+        ],
+        "exx_internal_displacement_norm_per_unit_strain": 1.5184055965240504,
+        "unnormalized_supported_stress_principal_values": [
+          -2.1213203435596424,
+          -1.6774562105657165,
+          2.3845629917522633
+        ],
+        "compatibility_smallest_three_singular_values": [
+          0.9999999999999998,
+          0.9999999999999998,
+          7.625666985044943e-17
+        ]
+      }
+    ],
+    "max_formula_matrix_error": 3.384653668447868e-13,
+    "max_self_stress_force_error": 2.220446049250313e-16,
+    "bloch_grid": [
+      {
+        "s": 0.0,
+        "sampled_wavevectors": 216,
+        "zero_mode_count_histogram": {
+          "6": 1,
+          "5": 15,
+          "4": 75,
+          "3": 125
+        }
+      },
+      {
+        "s": 0.1,
+        "sampled_wavevectors": 216,
+        "zero_mode_count_histogram": {
+          "4": 1,
+          "3": 215
+        }
+      },
+      {
+        "s": 0.5,
+        "sampled_wavevectors": 216,
+        "zero_mode_count_histogram": {
+          "4": 1,
+          "3": 215
+        }
+      },
+      {
+        "s": 1.0,
+        "sampled_wavevectors": 216,
+        "zero_mode_count_histogram": {
+          "4": 1,
+          "3": 215
+        }
+      }
+    ],
+    "finite_length_checks": [
+      {
+        "s": 0.1,
+        "strain_size": 1e-05,
+        "relative_energy_hessian_error": 3.197457694573648e-07
+      },
+      {
+        "s": 0.01,
+        "strain_size": 1e-07,
+        "relative_energy_hessian_error": 2.9065402292639417e-07
+      },
+      {
+        "s": 0.001,
+        "strain_size": 1e-09,
+        "relative_energy_hessian_error": 3.058775289702993e-07
+      }
+    ],
+    "weak_spring_control": {
+      "extra_bonds": 21,
+      "scope": "FCC endpoint nonbar contacts continued to each reference geometry, positive eta, rest lengths reset at each s. Sensitivity control only; not a material model or bend-energy law.",
+      "rows": [
+        {
+          "s": 0.0,
+          "extra_spring_stiffness": 1e-08,
+          "mandel_elastic_eigenvalues": [
+            2.524531043046067e-09,
+            6.117234494532752e-09,
+            1.1205320657935521e-08,
+            0.09763107614241096,
+            0.09763108222811478,
+            0.19526214954532328
+          ]
+        },
+        {
+          "s": 0.0,
+          "extra_spring_stiffness": 1e-06,
+          "mandel_elastic_eigenvalues": [
+            2.524530494226587e-07,
+            6.117205480028428e-07,
+            1.1205289011499094e-06,
+            0.09763139339704507,
+            0.09763200197001182,
+            0.19526251284549984
+          ]
+        },
+        {
+          "s": 0.0,
+          "extra_spring_stiffness": 0.0001,
+          "mandel_elastic_eigenvalues": [
+            2.5244761660589502e-05,
+            6.114303800455101e-05,
+            0.0001120212508755991,
+            0.09766311774790283,
+            0.09772400084508283,
+            0.19529885322761834
+          ]
+        },
+        {
+          "s": 0.001,
+          "extra_spring_stiffness": 1e-08,
+          "mandel_elastic_eigenvalues": [
+            2.5288416862724425e-09,
+            6.112694275289458e-09,
+            1.1218701159258048e-08,
+            0.00116514646763495,
+            0.0025025589219834256,
+            0.10344580183242297
+          ]
+        },
+        {
+          "s": 0.001,
+          "extra_spring_stiffness": 1e-06,
+          "mandel_elastic_eigenvalues": [
+            2.528841141766072e-07,
+            6.11266543264083e-07,
+            1.1218669448328491e-06,
+            0.053467069942419745,
+            0.08889624817058063,
+            0.12461387628184235
+          ]
+        },
+        {
+          "s": 0.001,
+          "extra_spring_stiffness": 0.0001,
+          "mandel_elastic_eigenvalues": [
+            2.5287867217920976e-05,
+            6.1097817061697e-05,
+            0.00011215499499126117,
+            0.09704776046257808,
+            0.09769961032974091,
+            0.19500775478811683
+          ]
+        },
+        {
+          "s": 0.01,
+          "extra_spring_stiffness": 1e-08,
+          "mandel_elastic_eigenvalues": [
+            2.5680886350746582e-09,
+            6.069450998277055e-09,
+            1.1341258870936553e-08,
+            1.2148467449180663e-05,
+            2.6500125441387462e-05,
+            0.10342167389819805
+          ]
+        },
+        {
+          "s": 0.01,
+          "extra_spring_stiffness": 1e-06,
+          "mandel_elastic_eigenvalues": [
+            2.568088082314887e-07,
+            6.069423713675526e-07,
+            1.13412267272903e-06,
+            0.0012003487023016868,
+            0.0026129131773679794,
+            0.10349788976634897
+          ]
+        },
+        {
+          "s": 0.01,
+          "extra_spring_stiffness": 0.0001,
+          "mandel_elastic_eigenvalues": [
+            2.568032804970789e-05,
+            6.066695742277672e-05,
+            0.00011338013370410438,
+            0.05473497070863507,
+            0.09040122998634714,
+            0.12861822636887665
+          ]
+        },
+        {
+          "s": 0.1,
+          "extra_spring_stiffness": 1e-08,
+          "mandel_elastic_eigenvalues": [
+            3.008633444818332e-09,
+            5.559622289565329e-09,
+            1.2598293833276191e-08,
+            1.6267086206257127e-07,
+            4.012976132857365e-07,
+            0.10777952305421079
+          ]
+        },
+        {
+          "s": 0.1,
+          "extra_spring_stiffness": 1e-06,
+          "mandel_elastic_eigenvalues": [
+            3.008632771392544e-07,
+            5.55960575447812e-07,
+            1.2598264749124289e-06,
+            1.626492636716264e-05,
+            4.0124350718783514e-05,
+            0.10778124012457746
+          ]
+        },
+        {
+          "s": 0.1,
+          "extra_spring_stiffness": 0.0001,
+          "mandel_elastic_eigenvalues": [
+            3.0085653743535527e-05,
+            5.5579522282672796e-05,
+            0.00012595356541389115,
+            0.0016051859957901134,
+            0.003958934559328287,
+            0.10795530670775319
+          ]
+        },
+        {
+          "s": 0.5,
+          "extra_spring_stiffness": 1e-08,
+          "mandel_elastic_eigenvalues": [
+            5.9377697584803385e-09,
+            6.221806722779956e-09,
+            1.5858399041497825e-08,
+            1.9380112396000123e-08,
+            5.96605653894815e-08,
+            0.16845440541195286
+          ]
+        },
+        {
+          "s": 0.5,
+          "extra_spring_stiffness": 1e-06,
+          "mandel_elastic_eigenvalues": [
+            5.937762118137785e-07,
+            6.221803655467574e-07,
+            1.5858382510442626e-06,
+            1.937999969055106e-06,
+            5.966031072089321e-06,
+            0.16845510996896543
+          ]
+        },
+        {
+          "s": 0.5,
+          "extra_spring_stiffness": 0.0001,
+          "mandel_elastic_eigenvalues": [
+            5.936998121009329e-05,
+            6.221496532132439e-05,
+            0.00015856729135138966,
+            0.0001936873741477403,
+            0.0005963485470694239,
+            0.16852556284562728
+          ]
+        },
+        {
+          "s": 1.0,
+          "extra_spring_stiffness": 1e-08,
+          "mandel_elastic_eigenvalues": [
+            1.023781921000916e-08,
+            1.2427356440160276e-08,
+            1.97970725686262e-08,
+            2.0512180351554298e-08,
+            3.668582649598481e-08,
+            0.1805555668536326
+          ]
+        },
+        {
+          "s": 1.0,
+          "extra_spring_stiffness": 1e-06,
+          "mandel_elastic_eigenvalues": [
+            1.023780545476633e-06,
+            1.2427331876924994e-06,
+            1.9797043856270098e-06,
+            2.0512151645477422e-06,
+            3.668578802383456e-06,
+            0.18055668536326305
+          ]
+        },
+        {
+          "s": 1.0,
+          "extra_spring_stiffness": 0.0001,
+          "mandel_elastic_eigenvalues": [
+            0.00010236429737975932,
+            0.00012424878261644721,
+            0.00019794174315985858,
+            0.00020509281088642046,
+            0.0003668193996629412,
+            0.18066853648113582
+          ]
+        }
+      ],
+      "open_state_rotation_rank_certificate": {
+        "selected_extra_bonds": [
+          [
+            0,
+            1,
+            [
+              0,
+              1,
+              1
+            ]
+          ],
+          [
+            0,
+            2,
+            [
+              1,
+              0,
+              0
+            ]
+          ],
+          [
+            0,
+            3,
+            [
+              0,
+              1,
+              1
+            ]
+          ]
+        ],
+        "integer_torque_rows": [
+          [
+            0,
+            2,
+            -2
+          ],
+          [
+            0,
+            0,
+            -1
+          ],
+          [
+            -1,
+            1,
+            -1
+          ]
+        ],
+        "exact_integer_determinant": 2
+      },
+      "limit_tensor_distance_frobenius": 0.21318848803387838,
+      "cubic_limit_tensor": [
+        [
+          0.13017476391709,
+          0.0325436909792725,
+          0.0325436909792725,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0325436909792725,
+          0.13017476391709,
+          0.0325436909792725,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0325436909792725,
+          0.0325436909792725,
+          0.13017476391709,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "fold_limit_tensor": [
+        [
+          0.034458025742759114,
+          -0.034458025742759114,
+          -0.034458025742759114,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          -0.034458025742759114,
+          0.034458025742759114,
+          0.034458025742759114,
+          -0.0,
+          -0.0,
+          -0.0
+        ],
+        [
+          -0.034458025742759114,
+          0.034458025742759114,
+          0.034458025742759114,
+          -0.0,
+          -0.0,
+          -0.0
+        ],
+        [
+          0.0,
+          -0.0,
+          -0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          -0.0,
+          -0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          -0.0,
+          -0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "simultaneous_limit_paths": [
+        {
+          "path": "eta=s",
+          "s": 0.01,
+          "eta": 0.01,
+          "distance_to_cubic_tensor": 0.023929455067157764,
+          "distance_to_fold_limit_tensor": 0.22711692703202502,
+          "exx_internal_displacement_norm_per_unit_strain": 1.865323734091539
+        },
+        {
+          "path": "eta=s^4",
+          "s": 0.01,
+          "eta": 1e-08,
+          "distance_to_cubic_tensor": 0.21319722797487653,
+          "distance_to_fold_limit_tensor": 0.004129364707359731,
+          "exx_internal_displacement_norm_per_unit_strain": 100.40538359977263
+        },
+        {
+          "path": "eta=s",
+          "s": 0.001,
+          "eta": 0.001,
+          "distance_to_cubic_tensor": 0.002405077372067021,
+          "distance_to_fold_limit_tensor": 0.21450047054351967,
+          "exx_internal_displacement_norm_per_unit_strain": 1.8911177890921789
+        },
+        {
+          "path": "eta=s^4",
+          "s": 0.001,
+          "eta": 1.0000000000000002e-12,
+          "distance_to_cubic_tensor": 0.21318858827325324,
+          "distance_to_fold_limit_tensor": 0.00041343932938278747,
+          "exx_internal_displacement_norm_per_unit_strain": 1004.1792155586788
+        },
+        {
+          "path": "eta=s",
+          "s": 0.0001,
+          "eta": 0.0001,
+          "distance_to_cubic_tensor": 0.00024063440794038545,
+          "distance_to_fold_limit_tensor": 0.21331881304999883,
+          "exx_internal_displacement_norm_per_unit_strain": 1.893735893419912
+        },
+        {
+          "path": "eta=s^4",
+          "s": 0.0001,
+          "eta": 1.0000000000000002e-16,
+          "distance_to_cubic_tensor": 0.21318848904902196,
+          "distance_to_fold_limit_tensor": 4.134906008463649e-05,
+          "exx_internal_displacement_norm_per_unit_strain": 10041.804471435997
+        }
+      ],
+      "fixed_eta_response": [
+        {
+          "s": 0.0,
+          "eta": 1e-06,
+          "exx_internal_displacement_norm_per_unit_strain": 2.615892886179173
+        },
+        {
+          "s": 1e-06,
+          "eta": 1e-06,
+          "exx_internal_displacement_norm_per_unit_strain": 1.8940243244220627
+        },
+        {
+          "s": 1e-05,
+          "eta": 1e-06,
+          "exx_internal_displacement_norm_per_unit_strain": 4.758202501164189
+        },
+        {
+          "s": 0.0001,
+          "eta": 1e-06,
+          "exx_internal_displacement_norm_per_unit_strain": 70.2067149441789
+        },
+        {
+          "s": 0.001,
+          "eta": 1e-06,
+          "exx_internal_displacement_norm_per_unit_strain": 422.3974655802501
+        },
+        {
+          "s": 0.01,
+          "eta": 1e-06,
+          "exx_internal_displacement_norm_per_unit_strain": 99.03749185261711
+        },
+        {
+          "s": 0.1,
+          "eta": 1e-06,
+          "exx_internal_displacement_norm_per_unit_strain": 10.053825425158747
+        }
+      ]
+    }
+  },
+  "photons": {
+    "claim_class": "Reimplementation of Riedel and Zurek 2011 Eqs. 18, 21, 25, 27; not a new physics result.",
+    "assumptions": "Dipole scattering, wavelength much larger than sphere and separation, elastic scattering, negligible recoil, initially independent photons, uniform blackbody cap, arbitrary photon-subset access. No measured illumination map.",
+    "rate_convention": "tau_D inverse governs squared coherence; visibility amplitude decays at half this rate. Redundancy rate alpha/tau_D is an asymptotic information-rate parameter, not a count of detected bits per second.",
+    "rows": [
+      {
+        "sky_fraction": 0.01,
+        "separation_angle_degrees": 0.0,
+        "decoherence_rate_over_isotropic": 0.020672200000000033,
+        "receptivity_alpha": 0.9999992886502598,
+        "redundancy_rate_over_isotropic_decoherence": 0.020672185294835933
+      },
+      {
+        "sky_fraction": 0.01,
+        "separation_angle_degrees": 45.0,
+        "decoherence_rate_over_isotropic": 0.012668050000000014,
+        "receptivity_alpha": 0.999828713415604,
+        "redundancy_rate_over_isotropic_decoherence": 0.012665880132984555
+      },
+      {
+        "sky_fraction": 0.01,
+        "separation_angle_degrees": 90.0,
+        "decoherence_rate_over_isotropic": 0.004663900000000003,
+        "receptivity_alpha": 0.9990726583188254,
+        "redundancy_rate_over_isotropic_decoherence": 0.004659574971133173
+      },
+      {
+        "sky_fraction": 0.25,
+        "separation_angle_degrees": 0.0,
+        "decoherence_rate_over_isotropic": 0.353125,
+        "receptivity_alpha": 0.9886917519358408,
+        "redundancy_rate_over_isotropic_decoherence": 0.3491317749023438
+      },
+      {
+        "sky_fraction": 0.25,
+        "separation_angle_degrees": 45.0,
+        "decoherence_rate_over_isotropic": 0.27578125,
+        "receptivity_alpha": 0.9293001947592068,
+        "redundancy_rate_over_isotropic_decoherence": 0.2562835693359375
+      },
+      {
+        "sky_fraction": 0.25,
+        "separation_angle_degrees": 90.0,
+        "decoherence_rate_over_isotropic": 0.1984374999999999,
+        "receptivity_alpha": 0.8236112819881892,
+        "redundancy_rate_over_isotropic_decoherence": 0.16343536376953122
+      },
+      {
+        "sky_fraction": 0.5,
+        "separation_angle_degrees": 0.0,
+        "decoherence_rate_over_isotropic": 0.5000000000000002,
+        "receptivity_alpha": 0.8867187499999996,
+        "redundancy_rate_over_isotropic_decoherence": 0.44335937499999994
+      },
+      {
+        "sky_fraction": 0.5,
+        "separation_angle_degrees": 45.0,
+        "decoherence_rate_over_isotropic": 0.5,
+        "receptivity_alpha": 0.7109374999999999,
+        "redundancy_rate_over_isotropic_decoherence": 0.35546874999999994
+      },
+      {
+        "sky_fraction": 0.5,
+        "separation_angle_degrees": 90.0,
+        "decoherence_rate_over_isotropic": 0.4999999999999998,
+        "receptivity_alpha": 0.53515625,
+        "redundancy_rate_over_isotropic_decoherence": 0.2675781249999999
+      },
+      {
+        "sky_fraction": 0.75,
+        "separation_angle_degrees": 0.0,
+        "decoherence_rate_over_isotropic": 0.6468750000000002,
+        "receptivity_alpha": 0.5397206182065214,
+        "redundancy_rate_over_isotropic_decoherence": 0.34913177490234365
+      },
+      {
+        "sky_fraction": 0.75,
+        "separation_angle_degrees": 45.0,
+        "decoherence_rate_over_isotropic": 0.7242187499999999,
+        "receptivity_alpha": 0.35387591019417475,
+        "redundancy_rate_over_isotropic_decoherence": 0.25628356933593743
+      },
+      {
+        "sky_fraction": 0.75,
+        "separation_angle_degrees": 90.0,
+        "decoherence_rate_over_isotropic": 0.8015624999999997,
+        "receptivity_alpha": 0.2038959703947369,
+        "redundancy_rate_over_isotropic_decoherence": 0.16343536376953122
+      },
+      {
+        "sky_fraction": 0.99,
+        "separation_angle_degrees": 0.0,
+        "decoherence_rate_over_isotropic": 0.9793278000000005,
+        "receptivity_alpha": 0.02110854536635836,
+        "redundancy_rate_over_isotropic_decoherence": 0.02067218529483594
+      },
+      {
+        "sky_fraction": 0.99,
+        "separation_angle_degrees": 45.0,
+        "decoherence_rate_over_isotropic": 0.98733195,
+        "receptivity_alpha": 0.01282839082943133,
+        "redundancy_rate_over_isotropic_decoherence": 0.01266588013298455
+      },
+      {
+        "sky_fraction": 0.99,
+        "separation_angle_degrees": 90.0,
+        "decoherence_rate_over_isotropic": 0.9953360999999994,
+        "receptivity_alpha": 0.0046814085926685225,
+        "redundancy_rate_over_isotropic_decoherence": 0.004659574971133173
+      },
+      {
+        "sky_fraction": 1.0,
+        "separation_angle_degrees": 0.0,
+        "decoherence_rate_over_isotropic": 1.0000000000000007,
+        "receptivity_alpha": 0.0,
+        "redundancy_rate_over_isotropic_decoherence": 0.0
+      },
+      {
+        "sky_fraction": 1.0,
+        "separation_angle_degrees": 45.0,
+        "decoherence_rate_over_isotropic": 1.0,
+        "receptivity_alpha": 0.0,
+        "redundancy_rate_over_isotropic_decoherence": 0.0
+      },
+      {
+        "sky_fraction": 1.0,
+        "separation_angle_degrees": 90.0,
+        "decoherence_rate_over_isotropic": 0.9999999999999996,
+        "receptivity_alpha": 0.0,
+        "redundancy_rate_over_isotropic_decoherence": 0.0
+      }
+    ],
+    "quadrature_refinement_max_error": 1.2212453270876722e-15
+  }
+}

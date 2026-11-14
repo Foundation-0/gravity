@@ -52,3 +52,9 @@ The root audit scripts use only the Python 3 standard library. The separate conv
 - `METHODS_AND_PLAYBOOK.md` -- Numerical methods, parameter assumptions, error-model caveats (`M-01`..`M-10`), and canonical checksum table.
 - `RESEARCH_NOTEBOOK_AND_REASONING.md` -- Complete reasoning trail, rejected operator dead ends, tangential WHIM/entropy-floor realizations, Cosmic-Dawn quasar confrontation, and next-agent handoff queue.
 - `CHANGELOG.md` -- Reconciled chronological history across Waves 1-12 matching `CLAIMS.md` and code identifiers.
+
+## AeST response benchmark and independent checks
+
+The [AeST response benchmark](research/aest-response-gate-20261112/README.md) constructs allowed field preparations on a specified expanding background and a flat-space control. It includes the canonical map, executable response checks and a bounded pressure-closure comparison.
+
+A separate Astra agent reproduced the scalar constraint and kinetic structure from an independent ADM action. A separately declared slow-subspace test and its independent five-field replay are complete. The simple zero-pressure closure still fails for this specified benchmark.

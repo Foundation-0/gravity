@@ -278,14 +278,19 @@ def emit_or_verify(cert: dict, out_path: Path) -> None:
     cert["sha256_canonical"] = hashlib.sha256(canonical).hexdigest()
     rendered = json.dumps(cert, indent=2) + "\n"
     if "--check" in sys.argv:
-        assert out_path.is_file(), f"Missing certificate file: {out_path}"
+        # Explicit comparisons: bare `assert` is removed under `python -O`.
+        if not out_path.is_file():
+            raise SystemExit(f"CHECK FAILED: missing certificate file: {out_path.name}")
         on_disk_text = out_path.read_text(encoding="utf-8")
         on_disk_obj = json.loads(on_disk_text)
         stored_sha = on_disk_obj.pop("sha256_canonical", None)
         disk_canonical = json.dumps(on_disk_obj, sort_keys=True, separators=(",", ":")).encode("utf-8")
-        assert stored_sha == hashlib.sha256(disk_canonical).hexdigest(), "Canonical SHA-256 mismatch on disk"
-        assert stored_sha == cert["sha256_canonical"], "Recomputed canonical SHA-256 mismatch"
-        assert on_disk_text == rendered, "Certificate file is not byte-identical to generator output"
+        if stored_sha != hashlib.sha256(disk_canonical).hexdigest():
+            raise SystemExit(f"CHECK FAILED: canonical SHA-256 mismatch on disk: {out_path.name}")
+        if stored_sha != cert["sha256_canonical"]:
+            raise SystemExit(f"CHECK FAILED: recomputed canonical SHA-256 mismatch: {out_path.name}")
+        if on_disk_text != rendered:
+            raise SystemExit(f"CHECK FAILED: certificate file is not byte-identical to generator output: {out_path.name}")
         print(f"CHECK OK (byte-identical): {out_path.name} sha256_canonical={stored_sha}")
     else:
         out_path.parent.mkdir(parents=True, exist_ok=True)

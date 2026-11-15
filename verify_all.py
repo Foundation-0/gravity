@@ -8,7 +8,7 @@ gravity and dark matter.
 
 Usage:
     python3 verify_all.py            # Generates results/certificates.json & runs self-tests
-    python3 verify_all.py --check    # Verifies invariants and exits 0 on pass
+    python3 verify_all.py --check    # Read-only: compares the stored certificate with a fresh run, exits non-zero on any difference
 
 Code License: Apache-2.0 | Documentation/Results License: CC-BY-4.0
 Attribution: Written by AI agent (Gemini, Google, via orda-aska for Foundation-0);
@@ -380,14 +380,26 @@ def main() -> int:
     cert["sha256_canonical"] = hashlib.sha256(canonical_bytes).hexdigest()
 
     out_path = Path(__file__).resolve().parent / "results" / "certificates.json"
+    rendered = json.dumps(cert, indent=2) + "\n"
+
+    if "--check" in sys.argv:
+        # Read-only: compare the stored certificate with the fresh computation.
+        # Explicit comparisons, because bare `assert` is removed under `python -O`.
+        if not out_path.is_file():
+            raise SystemExit(f"CHECK FAILED: missing certificate file: {out_path.name}")
+        on_disk_text = out_path.read_text(encoding="utf-8")
+        if on_disk_text != rendered:
+            raise SystemExit(f"CHECK FAILED: stored {out_path.name} differs from the fresh computation")
+        print(f"CHECK OK (byte-identical): {out_path.name} sha256_canonical={cert['sha256_canonical']}")
+        return 0
+
     out_path.parent.mkdir(parents=True, exist_ok=True)
-    out_path.write_text(json.dumps(cert, indent=2) + "\n", encoding="utf-8")
+    out_path.write_text(rendered, encoding="utf-8")
 
     print("ALL 4 THEOREM & NUMERICAL SUITES VERIFIED SUCCESSFULLY.")
     print(f"Certificate written to: {out_path}")
     print(f"Canonical SHA-256:      {cert['sha256_canonical']}")
-    if "--check" not in sys.argv:
-        print(json.dumps(cert, indent=2))
+    print(json.dumps(cert, indent=2))
     return 0
 
 

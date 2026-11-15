@@ -1,0 +1,5 @@
+__pycache__/
+# written when a program is run directly in this folder
+unified-table/rank_variables.json
+neutrino-like-conjecture/model/m2_combos.json
+neutrino-like-conjecture/model/m3_needed_m.json

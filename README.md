@@ -47,6 +47,7 @@ The root audit scripts use only the Python 3 standard library. The separate conv
 | `wave12_cosmic_dawn_quasar_collapse.py` | `results/wave12_cosmic_dawn_quasar_certificates.json` (`C-31`..`C-33`) | `python3 wave12_cosmic_dawn_quasar_collapse.py --check` |
 | `lakefile.toml` + `lean-toolchain` | `GravityClaims`, `Wave5StochasticForces`, `Wave6Convergence`, `Wave7ThresholdAudit`, `Wave10JeansDerivation`, `Wave11MachianZeroEnergy`, `Wave12QuasarCollapse` | `lake build` |
 | `SHA256SUMS` | Raw file SHA-256 digests of scripts, Lean files, and JSON outputs | `sha256sum -c SHA256SUMS` |
+| `test_check_modes.py` | Corrupts one certificate value and expects every `--check` mode to fail, with and without `python -O` | `python3 -B -m unittest test_check_modes -v` |
 
 ## Documentation Index
 
@@ -62,6 +63,10 @@ The root audit scripts use only the Python 3 standard library. The separate conv
 The [AeST response benchmark](research/aest-response-gate-20261112/README.md) constructs allowed field preparations on a specified expanding background and a flat-space control. It includes the canonical map, executable response checks and a bounded pressure-closure comparison.
 
 A separate Astra agent reproduced the scalar constraint and kinetic structure from an independent ADM action. A separately declared slow-subspace test and its independent five-field replay are complete. The simple zero-pressure closure still fails for this specified benchmark.
+
+## Tests against published data
+
+The [15 November data tests](research/data-tests-20261115/README.md) check the 185 km/s threshold, the redshift prediction of issue 6, the acceleration-evolution idea and a light-particle conjecture against published galaxy, group and cluster data. Each result has a program, a saved output and one command. [Proposals for the ledger](research/data-tests-20261115/FOR-THE-OWNERS.md) are separate and change no label. `python3 research/data-tests-20261115/check.py` re-runs every program.
 
 ## Research value assessment
 

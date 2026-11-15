@@ -71,3 +71,23 @@ On main, `sha256sum -c SHA256SUMS` failed on six entries. Five lines change here
 | `results/wave4_unified_certificates.json` | `7bb2326b36aa` | `7bb2326b36aa` | Main still has the `sha_26_canonical` key (`824d1a5d68f1`). The manifest digest is the repaired file from `0bf72bf`, which this branch carries. |
 
 The README line already matched main's README and is unchanged. All 39 entries pass on the merged tree.
+
+## Update for the check-mode fix and the data tests
+
+The manifest has 40 entries: main's 39 plus `test_check_modes.py`. Eleven digests change from main's manifest. Ten are the generator scripts, `verify_all.py` and the nine wave scripts. Their `--check` modes now compare explicitly instead of using bare `assert`, and `verify_all.py --check` no longer rewrites its certificate. The eleventh is `README.md`, which gains one table row and one index section.
+
+| File | Main manifest | This branch |
+| --- | --- | --- |
+| `verify_all.py` | `49bd79489023` | `d560d26e3a72` |
+| `wave3_empirical_audit.py` | `b60038ff0cec` | `2a7b3b24f30e` |
+| `wave4_unified_field_solver.py` | `d864d69999aa` | `15049370db34` |
+| `wave5_unified_forces_stochastic_qm.py` | `effc8ef25d44` | `1ce3a3c285b0` |
+| `wave6_convergence_unification.py` | `894c89bf23fc` | `1ce27fab6e67` |
+| `wave7_group_cluster_threshold_audit.py` | `5de311fa11f2` | `fd0c6b7efd62` |
+| `wave9_scale_convergence_audit.py` | `f502c82de786` | `7b9bb54afa04` |
+| `wave10_covariant_jeans_unification.py` | `af8a2459aa8f` | `036e4cb85271` |
+| `wave11_machian_pairing_unification.py` | `88dd0f9827b2` | `9b11663218ad` |
+| `wave12_cosmic_dawn_quasar_collapse.py` | `53cb171ed423` | `88bd770d610c` |
+| `README.md` | `efdc6462ab7e` | `9f066537d84b` |
+
+No certificate changes. All ten `--check` runs report byte-identical certificates, with and without `python -O`, and all 40 entries pass `sha256sum -c`. The new folder `research/data-tests-20261115/` has its own `SHA256SUMS`, which does not include the downloaded tables.

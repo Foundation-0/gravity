@@ -27,6 +27,16 @@ SIGMA_CRIT_W6_KMS = (C * math.sqrt(PHI_CRIT_C2_W6 / (2.0 * (1.0 + math.log(4.0))
 COSMIC_OMEGA_M_OVER_B = 0.315 / 0.0493
 
 
+def fail(message):
+    """Fail a verification check explicitly.
+
+    Bare ``assert`` is skipped under ``python3 -O``, so a corrupted
+    certificate would print CHECK OK and exit 0. Every check in this
+    file raises ``SystemExit`` instead, which ``-O`` cannot remove.
+    """
+    raise SystemExit(f"CHECK FAILED: {message}")
+
+
 def tx_to_sigma(tx_kev: float) -> float:
     return math.sqrt((tx_kev * K_B_KEV_J) / (MU_ICM * M_P)) / 1.0e3
 
@@ -233,8 +243,15 @@ def emit_or_verify(cert: dict, out_path: Path) -> None:
         if not out_path.is_file():
             raise SystemExit(f"CHECK FAILED: missing certificate file: {out_path.name}")
         on_disk_text = out_path.read_text(encoding="utf-8")
-        on_disk_obj = json.loads(on_disk_text)
+        try:
+            on_disk_obj = json.loads(on_disk_text)
+        except json.JSONDecodeError as exc:
+            raise SystemExit(f"CHECK FAILED: certificate file is not valid JSON: {out_path.name} ({exc})")
+        if not isinstance(on_disk_obj, dict):
+            raise SystemExit(f"CHECK FAILED: certificate file is not a JSON object: {out_path.name}")
         stored_sha = on_disk_obj.pop("sha256_canonical", None)
+        if stored_sha is None:
+            raise SystemExit(f"CHECK FAILED: certificate file has no sha256_canonical field: {out_path.name}")
         disk_canonical = json.dumps(on_disk_obj, sort_keys=True, separators=(",", ":")).encode("utf-8")
         if stored_sha != hashlib.sha256(disk_canonical).hexdigest():
             raise SystemExit(f"CHECK FAILED: canonical SHA-256 mismatch on disk: {out_path.name}")
@@ -253,7 +270,8 @@ def main() -> int:
     all_rows = build_catalog()
     w_150_1200 = [r for r in all_rows if 150.0 <= r["sig"] <= 1200.0]
     clean_60 = [r for r in all_rows if r["cat"] not in ("Milgrom2019_opt", "Milgrom2019_rich")]
-    assert len(all_rows) == 126 and len(w_150_1200) == 77 and len(clean_60) == 60
+    if not (len(all_rows) == 126 and len(w_150_1200) == 77 and len(clean_60) == 60):
+        fail("check failed: len(all_rows) == 126 and len(w_150_1200) == 77 and len(clean_60) == 60")
 
     fit_prim = fit_sample(w_150_1200, "Primary_150_to_1200_kms_Covariant_ODR")
     fit_full = fit_sample(all_rows, "Full_60_to_1494_kms_Covariant_ODR")
@@ -276,8 +294,10 @@ def main() -> int:
 
     m3p = fit_prim["M3_profiled_3param_supply_capped"]
     m3c = fit_clean["M3_profiled_3param_supply_capped"]
-    assert m3p["delta_chi2_vs_M0_pure_MOND"] > 200.0
-    assert m3p["delta_chi2_vs_M1b_unbounded_TF"] > 15.0
+    if not (m3p["delta_chi2_vs_M0_pure_MOND"] > 200.0):
+        fail("check failed: m3p[\"delta_chi2_vs_M0_pure_MOND\"] > 200.0")
+    if not (m3p["delta_chi2_vs_M1b_unbounded_TF"] > 15.0):
+        fail("check failed: m3p[\"delta_chi2_vs_M1b_unbounded_TF\"] > 15.0")
 
     cert7 = {
         "schema": "FOUNDATION-0/GRAVITY-WAVE7-EMPIRICAL-THRESHOLD/1.1",

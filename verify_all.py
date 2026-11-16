@@ -38,6 +38,16 @@ H0_SI = (67.4 * 1.0e3) / MPC
 OMEGA_LAMBDA = 0.6847
 
 
+def fail(message):
+    """Fail a verification check explicitly.
+
+    Bare ``assert`` is skipped under ``python3 -O``, so a corrupted
+    certificate would print VERIFIED and exit 0. Every check in this
+    file raises ``SystemExit`` instead, which ``-O`` cannot remove.
+    """
+    raise SystemExit(f"CHECK FAILED: {message}")
+
+
 def linear_fit_slope(xs: list[float], ys: list[float]) -> float:
     n = len(xs)
     mx = sum(xs) / n
@@ -341,30 +351,43 @@ def check_4_external_field_and_wide_binaries() -> dict:
 
 def run_assertions(cert: dict) -> None:
     c1 = cert["check_1_dichotomy"]
-    assert 1.98 < c1["coord_fractal_Df2_btfr_slope"] < 2.06
-    assert c1["coord_fractal_rar_rms_dex"] > 0.55
+    if not (1.98 < c1["coord_fractal_Df2_btfr_slope"] < 2.06):
+        fail(f"check failed: coord_fractal_Df2_btfr_slope={c1['coord_fractal_Df2_btfr_slope']!r} not in (1.98, 2.06)")
+    if not (c1["coord_fractal_rar_rms_dex"] > 0.55):
+        fail(f"check failed: coord_fractal_rar_rms_dex={c1['coord_fractal_rar_rms_dex']!r} not > 0.55")
     ds1 = [r for r in c1["spectral_dimension_sweep"] if r["spectral_dim_ds"] == 1.0][0]
-    assert abs(ds1["outer_dlnv_dlnr_100_300kpc"]) < 0.02
-    assert 3.85 < ds1["btfr_slope_beta"] < 4.02
-    assert c1["ds1_condensate_rar_rms_dex"] < 0.015
+    if not (abs(ds1["outer_dlnv_dlnr_100_300kpc"]) < 0.02):
+        fail(f"check failed: ds1 outer_dlnv_dlnr_100_300kpc={ds1['outer_dlnv_dlnr_100_300kpc']!r} not < 0.02 in magnitude")
+    if not (3.85 < ds1["btfr_slope_beta"] < 4.02):
+        fail(f"check failed: ds1 btfr_slope_beta={ds1['btfr_slope_beta']!r} not in (3.85, 4.02)")
+    if not (c1["ds1_condensate_rar_rms_dex"] < 0.015):
+        fail(f"check failed: ds1_condensate_rar_rms_dex={c1['ds1_condensate_rar_rms_dex']!r} not < 0.015")
 
     c2 = cert["check_2_gravitational_atom"]
-    assert abs(c2["invariant_M_Rhalf_hbar2_Gm2"] - 3.925) < 0.02
-    assert abs(c2["outer_soliton_dlnv_dlnr"] + 0.5) < 0.015
+    if not (abs(c2["invariant_M_Rhalf_hbar2_Gm2"] - 3.925) < 0.02):
+        fail(f"check failed: invariant_M_Rhalf_hbar2_Gm2={c2['invariant_M_Rhalf_hbar2_Gm2']!r} not within 0.02 of 3.925")
+    if not (abs(c2["outer_soliton_dlnv_dlnr"] + 0.5) < 0.015):
+        fail(f"check failed: outer_soliton_dlnv_dlnr={c2['outer_soliton_dlnv_dlnr']!r} not within 0.015 of -0.5")
 
     c3 = cert["check_3_phase_space_and_tower"]
     sb = c3["single_boson_bounds_eV"]
-    assert sb["single_boson_window_empty"] is True
-    assert sb["m_max_1Mpc_NFW_tail_eV"] < sb["m_max_1Mpc_isothermal_eV"] < sb["m_min_Bullet_Cluster_melt_eV"]
+    if not (sb["single_boson_window_empty"] is True):
+        fail("check failed: single_boson_window_empty is not True")
+    if not (sb["m_max_1Mpc_NFW_tail_eV"] < sb["m_max_1Mpc_isothermal_eV"] < sb["m_min_Bullet_Cluster_melt_eV"]):
+        fail(f"check failed: single-boson mass ordering violated: {sb['m_max_1Mpc_NFW_tail_eV']!r}, {sb['m_max_1Mpc_isothermal_eV']!r}, {sb['m_min_Bullet_Cluster_melt_eV']!r}")
     hyb = c3["two_tier_hybrid_solution"]
-    assert hyb["light_Ndeg_at_1Mpc_NFW"] > ZETA_3_2 and hyb["heavy_Ndeg_in_Bullet_core"] < ZETA_3_2
+    if not (hyb["light_Ndeg_at_1Mpc_NFW"] > ZETA_3_2 and hyb["heavy_Ndeg_in_Bullet_core"] < ZETA_3_2):
+        fail(f"check failed: hybrid degeneracy numbers out of range: light={hyb['light_Ndeg_at_1Mpc_NFW']!r}, heavy={hyb['heavy_Ndeg_in_Bullet_core']!r}")
     r_b6 = [r for r in c3["fractal_soliton_tower_ripples"] if r["scale_ratio_b"] == 6.0][0]
     r_b7 = [r for r in c3["fractal_soliton_tower_ripples"] if r["scale_ratio_b"] == 7.0][0]
-    assert r_b6["passes_5pct_smoothness"] is True and r_b7["passes_5pct_smoothness"] is False
+    if not (r_b6["passes_5pct_smoothness"] is True and r_b7["passes_5pct_smoothness"] is False):
+        fail("check failed: tower smoothness pattern violated (b=6.0 must pass, b=7.0 must fail)")
 
     c4 = cert["check_4_efe_and_wide_binaries"]
-    assert 800.0 < c4["cosmic_efe_rollover_kpc_at_e0010"] < 880.0
-    assert c4["wide_binary_velocity_boost_pct_standard_mu"] < c4["wide_binary_velocity_boost_pct_simple_mu"]
+    if not (800.0 < c4["cosmic_efe_rollover_kpc_at_e0010"] < 880.0):
+        fail(f"check failed: cosmic_efe_rollover_kpc_at_e0010={c4['cosmic_efe_rollover_kpc_at_e0010']!r} not in (800.0, 880.0)")
+    if not (c4["wide_binary_velocity_boost_pct_standard_mu"] < c4["wide_binary_velocity_boost_pct_simple_mu"]):
+        fail("check failed: standard-mu wide-binary boost not below simple-mu boost")
 
 
 def main() -> int:

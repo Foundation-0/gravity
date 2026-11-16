@@ -15,23 +15,39 @@ class RatInterval:
     lo: Fraction
     hi: Fraction
     def __post_init__(self) -> None:
-        assert isinstance(self.lo, Fraction) and isinstance(self.hi, Fraction) and self.lo <= self.hi
+        if not (isinstance(self.lo, Fraction) and isinstance(self.hi, Fraction) and self.lo <= self.hi):
+            raise ValueError("RatInterval requires Fraction bounds with lo <= hi")
     def __mul__(self, other: "RatInterval") -> "RatInterval":
-        assert self.lo >= 0 and other.lo >= 0
+        if not (self.lo >= 0 and other.lo >= 0):
+            raise ValueError("RatInterval multiplication requires non-negative lower bounds")
         return RatInterval(self.lo * other.lo, self.hi * other.hi)
     def __truediv__(self, other: "RatInterval") -> "RatInterval":
-        assert self.lo >= 0 and other.lo > 0
+        if not (self.lo >= 0 and other.lo > 0):
+            raise ValueError("RatInterval division requires a positive divisor lower bound")
         return RatInterval(self.lo / other.hi, self.hi / other.lo)
     def pow_int(self, n: int) -> "RatInterval":
         return RatInterval(self.lo ** n, self.hi ** n)
 
+def fail(message):
+    """Fail a verification check explicitly.
+
+    Bare ``assert`` is skipped under ``python3 -O``, so a corrupted
+    certificate would print CHECK OK and exit 0. Every check in this
+    file raises ``SystemExit`` instead, which ``-O`` cannot remove.
+    """
+    raise SystemExit(f"CHECK FAILED: {message}")
+
+
 def prove_c01_c02_exact_exponents() -> dict:
     df_unique, beta_coord = Fraction(2, 1), Fraction(2, 1)
-    assert Fraction(2 - df_unique, 2) == Fraction(0, 1) and beta_coord != Fraction(4, 1)
+    if not (Fraction(2 - df_unique, 2) == Fraction(0, 1) and beta_coord != Fraction(4, 1)):
+        fail("check failed: Fraction(2 - df_unique, 2) == Fraction(0, 1) and beta_coord != Fraction(4, 1)")
     ds_unique = Fraction(1, 1)
     q_unique, p_unique, beta_cond = Fraction(1, 1) + ds_unique / 2, Fraction(2, 1) + ds_unique, 2 * (1 + ds_unique)
-    assert (ds_unique - 1) / (2 * (1 + ds_unique)) == Fraction(0, 1)
-    assert q_unique == Fraction(3, 2) and p_unique == Fraction(3, 1) and beta_cond == Fraction(4, 1)
+    if not ((ds_unique - 1) / (2 * (1 + ds_unique)) == Fraction(0, 1)):
+        fail("check failed: (ds_unique - 1) / (2 * (1 + ds_unique)) == Fraction(0, 1)")
+    if not (q_unique == Fraction(3, 2) and p_unique == Fraction(3, 1) and beta_cond == Fraction(4, 1)):
+        fail("check failed: q_unique == Fraction(3, 2) and p_unique == Fraction(3, 1) and beta_cond == Fraction(4, 1)")
     return {
         "status": "PROVEN_EXACT_RATIONAL", "coord_fractal_Df": str(df_unique),
         "coord_fractal_btfr_beta": str(beta_coord), "condensate_unique_ds": str(ds_unique),
@@ -47,7 +63,8 @@ def prove_c04_phase_space_inversion_interval() -> dict:
     m_b = RatInterval(Fraction(6 * (10 ** 10), 1), Fraction(6 * (10 ** 10), 1)) * m_sun_iv
     a0_iv = RatInterval(Fraction(115, 10**12), Fraction(125, 10**12))
     ratio_q_fourth = RatInterval(Fraction(4, 1), Fraction(4, 1)) * r_ratio.pow_int(8) * (sigma_cl.pow_int(4) / (g_iv * m_b * a0_iv))
-    assert ratio_q_fourth.hi < Fraction(1, 1)
+    if not (ratio_q_fourth.hi < Fraction(1, 1)):
+        fail("check failed: ratio_q_fourth.hi < Fraction(1, 1)")
     return {
         "status": "PROVEN_EXACT_RATIONAL_INTERVAL",
         "algebraic_identity": "(Q_gal_iso / Q_Bullet)^4 = 4 * (R_cl / R_gal)^8 * sigma_cl^4 / (G * M_b * a0)",
@@ -60,7 +77,8 @@ def prove_c09_local_operator_wide_binary_lower_bound() -> dict:
     mu_max, l_max = Fraction(76, 100), Fraction(40, 100)
     eta_wb_sq_lo = Fraction(1, 1) / ((mu_max ** 2) * (Fraction(1, 1) + Fraction(2, 3) * l_max))
     wb_2pct_vel_fourth = Fraction(51, 50) ** 4
-    assert eta_wb_sq_lo > wb_2pct_vel_fourth
+    if not (eta_wb_sq_lo > wb_2pct_vel_fourth):
+        fail("check failed: eta_wb_sq_lo > wb_2pct_vel_fourth")
     return {
         "status": "PROVEN_EXACT_RATIONAL_JENSEN",
         "jensen_inequality": "eta_WB >= 1 / [ mu(e_MW) * sqrt(1 + (2/3) L_e) ]",

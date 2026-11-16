@@ -37,6 +37,16 @@ SPARC_RAR_BINS = [
 ]
 
 
+def fail(message):
+    """Fail a verification check explicitly.
+
+    Bare ``assert`` is skipped under ``python3 -O``, so a corrupted
+    certificate would print CHECK OK and exit 0. Every check in this
+    file raises ``SystemExit`` instead, which ``-O`` cannot remove.
+    """
+    raise SystemExit(f"CHECK FAILED: {message}")
+
+
 def mu_alpha(x: float, alpha: float) -> float:
     if x <= 0.0:
         return 0.0
@@ -282,8 +292,15 @@ def emit_or_verify(cert: dict, out_path: Path) -> None:
         if not out_path.is_file():
             raise SystemExit(f"CHECK FAILED: missing certificate file: {out_path.name}")
         on_disk_text = out_path.read_text(encoding="utf-8")
-        on_disk_obj = json.loads(on_disk_text)
+        try:
+            on_disk_obj = json.loads(on_disk_text)
+        except json.JSONDecodeError as exc:
+            raise SystemExit(f"CHECK FAILED: certificate file is not valid JSON: {out_path.name} ({exc})")
+        if not isinstance(on_disk_obj, dict):
+            raise SystemExit(f"CHECK FAILED: certificate file is not a JSON object: {out_path.name}")
         stored_sha = on_disk_obj.pop("sha256_canonical", None)
+        if stored_sha is None:
+            raise SystemExit(f"CHECK FAILED: certificate file has no sha256_canonical field: {out_path.name}")
         disk_canonical = json.dumps(on_disk_obj, sort_keys=True, separators=(",", ":")).encode("utf-8")
         if stored_sha != hashlib.sha256(disk_canonical).hexdigest():
             raise SystemExit(f"CHECK FAILED: canonical SHA-256 mismatch on disk: {out_path.name}")
@@ -302,12 +319,18 @@ def main() -> int:
     c09 = check_c09_interpolator_tradeoff()
     c10_c11 = check_c10_c11_bogoliubov_and_fermion_audit()
 
-    assert c09["min_wb_velocity_boost_pct_within_delta_chi2_25"] > 10.0
-    assert c09["min_sparc_delta_chi2_if_wb_boost_le_2pct"] > 300.0
-    assert c10_c11["stellar_wide_binary_ode_audit"]["saturn_9_58AU_gph_over_gN"] < 1.0e-11
-    assert c10_c11["stellar_wide_binary_ode_audit"]["wide_binary_20kAU_gph_over_gN"] < 1.0e-5
-    assert c10_c11["lstar_galaxy_ode_audit"]["recovery_of_deep_MOND_limit_at_100kpc_pct"] > 99.9
-    assert all(row["nonrelativistic_prior_to_CMB_z1100"] for row in c10_c11["claim_c11_relativistic_freezeout_fermion_audit"])
+    if not (c09["min_wb_velocity_boost_pct_within_delta_chi2_25"] > 10.0):
+        fail("check failed: c09[\"min_wb_velocity_boost_pct_within_delta_chi2_25\"] > 10.0")
+    if not (c09["min_sparc_delta_chi2_if_wb_boost_le_2pct"] > 300.0):
+        fail("check failed: c09[\"min_sparc_delta_chi2_if_wb_boost_le_2pct\"] > 300.0")
+    if not (c10_c11["stellar_wide_binary_ode_audit"]["saturn_9_58AU_gph_over_gN"] < 1.0e-11):
+        fail("check failed: c10_c11[\"stellar_wide_binary_ode_audit\"][\"saturn_9_58AU_gph_over_gN\"] < 1.0e-11")
+    if not (c10_c11["stellar_wide_binary_ode_audit"]["wide_binary_20kAU_gph_over_gN"] < 1.0e-5):
+        fail("check failed: c10_c11[\"stellar_wide_binary_ode_audit\"][\"wide_binary_20kAU_gph_over_gN\"] < 1.0e-5")
+    if not (c10_c11["lstar_galaxy_ode_audit"]["recovery_of_deep_MOND_limit_at_100kpc_pct"] > 99.9):
+        fail("check failed: c10_c11[\"lstar_galaxy_ode_audit\"][\"recovery_of_deep_MOND_limit_at_100kpc_pct\"] > 99.9")
+    if not (all(row["nonrelativistic_prior_to_CMB_z1100"] for row in c10_c11["claim_c11_relativistic_freezeout_fermion_audit"])):
+        fail("check failed: all(row[\"nonrelativistic_prior_to_CMB_z1100\"] for row in c10_c11[\"claim_c11_relativistic_freezeout_fermion_audit\"])")
 
     cert4 = {
         "schema": "FOUNDATION-0/GRAVITY-WAVE4-UNIFIED/1.1",

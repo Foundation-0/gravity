@@ -52,6 +52,16 @@ LAM_EDD_A = 1.23
 LAM_EDD_B = 1.07
 
 
+def fail(message):
+    """Fail a verification check explicitly.
+
+    Bare ``assert`` is skipped under ``python3 -O``, so a corrupted
+    certificate would print CHECK OK and exit 0. Every check in this
+    file raises ``SystemExit`` instead, which ``-O`` cannot remove.
+    """
+    raise SystemExit(f"CHECK FAILED: {message}")
+
+
 def e_hubble(z: float) -> float:
     zp1 = 1.0 + z
     return math.sqrt(OMEGA_R * (zp1 ** 4) + OMEGA_M * (zp1 ** 3) + OMEGA_L)
@@ -316,7 +326,8 @@ def audit_c32_two_branch_condensate_and_phonon_collapse() -> dict:
     delta_c = 1.686
 
     lo_r, hi_r = 1.0e-4, 1.0
-    assert sigma_lin(lo_r, Z_PAIR) > delta_c > sigma_lin(hi_r, Z_PAIR), "Invalid sigma_lin bracket at z=6.08"
+    if not (sigma_lin(lo_r, Z_PAIR) > delta_c > sigma_lin(hi_r, Z_PAIR)):
+        fail("Invalid sigma_lin bracket at z=6.08")
     for _ in range(80):
         mid_r = 0.5 * (lo_r + hi_r)
         if sigma_lin(mid_r, Z_PAIR) > delta_c:
@@ -464,8 +475,15 @@ def emit_or_verify(cert: dict, out_path: Path) -> None:
         if not out_path.is_file():
             raise SystemExit(f"CHECK FAILED: missing certificate file: {out_path.name}")
         on_disk_text = out_path.read_text(encoding="utf-8")
-        on_disk_obj = json.loads(on_disk_text)
+        try:
+            on_disk_obj = json.loads(on_disk_text)
+        except json.JSONDecodeError as exc:
+            raise SystemExit(f"CHECK FAILED: certificate file is not valid JSON: {out_path.name} ({exc})")
+        if not isinstance(on_disk_obj, dict):
+            raise SystemExit(f"CHECK FAILED: certificate file is not a JSON object: {out_path.name}")
         stored_sha = on_disk_obj.pop("sha256_canonical", None)
+        if stored_sha is None:
+            raise SystemExit(f"CHECK FAILED: certificate file has no sha256_canonical field: {out_path.name}")
         disk_canonical = json.dumps(on_disk_obj, sort_keys=True, separators=(",", ":")).encode("utf-8")
         if stored_sha != hashlib.sha256(disk_canonical).hexdigest():
             raise SystemExit(f"CHECK FAILED: canonical SHA-256 mismatch on disk: {out_path.name}")
@@ -485,14 +503,22 @@ def main() -> int:
     c32 = audit_c32_two_branch_condensate_and_phonon_collapse()
     c33 = audit_c33_slim_disk_and_binary_gw_budget()
 
-    assert 5.50 <= c31["observed_system"]["computed_projected_sep_pkpc"] <= 5.75
-    assert c31["seed_duty_cycle_audit_for_J1602A_1p5e9_Msun"]["popIII_100Msun_duty_from_z20_Edd1_eps0p10"] > 1.0
-    assert c31["seed_duty_cycle_audit_for_J1602A_1p5e9_Msun"]["dcbh_1e5Msun_duty_from_z20_obsEdd1p23_eps0p10"] < 0.70
-    assert 0.001 <= c32["planck_nonlinear_collapse_at_z6p08"]["R_star_comoving_Mpc"] <= 0.10
-    assert c32["planck_nonlinear_collapse_at_z6p08"]["sigma_star_z6p08_kms"] < 2.0
-    assert c32["planck_nonlinear_collapse_at_z6p08"]["host_177kms_trapping_at_z6p08"] > 0.9998
-    assert c32["planck_nonlinear_collapse_at_z6p08"]["host_177kms_trapping_at_z0"] == 0.0
-    assert 6.46e8 <= c33["gravitational_wave_inspiral_budget"]["chirp_mass_Msun"] <= 6.48e8
+    if not (5.50 <= c31["observed_system"]["computed_projected_sep_pkpc"] <= 5.75):
+        fail("check failed: 5.50 <= c31[\"observed_system\"][\"computed_projected_sep_pkpc\"] <= 5.75")
+    if not (c31["seed_duty_cycle_audit_for_J1602A_1p5e9_Msun"]["popIII_100Msun_duty_from_z20_Edd1_eps0p10"] > 1.0):
+        fail("check failed: c31[\"seed_duty_cycle_audit_for_J1602A_1p5e9_Msun\"][\"popIII_100Msun_duty_from_z20_Edd1_eps0p10\"] > 1.0")
+    if not (c31["seed_duty_cycle_audit_for_J1602A_1p5e9_Msun"]["dcbh_1e5Msun_duty_from_z20_obsEdd1p23_eps0p10"] < 0.70):
+        fail("check failed: c31[\"seed_duty_cycle_audit_for_J1602A_1p5e9_Msun\"][\"dcbh_1e5Msun_duty_from_z20_obsEdd1p23_eps0p10\"] < 0.70")
+    if not (0.001 <= c32["planck_nonlinear_collapse_at_z6p08"]["R_star_comoving_Mpc"] <= 0.10):
+        fail("check failed: 0.001 <= c32[\"planck_nonlinear_collapse_at_z6p08\"][\"R_star_comoving_Mpc\"] <= 0.10")
+    if not (c32["planck_nonlinear_collapse_at_z6p08"]["sigma_star_z6p08_kms"] < 2.0):
+        fail("check failed: c32[\"planck_nonlinear_collapse_at_z6p08\"][\"sigma_star_z6p08_kms\"] < 2.0")
+    if not (c32["planck_nonlinear_collapse_at_z6p08"]["host_177kms_trapping_at_z6p08"] > 0.9998):
+        fail("check failed: c32[\"planck_nonlinear_collapse_at_z6p08\"][\"host_177kms_trapping_at_z6p08\"] > 0.9998")
+    if not (c32["planck_nonlinear_collapse_at_z6p08"]["host_177kms_trapping_at_z0"] == 0.0):
+        fail("check failed: c32[\"planck_nonlinear_collapse_at_z6p08\"][\"host_177kms_trapping_at_z0\"] == 0.0")
+    if not (6.46e8 <= c33["gravitational_wave_inspiral_budget"]["chirp_mass_Msun"] <= 6.48e8):
+        fail("check failed: 6.46e8 <= c33[\"gravitational_wave_inspiral_budget\"][\"chirp_mass_Msun\"] <= 6.48e8")
 
     cert12 = {
         "schema": "FOUNDATION-0/GRAVITY-WAVE12-COSMIC-DAWN-QUASAR-PAIR/1.1",

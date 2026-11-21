@@ -1,0 +1,436 @@
+{
+  "probe": "probe3_nonaffine_inertia_box_certifier",
+  "arithmetic": "100% pure fractions.Fraction + math.isqrt (zero IEEE floats in certification)",
+  "r3_tcb_negative_controls": {
+    "all_r3_invalid_inputs_rejected": true,
+    "exceptions": {
+      "QI_pt_bool_True": "TypeError",
+      "QI_pt_float_1p5": "TypeError",
+      "QI_pt_str": "TypeError",
+      "ldl_float_entry": "TypeError",
+      "ldl_bool_entry": "TypeError",
+      "ldl_ragged_matrix": "ValueError",
+      "ldl_asymmetric_matrix": "ValueError",
+      "box_asymmetric_const": "ValueError",
+      "box_asymmetric_sym_midpoint": "ValueError"
+    }
+  },
+  "system1_fibral_rigidity_nonaffine_truss": {
+    "singular_locus_description": "Entire line segment L1 + L2 = 2 inside [7/10, 13/10] x [9/10, 15/10] (5 points verified (1,1,0))",
+    "fibral_rigidity_pr5_exact_5point_replay": {
+      "(7/10,9/10)": {
+        "matrix": [
+          [
+            "160/63",
+            "0"
+          ],
+          [
+            "0",
+            "32/63"
+          ]
+        ],
+        "exact_inertia_pos_zero_neg": [
+          2,
+          0,
+          0
+        ]
+      },
+      "(7/10,3/2)": {
+        "matrix": [
+          [
+            "6688/4375",
+            "4432/3675"
+          ],
+          [
+            "4432/3675",
+            "29744/9261"
+          ]
+        ],
+        "exact_inertia_pos_zero_neg": [
+          2,
+          0,
+          0
+        ]
+      },
+      "(13/10,9/10)": {
+        "matrix": [
+          [
+            "1345388/889785",
+            "-274760/533871"
+          ],
+          [
+            "-274760/533871",
+            "2926000/1601613"
+          ]
+        ],
+        "exact_inertia_pos_zero_neg": [
+          2,
+          0,
+          0
+        ]
+      },
+      "(13/10,3/2)": {
+        "matrix": [
+          [
+            "2972984/4119375",
+            "26528/494325"
+          ],
+          [
+            "26528/494325",
+            "44576/59319"
+          ]
+        ],
+        "exact_inertia_pos_zero_neg": [
+          2,
+          0,
+          0
+        ]
+      },
+      "(9/10,11/10)": {
+        "matrix": [
+          [
+            "200/99",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ]
+        ],
+        "exact_inertia_pos_zero_neg": [
+          1,
+          1,
+          0
+        ]
+      }
+    },
+    "full_box_piecewise_isolates_L1_plus_L2_eq_2": {
+      "boxes_evaluated": 373,
+      "certified_leaf_counts_by_inertia": {
+        "(2, 0, 0)": 133
+      },
+      "uncertain_boundary_boxes": 54,
+      "uniformly_certified": false,
+      "certified_inertia": null,
+      "min_certified_relative_margin": 0.0002492893577153932,
+      "sample_uncertain_midpoints": [
+        [
+          "233/320",
+          "201/160"
+        ],
+        [
+          "49/64",
+          "39/32"
+        ],
+        [
+          "239/320",
+          "201/160"
+        ],
+        [
+          "49/64",
+          "201/160"
+        ],
+        [
+          "227/320",
+          "207/160"
+        ]
+      ]
+    },
+    "online_subbox_7_10_to_8_10_x_9_10_to_1_certified_PD": {
+      "boxes_evaluated": 1,
+      "certified_leaf_counts_by_inertia": {
+        "(2, 0, 0)": 1
+      },
+      "uncertain_boundary_boxes": 0,
+      "uniformly_certified": true,
+      "certified_inertia": [
+        2,
+        0,
+        0
+      ],
+      "min_certified_relative_margin": 0.580765639589169,
+      "sample_uncertain_midpoints": []
+    },
+    "offline_subbox_congruent_certified_PD": {
+      "boxes_evaluated": 3,
+      "certified_leaf_counts_by_inertia": {
+        "(2, 0, 0)": 2
+      },
+      "uncertain_boundary_boxes": 0,
+      "uniformly_certified": true,
+      "certified_inertia": [
+        2,
+        0,
+        0
+      ],
+      "min_certified_relative_margin": 0.23428687418569694,
+      "sample_uncertain_midpoints": []
+    },
+    "offline_subbox_raw_isqrt_certified_PD": {
+      "boxes_evaluated": 7,
+      "certified_leaf_counts_by_inertia": {
+        "(2, 0, 0)": 4
+      },
+      "uncertain_boundary_boxes": 0,
+      "uniformly_certified": true,
+      "certified_inertia": [
+        2,
+        0,
+        0
+      ],
+      "min_certified_relative_margin": 0.23353706643229313,
+      "sample_uncertain_midpoints": []
+    }
+  },
+  "system2_aest_minkowski_phase_boundary": {
+    "uv_stable_self_repulsive_box_certified_300": {
+      "boxes_evaluated": 871,
+      "certified_leaf_counts_by_inertia": {
+        "(3, 0, 0)": 436
+      },
+      "uncertain_boundary_boxes": 0,
+      "uniformly_certified": true,
+      "certified_inertia": [
+        3,
+        0,
+        0
+      ],
+      "min_certified_relative_margin": 0.0008988415102740188,
+      "sample_uncertain_midpoints": []
+    },
+    "ir_clustering_indefinite_box_certified_201": {
+      "boxes_evaluated": 163,
+      "certified_leaf_counts_by_inertia": {
+        "(2, 0, 1)": 82
+      },
+      "uncertain_boundary_boxes": 0,
+      "uniformly_certified": true,
+      "certified_inertia": [
+        2,
+        0,
+        1
+      ],
+      "min_certified_relative_margin": 0.006796858202799093,
+      "sample_uncertain_midpoints": []
+    },
+    "phase_boundary_crossing_box_splits_both_phases": {
+      "boxes_evaluated": 1600,
+      "certified_leaf_counts_by_inertia": {
+        "(2, 0, 1)": 71,
+        "(3, 0, 0)": 212
+      },
+      "uncertain_boundary_boxes": 660,
+      "uniformly_certified": false,
+      "certified_inertia": null,
+      "min_certified_relative_margin": 0.0006487796647553875,
+      "sample_uncertain_midpoints": [
+        [
+          "79/80",
+          "77/80",
+          "987/64"
+        ],
+        [
+          "77/80",
+          "81/80",
+          "987/64"
+        ],
+        [
+          "81/80",
+          "77/80",
+          "987/64"
+        ],
+        [
+          "83/80",
+          "77/80",
+          "987/64"
+        ],
+        [
+          "83/80",
+          "79/80",
+          "987/64"
+        ]
+      ]
+    },
+    "lam_s_zero_yukawa_boundary_box_certified_201": {
+      "boxes_evaluated": 907,
+      "certified_leaf_counts_by_inertia": {
+        "(2, 0, 1)": 454
+      },
+      "uncertain_boundary_boxes": 0,
+      "uniformly_certified": true,
+      "certified_inertia": [
+        2,
+        0,
+        1
+      ],
+      "min_certified_relative_margin": 7.697480393815575e-05,
+      "sample_uncertain_midpoints": []
+    }
+  },
+  "system3_point_charges_C3_C4_morse_boxes": {
+    "n3-triangle": {
+      "n_charges": 3,
+      "n_equilibria_certified": 4,
+      "m1": 1,
+      "m2": 3,
+      "morse_relation_m2_minus_m1_eq_n_minus_1": true,
+      "all_boxes_certified_zero_float": true,
+      "zeros": [
+        {
+          "zero_id": 0,
+          "published_index": 2,
+          "exact_certified_inertia": [
+            1,
+            0,
+            2
+          ],
+          "exact_morse_index": 2,
+          "relative_gershgorin_margin": 0.9999999999995719
+        },
+        {
+          "zero_id": 1,
+          "published_index": 1,
+          "exact_certified_inertia": [
+            2,
+            0,
+            1
+          ],
+          "exact_morse_index": 1,
+          "relative_gershgorin_margin": 0.9999999999978181
+        },
+        {
+          "zero_id": 2,
+          "published_index": 2,
+          "exact_certified_inertia": [
+            1,
+            0,
+            2
+          ],
+          "exact_morse_index": 2,
+          "relative_gershgorin_margin": 0.9999999999994529
+        },
+        {
+          "zero_id": 3,
+          "published_index": 2,
+          "exact_certified_inertia": [
+            1,
+            0,
+            2
+          ],
+          "exact_morse_index": 2,
+          "relative_gershgorin_margin": 0.9999999999995719
+        }
+      ]
+    },
+    "n4-triangle-plus-centre": {
+      "n_charges": 4,
+      "n_equilibria_certified": 9,
+      "m1": 3,
+      "m2": 6,
+      "morse_relation_m2_minus_m1_eq_n_minus_1": true,
+      "all_boxes_certified_zero_float": true,
+      "zeros": [
+        {
+          "zero_id": 0,
+          "published_index": 2,
+          "exact_certified_inertia": [
+            1,
+            0,
+            2
+          ],
+          "exact_morse_index": 2,
+          "relative_gershgorin_margin": 0.9999999999992644
+        },
+        {
+          "zero_id": 1,
+          "published_index": 1,
+          "exact_certified_inertia": [
+            2,
+            0,
+            1
+          ],
+          "exact_morse_index": 1,
+          "relative_gershgorin_margin": 0.9999999999962863
+        },
+        {
+          "zero_id": 2,
+          "published_index": 2,
+          "exact_certified_inertia": [
+            1,
+            0,
+            2
+          ],
+          "exact_morse_index": 2,
+          "relative_gershgorin_margin": 0.9999999999953807
+        },
+        {
+          "zero_id": 3,
+          "published_index": 2,
+          "exact_certified_inertia": [
+            1,
+            0,
+            2
+          ],
+          "exact_morse_index": 2,
+          "relative_gershgorin_margin": 0.9999999999931911
+        },
+        {
+          "zero_id": 4,
+          "published_index": 1,
+          "exact_certified_inertia": [
+            2,
+            0,
+            1
+          ],
+          "exact_morse_index": 1,
+          "relative_gershgorin_margin": 0.9999999999962863
+        },
+        {
+          "zero_id": 5,
+          "published_index": 1,
+          "exact_certified_inertia": [
+            2,
+            0,
+            1
+          ],
+          "exact_morse_index": 1,
+          "relative_gershgorin_margin": 0.9999999999963393
+        },
+        {
+          "zero_id": 6,
+          "published_index": 2,
+          "exact_certified_inertia": [
+            1,
+            0,
+            2
+          ],
+          "exact_morse_index": 2,
+          "relative_gershgorin_margin": 0.9999999999953807
+        },
+        {
+          "zero_id": 7,
+          "published_index": 2,
+          "exact_certified_inertia": [
+            1,
+            0,
+            2
+          ],
+          "exact_morse_index": 2,
+          "relative_gershgorin_margin": 0.9999999999992534
+        },
+        {
+          "zero_id": 8,
+          "published_index": 2,
+          "exact_certified_inertia": [
+            1,
+            0,
+            2
+          ],
+          "exact_morse_index": 2,
+          "relative_gershgorin_margin": 0.9999999999992644
+        }
+      ]
+    }
+  },
+  "sha256_canonical": "6d46734781a86a84ba86f980b5b31579a3da5111eaa21330d1cb1735d8a63efb"
+}

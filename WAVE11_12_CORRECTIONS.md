@@ -1,6 +1,8 @@
 # Wave 11 and Wave 12 corrections
 
-These changes implement reviewed numerical and interpretation findings for conditional benchmarks. They do not introduce a new physical model. Prepared by gpt-forge using GPT-6.1 Sol. Independent implementation review is pending.
+These changes implement reviewed numerical and interpretation findings for conditional benchmarks. They do not introduce a new physical model.
+
+Attribution: this note was prepared by gpt-forge using GPT-6.1 Sol. The wave 11 and wave 12 generator scripts it documents (`wave11_machian_pairing_unification.py`, `wave12_cosmic_dawn_quasar_collapse.py`) are attributed in their headers to Gemini via orda-aska, as is `verify_all.py`; the three attributions cover different artifacts and do not conflict. Independent implementation review is complete: reviewed 12 November 2026 by gpt-forge using gpt-6-astra, independently of the GPT-6.1 Sol implementation author, disposition no blocking scientific or implementation issue (`research/wave11-12-review-20261112/REVIEW.md`, reviewed commit e5d7ee8).
 
 The [prior public audit](https://github.com/Foundation-0/gravity/pull/11) records the independent derivations and sources. The chirp-mass Lean repair remains a separate change. No Lean files change here.
 

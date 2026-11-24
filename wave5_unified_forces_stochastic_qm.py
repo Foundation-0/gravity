@@ -32,6 +32,16 @@ H0_SI = 67.4e3 / MPC
 M_PLANCK_GEV = math.sqrt(HBAR * C / G) * (C ** 2) / GEV_J
 
 
+def fail(message):
+    """Fail a verification check explicitly.
+
+    Bare ``assert`` is skipped under ``python3 -O``, so a corrupted
+    certificate would print CHECK OK and exit 0. Every check in this
+    file raises ``SystemExit`` instead, which ``-O`` cannot remove.
+    """
+    raise SystemExit(f"CHECK FAILED: {message}")
+
+
 def check_c12_c13_force_scales() -> dict:
     sigma_qcd_gev2 = 0.180
     sigma_qcd_gev_fm = sigma_qcd_gev2 / HBAR_C_GEV_FM
@@ -179,14 +189,26 @@ def emit_or_verify(cert: dict, out_path: Path) -> None:
     cert["sha256_canonical"] = hashlib.sha256(canonical).hexdigest()
     rendered = json.dumps(cert, indent=2) + "\n"
     if "--check" in sys.argv:
-        assert out_path.is_file(), f"Missing certificate file: {out_path}"
+        # Explicit comparisons: bare `assert` is removed under `python -O`.
+        if not out_path.is_file():
+            raise SystemExit(f"CHECK FAILED: missing certificate file: {out_path.name}")
         on_disk_text = out_path.read_text(encoding="utf-8")
-        on_disk_obj = json.loads(on_disk_text)
+        try:
+            on_disk_obj = json.loads(on_disk_text)
+        except json.JSONDecodeError as exc:
+            raise SystemExit(f"CHECK FAILED: certificate file is not valid JSON: {out_path.name} ({exc})")
+        if not isinstance(on_disk_obj, dict):
+            raise SystemExit(f"CHECK FAILED: certificate file is not a JSON object: {out_path.name}")
         stored_sha = on_disk_obj.pop("sha256_canonical", None)
+        if stored_sha is None:
+            raise SystemExit(f"CHECK FAILED: certificate file has no sha256_canonical field: {out_path.name}")
         disk_canonical = json.dumps(on_disk_obj, sort_keys=True, separators=(",", ":")).encode("utf-8")
-        assert stored_sha == hashlib.sha256(disk_canonical).hexdigest(), "Canonical SHA-256 mismatch on disk"
-        assert stored_sha == cert["sha256_canonical"], "Recomputed canonical SHA-256 mismatch"
-        assert on_disk_text == rendered, "Certificate file is not byte-identical to generator output"
+        if stored_sha != hashlib.sha256(disk_canonical).hexdigest():
+            raise SystemExit(f"CHECK FAILED: canonical SHA-256 mismatch on disk: {out_path.name}")
+        if stored_sha != cert["sha256_canonical"]:
+            raise SystemExit(f"CHECK FAILED: recomputed canonical SHA-256 mismatch: {out_path.name}")
+        if on_disk_text != rendered:
+            raise SystemExit(f"CHECK FAILED: certificate file is not byte-identical to generator output: {out_path.name}")
         print(f"CHECK OK (byte-identical): {out_path.name} sha256_canonical={stored_sha}")
     else:
         out_path.parent.mkdir(parents=True, exist_ok=True)
@@ -200,11 +222,16 @@ def main() -> int:
     c15 = check_c15_nelson_sde_simulation()
     c16_c17 = check_c16_c17_bell_and_disk_quadrupole()
 
-    assert 0.85 < c12_c13["compton_and_horizon_accelerations"]["desitter_to_empirical_a0_ratio"] < 0.88
-    assert c14["de_broglie_diffusivity_mass_ratio_25kDa_over_me"] > 4.5e7
-    assert c15["undamped_heating_ratio_T5"] > 5.0
-    assert abs(c15["nelson_ground_state_var_x_sim"] - 0.5) < 0.03
-    assert c16_c17["c17_baryonic_disk_quadrupole_check"]["disk_quadrupole_over_gN_at_1Mpc"] < 2.0e-5
+    if not (0.85 < c12_c13["compton_and_horizon_accelerations"]["desitter_to_empirical_a0_ratio"] < 0.88):
+        fail("check failed: 0.85 < c12_c13[\"compton_and_horizon_accelerations\"][\"desitter_to_empirical_a0_ratio\"] < 0.88")
+    if not (c14["de_broglie_diffusivity_mass_ratio_25kDa_over_me"] > 4.5e7):
+        fail("check failed: c14[\"de_broglie_diffusivity_mass_ratio_25kDa_over_me\"] > 4.5e7")
+    if not (c15["undamped_heating_ratio_T5"] > 5.0):
+        fail("check failed: c15[\"undamped_heating_ratio_T5\"] > 5.0")
+    if not (abs(c15["nelson_ground_state_var_x_sim"] - 0.5) < 0.03):
+        fail("check failed: abs(c15[\"nelson_ground_state_var_x_sim\"] - 0.5) < 0.03")
+    if not (c16_c17["c17_baryonic_disk_quadrupole_check"]["disk_quadrupole_over_gN_at_1Mpc"] < 2.0e-5):
+        fail("check failed: c16_c17[\"c17_baryonic_disk_quadrupole_check\"][\"disk_quadrupole_over_gN_at_1Mpc\"] < 2.0e-5")
 
     cert5 = {
         "schema": "FOUNDATION-0/GRAVITY-WAVE5-FORCES-STOCHASTIC-QM/1.1",

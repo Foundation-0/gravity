@@ -45,6 +45,16 @@ F_BAR_R2500 = 0.105
 DUST_TO_B_R2500 = (1.0 - F_BAR_R2500) / F_BAR_R2500
 
 
+def fail(message):
+    """Fail a verification check explicitly.
+
+    Bare ``assert`` is skipped under ``python3 -O``, so a corrupted
+    certificate would print CHECK OK and exit 0. Every check in this
+    file raises ``SystemExit`` instead, which ``-O`` cannot remove.
+    """
+    raise SystemExit(f"CHECK FAILED: {message}")
+
+
 def nu_rar(y: float) -> float:
     sy = math.sqrt(max(0.0, y))
     if sy == 0.0:
@@ -317,14 +327,26 @@ def emit_or_verify(cert: dict, out_path: Path) -> None:
     cert["sha256_canonical"] = hashlib.sha256(canonical).hexdigest()
     rendered = json.dumps(cert, indent=2) + "\n"
     if "--check" in sys.argv:
-        assert out_path.is_file(), f"Missing certificate file: {out_path}"
+        # Explicit comparisons: bare `assert` is removed under `python -O`.
+        if not out_path.is_file():
+            raise SystemExit(f"CHECK FAILED: missing certificate file: {out_path.name}")
         on_disk_text = out_path.read_text(encoding="utf-8")
-        on_disk_obj = json.loads(on_disk_text)
+        try:
+            on_disk_obj = json.loads(on_disk_text)
+        except json.JSONDecodeError as exc:
+            raise SystemExit(f"CHECK FAILED: certificate file is not valid JSON: {out_path.name} ({exc})")
+        if not isinstance(on_disk_obj, dict):
+            raise SystemExit(f"CHECK FAILED: certificate file is not a JSON object: {out_path.name}")
         stored_sha = on_disk_obj.pop("sha256_canonical", None)
+        if stored_sha is None:
+            raise SystemExit(f"CHECK FAILED: certificate file has no sha256_canonical field: {out_path.name}")
         disk_canonical = json.dumps(on_disk_obj, sort_keys=True, separators=(",", ":")).encode("utf-8")
-        assert stored_sha == hashlib.sha256(disk_canonical).hexdigest(), "Canonical SHA-256 mismatch on disk"
-        assert stored_sha == cert["sha256_canonical"], "Recomputed canonical SHA-256 mismatch"
-        assert on_disk_text == rendered, "Certificate file is not byte-identical to generator output"
+        if stored_sha != hashlib.sha256(disk_canonical).hexdigest():
+            raise SystemExit(f"CHECK FAILED: canonical SHA-256 mismatch on disk: {out_path.name}")
+        if stored_sha != cert["sha256_canonical"]:
+            raise SystemExit(f"CHECK FAILED: recomputed canonical SHA-256 mismatch: {out_path.name}")
+        if on_disk_text != rendered:
+            raise SystemExit(f"CHECK FAILED: certificate file is not byte-identical to generator output: {out_path.name}")
         print(f"CHECK OK (byte-identical): {out_path.name} sha256_canonical={stored_sha}")
     else:
         out_path.parent.mkdir(parents=True, exist_ok=True)
@@ -338,12 +360,18 @@ def main() -> int:
     c26 = audit_c26_nonlinear_collapse_and_k0_test(sigma_R0, D_norm)
     c27 = audit_c27_four_way_convergence_and_predictions(c26)
 
-    assert c25["homogeneous_z0_comoving_lambdaJ_Mpc"] > 20.0
-    assert c25["recombination_to_virial200_density_ratio"] > 2.0e6
-    assert 183.0 <= c26["sigma_star_z0_kms"] <= 188.0
-    assert c26["press_schechter_redshift_trajectory"][5]["sigma_1D_star_kms"] < 15.0
-    assert c26["zero_fitted_parameter_catalog_benchmarks"]["clean_60"]["bic_k0"] < 61.0
-    assert c26["zero_fitted_parameter_catalog_benchmarks"]["clean_60"]["delta_bic_vs_wave7_3param"] < -9.5
+    if not (c25["homogeneous_z0_comoving_lambdaJ_Mpc"] > 20.0):
+        fail("check failed: c25[\"homogeneous_z0_comoving_lambdaJ_Mpc\"] > 20.0")
+    if not (c25["recombination_to_virial200_density_ratio"] > 2.0e6):
+        fail("check failed: c25[\"recombination_to_virial200_density_ratio\"] > 2.0e6")
+    if not (183.0 <= c26["sigma_star_z0_kms"] <= 188.0):
+        fail("check failed: 183.0 <= c26[\"sigma_star_z0_kms\"] <= 188.0")
+    if not (c26["press_schechter_redshift_trajectory"][5]["sigma_1D_star_kms"] < 15.0):
+        fail("check failed: c26[\"press_schechter_redshift_trajectory\"][5][\"sigma_1D_star_kms\"] < 15.0")
+    if not (c26["zero_fitted_parameter_catalog_benchmarks"]["clean_60"]["bic_k0"] < 61.0):
+        fail("check failed: c26[\"zero_fitted_parameter_catalog_benchmarks\"][\"clean_60\"][\"bic_k0\"] < 61.0")
+    if not (c26["zero_fitted_parameter_catalog_benchmarks"]["clean_60"]["delta_bic_vs_wave7_3param"] < -9.5):
+        fail("check failed: c26[\"zero_fitted_parameter_catalog_benchmarks\"][\"clean_60\"][\"delta_bic_vs_wave7_3param\"] < -9.5")
 
     cert10 = {
         "schema": "FOUNDATION-0/GRAVITY-WAVE10-JEANS-UNIFICATION/1.0",

@@ -63,6 +63,16 @@ SPARC_KINEMATIC_BTFR = [
 ]
 
 
+def fail(message):
+    """Fail a verification check explicitly.
+
+    Bare ``assert`` is skipped under ``python3 -O``, so a corrupted
+    certificate would print CHECK OK and exit 0. Every check in this
+    file raises ``SystemExit`` instead, which ``-O`` cannot remove.
+    """
+    raise SystemExit(f"CHECK FAILED: {message}")
+
+
 def pred_log10_gobs(log10_gbar: float, ds: float, a0: float) -> float:
     gb = 10.0 ** log10_gbar
     if ds <= 1.0e-9:
@@ -258,14 +268,26 @@ def emit_or_verify(cert: dict, out_path: Path) -> None:
     cert["sha256_canonical"] = hashlib.sha256(canonical).hexdigest()
     rendered = json.dumps(cert, indent=2) + "\n"
     if "--check" in sys.argv:
-        assert out_path.is_file(), f"Missing certificate file: {out_path}"
+        # Explicit comparisons: bare `assert` is removed under `python -O`.
+        if not out_path.is_file():
+            raise SystemExit(f"CHECK FAILED: missing certificate file: {out_path.name}")
         on_disk_text = out_path.read_text(encoding="utf-8")
-        on_disk_obj = json.loads(on_disk_text)
+        try:
+            on_disk_obj = json.loads(on_disk_text)
+        except json.JSONDecodeError as exc:
+            raise SystemExit(f"CHECK FAILED: certificate file is not valid JSON: {out_path.name} ({exc})")
+        if not isinstance(on_disk_obj, dict):
+            raise SystemExit(f"CHECK FAILED: certificate file is not a JSON object: {out_path.name}")
         stored_sha = on_disk_obj.pop("sha256_canonical", None)
+        if stored_sha is None:
+            raise SystemExit(f"CHECK FAILED: certificate file has no sha256_canonical field: {out_path.name}")
         disk_canonical = json.dumps(on_disk_obj, sort_keys=True, separators=(",", ":")).encode("utf-8")
-        assert stored_sha == hashlib.sha256(disk_canonical).hexdigest(), "Canonical SHA-256 mismatch on disk"
-        assert stored_sha == cert["sha256_canonical"], "Recomputed canonical SHA-256 mismatch"
-        assert on_disk_text == rendered, "Certificate file is not byte-identical to generator output"
+        if stored_sha != hashlib.sha256(disk_canonical).hexdigest():
+            raise SystemExit(f"CHECK FAILED: canonical SHA-256 mismatch on disk: {out_path.name}")
+        if stored_sha != cert["sha256_canonical"]:
+            raise SystemExit(f"CHECK FAILED: recomputed canonical SHA-256 mismatch: {out_path.name}")
+        if on_disk_text != rendered:
+            raise SystemExit(f"CHECK FAILED: certificate file is not byte-identical to generator output: {out_path.name}")
         print(f"CHECK OK (byte-identical): {out_path.name} sha256_canonical={stored_sha}")
     else:
         out_path.parent.mkdir(parents=True, exist_ok=True)
@@ -274,19 +296,26 @@ def emit_or_verify(cert: dict, out_path: Path) -> None:
 
 
 def main() -> int:
-    assert sum(KIDS_ISOLATED_LENS_COUNTS_BY_BIN) == 129027
+    if not (sum(KIDS_ISOLATED_LENS_COUNTS_BY_BIN) == 129027):
+        fail("check failed: sum(KIDS_ISOLATED_LENS_COUNTS_BY_BIN) == 129027")
     f1 = fit_1_sparc_rar_spectral_dimension()
     a0_emp = f1["fixed_ds1_best_a0_1e10_m_s2"] * 1.0e-10
     f2 = fit_2_btfr_sparc_and_kids()
     f3 = fit_3_cosmic_efe_bound(a0_emp)
 
     ds1_row = next(r for r in f1["profile_scan"] if r["d_s"] == 1.0)
-    assert f1["fixed_ds1_chi2"] == ds1_row["chi2_14bins"]
-    assert f1["fixed_ds1_best_a0_1e10_m_s2"] == ds1_row["profiled_a0_1e10_m_s2"]
-    assert f1["joint_best_ds"] == 0.94
-    assert f1["delta_chi2_ds075_vs_ds1"] > 50.0
-    assert f2["delta_BIC_coord_fractal_vs_ds1"] > 400.0
-    assert f3["cosmic_efe_95CL_upper_bound_gext_over_a0"] <= 0.025
+    if not (f1["fixed_ds1_chi2"] == ds1_row["chi2_14bins"]):
+        fail("check failed: f1[\"fixed_ds1_chi2\"] == ds1_row[\"chi2_14bins\"]")
+    if not (f1["fixed_ds1_best_a0_1e10_m_s2"] == ds1_row["profiled_a0_1e10_m_s2"]):
+        fail("check failed: f1[\"fixed_ds1_best_a0_1e10_m_s2\"] == ds1_row[\"profiled_a0_1e10_m_s2\"]")
+    if not (f1["joint_best_ds"] == 0.94):
+        fail("check failed: f1[\"joint_best_ds\"] == 0.94")
+    if not (f1["delta_chi2_ds075_vs_ds1"] > 50.0):
+        fail("check failed: f1[\"delta_chi2_ds075_vs_ds1\"] > 50.0")
+    if not (f2["delta_BIC_coord_fractal_vs_ds1"] > 400.0):
+        fail("check failed: f2[\"delta_BIC_coord_fractal_vs_ds1\"] > 400.0")
+    if not (f3["cosmic_efe_95CL_upper_bound_gext_over_a0"] <= 0.025):
+        fail("check failed: f3[\"cosmic_efe_95CL_upper_bound_gext_over_a0\"] <= 0.025")
 
     cert3 = {
         "schema": "FOUNDATION-0/GRAVITY-WAVE3-EMPIRICAL/1.1",

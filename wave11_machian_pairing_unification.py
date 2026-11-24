@@ -32,6 +32,16 @@ OMEGA_M = (0.02237 + 0.1200 + 0.00064) / (H_LITTLE ** 2)
 OMEGA_L = 1.0 - OMEGA_M
 
 
+def fail(message):
+    """Fail a verification check explicitly.
+
+    Bare ``assert`` is skipped under ``python3 -O``, so a corrupted
+    certificate would print CHECK OK and exit 0. Every check in this
+    file raises ``SystemExit`` instead, which ``-O`` cannot remove.
+    """
+    raise SystemExit(f"CHECK FAILED: {message}")
+
+
 def audit_c28_machian_inertia_and_horizon_scales() -> dict:
     """Evaluates Sciama (1953) / Urueña Palomo (2026) Machian induction identities, Milgrom (1999) Unruh-de Sitter scales, and PPN/locality caveats."""
     m_hubble = (4.0 / 3.0) * math.pi * (R_H ** 3) * RHO_CRIT0
@@ -231,8 +241,15 @@ def emit_or_verify(cert: dict, out_path: Path) -> None:
         if not out_path.is_file():
             raise SystemExit(f"CHECK FAILED: missing certificate file: {out_path.name}")
         on_disk_text = out_path.read_text(encoding="utf-8")
-        on_disk_obj = json.loads(on_disk_text)
+        try:
+            on_disk_obj = json.loads(on_disk_text)
+        except json.JSONDecodeError as exc:
+            raise SystemExit(f"CHECK FAILED: certificate file is not valid JSON: {out_path.name} ({exc})")
+        if not isinstance(on_disk_obj, dict):
+            raise SystemExit(f"CHECK FAILED: certificate file is not a JSON object: {out_path.name}")
         stored_sha = on_disk_obj.pop("sha256_canonical", None)
+        if stored_sha is None:
+            raise SystemExit(f"CHECK FAILED: certificate file has no sha256_canonical field: {out_path.name}")
         disk_canonical = json.dumps(on_disk_obj, sort_keys=True, separators=(",", ":")).encode("utf-8")
         if stored_sha != hashlib.sha256(disk_canonical).hexdigest():
             raise SystemExit(f"CHECK FAILED: canonical SHA-256 mismatch on disk: {out_path.name}")
@@ -252,12 +269,18 @@ def main() -> int:
     c29 = audit_c29_zero_energy_and_desi_turnaround()
     c30 = audit_c30_cpt_pair_bifurcation_and_cogenesis()
 
-    assert c28["sciama_compactness_GMH_over_RH_c2"] == 0.5
-    assert c28["frame_dragging_induction_partition"]["total_inertial_coefficient_K_tot"] == 1.0
-    assert 1.35 <= c29["future_deceleration_onset_scale_factor_a_slow"] <= 1.45
-    assert c30["symmetric_polynomial_state_u0"]["w_u0_exact"] == -1.0
-    assert c30["global_net_noether_charge_sum"] == 0.0
-    assert c30["both_sheets_positive_dust_gravity"] is True
+    if not (c28["sciama_compactness_GMH_over_RH_c2"] == 0.5):
+        fail("check failed: c28[\"sciama_compactness_GMH_over_RH_c2\"] == 0.5")
+    if not (c28["frame_dragging_induction_partition"]["total_inertial_coefficient_K_tot"] == 1.0):
+        fail("check failed: c28[\"frame_dragging_induction_partition\"][\"total_inertial_coefficient_K_tot\"] == 1.0")
+    if not (1.35 <= c29["future_deceleration_onset_scale_factor_a_slow"] <= 1.45):
+        fail("check failed: 1.35 <= c29[\"future_deceleration_onset_scale_factor_a_slow\"] <= 1.45")
+    if not (c30["symmetric_polynomial_state_u0"]["w_u0_exact"] == -1.0):
+        fail("check failed: c30[\"symmetric_polynomial_state_u0\"][\"w_u0_exact\"] == -1.0")
+    if not (c30["global_net_noether_charge_sum"] == 0.0):
+        fail("check failed: c30[\"global_net_noether_charge_sum\"] == 0.0")
+    if not (c30["both_sheets_positive_dust_gravity"] is True):
+        fail("check failed: c30[\"both_sheets_positive_dust_gravity\"] is True")
 
     cert11 = {
         "schema": "FOUNDATION-0/GRAVITY-WAVE11-MACHIAN-PAIRING/1.1",

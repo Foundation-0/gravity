@@ -28,6 +28,16 @@ A0_EMP = 1.20e-10
 L_PLANCK = math.sqrt(HBAR * G / (C ** 3))
 
 
+def fail(message):
+    """Fail a verification check explicitly.
+
+    Bare ``assert`` is skipped under ``python3 -O``, so a corrupted
+    certificate would print CHECK OK and exit 0. Every check in this
+    file raises ``SystemExit`` instead, which ``-O`` cannot remove.
+    """
+    raise SystemExit(f"CHECK FAILED: {message}")
+
+
 def check_c18_milgrom_radius_identity() -> dict:
     bodies = [
         ("proton", 1.67262192369e-27),
@@ -155,8 +165,15 @@ def emit_or_verify(cert: dict, out_path: Path) -> None:
         if not out_path.is_file():
             raise SystemExit(f"CHECK FAILED: missing certificate file: {out_path.name}")
         on_disk_text = out_path.read_text(encoding="utf-8")
-        on_disk_obj = json.loads(on_disk_text)
+        try:
+            on_disk_obj = json.loads(on_disk_text)
+        except json.JSONDecodeError as exc:
+            raise SystemExit(f"CHECK FAILED: certificate file is not valid JSON: {out_path.name} ({exc})")
+        if not isinstance(on_disk_obj, dict):
+            raise SystemExit(f"CHECK FAILED: certificate file is not a JSON object: {out_path.name}")
         stored_sha = on_disk_obj.pop("sha256_canonical", None)
+        if stored_sha is None:
+            raise SystemExit(f"CHECK FAILED: certificate file has no sha256_canonical field: {out_path.name}")
         disk_canonical = json.dumps(on_disk_obj, sort_keys=True, separators=(",", ":")).encode("utf-8")
         if stored_sha != hashlib.sha256(disk_canonical).hexdigest():
             raise SystemExit(f"CHECK FAILED: canonical SHA-256 mismatch on disk: {out_path.name}")
@@ -176,10 +193,14 @@ def main() -> int:
     c19 = check_c19_potential_depth_ansatz()
     c20 = check_c20_algebraic_cancellation()
 
-    assert c18["max_ieee754_float64_rounding_rel_diff"] < 1.0e-14
-    assert c19["potential_depth_Phi_over_c2"]["bullet_to_Lstar_10kpc_ratio"] > 35.0
-    assert c19["implied_single_zone_onset_sigma1D_kms"] == 388.1
-    assert c20["max_ieee754_float64_rounding_rel_diff"] < 1.0e-15
+    if not (c18["max_ieee754_float64_rounding_rel_diff"] < 1.0e-14):
+        fail("check failed: c18[\"max_ieee754_float64_rounding_rel_diff\"] < 1.0e-14")
+    if not (c19["potential_depth_Phi_over_c2"]["bullet_to_Lstar_10kpc_ratio"] > 35.0):
+        fail("check failed: c19[\"potential_depth_Phi_over_c2\"][\"bullet_to_Lstar_10kpc_ratio\"] > 35.0")
+    if not (c19["implied_single_zone_onset_sigma1D_kms"] == 388.1):
+        fail("check failed: c19[\"implied_single_zone_onset_sigma1D_kms\"] == 388.1")
+    if not (c20["max_ieee754_float64_rounding_rel_diff"] < 1.0e-15):
+        fail("check failed: c20[\"max_ieee754_float64_rounding_rel_diff\"] < 1.0e-15")
 
     cert6 = {
         "schema": "FOUNDATION-0/GRAVITY-WAVE6-CONVERGENCE-UNIFICATION/1.1",

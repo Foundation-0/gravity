@@ -34,6 +34,16 @@ KIDS_WL_1000KPC = [
 ]
 
 
+def fail(message):
+    """Fail a verification check explicitly.
+
+    Bare ``assert`` is skipped under ``python3 -O``, so a corrupted
+    certificate would print CHECK OK and exit 0. Every check in this
+    file raises ``SystemExit`` instead, which ``-O`` cannot remove.
+    """
+    raise SystemExit(f"CHECK FAILED: {message}")
+
+
 def nu_rar(y: float) -> float:
     if y <= 0.0:
         return 1.0
@@ -180,8 +190,15 @@ def emit_or_verify(cert: dict, out_path: Path) -> None:
         if not out_path.is_file():
             raise SystemExit(f"CHECK FAILED: missing certificate file: {out_path.name}")
         on_disk_text = out_path.read_text(encoding="utf-8")
-        on_disk_obj = json.loads(on_disk_text)
+        try:
+            on_disk_obj = json.loads(on_disk_text)
+        except json.JSONDecodeError as exc:
+            raise SystemExit(f"CHECK FAILED: certificate file is not valid JSON: {out_path.name} ({exc})")
+        if not isinstance(on_disk_obj, dict):
+            raise SystemExit(f"CHECK FAILED: certificate file is not a JSON object: {out_path.name}")
         stored_sha = on_disk_obj.pop("sha256_canonical", None)
+        if stored_sha is None:
+            raise SystemExit(f"CHECK FAILED: certificate file has no sha256_canonical field: {out_path.name}")
         disk_canonical = json.dumps(on_disk_obj, sort_keys=True, separators=(",", ":")).encode("utf-8")
         if stored_sha != hashlib.sha256(disk_canonical).hexdigest():
             raise SystemExit(f"CHECK FAILED: canonical SHA-256 mismatch on disk: {out_path.name}")
@@ -200,12 +217,16 @@ def main() -> int:
     c23 = audit_c23_crossover_and_cluster_rar()
     c24 = audit_c24_aest_quasistatic_bound()
 
-    assert all(b["max_velocity_shift_from_100pct_cosmic_dust_pct"] < 4.5 for b in c23["kids_1Mpc_galaxy_insensitivity"])
+    if not (all(b["max_velocity_shift_from_100pct_cosmic_dust_pct"] < 4.5 for b in c23["kids_1Mpc_galaxy_insensitivity"])):
+        fail("check failed: all(b[\"max_velocity_shift_from_100pct_cosmic_dust_pct\"] < 4.5 for b in c23[\"kids_1Mpc_galaxy_insensitivity\"])")
     clash_g = c23["clash_vs_xcop_apparent_gddag_predictions"][0]["predicted_apparent_g_ddag_1e9_m_s2"]
     xcop_g = c23["clash_vs_xcop_apparent_gddag_predictions"][1]["predicted_apparent_g_ddag_1e9_m_s2"]
-    assert 1.90 <= clash_g <= 2.15 and 0.95 <= xcop_g <= 1.20
-    assert c23["one_parameter_jeans_fits_icm_segregated_R2500"]["clean_60"]["bic"] < 66.0
-    assert c24["cluster_core_250kpc_inside_rC"] is True
+    if not (1.90 <= clash_g <= 2.15 and 0.95 <= xcop_g <= 1.20):
+        fail("check failed: 1.90 <= clash_g <= 2.15 and 0.95 <= xcop_g <= 1.20")
+    if not (c23["one_parameter_jeans_fits_icm_segregated_R2500"]["clean_60"]["bic"] < 66.0):
+        fail("check failed: c23[\"one_parameter_jeans_fits_icm_segregated_R2500\"][\"clean_60\"][\"bic\"] < 66.0")
+    if not (c24["cluster_core_250kpc_inside_rC"] is True):
+        fail("check failed: c24[\"cluster_core_250kpc_inside_rC\"] is True")
 
     cert9 = {
         "schema": "FOUNDATION-0/GRAVITY-WAVE9-CONVERGENCE/1.0",

@@ -846,6 +846,7 @@ def main() -> None:
         "coupled_baryon_aest_6state_verification": coupled,
         "exact_rational_minkowski_pole_zero_inertia": mink_exact,
     }
+    # Reference-BLAS IEEE-754 float payload digest (cross-BLAS builds may differ at <=1.7e-11 relative last-ULP)
     canon = json.dumps(payload, sort_keys=True, separators=(",", ":")).encode("utf-8")
     payload["sha256_canonical"] = hashlib.sha256(canon).hexdigest()
     OUT_PATH.write_text(json.dumps(payload, indent=2) + "\n", encoding="utf-8")

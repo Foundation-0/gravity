@@ -657,6 +657,7 @@ def main() -> None:
         "part_a_gravity_latch_and_t4_audit": part_a,
         "part_b_repaired_blind_chirp_invariant": part_b,
     }
+    # Reference-BLAS IEEE-754 float payload digest (cross-BLAS builds may differ at <=1.5e-15 relative last-ULP)
     canon = json.dumps(payload, sort_keys=True, separators=(",", ":")).encode("utf-8")
     payload["sha256_canonical"] = hashlib.sha256(canon).hexdigest()
     OUT_PATH.write_text(json.dumps(payload, indent=2) + "\n", encoding="utf-8")

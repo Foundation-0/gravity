@@ -688,10 +688,8 @@ def system3_point_charges_exact_morse_boxes() -> Dict:
         certified_zeros = []
         m1 = m2 = 0
         for idx, z in enumerate(data["zeros"]):
-            # Use the tight enclosure box converted to exact rationals (exact binary Fraction of JSON float bounds,
-            # or widened slightly by exact 1/10^6 around exact midpoint so it strictly encloses the published enclosure!)
+            # Convert the upstream JSON float enclosure bounds directly to exact IEEE-754 dyadic Fractions (unwidened):
             lo_f, hi_f = z["enclosure"][0], z["enclosure"][1]
-            # Convert exact float bounds to exact Fractions (Fraction(float) is exact IEEE-754 dyadic rational!)
             box_z = tuple(QI(Fraction(lo_f[d]), Fraction(hi_f[d])) for d in range(3))
             ok_z, inertia_z, margin_z = certify_single_box(M_hess, box_z)
             check(ok_z and inertia_z is not None, f"{fname} zero #{idx} failed exact rational certification!")

@@ -1,0 +1,709 @@
+{
+  "probe": "probe1_aest_helmholtz_closure",
+  "symbolic_theorems": {
+    "M_scr_sq": "Kpp*Q**2*(lam + 1)/(KB*lam + 2)",
+    "helmholtz_pressure_ratio_p_over_ca2D": "Kpp*Q**2*(lam + 1)/(KB*lam*r + Kpp*Q**2*lam + Kpp*Q**2 + 2*r)",
+    "G_AA_over_Gtilde": "(KB*lam*r + Kpp*Q**2*lam + Kpp*Q**2 - 2*lam*r)/(KB*lam*r + Kpp*Q**2*lam + Kpp*Q**2 + 2*r)",
+    "G_AA_ir_limit": "1",
+    "G_AA_uv_limit": "lam*(KB - 2)/(KB*lam + 2)",
+    "G_AA_lam0_yukawa": "Kpp*Q**2/(Kpp*Q**2 + 2*r)",
+    "r_zero_equals_mu_sq": "-Kpp*Q**2*(lam + 1)/(lam*(KB - 2))",
+    "pole_zero_ratio_r_zero_over_mu_sq": "1",
+    "static_baryon_Phi_over_Phi_Newton": "-2*r*(lam + 1)/(KB*lam*r + Kpp*Q**2*lam + Kpp*Q**2 - 2*lam*r)",
+    "static_dynamical_duality_residual": "0",
+    "minkowski_H2_principal_minors_Q1": [
+      "-2*r*(KB - 2)*(KB*lam + 2)/KB",
+      "-(KB - 2)*(KB*lam*r + Kpp*lam + Kpp + 2*r)/(KB*Kpp)",
+      "(KB - 2)*(KB*lam*r + Kpp*lam + Kpp - 2*lam*r)/(4*KB*Kpp*r)"
+    ],
+    "hamiltonian_schur_complement_H2_min_over_fast": "-P_s**2*(KB*lam*r + Kpp*lam + Kpp - 2*lam*r)/(8*r*(KB*lam*r + Kpp*lam + Kpp + 2*r))",
+    "hamiltonian_schur_complement_S_P": "-(KB*lam*r + Kpp*lam + Kpp - 2*lam*r)/(4*r*(KB*lam*r + Kpp*lam + Kpp + 2*r))",
+    "hamiltonian_schur_energy_residual": "0",
+    "hamiltonian_schur_hessian_residual": "0",
+    "lam0_minors_Q1": [
+      "-4*r*(KB - 2)/KB",
+      "-(KB - 2)*(Kpp + 2*r)/(KB*Kpp)",
+      "(KB - 2)/(4*KB*r)"
+    ],
+    "lam0_schur_S_P": "-Kpp/(4*r*(Kpp + 2*r))",
+    "fast_sector_independent_of_Db": "exact_zero_derivative"
+  },
+  "aest_benchmark_k6_to_24": {
+    "deg": 24,
+    "rtol": 1e-12,
+    "rows": [
+      {
+        "k_over_Q0": 6.0,
+        "zero_pressure": {
+          "density_err": 0.24603288376028976,
+          "lensing_err": 0.24576009132529772,
+          "max_err": 0.24603288376028976,
+          "invariance_defect_dimless": 0.6475798208371604
+        },
+        "adiabatic_pressure": {
+          "density_err": 1.175840957259915,
+          "lensing_err": 1.1756800774506253,
+          "max_err": 1.175840957259915,
+          "invariance_defect_dimless": 1.0000000000000018
+        },
+        "probe_frozen_ic_hidden_off_manifold_rel": 0.043338389118679384,
+        "fenichel_closures": {
+          "H0": {
+            "vs_probe_frozen_ic": {
+              "density_err": 0.005479145009956836,
+              "lensing_err": 0.005477193160287007,
+              "max_err": 0.005479145009956836,
+              "passes_1pct": true
+            },
+            "vs_invariant_ic": {
+              "density_err": 0.0017623365343677974,
+              "lensing_err": 0.0017616388597772564,
+              "max_err": 0.0017623365343677974,
+              "passes_1pct": true
+            },
+            "invariance_defect_fro": 0.9682717819125215,
+            "invariance_defect_dimless": 0.3248305454385294
+          },
+          "H1": {
+            "vs_probe_frozen_ic": {
+              "density_err": 0.004278860155074211,
+              "lensing_err": 0.004286413679157264,
+              "max_err": 0.004286413679157264,
+              "passes_1pct": true
+            },
+            "vs_invariant_ic": {
+              "density_err": 0.000562051679485173,
+              "lensing_err": 0.0005655004752450224,
+              "max_err": 0.0005655004752450224,
+              "passes_1pct": true
+            },
+            "invariance_defect_fro": 0.15603863614348013,
+            "invariance_defect_dimless": 0.021547869674442652
+          },
+          "H2": {
+            "vs_probe_frozen_ic": {
+              "density_err": 0.0037033363197236263,
+              "lensing_err": 0.0037078719442895933,
+              "max_err": 0.0037078719442895933,
+              "passes_1pct": true
+            },
+            "vs_invariant_ic": {
+              "density_err": 1.347215586541194e-05,
+              "lensing_err": 1.3468259052718245e-05,
+              "max_err": 1.347215586541194e-05,
+              "passes_1pct": true
+            },
+            "invariance_defect_fro": 0.00686443315802218,
+            "invariance_defect_dimless": 0.001970454498343223
+          },
+          "H3": {
+            "vs_probe_frozen_ic": {
+              "density_err": 0.0037041822361649043,
+              "lensing_err": 0.0037087358409102753,
+              "max_err": 0.0037087358409102753,
+              "passes_1pct": true
+            },
+            "vs_invariant_ic": {
+              "density_err": 1.2626239424134021e-05,
+              "lensing_err": 1.2622151709131025e-05,
+              "max_err": 1.2626239424134021e-05,
+              "passes_1pct": true
+            },
+            "invariance_defect_fro": 0.00100570669544031,
+            "invariance_defect_dimless": 0.00012273793217017757
+          }
+        }
+      },
+      {
+        "k_over_Q0": 9.0,
+        "zero_pressure": {
+          "density_err": 0.26193493844583876,
+          "lensing_err": 0.26180276025793264,
+          "max_err": 0.26193493844583876,
+          "invariance_defect_dimless": 0.5180936166088479
+        },
+        "adiabatic_pressure": {
+          "density_err": 1.2915393264924786,
+          "lensing_err": 1.5123946909042751,
+          "max_err": 1.5123946909042751,
+          "invariance_defect_dimless": 1.0000000000000024
+        },
+        "probe_frozen_ic_hidden_off_manifold_rel": 0.040272521840087,
+        "fenichel_closures": {
+          "H0": {
+            "vs_probe_frozen_ic": {
+              "density_err": 0.0057145960840347485,
+              "lensing_err": 0.0057142526945557865,
+              "max_err": 0.0057145960840347485,
+              "passes_1pct": true
+            },
+            "vs_invariant_ic": {
+              "density_err": 0.0019767522901756197,
+              "lensing_err": 0.0019763967187152783,
+              "max_err": 0.0019767522901756197,
+              "passes_1pct": true
+            },
+            "invariance_defect_fro": 1.0087456412010318,
+            "invariance_defect_dimless": 0.3235807154896358
+          },
+          "H1": {
+            "vs_probe_frozen_ic": {
+              "density_err": 0.004442788988577175,
+              "lensing_err": 0.004471640769996776,
+              "max_err": 0.004471640769996776,
+              "passes_1pct": true
+            },
+            "vs_invariant_ic": {
+              "density_err": 0.000704945194718046,
+              "lensing_err": 0.0007053180987000515,
+              "max_err": 0.0007053180987000515,
+              "passes_1pct": true
+            },
+            "invariance_defect_fro": 0.15670228567819164,
+            "invariance_defect_dimless": 0.010017295010813556
+          },
+          "H2": {
+            "vs_probe_frozen_ic": {
+              "density_err": 0.003726825032743258,
+              "lensing_err": 0.0037555402274085277,
+              "max_err": 0.0037555402274085277,
+              "passes_1pct": true
+            },
+            "vs_invariant_ic": {
+              "density_err": 1.1018761115870331e-05,
+              "lensing_err": 1.1017758082567586e-05,
+              "max_err": 1.1018761115870331e-05,
+              "passes_1pct": true
+            },
+            "invariance_defect_fro": 0.0037434546069708037,
+            "invariance_defect_dimless": 0.0008436221328959263
+          },
+          "H3": {
+            "vs_probe_frozen_ic": {
+              "density_err": 0.003731740456132613,
+              "lensing_err": 0.003760429967923204,
+              "max_err": 0.003760429967923204,
+              "passes_1pct": true
+            },
+            "vs_invariant_ic": {
+              "density_err": 6.103337726515379e-06,
+              "lensing_err": 6.102536905474779e-06,
+              "max_err": 6.103337726515379e-06,
+              "passes_1pct": true
+            },
+            "invariance_defect_fro": 0.00043000041888699734,
+            "invariance_defect_dimless": 3.187924927429032e-05
+          }
+        }
+      },
+      {
+        "k_over_Q0": 12.0,
+        "zero_pressure": {
+          "density_err": 0.2680557383360489,
+          "lensing_err": 0.26797887510263135,
+          "max_err": 0.2680557383360489,
+          "invariance_defect_dimless": 0.4831258278269268
+        },
+        "adiabatic_pressure": {
+          "density_err": 1.2044137859602266,
+          "lensing_err": 1.6630788327446062,
+          "max_err": 1.6630788327446062,
+          "invariance_defect_dimless": 1.0000000000000027
+        },
+        "probe_frozen_ic_hidden_off_manifold_rel": 0.0391436371866877,
+        "fenichel_closures": {
+          "H0": {
+            "vs_probe_frozen_ic": {
+              "density_err": 0.005803201828711354,
+              "lensing_err": 0.005804893304892247,
+              "max_err": 0.005804893304892247,
+              "passes_1pct": true
+            },
+            "vs_invariant_ic": {
+              "density_err": 0.002053880766887234,
+              "lensing_err": 0.0020536719331388244,
+              "max_err": 0.002053880766887234,
+              "passes_1pct": true
+            },
+            "invariance_defect_fro": 1.0237609075096052,
+            "invariance_defect_dimless": 0.32313766797546833
+          },
+          "H1": {
+            "vs_probe_frozen_ic": {
+              "density_err": 0.004506242152557179,
+              "lensing_err": 0.004526714530236308,
+              "max_err": 0.004526714530236308,
+              "passes_1pct": true
+            },
+            "vs_invariant_ic": {
+              "density_err": 0.0007569210907330588,
+              "lensing_err": 0.0007569852189350527,
+              "max_err": 0.0007569852189350527,
+              "passes_1pct": true
+            },
+            "invariance_defect_fro": 0.15683982991181059,
+            "invariance_defect_dimless": 0.005695898656877494
+          },
+          "H2": {
+            "vs_probe_frozen_ic": {
+              "density_err": 0.0037391749331896935,
+              "lensing_err": 0.003759732399222203,
+              "max_err": 0.003759732399222203,
+              "passes_1pct": true
+            },
+            "vs_invariant_ic": {
+              "density_err": 1.0146128634426833e-05,
+              "lensing_err": 1.0145682544314921e-05,
+              "max_err": 1.0146128634426833e-05,
+              "passes_1pct": true
+            },
+            "invariance_defect_fro": 0.0028120324304836044,
+            "invariance_defect_dimless": 0.00046809597474503243
+          },
+          "H3": {
+            "vs_probe_frozen_ic": {
+              "density_err": 0.0037458147609259014,
+              "lensing_err": 0.0037663505040920514,
+              "max_err": 0.0037663505040920514,
+              "passes_1pct": true
+            },
+            "vs_invariant_ic": {
+              "density_err": 3.506300898218948e-06,
+              "lensing_err": 3.506035831611784e-06,
+              "max_err": 3.506300898218948e-06,
+              "passes_1pct": true
+            },
+            "invariance_defect_fro": 0.00022950753284870873,
+            "invariance_defect_dimless": 1.4505268483102979e-05
+          }
+        }
+      },
+      {
+        "k_over_Q0": 18.0,
+        "zero_pressure": {
+          "density_err": 0.27262703255040516,
+          "lensing_err": 0.2725920656394789,
+          "max_err": 0.27262703255040516,
+          "invariance_defect_dimless": 0.46267139071496416
+        },
+        "adiabatic_pressure": {
+          "density_err": 1.128805265095066,
+          "lensing_err": 1.795721637754463,
+          "max_err": 1.795721637754463,
+          "invariance_defect_dimless": 1.0000000000000018
+        },
+        "probe_frozen_ic_hidden_off_manifold_rel": 0.038318734591236976,
+        "fenichel_closures": {
+          "H0": {
+            "vs_probe_frozen_ic": {
+              "density_err": 0.005869232778547483,
+              "lensing_err": 0.005869455780594168,
+              "max_err": 0.005869455780594168,
+              "passes_1pct": true
+            },
+            "vs_invariant_ic": {
+              "density_err": 0.0021089761099276033,
+              "lensing_err": 0.002108880616372338,
+              "max_err": 0.0021089761099276033,
+              "passes_1pct": true
+            },
+            "invariance_defect_fro": 1.034775028858909,
+            "invariance_defect_dimless": 0.3228195774627038
+          },
+          "H1": {
+            "vs_probe_frozen_ic": {
+              "density_err": 0.004554416047268206,
+              "lensing_err": 0.004560276621155029,
+              "max_err": 0.004560276621155029,
+              "passes_1pct": true
+            },
+            "vs_invariant_ic": {
+              "density_err": 0.0007941593786483265,
+              "lensing_err": 0.0007941609788019163,
+              "max_err": 0.0007941609788019163,
+              "passes_1pct": true
+            },
+            "invariance_defect_fro": 0.15690358468394114,
+            "invariance_defect_dimless": 0.002544690946855047
+          },
+          "H2": {
+            "vs_probe_frozen_ic": {
+              "density_err": 0.0037507413439999996,
+              "lensing_err": 0.0037566460171454493,
+              "max_err": 0.0037566460171454493,
+              "passes_1pct": true
+            },
+            "vs_invariant_ic": {
+              "density_err": 9.515324619880079e-06,
+              "lensing_err": 9.51516662604863e-06,
+              "max_err": 9.515324619880079e-06,
+              "passes_1pct": true
+            },
+            "invariance_defect_fro": 0.002313310302058078,
+            "invariance_defect_dimless": 0.00020599152101830184
+          },
+          "H3": {
+            "vs_probe_frozen_ic": {
+              "density_err": 0.003758715178709343,
+              "lensing_err": 0.003764610131026527,
+              "max_err": 0.003764610131026527,
+              "passes_1pct": true
+            },
+            "vs_invariant_ic": {
+              "density_err": 1.5414899105365712e-06,
+              "lensing_err": 1.5414346841471406e-06,
+              "max_err": 1.5414899105365712e-06,
+              "passes_1pct": true
+            },
+            "invariance_defect_fro": 8.661371191438594e-05,
+            "invariance_defect_dimless": 5.71074246422178e-06
+          }
+        }
+      },
+      {
+        "k_over_Q0": 24.0,
+        "zero_pressure": {
+          "density_err": 0.2742708812407441,
+          "lensing_err": 0.27425108818136207,
+          "max_err": 0.2742708812407441,
+          "invariance_defect_dimless": 0.4571983718248155
+        },
+        "adiabatic_pressure": {
+          "density_err": 1.2911048846219388,
+          "lensing_err": 1.8540908924127377,
+          "max_err": 1.8540908924127377,
+          "invariance_defect_dimless": 1.0000000000000029
+        },
+        "probe_frozen_ic_hidden_off_manifold_rel": 0.03802629126340428,
+        "fenichel_closures": {
+          "H0": {
+            "vs_probe_frozen_ic": {
+              "density_err": 0.005890560728680773,
+              "lensing_err": 0.005890535430092203,
+              "max_err": 0.005890560728680773,
+              "passes_1pct": true
+            },
+            "vs_invariant_ic": {
+              "density_err": 0.0021281782052837857,
+              "lensing_err": 0.002128123984283517,
+              "max_err": 0.0021281782052837857,
+              "passes_1pct": true
+            },
+            "invariance_defect_fro": 1.0388440578559996,
+            "invariance_defect_dimless": 0.322707940413121
+          },
+          "H1": {
+            "vs_probe_frozen_ic": {
+              "density_err": 0.004569532299450899,
+              "lensing_err": 0.00457015749869746,
+              "max_err": 0.00457015749869746,
+              "passes_1pct": true
+            },
+            "vs_invariant_ic": {
+              "density_err": 0.0008071497760539117,
+              "lensing_err": 0.0008071497705187837,
+              "max_err": 0.0008071497760539117,
+              "passes_1pct": true
+            },
+            "invariance_defect_fro": 0.15691869289914484,
+            "invariance_defect_dimless": 0.001433109269080341
+          },
+          "H2": {
+            "vs_probe_frozen_ic": {
+              "density_err": 0.0037530897054507636,
+              "lensing_err": 0.003753725083370466,
+              "max_err": 0.003753725083370466,
+              "passes_1pct": true
+            },
+            "vs_invariant_ic": {
+              "density_err": 9.292817946224026e-06,
+              "lensing_err": 9.29273803490379e-06,
+              "max_err": 9.292817946224026e-06,
+              "passes_1pct": true
+            },
+            "invariance_defect_fro": 0.002194823489690993,
+            "invariance_defect_dimless": 0.00011546629745156413
+          },
+          "H3": {
+            "vs_probe_frozen_ic": {
+              "density_err": 0.0037615510717312127,
+              "lensing_err": 0.0037621836399373224,
+              "max_err": 0.0037621836399373224,
+              "passes_1pct": true
+            },
+            "vs_invariant_ic": {
+              "density_err": 8.314516657748879e-07,
+              "lensing_err": 8.314340113932211e-07,
+              "max_err": 8.314516657748879e-07,
+              "passes_1pct": true
+            },
+            "invariance_defect_fro": 3.7022073383055755e-05,
+            "invariance_defect_dimless": 3.1225290404729456e-06
+          }
+        }
+      }
+    ]
+  },
+  "anti_shadow_controls_and_invariance": {
+    "k_over_Q0": 12.0,
+    "gl2_x_gl2_basis_invariance_max_diff": 1.909640755882371e-12,
+    "cheb_refinement_deg24_vs_deg36_max_diff": 6.816662390223151e-13,
+    "negative_control_flipped_H_error": 1.7784158046963947,
+    "negative_control_wrong_sign_helmholtz_error": 0.5964036550958252,
+    "fast_mode_leakage_separation": [
+      {
+        "eta_Z": 0.0,
+        "max_rel_err": 3.506300898218948e-06,
+        "invariance_defect_H3_unchanged": 1.4505268483102979e-05
+      },
+      {
+        "eta_Z": 0.01,
+        "max_rel_err": 0.00039495540147206566,
+        "invariance_defect_H3_unchanged": 1.4505268483102979e-05
+      },
+      {
+        "eta_Z": 0.1,
+        "max_rel_err": 0.003921851321516343,
+        "invariance_defect_H3_unchanged": 1.4505268483102979e-05
+      },
+      {
+        "eta_Z": 1.0,
+        "max_rel_err": 0.039192061974166276,
+        "invariance_defect_H3_unchanged": 1.4505268483102979e-05
+      }
+    ]
+  },
+  "coupled_baryon_aest_6state_verification": [
+    {
+      "lam_s": 1.0,
+      "k_over_Q0": 0.5,
+      "G_AA_at_a1": 0.8857142857142857,
+      "asymptotic_growth_exponent_p_plus": 0.9510402813249292,
+      "delta_b_growth_full6": 1.9980032202559739,
+      "delta_b_growth_reduced2x2": 1.998611651410082,
+      "delta_b_rel_err": 0.00030442690238444413,
+      "delta_A_growth_full6": 1.9725505266825918,
+      "delta_A_growth_reduced2x2": 1.973186250139759,
+      "delta_A_rel_err": 0.0003221811712514501,
+      "final_segregation_dA_over_db": 0.987260934659494
+    },
+    {
+      "lam_s": 1.0,
+      "k_over_Q0": 2.8284271247461903,
+      "G_AA_at_a1": -5.5511151231257815e-17,
+      "asymptotic_growth_exponent_p_plus": 0.6086991950810777,
+      "delta_b_growth_full6": 1.9856166538784807,
+      "delta_b_growth_reduced2x2": 1.98566968497547,
+      "delta_b_rel_err": 2.6706907695026653e-05,
+      "delta_A_growth_full6": 1.6999169595498953,
+      "delta_A_growth_reduced2x2": 1.7007734490396864,
+      "delta_A_rel_err": 0.0005035882293875086,
+      "final_segregation_dA_over_db": 0.8561153817024391
+    },
+    {
+      "lam_s": 1.0,
+      "k_over_Q0": 10.0,
+      "G_AA_at_a1": -0.2987012987012987,
+      "asymptotic_growth_exponent_p_plus": 0.5349196227508083,
+      "delta_b_growth_full6": 1.9799124173301492,
+      "delta_b_growth_reduced2x2": 1.9800060919752531,
+      "delta_b_rel_err": 4.731028125793808e-05,
+      "delta_A_growth_full6": 1.5586952068196926,
+      "delta_A_growth_reduced2x2": 1.5604333206909056,
+      "delta_A_rel_err": 0.001113866160230063,
+      "final_segregation_dA_over_db": 0.7872546245866495
+    },
+    {
+      "lam_s": 1.0,
+      "k_over_Q0": 50.0,
+      "G_AA_at_a1": -0.3319126265316995,
+      "asymptotic_growth_exponent_p_plus": 0.528233486035529,
+      "delta_b_growth_full6": 1.9792108219882298,
+      "delta_b_growth_reduced2x2": 1.9793113522900743,
+      "delta_b_rel_err": 5.079054476599096e-05,
+      "delta_A_growth_full6": 1.539906108684642,
+      "delta_A_growth_reduced2x2": 1.5417828712250479,
+      "delta_A_rel_err": 0.0012172677329815903,
+      "final_segregation_dA_over_db": 0.7780404652081068
+    },
+    {
+      "lam_s": 0.0,
+      "k_over_Q0": 0.5,
+      "G_AA_at_a1": 0.8888888888888888,
+      "asymptotic_growth_exponent_p_plus": 0.9524036358772852,
+      "delta_b_growth_full6": 1.9980330314553711,
+      "delta_b_growth_reduced2x2": 1.998642852159629,
+      "delta_b_rel_err": 0.00030511739683700996,
+      "delta_A_growth_full6": 1.9730657115011003,
+      "delta_A_growth_reduced2x2": 1.973712701955869,
+      "delta_A_rel_err": 0.000327803765019851,
+      "final_segregation_dA_over_db": 0.9875040504530175
+    },
+    {
+      "lam_s": 0.0,
+      "k_over_Q0": 2.8284271247461903,
+      "G_AA_at_a1": 0.19999999999999996,
+      "asymptotic_growth_exponent_p_plus": 0.6727512487562811,
+      "delta_b_growth_full6": 1.9882200227600813,
+      "delta_b_growth_reduced2x2": 1.9883140067901373,
+      "delta_b_rel_err": 4.726820297761813e-05,
+      "delta_A_growth_full6": 1.7506614849793776,
+      "delta_A_growth_reduced2x2": 1.752205768200673,
+      "delta_A_rel_err": 0.0008813366839223154,
+      "final_segregation_dA_over_db": 0.8805169774666485
+    },
+    {
+      "lam_s": 0.0,
+      "k_over_Q0": 10.0,
+      "G_AA_at_a1": 0.0196078431372549,
+      "asymptotic_growth_exponent_p_plus": 0.6144591126958165,
+      "delta_b_growth_full6": 1.9846336652337069,
+      "delta_b_growth_reduced2x2": 1.9847811920159724,
+      "delta_b_rel_err": 7.432899044937612e-05,
+      "delta_A_growth_full6": 1.6592643936636406,
+      "delta_A_growth_reduced2x2": 1.6620079398643757,
+      "delta_A_rel_err": 0.001650741933855536,
+      "final_segregation_dA_over_db": 0.8360557531247202
+    },
+    {
+      "lam_s": 0.0,
+      "k_over_Q0": 50.0,
+      "G_AA_at_a1": 0.0007993605115907274,
+      "asymptotic_growth_exponent_p_plus": 0.6089317505482693,
+      "delta_b_growth_full6": 1.9842256961219205,
+      "delta_b_growth_reduced2x2": 1.9843809351711232,
+      "delta_b_rel_err": 7.823046797679215e-05,
+      "delta_A_growth_full6": 1.648127248380152,
+      "delta_A_growth_reduced2x2": 1.6510383861935818,
+      "delta_A_rel_err": 0.0017632163114882594,
+      "final_segregation_dA_over_db": 0.8306148093945876
+    },
+    {
+      "lam_s": -0.5,
+      "k_over_Q0": 0.5,
+      "G_AA_at_a1": 0.8947368421052632,
+      "asymptotic_growth_exponent_p_plus": 0.954914771233681,
+      "delta_b_growth_full6": 1.9980880409861697,
+      "delta_b_growth_reduced2x2": 1.9987011348093677,
+      "delta_b_rel_err": 0.00030674612252947403,
+      "delta_A_growth_full6": 1.9740226349328613,
+      "delta_A_growth_reduced2x2": 1.9747021138733793,
+      "delta_A_rel_err": 0.00034409186871496805,
+      "final_segregation_dA_over_db": 0.9879557829486679
+    },
+    {
+      "lam_s": -0.5,
+      "k_over_Q0": 2.8284271247461903,
+      "G_AA_at_a1": 0.42857142857142855,
+      "asymptotic_growth_exponent_p_plus": 0.7585957550682327,
+      "delta_b_growth_full6": 1.9913101361969137,
+      "delta_b_growth_reduced2x2": 1.9914600942706158,
+      "delta_b_rel_err": 7.530056672162609e-05,
+      "delta_A_growth_full6": 1.8128348624588615,
+      "delta_A_growth_reduced2x2": 1.8153649065874495,
+      "delta_A_rel_err": 0.0013936835064990425,
+      "final_segregation_dA_over_db": 0.9103729396572491
+    },
+    {
+      "lam_s": -0.5,
+      "k_over_Q0": 10.0,
+      "G_AA_at_a1": 0.34210526315789475,
+      "asymptotic_growth_exponent_p_plus": 0.7247923385470397,
+      "delta_b_growth_full6": 1.9894977751857972,
+      "delta_b_growth_reduced2x2": 1.9897021577657557,
+      "delta_b_rel_err": 0.00010272018812503692,
+      "delta_A_growth_full6": 1.7650330254267916,
+      "delta_A_growth_reduced2x2": 1.768876003955554,
+      "delta_A_rel_err": 0.002172553938302382,
+      "final_segregation_dA_over_db": 0.887175169251927
+    },
+    {
+      "lam_s": -0.5,
+      "k_over_Q0": 50.0,
+      "G_AA_at_a1": 0.3336886993603412,
+      "asymptotic_growth_exponent_p_plus": 0.7215803022372304,
+      "delta_b_growth_full6": 1.989308757018359,
+      "delta_b_growth_reduced2x2": 1.9895199118451474,
+      "delta_b_rel_err": 0.0001061335579157636,
+      "delta_A_growth_full6": 1.7597737416069261,
+      "delta_A_growth_reduced2x2": 1.7637768877196534,
+      "delta_A_rel_err": 0.0022696442733767573,
+      "final_segregation_dA_over_db": 0.884615691454821
+    }
+  ],
+  "exact_rational_minkowski_pole_zero_inertia": [
+    {
+      "case": "UV_stable_k2_9_above_mu2_8",
+      "KB": "1",
+      "lam_s": "1",
+      "Kpp": "4",
+      "r_eq_k2": "9",
+      "exact_D_pivots": [
+        "54",
+        "35/216",
+        "1/1260"
+      ],
+      "exact_inertia_pos_zero_neg": [
+        3,
+        0,
+        0
+      ],
+      "exact_G_AA_over_Gtilde": "-1/35"
+    },
+    {
+      "case": "CRITICAL_pole_zero_k2_8_eq_mu2_8",
+      "KB": "1",
+      "lam_s": "1",
+      "Kpp": "4",
+      "r_eq_k2": "8",
+      "exact_D_pivots": [
+        "48",
+        "1/6",
+        "0"
+      ],
+      "exact_inertia_pos_zero_neg": [
+        2,
+        1,
+        0
+      ],
+      "exact_G_AA_over_Gtilde": "0"
+    },
+    {
+      "case": "IR_clustering_k2_7_below_mu2_8",
+      "KB": "1",
+      "lam_s": "1",
+      "Kpp": "4",
+      "r_eq_k2": "7",
+      "exact_D_pivots": [
+        "42",
+        "29/168",
+        "-1/812"
+      ],
+      "exact_inertia_pos_zero_neg": [
+        2,
+        0,
+        1
+      ],
+      "exact_G_AA_over_Gtilde": "1/29"
+    },
+    {
+      "case": "Cosmological_lam0_k2_4",
+      "KB": "1",
+      "lam_s": "0",
+      "Kpp": "4",
+      "r_eq_k2": "4",
+      "exact_D_pivots": [
+        "16",
+        "3/16",
+        "-1/48"
+      ],
+      "exact_inertia_pos_zero_neg": [
+        2,
+        0,
+        1
+      ],
+      "exact_G_AA_over_Gtilde": "1/3"
+    }
+  ],
+  "sha256_canonical": "bcde49380e1bc5ce8c2e23cc08257c022ed87658dd53265ecc9f1d7825934ff5"
+}
